@@ -1,0 +1,39 @@
+\begin{thebibliography}{}
+
+\bibitem[Barsalou, 2008]{barsalou2008grounded}
+Barsalou, L.~W. (2008).
+\newblock Grounded cognition.
+\newblock {\em Annu. Rev. Psychol.}, 59:617--645.
+
+\bibitem[Hammami and Bedda, 2010]{hammami2010improved}
+Hammami, N. and Bedda, M. (2010).
+\newblock Improved tree model for arabic speech recognition.
+\newblock In {\em 2010 3rd International Conference on Computer Science and
+  Information Technology}, volume~5, pages 521--526. IEEE.
+
+\bibitem[Hammami and Sellam, 2009]{hammami2009tree}
+Hammami, N. and Sellam, M. (2009).
+\newblock Tree distribution classifier for automatic spoken arabic digit
+  recognition.
+\newblock In {\em 2009 International Conference for Internet Technology and
+  Secured Transactions,(ICITST)}, pages 1--4. IEEE.
+
+\bibitem[LeCun, 1998]{lecun1998mnist}
+LeCun, Y. (1998).
+\newblock The mnist database of handwritten digits.
+\newblock {\em http://yann. lecun. com/exdb/mnist/}.
+
+\bibitem[Rosenblatt, 1958]{rosenblatt1958perceptron}
+Rosenblatt, F. (1958).
+\newblock The perceptron: a probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological review}, 65(6):386.
+
+\bibitem[Sheppard et~al., 2018]{sheppardtowards}
+Sheppard, E., Lehmann, H., Rajendran, G., McKenna, P.~E., Lemon, O., and Lohan,
+  K.~S. (2018).
+\newblock Towards life long learning: Multimodal learning of mnist handwritten
+  digits.
+\newblock {\em IEEE ICDL EPIROB 2018 Workshop on Life Long Learning}.
+
+\end{thebibliography}
