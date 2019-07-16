@@ -41,6 +41,15 @@
 \usepackage{pgfplots}
 \usepackage{mathtools}
 \usepackage{filecontents}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \makeatletter
 \newcommand{\mypm}{\mathbin{\mathpalette\@mypm\relax}}
@@ -221,10 +230,15 @@ I would also like to thank Ingo Keller for his invaluable lessons on the art of 
 \lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
 \listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
 {
+\textbf{CNN} & \textbf{C}onvolutional \textbf{N}eural \textbf{N}etwork \\
+\textbf{AE} & \textbf{A}uto\textbf{e}ncoder \\
+\textbf{MAE} & \textbf{M}ultimodal \textbf{A}uto\textbf{e}ncoder \\
 \textbf{RNN} & \textbf{R}ecurrent \textbf{N}eural \textbf{N}etwork \\
 \textbf{GRU} & \textbf{G}ated \textbf{R}ecurrent \textbf{U}nit \\
 \textbf{LSTM} & \textbf{L}ong \textbf{S}hort \textbf{T}erm \textbf{M}emory \\
-\textbf{CNN} & \textbf{C}onvolutional \textbf{N}eural \textbf{N}etwork \\
+
+
+
 \textbf{YARP} & \textbf{Y}et \textbf{A}nother \textbf{R}obotics \textbf{P}latform \\
 }
 
@@ -291,9 +305,9 @@ I would also like to thank Ingo Keller for his invaluable lessons on the art of 
 
 %\input{Chapters/Chapter1}
 %\input{Chapters/Chapter2}
-\input{Chapters/Chapter3} 
-
-\input{Chapters/Chapter4} 
+%\input{Chapters/Chapter3} 
+ 
+\input{Chapters/Chapter4B}
 %\input{Chapters/Chapter5} 
 %\input{Chapters/Chapter6} 
 %\input{Chapters/Chapter7}

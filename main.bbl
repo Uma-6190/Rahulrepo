@@ -23,17 +23,26 @@ LeCun, Y. (1998).
 \newblock The mnist database of handwritten digits.
 \newblock {\em http://yann. lecun. com/exdb/mnist/}.
 
-\bibitem[Rosenblatt, 1958]{rosenblatt1958perceptron}
-Rosenblatt, F. (1958).
-\newblock The perceptron: a probabilistic model for information storage and
-  organization in the brain.
-\newblock {\em Psychological review}, 65(6):386.
+\bibitem[Ma et~al., 2009]{ma2009lip}
+Ma, W.~J., Zhou, X., Ross, L.~A., Foxe, J.~J., and Parra, L.~C. (2009).
+\newblock Lip-reading aids word recognition most in moderate noise: a bayesian
+  explanation using high-dimensional feature space.
+\newblock {\em PLoS One}, 4(3):e4638.
 
-\bibitem[Sheppard et~al., 2018]{sheppardtowards}
-Sheppard, E., Lehmann, H., Rajendran, G., McKenna, P.~E., Lemon, O., and Lohan,
-  K.~S. (2018).
-\newblock Towards life long learning: Multimodal learning of mnist handwritten
-  digits.
-\newblock {\em IEEE ICDL EPIROB 2018 Workshop on Life Long Learning}.
+\bibitem[McGurk and MacDonald, 1976]{mcgurk1976hearing}
+McGurk, H. and MacDonald, J. (1976).
+\newblock Hearing lips and seeing voices.
+\newblock {\em Nature}, 264(5588):746.
+
+\bibitem[Ngiam et~al., 2011]{ngiam2011multimodal}
+Ngiam, J., Khosla, A., Kim, M., Nam, J., Lee, H., and Ng, A.~Y. (2011).
+\newblock Multimodal deep learning.
+\newblock In {\em Proceedings of the 28th international conference on machine
+  learning (ICML-11)}, pages 689--696.
+
+\bibitem[Samuel, 1997]{samuel1997lexical}
+Samuel, A.~G. (1997).
+\newblock Lexical activation produces potent phonemic percepts.
+\newblock {\em Cognitive psychology}, 32(2):97--127.
 
 \end{thebibliography}

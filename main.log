@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  19 JUN 2019 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  16 JUL 2019 15:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1353,34 +1353,47 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_below_intertext_sep=\dimen283
 \l_MT_above_shortintertext_sep=\dimen284
 \l_MT_below_shortintertext_sep=\dimen285
-) (./main.aux
-
-LaTeX Warning: Label `tab:mnist_ucu_bi_res' multiply defined.
-
 )
+(/usr/share/texlive/texmf-dist/tex/latex/filecontents/filecontents.sty
+Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
+eX document
+)
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
+\ttl@box=\box77
+\beforetitleunit=\skip73
+\aftertitleunit=\skip74
+\ttl@plus=\dimen286
+\ttl@minus=\dimen287
+\ttl@toksa=\toks51
+\titlewidth=\dimen288
+\titlewidthlast=\dimen289
+\titlewidthfirst=\dimen290
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
- (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: rotating package is loaded.
@@ -1389,20 +1402,20 @@ Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count192
-\scratchdimen=\dimen286
-\scratchbox=\box77
+\scratchdimen=\dimen291
+\scratchbox=\box78
 \nofMPsegments=\count193
 \nofMParguments=\count194
-\everyMPshowfont=\toks51
+\everyMPshowfont=\toks52
 \MPscratchCnt=\count195
-\MPscratchDim=\dimen287
+\MPscratchDim=\dimen292
 \MPnumerator=\count196
 \makeMPintoPDFobject=\count197
-\everyMPtoPDFconversion=\toks52
+\everyMPtoPDFconversion=\toks53
 )
 \c@lstlisting=\count198
-\AtBeginShipoutBox=\box78
-Package hyperref Info: Link coloring ON on input line 54.
+\AtBeginShipoutBox=\box79
+Package hyperref Info: Link coloring ON on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1411,9 +1424,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count199
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1424,22 +1437,22 @@ LaTeX Info: Redefining \nameref on input line 54.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into 
 your preamble.
- on input line 54.
+ on input line 64.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 94.
+LaTeX Font Info:    Try loading font information for U+msa on input line 104.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 94.
+LaTeX Font Info:    Try loading font information for U+msb on input line 104.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./Figs/logos/HWUlogo.jpg, id=294, 455.7828pt x 227.6505pt>
+<./Figs/logos/HWUlogo.jpg, id=157, 455.7828pt x 227.6505pt>
 File: ./Figs/logos/HWUlogo.jpg Graphic file (type jpg)
 
 <use ./Figs/logos/HWUlogo.jpg>
-Package pdftex.def Info: ./Figs/logos/HWUlogo.jpg used on input line 110.
+Package pdftex.def Info: ./Figs/logos/HWUlogo.jpg used on input line 120.
 (pdftex.def)             Requested size: 170.71652pt x 85.26797pt.
  [1
 
@@ -1478,137 +1491,110 @@ Package pdftex.def Info: ./Figs/logos/HWUlogo.jpg used on input line 110.
 
 
 
-] (./Chapters/Chapter3.tex
+] (./Chapters/Chapter4B.tex
 Chapter 1.
 ------------------------------------------------------------------------------
- 1 A Primer on Artifical Neural Networks
+ 1 Sensory Redundancy: Are two heads better than one?
 ------------------------------------------------------------------------------
-<Figs/intro2dl/perceptron.png, id=409, 155.30823pt x 57.74373pt>
-File: Figs/intro2dl/perceptron.png Graphic file (type png)
-
-<use Figs/intro2dl/perceptron.png>
-Package pdftex.def Info: Figs/intro2dl/perceptron.png used on input line 26.
-(pdftex.def)             Requested size: 208.73653pt x 77.61319pt.
- [1
+[1
 
 
 
-] [2 <./Figs/intro2dl/perceptron.png>]
-<Figs/intro2dl/mlp.png, id=430, 235.6002pt x 131.17004pt>
-File: Figs/intro2dl/mlp.png Graphic file (type png)
-
-<use Figs/intro2dl/mlp.png>
-Package pdftex.def Info: Figs/intro2dl/mlp.png used on input line 61.
-(pdftex.def)             Requested size: 208.73653pt x 116.21657pt.
- [3 <./Figs/intro2dl/mlp.png>] [4]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5] [6]
-
-LaTeX Warning: Reference `sec:random_init' on page 7 undefined on input line 21
-4.
-
-[7] [8] [9]) (./Chapters/Chapter4.tex [10] [11]
-Chapter 2.
-------------------------------------------------------------------------------
- 2 Sensory Redundancy: Are two heads better than one?
-------------------------------------------------------------------------------
-[12
-
-] [13]
-<./Figs/mnistSpoken/UCU_digit_length.png, id=544, 1387.584pt x 693.0693pt>
+] [2]
+<./Figs/mnistSpoken/UCU_digit_length.png, id=269, 1387.584pt x 693.0693pt>
 File: ./Figs/mnistSpoken/UCU_digit_length.png Graphic file (type png)
 
 <use ./Figs/mnistSpoken/UCU_digit_length.png>
 Package pdftex.def Info: ./Figs/mnistSpoken/UCU_digit_length.png used on input 
-line 60.
+line 45.
 (pdftex.def)             Requested size: 417.47307pt x 208.51462pt.
- [14 <./Figs/mnistSpoken/UCU_digit_length.png>] [15]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 115.
- [16] [17] [18] [19]
-Overfull \hbox (40.72897pt too wide) in paragraph at lines 268--290
+ [3 <./Figs/mnistSpoken/UCU_digit_length.png>] [4] [5] [6] [7] [8]
+Overfull \hbox (40.72897pt too wide) in paragraph at lines 255--277
  [][] 
  []
 
-[20] [21] <Figs/mnistSpoken/lbAll.png, id=619, 556.9608pt x 175.3752pt>
+[9] [10] <Figs/mnistSpoken/lbAll.png, id=353, 556.9608pt x 175.3752pt>
 File: Figs/mnistSpoken/lbAll.png Graphic file (type png)
 
 <use Figs/mnistSpoken/lbAll.png>
-Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 359.
+Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 346.
 (pdftex.def)             Requested size: 417.47307pt x 131.45615pt.
 
-<Figs/mnistSpoken/5s.png, id=621, 192.72pt x 175.1343pt>
+<Figs/mnistSpoken/5s.png, id=355, 192.72pt x 175.1343pt>
 File: Figs/mnistSpoken/5s.png Graphic file (type png)
 
 <use Figs/mnistSpoken/5s.png>
-Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 368.
+Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 355.
 (pdftex.def)             Requested size: 192.71951pt x 175.13387pt.
- [22 <./Figs/mnistSpoken/lbAll.png> <./Figs/mnistSpoken/5s.png>] [23]
 
-LaTeX Warning: Reference `sec:UCU_mnist_comb' on page 24 undefined on input lin
-e 397.
 
-[24]) [25] [26]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./Figs/mnistSpoken/lbAll.png>] [12 <./Figs/mnistSpoken/5s.png>] [13]
+[14] [15]) [16]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./main.bbl) [27
+(./main.bbl) [17
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 332.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 332.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 347.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 332.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 332.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C60660B5C653BA4781D1BADD01A61021;13111.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 347.
 
 
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D47485AD608482DB3B55EDCE6C17DB7A;7122
+(rerunfilecheck)             After:  2F35A0CC15D41F44C4136689CD88CAF2;8311.
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 332.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 176 ({)
+### simple group (level 1) entered at line 186 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36603 strings out of 493029
- 806267 string characters out of 6136234
- 1574514 words of memory out of 5000000
- 39368 multiletter control sequences out of 15000+600000
- 17461 words of font info for 65 fonts, out of 8000000 for 9000
+ 36091 strings out of 493029
+ 789509 string characters out of 6136234
+ 1021718 words of memory out of 5000000
+ 38914 multiletter control sequences out of 15000+600000
+ 16099 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,18n,103p,991b,2316s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (34 pages, 2647214 bytes).
+ 62i,18n,77p,1002b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{dummy.54} has been referenced but d
+oes not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.53} has been referenced but does not exist,
+ replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (24 pages, 2374395 bytes).
 PDF statistics:
- 754 PDF objects out of 1000 (max. 8388607)
- 683 compressed objects within 7 object streams
- 152 named destinations out of 1000 (max. 500000)
- 611 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 430 compressed objects within 5 object streams
+ 94 named destinations out of 1000 (max. 500000)
+ 329 words of extra memory for PDF output out of 10000 (max. 10000000)
 
