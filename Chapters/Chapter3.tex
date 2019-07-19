@@ -238,13 +238,41 @@ Depending on the particular method we use to train our networks, the cost functi
 
 The cost fuction can take on many forms, in supervised and unsupervised training alike. Here are a few of the more commonly used ones and an explanation of each.
 
-\subsubsection{Cross Entropy}
-
 \subsubsection{Mean Squared Error}
+Mean squared error (MSE) measures the average difference between points as shown in equation \ref{eqn:mse}.
+
 \begin{equation}
-C = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \hat{Y})^2
+C = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \hat{Y_i})^2
 \label{eqn:mse}
 \end{equation}
+
+When used as a loss function, MSE gives a measure of how bad our estimate $\hat{Y_i}$ is of our true value $Y_i$ on average for for all $n$ training samples in a given dataset. A perfect model would have an MSE of 0 as $\hat{Y_i}$ would be equal to $Y_i$ for all values of $i$.
+
+In general, $Y_i$ and $\hat{Y_i}$ can be of arbitrary size and shape (as long as they match each other). That is, they can be scalers, vectors or matricies.
+
+\subsubsection{Cross-Entropy}
+Cross-entropy measures the error between two probability distributions $P$ and $Q$ using the formula shown in equation \ref{eqn:xntrpy}. $P$ is the true probability distribution which we are trying to model with our predicted probability distribution $Q$.
+
+\begin{equation}
+C = -\sum_{i=0}^{n}P(i) log(Q(i))
+\label{eqn:xentrpy}
+\end{equation}
+
+When using cross-entropy as a loss function, we can view the output of our neural network as a probability distribution. For example, in a multiclass classification problem with $k$ classes, each of the $k$ outputs of the network tells us the probability that the network believes an input to belong to class $k$.
+
+Here is a more concrete example:
+Given a dataset containing images of animals: cats, dogs, horses and snakes. A single image containing a cat would be labelled $[1, 0, 0, ..., 0]$. This tells us the exact probability distribution of the image, $P$ i.e. the image certainly contains a cat and does not contain any other animals.
+
+now as our network trains, it may give a prediction of $[0.5, 0.3, 0.15, 0.05]$, this is our predicted probability distribution $Q$.
+
+Calculating our cross-entropy we get:
+\begin{equation}
+C = -\sum_{i=0}^{n}P(i) log(Q(i))
+\label{eqn:xentrpy_eg}
+\end{equation}
+
+
+
 
 \subsubsection{Kullback-Leibler Divergence}
 

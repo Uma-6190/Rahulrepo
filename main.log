@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  16 JUL 2019 15:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  19 JUL 2019 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1448,7 +1448,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 104.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./Figs/logos/HWUlogo.jpg, id=157, 455.7828pt x 227.6505pt>
+<./Figs/logos/HWUlogo.jpg, id=290, 455.7828pt x 227.6505pt>
 File: ./Figs/logos/HWUlogo.jpg Graphic file (type jpg)
 
 <use ./Figs/logos/HWUlogo.jpg>
@@ -1491,36 +1491,76 @@ Package pdftex.def Info: ./Figs/logos/HWUlogo.jpg used on input line 120.
 
 
 
-] (./Chapters/Chapter4B.tex
+] (./Chapters/Chapter3.tex
 Chapter 1.
 ------------------------------------------------------------------------------
- 1 Sensory Redundancy: Are two heads better than one?
+ 1 A Primer on Artifical Neural Networks
 ------------------------------------------------------------------------------
-[1
+
+Package natbib Warning: Citation `rosenblatt1958perceptron' on page 1 undefined
+ on input line 17.
+
+<Figs/intro2dl/perceptron.png, id=402, 155.30823pt x 57.74373pt>
+File: Figs/intro2dl/perceptron.png Graphic file (type png)
+
+<use Figs/intro2dl/perceptron.png>
+Package pdftex.def Info: Figs/intro2dl/perceptron.png used on input line 26.
+(pdftex.def)             Requested size: 208.73653pt x 77.61319pt.
+ [1
 
 
 
-] [2]
-<./Figs/mnistSpoken/UCU_digit_length.png, id=269, 1387.584pt x 693.0693pt>
+] [2 <./Figs/intro2dl/perceptron.png>]
+<Figs/intro2dl/mlp.png, id=422, 235.6002pt x 131.17004pt>
+File: Figs/intro2dl/mlp.png Graphic file (type png)
+
+<use Figs/intro2dl/mlp.png>
+Package pdftex.def Info: Figs/intro2dl/mlp.png used on input line 61.
+(pdftex.def)             Requested size: 208.73653pt x 116.21657pt.
+ [3 <./Figs/intro2dl/mlp.png>] [4]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6]
+
+LaTeX Warning: Reference `sec:random_init' on page 7 undefined on input line 21
+4.
+
+[7]
+
+LaTeX Warning: Reference `eqn:xntrpy' on page 8 undefined on input line 254.
+
+[8] [9] [10]) (./Chapters/Chapter4B.tex [11]
+Chapter 2.
+------------------------------------------------------------------------------
+ 2 Sensory Redundancy: Are two heads better than one?
+------------------------------------------------------------------------------
+[12
+
+] [13]
+<./Figs/mnistSpoken/UCU_digit_length.png, id=572, 1387.584pt x 693.0693pt>
 File: ./Figs/mnistSpoken/UCU_digit_length.png Graphic file (type png)
 
 <use ./Figs/mnistSpoken/UCU_digit_length.png>
 Package pdftex.def Info: ./Figs/mnistSpoken/UCU_digit_length.png used on input 
 line 45.
 (pdftex.def)             Requested size: 417.47307pt x 208.51462pt.
- [3 <./Figs/mnistSpoken/UCU_digit_length.png>] [4] [5] [6] [7] [8]
+ [14 <./Figs/mnistSpoken/UCU_digit_length.png>] [15] [16] [17] [18] [19]
 Overfull \hbox (40.72897pt too wide) in paragraph at lines 255--277
  [][] 
  []
 
-[9] [10] <Figs/mnistSpoken/lbAll.png, id=353, 556.9608pt x 175.3752pt>
+[20] [21] <Figs/mnistSpoken/lbAll.png, id=666, 556.9608pt x 175.3752pt>
 File: Figs/mnistSpoken/lbAll.png Graphic file (type png)
 
 <use Figs/mnistSpoken/lbAll.png>
 Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 346.
 (pdftex.def)             Requested size: 417.47307pt x 131.45615pt.
 
-<Figs/mnistSpoken/5s.png, id=355, 192.72pt x 175.1343pt>
+<Figs/mnistSpoken/5s.png, id=668, 192.72pt x 175.1343pt>
 File: Figs/mnistSpoken/5s.png Graphic file (type png)
 
 <use Figs/mnistSpoken/5s.png>
@@ -1530,12 +1570,16 @@ Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 355.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./Figs/mnistSpoken/lbAll.png>] [12 <./Figs/mnistSpoken/5s.png>] [13]
-[14] [15]) [16]
+[22 <./Figs/mnistSpoken/lbAll.png>] [23 <./Figs/mnistSpoken/5s.png>] [24]
+[25] [26]) [27]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./main.bbl) [17
+(./main.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[28
 
 
 ]
@@ -1551,8 +1595,11 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D47485AD608482DB3B55EDCE6C17DB7A;7122
-(rerunfilecheck)             After:  2F35A0CC15D41F44C4136689CD88CAF2;8311.
+(rerunfilecheck)             Before: 40DE34F61FF75508CB70FC1148AFF195;13705
+(rerunfilecheck)             After:  17BD207B2AD07D52361D3EF57230D363;13708.
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1563,38 +1610,173 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
 ### simple group (level 1) entered at line 186 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36091 strings out of 493029
- 789509 string characters out of 6136234
- 1021718 words of memory out of 5000000
- 38914 multiletter control sequences out of 15000+600000
- 16099 words of font info for 59 fonts, out of 8000000 for 9000
+ 36927 strings out of 493029
+ 810594 string characters out of 6136234
+ 1580406 words of memory out of 5000000
+ 39638 multiletter control sequences out of 15000+600000
+ 17461 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,77p,1002b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{dummy.54} has been referenced but d
-oes not exist, replaced by a fixed one
+ 71i,18n,103p,1002b,2394s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.97} has been referen
+ced but does not exist, replaced by a fixed one
 
-pdfTeX warning (dest): name{section.53} has been referenced but does not exist,
+pdfTeX warning (dest): name{table.caption.86} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.92} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.75} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.66} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.65} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.38} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.37} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.34} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{dummy.107} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.106} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph.102} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.100} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.99} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.96} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.91} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.90} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph.88} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph.85} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.84} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph.81} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.80} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph.78} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.77} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{paragraph.73} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.72} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.71} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.69} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.68} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.67} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.63} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.61} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.59} has been referenced but does not exist,
  replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.58} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.57} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.55} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.54} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.53} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.50} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.49} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.48} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.46} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.44} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.36} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.35} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.33} has been referenced but does not 
+exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (24 pages, 2374395 bytes).
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (35 pages, 2668507 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
- 94 named destinations out of 1000 (max. 500000)
- 329 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 830 PDF objects out of 1000 (max. 8388607)
+ 755 compressed objects within 8 object streams
+ 199 named destinations out of 1000 (max. 500000)
+ 603 words of extra memory for PDF output out of 10000 (max. 10000000)
 
