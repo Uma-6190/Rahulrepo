@@ -107,12 +107,12 @@ Due to the difference in size between the datasets, 8,800 samples for UCU and 80
 In order to combine the two different modalities, I explore different merging techniques: Concatenation (\textit{Concat}) and Addition (\textit{Add}). To do this, the embeddings of both modalities are ensured to have the same shape and then are merged using the methods described in Equations \ref{eqn:concat} and \ref{eqn:add}, concatenation and addition, respectively. %and \ref{eqn:xply}.
 
  \begin{equation}
- 	merged = x1^*_i || x2^*_i
+ 	merged = im_i^{emb} || mfcc_i^{emb}
  	\label{eqn:concat}
  \end{equation}
 
  \begin{equation}
- 	merged = x1^*_i + x2^*_i
+ 	merged = im_i^{emb} + mfcc_i^{emb}
  	\label{eqn:add}  
  \end{equation}
  
@@ -121,7 +121,7 @@ In order to combine the two different modalities, I explore different merging te
  	%\label{eqn:xply}  
  %\end{equation}
 
-Where $x1^*_i$ and $x2^*_i$ represent the output of the image and MFCC encoders respectively for given image and MFCC inputs $x1_i$ and $x2_i$.
+Where $im_i^{emb}$ and $mfcc_i^{emb}$ represent the embeddings, output by the image and MFCC encoders respectively for image and MFCC inputs $im_i$ and $mfcc_i$.
 
 \subsubsection{Training Procedures}
 

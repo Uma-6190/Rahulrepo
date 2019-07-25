@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  19 JUL 2019 11:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  25 JUL 2019 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1448,7 +1448,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 104.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./Figs/logos/HWUlogo.jpg, id=290, 455.7828pt x 227.6505pt>
+<./Figs/logos/HWUlogo.jpg, id=149, 455.7828pt x 227.6505pt>
 File: ./Figs/logos/HWUlogo.jpg Graphic file (type jpg)
 
 <use ./Figs/logos/HWUlogo.jpg>
@@ -1500,7 +1500,7 @@ Chapter 1.
 Package natbib Warning: Citation `rosenblatt1958perceptron' on page 1 undefined
  on input line 17.
 
-<Figs/intro2dl/perceptron.png, id=402, 155.30823pt x 57.74373pt>
+<Figs/intro2dl/perceptron.png, id=226, 155.30823pt x 57.74373pt>
 File: Figs/intro2dl/perceptron.png Graphic file (type png)
 
 <use Figs/intro2dl/perceptron.png>
@@ -1511,7 +1511,7 @@ Package pdftex.def Info: Figs/intro2dl/perceptron.png used on input line 26.
 
 
 ] [2 <./Figs/intro2dl/perceptron.png>]
-<Figs/intro2dl/mlp.png, id=422, 235.6002pt x 131.17004pt>
+<Figs/intro2dl/mlp.png, id=246, 235.6002pt x 131.17004pt>
 File: Figs/intro2dl/mlp.png Graphic file (type png)
 
 <use Figs/intro2dl/mlp.png>
@@ -1533,45 +1533,16 @@ LaTeX Warning: Reference `sec:random_init' on page 7 undefined on input line 21
 
 LaTeX Warning: Reference `eqn:xntrpy' on page 8 undefined on input line 254.
 
-[8] [9] [10]) (./Chapters/Chapter4B.tex [11]
-Chapter 2.
-------------------------------------------------------------------------------
- 2 Sensory Redundancy: Are two heads better than one?
-------------------------------------------------------------------------------
-[12
-
-] [13]
-<./Figs/mnistSpoken/UCU_digit_length.png, id=572, 1387.584pt x 693.0693pt>
-File: ./Figs/mnistSpoken/UCU_digit_length.png Graphic file (type png)
-
-<use ./Figs/mnistSpoken/UCU_digit_length.png>
-Package pdftex.def Info: ./Figs/mnistSpoken/UCU_digit_length.png used on input 
-line 45.
-(pdftex.def)             Requested size: 417.47307pt x 208.51462pt.
- [14 <./Figs/mnistSpoken/UCU_digit_length.png>] [15] [16] [17] [18] [19]
-Overfull \hbox (40.72897pt too wide) in paragraph at lines 255--277
- [][] 
- []
-
-[20] [21] <Figs/mnistSpoken/lbAll.png, id=666, 556.9608pt x 175.3752pt>
-File: Figs/mnistSpoken/lbAll.png Graphic file (type png)
-
-<use Figs/mnistSpoken/lbAll.png>
-Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 346.
-(pdftex.def)             Requested size: 417.47307pt x 131.45615pt.
-
-<Figs/mnistSpoken/5s.png, id=668, 192.72pt x 175.1343pt>
-File: Figs/mnistSpoken/5s.png Graphic file (type png)
-
-<use Figs/mnistSpoken/5s.png>
-Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 355.
-(pdftex.def)             Requested size: 192.71951pt x 175.13387pt.
+[8] [9] [10] [11] [12] [13]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 473.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[22 <./Figs/mnistSpoken/lbAll.png>] [23 <./Figs/mnistSpoken/5s.png>] [24]
-[25] [26]) [27]
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 473.
+) [14] [15]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
@@ -1579,7 +1550,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package natbib Warning: There were undefined citations.
 
-[28
+[16
 
 
 ]
@@ -1588,20 +1559,11 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 347.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 2712F2661A78F483F5FE2033C5637255;6035.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 40DE34F61FF75508CB70FC1148AFF195;13705
-(rerunfilecheck)             After:  17BD207B2AD07D52361D3EF57230D363;13708.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
  )
@@ -1610,173 +1572,37 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
 ### simple group (level 1) entered at line 186 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36927 strings out of 493029
- 810594 string characters out of 6136234
- 1580406 words of memory out of 5000000
- 39638 multiletter control sequences out of 15000+600000
- 17461 words of font info for 65 fonts, out of 8000000 for 9000
+ 36884 strings out of 493029
+ 809897 string characters out of 6136234
+ 1574742 words of memory out of 5000000
+ 39698 multiletter control sequences out of 15000+600000
+ 17115 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,18n,103p,1002b,2394s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.97} has been referen
-ced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.86} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.92} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.75} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.caption.66} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.65} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.38} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.37} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.34} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{dummy.107} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{section.106} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{paragraph.102} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.100} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.99} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.96} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.91} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.90} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{paragraph.88} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{paragraph.85} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.84} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{paragraph.81} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.80} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{paragraph.78} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.77} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{paragraph.73} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.72} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.71} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.69} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.68} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.67} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.63} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.61} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.59} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.58} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section.57} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.55} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.54} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.53} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.50} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.49} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.48} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.46} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.44} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.36} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.35} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsubsection.33} has been referenced but does not 
-exist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (35 pages, 2668507 bytes).
+ 71i,12n,103p,757b,2394s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (23 pages, 1881638 bytes).
 PDF statistics:
- 830 PDF objects out of 1000 (max. 8388607)
- 755 compressed objects within 8 object streams
- 199 named destinations out of 1000 (max. 500000)
- 603 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 308 words of extra memory for PDF output out of 10000 (max. 10000000)
 

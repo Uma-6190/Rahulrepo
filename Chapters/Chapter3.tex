@@ -204,7 +204,7 @@ ylabel near ticks]
 \end{center}
 \end{figure}
 
-The Relu was created to address and issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the enxt session. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \footnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in section\ref{sec:percep}} can be trained as non-linear functions like the sigmoid or Tanh will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
+The Relu was created to address and issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \footnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in section\ref{sec:percep}} can be trained as non-linear functions like the sigmoid or Tanh will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
 
 \section{Learning Algorithms}
 In section \ref{sec:percep} we saw how simple computation units can make simple decisions and how these can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
@@ -261,24 +261,39 @@ C = -\sum_{i=0}^{n}P(i) log(Q(i))
 When using cross-entropy as a loss function, we can view the output of our neural network as a probability distribution. For example, in a multiclass classification problem with $k$ classes, each of the $k$ outputs of the network tells us the probability that the network believes an input to belong to class $k$.
 
 Here is a more concrete example:
-Given a dataset containing images of animals: cats, dogs, horses and snakes. A single image containing a cat would be labelled $[1, 0, 0, ..., 0]$. This tells us the exact probability distribution of the image, $P$ i.e. the image certainly contains a cat and does not contain any other animals.
+Given a dataset containing images of animals: cats, dogs, horses and snakes. A single image containing a cat would be labelled $[1, 0, 0, 0]$. This tells us the exact probability distribution of the image, $P$ i.e. the image certainly contains a cat and does not contain any other animals.
 
 now as our network trains, it may give a prediction of $[0.5, 0.3, 0.15, 0.05]$, this is our predicted probability distribution $Q$.
 
 Calculating our cross-entropy we get:
 \begin{equation}
-C = -\sum_{i=0}^{n}P(i) log(Q(i))
+C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})
 \label{eqn:xentrpy_eg}
 \end{equation}
 
-
+If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the cost is closer to zero and our prediction is better. The network believes with 80\% certainty that the images is of a cat. 
 
 
 \subsubsection{Kullback-Leibler Divergence}
 
+Another method for defining the difference between two distributions is the Kullback-Leibler Divergence (KLD).
 
-\subsection{Gradient Decent}
-now that we have a method for determining how well our neural network performs a task, we can observe how this changes as the weights of the network are changed.
+KLD is a non-symetric distance measure between two distributions, $P$ and $Q$. As it is non-symetric $D_{KL}(P||Q) \neq D_{KL}(Q||P)$ unless $P = Q$.
+
+\begin{equation}
+D_{KL} = -\int_{i=0}^{n}{P(i)Log(\frac{Q(i)}{P(i)}})
+\label{eqn:kld}
+\end{equation}
+
+KLD is useful in machine learning when we wish to calculate how different a predicted distribution is from a desired distribution. Most commonly, we will want $P$ to be a Gaussian distribution, though which distribution is chosen will depend on the specific problem. We will then use the KLD as a constraint to force our networks to make predictions which follow as closely as possible to this desired distribution, i.e. we will minimse $D_{KL}(P||Q)$.
+
+Typically KLD is not used as a cost function on its own, but is used to constrain the output of a single layer of a network (usually not the output) whilst also minimising another cost function.
+
+The best example of this is a Variational AutoEncoder (VAE), which will be discussed later.
+
+
+\subsection{Gradient Descent}
+Now that we have a method for determining how well our neural network performs at a task, we can observe how this changes as the weights of the network are changed.
 
 \pgfplotsset{%
   colormap={whitered}{color(0cm)=(white);
@@ -356,9 +371,118 @@ By substituting equation \ref{eqn:delta_w_eta} into equation \ref{eqn:delta_c_su
 By iteratively making changes to the weights according to \ref{eqn:delta_w_eta} we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \footnote{Learning rate is discussed in more detail in section \ref{sec:lr_sch}}. 
 
 \subsection{Backpropagation}
+With a gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does.
+
+Backpropogation is defined by four equations:
+1)An equation for the error in the output layer, $\delta_L$:
+
+\begin{equation}
+\delta_L = \nabla_a C \circ \sigma'(z_L)
+\label{eqn:BP1}
+\end{equation}
+
+Equation \ref{eqn:BP1} shows the output error $\delta_L$ equates to changes in the cost $C$ with respect to its activations $a$ and the derivative of the output layers activation function $\sigma'$ when the input to that layer is $z_L$.
+
+2)An equation for the error $\delta_l$ in terms of the error in the next layer:
+\begin{equation}
+\delta_l = ((w_{(l+1)})^T\delta_{(l+1)} \circ \sigma'(z_l)
+\label{eqn:BP2}
+\end{equation}
+where $(w_{(l+1)})^T$ is the transpose of the weight matrix for the layer above. Multiplying the error from the layer above by the transposed weight matrix can be seen as moving the error backward through that weight matix and the Hadamard product\footnote{The Hadamard product is the elementwise product of two matricies as shown in equation \ref{eqn:hada}. \begin{equation}
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix} \circ \begin{bmatrix}
+e & f \\
+g & h
+\end{bmatrix} = \begin{bmatrix}
+ae & bf \\
+cg & dh
+\end{bmatrix}
+\label{eqn:hada}
+\end{equation}} $\circ$ with $\sigma'(z_l)$ moves the error backward through the activation function.
+
+3)An equation for the rate of change of the cost with respect to any bias in the network:
+\begin{equation}
+\frac{\delta C}{\delta b_lj} = \delta_lj
+\label{eqn:BP3}
+\end{equation}
+where $\frac{\delta C}{\delta b_lj}$ is the rate of change of the cost $C$ with respect to bias $b$ of neuron $j$, in layer $l$ and $\delta_lj$ is the $j^{th}$ entry in the error matrix $\delta$ for layer $l$ i.e. the error for the $j^th$ neuron in layer $l$.
+
+4)An equation for the rate of change of the cost with respect to any weight in the network:
+\begin{equation}
+\frac{\delta C}{\delta w_{ljk}} = a_{(l-1)k}\delta_lj
+\label{eqn:BP4}
+\end{equation}
+where $\frac{\delta C}{\delta w_{ljk}}$ is the rate of change of cost $C$ with respect to the change in weight $w_k$ of neuron $j$ in layer $l$ and $a_{(l-1)k}$ is its input activation.
+
+Using these four equations, \ref{eqn:BP1}, \ref{eqn:BP2}, \ref{eqn:BP3} and \ref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
+
+One consequence of the backpropagation algorithm is that we are limited in terms of the trainable depth of our networks. As we continually differentiate the error to pass it back through each layer and multiply it by transposed weight matricies, the magnitude of the error can shrink. This results in vanishing error gradients the deeper into the network we go. This mean that at some point, the error with respect to a weight or bias will appear to be zero (or approxiamtely zero) and thus we cannot adjust it by gradient descent, so we are limited to not having infinitely deep networks.
+
 \subsection{Extensions and Improvements}
+There are many extensions to simple gradient descent based learning, here are a few to be aware of.
 \subsubsection{Learning Rate Schedule}
 \label{sec:lr_sch}
+Depending on how far we are from the global error minima, we may wish to change the value of the learning rate $\eta$. Recall from equation \ref{eqn:delta_w_eta} $\Delta w = -\eta \nabla C$, that the learning rate determines how big of a step we take, following the gradient of the error, each time we update the weights of our neural network.
+
+If we are far from the minimum point for the cost with respect to the weights, we may wish to take larger steps, so that we can more quickly reduce the total cost. However, as we get closer we want to ensure that we do not step over the minimum.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+axis lines=left,
+xtick={-10,0,10},
+xticklabels={},
+xlabel={$\Delta w$},
+ylabel={$C$},
+yticklabels={},
+xlabel near ticks,
+ylabel near ticks]
+\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^2};
+%\draw [blue](0,100) ++(90 : 1 ) arc ( 90:81.87:50 );
+\node [blue] at (2,98)  (a) {\textbullet};
+\node [blue] at (20,64) (b) {\textbullet};
+\node [blue] at (40,36) (c) {\textbullet};
+\node [blue] at (60,16) (d) {\textbullet};
+\node [blue] at (80,4)  (e) {\textbullet};
+\node [blue] at (100,0) (f) {\textbullet};
+
+\draw[blue, ->](a) to [bend left] (b);
+\draw[blue, ->](b) to [bend left] (c);
+\draw[blue, ->](c) to [bend left] (d);
+\draw[blue, ->](d) to [bend left] (e);
+\draw[blue, ->](e) to [bend left] (f);
+
+
+\node [red] at (198,98)  (g) {\textbullet};
+\node [red] at (180,64) (h) {\textbullet};
+\node [red] at (153,28) (i) {\textbullet};
+\node [red] at (90,1) (j) {\textbullet};
+%\node [red] at (60,16)  (k) {\textbullet};
+%\node [red] at (80,4) (l) {x};
+
+
+\draw[red, ->](g) to [bend right] (h);
+\draw[red, ->](h) to [bend right] (i);
+\draw[red, ->](i) to [bend right] (j);
+%\draw[red, ->](j) to [bend right] (k);
+
+
+\end{axis}
+    
+
+\end{tikzpicture}
+\caption{Visualisation of cost minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate.}
+\label{fig:lr_schedule}
+\end{center}
+\end{figure}
+
+Figure \ref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. The blue arrows show how reducing the learning rate as more training occurs, allows us to not miss the cost minimum. The red arrows show what can happen if we select a large learning rate and don't change it. Whilst at first, we make rapid progress towards the minimum, at somepoint we cross over it and will be unable to approach any closer without taking smaller steps.
+
+This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
+
 \subsubsection{Momentum}
 
 
