@@ -20,21 +20,55 @@
 \contentsline {subsubsection}{\numberline {1.4.2.1}Mean Squared Error}{8}{subsubsection.32}
 \contentsline {subsubsection}{\numberline {1.4.2.2}Cross-Entropy}{8}{subsubsection.34}
 \contentsline {subsubsection}{\numberline {1.4.2.3}Kullback-Leibler Divergence}{9}{subsubsection.37}
-\contentsline {subsection}{\numberline {1.4.3}Gradient Decent}{10}{subsection.39}
+\contentsline {subsection}{\numberline {1.4.3}Gradient Descent}{10}{subsection.39}
 \contentsline {subsection}{\numberline {1.4.4}Backpropagation}{12}{subsection.47}
 \contentsline {subsection}{\numberline {1.4.5}Extensions and Improvements}{13}{subsection.54}
 \contentsline {subsubsection}{\numberline {1.4.5.1}Learning Rate Schedule}{13}{subsubsection.55}
-\contentsline {subsubsection}{\numberline {1.4.5.2}Momentum}{15}{subsubsection.57}
-\contentsline {section}{\numberline {1.5}Convolutional Neural Networks}{15}{section.58}
-\contentsline {subsection}{\numberline {1.5.1}What is Convolution?}{15}{subsection.59}
-\contentsline {subsubsection}{\numberline {1.5.1.1}Kernels}{15}{subsubsection.60}
-\contentsline {subsubsection}{\numberline {1.5.1.2}Strides}{15}{subsubsection.61}
-\contentsline {subsubsection}{\numberline {1.5.1.3}Dilations}{15}{subsubsection.62}
-\contentsline {subsection}{\numberline {1.5.2}Transposed Convolutions}{15}{subsection.63}
-\contentsline {section}{\numberline {1.6}Recurrent Neural Networks}{15}{section.64}
-\contentsline {subsection}{\numberline {1.6.1}Vanilla RNN}{15}{subsection.65}
-\contentsline {subsection}{\numberline {1.6.2}Gated RNN}{15}{subsection.66}
-\contentsline {section}{\numberline {1.7}Summary}{15}{section.67}
+\contentsline {section}{\numberline {1.5}Convolutional Neural Networks}{16}{section.58}
+\contentsline {subsection}{\numberline {1.5.1}What is Convolution?}{16}{subsection.59}
+\contentsline {subsubsection}{\numberline {1.5.1.1}Kernels}{16}{subsubsection.60}
+\contentsline {subsubsection}{\numberline {1.5.1.2}Strides}{16}{subsubsection.61}
+\contentsline {subsubsection}{\numberline {1.5.1.3}Dilations}{16}{subsubsection.62}
+\contentsline {subsection}{\numberline {1.5.2}Transposed Convolutions}{16}{subsection.63}
+\contentsline {section}{\numberline {1.6}Recurrent Neural Networks}{16}{section.64}
+\contentsline {subsection}{\numberline {1.6.1}Vanilla RNN}{16}{subsection.65}
+\contentsline {subsection}{\numberline {1.6.2}Gated RNN}{16}{subsection.66}
+\contentsline {section}{\numberline {1.7}Summary}{16}{section.67}
+\contentsline {chapter}{\numberline {2}Sensory Redundancy: Are two heads better than one?}{17}{chapter.68}
+\contentsline {section}{\numberline {2.1}Why have one sensor when two are better?}{17}{section.69}
+\contentsline {section}{\numberline {2.2}Generating images from natural language}{18}{section.70}
+\contentsline {subsection}{\numberline {2.2.1}Aims}{18}{subsection.71}
+\contentsline {subsection}{\numberline {2.2.2}UCU Arabic Spoken Digits and MNIST}{18}{subsection.72}
+\contentsline {subsubsection}{\numberline {2.2.2.1}UCU Arabic Spoken Digits}{18}{subsubsection.73}
+\contentsline {subsubsection}{\numberline {2.2.2.2}MNIST Handwritten Digits}{20}{subsubsection.77}
+\contentsline {subsection}{\numberline {2.2.3}Problem Description}{20}{subsection.78}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Classification}{20}{subsubsection.79}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Bidirectional Symbol Grounding}{21}{subsubsection.80}
+\contentsline {subsection}{\numberline {2.2.4}Experiment Details}{21}{subsection.81}
+\contentsline {subsubsection}{\numberline {2.2.4.1}Dataplumbing}{21}{subsubsection.82}
+\contentsline {paragraph}{\numberline {2.2.4.1.1}Combining Datasets}{21}{paragraph.83}
+\contentsline {paragraph}{\numberline {2.2.4.1.2}Merging Modalities}{21}{paragraph.84}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Training Procedures}{22}{subsubsection.87}
+\contentsline {paragraph}{\numberline {2.2.4.2.1}Bimodal}{22}{paragraph.88}
+\contentsline {paragraph}{\numberline {2.2.4.2.2}Randomly Degraded}{22}{paragraph.89}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Testing Conditions}{23}{subsubsection.90}
+\contentsline {paragraph}{\numberline {2.2.4.3.1}Bimodal}{23}{paragraph.91}
+\contentsline {paragraph}{\numberline {2.2.4.3.2}Image Only}{23}{paragraph.92}
+\contentsline {paragraph}{\numberline {2.2.4.3.3}MFCC Only}{23}{paragraph.93}
+\contentsline {subsubsection}{\numberline {2.2.4.4}Network Description}{23}{subsubsection.94}
+\contentsline {paragraph}{\numberline {2.2.4.4.1}Baseline Models}{23}{paragraph.95}
+\contentsline {paragraph}{\numberline {2.2.4.4.2}Multimodal Autoencoder}{24}{paragraph.98}
+\contentsline {subsection}{\numberline {2.2.5}Results}{25}{subsection.100}
+\contentsline {subsubsection}{\numberline {2.2.5.1}Classification Results}{25}{subsubsection.101}
+\contentsline {subsubsection}{\numberline {2.2.5.2}Reconstruction Results}{27}{subsubsection.106}
+\contentsline {subsection}{\numberline {2.2.6}Discussion}{27}{subsection.109}
+\contentsline {subsubsection}{\numberline {2.2.6.1}Discussion of Classification Results}{27}{subsubsection.110}
+\contentsline {subsubsection}{\numberline {2.2.6.2}Discussion of Reconstruction Results}{29}{subsubsection.111}
+\contentsline {paragraph}{\numberline {2.2.6.2.1}Image reconstruction from MFCCs}{29}{paragraph.112}
+\contentsline {paragraph}{\numberline {2.2.6.2.2}MFCC reconstruction from Images}{30}{paragraph.113}
+\contentsline {paragraph}{\numberline {2.2.6.2.3}Effects of randomly degrading inputs}{31}{paragraph.114}
+\contentsline {paragraph}{\numberline {2.2.6.2.4}Multiple generations of the same digit}{31}{paragraph.115}
+\contentsline {section}{\numberline {2.3}Conclusion}{31}{section.116}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{16}{dummy.68}
+\contentsline {chapter}{Bibliography}{33}{dummy.117}

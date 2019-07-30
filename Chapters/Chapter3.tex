@@ -1,5 +1,4 @@
 % Chapter Template
-
 \chapter{A Primer on Artifical Neural Networks} % Main chapter title
 
 \label{Chapter3} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
@@ -482,11 +481,56 @@ ylabel near ticks]
 Figure \ref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. The blue arrows show how reducing the learning rate as more training occurs, allows us to not miss the cost minimum. The red arrows show what can happen if we select a large learning rate and don't change it. Whilst at first, we make rapid progress towards the minimum, at somepoint we cross over it and will be unable to approach any closer without taking smaller steps.
 
 This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
+Learning rate schedulers can speed up convergence by allowing large steps to be taken when we are far from the cost minimum with respect to the weights, covering a large distance in a few updates and then slowing down to take smaller steps as we get closer. 
 
-\subsubsection{Momentum}
+This begs the question of: how do we know when to change the learning rate? in  practice there are many ways we can achieve this, however these braodly fit into two categories, mathematical and heuristic.
+
+There are many algorithms for calculating how to set the learning rate for example, Adam \cite{kingma2014adam} and ADADelta \cite{zeiler2012adadelta}. They are both popular as they are both first order methods, meaning that expensive, slow calculations of second order derivatives do not need to be made.
+Senior et al.\cite{senior2013empirical} provide an extensive testing of different learning rate schedulers. 
+
+Second order methods are desirable in that the second derivative of the cost provides information about how the cost gradient is changing. Figure \ref{fig:2ndordr} shows how the cost and its first and second derivatives change with respect to the weights. In region (A), where the cost (black line) is far from the minima the first derivative (blue) changes rapidly, causing the second derivative (red) to have a large magnitude. In region (B), the cost is closer to the minima, and thus the change in cost is lower so the steepness of the first derivative (blue) is lower as is the magnitude of the second derivative (red). At the minima, the second derivative is exactly zero, so we know we have reached the minima if the second derivative equals zero.
+
+Second order methods have the major draw back of being very slow to calculate. Thus it is more efficient to make use of first order estimates than the exact information provided by second order methods. Many more weight updates can be carried out using first order methods than can be done using second order methods in a given time frame. So whilst second order methods should require less total weight updates to minimise the cost, the first order methods will reach the minimum faster as the weight updates will occur much more quickly in the first order case.
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+axis lines=middle,
+xtick={-10,0,10},
+xticklabels={},
+xlabel={$\Delta w$},
+ylabel={$C$},
+yticklabels={},
+xlabel near ticks,
+ylabel near ticks,
+scaled y ticks = false]
+\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^4};
+\addplot[blue, thick, smooth, samples=1000, domain=-10:10]{4*x^3};
+\addplot[red, thick, smooth, samples=1000, domain=-10:10]{12*x^2};
+
+\addplot [black, thin, smooth] coordinates {(-5, -4000) (-5, 10000)};
+\addplot [black, thin, smooth] coordinates {(5, -4000) (5, 10000)};
+
+\node[] at (axis cs:7.5,7000) {(A)};
+\node[] at (axis cs:-7.5,7000) {(A)};
+\node[] at (axis cs:2.5,7000)  {(B)};
+\node[] at (axis cs:-2.5,7000) {(B)};
+\node[] at (axis cs:0,500) {(min)};
 
 
 
+\end{axis}
+    
+
+\end{tikzpicture}
+\caption{Visualisation of the cost (black), its first derivative (blue) and second derivative (red).}
+\label{fig:2ndordr}
+\end{center}
+\end{figure}
+
+Heuristic methods provide a very simple method for adjusting the learning rate. A commonly used one is to simply gradually reduce the learning rate by a small amount each epoch. This has the advantage of requiring almost no computational overhead and being very easy to understand. When training starts, we expect performance to be poor, so improvements can be made rapidly. As training progresses, we expect that improvements will be slower as we are approaching the minimum cost.
 
 \section{Convolutional Neural Networks}
 \subsection{What is Convolution?}

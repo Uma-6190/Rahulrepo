@@ -18,6 +18,11 @@ Hammami, N. and Sellam, M. (2009).
 \newblock In {\em 2009 International Conference for Internet Technology and
   Secured Transactions,(ICITST)}, pages 1--4. IEEE.
 
+\bibitem[Kingma and Ba, 2014]{kingma2014adam}
+Kingma, D.~P. and Ba, J. (2014).
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}.
+
 \bibitem[LeCun, 1998]{lecun1998mnist}
 LeCun, Y. (1998).
 \newblock The mnist database of handwritten digits.
@@ -40,9 +45,27 @@ Ngiam, J., Khosla, A., Kim, M., Nam, J., Lee, H., and Ng, A.~Y. (2011).
 \newblock In {\em Proceedings of the 28th international conference on machine
   learning (ICML-11)}, pages 689--696.
 
+\bibitem[Rosenblatt, 1958]{rosenblatt1958perceptron}
+Rosenblatt, F. (1958).
+\newblock The perceptron: a probabilistic model for information storage and
+  organization in the brain.
+\newblock {\em Psychological review}, 65(6):386.
+
 \bibitem[Samuel, 1997]{samuel1997lexical}
 Samuel, A.~G. (1997).
 \newblock Lexical activation produces potent phonemic percepts.
 \newblock {\em Cognitive psychology}, 32(2):97--127.
+
+\bibitem[Senior et~al., 2013]{senior2013empirical}
+Senior, A., Heigold, G., Yang, K., et~al. (2013).
+\newblock An empirical study of learning rates in deep neural networks for
+  speech recognition.
+\newblock In {\em 2013 IEEE international conference on acoustics, speech and
+  signal processing}, pages 6724--6728. IEEE.
+
+\bibitem[Zeiler, 2012]{zeiler2012adadelta}
+Zeiler, M.~D. (2012).
+\newblock Adadelta: an adaptive learning rate method.
+\newblock {\em arXiv preprint arXiv:1212.5701}.
 
 \end{thebibliography}
