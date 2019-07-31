@@ -265,10 +265,8 @@ Given a dataset containing images of animals: cats, dogs, horses and snakes. A s
 now as our network trains, it may give a prediction of $[0.5, 0.3, 0.15, 0.05]$, this is our predicted probability distribution $Q$.
 
 Calculating our cross-entropy we get:
-\begin{equation}
-C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})
-\label{eqn:xentrpy_eg}
-\end{equation}
+$C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})$
+
 
 If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the cost is closer to zero and our prediction is better. The network believes with 80\% certainty that the images is of a cat. 
 
@@ -510,8 +508,8 @@ scaled y ticks = false]
 \addplot[blue, thick, smooth, samples=1000, domain=-10:10]{4*x^3};
 \addplot[red, thick, smooth, samples=1000, domain=-10:10]{12*x^2};
 
-\addplot [black, thin, smooth] coordinates {(-5, -4000) (-5, 10000)};
-\addplot [black, thin, smooth] coordinates {(5, -4000) (5, 10000)};
+\addplot [black, thin, dashed] coordinates {(-5, -4000) (-5, 10000)};
+\addplot [black, thin, dashed] coordinates {(5, -4000) (5, 10000)};
 
 \node[] at (axis cs:7.5,7000) {(A)};
 \node[] at (axis cs:-7.5,7000) {(A)};
@@ -544,6 +542,21 @@ Heuristic methods provide a very simple method for adjusting the learning rate. 
 \subsection{Vanilla RNN}
 \subsection{Gated RNN}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/LSTM.png}
+	
+	\caption{A Long Short-Term Memory Unit}
+	\label{fig:lstm}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/GRU.png}
+	
+	\caption{A Gated Recurrent Unit}
+	\label{fig:gru}
+\end{figure}
 
 
 

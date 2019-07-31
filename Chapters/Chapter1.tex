@@ -8,13 +8,19 @@
 
 %----------------------------------------------------------------------------------------
 
-\section{How do Artifical Neural Networks compare to the human brain?}
-In this thesis I will exam how Artificial Neural Networks compare to the human brain and how we can take inspiration from human intelligence to improve the capabilities of ANNs. 
+\section{Multimodal Representation Learning}
+What is Multimodal Representation Learning (MRL) and why is it useful? These are the questions that I will address in this thesis.
+Briefly, MRL is the act of learning an abstract representation of sensory data from multiple sensors. As sensors respond directly to the world in which they are situated, MRL is closely related to learning a world representation. Therefore, an accurate representation of sensory data contains in it, a representation of the world.
+
+MRL is therefore useful any time we have more than one sensor and if we can abstract sensory data to learn more about the world, or how the different modalities relate to one and other. Perhaps the best example of this is Language Learning - when a baby learns its first words, it is doing MRL, learning the association of sounds to objects and actions.
+
+Beyond the highly complex and abstract task of learning a language, MRL can also be used for sensor fusion. Providing auxilory information using extra sensors can help to improve classification accuracy (which I will demonstrate later) and can also be used to regenerate missing data when only one modality is available.  A good example of this is when humans read lips in noisy environments, using the shape of the mouth to help recognise which words are being uttered even if they are not heard.
+
 
 \section{Motivation}
-%Recent developments in image classification, captioning and question answering have shown neural networks are capable of performing complex, high level tasks which incorporate a multitude of human like skills \cite{jia2015guiding}. Image captioning combines knowledge of object appearance, location, use and natural language generation to produce human like sentences describing the contents of an image \cite{vinyals2015show} \cite{ren2015exploring}.
+One of the major challenges in robotics and machine learning is that of knowing how to develop systems capable of life long learning. If robots are to become common place in society, they must be capable to continuing to learn throughout their lives. They will not be very useful if they cannot learn new things that they weren't programmed with at the factory.
 
-%The reverse of this process, image generation from a textual description, is a new area of research which is begining to gain much interest \cite{reed2016generative}. Along these lines, my research focuses on combining these tasks into a single neural network, framing the problem within a multimodal autoencoder, where recovery of both an image and its description from a joint embedding space is the goal.
+Multimodal representation learning addresses this by providing an unsupervised method for extracting useful and actionable information about the world. 
 
 %----------------------------------------------------------------------------------------
 
