@@ -28,7 +28,7 @@ Perceptrons arranged in layers, referred to as multi-layer perceptrons, are ther
 	\label{fig:perceptron}
 \end{figure}
 
-Perceptrons are biologically inspired computation units and are a type of artificial neuron. They take a series of binary inputs, compute a weighted sum and produce a binary output based on the value of this sum as seen in figure \ref{fig:perceptron}.
+Perceptrons are biologically inspired computation units and are a type of artificial neuron. They take a series of binary inputs, compute a weighted sum and produce a binary output based on the value of this sum as seen in \autoref{fig:perceptron}.
 
 
 \begin{equation}
@@ -39,7 +39,7 @@ output = \begin{cases}
 \label{eqn:percep} 
 \end{equation}
 
-Where $x_j$ is the jth input, $w_j$ is it associated weight and $b$ is a constant value called the bias, which affects how easy it is for the neuron to activate. The output of the perceptron is caluclated using the formulation shown in \ref{eqn:percep}.
+Where $x_j$ is the jth input, $w_j$ is it associated weight and $b$ is a constant value called the bias, which affects how easy it is for the neuron to activate. The output of the perceptron is caluclated using the formulation shown in \autoref{eqn:percep}.
 
 By adjusting each of the weights we can change the output of the perceptron. For example, if we wanted to use a perceptron to decide whether to have a picnic today we can  select a set of relevant inputs, ``the weather is nice" and ``the pollen count is low".
 
@@ -63,7 +63,7 @@ In the previous section I demonstrated how a single perceptron can be used to ma
 	\label{fig:mlp}
 \end{figure}
 
-If we take the example from the previous section about deciding to go for a picnic or not, we can use the MLP shown in \ref{fig:mlp} to consider what happens if person A and B want to go for a picnic together.
+If we take the example from the previous section about deciding to go for a picnic or not, we can use the MLP shown in \autoref{fig:mlp} to consider what happens if person A and B want to go for a picnic together.
 
 Given the previous conditions of a sunny day with a high pollen count, person A wants to go whilst person B does not, as demonstrated by the outputs of their individual perceptrons. Taking these outputs as inputs to the second layer of our MLP, we can see whether the picnic will go ahead.
 
@@ -73,7 +73,7 @@ This time we will set the weights of the second layer based on who shouts the lo
 
 Only being able to handle binary values is a major drawback of the perceptron. An artificial neuron which can handle continuous values is much more useful.
 
-This limitation occurs due to the activation function of the perceptron shown in equation \ref{eqn:percep}. Visualising the perceptron activation function highlights that changes in the output of the neuron are not proportional to changes in the weights of the neuron as seen in figure \ref{fig:activation_percep}. With a few small changes we can make an artifical neuron that accepts continuous values and has a continuous output.
+This limitation occurs due to the activation function of the perceptron shown in \autoref{eqn:percep}. Visualising the perceptron activation function highlights that changes in the output of the neuron are not proportional to changes in the weights of the neuron as seen in \autoref{fig:activation_percep}. With a few small changes we can make an artifical neuron that accepts continuous values and has a continuous output.
 
 \begin{figure}
 \begin{center}
@@ -100,7 +100,7 @@ ylabel near ticks]
 \end{center}
 \end{figure}
 
-A continuous output is very important as it means that a small change in the weights of a neuron will cause a small change in its output. This makes it much easier to understand how changing the weights affects the output of the network as the change in output becomes proportional to the change in weights as shown in equation \ref{eqn:proport}
+A continuous output is very important as it means that a small change in the weights of a neuron will cause a small change in its output. This makes it much easier to understand how changing the weights affects the output of the network as the change in output becomes proportional to the change in weights as shown in \autoref{eqn:proport}
 
 \begin{equation}
 	\delta Output \propto \delta W
@@ -110,21 +110,21 @@ A continuous output is very important as it means that a small change in the wei
 
 \subsection{Sigmoid Neurons}
 
-The sigmoid neuron uses the sigmoid function, shown in equation \ref{eqn:sig} as its activation function. 
+The sigmoid neuron uses the sigmoid function, shown in \autoref{eqn:sig} as its activation function. 
 
 \begin{equation}
 \sigma(z) = \frac{1}{1 + e^{-z}}
 \label{eqn:sig}
 \end{equation}
 
-$z$ is the sum of the weights multiplied by their respective inputs as seen in equation  \ref{eqn:z_act}.
+$z$ is the sum of the weights multiplied by their respective inputs as seen in  \autoref{eqn:z_act}.
 
 \begin{equation}
 z = \sum_{j} w_j x_j + b
 \label{eqn:z_act}
 \end{equation}
 
-As we can see in figure \ref{fig:activation_sigmoid}, as $z$ changes, their is a proportional change in the output $\sigma(z)$, unlike in figure \ref{fig:activation_percep} where the output only changes when $z$ crosses the y-axis.
+As we can see in \autoref{fig:activation_sigmoid}, as $z$ changes, their is a proportional change in the output $\sigma(z)$, unlike in \autoref{fig:activation_percep} where the output only changes when $z$ crosses the y-axis.
 
 \begin{figure}
 \begin{center}
@@ -154,7 +154,7 @@ ylabel near ticks]
 Now that we have an activation function that can produce continuous values, we can consider a much more diverse range of data to train our neural networks with. So instead of just making yes or no decisions we can look at, for example, the colours of pixels and decide if there is a cat in the image or given todays weather, predict if it will rain tomorrow.
 
 \subsubsection{Other activation functions}
-There are two other important and commonly used activation functions, though many others exist. These are, the hyperbolic tangent (Tanh) shown in figure \ref{fig:activation_tanh} and rectified linear unit (Relu)  shown in figure \ref{fig:activation_relu}.
+There are two other important and commonly used activation functions, though many others exist. These are, the hyperbolic tangent (Tanh) shown in \autoref{fig:activation_tanh} and rectified linear unit (Relu)  shown in \autoref{fig:activation_relu}.
 
 \begin{figure}[h]
 \begin{center}
@@ -203,14 +203,14 @@ ylabel near ticks]
 \end{center}
 \end{figure}
 
-The Relu was created to address and issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \footnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in section\ref{sec:percep}} can be trained as non-linear functions like the sigmoid or Tanh will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
+The Relu was created to address and issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \footnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in \autoref{sec:percep}} can be trained as non-linear functions like the sigmoid or Tanh will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
 
 \section{Learning Algorithms}
-In section \ref{sec:percep} we saw how simple computation units can make simple decisions and how these can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
+In \autoref{sec:percep} we saw how simple computation units can make simple decisions and how these can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
 
 In general, perceptrons (and their more modern decendents) will have their initial weights set randomly, unlike in our example where I chose them. 
 
-Randomly setting weights is useful in practice as we will usually have large numbers of inputs, weights, layers and artifical neurons, so setting each by hand would be intractable. Also, if we knew what weights to set, we wouldn't need a neural network or a learning algorithm to solve our problem as we would likely have a more efficient mathematical description of the problem \footnote{there is a large body of work concerning the best way to initialise neural networks, I will briefly comment on this in section \ref{sec:random_init}.} 
+Randomly setting weights is useful in practice as we will usually have large numbers of inputs, weights, layers and artifical neurons, so setting each by hand would be intractable. Also, if we knew what weights to set, we wouldn't need a neural network or a learning algorithm to solve our problem as we would likely have a more efficient mathematical description of the problem \footnote{there is a large body of work concerning the best way to initialise neural networks, I will briefly comment on this in \autoref{sec:random_init}.} 
 
 With random weights our networks will make a lot of wrong decisions! However if we have a smart way of adjusting our weights we can make our neural networks get better at making decisions over time. This improvement is what I am referring to when I say ``machine learning''.
 
@@ -238,7 +238,7 @@ Depending on the particular method we use to train our networks, the cost functi
 The cost fuction can take on many forms, in supervised and unsupervised training alike. Here are a few of the more commonly used ones and an explanation of each.
 
 \subsubsection{Mean Squared Error}
-Mean squared error (MSE) measures the average difference between points as shown in equation \ref{eqn:mse}.
+Mean squared error (MSE) measures the average difference between points as shown in \autoref{eqn:mse}.
 
 \begin{equation}
 C = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \hat{Y_i})^2
@@ -250,7 +250,7 @@ When used as a loss function, MSE gives a measure of how bad our estimate $\hat{
 In general, $Y_i$ and $\hat{Y_i}$ can be of arbitrary size and shape (as long as they match each other). That is, they can be scalers, vectors or matricies.
 
 \subsubsection{Cross-Entropy}
-Cross-entropy measures the error between two probability distributions $P$ and $Q$ using the formula shown in equation \ref{eqn:xntrpy}. $P$ is the true probability distribution which we are trying to model with our predicted probability distribution $Q$.
+Cross-entropy measures the error between two probability distributions $P$ and $Q$ using the formula shown in \autoref{eqn:xntrpy}. $P$ is the true probability distribution which we are trying to model with our predicted probability distribution $Q$.
 
 \begin{equation}
 C = -\sum_{i=0}^{n}P(i) log(Q(i))
@@ -321,9 +321,9 @@ Now that we have a method for determining how well our neural network performs a
 \end{center}
 \end{figure}
 
-To make things simple, lets assume our network only has two weights, though the following derivation generalises to any number of weights. This could give us a cost landscape like that shown in figure \ref{fig:costscape}. Our aim is to minimise the cost as the cost is a measure of how wrong our network is.
+To make things simple, lets assume our network only has two weights, though the following derivation generalises to any number of weights. This could give us a cost landscape like that shown in \autoref{fig:costscape}. Our aim is to minimise the cost as the cost is a measure of how wrong our network is.
 
-In more definate terms we wish to minimise equation \ref{eqn:cost_bivar}, where $Y_i$ is the desired output value for input $i$ and $z$ is as defined in equation \ref{eqn:z_act}.
+In more definate terms we wish to minimise \autoref{eqn:cost_bivar}, where $Y_i$ is the desired output value for input $i$ and $z$ is as defined in \autoref{eqn:z_act}.
 
 \begin{equation}
 C(w_0, w_1) = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \sigma(z_i))^2
@@ -332,7 +332,7 @@ C(w_0, w_1) = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \sigma(z_i))^2
 
 This is the mean squared error rewritten slightly to highlight the dependence on the weights of the network.
 
-If we make a small change to either of the weights $w_0$ and $w_1$ we will get a small change in the cost, $C$ as seen in equation \ref{eqn:delta_C}.
+If we make a small change to either of the weights $w_0$ and $w_1$ we will get a small change in the cost, $C$ as seen in \autoref{eqn:delta_C}.
 
 \begin{equation}
 \Delta C \approx \frac{\delta C}{\delta w_0} \Delta w_0 + \frac{\delta C}{\delta w_1} \Delta w_1
@@ -346,26 +346,26 @@ We want to minimise C so we want $\Delta C$ to be negative. To make $\Delta C$ n
 \label{eqn:nabla_c}
 \end{equation}
 
-In equation \ref{eqn:nabla_c} we can see that the gradient of $C$ is equivalent to the partial derivatives of $C$ with repect to the weights of the network. For simplicity we will collect the changes in weights into a single vector $\Delta w \equiv (\Delta w_0, \Delta w_1)^T$.
+In \autoref{eqn:nabla_c} we can see that the gradient of $C$ is equivalent to the partial derivatives of $C$ with repect to the weights of the network. For simplicity we will collect the changes in weights into a single vector $\Delta w \equiv (\Delta w_0, \Delta w_1)^T$.
 
-By substituing this into equation \ref{eqn:delta_C} we get equation \ref{eqn:delta_c_sub}.
+By substituing this into \autoref{eqn:delta_C} we get \autoref{eqn:delta_c_sub}.
 
 \begin{equation}
 \Delta C \approx \nabla C \cdot \Delta w 
 \label{eqn:delta_c_sub}
 \end{equation}
 
-Looking at equation \ref{eqn:delta_c_sub}, we can see that to make $\Delta C$ negative we can set $\Delta w$ as in equation \ref{eqn:delta_w_eta}, where $\eta$ is a small positive constant called the learning rate.
+Looking at \autoref{eqn:delta_c_sub}, we can see that to make $\Delta C$ negative we can set $\Delta w$ as in \autoref{eqn:delta_w_eta}, where $\eta$ is a small positive constant called the learning rate.
 
 \begin{equation}
 \Delta w = -\eta \nabla C
 \label{eqn:delta_w_eta}
 \end{equation}
 
-By substituting equation \ref{eqn:delta_w_eta} into equation \ref{eqn:delta_c_sub} we can see that $ \Delta C = - \eta \abs{\nabla C}^2$ and because
- $\abs{\nabla C}^2 \geq 0$ this gaurantees that $C$ will always decrease if the weights are changed in accordance to equation \ref{eqn:delta_w_eta}.
+By substituting \autoref{eqn:delta_w_eta} into \autoref{eqn:delta_c_sub} we can see that $ \Delta C = - \eta \abs{\nabla C}^2$ and because
+ $\abs{\nabla C}^2 \geq 0$ this gaurantees that $C$ will always decrease if the weights are changed in accordance to \autoref{eqn:delta_w_eta}.
 
-By iteratively making changes to the weights according to \ref{eqn:delta_w_eta} we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \footnote{Learning rate is discussed in more detail in section \ref{sec:lr_sch}}. 
+By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta} we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \footnote{Learning rate is discussed in more detail in \autoref{sec:lr_sch}}. 
 
 \subsection{Backpropagation}
 With a gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does.
@@ -378,14 +378,14 @@ Backpropogation is defined by four equations:
 \label{eqn:BP1}
 \end{equation}
 
-Equation \ref{eqn:BP1} shows the output error $\delta_L$ equates to changes in the cost $C$ with respect to its activations $a$ and the derivative of the output layers activation function $\sigma'$ when the input to that layer is $z_L$.
+\autoref{eqn:BP1} shows the output error $\delta_L$ equates to changes in the cost $C$ with respect to its activations $a$ and the derivative of the output layers activation function $\sigma'$ when the input to that layer is $z_L$.
 
 2)An equation for the error $\delta_l$ in terms of the error in the next layer:
 \begin{equation}
 \delta_l = ((w_{(l+1)})^T\delta_{(l+1)} \circ \sigma'(z_l)
 \label{eqn:BP2}
 \end{equation}
-where $(w_{(l+1)})^T$ is the transpose of the weight matrix for the layer above. Multiplying the error from the layer above by the transposed weight matrix can be seen as moving the error backward through that weight matix and the Hadamard product\footnote{The Hadamard product is the elementwise product of two matricies as shown in equation \ref{eqn:hada}. \begin{equation}
+where $(w_{(l+1)})^T$ is the transpose of the weight matrix for the layer above. Multiplying the error from the layer above by the transposed weight matrix can be seen as moving the error backward through that weight matix and the Hadamard product\footnote{The Hadamard product is the elementwise product of two matricies as shown in \autoref{eqn:hada}. \begin{equation}
 \begin{bmatrix}
 a & b \\
 c & d
@@ -413,7 +413,7 @@ where $\frac{\delta C}{\delta b_lj}$ is the rate of change of the cost $C$ with 
 \end{equation}
 where $\frac{\delta C}{\delta w_{ljk}}$ is the rate of change of cost $C$ with respect to the change in weight $w_k$ of neuron $j$ in layer $l$ and $a_{(l-1)k}$ is its input activation.
 
-Using these four equations, \ref{eqn:BP1}, \ref{eqn:BP2}, \ref{eqn:BP3} and \ref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
+Using these four \autoref{eqn:BP1}, \autoref{eqn:BP2}, \autoref{eqn:BP3} and \autoref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
 
 One consequence of the backpropagation algorithm is that we are limited in terms of the trainable depth of our networks. As we continually differentiate the error to pass it back through each layer and multiply it by transposed weight matricies, the magnitude of the error can shrink. This results in vanishing error gradients the deeper into the network we go. This mean that at some point, the error with respect to a weight or bias will appear to be zero (or approxiamtely zero) and thus we cannot adjust it by gradient descent, so we are limited to not having infinitely deep networks.
 
@@ -421,7 +421,7 @@ One consequence of the backpropagation algorithm is that we are limited in terms
 There are many extensions to simple gradient descent based learning, here are a few to be aware of.
 \subsubsection{Learning Rate Schedule}
 \label{sec:lr_sch}
-Depending on how far we are from the global error minima, we may wish to change the value of the learning rate $\eta$. Recall from equation \ref{eqn:delta_w_eta} $\Delta w = -\eta \nabla C$, that the learning rate determines how big of a step we take, following the gradient of the error, each time we update the weights of our neural network.
+Depending on how far we are from the global error minima, we may wish to change the value of the learning rate $\eta$. Recall from \autoref{eqn:delta_w_eta} $\Delta w = -\eta \nabla C$, that the learning rate determines how big of a step we take, following the gradient of the error, each time we update the weights of our neural network.
 
 If we are far from the minimum point for the cost with respect to the weights, we may wish to take larger steps, so that we can more quickly reduce the total cost. However, as we get closer we want to ensure that we do not step over the minimum.
 
@@ -476,7 +476,7 @@ ylabel near ticks]
 \end{center}
 \end{figure}
 
-Figure \ref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. The blue arrows show how reducing the learning rate as more training occurs, allows us to not miss the cost minimum. The red arrows show what can happen if we select a large learning rate and don't change it. Whilst at first, we make rapid progress towards the minimum, at somepoint we cross over it and will be unable to approach any closer without taking smaller steps.
+\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. The blue arrows show how reducing the learning rate as more training occurs, allows us to not miss the cost minimum. The red arrows show what can happen if we select a large learning rate and don't change it. Whilst at first, we make rapid progress towards the minimum, at somepoint we cross over it and will be unable to approach any closer without taking smaller steps.
 
 This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
 Learning rate schedulers can speed up convergence by allowing large steps to be taken when we are far from the cost minimum with respect to the weights, covering a large distance in a few updates and then slowing down to take smaller steps as we get closer. 
@@ -486,7 +486,7 @@ This begs the question of: how do we know when to change the learning rate? in  
 There are many algorithms for calculating how to set the learning rate for example, Adam \cite{kingma2014adam} and ADADelta \cite{zeiler2012adadelta}. They are both popular as they are both first order methods, meaning that expensive, slow calculations of second order derivatives do not need to be made.
 Senior et al.\cite{senior2013empirical} provide an extensive testing of different learning rate schedulers. 
 
-Second order methods are desirable in that the second derivative of the cost provides information about how the cost gradient is changing. Figure \ref{fig:2ndordr} shows how the cost and its first and second derivatives change with respect to the weights. In region (A), where the cost (black line) is far from the minima the first derivative (blue) changes rapidly, causing the second derivative (red) to have a large magnitude. In region (B), the cost is closer to the minima, and thus the change in cost is lower so the steepness of the first derivative (blue) is lower as is the magnitude of the second derivative (red). At the minima, the second derivative is exactly zero, so we know we have reached the minima if the second derivative equals zero.
+Second order methods are desirable in that the second derivative of the cost provides information about how the cost gradient is changing. \autoref{fig:2ndordr} shows how the cost and its first and second derivatives change with respect to the weights. In region (A), where the cost (black line) is far from the minima the first derivative (blue) changes rapidly, causing the second derivative (red) to have a large magnitude. In region (B), the cost is closer to the minima, and thus the change in cost is lower so the steepness of the first derivative (blue) is lower as is the magnitude of the second derivative (red). At the minima, the second derivative is exactly zero, so we know we have reached the minima if the second derivative equals zero.
 
 Second order methods have the major draw back of being very slow to calculate. Thus it is more efficient to make use of first order estimates than the exact information provided by second order methods. Many more weight updates can be carried out using first order methods than can be done using second order methods in a given time frame. So whilst second order methods should require less total weight updates to minimise the cost, the first order methods will reach the minimum faster as the weight updates will occur much more quickly in the first order case.
 

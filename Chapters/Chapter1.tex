@@ -22,34 +22,49 @@ One of the major challenges in robotics and machine learning is that of knowing 
 
 Multimodal representation learning addresses this by providing an unsupervised method for extracting useful and actionable information about the world. Let us return to the language learning scenario, except this time, instead of a bay, lets imagine a robot, fresh out of the box. Whilst we might expect that a robot would have some proficiency with language built into it, we cannot expect it to know the meaning of every single word, especially given the flexible and evolving way that humans use language. Our robot therefore needs a way to learn the meaning of new words. 
 
-Similarly, we cannot expect the robot to be able to recognise every single object in its environment. On my desk I have a sterling engine, I would wager that most people that read this don't know what a sterling engine is however, if I showed you a picture of a sterling engine (like the one if figure \ref{fig:stirling} you would be able to recognise what a stirling engine is in future. Ideally, robots need to be able to do this. 
+Similarly, we cannot expect the robot to be able to recognise every single object in its environment. On my desk I have a Stirling engine, I would wager that most people that read this don't know what a Stirling engine is. However, if I showed you a picture of a Stirling engine (like the one in \autoref{fig:stirling} you would be able to recognise what a Stirling engine is in future. Ideally, robots need to be able to do this.
 
-\begin{figure}
+\begin{figure}[h]
 \centering
-	\includegraphics[width=0.5\textwidth]{Figs/introduction/stirling.png}
+	\includegraphics[width=0.3\textwidth]{Figs/introduction/stirling.png}
+	\caption{The Stirling Engine from my desk.}
 	\label{fig:stirling}
-	\caption{The Stirling Engine from my desk}
 \end{figure}
 
-The stirling engine example shows how language learning is a bi-directional process. Not only do you need to learn the name of the object \textit{Stirling Engine} but also that the words ``Stirling Engine'' mean the object \textit{Stirling Engine} as shown in figure \ref{fig:bi_ll}. 
-
-\begin{figure}
+\begin{figure}[h]
 \centering
 \begin{tikzpicture}
 [node distance=1.5cm,
     every node/.style={fill=white, font=\sffamily}, align=center]
   % Specification of nodes (position, etc.)
-  \node (object)             [activityStarts]              {Object};
-  \node (name)     [activityStarts, right of=object, xshift=4cm]          {Name};
+  \node (object)   [activityStarts]              					{Object};
+  \node (name)     [activityStarts, right of=object, xshift=4cm] {Name};
+  
+  \node (A)        [activityStarts, below of=object, yshift=-0.7cm]          {\includegraphics[width=1.5cm,height=1.5cm]{Figs/introduction/stirling.png}};
+ \node (stirling) [activityStarts, right of=A, xshift=4cm]  {``Stirling Engine"};       
  
   % Specification of lines between nodes specified above
   % with aditional nodes for description 
   \draw[<->]     (object) -- (name);
-  %\draw[->]     (name) -- (object);
+  \draw[<->]     (A) -- (stirling);
  
 \end{tikzpicture}
-\label{fig:bi_ll}
 \caption{The bi-directional nature of language learning.}
+\label{fig:bi_ll}
+\end{figure}
+
+The Stirling engine example shows how language learning is a bi-directional process. Not only do you need to learn the name of the object \textit{Stirling Engine} but also that the words ``Stirling Engine'' mean the object \textit{Stirling Engine} as shown in \autoref{fig:bi_ll}. 
+
+Multimodal representation learning allows us to jointly model both the object \textit{Stirling Engine} and the words ``Stirling Engine'', relying on only one assumption: \textbf{Sensory percepts which occur together are related}.
+
+Whilst this may not be true for all sensory percepts it is true enough that co-occurrence of percepts allows us to infer useful information about the relationship between different modalities. For example, smith et al. \cite{smith2008infants} show how infants learn object names based on ``cross-situational statistics'' i.e. how often a word and an object occur together. \autoref{fig:cross_sitch} illustrates this idea.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\textwidth]{Figs/introduction/shapes.png}
+\caption{Associations among words and objects across multiple ambiguous scenes allow learners to find the proper mapping of words:
+''Circle", ''Square", ''Green" and ''Blue" to objects and colours: \textit{Circle},  \textit{Square},  \textit{Green}  \textit{Blue}}
+\label{fig:cross_sitch}
 \end{figure}
 
 
