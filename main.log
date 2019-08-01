@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  31 JUL 2019 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  1 AUG 2019 10:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1218,7 +1218,14 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \c@@todonotes@numberoftodonotes=\count182
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
+code.tex
+File: pgflibraryarrows.meta.code.tex 2015/05/13 v3.0.1a (rcs-revision 1.13)
+\pgfarrowinset=\dimen265
+\pgfarrowlength=\dimen266
+\pgfarrowwidth=\dimen267
+\pgfarrowlinewidth=\dimen268
+) (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
 
@@ -1227,7 +1234,7 @@ Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
 \t@pgfplots@toka=\toks47
 \t@pgfplots@tokb=\toks48
 \t@pgfplots@tokc=\toks49
-\pgfplots@tmpa=\dimen265
+\pgfplots@tmpa=\dimen269
 \c@pgfplots@coordindex=\count183
 \c@pgfplots@scanlineindex=\count184
 
@@ -1300,14 +1307,14 @@ e.tex)
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen266
-\pgfdecoratedremainingdistance=\dimen267
-\pgfdecoratedinputsegmentcompleteddistance=\dimen268
-\pgfdecoratedinputsegmentremainingdistance=\dimen269
-\pgf@decorate@distancetomove=\dimen270
+\pgfdecoratedcompleteddistance=\dimen270
+\pgfdecoratedremainingdistance=\dimen271
+\pgfdecoratedinputsegmentcompleteddistance=\dimen272
+\pgfdecoratedinputsegmentremainingdistance=\dimen273
+\pgf@decorate@distancetomove=\dimen274
 \pgf@decorate@repeatstate=\count189
-\pgfdecorationsegmentamplitude=\dimen271
-\pgfdecorationsegmentlength=\dimen272
+\pgfdecorationsegmentamplitude=\dimen275
+\pgfdecorationsegmentlength=\dimen276
 )
 \tikz@lib@dec@box=\box76
 )
@@ -1320,12 +1327,12 @@ zlibrarydecorations.pathreplacing.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathreplacing.code.tex))
 \pgfplots@numplots=\count190
-\pgfplots@xmin@reg=\dimen273
-\pgfplots@xmax@reg=\dimen274
-\pgfplots@ymin@reg=\dimen275
-\pgfplots@ymax@reg=\dimen276
-\pgfplots@zmin@reg=\dimen277
-\pgfplots@zmax@reg=\dimen278
+\pgfplots@xmin@reg=\dimen277
+\pgfplots@xmax@reg=\dimen278
+\pgfplots@ymin@reg=\dimen279
+\pgfplots@ymax@reg=\dimen280
+\pgfplots@zmin@reg=\dimen281
+\pgfplots@zmax@reg=\dimen282
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -1345,14 +1352,14 @@ LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count191
-\l_MT_multwidth_dim=\dimen279
+\l_MT_multwidth_dim=\dimen283
 \origjot=\skip72
-\l_MT_shortvdotswithinadjustabove_dim=\dimen280
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen281
-\l_MT_above_intertext_sep=\dimen282
-\l_MT_below_intertext_sep=\dimen283
-\l_MT_above_shortintertext_sep=\dimen284
-\l_MT_below_shortintertext_sep=\dimen285
+\l_MT_shortvdotswithinadjustabove_dim=\dimen284
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen285
+\l_MT_above_intertext_sep=\dimen286
+\l_MT_below_intertext_sep=\dimen287
+\l_MT_above_shortintertext_sep=\dimen288
+\l_MT_below_shortintertext_sep=\dimen289
 )
 (/usr/share/texlive/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2011/10/08 v1.3 Create an external file from within a LaT
@@ -1363,31 +1370,31 @@ Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 \ttl@box=\box77
 \beforetitleunit=\skip73
 \aftertitleunit=\skip74
-\ttl@plus=\dimen286
-\ttl@minus=\dimen287
+\ttl@plus=\dimen290
+\ttl@minus=\dimen291
 \ttl@toksa=\toks51
-\titlewidth=\dimen288
-\titlewidthlast=\dimen289
-\titlewidthfirst=\dimen290
+\titlewidth=\dimen292
+\titlewidthlast=\dimen293
+\titlewidthfirst=\dimen294
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1402,20 +1409,20 @@ Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count192
-\scratchdimen=\dimen291
+\scratchdimen=\dimen295
 \scratchbox=\box78
 \nofMPsegments=\count193
 \nofMParguments=\count194
 \everyMPshowfont=\toks52
 \MPscratchCnt=\count195
-\MPscratchDim=\dimen292
+\MPscratchDim=\dimen296
 \MPnumerator=\count196
 \makeMPintoPDFobject=\count197
 \everyMPtoPDFconversion=\toks53
 )
 \c@lstlisting=\count198
 \AtBeginShipoutBox=\box79
-Package hyperref Info: Link coloring ON on input line 64.
+Package hyperref Info: Link coloring ON on input line 78.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1424,9 +1431,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count199
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -1437,22 +1444,22 @@ LaTeX Info: Redefining \nameref on input line 64.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into 
 your preamble.
- on input line 64.
+ on input line 78.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 104.
+LaTeX Font Info:    Try loading font information for U+msa on input line 118.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 104.
+LaTeX Font Info:    Try loading font information for U+msb on input line 118.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./Figs/logos/HWUlogo.jpg, id=563, 455.7828pt x 227.6505pt>
+<./Figs/logos/HWUlogo.jpg, id=9, 455.7828pt x 227.6505pt>
 File: ./Figs/logos/HWUlogo.jpg Graphic file (type jpg)
 
 <use ./Figs/logos/HWUlogo.jpg>
-Package pdftex.def Info: ./Figs/logos/HWUlogo.jpg used on input line 120.
+Package pdftex.def Info: ./Figs/logos/HWUlogo.jpg used on input line 134.
 (pdftex.def)             Requested size: 170.71652pt x 85.26797pt.
  [1
 
@@ -1476,18 +1483,20 @@ Package pdftex.def Info: ./Figs/logos/HWUlogo.jpg used on input line 120.
 ------------------------------------------------------------------------------
  Table of Contents
 ------------------------------------------------------------------------------
-(./main.toc [4
 
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
 
-] [5] [6])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [7]
+[4
+
+
+]
 ------------------------------------------------------------------------------
  Abbreviations
 ------------------------------------------------------------------------------
-[8
+[5
 
 
 
@@ -1500,96 +1509,406 @@ Chapter 1.
 
 
 
-]) (./Chapters/Chapter2.tex [2]
+]
+
+LaTeX Warning: Reference `fig:stirling' on page 2 undefined on input line 25.
+
+<Figs/introduction/stirling.png, id=57, 1777.3602pt x 2763.6048pt>
+File: Figs/introduction/stirling.png Graphic file (type png)
+
+<use Figs/introduction/stirling.png>
+Package pdftex.def Info: Figs/introduction/stirling.png used on input line 29.
+(pdftex.def)             Requested size: 208.73653pt x 324.53384pt.
+
+
+LaTeX Warning: Reference `fig:bi_ll' on page 2 undefined on input line 34.
+
+) (./Chapters/Chapter2.tex [2] [3 <./Figs/introduction/stirling.png>]
 Chapter 2.
 ------------------------------------------------------------------------------
  2 Background
 ------------------------------------------------------------------------------
-[3
+[4
 
-] [4]) (./Chapters/Chapter3.tex [5]
+] [5]) (./Chapters/Chapter3.tex [6]
 Chapter 3.
 ------------------------------------------------------------------------------
  3 A Primer on Artifical Neural Networks
 ------------------------------------------------------------------------------
-<Figs/intro2dl/perceptron.png, id=776, 155.30823pt x 57.74373pt>
+
+Package natbib Warning: Citation `rosenblatt1958perceptron' on page 7 undefined
+ on input line 16.
+
+<Figs/intro2dl/perceptron.png, id=110, 155.30823pt x 57.74373pt>
 File: Figs/intro2dl/perceptron.png Graphic file (type png)
 
 <use Figs/intro2dl/perceptron.png>
 Package pdftex.def Info: Figs/intro2dl/perceptron.png used on input line 25.
 (pdftex.def)             Requested size: 208.73653pt x 77.61319pt.
- [6
 
-] [7 <./Figs/intro2dl/perceptron.png>]
-<Figs/intro2dl/mlp.png, id=798, 235.6002pt x 131.17004pt>
+
+LaTeX Warning: Reference `fig:perceptron' on page 7 undefined on input line 31.
+
+
+[7
+
+]
+
+LaTeX Warning: Reference `eqn:percep' on page 8 undefined on input line 42.
+
+[8 <./Figs/intro2dl/perceptron.png>]
+<Figs/intro2dl/mlp.png, id=133, 235.6002pt x 131.17004pt>
 File: Figs/intro2dl/mlp.png Graphic file (type png)
 
 <use Figs/intro2dl/mlp.png>
 Package pdftex.def Info: Figs/intro2dl/mlp.png used on input line 60.
 (pdftex.def)             Requested size: 208.73653pt x 116.21657pt.
- [8 <./Figs/intro2dl/mlp.png>] [9]
+
+
+LaTeX Warning: Reference `fig:mlp' on page 9 undefined on input line 66.
+
+
+LaTeX Warning: Reference `eqn:percep' on page 9 undefined on input line 76.
+
+
+LaTeX Warning: Reference `fig:activation_percep' on page 9 undefined on input l
+ine 76.
+
+[9 <./Figs/intro2dl/mlp.png>]
+
+LaTeX Warning: Reference `eqn:proport' on page 10 undefined on input line 103.
+
+
+LaTeX Warning: Reference `eqn:sig' on page 10 undefined on input line 113.
+
+
+LaTeX Warning: Reference `eqn:z_act' on page 10 undefined on input line 120.
+
+[10]
+
+LaTeX Warning: Reference `fig:activation_sigmoid' on page 11 undefined on input
+ line 127.
+
+
+LaTeX Warning: Reference `fig:activation_percep' on page 11 undefined on input 
+line 127.
+
+
+LaTeX Warning: Reference `fig:activation_tanh' on page 11 undefined on input li
+ne 157.
+
+
+LaTeX Warning: Reference `fig:activation_relu' on page 11 undefined on input li
+ne 157.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10] [11] [12]
 
-LaTeX Warning: Reference `eqn:xntrpy' on page 13 undefined on input line 253.
+LaTeX Warning: Reference `sec:percep' on page 11 undefined on input line 206.
 
-[13] [14] [15] [16] [17]
+[11]
+
+LaTeX Warning: Reference `sec:percep' on page 12 undefined on input line 209.
+
+[12]
+
+LaTeX Warning: Reference `sec:random_init' on page 13 undefined on input line 2
+13.
+
+
+Package natbib Warning: Citation `lecun1998mnist' on page 13 undefined on input
+ line 222.
+
+[13]
+
+LaTeX Warning: Reference `eqn:mse' on page 14 undefined on input line 241.
+
+
+LaTeX Warning: Reference `eqn:xntrpy' on page 14 undefined on input line 253.
+
+[14] [15]
+
+LaTeX Warning: Reference `fig:costscape' on page 16 undefined on input line 324
+.
+
+
+LaTeX Warning: Reference `eqn:cost_bivar' on page 16 undefined on input line 32
+6.
+
+
+LaTeX Warning: Reference `eqn:z_act' on page 16 undefined on input line 326.
+
+[16]
+
+LaTeX Warning: Reference `eqn:delta_C' on page 17 undefined on input line 335.
+
+
+LaTeX Warning: Reference `eqn:nabla_c' on page 17 undefined on input line 349.
+
+
+LaTeX Warning: Reference `eqn:delta_C' on page 17 undefined on input line 351.
+
+
+LaTeX Warning: Reference `eqn:delta_c_sub' on page 17 undefined on input line 3
+51.
+
+
+LaTeX Warning: Reference `eqn:delta_c_sub' on page 17 undefined on input line 3
+58.
+
+
+LaTeX Warning: Reference `eqn:delta_w_eta' on page 17 undefined on input line 3
+58.
+
+
+LaTeX Warning: Reference `eqn:delta_w_eta' on page 17 undefined on input line 3
+65.
+
+
+LaTeX Warning: Reference `eqn:delta_c_sub' on page 17 undefined on input line 3
+65.
+
+
+LaTeX Warning: Reference `eqn:delta_w_eta' on page 17 undefined on input line 3
+66.
+
+
+LaTeX Warning: Reference `eqn:delta_w_eta' on page 17 undefined on input line 3
+68.
+
+
+LaTeX Warning: Reference `sec:lr_sch' on page 17 undefined on input line 368.
+
+[17]
+
+LaTeX Warning: Reference `eqn:BP1' on page 18 undefined on input line 381.
+
+
+LaTeX Warning: Reference `eqn:hada' on page 18 undefined on input line 400.
+
+[18]
+
+LaTeX Warning: Reference `eqn:BP1' on page 19 undefined on input line 416.
+
+
+LaTeX Warning: Reference `eqn:BP2' on page 19 undefined on input line 416.
+
+
+LaTeX Warning: Reference `eqn:BP3' on page 19 undefined on input line 416.
+
+
+LaTeX Warning: Reference `eqn:BP4' on page 19 undefined on input line 416.
+
+
+LaTeX Warning: Reference `eqn:delta_w_eta' on page 19 undefined on input line 4
+24.
+
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 470.
-
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 470.
- [18] [19] [20]
-<Figs/intro2dl/LSTM.png, id=944, 574.3056pt x 397.9668pt>
+ [19]
+
+LaTeX Warning: Reference `fig:lr_schedule' on page 20 undefined on input line 4
+79.
+
+
+Package natbib Warning: Citation `kingma2014adam' on page 20 undefined on input
+ line 486.
+
+
+Package natbib Warning: Citation `zeiler2012adadelta' on page 20 undefined on i
+nput line 486.
+
+
+Package natbib Warning: Citation `senior2013empirical' on page 20 undefined on 
+input line 487.
+
+[20]
+
+LaTeX Warning: Reference `fig:2ndordr' on page 21 undefined on input line 489.
+
+[21] <Figs/intro2dl/LSTM.png, id=244, 574.3056pt x 397.9668pt>
 File: Figs/intro2dl/LSTM.png Graphic file (type png)
 
 <use Figs/intro2dl/LSTM.png>
 Package pdftex.def Info: Figs/intro2dl/LSTM.png used on input line 547.
 (pdftex.def)             Requested size: 208.73653pt x 144.64638pt.
 
-<Figs/intro2dl/GRU.png, id=945, 571.8966pt x 381.1038pt>
+<Figs/intro2dl/GRU.png, id=245, 571.8966pt x 381.1038pt>
 File: Figs/intro2dl/GRU.png Graphic file (type png)
 
 <use Figs/intro2dl/GRU.png>
 Package pdftex.def Info: Figs/intro2dl/GRU.png used on input line 555.
 (pdftex.def)             Requested size: 208.73653pt x 139.09882pt.
-) (./Chapters/Chapter4B.tex [21 <./Figs/intro2dl/LSTM.png>] [22 <./Figs/intro2d
+) (./Chapters/Chapter4B.tex [22 <./Figs/intro2dl/LSTM.png>] [23 <./Figs/intro2d
 l/GRU.png>]
 Chapter 4.
 ------------------------------------------------------------------------------
  4 Sensory Redundancy: Are two heads better than one?
 ------------------------------------------------------------------------------
-[23
 
-] [24]
-<./Figs/mnistSpoken/UCU_digit_length.png, id=992, 1387.584pt x 693.0693pt>
+Package natbib Warning: Citation `barsalou2008grounded' on page 24 undefined on
+ input line 14.
+
+
+Package natbib Warning: Citation `mcgurk1976hearing' on page 24 undefined on in
+put line 16.
+
+
+Package natbib Warning: Citation `ma2009lip' on page 24 undefined on input line
+ 16.
+
+
+Package natbib Warning: Citation `ma2009lip' on page 24 undefined on input line
+ 20.
+
+
+Package natbib Warning: Citation `samuel1997lexical' on page 24 undefined on in
+put line 20.
+
+
+Package natbib Warning: Citation `ngiam2011multimodal' on page 24 undefined on 
+input line 20.
+
+[24
+
+]
+
+Package natbib Warning: Citation `hammami2009tree' on page 25 undefined on inpu
+t line 38.
+
+
+Package natbib Warning: Citation `hammami2010improved' on page 25 undefined on 
+input line 38.
+
+[25]
+
+LaTeX Warning: Reference `fig:ucu_dig_length' on page 26 undefined on input lin
+e 42.
+
+<./Figs/mnistSpoken/UCU_digit_length.png, id=285, 1387.584pt x 693.0693pt>
 File: ./Figs/mnistSpoken/UCU_digit_length.png Graphic file (type png)
 
 <use ./Figs/mnistSpoken/UCU_digit_length.png>
 Package pdftex.def Info: ./Figs/mnistSpoken/UCU_digit_length.png used on input 
 line 45.
 (pdftex.def)             Requested size: 417.47307pt x 208.51462pt.
- [25 <./Figs/mnistSpoken/UCU_digit_length.png>] [26] [27] [28] [29] [30]
+
+
+LaTeX Warning: Reference `fig:ucu_dig_length' on page 26 undefined on input lin
+e 51.
+
+
+LaTeX Warning: Reference `tab:UCU_sampLen' on page 26 undefined on input line 5
+1.
+
+
+Package natbib Warning: Citation `lecun1998mnist' on page 26 undefined on input
+ line 79.
+
+[26 <./Figs/mnistSpoken/UCU_digit_length.png>]
+
+Package natbib Warning: Citation `barsalou2008grounded' on page 27 undefined on
+ input line 93.
+
+[27]
+
+LaTeX Warning: Reference `eqn:concat' on page 28 undefined on input line 107.
+
+
+LaTeX Warning: Reference `eqn:add' on page 28 undefined on input line 107.
+
+[28] [29]
+
+LaTeX Warning: Reference `tab:mnist_ucu_master_res' on page 30 undefined on inp
+ut line 147.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_master_res' on page 30 undefined on inp
+ut line 150.
+
+
+LaTeX Warning: Reference `tab:MNIST_AE_description' on page 30 undefined on inp
+ut line 154.
+
+
+LaTeX Warning: Reference `tab:UCU_AE_description' on page 30 undefined on input
+ line 154.
+
+
+LaTeX Warning: Reference `tab:MNIST_AE_description' on page 30 undefined on inp
+ut line 202.
+
+
+LaTeX Warning: Reference `tab:UCU_AE_description' on page 30 undefined on input
+ line 202.
+
+[30]
+
+LaTeX Warning: Reference `tab:mnist_ucu_master_res' on page 31 undefined on inp
+ut line 249.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_bi_res' on page 31 undefined on input l
+ine 249.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_im_res' on page 31 undefined on input l
+ine 249.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_mfcc_res' on page 31 undefined on input
+ line 249.
+
+[31]
 Overfull \hbox (40.72897pt too wide) in paragraph at lines 255--277
  [][] 
  []
 
-[31] [32] <Figs/mnistSpoken/lbAll.png, id=1065, 556.9608pt x 175.3752pt>
+
+LaTeX Warning: Reference `tab:mnist_ucu_bi_res' on page 32 undefined on input l
+ine 301.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_bi_res' on page 32 undefined on input l
+ine 320.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_im_res' on page 32 undefined on input l
+ine 320.
+
+[32]
+
+LaTeX Warning: Reference `tab:mnist_ucu_mfcc_res' on page 33 undefined on input
+ line 339.
+
+[33]
+
+LaTeX Warning: Reference `fig:mnistDigits' on page 34 undefined on input line 3
+43.
+
+
+LaTeX Warning: Reference `fig:5s' on page 34 undefined on input line 343.
+
+<Figs/mnistSpoken/lbAll.png, id=351, 556.9608pt x 175.3752pt>
 File: Figs/mnistSpoken/lbAll.png Graphic file (type png)
 
 <use Figs/mnistSpoken/lbAll.png>
 Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 346.
 (pdftex.def)             Requested size: 417.47307pt x 131.45615pt.
 
-<Figs/mnistSpoken/5s.png, id=1067, 192.72pt x 175.1343pt>
+
+LaTeX Warning: Reference `fig:5s' on page 34 undefined on input line 352.
+
+<Figs/mnistSpoken/5s.png, id=352, 192.72pt x 175.1343pt>
 File: Figs/mnistSpoken/5s.png Graphic file (type png)
 
 <use Figs/mnistSpoken/5s.png>
@@ -1599,95 +1918,186 @@ Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 355.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[33 <./Figs/mnistSpoken/lbAll.png>] [34 <./Figs/mnistSpoken/5s.png>] [35]
-[36] [37]) (./Chapters/Chapter5.tex [38]
+
+LaTeX Warning: Reference `tab:mnist_ucu_bi_res' on page 34 undefined on input l
+ine 366.
+
+[34 <./Figs/mnistSpoken/lbAll.png>]
+
+LaTeX Warning: Reference `tab:mnist_ucu_im_res' on page 35 undefined on input l
+ine 368.
+
+[35 <./Figs/mnistSpoken/5s.png>]
+
+LaTeX Warning: Reference `tab:mnist_ucu_bi_res' on page 36 undefined on input l
+ine 377.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_im_res' on page 36 undefined on input l
+ine 377.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_mfcc_res' on page 36 undefined on input
+ line 377.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_bi_res' on page 36 undefined on input l
+ine 379.
+
+
+LaTeX Warning: Reference `fig:5s' on page 36 undefined on input line 382.
+
+[36]
+
+LaTeX Warning: Reference `sec:UCU_mnist_comb' on page 37 undefined on input lin
+e 388.
+
+
+LaTeX Warning: Reference `fig:mnistDigits' on page 37 undefined on input line 3
+95.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_bi_res' on page 37 undefined on input l
+ine 395.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_im_res' on page 37 undefined on input l
+ine 395.
+
+
+LaTeX Warning: Reference `tab:mnist_ucu_mfcc_res' on page 37 undefined on input
+ line 395.
+
+[37]
+
+LaTeX Warning: Reference `fig:5s' on page 38 undefined on input line 401.
+
+[38]) (./Chapters/Chapter5.tex [39]
 Chapter 5.
 ------------------------------------------------------------------------------
  5 Magical Vectors and Where to Find Them
 ------------------------------------------------------------------------------
-) (./Chapters/Chapter6.tex [39
+) (./Chapters/Chapter6.tex [40
 
 ]
 Overfull \vbox (25.04808pt too high) has occurred while \output is active []
 
 
-[40]
+[41]
 Chapter 6.
 ------------------------------------------------------------------------------
  6 Transfer Learning: kick-starting the learning process
 ------------------------------------------------------------------------------
-) (./Chapters/Chapter7.tex [41
+) (./Chapters/Chapter7.tex [42
 
 ]
 Chapter 7.
 ------------------------------------------------------------------------------
  7 What have we learnt and more importantly, what have our neural nets learnt?
 ------------------------------------------------------------------------------
-) (./Chapters/Chapter8.tex [42
+) (./Chapters/Chapter8.tex [43
 
 ]
 Chapter 8.
 ------------------------------------------------------------------------------
  8 Future Work
 ------------------------------------------------------------------------------
-) [43
+) [44
 
 ]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./main.bbl [44
+(./main.bbl [45
 
 
-]) [45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 347.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 347.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 3D295B960CEBC215CEA53E2B653EFD74;27963.
+])
 
+Package natbib Warning: There were undefined citations.
+
+[46]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 360.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 360.
+ (./main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+! Extra }, or forgotten \endgroup.
+l.291 }
+       }
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+l.291 }}
+        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 360.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 360.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  21453BD52B3D92893661FD3A32057E93;27968.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 360.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 186 ({)
+### simple group (level 1) entered at line 200 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 37251 strings out of 493029
- 815669 string characters out of 6136234
- 1708196 words of memory out of 5000000
- 39884 multiletter control sequences out of 15000+600000
- 17153 words of font info for 64 fonts, out of 8000000 for 9000
+ 37463 strings out of 493029
+ 822969 string characters out of 6136234
+ 1714979 words of memory out of 5000000
+ 40090 multiletter control sequences out of 15000+600000
+ 17766 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,18n,103p,1002b,2502s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,18n,103p,1002b,2515s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (54 pages, 3090853 bytes).
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (52 pages, 83980584 bytes).
 PDF statistics:
- 1265 PDF objects out of 1440 (max. 8388607)
- 1162 compressed objects within 12 object streams
+ 604 PDF objects out of 1000 (max. 8388607)
+ 505 compressed objects within 6 object streams
  255 named destinations out of 1000 (max. 500000)
- 1157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

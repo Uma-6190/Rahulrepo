@@ -38,6 +38,20 @@
 \usepackage{todonotes}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{%
+  >={Latex[width=2mm,length=2mm]},
+  % Specifications for style of nodes:
+            base/.style = {rectangle, rounded corners, draw=black,
+                           minimum width=4cm, minimum height=1cm,
+                           text centered, font=\sffamily},
+  activityStarts/.style = {base, fill=blue!30},
+       startstop/.style = {base, fill=red!30},
+    activityRuns/.style = {base, fill=green!30},
+         process/.style = {base, minimum width=2.5cm, fill=orange!15,
+                           font=\ttfamily},
+}
+
 \usepackage{pgfplots}
 \usepackage{mathtools}
 \usepackage{filecontents}
@@ -237,10 +251,7 @@ I would also like to thank Ingo Keller for his invaluable lessons on the art of 
 \textbf{MAE} & \textbf{M}ultimodal \textbf{A}uto\textbf{e}ncoder \\
 \textbf{RNN} & \textbf{R}ecurrent \textbf{N}eural \textbf{N}etwork \\
 \textbf{GRU} & \textbf{G}ated \textbf{R}ecurrent \textbf{U}nit \\
-\textbf{LSTM} & \textbf{L}ong \textbf{S}hort \textbf{T}erm \textbf{M}emory \\
-
-
-
+\textbf{LSTM} & \textbf{L}ong \textbf{S}hort-\textbf{T}erm \textbf{M}emory \\
 \textbf{YARP} & \textbf{Y}et \textbf{A}nother \textbf{R}obotics \textbf{P}latform \\
 }
 
