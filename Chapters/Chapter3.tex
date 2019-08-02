@@ -156,7 +156,7 @@ Now that we have an activation function that can produce continuous values, we c
 \subsubsection{Other activation functions}
 There are two other important and commonly used activation functions, though many others exist. These are, the hyperbolic tangent (Tanh) shown in \autoref{fig:activation_tanh} and rectified linear unit (Relu)  shown in \autoref{fig:activation_relu}.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
@@ -180,7 +180,7 @@ ylabel near ticks]
 
 The Tanh function looks similar to the sigmoid function, however it has an output between negative one and one, where the sigmoid goes from zero to one. This is useful when having negative values within the network is important.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
@@ -254,7 +254,7 @@ Cross-entropy measures the error between two probability distributions $P$ and $
 
 \begin{equation}
 C = -\sum_{i=0}^{n}P(i) log(Q(i))
-\label{eqn:xentrpy}
+\label{eqn:xntrpy}
 \end{equation}
 
 When using cross-entropy as a loss function, we can view the output of our neural network as a probability distribution. For example, in a multiclass classification problem with $k$ classes, each of the $k$ outputs of the network tells us the probability that the network believes an input to belong to class $k$.
@@ -413,7 +413,7 @@ where $\frac{\delta C}{\delta b_lj}$ is the rate of change of the cost $C$ with 
 \end{equation}
 where $\frac{\delta C}{\delta w_{ljk}}$ is the rate of change of cost $C$ with respect to the change in weight $w_k$ of neuron $j$ in layer $l$ and $a_{(l-1)k}$ is its input activation.
 
-Using these four \autoref{eqn:BP1}, \autoref{eqn:BP2}, \autoref{eqn:BP3} and \autoref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
+Using these four equations, \autoref{eqn:BP1}, \autoref{eqn:BP2}, \autoref{eqn:BP3} and \autoref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
 
 One consequence of the backpropagation algorithm is that we are limited in terms of the trainable depth of our networks. As we continually differentiate the error to pass it back through each layer and multiply it by transposed weight matricies, the magnitude of the error can shrink. This results in vanishing error gradients the deeper into the network we go. This mean that at some point, the error with respect to a weight or bias will appear to be zero (or approxiamtely zero) and thus we cannot adjust it by gradient descent, so we are limited to not having infinitely deep networks.
 
@@ -425,7 +425,7 @@ Depending on how far we are from the global error minima, we may wish to change 
 
 If we are far from the minimum point for the cost with respect to the weights, we may wish to take larger steps, so that we can more quickly reduce the total cost. However, as we get closer we want to ensure that we do not step over the minimum.
 
-\begin{figure}[h]
+\begin{figure}
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
@@ -491,7 +491,7 @@ Second order methods are desirable in that the second derivative of the cost pro
 Second order methods have the major draw back of being very slow to calculate. Thus it is more efficient to make use of first order estimates than the exact information provided by second order methods. Many more weight updates can be carried out using first order methods than can be done using second order methods in a given time frame. So whilst second order methods should require less total weight updates to minimise the cost, the first order methods will reach the minimum faster as the weight updates will occur much more quickly in the first order case.
 
 
-\begin{figure}[h]
+\begin{figure}
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[

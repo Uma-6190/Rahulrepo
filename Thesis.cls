@@ -203,7 +203,7 @@
 \keywords{} % Keywords for your thesis - this is not currently used anywhere in the template, cite it with \keywordnames if you want it
 %-------------------------------------------------   
 \university{\texorpdfstring{\href{http://www.hw.ac.uk} % Your university's URL
-                {Heriot-Watt University}} % Your university's name - this is currently used in the title page
+                {Heriot-Watt Universityz}} % Your university's name - this is currently used in the title page
                 {Heriot-Watt University}}
 %-------------------------------------------------   
 \UNIVERSITY{\texorpdfstring{\href{http://www.hw.ac.uk)} % Your university's URL
