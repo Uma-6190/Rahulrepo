@@ -106,38 +106,38 @@
 \contentsline {subsection}{\numberline {5.2.2}problem description}{42}{subsection.156}
 \contentsline {subsection}{\numberline {5.2.3}network description}{42}{subsection.157}
 \contentsline {subsection}{\numberline {5.2.4}results}{42}{subsection.158}
-\contentsline {subsubsection}{\numberline {5.2.4.1}Image Generation}{42}{subsubsection.159}
-\contentsline {subsubsection}{\numberline {5.2.4.2}Multilabel classification}{42}{subsubsection.160}
-\contentsline {subsubsection}{\numberline {5.2.4.3}Vector Arithematic}{42}{subsubsection.161}
-\contentsline {subsection}{\numberline {5.2.5}discussion}{42}{subsection.162}
-\contentsline {section}{\numberline {5.3}Real Shapes Dataset}{42}{section.163}
-\contentsline {subsection}{\numberline {5.3.1}dataset description}{42}{subsection.164}
-\contentsline {subsection}{\numberline {5.3.2}problem description}{42}{subsection.165}
-\contentsline {subsection}{\numberline {5.3.3}network description}{42}{subsection.166}
-\contentsline {subsection}{\numberline {5.3.4}results}{42}{subsection.167}
-\contentsline {subsubsection}{\numberline {5.3.4.1}Image Generation}{42}{subsubsection.168}
-\contentsline {subsubsection}{\numberline {5.3.4.2}Multilabel classification}{42}{subsubsection.169}
-\contentsline {subsubsection}{\numberline {5.3.4.3}Vector Arithematic}{42}{subsubsection.170}
-\contentsline {subsection}{\numberline {5.3.5}discussion}{42}{subsection.171}
-\contentsline {chapter}{\numberline {6}Transfer Learning: kick-starting the learning process}{43}{chapter.172}
-\contentsline {section}{\numberline {6.1}What is transfer learning}{43}{section.173}
-\contentsline {subsection}{\numberline {6.1.1}randomly initialised networks}{43}{subsection.174}
-\contentsline {subsection}{\numberline {6.1.2}A biological analogue}{43}{subsection.175}
-\contentsline {section}{\numberline {6.2}The importance of transfer learning}{43}{section.176}
-\contentsline {section}{\numberline {6.3}MultiSense 1 dataset}{43}{section.177}
-\contentsline {subsection}{\numberline {6.3.1}dataset description}{43}{subsection.178}
-\contentsline {subsection}{\numberline {6.3.2}problem description: image generation from raw speech audio}{43}{subsection.179}
-\contentsline {subsection}{\numberline {6.3.3}network description}{43}{subsection.180}
-\contentsline {subsection}{\numberline {6.3.4}results}{43}{subsection.181}
-\contentsline {subsection}{\numberline {6.3.5}discussion}{43}{subsection.182}
-\contentsline {chapter}{\numberline {7}What have we learnt and more importantly, what have our neural nets learnt?}{44}{chapter.183}
-\contentsline {section}{\numberline {7.1}Summary of important points}{44}{section.184}
-\contentsline {section}{\numberline {7.2}Conclusion}{44}{section.185}
-\contentsline {chapter}{\numberline {8}Future Work}{45}{chapter.186}
-\contentsline {section}{\numberline {8.1}Where do we go now?}{45}{section.187}
-\contentsline {subsection}{\numberline {8.1.1}More Sensors}{45}{subsection.188}
-\contentsline {subsection}{\numberline {8.1.2}Better Sensors}{45}{subsection.189}
-\contentsline {subsection}{\numberline {8.1.3}Swarm Robots and the Cloud}{45}{subsection.190}
+\contentsline {subsubsection}{\numberline {5.2.4.1}Image Generation}{42}{subsubsection.162}
+\contentsline {subsubsection}{\numberline {5.2.4.2}Multilabel classification}{42}{subsubsection.163}
+\contentsline {subsubsection}{\numberline {5.2.4.3}Vector Arithematic}{42}{subsubsection.164}
+\contentsline {subsection}{\numberline {5.2.5}discussion}{42}{subsection.165}
+\contentsline {section}{\numberline {5.3}Real Shapes Dataset}{42}{section.166}
+\contentsline {subsection}{\numberline {5.3.1}dataset description}{42}{subsection.167}
+\contentsline {subsection}{\numberline {5.3.2}problem description}{42}{subsection.168}
+\contentsline {subsection}{\numberline {5.3.3}network description}{42}{subsection.169}
+\contentsline {subsection}{\numberline {5.3.4}results}{42}{subsection.170}
+\contentsline {subsubsection}{\numberline {5.3.4.1}Image Generation}{42}{subsubsection.171}
+\contentsline {subsubsection}{\numberline {5.3.4.2}Multilabel classification}{42}{subsubsection.172}
+\contentsline {subsubsection}{\numberline {5.3.4.3}Vector Arithematic}{42}{subsubsection.173}
+\contentsline {subsection}{\numberline {5.3.5}discussion}{42}{subsection.174}
+\contentsline {chapter}{\numberline {6}Transfer Learning: kick-starting the learning process}{44}{chapter.175}
+\contentsline {section}{\numberline {6.1}What is transfer learning}{44}{section.176}
+\contentsline {subsection}{\numberline {6.1.1}randomly initialised networks}{44}{subsection.177}
+\contentsline {subsection}{\numberline {6.1.2}A biological analogue}{44}{subsection.178}
+\contentsline {section}{\numberline {6.2}The importance of transfer learning}{44}{section.179}
+\contentsline {section}{\numberline {6.3}MultiSense 1 dataset}{44}{section.180}
+\contentsline {subsection}{\numberline {6.3.1}dataset description}{44}{subsection.181}
+\contentsline {subsection}{\numberline {6.3.2}problem description: image generation from raw speech audio}{44}{subsection.182}
+\contentsline {subsection}{\numberline {6.3.3}network description}{44}{subsection.183}
+\contentsline {subsection}{\numberline {6.3.4}results}{44}{subsection.184}
+\contentsline {subsection}{\numberline {6.3.5}discussion}{44}{subsection.185}
+\contentsline {chapter}{\numberline {7}What have we learnt and more importantly, what have our neural nets learnt?}{45}{chapter.186}
+\contentsline {section}{\numberline {7.1}Summary of important points}{45}{section.187}
+\contentsline {section}{\numberline {7.2}Conclusion}{45}{section.188}
+\contentsline {chapter}{\numberline {8}Future Work}{46}{chapter.189}
+\contentsline {section}{\numberline {8.1}Where do we go now?}{46}{section.190}
+\contentsline {subsection}{\numberline {8.1.1}More Sensors}{46}{subsection.191}
+\contentsline {subsection}{\numberline {8.1.2}Better Sensors}{46}{subsection.192}
+\contentsline {subsection}{\numberline {8.1.3}Swarm Robots and the Cloud}{46}{subsection.193}
 \vspace {2em}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{46}{dummy.191}
+\contentsline {chapter}{Bibliography}{47}{dummy.194}

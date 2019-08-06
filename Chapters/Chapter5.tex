@@ -16,6 +16,103 @@ Tomas Mikilov V(king) - V(man) + V(woman) ~= V(Queen)
 \subsection{network description}
 \subsection{results}
 
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+     axis x line=middle,
+     axis y line=middle,
+     enlarge y limits=true,
+     enlarge x limits=true,
+     legend style={at={(1,0.7)}, anchor=north},
+     %xmin=0, xmax=2150,
+     %ymin=0, ymax=600,
+     %width=15cm, height=8cm,     % size of the image
+     grid = major,
+     grid style={dashed, gray!30},
+     ylabel=MSE,
+     ytick={0,0.001,0.002,0.003,0.004,0.005,0.006,0.007,0.008,0.009},
+     xlabel=Embedding Size,
+     xtick={6,8,10,12,14,16,18,20,22,24,26,28,30,32,34},     
+     xlabel near ticks,
+	 ylabel near ticks]
+         ] 
+    ]
+    \addplot table[x = size, y = bimodal, col sep = comma]{csvs/total331.csv}; 
+    \addplot table[x = size, y = words only, col sep = comma]{csvs/total331.csv};
+    \addplot table[x = size, y = image only, col sep = comma]{csvs/total331.csv};    
+    \legend{Bimodal, Words Only, Image Only}
+    \end{axis}
+\end{tikzpicture}
+\caption{Total Mean Squared Error for reconstruction of images and words under different testing conditions, Bimodal, Words Only and Image Only for 3 colours, 3 positions and 1 size.}
+\label{fig:total331}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+     axis x line=middle,
+     axis y line=middle,
+     enlarge y limits=true,
+     enlarge x limits=true,
+     legend style={at={(1,0.7)}, anchor=north},
+     %xmin=0, xmax=2150,
+     %ymin=0, ymax=600,
+     %width=15cm, height=8cm,     % size of the image
+     grid = major,
+     grid style={dashed, gray!30},
+     ylabel=MSE,
+     %ytick={0,0.001,0.002,0.003,0.004,0.005,0.006,0.007,0.008,0.009},
+     xlabel=Embedding Size,
+     xtick={6,8,10,12,14,16,18,20,22,24,26,28,30,32,34},     
+     xlabel near ticks,
+	 ylabel near ticks]
+         ] 
+    ]
+    \addplot table[x = size, y = bimodal, col sep = comma]{csvs/word331.csv}; 
+    \addplot table[x = size, y = words only, col sep = comma]{csvs/word331.csv};
+    \addplot table[x = size, y = image only, col sep = comma]{csvs/word331.csv};    
+    \legend{Bimodal, Words Only, Image Only}
+    \end{axis}
+\end{tikzpicture}
+\caption{Mean Squared Error for reconstruction of words under different testing conditions, Bimodal, Words Only and Image Only for 3 colours, 3 positions and 1 size.}
+\label{fig:word331}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+     axis x line=middle,
+     axis y line=middle,
+     enlarge y limits=true,
+     enlarge x limits=true,
+     legend style={at={(1,0.7)}, anchor=north},
+     %xmin=0, xmax=2150,
+     %ymin=0, ymax=600,
+     %width=15cm, height=8cm,     % size of the image
+     grid = major,
+     grid style={dashed, gray!30},
+     ylabel=MSE,
+     ytick={0,0.001,0.002,0.003,0.004,0.005,0.006,0.007,0.008,0.009},
+     xlabel=Embedding Size,
+     xtick={6,8,10,12,14,16,18,20,22,24,26,28,30,32,34},     
+     xlabel near ticks,
+	 ylabel near ticks]
+         ] 
+    ]
+    \addplot table[x = size, y = bimodal, col sep = comma]{csvs/image331.csv}; 
+    \addplot table[x = size, y = words only, col sep = comma]{csvs/image331.csv};
+    \addplot table[x = size, y = image only, col sep = comma]{csvs/image331.csv};    
+    \legend{Bimodal, Words Only, Image Only}
+    \end{axis}
+\end{tikzpicture}
+\caption{Mean Squared Error for reconstruction of images under different testing conditions, Bimodal, Words Only and Image Only for 3 colours, 3 positions and 1 size.}
+\label{fig:image331}
+\end{figure}
+
 \subsubsection{Image Generation}
 \subsubsection{Multilabel classification}
 \subsubsection{Vector Arithematic}
