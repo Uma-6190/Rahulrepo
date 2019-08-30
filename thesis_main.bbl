@@ -1,0 +1,93 @@
+\begin{thebibliography}{10}
+
+\bibitem{smith2008infants}
+L.~Smith and C.~Yu,
+{\em Infants rapidly learn word-referent mappings via cross-situational
+  statistics,}
+Cognition {\bf 106} (2008) 1558.
+
+\bibitem{yurovsky2013statistical}
+D.~Yurovsky, L.~B.~Smith, and C.~Yu,
+{\em Statistical word learning at scale: The baby's view is better,}
+Developmental science {\bf 16} (2013) 959.
+
+\bibitem{rosenblatt1958perceptron}
+F.~Rosenblatt,
+{\em The perceptron: a probabilistic model for information storage and
+  organization in the brain.,}
+Psychological review {\bf 65} (1958) 386.
+
+\bibitem{lecun1998mnist}
+Y.~LeCun,
+{\em The MNIST database of handwritten digits,}
+http://yann. lecun. com/exdb/mnist/(1998).
+
+\bibitem{kingma2014adam}
+D.~P.~Kingma and J.~Ba,
+{\em Adam: A method for stochastic optimization,}
+arXiv preprint arXiv:1412.6980(2014).
+
+\bibitem{zeiler2012adadelta}
+M.~D.~Zeiler,
+{\em ADADELTA: an adaptive learning rate method,}
+arXiv preprint arXiv:1212.5701(2012).
+
+\bibitem{senior2013empirical}
+A.~Senior, G.~Heigold, K.~Yang, and ~others.
+\newblock {\em An empirical study of learning rates in deep neural networks for
+  speech recognition,} .
+\newblock In {\em 2013 IEEE international conference on acoustics, speech and
+  signal processing} 6724. IEEE2013.
+
+\bibitem{barsalou2008grounded}
+L.~W.~Barsalou,
+{\em Grounded cognition,}
+Annu. Rev. Psychol. {\bf 59} (2008) 617.
+
+\bibitem{mcgurk1976hearing}
+H.~McGurk and J.~MacDonald,
+{\em Hearing lips and seeing voices,}
+Nature {\bf 264} (1976) 746.
+
+\bibitem{ma2009lip}
+W.~J.~Ma, X.~Zhou, L.~A.~Ross, J.~J.~Foxe, and L.~C.~Parra,
+{\em Lip-reading aids word recognition most in moderate noise: a Bayesian
+  explanation using high-dimensional feature space,}
+PLoS One {\bf 4} (2009) e4638.
+
+\bibitem{samuel1997lexical}
+A.~G.~Samuel,
+{\em Lexical activation produces potent phonemic percepts,}
+Cognitive psychology {\bf 32} (1997)~97.
+
+\bibitem{ngiam2011multimodal}
+J.~Ngiam, A.~Khosla, M.~Kim, J.~Nam, H.~Lee, and A.~Y.~Ng.
+\newblock {\em Multimodal deep learning,} .
+\newblock In {\em Proceedings of the 28th international conference on machine
+  learning (ICML-11)} 6892011.
+
+\bibitem{hammami2009tree}
+N.~Hammami and M.~Sellam.
+\newblock {\em Tree distribution classifier for automatic spoken arabic digit
+  recognition,} .
+\newblock In {\em 2009 International Conference for Internet Technology and
+  Secured Transactions,(ICITST)}~1. IEEE2009.
+
+\bibitem{hammami2010improved}
+N.~Hammami and M.~Bedda.
+\newblock {\em Improved tree model for arabic speech recognition,} .
+\newblock In {\em 2010 3rd International Conference on Computer Science and
+  Information Technology}volume~5 521. IEEE2010.
+
+\bibitem{mikolov2013distributed}
+T.~Mikolov, I.~Sutskever, K.~Chen, G.~S.~Corrado, and J.~Dean.
+\newblock {\em Distributed representations of words and phrases and their
+  compositionality,} .
+\newblock In {\em Advances in neural information processing systems} 31112013.
+
+\bibitem{mikolov2013efficient}
+T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean,
+{\em Efficient estimation of word representations in vector space,}
+arXiv preprint arXiv:1301.3781(2013).
+
+\end{thebibliography}

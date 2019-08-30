@@ -1,0 +1,150 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.2}
+\contentsline {section}{\numberline {1.1}Multimodal Representation Learning}{1}{section.3}
+\contentsline {section}{\numberline {1.2}Motivation}{2}{section.4}
+\contentsline {chapter}{\numberline {2}Background}{5}{chapter.9}
+\contentsline {section}{\numberline {2.1}Introduction}{5}{section.10}
+\contentsline {section}{\numberline {2.2}What are Artifical Neural Networks good at?}{5}{section.11}
+\contentsline {subsection}{\numberline {2.2.1}Classification}{6}{subsection.12}
+\contentsline {subsection}{\numberline {2.2.2}Generation}{6}{subsection.13}
+\contentsline {subsection}{\numberline {2.2.3}Reinforcement Learning}{6}{subsection.14}
+\contentsline {section}{\numberline {2.3}What are Artificial Neural Networks bad at?}{6}{section.15}
+\contentsline {subsection}{\numberline {2.3.1}Data Ineffciency}{6}{subsection.16}
+\contentsline {section}{\numberline {2.4}How to get off the Symbol Grounding Merry-Go-Round}{6}{section.17}
+\contentsline {subsection}{\numberline {2.4.1}What is symbol grounding?}{6}{subsection.18}
+\contentsline {subsection}{\numberline {2.4.2}How do humans do it?}{6}{subsection.19}
+\contentsline {subsection}{\numberline {2.4.3}How do machines do it?}{6}{subsection.20}
+\contentsline {section}{\numberline {2.5}Why brains are better}{6}{section.21}
+\contentsline {subsection}{\numberline {2.5.1}Embodiment}{6}{subsection.22}
+\contentsline {subsubsection}{\numberline {2.5.1.1}Sensory Redundancy}{6}{subsubsection.23}
+\contentsline {subsubsection}{\numberline {2.5.1.2}Biological Filters}{6}{subsubsection.24}
+\contentsline {subsection}{\numberline {2.5.2}Development}{7}{subsection.25}
+\contentsline {subsubsection}{\numberline {2.5.2.1}Biological Filters, again}{7}{subsubsection.26}
+\contentsline {subsection}{\numberline {2.5.3}Pulling yourself up by the bootstraps}{7}{subsection.27}
+\contentsline {subsection}{\numberline {2.5.4}Machine Equivelancy}{7}{subsection.28}
+\contentsline {subsubsection}{\numberline {2.5.4.1}How do we simulate Embodiment for ANNs?}{7}{subsubsection.29}
+\contentsline {subsubsection}{\numberline {2.5.4.2}How do we simulate Development for ANNs?}{7}{subsubsection.30}
+\contentsline {section}{\numberline {2.6}Where do we go from here?}{7}{section.31}
+\contentsline {subsection}{\numberline {2.6.1}Robot bodies}{7}{subsection.32}
+\contentsline {subsection}{\numberline {2.6.2}multimodality}{7}{subsection.33}
+\contentsline {subsection}{\numberline {2.6.3}transfer learning}{7}{subsection.34}
+\contentsline {chapter}{\numberline {3}A Primer on Artificial Neural Networks}{8}{chapter.35}
+\contentsline {section}{\numberline {3.1}Introduction}{8}{section.36}
+\contentsline {section}{\numberline {3.2}Perceptrons}{8}{section.37}
+\contentsline {subsection}{\numberline {3.2.1}What is a Perceptron}{8}{subsection.38}
+\contentsline {subsection}{\numberline {3.2.2}Multi-Layer Perceptron}{9}{subsection.41}
+\contentsline {section}{\numberline {3.3}Activation Functions}{10}{section.43}
+\contentsline {subsection}{\numberline {3.3.1}Sigmoid Neurons}{11}{subsection.46}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Other activation functions}{12}{subsubsection.50}
+\contentsline {section}{\numberline {3.4}Learning Algorithms}{13}{section.54}
+\contentsline {subsection}{\numberline {3.4.1}Types of Training}{14}{subsection.56}
+\contentsline {subsection}{\numberline {3.4.2}Cost functions: How wrong am I?}{14}{subsection.57}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Mean Squared Error}{14}{subsubsection.58}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Cross-Entropy}{15}{subsubsection.60}
+\contentsline {subsubsection}{\numberline {3.4.2.3}Kullback-Leibler Divergence}{16}{subsubsection.62}
+\contentsline {subsection}{\numberline {3.4.3}Gradient Descent}{16}{subsection.64}
+\contentsline {subsection}{\numberline {3.4.4}Backpropagation}{18}{subsection.72}
+\contentsline {subsection}{\numberline {3.4.5}Extensions and Improvements}{19}{subsection.79}
+\contentsline {subsubsection}{\numberline {3.4.5.1}Learning Rate Schedule}{19}{subsubsection.80}
+\contentsline {section}{\numberline {3.5}Convolutional Neural Networks}{22}{section.83}
+\contentsline {subsection}{\numberline {3.5.1}What is Convolution?}{22}{subsection.84}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Kernels}{22}{subsubsection.85}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Strides}{22}{subsubsection.86}
+\contentsline {subsubsection}{\numberline {3.5.1.3}Dilations}{22}{subsubsection.87}
+\contentsline {subsection}{\numberline {3.5.2}Transposed Convolutions}{22}{subsection.88}
+\contentsline {section}{\numberline {3.6}Recurrent Neural Networks}{22}{section.89}
+\contentsline {subsection}{\numberline {3.6.1}Vanilla RNN}{22}{subsection.90}
+\contentsline {subsection}{\numberline {3.6.2}Gated RNN}{22}{subsection.91}
+\contentsline {section}{\numberline {3.7}Summary}{22}{section.94}
+\contentsline {chapter}{\numberline {4}Sensory Redundancy: Are two heads better than one?}{24}{chapter.95}
+\contentsline {section}{\numberline {4.1}Why have one sensor when two are better?}{24}{section.96}
+\contentsline {section}{\numberline {4.2}Generating images from natural language}{25}{section.97}
+\contentsline {subsection}{\numberline {4.2.1}Aims}{25}{subsection.98}
+\contentsline {subsection}{\numberline {4.2.2}UCU Arabic Spoken Digits and MNIST}{25}{subsection.99}
+\contentsline {subsubsection}{\numberline {4.2.2.1}UCU Arabic Spoken Digits}{25}{subsubsection.100}
+\contentsline {subsubsection}{\numberline {4.2.2.2}MNIST Handwritten Digits}{26}{subsubsection.104}
+\contentsline {subsection}{\numberline {4.2.3}Problem Description}{27}{subsection.105}
+\contentsline {subsubsection}{\numberline {4.2.3.1}Classification}{27}{subsubsection.106}
+\contentsline {subsubsection}{\numberline {4.2.3.2}Bidirectional Symbol Grounding}{27}{subsubsection.107}
+\contentsline {subsection}{\numberline {4.2.4}Experiment Details}{28}{subsection.108}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Dataplumbing}{28}{subsubsection.109}
+\contentsline {paragraph}{\numberline {4.2.4.1.1}Combining Datasets}{28}{paragraph.110}
+\contentsline {paragraph}{\numberline {4.2.4.1.2}Merging Modalities}{28}{paragraph.111}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Training Procedures}{29}{subsubsection.114}
+\contentsline {paragraph}{\numberline {4.2.4.2.1}Bimodal}{29}{paragraph.115}
+\contentsline {paragraph}{\numberline {4.2.4.2.2}Randomly Degraded}{29}{paragraph.116}
+\contentsline {subsubsection}{\numberline {4.2.4.3}Testing Conditions}{29}{subsubsection.117}
+\contentsline {paragraph}{\numberline {4.2.4.3.1}Bimodal}{29}{paragraph.118}
+\contentsline {paragraph}{\numberline {4.2.4.3.2}Image Only}{29}{paragraph.119}
+\contentsline {paragraph}{\numberline {4.2.4.3.3}MFCC Only}{30}{paragraph.120}
+\contentsline {subsubsection}{\numberline {4.2.4.4}Network Description}{30}{subsubsection.121}
+\contentsline {paragraph}{\numberline {4.2.4.4.1}Baseline Models}{30}{paragraph.122}
+\contentsline {paragraph}{\numberline {4.2.4.4.2}Multimodal Autoencoder}{30}{paragraph.125}
+\contentsline {subsection}{\numberline {4.2.5}Results}{31}{subsection.127}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Classification Results}{31}{subsubsection.128}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Reconstruction Results}{33}{subsubsection.132}
+\contentsline {subsection}{\numberline {4.2.6}Discussion}{33}{subsection.135}
+\contentsline {subsubsection}{\numberline {4.2.6.1}Discussion of Classification Results}{33}{subsubsection.136}
+\contentsline {subsubsection}{\numberline {4.2.6.2}Discussion of Reconstruction Results}{35}{subsubsection.137}
+\contentsline {paragraph}{\numberline {4.2.6.2.1}Image reconstruction from MFCCs}{35}{paragraph.138}
+\contentsline {paragraph}{\numberline {4.2.6.2.2}MFCC reconstruction from Images}{36}{paragraph.139}
+\contentsline {paragraph}{\numberline {4.2.6.2.3}Effects of randomly degrading inputs}{36}{paragraph.140}
+\contentsline {paragraph}{\numberline {4.2.6.2.4}Multiple generations of the same digit}{37}{paragraph.141}
+\contentsline {section}{\numberline {4.3}Conclusion}{37}{section.142}
+\contentsline {chapter}{\numberline {5}Magical Vectors and Where to Find Them}{38}{chapter.143}
+\contentsline {section}{\numberline {5.1}ANN Latent space: the Final Frontier}{38}{section.144}
+\contentsline {section}{\numberline {5.2}Artificial Shapes Dataset}{39}{section.146}
+\contentsline {subsection}{\numberline {5.2.1}Dataset Description}{39}{subsection.147}
+\contentsline {subsection}{\numberline {5.2.2}Problem Description}{41}{subsection.150}
+\contentsline {subsection}{\numberline {5.2.3}Network Description}{41}{subsection.151}
+\contentsline {section}{\numberline {5.3}Experiments with the ArtS Dataset}{43}{section.153}
+\contentsline {subsection}{\numberline {5.3.1}Experiment 1}{43}{subsection.154}
+\contentsline {subsubsection}{\numberline {5.3.1.1}Results}{43}{subsubsection.156}
+\contentsline {paragraph}{\numberline {5.3.1.1.1}Image Generation}{46}{paragraph.159}
+\contentsline {paragraph}{\numberline {5.3.1.1.2}Multilabel classification}{47}{paragraph.162}
+\contentsline {subsubsection}{\numberline {5.3.1.2}Discussion}{48}{subsubsection.163}
+\contentsline {subsection}{\numberline {5.3.2}Experiment 2}{48}{subsection.164}
+\contentsline {subsubsection}{\numberline {5.3.2.1}Results}{48}{subsubsection.166}
+\contentsline {paragraph}{\numberline {5.3.2.1.1}Image Generation}{50}{paragraph.169}
+\contentsline {paragraph}{\numberline {5.3.2.1.2}Multilabel classification}{55}{paragraph.174}
+\contentsline {subsubsection}{\numberline {5.3.2.2}Discussion}{55}{subsubsection.175}
+\contentsline {subsection}{\numberline {5.3.3}Experiment 3}{56}{subsection.177}
+\contentsline {subsubsection}{\numberline {5.3.3.1}Results}{57}{subsubsection.179}
+\contentsline {paragraph}{\numberline {5.3.3.1.1}Image Generation}{57}{paragraph.181}
+\contentsline {paragraph}{\numberline {5.3.3.1.2}Multilabel classification}{58}{paragraph.186}
+\contentsline {subsubsection}{\numberline {5.3.3.2}Discussion}{58}{subsubsection.187}
+\contentsline {subsection}{\numberline {5.3.4}Experiment 4}{59}{subsection.188}
+\contentsline {subsubsection}{\numberline {5.3.4.1}Results}{62}{subsubsection.189}
+\contentsline {paragraph}{\numberline {5.3.4.1.1}Image Generation}{62}{paragraph.191}
+\contentsline {paragraph}{\numberline {5.3.4.1.2}Multilabel classification}{62}{paragraph.196}
+\contentsline {subsubsection}{\numberline {5.3.4.2}Discussion}{62}{subsubsection.198}
+\contentsline {subsection}{\numberline {5.3.5}Experiment 5}{62}{subsection.199}
+\contentsline {subsubsection}{\numberline {5.3.5.1}Results}{64}{subsubsection.200}
+\contentsline {paragraph}{\numberline {5.3.5.1.1}Image Generation}{64}{paragraph.201}
+\contentsline {paragraph}{\numberline {5.3.5.1.2}Multilabel classification}{64}{paragraph.202}
+\contentsline {paragraph}{\numberline {5.3.5.1.3}Vector Arithematic}{64}{paragraph.203}
+\contentsline {subsubsection}{\numberline {5.3.5.2}Discussion}{64}{subsubsection.204}
+\contentsline {section}{\numberline {5.4}Conclusion}{64}{section.205}
+\contentsline {subsubsection}{\numberline {5.4.0.1}The effect of more training examples}{64}{subsubsection.206}
+\contentsline {subsubsection}{\numberline {5.4.0.2}How a developmental approach helps}{66}{subsubsection.209}
+\contentsline {chapter}{\numberline {6}Transfer Learning: kick-starting the learning process}{67}{chapter.210}
+\contentsline {section}{\numberline {6.1}What is transfer learning}{67}{section.211}
+\contentsline {subsection}{\numberline {6.1.1}randomly initialised networks}{67}{subsection.212}
+\contentsline {subsection}{\numberline {6.1.2}A biological analogue}{67}{subsection.213}
+\contentsline {section}{\numberline {6.2}Real Shapes Dataset}{67}{section.214}
+\contentsline {subsection}{\numberline {6.2.1}dataset description}{67}{subsection.215}
+\contentsline {subsection}{\numberline {6.2.2}problem description}{67}{subsection.216}
+\contentsline {subsection}{\numberline {6.2.3}network description}{67}{subsection.217}
+\contentsline {subsection}{\numberline {6.2.4}results}{67}{subsection.218}
+\contentsline {subsubsection}{\numberline {6.2.4.1}Image Generation}{67}{subsubsection.219}
+\contentsline {subsubsection}{\numberline {6.2.4.2}Multilabel classification}{67}{subsubsection.220}
+\contentsline {subsubsection}{\numberline {6.2.4.3}Vector Arithematic}{67}{subsubsection.221}
+\contentsline {subsection}{\numberline {6.2.5}discussion}{67}{subsection.222}
+\contentsline {chapter}{\numberline {7}What have we learnt and more importantly, what have our neural nets learnt?}{68}{chapter.223}
+\contentsline {section}{\numberline {7.1}Summary of important points}{68}{section.224}
+\contentsline {section}{\numberline {7.2}Conclusion}{68}{section.225}
+\contentsline {chapter}{\numberline {8}Future Work}{69}{chapter.226}
+\contentsline {section}{\numberline {8.1}Where do we go now?}{69}{section.227}
+\contentsline {subsection}{\numberline {8.1.1}More Sensors}{69}{subsection.228}
+\contentsline {subsection}{\numberline {8.1.2}Better Sensors}{69}{subsection.229}
+\contentsline {subsection}{\numberline {8.1.3}Swarm Robots and the Cloud}{69}{subsection.230}
+\contentsline {chapter}{Bibliography}{71}{appendix*.232}

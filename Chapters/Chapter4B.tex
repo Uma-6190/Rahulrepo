@@ -104,16 +104,14 @@ The UCU dataset is normalised so that all MFCCs take a value from 0 to 1 based o
 Due to the difference in size between the datasets, 8,800 samples for UCU and 80,000 samples for MNIST, I randomly sample from the UCU dataset and pair this with a sample from MNIST. This means that each sample from UCU is repeated approxiamtely 9.1 times ($80000/8800=9.0909$).
 
 \paragraph{Merging Modalities}
-In order to combine the two different modalities, I explore different merging techniques: Concatenation (\textit{Concat}) and Addition (\textit{Add}). To do this, the embeddings of both modalities are ensured to have the same shape and then are merged using the methods described in \autoref{eqn:concat} and \autoref{eqn:add}, concatenation and addition, respectively. %and \ref{eqn:xply}.
+In order to combine the two different modalities, I explore different merging techniques: Concatenation (\textit{Concat}) and Addition (\textit{Add}). To do this, the embeddings of both modalities are ensured to have the same shape and then are merged using the methods described in \autoref{eqn:concat} and \autoref{eqn:add} for concatenation and addition, respectively. %and \ref{eqn:xply}.
 
- \begin{equation}
- 	merged = im_i^{emb} || mfcc_i^{emb}
- 	\label{eqn:concat}
+ \begin{equation}\label{eqn:concat}
+ 	merged = im_i^{emb} || mfcc_i^{emb} 	
  \end{equation}
 
- \begin{equation}
- 	merged = im_i^{emb} + mfcc_i^{emb}
- 	\label{eqn:add}  
+ \begin{equation}\label{eqn:add}  
+ 	merged = im_i^{emb} + mfcc_i^{emb} 	
  \end{equation}
  
   %\begin{equation}
@@ -138,16 +136,16 @@ The removed modality is replaced with an array of zeros of the same shape as the
 The MAE is then trained to reproduce both the image and MFCCs regardless of whether one of these has been ommited from the input.
 
 \subsubsection{Testing Conditions}
-Each MAE (Concatenate and Addition) was tested in three different ways, bimodal, image only and MFCC only.
+Each MAE (Concatenate and Addition) was tested in three different ways, Bimodal, Image Only and MFCC Only.
 
 \paragraph{Bimodal}
 In the bimodal (bi) testing condition both image and MFCC data are used as input for each testing instance and we are interested in observing the classification accuracy as well as the total regeneration loss.
 
 \paragraph{Image Only}
-In the image only (Im) testing condition, only images are provided as input data. We are interested in the classification accuracy as well as the MFCC reconstruction loss. We are not interested in the image reconstruction loss, as it is expected that, as the image is provided as input this will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
+In the Image Only (Im) testing condition, only images are provided as input data. We are interested in the classification accuracy as well as the MFCC reconstruction loss. We are not interested in the image reconstruction loss, as it is expected that, as the image is provided as input this will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
 
 \paragraph{MFCC Only}
-Similarly to the image only condition, the MFCC only (MFCC) condition provides only MFCCs as input and we are interested in the classification accuracy as well as the image reconstruction loss. We are not interested in the MFCC regeneration loss as MFCCs are given as input it will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
+Similarly to the Image Only condition, the MFCC Only (MFCC) condition provides only MFCCs as input and we are interested in the classification accuracy as well as the image reconstruction loss. We are not interested in the MFCC regeneration loss as MFCCs are given as input it will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
 
 \subsubsection{Network Description}
 \paragraph{Baseline Models}
@@ -246,38 +244,9 @@ By combining the two autoencoders described in \autoref{tab:MNIST_AE_description
 \subsection{Results}
 
 \subsubsection{Classification Results}
-\autoref{tab:mnist_ucu_master_res} shows the complete results for all of the experiments run on the combined UCU and MNIST dataset. For convenience, this table is broken down into three other tables: \autoref{tab:mnist_ucu_bi_res} for the bimodal testing condition, \autoref{tab:mnist_ucu_im_res} for the image only condition and \autoref{tab:mnist_ucu_mfcc_res} for the MFCC only testing condition. 
+The complete set of results for this experiment are available in \autoref{tab:mnist_ucu_master_res} in \autoref{Appendix:A}. The most important results are shown in the following three tables: \autoref{tab:mnist_ucu_bi_res} for the bimodal testing condition, \autoref{tab:mnist_ucu_im_res} for the image only condition and \autoref{tab:mnist_ucu_mfcc_res} for the MFCC only testing condition. 
 
 All results reported here are the mean of a four-fold cross validation. That is, each training and testing condition was run four times and the average results are shown.
-
-\begin{table}
-	\centering
-		\begin{tabular}{|c|c|c|c|c|c|c|c|}
-		\hline
-		Model & Training & Testing & Im MSE & MFCC MSE & Lb MSE & Total MSE & Acc \\
-		\hline
-		Image AE & Im & Im & 0.0027	&	&0.0019	& 0.0046	&	0.9883\\ \hline
-		MFCC AE & MFCC & MFCC & 	&0.0113	&	0.0026	&	0.0139	& 0.9832\\ \hline
-		\multirow{6}{*}{Add MAE} & \multirow{3}{*}{Bi} & Bi &	0.0030	&	0.0401	&	0.0006	&	0.0437	&0.9967\\ \cline{3-8}
-		&& Im &	0.0076	&	0.1641	&	0.0763	&	0.2479	&0.4501 \\ \cline{3-8}
-		&& MFCC &	0.1138	&	0.0399	&	0.0057	&	0.1594	&0.9624 \\ \cline{2-8}
-		& \multirow{3}{*}{RD} & Bi&	0.0033	&	0.0176	&	0.0001	&	0.0210	& 0.9993 \\ \cline{3-8}
-		&& Im &	0.0027	&	0.0455	&	0.0025	&	0.0508	& 0.9834\\ \cline{3-8}
-		&& MFCC & 0.0556	&	0.0166	&	0.0031	&	0.0752	&	0.9789 \\ \hline
-		
-		\multirow{6}{*}{Concat MAE} & \multirow{3}{*}{Bi} & Bi &	0.0031	&	0.0423	&	0.0009	& 0.0462	&	0.9945 \\ \cline{3-8}
-		&& Im &	0.0055	&	0.2029	&	0.0843	&	0.2927	&	0.3496 \\ \cline{3-8}
-		&& MFCC &0.1138	&	0.0420	&	0.0079	&0.1637	&	0.9455 \\ \cline{2-8}
-		& \multirow{3}{*}{RD} & Bi &	0.0030	&	0.0426	&	0.0002	&	0.0458	&0.9986 \\ \cline{3-8}
-		&& Im &	0.0026	&	0.0737	&	0.0026	& 0.0788	&	0.9834
-\\ \cline{3-8}
-		&& MFCC &	0.0554	&	0.0416	&	0.0026	&	0.0996	&0.9827
- \\ \hline
-		\end{tabular}
-		\caption{Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}
-		\label{tab:mnist_ucu_master_res}
-
-\end{table}
 
 
 \begin{table}
