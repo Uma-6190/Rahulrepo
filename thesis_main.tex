@@ -155,7 +155,7 @@ breaklinks=true
 % Make the headers in the appendices be "Appendix A: Blah" rather than "Chapter A: Blah".
 \let\oldapp\appendix
 \renewcommand{\appendix}{\oldapp\renewcommand*{\chaptername}{\appendixname}}
-
+\newcommand*{\Appendixautorefname}{appendix}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -239,7 +239,7 @@ breaklinks=true
 
 \appendix 
 \input{Chapters/Example_Appendix.tex}
-%\input{Chapters/AppendixB.tex}
+\input{Chapters/AppendixB.tex}
 
 \bibliography{bigone}  % change this to the name of your bib-file
 

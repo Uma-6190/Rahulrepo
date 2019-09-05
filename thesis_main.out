@@ -54,33 +54,35 @@
 \BOOKMARK [1][-]{section.142}{Conclusion}{chapter.95}% 54
 \BOOKMARK [0][-]{chapter.143}{Magical Vectors and Where to Find Them}{}% 55
 \BOOKMARK [1][-]{section.144}{ANN Latent space: the Final Frontier}{chapter.143}% 56
-\BOOKMARK [1][-]{section.146}{Artificial Shapes Dataset}{chapter.143}% 57
-\BOOKMARK [2][-]{subsection.147}{Dataset Description}{section.146}% 58
-\BOOKMARK [2][-]{subsection.150}{Problem Description}{section.146}% 59
-\BOOKMARK [2][-]{subsection.151}{Network Description}{section.146}% 60
-\BOOKMARK [1][-]{section.153}{Experiments with the ArtS Dataset}{chapter.143}% 61
-\BOOKMARK [2][-]{subsection.154}{Experiment 1}{section.153}% 62
-\BOOKMARK [2][-]{subsection.164}{Experiment 2}{section.153}% 63
-\BOOKMARK [2][-]{subsection.177}{Experiment 3}{section.153}% 64
-\BOOKMARK [2][-]{subsection.188}{Experiment 4}{section.153}% 65
-\BOOKMARK [2][-]{subsection.199}{Experiment 5}{section.153}% 66
-\BOOKMARK [1][-]{section.205}{Conclusion}{chapter.143}% 67
-\BOOKMARK [0][-]{chapter.210}{Transfer Learning: kick-starting the learning process}{}% 68
-\BOOKMARK [1][-]{section.211}{What is transfer learning}{chapter.210}% 69
-\BOOKMARK [2][-]{subsection.212}{randomly initialised networks}{section.211}% 70
-\BOOKMARK [2][-]{subsection.213}{A biological analogue}{section.211}% 71
-\BOOKMARK [1][-]{section.214}{Real Shapes Dataset}{chapter.210}% 72
-\BOOKMARK [2][-]{subsection.215}{dataset description}{section.214}% 73
-\BOOKMARK [2][-]{subsection.216}{problem description}{section.214}% 74
-\BOOKMARK [2][-]{subsection.217}{network description}{section.214}% 75
-\BOOKMARK [2][-]{subsection.218}{results}{section.214}% 76
-\BOOKMARK [2][-]{subsection.222}{discussion}{section.214}% 77
-\BOOKMARK [0][-]{chapter.223}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 78
-\BOOKMARK [1][-]{section.224}{Summary of important points}{chapter.223}% 79
-\BOOKMARK [1][-]{section.225}{Conclusion}{chapter.223}% 80
-\BOOKMARK [0][-]{chapter.226}{Future Work}{}% 81
-\BOOKMARK [1][-]{section.227}{Where do we go now?}{chapter.226}% 82
-\BOOKMARK [2][-]{subsection.228}{More Sensors}{section.227}% 83
-\BOOKMARK [2][-]{subsection.229}{Better Sensors}{section.227}% 84
-\BOOKMARK [2][-]{subsection.230}{Swarm Robots and the Cloud}{section.227}% 85
-\BOOKMARK [0][-]{appendix*.232}{Bibliography}{}% 86
+\BOOKMARK [1][-]{section.146}{Vector Arithematic}{chapter.143}% 57
+\BOOKMARK [1][-]{section.149}{Artificial Shapes Dataset}{chapter.143}% 58
+\BOOKMARK [2][-]{subsection.150}{Dataset Description}{section.149}% 59
+\BOOKMARK [2][-]{subsection.152}{Problem Description}{section.149}% 60
+\BOOKMARK [2][-]{subsection.153}{Network Description}{section.149}% 61
+\BOOKMARK [1][-]{section.154}{Experiments with the ArtS Dataset}{chapter.143}% 62
+\BOOKMARK [2][-]{subsection.155}{Experiment 1}{section.154}% 63
+\BOOKMARK [2][-]{subsection.165}{Experiment 2}{section.154}% 64
+\BOOKMARK [2][-]{subsection.178}{Experiment 3}{section.154}% 65
+\BOOKMARK [2][-]{subsection.191}{Experiment 4}{section.154}% 66
+\BOOKMARK [2][-]{subsection.202}{Experiment 5}{section.154}% 67
+\BOOKMARK [1][-]{section.210}{Conclusion}{chapter.143}% 68
+\BOOKMARK [0][-]{chapter.214}{Transfer Learning: kick-starting the learning process}{}% 69
+\BOOKMARK [1][-]{section.215}{What is transfer learning}{chapter.214}% 70
+\BOOKMARK [2][-]{subsection.216}{randomly initialised networks}{section.215}% 71
+\BOOKMARK [2][-]{subsection.217}{A biological analogue}{section.215}% 72
+\BOOKMARK [1][-]{section.218}{Real Shapes Dataset}{chapter.214}% 73
+\BOOKMARK [2][-]{subsection.219}{dataset description}{section.218}% 74
+\BOOKMARK [2][-]{subsection.220}{problem description}{section.218}% 75
+\BOOKMARK [2][-]{subsection.221}{network description}{section.218}% 76
+\BOOKMARK [2][-]{subsection.222}{results}{section.218}% 77
+\BOOKMARK [2][-]{subsection.226}{discussion}{section.218}% 78
+\BOOKMARK [0][-]{chapter.227}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 79
+\BOOKMARK [1][-]{section.228}{Summary of important points}{chapter.227}% 80
+\BOOKMARK [1][-]{section.229}{Conclusion}{chapter.227}% 81
+\BOOKMARK [0][-]{chapter.230}{Future Work}{}% 82
+\BOOKMARK [1][-]{section.231}{Where do we go now?}{chapter.230}% 83
+\BOOKMARK [2][-]{subsection.232}{More Sensors}{section.231}% 84
+\BOOKMARK [2][-]{subsection.233}{Better Sensors}{section.231}% 85
+\BOOKMARK [2][-]{subsection.234}{Swarm Robots and the Cloud}{section.231}% 86
+\BOOKMARK [0][-]{appendix.236}{Appendix Magical Vectors and where to find them}{}% 87
+\BOOKMARK [0][-]{appendix*.241}{Bibliography}{}% 88
