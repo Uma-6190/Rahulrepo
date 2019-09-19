@@ -229,7 +229,7 @@ adversarial learning (to name a few). The experiments in this thesis will focus 
 \subsection{Cost functions: How wrong am I?}
 In order for our neural networks to learn, they need feedback as to how wrong they are. This is done using a cost function, a formula which gives a measure of how good or bad our network is at a particular task.
 
-Depending on the particular method we use to train our networks, the cost function may be given a different name. For example in reinforcement learning, the cost function is typically called a value function. However, they all serve the same purpose, which is to provide feedback as to how well our network is doing at the task it has been assigned. Therefore, to avoid jargon I will refer to this as a cost or loss function throughout this thesis.
+Depending on the particular method we use to train our networks, the cost function may be given a different name. For example in reinforcement learning, the cost function is typically called a value function. However, they all serve the same purpose, which is to provide feedback as to how well our network is doing at the task it has been assigned. Therefore, to avoid jargon I will refer to this as a cost function throughout this thesis and the measure it returns as the error.
 
 The cost function can take on many forms, in supervised and unsupervised training alike. Here are a few of the more commonly used ones and an explanation of each.
 
@@ -262,7 +262,7 @@ Calculating our cross-entropy we get:
 $C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})$
 
 
-If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the cost is closer to zero and our prediction is better. The network believes with 80\% certainty that the images is of a cat. 
+If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the error is closer to zero and our prediction is better. The network believes with 80\% certainty that the images is of a cat. 
 
 
 \subsubsection{Kullback-Leibler Divergence}
@@ -453,12 +453,12 @@ ylabel near ticks]
     
 
 \end{tikzpicture}
-\caption{Visualisation of cost minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate.}
+\caption{Visualisation of error minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate.}
 \label{fig:lr_schedule}
 \end{center}
 \end{figure}
 
-\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. The blue arrows show how reducing the learning rate as more training occurs, allows us to not miss the cost minimum. The red arrows show what can happen if we select a large learning rate and don't change it. Whilst at first, we make rapid progress towards the minimum, at some point we cross over it and will be unable to approach any closer without taking smaller steps.
+\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. The blue arrows show how reducing the learning rate as more training occurs, allows us to not miss the error minimum. The red arrows show what can happen if we select a large learning rate and don't change it. Whilst at first, we make rapid progress towards the minimum, at some point we cross over it and will be unable to approach any closer without taking smaller steps.
 
 This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
 Learning rate schedulers can speed up convergence by allowing large steps to be taken when we are far from the cost minimum with respect to the weights, covering a large distance in a few updates and then slowing down to take smaller steps as we get closer. 
@@ -540,6 +540,20 @@ Heuristic methods provide a very simple method for adjusting the learning rate. 
 	\label{fig:gru}
 \end{figure}
 
+\section{Autoencoders}
+Autoencoders (AE) can be constructed from any type of neural network layers, ConvNet, LSTMs, or Dense to name a few. What makes an AE an AE is not the type of layers from which it is constructed but the whay in which it is trained.
 
+An AE is trained to reproduce its input at its output. Typically, dimensional reduction is applied within the AE so that it must learn to select the most important features of the input data to accuartely represent the data in a more compressed form. 
+
+\subsection{Variational Autoencoders}
+
+\subsection{Multimodal Autoencoders}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/MAE.png}
+	
+	\caption{A Multimodal Autoencoder}
+	\label{fig:mae}
+\end{figure}
 
 \section{Summary}

@@ -75,8 +75,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="134.31791"
-     inkscape:cy="414.21627"
+     inkscape:cx="537.90764"
+     inkscape:cy="292.99796"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -88,7 +88,7 @@
      fit-margin-right="1"
      inkscape:window-width="1920"
      inkscape:window-height="993"
-     inkscape:window-x="0"
+     inkscape:window-x="1920"
      inkscape:window-y="24"
      inkscape:window-maximized="1">
     <sodipodi:guide
@@ -536,5 +536,12 @@
          id="tspan4344"
          x="672.78192"
          y="87.422867">D</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4209"
+       width="770.7464"
+       height="62.126686"
+       x="6.9307113"
+       y="717.49432" />
   </g>
 </svg>

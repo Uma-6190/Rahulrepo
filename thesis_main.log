@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  5 SEP 2019 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  19 SEP 2019 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1291,7 +1291,7 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 176.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<LogoBlack.pdf, id=360, 30.7288pt x 32.66504pt>
+<LogoBlack.pdf, id=364, 30.7288pt x 32.66504pt>
 File: LogoBlack.pdf Graphic file (type pdf)
  <use LogoBlack.pdf>
 Package pdftex.def Info: LogoBlack.pdf used on input line 176.
@@ -1304,7 +1304,7 @@ Package pdftex.def Info: LogoBlack.pdf used on input line 176.
 ] (./Chapters/Acknowledgements.tex) [1
 
 ]
-<researchthesissubmission.pdf, id=387, 597.23125pt x 845.1575pt>
+<researchthesissubmission.pdf, id=391, 597.23125pt x 845.1575pt>
 File: researchthesissubmission.pdf Graphic file (type pdf)
 
 <use researchthesissubmission.pdf>
@@ -1315,7 +1315,7 @@ File: researchthesissubmission.pdf Graphic file (type pdf)
 Package pdftex.def Info: researchthesissubmission.pdf used on input line 209.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<researchthesissubmission.pdf, id=390, page=1, 597.23125pt x 845.1575pt>
+<researchthesissubmission.pdf, id=394, page=1, 597.23125pt x 845.1575pt>
 File: researchthesissubmission.pdf Graphic file (type pdf)
 
 <use researchthesissubmission.pdf, page 1>
@@ -1366,7 +1366,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 [1
 
 
-] <Figs/introduction/stirling.jpg, id=532, 111.42632pt x 173.30298pt>
+] <Figs/introduction/stirling.jpg, id=537, 111.42632pt x 173.30298pt>
 File: Figs/introduction/stirling.jpg Graphic file (type jpg)
 
 <use Figs/introduction/stirling.jpg>
@@ -1377,14 +1377,14 @@ LaTeX Font Info:    Try loading font information for OT1+phv on input line 40.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-<Figs/introduction/stirling.png, id=533, 1777.3602pt x 2763.6048pt>
+<Figs/introduction/stirling.png, id=538, 1777.3602pt x 2763.6048pt>
 File: Figs/introduction/stirling.png Graphic file (type png)
 
 <use Figs/introduction/stirling.png>
 Package pdftex.def Info: Figs/introduction/stirling.png used on input line 43.
 (pdftex.def)             Requested size: 27.31013pt x 42.67519pt.
  [2 <./Figs/introduction/stirling.jpg>]
-<Figs/introduction/shapes.png, id=543, 266.4354pt x 166.221pt>
+<Figs/introduction/shapes.png, id=548, 266.4354pt x 166.221pt>
 File: Figs/introduction/shapes.png Graphic file (type png)
 
 <use Figs/introduction/shapes.png>
@@ -1406,7 +1406,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 
 ] [6]) (./Chapters/Chapter3.tex [7]
 Chapter 3.
-<Figs/intro2dl/perceptron.png, id=588, 155.30823pt x 57.74373pt>
+<Figs/intro2dl/perceptron.png, id=593, 155.30823pt x 57.74373pt>
 File: Figs/intro2dl/perceptron.png Graphic file (type png)
 
 <use Figs/intro2dl/perceptron.png>
@@ -1415,7 +1415,7 @@ Package pdftex.def Info: Figs/intro2dl/perceptron.png used on input line 25.
  [8
 
  <./Figs/intro2dl/perceptron.png>]
-<Figs/intro2dl/mlp.png, id=600, 235.6002pt x 131.17004pt>
+<Figs/intro2dl/mlp.png, id=605, 235.6002pt x 131.17004pt>
 File: Figs/intro2dl/mlp.png Graphic file (type png)
 
 <use Figs/intro2dl/mlp.png>
@@ -1432,14 +1432,14 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 452.
  [20] [21]
-<Figs/intro2dl/LSTM.png, id=753, 574.3056pt x 397.9668pt>
+<Figs/intro2dl/LSTM.png, id=758, 574.3056pt x 397.9668pt>
 File: Figs/intro2dl/LSTM.png Graphic file (type png)
 
 <use Figs/intro2dl/LSTM.png>
 Package pdftex.def Info: Figs/intro2dl/LSTM.png used on input line 529.
 (pdftex.def)             Requested size: 213.39568pt x 147.87086pt.
 
-<Figs/intro2dl/GRU.png, id=754, 571.8966pt x 381.1038pt>
+<Figs/intro2dl/GRU.png, id=759, 571.8966pt x 381.1038pt>
 File: Figs/intro2dl/GRU.png Graphic file (type png)
 
 <use Figs/intro2dl/GRU.png>
@@ -1450,51 +1450,57 @@ l/GRU.png>]
 Chapter 4.
 [24
 
-] [25]
-<./Figs/mnistSpoken/UCU_digit_length.png, id=797, 1387.584pt x 693.0693pt>
-File: ./Figs/mnistSpoken/UCU_digit_length.png Graphic file (type png)
+] [25] [26] [27] [28] [29] [30]
 
-<use ./Figs/mnistSpoken/UCU_digit_length.png>
-Package pdftex.def Info: ./Figs/mnistSpoken/UCU_digit_length.png used on input 
-line 45.
-(pdftex.def)             Requested size: 426.79135pt x 213.16777pt.
- [26 <./Figs/mnistSpoken/UCU_digit_length.png>] [27] [28] [29] [30] [31] [32]
-<Figs/mnistSpoken/lbAll.png, id=881, 556.9608pt x 175.3752pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31] [32] <Figs/mnistSpoken/lbAll.png, id=883, 556.9608pt x 175.3752pt>
 File: Figs/mnistSpoken/lbAll.png Graphic file (type png)
 
 <use Figs/mnistSpoken/lbAll.png>
-Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 315.
+Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 353.
 (pdftex.def)             Requested size: 426.79135pt x 134.39172pt.
 
-<Figs/mnistSpoken/5s.png, id=883, 192.72pt x 175.1343pt>
+<Figs/mnistSpoken/5s.png, id=885, 192.72pt x 175.1343pt>
 File: Figs/mnistSpoken/5s.png Graphic file (type png)
 
 <use Figs/mnistSpoken/5s.png>
-Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 324.
+Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 363.
 (pdftex.def)             Requested size: 192.71951pt x 175.13387pt.
- [33 <./Figs/mnistSpoken/lbAll.png>] [34 <./Figs/mnistSpoken/5s.png>] [35] [36]
-) (./Chapters/Chapter5.tex [37]
-Chapter 5.
-[38
 
-] <Figs/shapes/vectorArthExmp.png, id=940, 510.4671pt x 699.0918pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33 <./Figs/mnistSpoken/lbAll.png>] [34 <./Figs/mnistSpoken/5s.png>] [35]
+[36] [37]) (./Chapters/Chapter5.tex [38]
+Chapter 5.
+[39
+
+] <Figs/shapes/vectorArthExmp.png, id=946, 582.978pt x 739.563pt>
 File: Figs/shapes/vectorArthExmp.png Graphic file (type png)
 
 <use Figs/shapes/vectorArthExmp.png>
-Package pdftex.def Info: Figs/shapes/vectorArthExmp.png used on input line 27.
-(pdftex.def)             Requested size: 426.79135pt x 584.52362pt.
+Package pdftex.def Info: Figs/shapes/vectorArthExmp.png used on input line 31.
+(pdftex.def)             Requested size: 426.79135pt x 541.42253pt.
 
-<Figs/shapes/shapes.png, id=941, 463.7325pt x 154.8987pt>
+<Figs/shapes/shapes.png, id=947, 463.7325pt x 154.8987pt>
 File: Figs/shapes/shapes.png Graphic file (type png)
 
 <use Figs/shapes/shapes.png>
-Package pdftex.def Info: Figs/shapes/shapes.png used on input line 34.
+Package pdftex.def Info: Figs/shapes/shapes.png used on input line 38.
 (pdftex.def)             Requested size: 320.0935pt x 106.92038pt.
- [39] [40 <./Figs/shapes/vectorArthExmp.png>]
+ [40] [41 <./Figs/shapes/vectorArthExmp.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41 <./Figs/shapes/shapes.png>] [42] [43]
+[42 <./Figs/shapes/shapes.png>] [43]
+
+LaTeX Warning: Reference `chapter4' on page 44 undefined on input line 110.
+
+[44] [45]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 PGFPlots: reading {csvs/331/total331.csv}
@@ -1510,24 +1516,28 @@ Missing character: There is no ] in font nullfont!
 PGFPlots: reading {csvs/331/word331.csv}
 PGFPlots: reading {csvs/331/word331.csv}
 PGFPlots: reading {csvs/331/word331.csv}
- [44]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[45] <Figs/shapes/multiword331.png, id=1003, 484.4499pt x 196.5744pt>
-File: Figs/shapes/multiword331.png Graphic file (type png)
+[46] [47] <Figs/shapes/331_8v200.png, id=1012, 534.3162pt x 351.9549pt>
+File: Figs/shapes/331_8v200.png Graphic file (type png)
 
-<use Figs/shapes/multiword331.png>
-Package pdftex.def Info: Figs/shapes/multiword331.png used on input line 286.
-(pdftex.def)             Requested size: 320.0935pt x 129.88647pt.
- [46]
-<Figs/shapes/shapes331.png, id=1014, 669.702pt x 569.7285pt>
+<use Figs/shapes/331_8v200.png>
+Package pdftex.def Info: Figs/shapes/331_8v200.png used on input line 297.
+(pdftex.def)             Requested size: 266.74458pt x 175.70313pt.
+
+<Figs/shapes/shapes331.png, id=1014, 669.2202pt x 570.2103pt>
 File: Figs/shapes/shapes331.png Graphic file (type png)
 
 <use Figs/shapes/shapes331.png>
-Package pdftex.def Info: Figs/shapes/shapes331.png used on input line 295.
-(pdftex.def)             Requested size: 320.0935pt x 272.31036pt.
- [47 <./Figs/shapes/multiword331.png>] [48 <./Figs/shapes/shapes331.png>]
+Package pdftex.def Info: Figs/shapes/shapes331.png used on input line 313.
+(pdftex.def)             Requested size: 320.0935pt x 272.74075pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[48 <./Figs/shapes/331_8v200.png>] [49 <./Figs/shapes/shapes331.png>]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 PGFPlots: reading {csvs/333/total333.csv}
@@ -1548,237 +1558,235 @@ PGFPlots: reading {csvs/333/word333.csv}
 File: Figs/shapes/multiword333.png Graphic file (type png)
 
 <use Figs/shapes/multiword333.png>
-Package pdftex.def Info: Figs/shapes/multiword333.png used on input line 480.
-(pdftex.def)             Requested size: 320.0935pt x 319.49742pt.
- [49] [50]
+Package pdftex.def Info: Figs/shapes/multiword333.png used on input line 498.
+(pdftex.def)             Requested size: 213.39568pt x 212.99055pt.
+ [50] [51]
 <Figs/shapes/singlelabel333A.png, id=1048, 666.0885pt x 542.2659pt>
 File: Figs/shapes/singlelabel333A.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel333A.png>
-Package pdftex.def Info: Figs/shapes/singlelabel333A.png used on input line 492
+Package pdftex.def Info: Figs/shapes/singlelabel333A.png used on input line 510
 .
 (pdftex.def)             Requested size: 320.0935pt x 260.59909pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[51 <./Figs/shapes/multiword333.png>]
-<Figs/shapes/shapes333.png, id=1059, 668.7384pt x 569.0058pt>
+<Figs/shapes/shapes333.png, id=1050, 668.7384pt x 569.0058pt>
 File: Figs/shapes/shapes333.png Graphic file (type png)
 
 <use Figs/shapes/shapes333.png>
-Package pdftex.def Info: Figs/shapes/shapes333.png used on input line 503.
+Package pdftex.def Info: Figs/shapes/shapes333.png used on input line 520.
 (pdftex.def)             Requested size: 320.0935pt x 272.35564pt.
- [52 <./Figs/shapes/singlelabel333A.png>]
-<Figs/shapes/2word333A.png, id=1072, 664.884pt x 642.2394pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[52 <./Figs/shapes/multiword333.png>]
+<Figs/shapes/2word333A.png, id=1062, 664.884pt x 642.2394pt>
 File: Figs/shapes/2word333A.png Graphic file (type png)
 
 <use Figs/shapes/2word333A.png>
-Package pdftex.def Info: Figs/shapes/2word333A.png used on input line 512.
+Package pdftex.def Info: Figs/shapes/2word333A.png used on input line 530.
 (pdftex.def)             Requested size: 320.0935pt x 309.19258pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[53 <./Figs/shapes/singlelabel333A.png>]
 <Figs/shapes/shapes331v333.png, id=1074, 358.941pt x 569.9694pt>
 File: Figs/shapes/shapes331v333.png Graphic file (type png)
 
 <use Figs/shapes/shapes331v333.png>
-Package pdftex.def Info: Figs/shapes/shapes331v333.png used on input line 527.
-(pdftex.def)             Requested size: 213.39568pt x 338.85335pt.
- [53 <./Figs/shapes/shapes333.png>] [54 <./Figs/shapes/2word333A.png>] [55 <./F
-igs/shapes/shapes331v333.png>]
+Package pdftex.def Info: Figs/shapes/shapes331v333.png used on input line 548.
+(pdftex.def)             Requested size: 170.71393pt x 271.07747pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[54 <./Figs/shapes/shapes333.png>] [55 <./Figs/shapes/2word333A.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figs/shapes/multiword339.png, id=1098, 571.4148pt x 503.7219pt>
+<Figs/shapes/multiword339.png, id=1094, 571.4148pt x 503.7219pt>
 File: Figs/shapes/multiword339.png Graphic file (type png)
 
 <use Figs/shapes/multiword339.png>
-Package pdftex.def Info: Figs/shapes/multiword339.png used on input line 605.
-(pdftex.def)             Requested size: 320.0935pt x 282.17456pt.
+Package pdftex.def Info: Figs/shapes/multiword339.png used on input line 627.
+(pdftex.def)             Requested size: 266.74458pt x 235.14291pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56] <Figs/shapes/singlelabel339.png, id=1108, 543.9522pt x 173.2071pt>
+[56 <./Figs/shapes/shapes331v333.png>]
+<Figs/shapes/singlelabel339.png, id=1105, 543.9522pt x 173.2071pt>
 File: Figs/shapes/singlelabel339.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel339.png>
-Package pdftex.def Info: Figs/shapes/singlelabel339.png used on input line 616.
+Package pdftex.def Info: Figs/shapes/singlelabel339.png used on input line 639.
 
 (pdftex.def)             Requested size: 320.0935pt x 101.927pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/singlelabel339_pos.png, id=1109, 547.3248pt x 171.2799pt>
+[57] <Figs/shapes/singlelabel339_pos.png, id=1112, 547.3248pt x 171.2799pt>
 File: Figs/shapes/singlelabel339_pos.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel339_pos.png>
 Package pdftex.def Info: Figs/shapes/singlelabel339_pos.png used on input line 
-623.
+648.
 (pdftex.def)             Requested size: 320.0935pt x 100.17088pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/2word339_pos.png, id=1111, 610.6815pt x 484.9317pt>
+<Figs/shapes/2word339_pos.png, id=1114, 610.6815pt x 484.9317pt>
 File: Figs/shapes/2word339_pos.png Graphic file (type png)
 
 <use Figs/shapes/2word339_pos.png>
-Package pdftex.def Info: Figs/shapes/2word339_pos.png used on input line 632.
-(pdftex.def)             Requested size: 426.79135pt x 338.91711pt.
- [57]
+Package pdftex.def Info: Figs/shapes/2word339_pos.png used on input line 657.
+(pdftex.def)             Requested size: 320.0935pt x 254.18597pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [58 <./Figs/shapes/multiword339.png> <./Figs/shapes/singlelabel339.png>]
-[59 <./Figs/shapes/singlelabel339_pos.png>] [60 <./Figs/shapes/2word339_pos.png
->] <Figs/shapes/singlelabel739_shape.png, id=1149, 387.1263pt x 326.6604pt>
+[59 <./Figs/shapes/singlelabel339_pos.png> <./Figs/shapes/2word339_pos.png>]
+[60] [61] [62]
+<Figs/shapes/singlelabel739_shape.png, id=1159, 387.1263pt x 326.6604pt>
 File: Figs/shapes/singlelabel739_shape.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_shape.png>
 Package pdftex.def Info: Figs/shapes/singlelabel739_shape.png used on input lin
-e 718.
-(pdftex.def)             Requested size: 320.0935pt x 270.09627pt.
- [61]
-<Figs/shapes/singlelabel739_col.png, id=1158, 438.438pt x 325.9377pt>
+e 750.
+(pdftex.def)             Requested size: 266.74458pt x 225.0769pt.
+
+<Figs/shapes/singlelabel739_col.png, id=1160, 438.438pt x 325.9377pt>
 File: Figs/shapes/singlelabel739_col.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_col.png>
 Package pdftex.def Info: Figs/shapes/singlelabel739_col.png used on input line 
-727.
-(pdftex.def)             Requested size: 320.0935pt x 237.97232pt.
+759.
+(pdftex.def)             Requested size: 266.74458pt x 198.30943pt.
 
 <Figs/shapes/singlelabel739_pos.png, id=1161, 541.3023pt x 325.6968pt>
 File: Figs/shapes/singlelabel739_pos.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_pos.png>
 Package pdftex.def Info: Figs/shapes/singlelabel739_pos.png used on input line 
-736.
-(pdftex.def)             Requested size: 320.0935pt x 192.60175pt.
- [62 <./Figs/shapes/singlelabel739_shape.png> <./Figs/shapes/singlelabel739_col
-.png>]
-<Figs/shapes/2word739_pos.png, id=1169, 604.1772pt x 944.5689pt>
+766.
+(pdftex.def)             Requested size: 266.74458pt x 160.50227pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figs/shapes/2word739_pos.png, id=1164, 604.1772pt x 944.5689pt>
 File: Figs/shapes/2word739_pos.png Graphic file (type png)
 
 <use Figs/shapes/2word739_pos.png>
-Package pdftex.def Info: Figs/shapes/2word739_pos.png used on input line 744.
-(pdftex.def)             Requested size: 426.79135pt x 667.26157pt.
+Package pdftex.def Info: Figs/shapes/2word739_pos.png used on input line 778.
+(pdftex.def)             Requested size: 320.0935pt x 500.44618pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[63 <./Figs/shapes/singlelabel739_shape.png> <./Figs/shapes/singlelabel739_col.
+png>] [64 <./Figs/shapes/singlelabel739_pos.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[63 <./Figs/shapes/singlelabel739_pos.png>] [64]
-<Figs/shapes/739_minus1.png, id=1189, 492.1587pt x 485.4135pt>
+[65 <./Figs/shapes/2word739_pos.png>] [66]
+<Figs/shapes/739_minus1.png, id=1198, 500.8311pt x 485.6544pt>
 File: Figs/shapes/739_minus1.png Graphic file (type png)
 
 <use Figs/shapes/739_minus1.png>
-Package pdftex.def Info: Figs/shapes/739_minus1.png used on input line 831.
-(pdftex.def)             Requested size: 320.0935pt x 315.7002pt.
+Package pdftex.def Info: Figs/shapes/739_minus1.png used on input line 875.
+(pdftex.def)             Requested size: 213.39568pt x 206.92282pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[65] [66]
+[67] [68 <./Figs/shapes/739_minus1.png>] [69]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[67]
+[70]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[68]) (./Chapters/Chapter6.tex [69] [70 <./Figs/shapes/2word739_pos.png>]
-[71 <./Figs/shapes/739_minus1.png>]
+[71]) (./Chapters/Chapter6.tex [72] [73]
 Chapter 6.
-) (./Chapters/Chapter7.tex [72
+) (./Chapters/Chapter7.tex [74
 
 ]
 Chapter 7.
-) (./Chapters/Chapter8.tex [73
+) (./Chapters/Chapter8.tex [75
 
 ]
 Chapter 8.
-) (./Chapters/Example_Appendix.tex [74
+) (./Chapters/Example_Appendix.tex [76
 
-] [75]) (./Chapters/AppendixB.tex
+]
 Appendix A.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1.
-<Figs/shapes/331_8v200.png, id=1259, 534.3162pt x 351.9549pt>
-File: Figs/shapes/331_8v200.png Graphic file (type png)
+[77
 
-<use Figs/shapes/331_8v200.png>
-Package pdftex.def Info: Figs/shapes/331_8v200.png used on input line 86.
-(pdftex.def)             Requested size: 320.0935pt x 210.84697pt.
-) (./thesis_main.bbl [76
+] [78]) (./Chapters/AppendixB.tex
+Appendix B.
+) (./thesis_main.bbl [79
 
 
 
-] [77] [78 <./Figs/shapes/331_8v200.png>] [79
+] [80] [81
 
-]) [80]
+]) [82]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 250.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
  (./thesis_main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
+Package rerunfilecheck Info: File `thesis_main.out' has not changed.
+(rerunfilecheck)             Checksum: E05068A824CF1E7EAEE08828A64C602C;6178.
 
 
-Package rerunfilecheck Warning: File `thesis_main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `thesis_main.out':
-(rerunfilecheck)             Before: 79928EF9EEC07279A31B83A46CFD703D;6112
-(rerunfilecheck)             After:  4CEBEE87B4D55FAF4E8B627E5D712AD5;6112.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 36361 strings out of 493029
- 833820 string characters out of 6136234
- 2156948 words of memory out of 5000000
- 38757 multiletter control sequences out of 15000+600000
+ 36382 strings out of 493029
+ 834371 string characters out of 6136234
+ 2155208 words of memory out of 5000000
+ 38779 multiletter control sequences out of 15000+600000
  42600 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,21n,108p,1117b,2423s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.151} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{table.150} has been referenced but does not exist, 
-replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.149} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.148} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on thesis_main.pdf (89 pages, 125855504 bytes).
+ 71i,21n,108p,1145b,2653s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on thesis_main.pdf (91 pages, 125141065 bytes).
 PDF statistics:
- 1415 PDF objects out of 1440 (max. 8388607)
- 1224 compressed objects within 13 object streams
- 351 named destinations out of 1000 (max. 500000)
- 887 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1427 PDF objects out of 1440 (max. 8388607)
+ 1238 compressed objects within 13 object streams
+ 353 named destinations out of 1000 (max. 500000)
+ 885 words of extra memory for PDF output out of 10000 (max. 10000000)
 
