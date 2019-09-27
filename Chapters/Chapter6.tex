@@ -1,19 +1,19 @@
 % Chapter Template
 
-\chapter{Transfer Learning: kick-starting the learning process} % Main chapter title
+\chapter{Bidirectional Grounding of Real Data} % Main chapter title
 
 \label{Chapter6} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{Chapter 6. \emph{Transfer Learning: kick-starting the learning process}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{Chapter 6. \emph{Bidirectional Grounding of Real Data}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-\section{What is transfer learning}
-\subsection{randomly initialised networks}
-\label{sec:random_init}
+\section{The Difficulties of Real Data}
+In the previous chapter I showed that it is possible to use a MAE to bidirectionally ground natural language (words) and the visual attributes of images of different objects. However, the data used in the previous chapter is artificial and therefore many of the challenges which real data presents are not present in it. 
 
-\subsection{A biological analogue}
+When working with real images, there are many factors to consider such as lighting changes, perspective changes and camera noise \ref{keller2016analysis}. These factors were not present in the ArtS dataset, so in this chapter I will show how these impact MRL for bidirectional grounding.
+
 
 \section{Real Shapes Dataset}
 \subsection{dataset description}
