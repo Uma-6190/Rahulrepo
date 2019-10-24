@@ -450,9 +450,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="303.41593"
-     inkscape:cy="452.34076"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="234.84195"
+     inkscape:cy="416.46069"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -464,7 +464,7 @@
      fit-margin-bottom="1"
      inkscape:window-width="1920"
      inkscape:window-height="993"
-     inkscape:window-x="1920"
+     inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1">
     <sodipodi:guide
@@ -600,7 +600,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1229,7 +1229,7 @@
    style="font-size:22.5px"
    id="tspan4254-2-6">- </tspan><tspan
    style="font-weight:bold"
-   id="tspan6077">Orange + GREEN </tspan>=</tspan></text>
+   id="tspan6077">ORANGE + GREEN </tspan>=</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1367,7 +1367,7 @@
    style="font-size:22.5px"
    id="tspan4254-2-6-6">- </tspan><tspan
    style="font-weight:bold"
-   id="tspan6077-2">Orange + GREEN </tspan>=</tspan></text>
+   id="tspan6077-2">ORANGE + GREEN </tspan>=</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

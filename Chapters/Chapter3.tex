@@ -355,49 +355,10 @@ By substituting \autoref{eqn:delta_w_eta} into \autoref{eqn:delta_c_sub} we can 
 By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta}, we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \footnote{Learning rate is discussed in more detail in \autoref{sec:lr_sch}}. 
 
 \subsection{Backpropagation}
-With a gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does.
+With a gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does. 
 
-Backpropogation is defined by four equations:
-1)An equation for the error in the output layer, $\delta_L$:
+A full explanation of the backpropogastion algorithm is available in \autoref{appendix:app3}. However, understanding this backpropogation is not necessary to understand the contribution of this thesis.
 
-\begin{equation} \label{eqn:BP1}
-\delta_L = \nabla_a C \circ \sigma'(z_L)
-\end{equation}
-
-\autoref{eqn:BP1} shows the output error $\delta_L$ equates to changes in the cost $C$ with respect to its activations $a$ and the derivative of the output layers activation function $\sigma'$ when the input to that layer is $z_L$.
-
-2)An equation for the error $\delta_l$ in terms of the error in the next layer:
-\begin{equation} \label{eqn:BP2}
-\delta_l = ((w_{(l+1)})^T\delta_{(l+1)} \circ \sigma'(z_l)
-\end{equation}
-where $(w_{(l+1)})^T$ is the transpose of the weight matrix for the layer above. Multiplying the error from the layer above by the transposed weight matrix can be seen as moving the error backward through that weight matix and the Hadamard product\footnote{The Hadamard product is the elementwise product of two matricies as shown in \autoref{eqn:hada}. \begin{equation} \label{eqn:hada}
-\begin{bmatrix}
-a & b \\
-c & d
-\end{bmatrix} \circ \begin{bmatrix}
-e & f \\
-g & h
-\end{bmatrix} = \begin{bmatrix}
-ae & bf \\
-cg & dh
-\end{bmatrix}
-\end{equation}} $\circ$ with $\sigma'(z_l)$ moves the error backward through the activation function.
-
-3)An equation for the rate of change of the cost with respect to any bias in the network:
-\begin{equation} \label{eqn:BP3}
-\frac{\delta C}{\delta b_lj} = \delta_lj
-\end{equation}
-where $\frac{\delta C}{\delta b_lj}$ is the rate of change of the cost $C$ with respect to bias $b$ of neuron $j$, in layer $l$ and $\delta_lj$ is the $j^{th}$ entry in the error matrix $\delta$ for layer $l$ i.e. the error for the $j^th$ neuron in layer $l$.
-
-4)An equation for the rate of change of the cost with respect to any weight in the network:
-\begin{equation} \label{eqn:BP4}
-\frac{\delta C}{\delta w_{ljk}} = a_{(l-1)k}\delta_lj
-\end{equation}
-where $\frac{\delta C}{\delta w_{ljk}}$ is the rate of change of cost $C$ with respect to the change in weight $w_k$ of neuron $j$ in layer $l$ and $a_{(l-1)k}$ is its input activation.
-
-Using these four equations, \autoref{eqn:BP1}, \autoref{eqn:BP2}, \autoref{eqn:BP3} and \autoref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
-
-One consequence of the backpropagation algorithm is that we are limited in terms of the trainable depth of our networks. As we continually differentiate the error to pass it back through each layer and multiply it by transposed weight matricies, the magnitude of the error can shrink. This results in vanishing error gradients the deeper into the network we go. This means that at some point, the error with respect to a weight or bias will appear to be zero (or approxiamtely zero) and thus we cannot adjust it by gradient descent, so we are limited to not having infinitely deep networks.
 
 \subsection{Extensions and Improvements}
 There are many extensions to simple gradient descent based learning, here are a few to be aware of.
@@ -513,41 +474,143 @@ scaled y ticks = false]
 Heuristic methods provide a very simple method for adjusting the learning rate. A commonly used one is to simply gradually reduce the learning rate by a small amount each epoch. This has the advantage of requiring almost no computational overhead and being very easy to understand. When training starts, we expect performance to be poor, so improvements can be made rapidly. As training progresses, we expect that improvements will be slower as we are approaching the minimum cost.
 
 \section{Convolutional Neural Networks}
+One draw back of dense neural networks, like MLPs is that they do not leverage spatial information in the input data. This means that whether two pieces of information occur next to each other, is irrelevant to the neural network. Obviously, this information is important and useful, so how can a neural network use it?
+
+Consider two very different problems, image classification and speech recognition. In image classification, not only are the values of pixels important but also, the values of pixels surrounding them. For example, we know that \autoref{fig:cat} is a picture of a cat, not just because there are grey pixels on a white background, but because the grey pixels are collected into a cat-like shape. We are unable to recognise the right hand image despite have the same pixels as the left image as spatial cues have been removed.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.35\textwidth]{Figs/intro2dl/cat.png}
+	\includegraphics[width=0.35\textwidth]{Figs/intro2dl/catScrambled.png}
+	
+	\caption{A british short-hair cat (left) and the same image, with its pixels scrambled (right).}
+	\label{fig:cat}
+\end{figure}
+
+Similarly, in speech recognition, the order in which sound samples are heard, is very important. if we hear a word backwards, we won't recognise it as being that word and if we re arrange the order of the samples, it becomes even more difficult to recognise.
+
+Dense neural networks don't care about spatial information because each input is connected to every neuron in the input layer, effectively treating every pixel as if they are no closer, or further away from any other pixel or removing information about when each sample of sound occured.
+
+In order to levarge spatial information we can make use of convolutional neural networks (ConvNet).
+
 \subsection{What is Convolution?}
-\subsubsection{Kernels}
-\subsubsection{Strides}
-\subsubsection{Dilations}
+In ConvNets, convolution is a mathematical operation which adds a data element to its neighbours, weighted by a kernel. For example, given a 3x3 kernel, and an image as the input data each pixel, $P_{out}(i,j)$ in the output of the convolution will be the sum of the pixels $P_{in}(i-s, j-t)$ in the input  multiplied by its respective kernel weight $k(s,t)$ as seen in \autoref{eqn:convolution} \cite{dumoulin2016guide}.
+
+\begin{equation} \label{eqn:convolution}
+P_{in}*k = \sum_{s=-a}^{a}\sum_{t=-b}^{b} P_{in}(i-s, j-t) \circ k(s,t)
+\end{equation}
+
+\begin{figure}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/convolutionSingleStep.png}
+	\caption{A single step of computing a convolution }
+	\label{fig:oneStepConv}
+\end{figure}
+
+Consider the case where $P_{in}$ is a 3x3 array and $k$ is a 3x3 kernel. The convolution, $P_{in} * k$ would unfold as shown in \autoref{fig:oneStepConv}. $P_{out}$ will take values dependant on the sum of the elements of $P_{in}$ multiplied by the weights of $k$.
+
+Applying the convolution at every point in the input gives an output as seen in \autoref{fig:convolve}.
+
+
+\begin{figure}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/convolution.png}
+	\caption{An example of convolution of a (3x3) array with a (3x3) kernel.}
+	\label{fig:convolve}
+\end{figure}
+
+
+To implement convolution effciently, the kernel is flattened and then zero padded forming a 9x9 matrix, so that every convolution step can be performed in a single matrix multiplication. \autoref{fig:convImpl} demonstrates this. Note that the input array is also flattened. 
+
+This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped to be (3x3) again.
+
+\begin{figure}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/convolutionImplementation.png}
+	\caption{The implementation of the convolution of a (3x3) array with a (3x3) kernel.}
+	\label{fig:convImpl}
+\end{figure}
+
+\subsection{Using Convolution Kernels in a Neural Network}
+In a ConvNet, the weights of the network are kernels used to perform the convolution. Where as, in a dense network, every input is connected to every neuron in the first layer and every neuron in the first layer is connected to every neuron in the second layer etc. each with their own individual weight, in a ConvNet, the weights are grouped into kernels and each neuron has it's own kernel which is applied across the entire input via the convolution opperation.
+
+Any given layer in a dense network will have $(Data Dimensions) \times (Number of Neurons)$ weights. The convolutional equivalent will have $(Kernel Size) \times (Number of Neurons)$ weights, usually this will be far fewer than the dense network. This gives a significant increase in computational performance.
+
+For each neuron in a ConvNet, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \footnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
+
+\subsubsection{Strided Convolution}
+In \autoref{fig:convolve}, convoltuion was performed with a stride of one. Strided Convolution refers to the case where the stride, the number of spaces between each application of the kernel, is greater than one. For example, convolution of an image and a kernel with a stride of two would be the convolution of the kernel with every other pixel of the image and would result in an output $\frac{1}{4}$ the size of the input (half the width by half the height).
+
+Altering the stride of a convolution is very useful for performing down sampling. Down sampling reduces the computational burden of a system by reducing the amount of calculations that need to be performed.
+
+Alternatively, strided convolutions can be used to up sample data by making use of a fractional stride. For example a stride of $\frac{1}{2}$ when convolving a kernel and an image would result in an output 4 times the size of the input ($2\times$ the width by $2\times$ the height).
+
+Fractionally strided convolutions can be used for many things including image enhancement\cite{radford2015unsupervised} and, as in this thesis, to rescale data back up to its original size.
+
 \subsection{Transposed Convolutions}
+Fractionally strided convolution is the inverse of a strided convolution whose strides are reciprocals (e.g. $\frac{1}{2}$ vs. 2), with respect to the scale of the data. However, having an inverse of the convolution with respect to the contents of the data is also necessary.
 
+This is where transposed convoltuion comes into play. 
 
-\section{Recurrent Neural Networks}
-\subsection{Vanilla RNN}
-\subsection{Gated RNN}
+Transposing a matrix, for example a convolution kernel, has the effect of rotating it by 90 degrees. Understanding why doing this before performing a convolution has the effect of reversing the convolution requires first understanding how convolution is performed on a computer.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/LSTM.png}
-	
-	\caption{A Long Short-Term Memory Unit}
-	\label{fig:lstm}
-\end{figure}
+As shown in \autoref{fig:convImpl} the actual convolution operation involves flattening and reshaping the kernel. Transposing this flattened and reshaped kernel allows for the recovery of the original input as shown in \autoref{fig:transConvImpl}. 
 
 \begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/GRU.png}
-	
-	\caption{A Gated Recurrent Unit}
-	\label{fig:gru}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/TransconvolutionImplementation.png}
+	\caption{The implementation of the transposed convolution of a (3x3) array with a (3x3) kernel.}
+	\label{fig:transConvImpl}
 \end{figure}
+
+This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped to be (3x3) again. However, this doesn't really highlight what has happened due to the symmetrical shape of the kernel and input. Consider the multiplcation of (4x16) kernel with a flattened 16x1 array. The convolution gives a (4x1) output. Transposing the kernel to be (16x4) and multiplying with the (4x1) output gives the (16x1) flattened array. 
+
+
+%\section{Recurrent Neural Networks}
+%\subsection{Vanilla RNN}
+%\subsection{Gated RNN}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/LSTM.png}
+%	
+%	\caption{A Long Short-Term Memory Unit}
+%	\label{fig:lstm}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/GRU.png}
+%	
+%	\caption{A Gated Recurrent Unit}
+%	\label{fig:gru}
+%\end{figure}
 
 \section{Autoencoders}
-Autoencoders (AE) can be constructed from any type of neural network layers, ConvNet, LSTMs, or Dense to name a few. What makes an AE an AE is not the type of layers from which it is constructed but the whay in which it is trained.
+Autoencoders (AE) can be constructed from any type of neural network layers, ConvNet, LSTMs, or Dense to name a few. What makes an AE an AE is not the type of layers from which it is constructed but the way in which it is trained.
 
-An AE is trained to reproduce its input at its output. Typically, dimensional reduction is applied within the AE so that it must learn to select the most important features of the input data to accuartely represent the data in a more compressed form. 
+An AE is trained to reproduce its input at its output (\autoref{fig:ae}. Typically, dimensional reduction is applied within the AE so that it must learn to select the most important features of the input data to accuartely represent the data in a more compressed form. 
+
+I make use of strided convolutions for dimensional reduction in the encoder and fractionally strided convolutions for dimensional enlargement in the decoder of the MAEs trained in this thesis.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\textwidth]{Figs/intro2dl/AE.png}
+	
+	\caption{An Autoencoder trained using the MSE of its input and reconstruction of the input (Input*). The red arrow shows how the error is backpropgated through the network.}
+	\label{fig:ae}
+\end{figure}
+
+
 
 \subsection{Variational Autoencoders}
+An important enhancement of AEs is the Variational Autoencoder (VAE). The VAE is trained using a multipart cost function. A normal cost such as MSE plus the KLD of the embedding from a target distribution (usually a Gaussian).
+
+This has the effect of forcing the embedding space to be smooth and helps to stop discontinuities in the embedding from occuring. For example, if a particular part of the embedding space is never explored in an AE, the output generated by the decoder can be unpredictable even for embeddings close to those seen from training data. In a VAE, due to the extra constraint placed on the embedding space, the generated output will change smoothly as the embedding is altered smoothly.
+
 
 \subsection{Multimodal Autoencoders}
+Multimodal Autoencoders (MAE) operate similarly to AEs however, they take two or more modalities as input. In this thesis, only bimodal MAEs are used though inprinciple, MAEs are not limited to only two modalities.
+
+The MAE is trained to reproduce all modalities regardless of whether all modalities are present at the input. For example, if a bimodal MAE takes images and text as inputs, it is trained to reproduce images and text from it's inputs. However, if only an image is available as input, the MAE is still trained to produce an image and the aligned text or vice versa when only text is available.
+
+
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/MAE.png}
@@ -556,4 +619,19 @@ An AE is trained to reproduce its input at its output. Typically, dimensional re
 	\label{fig:mae}
 \end{figure}
 
+Each modality is encoded separately through its own branch of the network and then the embeddings are concatenated forming a joint embedding. The joint embedding is the used to reconstruct each modality through their own decoder branches as seen in \autoref{fig:mae}.
+
 \section{Summary}
+
+The most important points to take away from this section are:
+
+\begin{itemize}
+	\item Neural Networks consist of neurons each with their own respective weights.
+	\item The output of a neuron is proportional to its input multiplied by its weights.
+	\item Weights are trained using Gradient Descent and Backpropogation.
+	\item Gradient Decent requires a measure of error known as a cost function.
+	\item Gradient Descent can get stuck in local minima. Where the optimisation finishes is dependant on the training data, cost function and where the optimisation started.
+	\item ConvNets use Kernels of weights instead of being densely connected across their inputs.
+	\item AEs are trained to reproduce their input from a compressed representation.
+	\item MAEs are AEs which take multiple modalities as input creating a single embedding across the modalities.
+\end{itemize}

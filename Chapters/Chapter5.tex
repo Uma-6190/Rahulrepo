@@ -102,7 +102,7 @@ Further to this, I will demonstrate that once trained, the neural network can in
 
 
 \subsection{Network Description}
-The overall structure of the neural netwrok used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description} in \autoref{appendix:B} gives the specific details on each of the layers of the network. Additionally, batchnormalisation is used between beach convolution layer.
+The overall structure of the neural network used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description} in \autoref{appendix:app5} gives the specific details on each of the layers of the network. Additionally, batchnormalisation is used between beach convolution layer.
 
 
 
@@ -532,7 +532,7 @@ Whilst an embedding size of 136 neurons disentangled the meanings of \textsc{Cir
 \label{fig:2word333}
 \end{figure}
 
-Another way to inspect the quality of the learnt embedding is to provide pairs of words to the MAE and observe what it generates as output. \autoref{fig:2word333} shows the output of the MAE trained in run A of experiment 2 (runs B-D can be found in \autoref{appendix:B} with an embedding size of 296 neurons. Here we see clearly that the MAE is correctly generating images from the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle} as well as the other words in its ``vocabulary''. The diagonal of \autoref{fig:2word333} is the equivalent of the bottom row (296) of \autoref{fig:333single}. The addition of a second word allows for the correct generation of the three shapes in different positions and sizes, suggesting that when only the shape is provided as input, the MAE does not know where to draw the object or how big to draw it. By adding a second word and removing some uncertainty, the output of the MAE is much more defined. This is a particularly strong result in the case of when a position is provided in conjuction with either a shape, size or colour. 
+Another way to inspect the quality of the learnt embedding is to provide pairs of words to the MAE and observe what it generates as output. \autoref{fig:2word333} shows the output of the MAE trained in run A of experiment 2 (runs B-D can be found in \autoref{appendix:app5} with an embedding size of 296 neurons. Here we see clearly that the MAE is correctly generating images from the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle} as well as the other words in its ``vocabulary''. The diagonal of \autoref{fig:2word333} is the equivalent of the bottom row (296) of \autoref{fig:333single}. The addition of a second word allows for the correct generation of the three shapes in different positions and sizes, suggesting that when only the shape is provided as input, the MAE does not know where to draw the object or how big to draw it. By adding a second word and removing some uncertainty, the output of the MAE is much more defined. This is a particularly strong result in the case of when a position is provided in conjuction with either a shape, size or colour. 
 
 
 \paragraph{Description Accuracy}
@@ -701,7 +701,7 @@ Exp 2 &  810,000\\ \hline
 \label{tab:updatesTotal}
 \end{table}
 
-Despite the MAE initialised with Random weights receiveing more total updates to its weights as seen in \autoref{tab:updatesTotal}, its performance is worse than both the MAE pretrained on experiment 1 and the MAE pretrained on experiment 2 in terms of both error and accuarcy. See \autoref{appendix:B} for an explanation of how the number of weight updates is calculated.
+Despite the MAE initialised with Random weights receiveing more total updates to its weights as seen in \autoref{tab:updatesTotal}, its performance is worse than both the MAE pretrained on experiment 1 and the MAE pretrained on experiment 2 in terms of both error and accuarcy. See \autoref{appendix:app5} for an explanation of how the number of weight updates is calculated.
 
 Having the MAE master the simpler tasks of either experiment 1 or 2 through pretraining, had a positive effect on both image and description generation in the Image Only testing condition. This also carried over to the accuracy of description generation in this condition. This shows that by first learning to ground a smaller number of visual attributes to the words that describe them, the MAE is better able to correctly learn the additional words of the new datasubset (improved description accuracy) and be more confident about the meaning of these visual attributes (lower MSE).
 

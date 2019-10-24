@@ -1,0 +1,45 @@
+\chapter{Appendix \emph{A Primer on Artifical Neural Networks}}
+\label{appendix:app3}
+
+
+Backpropogation is defined by four equations:
+1)An equation for the error in the output layer, $\delta_L$:
+
+\begin{equation} \label{eqn:BP1}
+\delta_L = \nabla_a C \circ \sigma'(z_L)
+\end{equation}
+
+\autoref{eqn:BP1} shows the output error $\delta_L$ equates to changes in the cost $C$ with respect to its activations $a$ and the derivative of the output layers activation function $\sigma'$ when the input to that layer is $z_L$.
+
+2)An equation for the error $\delta_l$ in terms of the error in the next layer:
+\begin{equation} \label{eqn:BP2}
+\delta_l = ((w_{(l+1)})^T\delta_{(l+1)} \circ \sigma'(z_l)
+\end{equation}
+where $(w_{(l+1)})^T$ is the transpose of the weight matrix for the layer above. Multiplying the error from the layer above by the transposed weight matrix can be seen as moving the error backward through that weight matix and the Hadamard product\footnote{The Hadamard product is the elementwise product of two matricies as shown in \autoref{eqn:hada}. \begin{equation} \label{eqn:hada}
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix} \circ \begin{bmatrix}
+e & f \\
+g & h
+\end{bmatrix} = \begin{bmatrix}
+ae & bf \\
+cg & dh
+\end{bmatrix}
+\end{equation}} $\circ$ with $\sigma'(z_l)$ moves the error backward through the activation function.
+
+3)An equation for the rate of change of the cost with respect to any bias in the network:
+\begin{equation} \label{eqn:BP3}
+\frac{\delta C}{\delta b_lj} = \delta_lj
+\end{equation}
+where $\frac{\delta C}{\delta b_lj}$ is the rate of change of the cost $C$ with respect to bias $b$ of neuron $j$, in layer $l$ and $\delta_lj$ is the $j^{th}$ entry in the error matrix $\delta$ for layer $l$ i.e. the error for the $j^th$ neuron in layer $l$.
+
+4)An equation for the rate of change of the cost with respect to any weight in the network:
+\begin{equation} \label{eqn:BP4}
+\frac{\delta C}{\delta w_{ljk}} = a_{(l-1)k}\delta_lj
+\end{equation}
+where $\frac{\delta C}{\delta w_{ljk}}$ is the rate of change of cost $C$ with respect to the change in weight $w_k$ of neuron $j$ in layer $l$ and $a_{(l-1)k}$ is its input activation.
+
+Using these four equations, \autoref{eqn:BP1}, \autoref{eqn:BP2}, \autoref{eqn:BP3} and \autoref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
+
+One consequence of the backpropagation algorithm is that we are limited in terms of the trainable depth of our networks. As we continually differentiate the error to pass it back through each layer and multiply it by transposed weight matricies, the magnitude of the error can shrink. This results in vanishing error gradients the deeper into the network we go. This means that at some point, the error with respect to a weight or bias will appear to be zero (or approxiamtely zero) and thus we cannot adjust it by gradient descent, so we are limited to not having infinitely deep networks.

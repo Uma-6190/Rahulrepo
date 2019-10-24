@@ -53,8 +53,8 @@ As I will be classifying the digits, it is necessary to check that padding the d
     enlargelimits=0.15,
     ylabel={Number  of Samples},
     ytick={0,20,40,60,80},   
-    xtick={},
-    xticklabel={} %{zero, one, two, three, four, five, six, seven, eight, nine}
+    xtick={1,2,3,4,5,6,7,8,9,10},
+    xticklabels={0,1,2,3,4,5,6,7,8,9}, %{zero, one, two, three, four, five, six, seven, eight, nine}
     %x tick label style={rotate=45},
     xlabel={Digit},
     %nodes near coords,
@@ -281,7 +281,7 @@ By combining the two autoencoders described in \autoref{tab:MNIST_AE_description
 \subsection{Results}
 
 \subsubsection{Classification Results}
-The complete set of results for this experiment are available in \autoref{tab:mnist_ucu_master_res} in \autoref{appendix:A}. The most important results are shown in the following three tables: \autoref{tab:mnist_ucu_bi_res} for the Bimodal testing condition, \autoref{tab:mnist_ucu_im_res} for the Image Only condition and \autoref{tab:mnist_ucu_mfcc_res} for the MFCC Only testing condition. 
+The complete set of results for this experiment are available in \autoref{tab:mnist_ucu_master_res} in \autoref{appendix:app4}. The most important results are shown in the following three tables: \autoref{tab:mnist_ucu_bi_res} for the Bimodal testing condition, \autoref{tab:mnist_ucu_im_res} for the Image Only condition and \autoref{tab:mnist_ucu_mfcc_res} for the MFCC Only testing condition. 
 
 All results reported here are the mean of a four-fold cross validation. Each training and testing condition was run four times and the average results are shown.
 
