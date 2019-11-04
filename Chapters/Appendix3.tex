@@ -15,7 +15,7 @@ Backpropogation is defined by four equations:
 \begin{equation} \label{eqn:BP2}
 \delta_l = ((w_{(l+1)})^T\delta_{(l+1)} \circ \sigma'(z_l)
 \end{equation}
-where $(w_{(l+1)})^T$ is the transpose of the weight matrix for the layer above. Multiplying the error from the layer above by the transposed weight matrix can be seen as moving the error backward through that weight matix and the Hadamard product\footnote{The Hadamard product is the elementwise product of two matricies as shown in \autoref{eqn:hada}. \begin{equation} \label{eqn:hada}
+where $(w_{(l+1)})^T$ is the transpose of the weight matrix for the layer above. Multiplying the error from the layer above by the transposed weight matrix can be seen as moving the error backward through that weight matix and the Hadamard product\endnote{The Hadamard product is the elementwise product of two matricies as shown in \autoref{eqn:hada}. \begin{equation} \label{eqn:hada}
 \begin{bmatrix}
 a & b \\
 c & d
@@ -43,3 +43,5 @@ where $\frac{\delta C}{\delta w_{ljk}}$ is the rate of change of cost $C$ with r
 Using these four equations, \autoref{eqn:BP1}, \autoref{eqn:BP2}, \autoref{eqn:BP3} and \autoref{eqn:BP4}, we can calculate the change in error due to any weight or bias in the network and thus can use gradient descent to optimise its value to reduce the error at the output of the network.
 
 One consequence of the backpropagation algorithm is that we are limited in terms of the trainable depth of our networks. As we continually differentiate the error to pass it back through each layer and multiply it by transposed weight matricies, the magnitude of the error can shrink. This results in vanishing error gradients the deeper into the network we go. This means that at some point, the error with respect to a weight or bias will appear to be zero (or approxiamtely zero) and thus we cannot adjust it by gradient descent, so we are limited to not having infinitely deep networks.
+
+\theendnotes

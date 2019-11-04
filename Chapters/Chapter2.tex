@@ -19,13 +19,58 @@ In doing this, I aim to demonstrate how ANNs have exceeded human performance in 
 
 
 \section{What are Artifical Neural Networks good at?}
-Summary of sota literature demonstrating cool things ANNs can do.
+Artificial Neural Networks have been around for a long time but perhaps the best example of early neural networks is the MultiLayer Perceptron (MLP) \cite{rosenblatt1958perceptron}. Modern ANNs can trace their lineage back to the MLP, however the technology has advanced a lot since 1958. ANNs represent the state-of-the-art on many Artificial Intelligence benchmarks.
+
+ANNs are currently enjoying a new renaissance due to wide spread availablity of Graphics Processing Units (GPUs), big data and software libraries like Tensorflow and CUDA.
+
+In 2012, Krizhevsky et al. \cite{krizhevsky2012imagenet} kickstarted this new wave of interest in ANNs by getting the top performance on the ILSVRC-2012 ImageNet challenge. The unprecendented performance was achieved by utilising a very large amount of training data (1.2 million images), which was made possible by utilising the parallel computing power of GPUs. In creating AlexNet, Krizhevsky et al. demonstrated the potential of ANNs to solve real world problems, something which had been promised since ANN research began.
+
+The field of Deep Learning (DL) has advanced greatly in recent years, with ANNs being used to solve many different types of problems. DL is being used for many differnt tasks. These can be broken down into several categories:
+
+
+\begin{outline}
+ \1 Classification:
+   \2 Image Recognition \cite{krizhevsky2012imagenet, iandola2016squeezenet, he2016deep, zoph2018learning}
+   \2 Speech Recognition \cite{amodei2016deep, graves2013speech}
+   \2 Facial Recognition
+   
+ \1 Natural Language Processing:
+    \2 Language Representation Learning \cite{mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic}
+ 	\2 Intent Classification \cite{chen2016zero}
+ 	\2 Machine Translation \cite{cho2014learning}
+
+ \1 Generation:
+   \2 Image
+   \2 Voice
+   
+ \1 Multimodal Learning:
+ 	\2 Image Captioning \cite{vinyals2015show}
+ 	\2 Video Captioning
+ 	\2 Multimodal Representation Learning \cite{ngiam2011multimodal}
+   
+ \1 Reinforcement Learning:
+   \2 Robotic Control \cite{lillicrap2015continuous}
+   \2 Video Games \cite{vinyals2019alphastar, mnih2013playing}
+   \2 World Modelling \cite{azar2019world}
+      
+ \1 Forecasting:
+   \2 Weather \cite{mahesh2018probabilistic}
+   \2 Electrical Loads \cite{bouktif2018optimal}
+   \2 Financial Markets \cite{fischer2018deep}
+\end{outline}
+
 \subsection{Classification}
 \subsection{Generation}
+\subsection{Representation Learning}
 \subsection{Reinforcement Learning}
 
+
 \section{What are Artificial Neural Networks bad at?}
-Explain how ANNs have specialised skill, not generalised skill - quote Rodney Brooks.
+Whilst ANNs have been applied to many tasks and acheived super-human ability at them \cite{vinyals2019alphastar}, they do not have general intelligence like humans.
+
+\begin{displayquote}
+``... people see how well [an algorithm] performs at one task and they think it can do all the things around that, and it can’t... When we see a person performing a task very well, we understand the competence [involved]. And I think they apply the same model to machine learning'' - Rodney Brooks.
+\end{displayquote}
 \subsection{Data Ineffciency}
 look at oth ML methods which require less data but are generally less capable/require more engineering.
 

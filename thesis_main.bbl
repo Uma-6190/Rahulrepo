@@ -1,0 +1,224 @@
+\begin{thebibliography}{10}
+
+\bibitem{smith2008infants}
+L.~Smith and C.~Yu,
+{\em Infants rapidly learn word-referent mappings via cross-situational
+  statistics,}
+Cognition {\bf 106} (2008) 1558.
+
+\bibitem{yurovsky2013statistical}
+D.~Yurovsky, L.~B.~Smith, and C.~Yu,
+{\em Statistical word learning at scale: The baby's view is better,}
+Developmental science {\bf 16} (2013) 959.
+
+\bibitem{rosenblatt1958perceptron}
+F.~Rosenblatt,
+{\em The perceptron: a probabilistic model for information storage and
+  organization in the brain.,}
+Psychological review {\bf 65} (1958) 386.
+
+\bibitem{krizhevsky2012imagenet}
+A.~Krizhevsky, I.~Sutskever, and G.~E.~Hinton.
+\newblock {\em Imagenet classification with deep convolutional neural
+  networks,} .
+\newblock In {\em Advances in neural information processing systems} 10972012.
+
+\bibitem{iandola2016squeezenet}
+F.~N.~Iandola, S.~Han, M.~W.~Moskewicz, K.~Ashraf, W.~J.~Dally, and K.~Keutzer,
+{\em SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and< 0.5 MB
+  model size,}
+arXiv preprint arXiv:1602.07360(2016).
+
+\bibitem{he2016deep}
+K.~He, X.~Zhang, S.~Ren, and J.~Sun.
+\newblock {\em Deep residual learning for image recognition,} .
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition} 7702016.
+
+\bibitem{zoph2018learning}
+B.~Zoph, V.~Vasudevan, J.~Shlens, and Q.~V.~Le.
+\newblock {\em Learning transferable architectures for scalable image
+  recognition,} .
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition} 86972018.
+
+\bibitem{amodei2016deep}
+D.~Amodei, S.~Ananthanarayanan, R.~Anubhai, J.~Bai, E.~Battenberg, C.~Case,
+  J.~Casper, B.~Catanzaro, Q.~Cheng, G.~Chen, and ~others.
+\newblock {\em Deep speech 2: End-to-end speech recognition in english and
+  mandarin,} .
+\newblock In {\em International conference on machine learning} 1732016.
+
+\bibitem{graves2013speech}
+A.~Graves, A.-r.~Mohamed, and G.~Hinton.
+\newblock {\em Speech recognition with deep recurrent neural networks,} .
+\newblock In {\em Acoustics, speech and signal processing (icassp), 2013 ieee
+  international conference on} 6645. IEEE2013.
+
+\bibitem{mikolov2013distributed}
+T.~Mikolov, I.~Sutskever, K.~Chen, G.~S.~Corrado, and J.~Dean.
+\newblock {\em Distributed representations of words and phrases and their
+  compositionality,} .
+\newblock In {\em Advances in neural information processing systems} 31112013.
+
+\bibitem{mikolov2013efficient}
+T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean,
+{\em Efficient estimation of word representations in vector space,}
+arXiv preprint arXiv:1301.3781(2013).
+
+\bibitem{mikolov2013linguistic}
+T.~Mikolov, W.-t.~Yih, and G.~Zweig.
+\newblock {\em Linguistic regularities in continuous space word
+  representations,} .
+\newblock In {\em Proceedings of the 2013 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies} 7462013.
+
+\bibitem{chen2016zero}
+Y.-N.~Chen, D.~Hakkani-T{\"u}r, and X.~He.
+\newblock {\em Zero-shot learning of intent embeddings for expansion by
+  convolutional deep structured semantic models,} .
+\newblock In {\em 2016 IEEE International Conference on Acoustics, Speech and
+  Signal Processing (ICASSP)} 6045. IEEE2016.
+
+\bibitem{cho2014learning}
+K.~Cho, B.~Van~Merri{\"e}nboer, C.~Gulcehre, D.~Bahdanau, F.~Bougares,
+  H.~Schwenk, and Y.~Bengio,
+{\em Learning phrase representations using RNN encoder-decoder for statistical
+  machine translation,}
+arXiv preprint arXiv:1406.1078(2014).
+
+\bibitem{vinyals2015show}
+O.~Vinyals, A.~Toshev, S.~Bengio, and D.~Erhan.
+\newblock {\em Show and tell: A neural image caption generator,} .
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition} 31562015.
+
+\bibitem{ngiam2011multimodal}
+J.~Ngiam, A.~Khosla, M.~Kim, J.~Nam, H.~Lee, and A.~Y.~Ng.
+\newblock {\em Multimodal deep learning,} .
+\newblock In {\em Proceedings of the 28th international conference on machine
+  learning (ICML-11)} 6892011.
+
+\bibitem{lillicrap2015continuous}
+T.~P.~Lillicrap, J.~J.~Hunt, A.~Pritzel, N.~Heess, T.~Erez, Y.~Tassa,
+  D.~Silver, and D.~Wierstra,
+{\em Continuous control with deep reinforcement learning,}
+arXiv preprint arXiv:1509.02971(2015).
+
+\bibitem{vinyals2019alphastar}
+O.~Vinyals, I.~Babuschkin, J.~Chung, M.~Mathieu, M.~Jaderberg, W.~M.~Czarnecki,
+  A.~Dudzik, A.~Huang, P.~Georgiev, R.~Powell, and ~others,
+{\em AlphaStar: Mastering the real-time strategy game StarCraft II,}
+DeepMind Blog(2019).
+
+\bibitem{mnih2013playing}
+V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~Graves, I.~Antonoglou, D.~Wierstra, and
+  M.~Riedmiller,
+{\em Playing atari with deep reinforcement learning,}
+arXiv preprint arXiv:1312.5602(2013).
+
+\bibitem{azar2019world}
+M.~G.~Azar, B.~Piot, B.~A.~Pires, J.-B.~Grill, F.~Altch{\'e}, and R.~Munos,
+{\em World Discovery Models,}
+arXiv preprint arXiv:1902.07685(2019).
+
+\bibitem{mahesh2018probabilistic}
+A.~Mahesh, T.~O'Brien, W.~D.~Collins, M.~F.~Wehner, M.~Prabhat, K.~Kashinath,
+  and M.~Mudigonda.
+\newblock {\em Probabilistic detection of extreme weather using deep learning
+  methods,} .
+\newblock In {\em AGU Fall Meeting Abstracts}2018.
+
+\bibitem{bouktif2018optimal}
+S.~Bouktif, A.~Fiaz, A.~Ouni, and M.~Serhani,
+{\em Optimal deep learning lstm model for electric load forecasting using
+  feature selection and genetic algorithm: Comparison with machine learning
+  approaches,}
+Energies {\bf 11} (2018) 1636.
+
+\bibitem{fischer2018deep}
+T.~Fischer and C.~Krauss,
+{\em Deep learning with long short-term memory networks for financial market
+  predictions,}
+European Journal of Operational Research {\bf 270} (2018) 654.
+
+\bibitem{lecun1998mnist}
+Y.~LeCun,
+{\em The MNIST database of handwritten digits,}
+http://yann. lecun. com/exdb/mnist/(1998).
+
+\bibitem{kingma2014adam}
+D.~P.~Kingma and J.~Ba,
+{\em Adam: A method for stochastic optimization,}
+arXiv preprint arXiv:1412.6980(2014).
+
+\bibitem{zeiler2012adadelta}
+M.~D.~Zeiler,
+{\em ADADELTA: an adaptive learning rate method,}
+arXiv preprint arXiv:1212.5701(2012).
+
+\bibitem{senior2013empirical}
+A.~Senior, G.~Heigold, K.~Yang, and ~others.
+\newblock {\em An empirical study of learning rates in deep neural networks for
+  speech recognition,} .
+\newblock In {\em 2013 IEEE international conference on acoustics, speech and
+  signal processing} 6724. IEEE2013.
+
+\bibitem{dumoulin2016guide}
+V.~Dumoulin and F.~Visin,
+{\em A guide to convolution arithmetic for deep learning,}
+arXiv preprint arXiv:1603.07285(2016).
+
+\bibitem{radford2015unsupervised}
+A.~Radford, L.~Metz, and S.~Chintala,
+{\em Unsupervised representation learning with deep convolutional generative
+  adversarial networks,}
+arXiv preprint arXiv:1511.06434(2015).
+
+\bibitem{barsalou2008grounded}
+L.~W.~Barsalou,
+{\em Grounded cognition,}
+Annu. Rev. Psychol. {\bf 59} (2008) 617.
+
+\bibitem{mcgurk1976hearing}
+H.~McGurk and J.~MacDonald,
+{\em Hearing lips and seeing voices,}
+Nature {\bf 264} (1976) 746.
+
+\bibitem{ma2009lip}
+W.~J.~Ma, X.~Zhou, L.~A.~Ross, J.~J.~Foxe, and L.~C.~Parra,
+{\em Lip-reading aids word recognition most in moderate noise: a Bayesian
+  explanation using high-dimensional feature space,}
+PLoS One {\bf 4} (2009) e4638.
+
+\bibitem{samuel1997lexical}
+A.~G.~Samuel,
+{\em Lexical activation produces potent phonemic percepts,}
+Cognitive psychology {\bf 32} (1997)~97.
+
+\bibitem{hammami2009tree}
+N.~Hammami and M.~Sellam.
+\newblock {\em Tree distribution classifier for automatic spoken arabic digit
+  recognition,} .
+\newblock In {\em 2009 International Conference for Internet Technology and
+  Secured Transactions,(ICITST)}~1. IEEE2009.
+
+\bibitem{hammami2010improved}
+N.~Hammami and M.~Bedda.
+\newblock {\em Improved tree model for arabic speech recognition,} .
+\newblock In {\em 2010 3rd International Conference on Computer Science and
+  Information Technology}volume~5 521. IEEE2010.
+
+\bibitem{schillingmann2009towards}
+L.~Schillingmann, B.~Wrede, and K.~Rohlfing.
+\newblock {\em Towards a computational model of acoustic packaging,} .
+\newblock In {\em Development and Learning, 2009. ICDL 2009. IEEE 8th
+  International Conference on}~1. IEEE2009.
+
+\bibitem{schillingmann2009computational}
+L.~Schillingmann, B.~Wrede, and K.~J.~Rohlfing,
+{\em A computational model of acoustic packaging,}
+IEEE Transactions on Autonomous Mental Development {\bf 1} (2009) 226.
+
+\end{thebibliography}

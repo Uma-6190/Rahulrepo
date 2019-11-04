@@ -38,7 +38,7 @@ This experiment utilises two datasets, UCU Arabic Spoken Digits (UCU) and MNIST 
 UCU is a dataset containing the 13 Mel Frequency Cepstrum Coefficients representing the audio of the digits 0 to 9 being said by 88 different speakers \cite{hammami2009tree,hammami2010improved}. It contains 8800 utterances (10 digits x 10 repetitions x 88 speakers). Audio was sampled at 11025Hz.
 
 \paragraph{Padding of Utterances}
-As utterances are not of a fixed length, it is necessary to pad the utterances to be equal length. The longest utterance in the dataset contains 93 samples. For ease of up and downsampling within the neural network, all uttereances are padded to be 100 samples long by appending zeros. Each sample is also padded to contain 16 features, the 13 MFCCs and 3 zeros to further facilitate up and down sampling\footnote{Up and down sampling is easier with even numbers of features and samples as we can half the size of the data using strided convolutions, s=(2,2), without worrying about integer division errors e.g. $5/2=2$ but $2\times2 \neq5$}.
+As utterances are not of a fixed length, it is necessary to pad the utterances to be equal length. The longest utterance in the dataset contains 93 samples. For ease of up and downsampling within the neural network, all uttereances are padded to be 100 samples long by appending zeros. Each sample is also padded to contain 16 features, the 13 MFCCs and 3 zeros to further facilitate up and down sampling\endnote{Up and down sampling is easier with even numbers of features and samples as we can half the size of the data using strided convolutions, s=(2,2), without worrying about integer division errors e.g. $5/2=2$ but $2\times2 \neq5$}.
 
 As I will be classifying the digits, it is necessary to check that padding the digits does not provide a cheat for this. As such, I analise the mean number of samples for each digit and their standard deviations as depicted in \autoref{fig:ucu_dig_length}. I then perform a linear regression on the number of samples to demonstrate that it is not possible to accurately predict a digits class given only the length of the utterance.
 
@@ -417,3 +417,4 @@ In future it would be worth while to observe how the reconstructed data can be e
 
 This experiment lays the ground work for the next chapter where I will look at how a more complex internal symbolic language can be developed and exploited. 
 %I will also discuss how this can be applied to creating robots capable of life long learning. 
+\theendnotes

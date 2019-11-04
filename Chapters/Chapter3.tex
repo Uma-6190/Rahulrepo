@@ -199,14 +199,14 @@ ylabel near ticks]
 \end{center}
 \end{figure}
 
-The Relu was created to address an issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \footnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in \autoref{sec:percep}} can be trained as non-linear functions like the sigmoid or Tanh will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
+The Relu was created to address an issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in \autoref{sec:percep}} can be trained as non-linear functions like the sigmoid or Tanh will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
 
 \section{Learning Algorithms}
 In \autoref{sec:percep} we saw how simple computation units can make simple decisions and how these can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
 
 In general, perceptrons (and their more modern decendents) will have their initial weights set randomly, unlike in our example where I chose them. 
 
-Randomly setting weights is useful in practice as we will usually have large numbers of inputs, weights, layers and artifical neurons, so setting each by hand would be intractable. Also, if we knew what weights to set, we wouldn't need a neural network or a learning algorithm to solve our problem as we would likely have a more efficient mathematical description of the problem \footnote{there is a large body of work concerning the best way to initialise neural networks, I will briefly comment on this in \autoref{sec:random_init}.} 
+Randomly setting weights is useful in practice as we will usually have large numbers of inputs, weights, layers and artifical neurons, so setting each by hand would be intractable. Also, if we knew what weights to set, we wouldn't need a neural network or a learning algorithm to solve our problem as we would likely have a more efficient mathematical description of the problem.
 
 With random weights our networks will make a lot of wrong decisions! However if we have a smart way of adjusting our weights we can make our neural networks get better at making decisions over time. This improvement is what I am referring to when I say ``machine learning''.
 
@@ -352,7 +352,7 @@ Looking at \autoref{eqn:delta_c_sub}, we can see that to make $\Delta C$ negativ
 
 By substituting \autoref{eqn:delta_w_eta} into \autoref{eqn:delta_c_sub} we can see that $ \Delta C = - \eta \abs{\nabla C}^2$ and because $\abs{\nabla C}^2 \geq 0$ this guarantees that $C$ will always decrease if the weights are changed in accordance to \autoref{eqn:delta_w_eta}.
 
-By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta}, we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \footnote{Learning rate is discussed in more detail in \autoref{sec:lr_sch}}. 
+By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta}, we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \endnote{Learning rate is discussed in more detail in \autoref{sec:lr_sch}}. 
 
 \subsection{Backpropagation}
 With a gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does. 
@@ -533,7 +533,7 @@ In a ConvNet, the weights of the network are kernels used to perform the convolu
 
 Any given layer in a dense network will have $(Data Dimensions) \times (Number of Neurons)$ weights. The convolutional equivalent will have $(Kernel Size) \times (Number of Neurons)$ weights, usually this will be far fewer than the dense network. This gives a significant increase in computational performance.
 
-For each neuron in a ConvNet, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \footnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
+For each neuron in a ConvNet, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \endnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
 
 \subsubsection{Strided Convolution}
 In \autoref{fig:convolve}, convoltuion was performed with a stride of one. Strided Convolution refers to the case where the stride, the number of spaces between each application of the kernel, is greater than one. For example, convolution of an image and a kernel with a stride of two would be the convolution of the kernel with every other pixel of the image and would result in an output $\frac{1}{4}$ the size of the input (half the width by half the height).
@@ -635,3 +635,5 @@ The most important points to take away from this section are:
 	\item AEs are trained to reproduce their input from a compressed representation.
 	\item MAEs are AEs which take multiple modalities as input creating a single embedding across the modalities.
 \end{itemize}
+
+\theendnotes

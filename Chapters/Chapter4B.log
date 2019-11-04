@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  18 SEP 2019 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  25 OCT 2019 11:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4045,6 +4045,26 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no x in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -4056,7 +4076,28 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no x in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -12809,7 +12850,7 @@ you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
 l.284 ...ble in \autoref{tab:mnist_ucu_master_res}
-                                                   in \autoref{appendix:A}. ...
+                                                   in \autoref{appendix:app4...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -12818,7 +12859,7 @@ deleted material, e.g., by typing `I$}'.
 
 ! Undefined control sequence.
 l.284 ...ref{tab:mnist_ucu_master_res} in \autoref
-                                                  {appendix:A}. The most imp...
+                                                  {appendix:app4}. The most ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -12866,7 +12907,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 283--285
  []
 
 
-Overfull \hbox (409.85841pt too wide) in paragraph at lines 283--285
+Overfull \hbox (422.7068pt too wide) in paragraph at lines 283--285
 []\OML/cmm/m/it/10 cu[]aster[]esin[]:Themostimportantresultsareshowninthefollow
 ingthreetables \OT1/cmr/m/n/10 :
  []
