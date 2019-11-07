@@ -19,47 +19,65 @@ In doing this, I aim to demonstrate how ANNs have exceeded human performance in 
 
 
 \section{What are Artifical Neural Networks good at?}
-Artificial Neural Networks have been around for a long time but perhaps the best example of early neural networks is the MultiLayer Perceptron (MLP) \cite{rosenblatt1958perceptron}. Modern ANNs can trace their lineage back to the MLP, however the technology has advanced a lot since 1958. ANNs represent the state-of-the-art on many Artificial Intelligence benchmarks.
+Artificial Neural Networks have been around for a long time but perhaps the best example of early neural networks is the MultiLayer Perceptron (MLP) \cite{rosenblatt1958perceptron}. Modern ANNs can trace their lineage back to the MLP; however the technology has advanced a lot since 1958. ANNs represent the state-of-the-art on many Artificial Intelligence benchmarks.
 
 ANNs are currently enjoying a new renaissance due to wide spread availablity of Graphics Processing Units (GPUs), big data and software libraries like Tensorflow and CUDA.
 
 In 2012, Krizhevsky et al. \cite{krizhevsky2012imagenet} kickstarted this new wave of interest in ANNs by getting the top performance on the ILSVRC-2012 ImageNet challenge. The unprecendented performance was achieved by utilising a very large amount of training data (1.2 million images), which was made possible by utilising the parallel computing power of GPUs. In creating AlexNet, Krizhevsky et al. demonstrated the potential of ANNs to solve real world problems, something which had been promised since ANN research began.
 
-The field of Deep Learning (DL) has advanced greatly in recent years, with ANNs being used to solve many different types of problems. DL is being used for many differnt tasks. These can be broken down into several categories:
+The field of Deep Learning (DL) has advanced greatly in recent years, with ANNs being used to solve many different types of problems. DL is being used for many differnt tasks. These can be broken down into several categories: Classification, Natural Language Processing (NLP), Data Generation, Reinforcement Learning and Prediction Tasks.
 
 
-\begin{outline}
- \1 Classification:
-   \2 Image Recognition \cite{krizhevsky2012imagenet, iandola2016squeezenet, he2016deep, zoph2018learning}
-   \2 Speech Recognition \cite{amodei2016deep, graves2013speech}
-   \2 Facial Recognition
-   
- \1 Natural Language Processing:
-    \2 Language Representation Learning \cite{mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic}
- 	\2 Intent Classification \cite{chen2016zero}
- 	\2 Machine Translation \cite{cho2014learning}
+%\begin{outline}
+% \1 Classification:
+%   \2 Image Recognition \cite{krizhevsky2012imagenet, iandola2016squeezenet, he2016deep, zoph2018learning}
+%   \2 Speech Recognition \cite{amodei2016deep, graves2013speech}
+%   \2 Facial Recognition
+%   
+% \1 Natural Language Processing:
+%    \2 Language Representation Learning \cite{mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic}
+% 	\2 Intent Classification \cite{chen2016zero}
+% 	\2 Machine Translation \cite{cho2014learning}
+%
+% \1 Generation:
+%   \2 Image
+%   \2 Voice
+%   
+% \1 Multimodal Learning:
+% 	\2 Image Captioning \cite{vinyals2015show}
+% 	\2 Video Captioning
+% 	\2 Multimodal Representation Learning \cite{ngiam2011multimodal}
+%   
+% \1 Reinforcement Learning:
+%   \2 Robotic Control \cite{lillicrap2015continuous}
+%   \2 Video Games \cite{vinyals2019alphastar, mnih2013playing}
+%   \2 World Modelling \cite{azar2019world}
+%      
+% \1 Forecasting:
+%   \2 Weather \cite{mahesh2018probabilistic}
+%   \2 Electrical Loads \cite{bouktif2018optimal}
+%   \2 Financial Markets \cite{fischer2018deep}
+%\end{outline}
 
- \1 Generation:
-   \2 Image
-   \2 Voice
-   
- \1 Multimodal Learning:
- 	\2 Image Captioning \cite{vinyals2015show}
- 	\2 Video Captioning
- 	\2 Multimodal Representation Learning \cite{ngiam2011multimodal}
-   
- \1 Reinforcement Learning:
-   \2 Robotic Control \cite{lillicrap2015continuous}
-   \2 Video Games \cite{vinyals2019alphastar, mnih2013playing}
-   \2 World Modelling \cite{azar2019world}
-      
- \1 Forecasting:
-   \2 Weather \cite{mahesh2018probabilistic}
-   \2 Electrical Loads \cite{bouktif2018optimal}
-   \2 Financial Markets \cite{fischer2018deep}
-\end{outline}
+Of these categories of problems, MRL (as it is presented in this thesis) draws mostly from Classification, NLP and Data Generation.
 
 \subsection{Classification}
+MRL can be considered to draw from different classification tasks, depending on which modalities it is used with. In this thesis I apply MRL to image, speech and textual data, as such I will focus on image, speech and text recognition techniques and will not focus on more nitch problems such as Facial Recognition \cite{ma2004facial}, Emotion Recognition \cite{levi2015emotion} or more general data classification problems \cite{kussul2017deep,qi2017pointnet}.
+
+
+With \cite{krizhevsky2012imagenet} a style ofconvolutional neural network (ConvNet) architecture, consisting of convolution max-pooling and dropout layers followed by fully connected layers and a softmax output layer was created. This has become a standard type architecture for image classification tasks with many similar networks appearing such as VGG 16 and 19 \cite{simonyan2014very}.
+
+Convolution layers are used for feature extraction and fully connected layers are used for classification with downsampling happening gradually throughout the network to reduce the dimensionality of the data. In AlexNet and VGG downsampling is done using the max-pooling layers, however more recent architectures have made use of strided convolutions for this \cite{springenberg2014striving}.
+
+The use of dropout as a regulariser has also become common place as it has been shown to outperform the most common regularisers, L1 and L2 \cite{srivastava2014dropout}.
+
+An important advancement over the AlexNet style of architecture (beyond simply altering network hyper parameters as with VGG 16 and 19 \cite{simonyan2014very) was the addition of residual connections. Introduced in \cite{he2016deep}, residual connections allow data to flow through alternate branches of a network, skipping over some layers to rejoin the main flow at a later point in the network. This has two key effects, 1) it allows the training of much deeper networks by providing a shortcut through the network for error gradients to be backpropogated, helping to ellivate the vanishing gradient problem \cite{hochreiter1998vanishing} and 2) it allows the network to consider lower level features along side more abstracted ones for decision making.
+
+Another advancement over the AlexNet style architectures was the introduction of multiscale convolutions where data is passed through multiple, parallel convolutions layers each with a different kernel size before concatenating their activations \cite{szegedy2015going}. Making use of different kernel sizes creates filters which are sensitive to different scales of features. Thus, for example, if an eye in an image is not picked up at one scale as it is too large or too small, it may be picked up by a parallel convolution with a different sized kernel.
+
+Szegedy et.al have developed their Inception Architecture from \cite{szegedy2015going} iteratively in \cite{szegedy2016rethinking, szegedy2017inception} in each, small advancements in state-of-the-art object recognition are achieved.
+
+
 \subsection{Generation}
 \subsection{Representation Learning}
 \subsection{Reinforcement Learning}
