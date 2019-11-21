@@ -13,9 +13,9 @@
 \section{Why have one sensor when two are better?}
 A key part of the human experience is that it is multisensory. In \cite{barsalou2008grounded}, Lawrence Barsalou speaks about how multisensory processing aids human cognition in a number of ways. Firstly, multisensory information aids in the classification of experiences by providing additional and complimentary information that is not accounted for in only a single modality. 
 
-The Mcgurk effect \cite{mcgurk1976hearing} demonstrates how the visual stimuli of lip reading affects the classification of heard sounds. Whilst this effect can lead to incorrect classifications when misaligned data is provided e.g. utterances of the syllable [ba] dubbed on to lip movements for [ga], lead to normal adults hearing [da]; in normal circumstances, like when two people are speaking to one and other, lip reading aids in classifying heard sounds \cite{ma2009lip}. This is particularly important in noisy environments, which leads to another of Barsalou's ideas about multisensory processing: information redundancy.
+Lip reading affects the classification of phonemes, this is known as the Mcgurk effect \cite{mcgurk1976hearing}. Whilst this effect can lead to incorrect classifications when misaligned data is provided e.g. utterances of the syllable [ba] dubbed on to lip movements for [ga], lead to normal adults hearing [da]; in normal circumstances, like when two people are speaking to one and other, lip reading aids in classifying heard sounds \cite{ma2009lip}. This is particularly important in noisy environments, which leads to another of Barsalou's ideas about multisensory processing: information redundancy.
 
-The reason that lip reading can aid hearing in noisy evironments is that it provides an additional vector along which the human brain can reconstruct missing information. When something is mis-heard due to background noise, the visual information gained from looking at the face of the speaker can be used to reconstruct their utterance.
+The reason that lip reading can aid hearing in noisy evironments is that it provides an additional vector along which the human brain can reconstruct missing information. When something is mis-heard due to background noise, the visual information gained from looking at the lips of the speaker can be used to reconstruct their utterance.
 
 The ability to reconstruct missing data from a secondary modality has not only been seen in humans \cite{ma2009lip, samuel1997lexical} but has been demonstrated in computational modals for example, Ngiam et al.\cite{ngiam2011multimodal}.
 
@@ -26,7 +26,7 @@ In this chapter I will explore these two ideas, improved classification and reco
 
 
 
-\section{Generating images from natural language}
+\section{Generating images from Natural Language}
 \subsection{Aims}
 The experiment in this section demonstrates that having access to a second modality improves classification accuracy over the baseline accuracy of classification of either of the two individual modalities as well as how missing data can be reconstructed from a secondary modality.
 
@@ -38,9 +38,9 @@ This experiment utilises two datasets, UCU Arabic Spoken Digits (UCU) and MNIST 
 UCU is a dataset containing the 13 Mel Frequency Cepstrum Coefficients representing the audio of the digits 0 to 9 being said by 88 different speakers \cite{hammami2009tree,hammami2010improved}. It contains 8800 utterances (10 digits x 10 repetitions x 88 speakers). Audio was sampled at 11025Hz.
 
 \paragraph{Padding of Utterances}
-As utterances are not of a fixed length, it is necessary to pad the utterances to be equal length. The longest utterance in the dataset contains 93 samples. For ease of up and downsampling within the neural network, all uttereances are padded to be 100 samples long by appending zeros. Each sample is also padded to contain 16 features, the 13 MFCCs and 3 zeros to further facilitate up and down sampling\endnote{Up and down sampling is easier with even numbers of features and samples as we can half the size of the data using strided convolutions, s=(2,2), without worrying about integer division errors e.g. $5/2=2$ but $2\times2 \neq5$}.
+As utterances are not of a fixed length, it is necessary to pad the utterances to be equal length. The longest utterance in the dataset contains 93 samples. For ease of up and downsampling within the neural network, all uttereances are padded to be 100 samples long by appending zeros. Each sample is also padded to contain 16 features, the 13 Mel Frequency Cepstrum Coefficients (MFCCs) and 3 zeros to further facilitate up and down sampling\endnote{Up and down sampling is easier with even numbers of features and samples as we can half the size of the data using strided convolutions, s=(2,2), without worrying about integer division errors e.g. $5/2=2$ but $2\times2 \neq5$}.
 
-As I will be classifying the digits, it is necessary to check that padding the digits does not provide a cheat for this. As such, I analise the mean number of samples for each digit and their standard deviations as depicted in \autoref{fig:ucu_dig_length}. I then perform a linear regression on the number of samples to demonstrate that it is not possible to accurately predict a digits class given only the length of the utterance.
+As I will be classifying the digits, it is necessary to check that padding the digits does not provide a cheat for this. As such, I analyse the mean number of samples for each digit and their standard deviations as depicted in \autoref{fig:ucu_dig_length}. I then perform a linear regression on the number of samples to demonstrate that it is not possible to accurately predict a digit's class given only the length of the utterance.
 
 \begin{figure}
 \centering
@@ -92,7 +92,7 @@ As I will be classifying the digits, it is necessary to check that padding the d
 		\centering
 		\begin{tabular}{|c|c|c|}
 			\hline
-			Digit & Mean Length (samples) & Standard Deviation \\ \hline
+			\textbf{Digit} & \textbf{Mean Length (samples)} & \textbf{Standard Deviation} \\ \hline
 			0 & 39.66 & $\mypm 29.25$ \\ \hline
 			1 & 37.27 & $\mypm 25.58$ \\ \hline
 			2 & 43.11 & $\mypm 31.43$ \\ \hline
@@ -113,11 +113,11 @@ As I will be classifying the digits, it is necessary to check that padding the d
 Performing a linear regression on the number of samples for each digit versus its class, we get an accuracy of 6.18\% when classifying the test set.
 
 \subsubsection{MNIST Handwritten Digits}
-MNIST is a well known and ofte used dataset in the machine learning community. It contains 60000 training samples and 10000 test samples, evenly split between the digits 0 to 9. 
+MNIST is a well known and oft used dataset in the machine learning community. It contains 60000 training samples and 10000 test samples, evenly split between the digits 0 to 9. 
 Each digit is presented as a grey-scale, 28x28 pixel image \cite{lecun1998mnist}. 
 
 \subsection{Problem Description}
-The experiments with these datasets will explore two problems, classification and bidirectional symbol grounding. 
+The experiments with these datasets will explore two problems: classification and bidirectional symbol grounding. 
 
 \subsubsection{Classification}
 Each of the utterances and images from the UCU and MNIST datasets are classified as being a numeric digit, 0 to 9. By combining both datasets, we can explore whether the addition of a second modality enhances overall classification accuracy.
@@ -192,7 +192,7 @@ To generate the baseline classification accuracies for both the UCU and MNIST da
 		\centering
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			Block & Layer & Type & Neurons & Kernel & Strides & Activation  \\ \hline
+			\textbf{Block} & \textbf{Layer} & \textbf{Type} & \textbf{Neurons} & \textbf{Kernel} & \textbf{Strides} & \textbf{Activation}  \\ \hline
 			\multirow{4}{*}{Encoder} & 1	&	2D Conv & 32 & (3,3) & (1,1)  & Relu\\ \cline{2-7}
 			& 2	&	2D Conv & 64 & (3,3) & (2,2) & Relu \\ \cline{2-7}
 			& 3	&	2D Conv & 64 & (3,3) & (2,2) & Relu \\ \cline{2-7}
@@ -213,7 +213,7 @@ To generate the baseline classification accuracies for both the UCU and MNIST da
 		\centering
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			Block & Layer & Type & Neurons & Kernel & Strides & Activation  \\ \hline
+			\textbf{Block} & \textbf{Layer} & \textbf{Type} & \textbf{Neurons} & \textbf{Kernel} & \textbf{Strides} & \textbf{Activation}  \\ \hline
 			\multirow{5}{*}{Encoder} & 1	&	2D Conv & 32 & (3,3) & (1,1)  & Relu\\ \cline{2-7}
 			& 2	&	2D Conv & 64 & (3,3) & (2,2)  & Relu\\ \cline{2-7}
 			& 3 	&	Dropout p=0.25 &	 & 	     &        & \\ \cline{2-7}
@@ -240,7 +240,7 @@ By combining the two autoencoders described in \autoref{tab:MNIST_AE_description
 		\centering
 		\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
-			Block & Layer & Type & Neurons & Kernel & Strides & Activation \\ \hline
+			\textbf{Block} & \textbf{Layer} & \textbf{Type} & \textbf{Neurons} & \textbf{Kernel} & \textbf{Strides} & \textbf{Activation}  \\ \hline
 			\multirow{2}{*}{Image} & 1i	&	2D Conv & 32 & (3,3) & (1,1) & Relu \\ \cline{2-7}
 			& 2i	&	2D Conv & 64 & (3,3) & (2,2) & Relu \\ \cline{2-7}
 			\multirow{2}{*}{Encoder}& 3i	&	2D Conv & 64 & (3,3) & (2,2) & Relu \\ \cline{2-7}
@@ -290,7 +290,7 @@ All results reported here are the mean of a four-fold cross validation. Each tra
 	\centering
 		\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		Model & Training & Im MSE & MFCC MSE &  Acc \\ \hline
+		\textbf{Model} & \textbf{Training} & \textbf{Im MSE} & \textbf{MFCC MSE} &  \textbf{Acc} \\ \hline
 				Image AE & Im & 	\textbf{0.0027}	&	       			& 	0.9883			\\ \hline		
 				MFCC AE & MFCC & 		    		& 	\textbf{0.0113} &	0.9832			\\ \hline		
 \multirow{2}{*}{Add MAE} & Bi & 	0.0030			&	0.0401			&	0.9967			\\ \cline{2-5}
@@ -299,7 +299,7 @@ All results reported here are the mean of a four-fold cross validation. Each tra
 \multirow{2}{*}{Concat MAE} & Bi & 0.0031			&	0.0423			&	0.9945			\\ \cline{2-5}		
 							 & RD & 0.0030			&	0.0426			&	0.9986			\\ \hline
 		\end{tabular}
-		\caption{Mean Squared Errors for the Bimodal testing condition.}
+		\caption{Mean Squared Errors for the Bimodal testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures.}
 		\label{tab:mnist_ucu_bi_res}
 
 \end{table}
@@ -310,7 +310,7 @@ In \autoref{tab:mnist_ucu_bi_res} it can be seen that both concatenate and addit
 	\centering
 		\begin{tabular}{|c|c|c|c|}
 		\hline
-		Model & Training &  MFCC MSE &  Acc \\ \hline
+		\textbf{Model} & \textbf{Training} &  \textbf{MFCC MSE} &  \textbf{Acc} \\ \hline
 		Image AE & Im 		&  		    			& \textbf{0.9883}	\\ \hline		
 \multirow{2}{*}{Add MAE} & Bi & 	0.1641			& 0.4501 			\\ \cline{2-4}
 						  & RD & \textbf{0.0455}	& 0.9834 			\\ \hline	
@@ -318,17 +318,17 @@ In \autoref{tab:mnist_ucu_bi_res} it can be seen that both concatenate and addit
 \multirow{2}{*}{Concat MAE} & Bi & 	0.2029		&	0.3496 			\\ \cline{2-4}		
 							 & RD & 	0.0737		&	0.9834 			\\ \hline
 		\end{tabular}
-		\caption{Mean Squared Errors for the Image Only testing condition.}
+		\caption{Mean Squared Errors for the Image Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures.}
 		\label{tab:mnist_ucu_im_res}
 
 \end{table}
 
-In comparison to the results shown in \autoref{tab:mnist_ucu_bi_res}, the results in \autoref{tab:mnist_ucu_im_res} show that the MAEs trained using the Bi training procedure do not generalise well when only a single input modality is available. Where as the MAEs trained using the RD training procedure perform almost as well as the baseline model. 
+In comparison to the results shown in \autoref{tab:mnist_ucu_bi_res}, the results in \autoref{tab:mnist_ucu_im_res} show that the MAEs trained using the Bi training procedure do not generalise well when only a single input modality is available. Whereas the MAEs trained using the RD training procedure perform almost as well as the baseline model. 
 \begin{table}[h]
 	\centering
 		\begin{tabular}{|c|c|c|c|}
 		\hline
-		Model & Training & Im MSE &  Acc \\ \hline
+		\textbf{Model} & \textbf{Training} & \textbf{Im MSE} &  \textbf{Acc} \\ \hline
 				
 				MFCC AE & MFCC & 					& 	\textbf{0.9832}	\\ \hline		
 \multirow{2}{*}{Add MAE} & Bi & 	0.1138			& 	0.9624 			\\ \cline{2-4}
@@ -337,12 +337,12 @@ In comparison to the results shown in \autoref{tab:mnist_ucu_bi_res}, the result
 \multirow{2}{*}{Concat MAE} & Bi &	0.1138			&	0.9455			\\ \cline{2-4}		
 							 & RD & \textbf{0.0554}	& 	0.9827 			\\ \hline
 		\end{tabular}
-		\caption{Mean Squared Errors for the MFCC Only testing condition.}
+		\caption{Mean Squared Errors for the MFCC Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures. }
 		\label{tab:mnist_ucu_mfcc_res}
 
 \end{table}
 
-Similarly, the reuslts in \autoref{tab:mnist_ucu_mfcc_res} show that the behaviour of the MAEs is very similar under the RD training procedure regardless of whether it is MFCCs or images provided as input. However, the classification accuracy remains reasonably good under the Bi training procedure when only MFCCs are present. 
+Similarly, the results in \autoref{tab:mnist_ucu_mfcc_res} show that the behaviour of the MAEs is very similar under the RD training procedure whether it is MFCCs or images provided as input. However, the classification accuracy remains reasonably good under the Bi training procedure when only MFCCs are present. 
 
 \subsubsection{Reconstruction Results}
 
@@ -373,7 +373,7 @@ In \autoref{fig:mnistDigits} examples of reconstructed digits generated by both 
 \subsubsection{Discussion of Classification Results}
 \autoref{tab:mnist_ucu_bi_res} shows that both the \textit{Add} and \textit{Concat} MAEs have better classification accuracy than the baseline, unimodal models. However, it is not clear that there is a difference in between the two training procedures, Bi and RD.
 
-The difference between the two training procedures becomes clear in \autoref{tab:mnist_ucu_im_res} where it can be seen that the MAEs trained using the Bi training procedure have much worse classification rates when presented with only images as input. Models perform less than half as well as the baseline model, 0.4501 (\textit{Add}) and 0.3496(\textbf{Concat}) versus 0.9832 for the baseline image autoencoder.
+The difference between the two training procedures becomes clear in \autoref{tab:mnist_ucu_im_res} where it can be seen that the MAEs trained using the Bi training procedure have lower classification rates when presented with only images as input. Models perform less than half as well as the baseline model, 0.4501 (\textit{Add}) and 0.3496 (\textbf{Concat}) versus 0.9832 for the baseline image autoencoder.
 
 There is a trade off between unimodal accuracy and mulitmodal accuracy in the RD training procedure MAEs. Whilst both the \textit{Add} and \textit{Concat} MAEs outperform the baseline models in the Bimodal test condition, they have slightly worse performance when tested with either images or MFCCs only. For example, the best performance is given by the \textit{Add} MAE under the RD training procedure when both images and MFCCs are present as inputs, with an accuracy of 0.9993. However, if one of the modalities is removed, the accuracy drops to 0.9834 and 0.9789 for Image Only and MFCC Only testing respectively. Comparing this to the baseline unimodal models, we see classification accuracies of 0.9883 and 0.9832 for image and MFCC autoencoders respectively. 
 
@@ -382,7 +382,7 @@ There is a drop of 0.0049 and 0.0043 for Image Only and MFCC Only testing using 
 Specifically, the improvement of Bimodal classification is 2.24 times larger than the decrease in performance when only images are available ($0.011 / 0.0049 = 2.24$). Comparing to the MFCC baseline, the Bimodal performance improvement is 3.74 times larger than the decrease in performance when only MFCCs are available.
 
 \subsubsection{Discussion of Reconstruction Results}
-Observing \autoref{tab:mnist_ucu_bi_res}, \autoref{tab:mnist_ucu_im_res} and \autoref{tab:mnist_ucu_mfcc_res} it can be seen that different models have different reconstruction errors (Mean Squared Error). Whilst all MAE models had higher reconstruction errors than the baseline models, this is to be expected. The MAE models are trading off between representing each modality well, whilst the unimodal autoencoders that give the baseline numbers can use their full capacity to minimise the reconstruction error of their modaility as they do not have to reconstruct the second modality. 
+Observing \autoref{tab:mnist_ucu_bi_res}, \autoref{tab:mnist_ucu_im_res} and \autoref{tab:mnist_ucu_mfcc_res} it can be seen that different models have different reconstruction errors (Mean Squared Error). Whilst all MAE models had higher reconstruction errors than the baseline models, this is to be expected. The MAE models are trading off between representing each modality well, whilst the unimodal autoencoders that give the baseline numbers can use their full capacity to minimise the reconstruction error of their modaility, as they do not have to reconstruct the second modality. 
 
 That being said, the image reconstruction error, is comparable across all MAE models, approximately 0.0031, (see table \autoref{tab:mnist_ucu_bi_res} and is very close to the baseline of 0.0027 under the Bimodal testing condition (i.e. when the images to be reconstructed are available as input). Further to this, the image reconstruction error for the MFCC Only testing condition is still small, though an order of magnitude worse, for the MAEs trained using the RD procedure.
 

@@ -23,11 +23,47 @@ A.~Krizhevsky, I.~Sutskever, and G.~E.~Hinton.
   networks,} .
 \newblock In {\em Advances in neural information processing systems} 10972012.
 
-\bibitem{iandola2016squeezenet}
-F.~N.~Iandola, S.~Han, M.~W.~Moskewicz, K.~Ashraf, W.~J.~Dally, and K.~Keutzer,
-{\em SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and< 0.5 MB
-  model size,}
-arXiv preprint arXiv:1602.07360(2016).
+\bibitem{ma2004facial}
+L.~Ma and K.~Khorasani,
+{\em Facial expression recognition using constructive feedforward neural
+  networks,}
+IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics) {\bf
+  34} (2004) 1588.
+
+\bibitem{levi2015emotion}
+G.~Levi and T.~Hassner.
+\newblock {\em Emotion recognition in the wild via convolutional neural
+  networks and mapped binary patterns,} .
+\newblock In {\em Proceedings of the 2015 ACM on international conference on
+  multimodal interaction} 503. ACM2015.
+
+\bibitem{kussul2017deep}
+N.~Kussul, M.~Lavreniuk, S.~Skakun, and A.~Shelestov,
+{\em Deep learning classification of land cover and crop types using remote
+  sensing data,}
+IEEE Geoscience and Remote Sensing Letters {\bf 14} (2017) 778.
+
+\bibitem{qi2017pointnet}
+C.~R.~Qi, H.~Su, K.~Mo, and L.~J.~Guibas.
+\newblock {\em Pointnet: Deep learning on point sets for 3d classification and
+  segmentation,} .
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition} 6522017.
+
+\bibitem{simonyan2014very}
+K.~Simonyan and A.~Zisserman,
+{\em Very deep convolutional networks for large-scale image recognition,}
+arXiv preprint arXiv:1409.1556(2014).
+
+\bibitem{springenberg2014striving}
+J.~T.~Springenberg, A.~Dosovitskiy, T.~Brox, and M.~Riedmiller,
+{\em Striving for simplicity: The all convolutional net,}
+arXiv preprint arXiv:1412.6806(2014).
+
+\bibitem{srivastava2014dropout}
+N.~Srivastava, G.~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~Salakhutdinov,
+{\em Dropout: a simple way to prevent neural networks from overfitting,}
+The journal of machine learning research {\bf 15} (2014) 1929.
 
 \bibitem{he2016deep}
 K.~He, X.~Zhang, S.~Ren, and J.~Sun.
@@ -35,113 +71,37 @@ K.~He, X.~Zhang, S.~Ren, and J.~Sun.
 \newblock In {\em Proceedings of the IEEE conference on computer vision and
   pattern recognition} 7702016.
 
-\bibitem{zoph2018learning}
-B.~Zoph, V.~Vasudevan, J.~Shlens, and Q.~V.~Le.
-\newblock {\em Learning transferable architectures for scalable image
-  recognition,} .
+\bibitem{hochreiter1998vanishing}
+S.~Hochreiter,
+{\em The vanishing gradient problem during learning recurrent neural nets and
+  problem solutions,}
+International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
+  {\bf 6} (1998) 107.
+
+\bibitem{szegedy2015going}
+C.~Szegedy, W.~Liu, Y.~Jia, P.~Sermanet, S.~Reed, D.~Anguelov, D.~Erhan,
+  V.~Vanhoucke, and A.~Rabinovich.
+\newblock {\em Going deeper with convolutions,} .
 \newblock In {\em Proceedings of the IEEE conference on computer vision and
-  pattern recognition} 86972018.
+  pattern recognition}~12015.
 
-\bibitem{amodei2016deep}
-D.~Amodei, S.~Ananthanarayanan, R.~Anubhai, J.~Bai, E.~Battenberg, C.~Case,
-  J.~Casper, B.~Catanzaro, Q.~Cheng, G.~Chen, and ~others.
-\newblock {\em Deep speech 2: End-to-end speech recognition in english and
-  mandarin,} .
-\newblock In {\em International conference on machine learning} 1732016.
+\bibitem{szegedy2016rethinking}
+C.~Szegedy, V.~Vanhoucke, S.~Ioffe, J.~Shlens, and Z.~Wojna.
+\newblock {\em Rethinking the inception architecture for computer vision,} .
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition} 28182016.
 
-\bibitem{graves2013speech}
-A.~Graves, A.-r.~Mohamed, and G.~Hinton.
-\newblock {\em Speech recognition with deep recurrent neural networks,} .
-\newblock In {\em Acoustics, speech and signal processing (icassp), 2013 ieee
-  international conference on} 6645. IEEE2013.
-
-\bibitem{mikolov2013distributed}
-T.~Mikolov, I.~Sutskever, K.~Chen, G.~S.~Corrado, and J.~Dean.
-\newblock {\em Distributed representations of words and phrases and their
-  compositionality,} .
-\newblock In {\em Advances in neural information processing systems} 31112013.
-
-\bibitem{mikolov2013efficient}
-T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean,
-{\em Efficient estimation of word representations in vector space,}
-arXiv preprint arXiv:1301.3781(2013).
-
-\bibitem{mikolov2013linguistic}
-T.~Mikolov, W.-t.~Yih, and G.~Zweig.
-\newblock {\em Linguistic regularities in continuous space word
-  representations,} .
-\newblock In {\em Proceedings of the 2013 Conference of the North American
-  Chapter of the Association for Computational Linguistics: Human Language
-  Technologies} 7462013.
-
-\bibitem{chen2016zero}
-Y.-N.~Chen, D.~Hakkani-T{\"u}r, and X.~He.
-\newblock {\em Zero-shot learning of intent embeddings for expansion by
-  convolutional deep structured semantic models,} .
-\newblock In {\em 2016 IEEE International Conference on Acoustics, Speech and
-  Signal Processing (ICASSP)} 6045. IEEE2016.
-
-\bibitem{cho2014learning}
-K.~Cho, B.~Van~Merri{\"e}nboer, C.~Gulcehre, D.~Bahdanau, F.~Bougares,
-  H.~Schwenk, and Y.~Bengio,
-{\em Learning phrase representations using RNN encoder-decoder for statistical
-  machine translation,}
-arXiv preprint arXiv:1406.1078(2014).
-
-\bibitem{vinyals2015show}
-O.~Vinyals, A.~Toshev, S.~Bengio, and D.~Erhan.
-\newblock {\em Show and tell: A neural image caption generator,} .
-\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
-  Pattern Recognition} 31562015.
-
-\bibitem{ngiam2011multimodal}
-J.~Ngiam, A.~Khosla, M.~Kim, J.~Nam, H.~Lee, and A.~Y.~Ng.
-\newblock {\em Multimodal deep learning,} .
-\newblock In {\em Proceedings of the 28th international conference on machine
-  learning (ICML-11)} 6892011.
-
-\bibitem{lillicrap2015continuous}
-T.~P.~Lillicrap, J.~J.~Hunt, A.~Pritzel, N.~Heess, T.~Erez, Y.~Tassa,
-  D.~Silver, and D.~Wierstra,
-{\em Continuous control with deep reinforcement learning,}
-arXiv preprint arXiv:1509.02971(2015).
+\bibitem{szegedy2017inception}
+C.~Szegedy, S.~Ioffe, V.~Vanhoucke, and A.~A.~Alemi.
+\newblock {\em Inception-v4, inception-resnet and the impact of residual
+  connections on learning,} .
+\newblock In {\em Thirty-First AAAI Conference on Artificial Intelligence}2017.
 
 \bibitem{vinyals2019alphastar}
 O.~Vinyals, I.~Babuschkin, J.~Chung, M.~Mathieu, M.~Jaderberg, W.~M.~Czarnecki,
   A.~Dudzik, A.~Huang, P.~Georgiev, R.~Powell, and ~others,
 {\em AlphaStar: Mastering the real-time strategy game StarCraft II,}
 DeepMind Blog(2019).
-
-\bibitem{mnih2013playing}
-V.~Mnih, K.~Kavukcuoglu, D.~Silver, A.~Graves, I.~Antonoglou, D.~Wierstra, and
-  M.~Riedmiller,
-{\em Playing atari with deep reinforcement learning,}
-arXiv preprint arXiv:1312.5602(2013).
-
-\bibitem{azar2019world}
-M.~G.~Azar, B.~Piot, B.~A.~Pires, J.-B.~Grill, F.~Altch{\'e}, and R.~Munos,
-{\em World Discovery Models,}
-arXiv preprint arXiv:1902.07685(2019).
-
-\bibitem{mahesh2018probabilistic}
-A.~Mahesh, T.~O'Brien, W.~D.~Collins, M.~F.~Wehner, M.~Prabhat, K.~Kashinath,
-  and M.~Mudigonda.
-\newblock {\em Probabilistic detection of extreme weather using deep learning
-  methods,} .
-\newblock In {\em AGU Fall Meeting Abstracts}2018.
-
-\bibitem{bouktif2018optimal}
-S.~Bouktif, A.~Fiaz, A.~Ouni, and M.~Serhani,
-{\em Optimal deep learning lstm model for electric load forecasting using
-  feature selection and genetic algorithm: Comparison with machine learning
-  approaches,}
-Energies {\bf 11} (2018) 1636.
-
-\bibitem{fischer2018deep}
-T.~Fischer and C.~Krauss,
-{\em Deep learning with long short-term memory networks for financial market
-  predictions,}
-European Journal of Operational Research {\bf 270} (2018) 654.
 
 \bibitem{lecun1998mnist}
 Y.~LeCun,
@@ -197,6 +157,12 @@ A.~G.~Samuel,
 {\em Lexical activation produces potent phonemic percepts,}
 Cognitive psychology {\bf 32} (1997)~97.
 
+\bibitem{ngiam2011multimodal}
+J.~Ngiam, A.~Khosla, M.~Kim, J.~Nam, H.~Lee, and A.~Y.~Ng.
+\newblock {\em Multimodal deep learning,} .
+\newblock In {\em Proceedings of the 28th international conference on machine
+  learning (ICML-11)} 6892011.
+
 \bibitem{hammami2009tree}
 N.~Hammami and M.~Sellam.
 \newblock {\em Tree distribution classifier for automatic spoken arabic digit
@@ -209,6 +175,17 @@ N.~Hammami and M.~Bedda.
 \newblock {\em Improved tree model for arabic speech recognition,} .
 \newblock In {\em 2010 3rd International Conference on Computer Science and
   Information Technology}volume~5 521. IEEE2010.
+
+\bibitem{mikolov2013distributed}
+T.~Mikolov, I.~Sutskever, K.~Chen, G.~S.~Corrado, and J.~Dean.
+\newblock {\em Distributed representations of words and phrases and their
+  compositionality,} .
+\newblock In {\em Advances in neural information processing systems} 31112013.
+
+\bibitem{mikolov2013efficient}
+T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean,
+{\em Efficient estimation of word representations in vector space,}
+arXiv preprint arXiv:1301.3781(2013).
 
 \bibitem{schillingmann2009towards}
 L.~Schillingmann, B.~Wrede, and K.~Rohlfing.

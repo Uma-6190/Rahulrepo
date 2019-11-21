@@ -43,50 +43,49 @@
 \BOOKMARK [1][-]{section.86}{Autoencoders}{chapter.36}% 43
 \BOOKMARK [2][-]{subsection.88}{Variational Autoencoders}{section.86}% 44
 \BOOKMARK [2][-]{subsection.89}{Multimodal Autoencoders}{section.86}% 45
-\BOOKMARK [1][-]{section.91}{Summary}{chapter.36}% 46
-\BOOKMARK [0][-]{chapter.92}{Sensory Redundancy: Are two heads better than one?}{}% 47
-\BOOKMARK [1][-]{section.93}{Why have one sensor when two are better?}{chapter.92}% 48
-\BOOKMARK [1][-]{section.94}{Generating images from natural language}{chapter.92}% 49
-\BOOKMARK [2][-]{subsection.95}{Aims}{section.94}% 50
-\BOOKMARK [2][-]{subsection.96}{UCU Arabic Spoken Digits and MNIST}{section.94}% 51
-\BOOKMARK [2][-]{subsection.102}{Problem Description}{section.94}% 52
-\BOOKMARK [2][-]{subsection.105}{Experiment Details}{section.94}% 53
-\BOOKMARK [2][-]{subsection.123}{Results}{section.94}% 54
-\BOOKMARK [2][-]{subsection.131}{Discussion}{section.94}% 55
-\BOOKMARK [1][-]{section.138}{Conclusion}{chapter.92}% 56
-\BOOKMARK [0][-]{chapter.139}{Magical Vectors and Where to Find Them}{}% 57
-\BOOKMARK [1][-]{section.140}{ANN Latent space: the Final Frontier}{chapter.139}% 58
-\BOOKMARK [1][-]{section.142}{Vector Arithmetic}{chapter.139}% 59
-\BOOKMARK [1][-]{section.145}{Artificial Shapes Dataset}{chapter.139}% 60
-\BOOKMARK [2][-]{subsection.146}{Dataset Description}{section.145}% 61
-\BOOKMARK [2][-]{subsection.148}{Problem Description}{section.145}% 62
-\BOOKMARK [2][-]{subsection.149}{Network Description}{section.145}% 63
-\BOOKMARK [1][-]{section.150}{Experiments with the ArtS Dataset}{chapter.139}% 64
-\BOOKMARK [2][-]{subsection.151}{Experiment 1}{section.150}% 65
-\BOOKMARK [2][-]{subsection.161}{Experiment 2}{section.150}% 66
-\BOOKMARK [2][-]{subsection.174}{Experiment 3}{section.150}% 67
-\BOOKMARK [2][-]{subsection.187}{Experiment 4}{section.150}% 68
-\BOOKMARK [2][-]{subsection.200}{Experiment 5}{section.150}% 69
-\BOOKMARK [1][-]{section.209}{Conclusion}{chapter.139}% 70
-\BOOKMARK [0][-]{chapter.213}{Bidirectional Grounding of Real Data}{}% 71
-\BOOKMARK [1][-]{section.214}{The Difficulties of Real Data}{chapter.213}% 72
-\BOOKMARK [1][-]{section.215}{Acoustic Packaging}{chapter.213}% 73
-\BOOKMARK [1][-]{section.217}{Real Shapes Dataset}{chapter.213}% 74
-\BOOKMARK [2][-]{subsection.219}{Dataset Description}{section.217}% 75
-\BOOKMARK [2][-]{subsection.220}{Problem Description}{section.217}% 76
-\BOOKMARK [2][-]{subsection.221}{Network Description}{section.217}% 77
-\BOOKMARK [1][-]{section.222}{Experiments with the Reshape dataset}{chapter.213}% 78
-\BOOKMARK [2][-]{subsection.227}{Results}{section.222}% 79
-\BOOKMARK [2][-]{subsection.232}{Discussion}{section.222}% 80
-\BOOKMARK [0][-]{chapter.233}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 81
-\BOOKMARK [1][-]{section.234}{Summary of important points}{chapter.233}% 82
-\BOOKMARK [1][-]{section.235}{Conclusion}{chapter.233}% 83
-\BOOKMARK [0][-]{chapter.236}{Future Work}{}% 84
-\BOOKMARK [1][-]{section.237}{Where do we go now?}{chapter.236}% 85
-\BOOKMARK [2][-]{subsection.238}{More Sensors}{section.237}% 86
-\BOOKMARK [2][-]{subsection.239}{Better Sensors}{section.237}% 87
-\BOOKMARK [2][-]{subsection.240}{Swarm Robots and the Cloud}{section.237}% 88
-\BOOKMARK [0][-]{appendix.241}{Appendix A Primer on Artifical Neural Networks}{}% 89
-\BOOKMARK [0][-]{appendix.247}{Appendix Sensory Redundancy}{}% 90
-\BOOKMARK [0][-]{appendix.249}{Appendix Magical Vectors and Where to Find Them}{}% 91
-\BOOKMARK [0][-]{appendix*.253}{Bibliography}{}% 92
+\BOOKMARK [0][-]{chapter.91}{Sensory Redundancy: Are two heads better than one?}{}% 46
+\BOOKMARK [1][-]{section.92}{Why have one sensor when two are better?}{chapter.91}% 47
+\BOOKMARK [1][-]{section.93}{Generating images from Natural Language}{chapter.91}% 48
+\BOOKMARK [2][-]{subsection.94}{Aims}{section.93}% 49
+\BOOKMARK [2][-]{subsection.95}{UCU Arabic Spoken Digits and MNIST}{section.93}% 50
+\BOOKMARK [2][-]{subsection.101}{Problem Description}{section.93}% 51
+\BOOKMARK [2][-]{subsection.104}{Experiment Details}{section.93}% 52
+\BOOKMARK [2][-]{subsection.122}{Results}{section.93}% 53
+\BOOKMARK [2][-]{subsection.130}{Discussion}{section.93}% 54
+\BOOKMARK [1][-]{section.137}{Conclusion}{chapter.91}% 55
+\BOOKMARK [0][-]{chapter.138}{Magical Vectors and Where to Find Them}{}% 56
+\BOOKMARK [1][-]{section.139}{ANN Latent space: the Final Frontier}{chapter.138}% 57
+\BOOKMARK [1][-]{section.141}{Vector Arithmetic}{chapter.138}% 58
+\BOOKMARK [1][-]{section.144}{Artificial Shapes Dataset}{chapter.138}% 59
+\BOOKMARK [2][-]{subsection.145}{Dataset Description}{section.144}% 60
+\BOOKMARK [2][-]{subsection.147}{Problem Description}{section.144}% 61
+\BOOKMARK [2][-]{subsection.148}{Network Description}{section.144}% 62
+\BOOKMARK [1][-]{section.149}{Experiments with the ArtS Dataset}{chapter.138}% 63
+\BOOKMARK [2][-]{subsection.150}{Experiment 1}{section.149}% 64
+\BOOKMARK [2][-]{subsection.160}{Experiment 2}{section.149}% 65
+\BOOKMARK [2][-]{subsection.173}{Experiment 3}{section.149}% 66
+\BOOKMARK [2][-]{subsection.186}{Experiment 4}{section.149}% 67
+\BOOKMARK [2][-]{subsection.199}{Experiment 5}{section.149}% 68
+\BOOKMARK [1][-]{section.208}{Conclusion}{chapter.138}% 69
+\BOOKMARK [0][-]{chapter.212}{Bidirectional Grounding of Real Data}{}% 70
+\BOOKMARK [1][-]{section.213}{The Difficulties of Real Data}{chapter.212}% 71
+\BOOKMARK [1][-]{section.214}{Acoustic Packaging}{chapter.212}% 72
+\BOOKMARK [1][-]{section.216}{Real Shapes Dataset}{chapter.212}% 73
+\BOOKMARK [2][-]{subsection.218}{Dataset Description}{section.216}% 74
+\BOOKMARK [2][-]{subsection.219}{Problem Description}{section.216}% 75
+\BOOKMARK [2][-]{subsection.220}{Network Description}{section.216}% 76
+\BOOKMARK [1][-]{section.221}{Experiments with the Reshape dataset}{chapter.212}% 77
+\BOOKMARK [2][-]{subsection.226}{Results}{section.221}% 78
+\BOOKMARK [2][-]{subsection.231}{Discussion}{section.221}% 79
+\BOOKMARK [0][-]{chapter.232}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 80
+\BOOKMARK [1][-]{section.233}{Summary of important points}{chapter.232}% 81
+\BOOKMARK [1][-]{section.234}{Conclusion}{chapter.232}% 82
+\BOOKMARK [0][-]{chapter.235}{Future Work}{}% 83
+\BOOKMARK [1][-]{section.236}{Where do we go now?}{chapter.235}% 84
+\BOOKMARK [2][-]{subsection.237}{More Sensors}{section.236}% 85
+\BOOKMARK [2][-]{subsection.238}{Better Sensors}{section.236}% 86
+\BOOKMARK [2][-]{subsection.239}{Swarm Robots and the Cloud}{section.236}% 87
+\BOOKMARK [0][-]{appendix.240}{Appendix A Primer on Artifical Neural Networks}{}% 88
+\BOOKMARK [0][-]{appendix.246}{Appendix Sensory Redundancy}{}% 89
+\BOOKMARK [0][-]{appendix.248}{Appendix Magical Vectors and Where to Find Them}{}% 90
+\BOOKMARK [0][-]{appendix*.252}{Bibliography}{}% 91

@@ -7,9 +7,9 @@
 \lhead{Chapter 5. \emph{Magical Vectors and Where to Find Them}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 \section{ANN Latent space: the Final Frontier}
-One of the most interesting properties of neural networks is the latent embeddings they learn which are abstract representations of the input data. The embedding of a given data sample, is the activation of the neural network at a specific layer within the network. In the case of MAEs this is the layer after which the different modalities have been merged.
+One of the most interesting properties of neural networks is the latent embeddings they learn which are abstract representations of the input data. The embedding of a given data sample is the activation of the neural network at a specific layer within the network. In the case of MAEs this is the layer after which the different modalities have been merged.
 
-Normally when working with neural networks we are very interested in the output of the neural network, for example, does the network correctly classify an image and how confident it is - this is the whole reason for using cross-entropy losses for training. However, in my case, I am more interested in how the neural network represents what it has learnt.
+Normally when working with neural networks we are interested in the output of the neural network, for example, does the network correctly classify an image and how confident it is; this is the whole reason for using cross-entropy losses for training. However, in my case, I am more interested in how the neural network represents what it has learnt.
 
 In \cite{mikolov2013distributed} and \cite{mikolov2013efficient}, it is demonstrated that skipgram models trained on large corpuses develop word embeddings whose embeddings in the latent embedding space tell us something about the relational meanings of the words the embeddings belong to. For example questions such as \textit{``King is to man as woman is to...''} can be solved with some vector arithmetic on these embeddings as shown in \autoref{eqn:mikolov}.
 \begin{equation}
@@ -84,7 +84,7 @@ Bottom Right (BR)& (42,22)\\ \hline
 \label{tab:Arts_desc} 
 \end{table}
 
-To help differentiate between words, visual attributes and the abstract concepts they represent the following notation will be used: the words of the descriptions will be written using \textsc{small capitals}, visual attributes (shapes, colours, sizes and positions) are written using \textit{capitalised italics} any other times words which could appear in the description of an image from ArtS that are not formatted as either \textsc{small capitals} or \textit{capitalised italics} are normal uses of these words and do not refer to either descriptions or visual attributes.
+To help differentiate between words, visual attributes, and the abstract concepts they represent the following notation will be used: the words of the descriptions will be written using \textsc{small capitals}, visual attributes (shapes, colours, sizes and positions) are written using \textit{capitalised italics}. Any other times words which could appear in the description of an image from ArtS that are not formatted as either \textsc{small capitals} or \textit{capitalised italics} are normal uses of these words and do not refer to either descriptions or visual attributes.
 For example the word ``blue'' from a description will appear as \textsc{blue} and the colour ``blue'' will appear as \textit{Blue}. 
 
 
@@ -102,7 +102,7 @@ Further to this, I will demonstrate that once trained, the neural network can in
 
 
 \subsection{Network Description}
-The overall structure of the neural network used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description} in \autoref{appendix:app5} gives the specific details on each of the layers of the network. Additionally, batchnormalisation is used between beach convolution layer.
+The overall structure of the neural network used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description} in \autoref{appendix:app5} gives the specific details on each of the layers of the network. Additionally, batchnormalisation is used between each convolution layer.
 
 
 
@@ -112,7 +112,7 @@ For each of the following experiments I will test the MAE in three ways, similar
 
 Due to the complexity of ArtS and the variety of factors which can be explored with it, I will perform 5 sets of experiments, each using different subsets of the dataset. All experiments will make use of all 3 shapes, but different numbers of colours, sizes and positions will be used.
 
-Each experiment is four fold cross validated using randomly selected training data and weight initialisations.
+Each experiment is four fold cross validated using randomly selected training data and weight initialisations these will be referred to as runs A-D.
 
 \subsection{Experiment 1}
 The first experiment will utilise 3 colours, 3 positions and 1 size as shown in \autoref{tab:exp1_data}. The aim of this experiment is to find the best size for the embedding layer. I wish to find a number of filters which minimises the reconstruction loss for both the images and descriptions under all testing conditions. Futher to this I also wish to find an embedding size which allows for the accurate grounding of all words in the dataset. For example, if the MAE is given only the word \textsc{Blue} I want it to generate a \textit{Blue} image, or given the word \textsc{Triangle} an image of a \textit{Triangle}. 
@@ -260,7 +260,7 @@ The affect of increasing the embedding size is mostly to improve the reconstruct
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Size & 	Bimodal	 & 	Image Only	& 	Words Only \\ \hline
+	\textbf{Size} & 	\textbf{Bimodal}	 & 	\textbf{Image Only}	& 	\textbf{Words Only} \\ \hline
 8	&	9.17	$\mypm$	0.58	&	9.26	$\mypm$	0.76	&	9.70	$\mypm$	0.67	\\ \hline
 40	&	8.33	$\mypm$	0.14	&	7.91	$\mypm$	0.14	&	8.59	$\mypm$	0.13	\\ \hline
 72	&	8.09	$\mypm$	0.16	&	7.64	$\mypm$	0.16	&	8.40	$\mypm$	0.14	\\ \hline
@@ -273,7 +273,7 @@ The affect of increasing the embedding size is mostly to improve the reconstruct
 296	&	\textbf{6.80}	$\mypm$	1.11	&	6.15	$\mypm$	1.18	&	8.64	$\mypm$	0.27	\\ \hline
 
 	\end{tabular}
-\caption{Experiment 1: Total MSE for different embedding sizes for the three testing conditions. An Embedding Size of 200 neurons provides the minimum reconstruction error. (All values are $\times10^{-3}$)}
+\caption{Experiment 1: Total MSE for different embedding sizes for the three testing conditions. An Embedding Size of 200 neurons provides the minimum reconstruction error. (All values are $\times10^{-3}$.)}
 \label{tab:res331}
 \end{table}
 
@@ -311,7 +311,7 @@ Given how well images can be generated from full descriptions, it is unsurpising
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.75\textwidth]{Figs/shapes/shapes331.png}
-\caption{Experiment 1, runs A-D:  Images generated of each shape for different sizes of embedding.}
+\caption{Experiment 1, runs A-D:  Images generated from shape names (\textsc{Circle, Rectangle, Triangle}) for different sizes of embedding.}
 \label{fig:331shapes}
 \end{figure}
 
@@ -473,7 +473,7 @@ Comparing this to the results of experiment 1, where 200 neurons was the best em
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Size & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+	\textbf{Size} & 	\textbf{Bimodal} & 	\textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 8	&	6.65	$\mypm$	0.20	&	6.68	$\mypm$	0.30	&	7.37	$\mypm$	0.30	\\ \hline
 40	&	5.38	$\mypm$	0.10	&	5.27	$\mypm$	0.30	&	5.66	$\mypm$	0.10	\\ \hline
 72	&	5.57	$\mypm$	0.50	&	6.67	$\mypm$	1.90	&	5.90	$\mypm$	0.50	\\ \hline
@@ -486,7 +486,7 @@ Comparing this to the results of experiment 1, where 200 neurons was the best em
 296	&	\textbf{4.41}	$\mypm$	0.10	&	\textbf{4.19}	$\mypm$	0.30	&	\textbf{5.44}	$\mypm$	0.10	\\ \hline
 
 	\end{tabular}
-\caption{Experiment 2:  Total MSE for different embedding sizes. An Embedding Size of 296 neurons provides the minimum reconstruction error. (All values are $\times10^{-3}$)}
+\caption{Experiment 2:  Total MSE for different embedding sizes. An Embedding Size of 296 neurons provides the minimum reconstruction error. (All values are $\times10^{-3}$.)}
 \label{tab:res333}
 \end{table}
 
@@ -508,7 +508,7 @@ There is also a clear releationship between the three sizes, shown by the genera
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.75\textwidth]{Figs/shapes/singlelabel333A.png}
-\caption{Experiment 2 run A: Images generated of each word for different embedding sizes.}
+\caption{Experiment 2 run A: Images generated of each word (\textsc{Circle, Rectangle, Triangle, Big, Medium, Small, Red, Green, Blue, Centre-Left, Centre-Centre, Centre-Right}) for different embedding sizes.}
 \label{fig:333single}
 \end{figure} 
 
@@ -545,7 +545,7 @@ Increasing the number of variable attributes in the dataset, i.e. adding the ext
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.4\textwidth]{Figs/shapes/shapes331v333.png}
+\includegraphics[width=0.5\textwidth]{Figs/shapes/shapes331v333.png}
 \caption{Images generated of each shape for different sizes of embedding using the MAEs trained in experiments 1 and 2 run A.}
 \label{fig:shapes333v331}
 \end{figure} %This issue could likely be solved by the addition of more examples per object.
@@ -608,13 +608,13 @@ Using the pretrained weights from experiment 1 as a starting point for experimen
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Initialisation & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+	\textbf{Initialisation} & 	\textbf{Bimodal} & \textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 	Random	&	\textbf{3.97}	$\mypm$	0.41	&	22.73	$\mypm$	35.14	&	\textbf{4.09}	$\mypm$	0.27\\ \hline
 	Exp 1 	&	5.29	$\mypm$	0.47	&	6.69	$\mypm$	3.48	&	5.78	$\mypm$	0.33	\\ \hline
 	Exp 2 	&	5.33	$\mypm$	0.31	&	\textbf{5.06}	$\mypm$	0.38	&	5.75	$\mypm$	0.24	\\ \hline
 
 	\end{tabular}
-\caption{Experiment 3: Total MSE for different weight initialisations. (All values are $\times10^{-3}$)}
+\caption{Experiment 3: Total MSE for different weight initialisations. (All values are $\times10^{-3}$.)}
 \label{tab:res339}
 \end{table}
 
@@ -631,7 +631,7 @@ It is not feasable to show every combination of shape, colour, size and position
 
 The addition of new positions has had an effect on the quality of the images generated from descriptions by the MAE. The images have become blurrier compared to images generated in previous experiments. However they are still easily recognisable as matching their descriptions.
 
-When only given a single word as input, as in \autoref{fig:339single}, the MAE is not able to correctly generate any of the shapes (\textit{Circle}, \textit{Rectangle},\textit{Triangle}). Unlike in experiment 2, where the words \textsc{Circle}, \textsc{Rectangle} and\textsc{Triangle} lead to the generation of visual attributes which match these words, in experiment 3 it is unclear that these visual attributes can be seen.
+When only given a single word as input, as in \autoref{fig:339single}, the MAE is not able to correctly generate any of the shapes (\textit{Circle}, \textit{Rectangle}, \textit{Triangle}). Unlike in experiment 2, where the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle} lead to the generation of visual attributes which match these words, in experiment 3 it is unclear that these visual attributes can be seen.
 The colours are all correctly generated and again, the sizes show a clear relation with the most pixels being coloured for \textsc{big} matching the visual attribute \textit{big} and the least for \textsc{small} matching the visual attribute \textit{small}.
 
 \begin{figure}[h]
@@ -651,7 +651,7 @@ The new positions are correctly learnt with a clear distinction between position
 \end{figure}
 
 
-As in experiment 2, the addition of a second word as input, leads to better reconstruction of the visual attributes with which they are associated. \autoref{fig:2word339} shows a comparison of the three different weight initialisations after training. It is clear in all three cases that the MAE learns to correctly ground the words \textsc{Circle}, \textsc{Rectangle} and\textsc{Triangle}. However, in the case of initialising with weights from experiment 1, the pretraining results in a worse performance than random weights.
+As in experiment 2, the addition of a second word as input, leads to better reconstruction of the visual attributes with which they are associated. \autoref{fig:2word339} shows a comparison of the three different weight initialisations after training. It is clear in all three cases that the MAE learns to correctly ground the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle}. However, in the case of initialising with weights from experiment 1, the pretraining results in a worse performance than random weights.
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.75\textwidth]{Figs/shapes/2word339_pos.png}
@@ -667,7 +667,7 @@ Initialising with weights from experiment 2 offers a marginal benifit, with each
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Initialisation & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+	\textbf{Initialisation} & 	\textbf{Bimodal} & 	\textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 	Random	&	100.00	$\mypm$	0.00	&	98.51	$\mypm$	4.52	&	100.00	$\mypm$	0.00	\\ \hline
 	Exp 1	&	100.00	$\mypm$	0.00	&	99.85	$\mypm$	0.50	&	100.00	$\mypm$	0.00	\\ \hline
 	Exp 2	&	100.00	$\mypm$	0.00	&	\textbf{99.99}	$\mypm$ 0.03	&	100.00	$\mypm$	0.00	\\ \hline
@@ -685,13 +685,13 @@ There is a clear effect on the accuracy of descriptions generated by the MAE whe
 \subsubsection{Discussion}
 Though the addition of extra positions had a detrimental effect on the generation of images from single words, (see \autoref{fig:339single} and \autoref{fig:339single_pos}) the MAE was still able to correctly learn to ground all of the words of the descriptions. This becomes particularly apparent when pairs of words are provided as input, as in \autoref{fig:2word339}.
 
-Taking an incremental approach to training by pretraining on a simpler task does not have a univerasally positive effect on the grounding of words to visual attributes. Whilst the weights from experiment 2 provided a small but noticable benifit when generating images from pairs of words over the random initialisation baseline, the weights from experiment 1 did not. 
+Taking an incremental approach to training by pretraining on a simpler task does not have a universally positive effect on the grounding of words to visual attributes. Whilst the weights from experiment 2 provided a small but noticable benifit when generating images from pairs of words over the random initialisation baseline, the weights from experiment 1 did not. 
 
 \begin{table}
 \centering
 \begin{tabular}{|c|c|}
 \hline
-Initialisation & Total Weight Updates\\ \hline
+\textbf{Initialisation} & \textbf{Total Weight Updates}\\ \hline
 Random &  1,215,000\\ \hline
 Exp 1 &  540,000\\ \hline
 Exp 2 &  810,000\\ \hline
@@ -721,7 +721,7 @@ The different initialisation schemes will be referred to as: Random: randomly in
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Initialisation & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+	\textbf{Initialisation} & 	\textbf{Bimodal} & 	\textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 Random 	&	3.82	$\mypm$	0.30	&	54.12	$\mypm$	43.74	&	3.96	$\mypm$	0.22	\\ \hline
 Exp 1	&	\textbf{3.73}	$\mypm$	0.06	&	9.33	$\mypm$	9.71	&	\textbf{3.91}	$\mypm$	0.04\\ \hline
 Exp 2	&	3.80	$\mypm$	0.19	&	\textbf{8.55}	$\mypm$	4.70	&	3.96	$\mypm$	0.20	\\ \hline
@@ -730,7 +730,7 @@ Exp 3	&	3.75	$\mypm$	0.02	&	14.28	$\mypm$	12.18	&	3.93	$\mypm$	0.05	\\ \hline
 %Exp 2+3	&	3.76	$\mypm$	0.12	&	33.08	$\mypm$	57.02	&	3.92	$\mypm$	0.06	\\ \hline
 
 	\end{tabular}
-\caption{Experiment 4: Total MSE for different weight initialisations. (All values are $\times10^{-3}$)}
+\caption{Experiment 4: Total MSE for different weight initialisations. (All values are $\times10^{-3}$.)}
 \label{tab:res739}
 \end{table}
 
@@ -789,7 +789,7 @@ Comparing \autoref{fig:2word739} to the errors in \autoref{tab:res739}, we would
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-	Initialisation & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+	\textbf{Initialisation} & 	\textbf{Bimodal} & 	\textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 Random 	&	100.00	$\mypm$	0.00	&	96.10	$\mypm$	6.29	&	100.00	$\mypm$	0.00	\\ \hline
 Exp 1	&	100.00	$\mypm$	0.00	&	99.49	$\mypm$	2.21	&	100.00	$\mypm$	0.00	\\ \hline
 Exp 2	&	100.00	$\mypm$	0.00	&	\textbf{99.53}	$\mypm$	1.22	&	100.00	$\mypm$	0.00\\ \hline
@@ -814,7 +814,7 @@ When training from random weights, the MAE struggles to generate images and desc
 \centering
 \begin{tabular}{|c|c|}
 \hline
-Initialisation & Total Weight Updates\\ \hline
+\textbf{Initialisation} & \textbf{Total Weight Updates}\\ \hline
 Random (50 Epochs) &  1,417,500\\ \hline
 Random (100 Epochs) & 2,835,000\\ \hline
 Exp 1 & 1,485,000\\ \hline
@@ -826,13 +826,13 @@ Exp 3 &	2,025,000\\ \hline
 \label{tab:updatesTotal4}
 \end{table}
 
-Again, the best performing MAE didn't recieve the most training updates. However, the worse performance of the MAE initialised with random weights is not only due to overfitting from making too many updates to its weights. Even after 50 epochs of training, the randomly initalised MAE had poor performance despite only updating its weights 1.4 million times, compared to the 1.6 million updates of the MAE initialised with weights from experiment 2. The better performance after 50 epochs  of training compared to after 100 epochs of training suggests that some overfitting has occured (\autoref{tab:res739_50}).
+Again, the best performing MAE didn't recieve the most training updates. However, the worse performance of the MAE initialised with random weights is not only due to overfitting from making too many updates to its weights; after 50 epochs of training, the randomly initalised MAE had poor performance despite only updating its weights 1.4 million times, compared to the 1.6 million updates of the MAE initialised with weights from experiment 2. The better performance after 50 epochs  of training compared to after 100 epochs of training suggests that some overfitting has occured (\autoref{tab:res739_50}).
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{|c|c|c|c|}
 	\hline
-	Measure & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+	\textbf{Measure} & 	\textbf{Bimodal} & 	\textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 MSE	&	3.82	$\mypm$	0.12	&	32.58	$\mypm$	36.49	&	4.00	$\mypm$	0.10	\\ \hline
 Accuracy	&	100.00	$\mypm$	0.00	&	97.44	$\mypm$	5.77	&	100.00	$\mypm$	0.00\\ \hline
 \end{tabular}
@@ -846,11 +846,11 @@ In both experiments 3 and 4, the best performance was seen from the MAE initiali
 
 Whilst the weights Exp 1 performed well in experiment 1 (\autoref{tab:res331}, they did not perform as well as the Exp 2 weights in experiment 2 (\autoref{tab:res333}) suggesting the qualtiy of the grounding was slightly lower. Further to this, there is a much bigger difference between the types of objects seen by the Exp 1 weights and those seen in experiments 3 and 4, meaning that the MAE initialised with the Exp 1 weights has more to learn than the MAE initialised with Exp 2 weights.
 
-So, the Exp 2 weights likely lead to the best performance due to 2 factors, 1) the types of objects used to train it are more similar to those used in experiments 3 and 4 compared to those seen by the Exp 1 weights and 2) they have achieved bidirectional grounding of data of experiment 2, as shown by their superior performance in experiment 2 compared to the Exp 3 weights which did not achieve bidirectional grounding of the data of experiment 3.
+So, the Exp 2 weights likely lead to the best performance due to 2 factors: 1) the types of objects used to train it are more similar to those used in experiments 3 and 4 compared to those seen by the Exp 1 weights and 2) they have achieved bidirectional grounding of data of experiment 2, as shown by their superior performance in experiment 2 compared to the Exp 3 weights which did not achieve bidirectional grounding of the data of experiment 3.
 
 
 \subsection{Experiment 5}
-In this experiment I select certain subsets of objects from the data to omit, such as violet circles or green triangles. Then demonstrate how images of these objects can still be generated from their descriptions or through vector arithematic, as well as how images of these objects can be correctly described by the network.
+In this experiment I select certain subsets of objects from the data to omit, such as violet circles or green triangles. Then I demonstrate how images of these objects can still be generated from their descriptions or through vector arithematic, as well as how images of these objects can be correctly described by the network.
 
 I will examine the omission of 3 different objects, these trials will be referred to as MAE 1: omission of green triangles'', MAE 2: omisssion of orange rectangles'' and MAE 3: omission of  violet circles''. Each MAE is initialised with random weights and trained for 50 epochs.
 
@@ -861,7 +861,7 @@ When testing the MAEs with object types they have seen before (i.e. not objects 
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-Trial & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+\textbf{Trial} & 	\textbf{Bimodal} & 	\textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 MAE 1	&	3.87	$\mypm$	0.23	&	43.22	$\mypm$	44.88	&	4.05	$\mypm$	0.24	\\ \hline
 MAE 1*	&	5.21	$\mypm$	0.78	&	86.71	$\mypm$	75.11	&	5.28	$\mypm$	0.55	\\ \hline
 MAE 2	&	3.72	$\mypm$	0.21	&	15.60	$\mypm$	23.65	&	3.97	$\mypm$	0.29	\\ \hline
@@ -869,7 +869,7 @@ MAE 2*	&	4.95	$\mypm$	1.02	&	41.54	$\mypm$	23.46	&	7.18	$\mypm$	2.74	\\ \hline
 MAE 3	&	4.01	$\mypm$	0.32	&	43.95	$\mypm$	79.53	&	4.12	$\mypm$	0.09	\\ \hline
 MAE 3*	&	3.07	$\mypm$	0.77	&	86.16	$\mypm$	123.74	&	2.67	$\mypm$	0.24	\\ \hline
 \end{tabular}
-\caption{Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times10^{-3}$)}
+\caption{Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times10^{-3}$.)}
 \label{tab:res_exp5}
 \end{table}
 Testing with only the omitted object, we see an increase in MSE, particularly for the Image Only testing condition. This is to be expected as the MAE has never seen these objects before, and will therefore be biased towards generating outputs which are more simlar to its training data than those required to perform well at generating the correct output for the omitted objects (\autoref{tab:res_exp5}).
@@ -881,7 +881,7 @@ For each training subset, a shape of a particular colour was omitted from the tr
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\textwidth]{Figs/shapes/739_minus1.png}
+\includegraphics[width=0.7\textwidth]{Figs/shapes/739_minus1.png}
 \caption{Experiment 5, run A: Images generated from descriptions of shapes never seen by the neural network.}
 \label{fig:739_minus1}
 \end{figure}
@@ -891,7 +891,7 @@ Despite never seeing a green triangle, MAE 1 from \autoref{fig:739_minus1} has l
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.75\textwidth]{Figs/shapes/739_minus1_vectorArthGT.png}
-\caption{Experiment 5, run A: Images generated via Vector Arithmetic}
+\caption{Experiment 5, run A: Images generated via Vector Arithmetic by MAE 1.}
 \label{fig:739_vectorArth}
 \end{figure}
 
@@ -904,7 +904,7 @@ Comparing the MAEs from this experiment to images generated via Vector Arithmeti
 \centering
 	\begin{tabular}{|c|c|c|c|}
 	\hline
-Trial	 & 	Bimodal & 	Image Only 	& 	Words Only \\ \hline
+\textbf{Trial}	 & 	\textbf{Bimodal} & \textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 MAE 1	&	99.99	$\mypm$	0.05	&	96.86	$\mypm$	7.10	&	100.00	$\mypm$	0.00	\\ \hline
 MAE 1*	&	99.98	$\mypm$	0.10	&	92.54	$\mypm$	13.30	&	100.00	$\mypm$	0.00	\\ \hline
 MAE 2	&	100.00	$\mypm$	0.00	&	99.03	$\mypm$	3.57	&	100.00	$\mypm$	0.00	\\ \hline
@@ -914,7 +914,7 @@ MAE 3	&	100.00	$\mypm$	0.02	&	96.54	$\mypm$	7.71	&	100.00	$\mypm$	0.00	\\ \hline
 MAE 3*	&	99.95	$\mypm$	0.32	&	92.27	$\mypm$	17.55	&	100.00	$\mypm$	0.00	\\ \hline
 
 	\end{tabular}
-\caption{Experiment 5: Percentage Description Accuracy. Alternating rows show accuracy for the datasubset without the omitted data and MSE for only the omitted data (marked with *)}
+\caption{Experiment 5: Percentage Description Accuracy. Alternating rows show accuracy for the datasubset without the omitted data and MSE for only the omitted data (marked with *).}
 \label{tab:res_exp5_acc}
 \end{table}
 
@@ -931,7 +931,7 @@ Seeing that both accurate descriptions and reconstructed images can be generated
 
 
 \section{Conclusion}
-I have demonstrated that utilising a MAE, it is possible to learn a multimodal representation of images and their descriptions. The embedding of images or descriptions into this representation can be used to generate novel descriptions or images.
+I have demonstrated that by utilising a MAE, it is possible to learn a multimodal representation of images and their descriptions. The embedding of images or descriptions into this representation can be used to generate novel descriptions or images.
 
 Further to this, it is possible to directly manipulate the latent representation using vector arithmetic on embeddings from either modality making meaningful changes, generating images with altered visual attributes.
 
@@ -946,7 +946,7 @@ The root of this issue comes down to two main factors, 1) the underlying probabi
 
 To understand what I mean by ``the underlying probability distribution of the data'' let us consider the simple example of rolling a die to decide if it is fair.
 
-How many times should we roll the die before we decide if it is fair? If it is a six sided die and it is fair, there should be a $\frac{1}{6}$ chance of rolling each of the numbers 1 to 6. So if we roll it 6 times we should expect to see each number once. However, we most likely won't, that doesn't mean our die is rigged.
+How many times should we roll the die before we decide if it is fair? If it is a six sided die and it is fair, there should be a $\frac{1}{6}$ chance of rolling each of the numbers 1 to 6. So if we roll it 6 times we should expect to see each number once. However, we most likely won't, but that doesn't mean our die is rigged.
 
 As we roll the die more and more times, we can get a better understanding of the true probability of rolling a given number and therefore get closer to deciding if the die is indeed fair.
 
@@ -954,7 +954,7 @@ As we roll the die more and more times, we can get a better understanding of the
 \centering
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 	\hline
-	Rolls & 1 & 2 & 3 & 4 & 5 & 6 \\ \hline
+	\textbf{Rolls} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} \\ \hline
 	10 & 0 & 0.2 & 0.2 & 0.3 & 0.2 & 0.1 \\ \hline
 	1000 & 0.168 & 0.148 & 0.169 & 0.174 & 0.172 & 0.169  \\ \hline
 	100000 & 0.166 & 0.166 & 0.167 & 0.168 & 0.165 & 0.167  \\ \hline
@@ -1007,12 +1007,12 @@ ylabel near ticks]
 \node [red] at (470,130)  (a) {\textbullet};
 \node [black] at (335,5)  (a) {\textbullet};
 \node [blue] at (320,145) (b) {\textbullet};
-\legend{True Cost, , Sampled Cost, , Pretrained Cost, }
+\legend{True Error, , Sampled Error, , Pretrained Error, }
 \end{axis}
     
 
 \end{tikzpicture}
-\caption{Visualisation of an imaginary Error landscape.}
+\caption{Visualisation of an imaginary Cost landscape.}
 \label{fig:localminima}
 \end{center}
 \end{figure}
@@ -1024,7 +1024,7 @@ If we pretrain, allowing the network to first master a simpler task, the estimat
 
 When we pretrain using a different subset of the data as in experiments 3 and 4, we start at a point in the cost landscape that is hopefully closer to the global minima than starting with randomly selected weights. Obviously, this is not always the case, for example, only pretraining on experiment 2 helped in both experiments 3 and 4. Pretraining on experiment 1 did not have a positive effect on the bidirectional symbol grounding.
 
-So, by taking a incremental approach, mastering simple tasks and increasing the difficulty of the tasks we set our neural networks to tackle, we can incrementally approach the global cost minima. In the case of the ArtS dataset this means incrementally learning to perform bidirectional symbol grounding on a wider variety of words and visual properties. Learning new colours, shapes, sizes and positions. As we saw from the results of experiment 4, this approach can lead to better performance than simply training longer on the more difficult task.
+So, by taking a incremental approach, mastering simple tasks and increasing the difficulty of the tasks we set our neural networks to tackle, we can incrementally approach the global cost minima. In the case of the ArtS dataset this means incrementally learning to perform bidirectional symbol grounding on a wider variety of words and visual properties; learning new colours, shapes, sizes and positions. As we saw from the results of experiment 4, this approach can lead to better performance than simply training longer on the more difficult task.
 
 
 \theendnotes
