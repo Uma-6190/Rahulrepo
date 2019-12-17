@@ -72,20 +72,26 @@
 \BOOKMARK [1][-]{section.214}{Acoustic Packaging}{chapter.212}% 72
 \BOOKMARK [1][-]{section.216}{Real Shapes Dataset}{chapter.212}% 73
 \BOOKMARK [2][-]{subsection.218}{Dataset Description}{section.216}% 74
-\BOOKMARK [2][-]{subsection.219}{Problem Description}{section.216}% 75
-\BOOKMARK [2][-]{subsection.220}{Network Description}{section.216}% 76
-\BOOKMARK [1][-]{section.221}{Experiments with the Reshape dataset}{chapter.212}% 77
-\BOOKMARK [2][-]{subsection.226}{Results}{section.221}% 78
-\BOOKMARK [2][-]{subsection.231}{Discussion}{section.221}% 79
-\BOOKMARK [0][-]{chapter.232}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 80
-\BOOKMARK [1][-]{section.233}{Summary of important points}{chapter.232}% 81
-\BOOKMARK [1][-]{section.234}{Conclusion}{chapter.232}% 82
-\BOOKMARK [0][-]{chapter.235}{Future Work}{}% 83
-\BOOKMARK [1][-]{section.236}{Where do we go now?}{chapter.235}% 84
-\BOOKMARK [2][-]{subsection.237}{More Sensors}{section.236}% 85
-\BOOKMARK [2][-]{subsection.238}{Better Sensors}{section.236}% 86
-\BOOKMARK [2][-]{subsection.239}{Swarm Robots and the Cloud}{section.236}% 87
-\BOOKMARK [0][-]{appendix.240}{Appendix A Primer on Artifical Neural Networks}{}% 88
-\BOOKMARK [0][-]{appendix.246}{Appendix Sensory Redundancy}{}% 89
-\BOOKMARK [0][-]{appendix.248}{Appendix Magical Vectors and Where to Find Them}{}% 90
-\BOOKMARK [0][-]{appendix*.252}{Bibliography}{}% 91
+\BOOKMARK [2][-]{subsection.220}{Problem Description}{section.216}% 75
+\BOOKMARK [2][-]{subsection.221}{Network Description}{section.216}% 76
+\BOOKMARK [1][-]{section.222}{Experiments with the ReShape dataset}{chapter.212}% 77
+\BOOKMARK [2][-]{subsection.223}{Data Preprocessing}{section.222}% 78
+\BOOKMARK [2][-]{subsection.226}{Training Procedures}{section.222}% 79
+\BOOKMARK [1][-]{section.229}{Experiment 1}{chapter.212}% 80
+\BOOKMARK [2][-]{subsection.232}{Results}{section.229}% 81
+\BOOKMARK [1][-]{section.241}{Experiment 2}{chapter.212}% 82
+\BOOKMARK [2][-]{subsection.244}{Results}{section.241}% 83
+\BOOKMARK [2][-]{subsection.253}{Discussion}{section.241}% 84
+\BOOKMARK [1][-]{section.254}{Conclusion}{chapter.212}% 85
+\BOOKMARK [0][-]{chapter.255}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 86
+\BOOKMARK [1][-]{section.256}{Summary of important points}{chapter.255}% 87
+\BOOKMARK [1][-]{section.257}{Conclusion}{chapter.255}% 88
+\BOOKMARK [0][-]{chapter.258}{Future Work}{}% 89
+\BOOKMARK [1][-]{section.259}{Where do we go now?}{chapter.258}% 90
+\BOOKMARK [2][-]{subsection.260}{More Sensors}{section.259}% 91
+\BOOKMARK [2][-]{subsection.261}{Better Sensors}{section.259}% 92
+\BOOKMARK [2][-]{subsection.262}{Swarm Robots and the Cloud}{section.259}% 93
+\BOOKMARK [0][-]{appendix.263}{Appendix A Primer on Artifical Neural Networks}{}% 94
+\BOOKMARK [0][-]{appendix.269}{Appendix Sensory Redundancy}{}% 95
+\BOOKMARK [0][-]{appendix.271}{Appendix Magical Vectors and Where to Find Them}{}% 96
+\BOOKMARK [0][-]{appendix*.275}{Bibliography}{}% 97

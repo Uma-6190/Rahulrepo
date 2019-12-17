@@ -107,7 +107,7 @@ The overall structure of the neural network used for the experiements in this ch
 
 
 \section{Experiments with the ArtS Dataset}
-For each of the following experiments I will test the MAE in three ways, similarly to the experimental method of \autoref{Chapter4}. Following the protocol of testing in a Bimodal, Image Only and Words Only manner allows me to explore how each of the modalities and their combination, affects the quality of the embedding learnt by the neural network. All experiments in this section will utilise the RD training procedure developed in \autoref{chapter4}.
+For each of the following experiments I will test the MAE in three ways, similarly to the experimental method of \autoref{Chapter4}. Following the protocol of testing in a Bimodal, Image Only and Words Only manner allows me to explore how each of the modalities and their combination, affects the quality of the embedding learnt by the neural network. All experiments in this section will utilise the RD training procedure developed in \autoref{Chapter4}.
 
 
 Due to the complexity of ArtS and the variety of factors which can be explored with it, I will perform 5 sets of experiments, each using different subsets of the dataset. All experiments will make use of all 3 shapes, but different numbers of colours, sizes and positions will be used.
@@ -592,7 +592,7 @@ Bottom Left & (22,22)\\ \hline
 Bottom Centre & (22,42)\\ \hline
 Bottom Right & (42,22)\\ \hline				
 \end{tabular}
-\caption{Experiment 2 data subset.}
+\caption{Experiment 3 data subset.}
 \label{tab:exp3_data} 
 \end{table}
 
@@ -1027,4 +1027,4 @@ When we pretrain using a different subset of the data as in experiments 3 and 4,
 So, by taking a incremental approach, mastering simple tasks and increasing the difficulty of the tasks we set our neural networks to tackle, we can incrementally approach the global cost minima. In the case of the ArtS dataset this means incrementally learning to perform bidirectional symbol grounding on a wider variety of words and visual properties; learning new colours, shapes, sizes and positions. As we saw from the results of experiment 4, this approach can lead to better performance than simply training longer on the more difficult task.
 
 
-\theendnotes
+%\theendnotes

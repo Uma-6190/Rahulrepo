@@ -129,23 +129,31 @@
 \contentsline {section}{\numberline {6.2}Acoustic Packaging}{82}{section.214}
 \contentsline {section}{\numberline {6.3}Real Shapes Dataset}{83}{section.216}
 \contentsline {subsection}{\numberline {6.3.1}Dataset Description}{83}{subsection.218}
-\contentsline {subsection}{\numberline {6.3.2}Problem Description}{83}{subsection.219}
-\contentsline {subsection}{\numberline {6.3.3}Network Description}{84}{subsection.220}
-\contentsline {section}{\numberline {6.4}Experiments with the Reshape dataset}{84}{section.221}
-\contentsline {subsection}{\numberline {6.4.1}Results}{86}{subsection.226}
-\contentsline {subsubsection}{\numberline {6.4.1.1}Image Generation}{86}{subsubsection.228}
-\contentsline {subsubsection}{\numberline {6.4.1.2}Multilabel Classification}{86}{subsubsection.229}
-\contentsline {subsubsection}{\numberline {6.4.1.3}Vector Arithematic}{86}{subsubsection.230}
-\contentsline {subsection}{\numberline {6.4.2}Discussion}{86}{subsection.231}
-\contentsline {chapter}{\numberline {7}What have we learnt and more importantly, what have our neural nets learnt?}{88}{chapter.232}
-\contentsline {section}{\numberline {7.1}Summary of important points}{88}{section.233}
-\contentsline {section}{\numberline {7.2}Conclusion}{88}{section.234}
-\contentsline {chapter}{\numberline {8}Future Work}{89}{chapter.235}
-\contentsline {section}{\numberline {8.1}Where do we go now?}{89}{section.236}
-\contentsline {subsection}{\numberline {8.1.1}More Sensors}{89}{subsection.237}
-\contentsline {subsection}{\numberline {8.1.2}Better Sensors}{89}{subsection.238}
-\contentsline {subsection}{\numberline {8.1.3}Swarm Robots and the Cloud}{89}{subsection.239}
-\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{90}{appendix.240}
-\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{92}{appendix.246}
-\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{94}{appendix.248}
-\contentsline {chapter}{Bibliography}{96}{appendix*.252}
+\contentsline {subsection}{\numberline {6.3.2}Problem Description}{84}{subsection.220}
+\contentsline {subsection}{\numberline {6.3.3}Network Description}{84}{subsection.221}
+\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{85}{section.222}
+\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{85}{subsection.223}
+\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{86}{subsection.226}
+\contentsline {section}{\numberline {6.5}Experiment 1}{87}{section.229}
+\contentsline {subsection}{\numberline {6.5.1}Results}{88}{subsection.232}
+\contentsline {subsubsection}{\numberline {6.5.1.1}Image Generation}{89}{subsubsection.234}
+\contentsline {subsubsection}{\numberline {6.5.1.2}Multilabel Classification}{91}{subsubsection.239}
+\contentsline {section}{\numberline {6.6}Experiment 2}{92}{section.241}
+\contentsline {subsection}{\numberline {6.6.1}Results}{92}{subsection.244}
+\contentsline {subsubsection}{\numberline {6.6.1.1}Image Generation}{93}{subsubsection.247}
+\contentsline {subsubsection}{\numberline {6.6.1.2}Multilabel Classification}{95}{subsubsection.250}
+\contentsline {paragraph}{\numberline {6.6.1.2.1}Description Accuracy}{96}{paragraph.251}
+\contentsline {subsection}{\numberline {6.6.2}Discussion}{96}{subsection.253}
+\contentsline {section}{\numberline {6.7}Conclusion}{97}{section.254}
+\contentsline {chapter}{\numberline {7}What have we learnt and more importantly, what have our neural nets learnt?}{98}{chapter.255}
+\contentsline {section}{\numberline {7.1}Summary of important points}{98}{section.256}
+\contentsline {section}{\numberline {7.2}Conclusion}{98}{section.257}
+\contentsline {chapter}{\numberline {8}Future Work}{99}{chapter.258}
+\contentsline {section}{\numberline {8.1}Where do we go now?}{99}{section.259}
+\contentsline {subsection}{\numberline {8.1.1}More Sensors}{99}{subsection.260}
+\contentsline {subsection}{\numberline {8.1.2}Better Sensors}{99}{subsection.261}
+\contentsline {subsection}{\numberline {8.1.3}Swarm Robots and the Cloud}{99}{subsection.262}
+\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{100}{appendix.263}
+\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{102}{appendix.269}
+\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{104}{appendix.271}
+\contentsline {chapter}{Bibliography}{106}{appendix*.275}

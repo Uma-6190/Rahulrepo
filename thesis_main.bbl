@@ -198,4 +198,16 @@ L.~Schillingmann, B.~Wrede, and K.~J.~Rohlfing,
 {\em A computational model of acoustic packaging,}
 IEEE Transactions on Autonomous Mental Development {\bf 1} (2009) 226.
 
+\bibitem{keller2016analysis}
+I.~Keller and K.~S.~Lohan.
+\newblock {\em Analysis of illumination robustness in long-term object
+  learning,} .
+\newblock In {\em 2016 25th IEEE International Symposium on Robot and Human
+  Interactive Communication (RO-MAN)} 240. IEEE2016.
+
+\bibitem{keller}
+I.~Keller and K.~S.~Lohan,
+{\em {On the Illumination Influence for Object Learning on Robot Companions},}
+Frontiers in Robotics and AI,(in press)(2019)~1.
+
 \end{thebibliography}

@@ -297,8 +297,8 @@
 \newlabel{fig:shapes333v331}{{5.11}{64}{Images generated of each shape for different sizes of embedding using the MAEs trained in experiments 1 and 2 run A}{figure.172}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.3.1}Results}{64}{subsubsection.175}}
 \@writefile{toc}{\contentsline {paragraph}{\numberline {5.4.3.1.1}Image Generation}{64}{paragraph.177}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Experiment 2 data subset.}}{65}{table.174}}
-\newlabel{tab:exp3_data}{{5.6}{65}{Experiment 2 data subset}{table.174}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Experiment 3 data subset.}}{65}{table.174}}
+\newlabel{tab:exp3_data}{{5.6}{65}{Experiment 3 data subset}{table.174}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces Experiment 3: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}}{65}{table.176}}
 \newlabel{tab:res339}{{5.7}{65}{Experiment 3: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}{table.176}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Experiment 3, run A: Images generated from descriptions, starting training from randomly initialised weights.}}{66}{figure.178}}
@@ -363,74 +363,114 @@
 \newlabel{Chapter6}{{6}{82}{Bidirectional Grounding of Real Data}{chapter.212}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.1}The Difficulties of Real Data}{82}{section.213}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}Acoustic Packaging}{82}{section.214}}
+\citation{keller2016analysis,keller}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces System schematic. Data is captured from sensors by an acoustic packager and fed to the multimodal autoencoder (MAE).}}{83}{figure.215}}
 \newlabel{fig:schematic}{{6.1}{83}{System schematic. Data is captured from sensors by an acoustic packager and fed to the multimodal autoencoder (MAE)}{figure.215}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Real Shapes Dataset}{83}{section.216}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Example images from ReShape.}}{83}{figure.217}}
 \newlabel{fig:ReShape}{{6.2}{83}{Example images from ReShape}{figure.217}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Dataset Description}{83}{subsection.218}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Problem Description}{83}{subsection.219}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Network Description}{84}{subsection.220}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments with the Reshape dataset}{84}{section.221}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Example cropped images from ReShape.}}{84}{figure.222}}
-\newlabel{fig:ReShapeCrop}{{6.3}{84}{Example cropped images from ReShape}{figure.222}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Regions to crop to given different postion words.}}{85}{figure.223}}
-\newlabel{fig:CropHeur}{{6.4}{85}{Regions to crop to given different postion words}{figure.223}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Average images of bricks and ducks in different sizes and colours.}}{86}{figure.224}}
-\newlabel{fig:AvgBrickDuck}{{6.5}{86}{Average images of bricks and ducks in different sizes and colours}{figure.224}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Exemplar images of bricks and ducks in different sizes and colours.}}{86}{figure.225}}
-\newlabel{fig:ExmBrickDuck}{{6.6}{86}{Exemplar images of bricks and ducks in different sizes and colours}{figure.225}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Results}{86}{subsection.226}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1.1}Image Generation}{86}{subsubsection.228}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1.2}Multilabel Classification}{86}{subsubsection.229}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1.3}Vector Arithematic}{86}{subsubsection.230}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Discussion}{86}{subsection.231}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Images generated using word pairs using the MAE trained using image exemplars.}}{87}{figure.227}}
-\newlabel{fig:2wordsExemplarBrickDuck}{{6.7}{87}{Images generated using word pairs using the MAE trained using image exemplars}{figure.227}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}What have we learnt and more importantly, what have our neural nets learnt?}{88}{chapter.232}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Exemplar images for all objects in the ReShape dataset.}}{84}{figure.219}}
+\newlabel{fig:ReShapeAll}{{6.3}{84}{Exemplar images for all objects in the ReShape dataset}{figure.219}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Problem Description}{84}{subsection.220}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Network Description}{84}{subsection.221}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{85}{section.222}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{85}{subsection.223}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Example cropped images from ReShape.}}{86}{figure.224}}
+\newlabel{fig:ReShapeCrop}{{6.4}{86}{Example cropped images from ReShape}{figure.224}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{86}{subsection.226}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Regions to crop to given different postion words.}}{87}{figure.225}}
+\newlabel{fig:CropHeur}{{6.5}{87}{Regions to crop to given different postion words}{figure.225}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Exp 1: Average of the training images of bricks and ducks in different sizes and colours.}}{87}{figure.227}}
+\newlabel{fig:AvgBrickDuck}{{6.6}{87}{Exp 1: Average of the training images of bricks and ducks in different sizes and colours}{figure.227}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Experiment 1}{87}{section.229}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Exp 2: Average of the training images for bricks, cups, donuts, ducks, and rectangles, in different sizes and colours.}}{88}{figure.228}}
+\newlabel{fig:avgMost}{{6.7}{88}{Exp 2: Average of the training images for bricks, cups, donuts, ducks, and rectangles, in different sizes and colours}{figure.228}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Experiment 1 data subset.}}{88}{table.230}}
+\newlabel{tab:6_exp1_data}{{6.1}{88}{Experiment 1 data subset}{table.230}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}Results}{88}{subsection.232}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Exp 1: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}}{88}{table.233}}
+\newlabel{tab:6_res_exp1}{{6.2}{88}{Exp 1: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}{table.233}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Exp 1: Exemplar images of bricks and ducks in different sizes and colours.}}{89}{figure.231}}
+\newlabel{fig:ExmBrickDuck}{{6.8}{89}{Exp 1: Exemplar images of bricks and ducks in different sizes and colours}{figure.231}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1.1}Image Generation}{89}{subsubsection.234}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Exp 1: Images generated from full descriptions using the MAE trained with the simple procedure.}}{89}{figure.235}}
+\newlabel{fig:simpleGen_1}{{6.9}{89}{Exp 1: Images generated from full descriptions using the MAE trained with the simple procedure}{figure.235}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Exp 1: Images generated from (only) full descriptions using the MAE trained with the exemplar procedure.}}{90}{figure.236}}
+\newlabel{fig:exemplarGen_1}{{6.10}{90}{Exp 1: Images generated from (only) full descriptions using the MAE trained with the exemplar procedure}{figure.236}{}}
+\citation{keller2016analysis,keller}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Exp 1: Images generated using word pairs using the MAE trained with the simple procedure.}}{91}{figure.237}}
+\newlabel{fig:2wordsSimpleBrickDuck}{{6.11}{91}{Exp 1: Images generated using word pairs using the MAE trained with the simple procedure}{figure.237}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.5.1.2}Multilabel Classification}{91}{subsubsection.239}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Exp 1: Percentage Description Accuracy for different test conditions and training procedures.}}{91}{table.240}}
+\newlabel{tab:6_res_exp1_acc}{{6.3}{91}{Exp 1: Percentage Description Accuracy for different test conditions and training procedures}{table.240}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Images generated using word pairs using the MAE trained using image exemplars. (Only words are provided as input.)}}{92}{figure.238}}
+\newlabel{fig:2wordsExemplarBrickDuck}{{6.12}{92}{Images generated using word pairs using the MAE trained using image exemplars. (Only words are provided as input.)}{figure.238}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Experiment 2}{92}{section.241}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.1}Results}{92}{subsection.244}}
+\@writefile{tdo}{\contentsline {todo}{talk about \autoref  {tab:6_res_exp2} once it is finished}{92}{section*.246}}
+\pgfsyspdfmark {pgfid48}{21427434}{6488686}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Experiment 2 data subset.}}{93}{table.242}}
+\newlabel{tab:6_exp2_data}{{6.4}{93}{Experiment 2 data subset}{table.242}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Exp 2: Exemplar images of bricks, cups, donuts, ducks, and rectangles, in different sizes and colours, in different sizes and colours.}}{93}{figure.243}}
+\newlabel{fig:ExmMost}{{6.13}{93}{Exp 2: Exemplar images of bricks, cups, donuts, ducks, and rectangles, in different sizes and colours, in different sizes and colours}{figure.243}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Exp 2: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}}{93}{table.245}}
+\newlabel{tab:6_res_exp2}{{6.5}{93}{Exp 2: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}{table.245}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.1}Image Generation}{93}{subsubsection.247}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Exp 2: Images generated from full descriptions using the MAE trained with the exemplar procedure. Red squares show objects with exemplar images.}}{94}{figure.248}}
+\newlabel{fig:mostExemplarGen}{{6.14}{94}{Exp 2: Images generated from full descriptions using the MAE trained with the exemplar procedure. Red squares show objects with exemplar images}{figure.248}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Exp 2: Images generated using word pairs using the MAE trained using image exemplars when only words are provided as input.}}{95}{figure.249}}
+\newlabel{fig:2wordsMostExemplar}{{6.15}{95}{Exp 2: Images generated using word pairs using the MAE trained using image exemplars when only words are provided as input}{figure.249}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.6.1.2}Multilabel Classification}{95}{subsubsection.250}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Accuracy}}{96}{table.252}}
+\newlabel{tab:6_res_exp2_acc}{{6.6}{96}{Accuracy}{table.252}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {6.6.1.2.1}Description Accuracy}{96}{paragraph.251}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6.2}Discussion}{96}{subsection.253}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Conclusion}{97}{section.254}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}What have we learnt and more importantly, what have our neural nets learnt?}{98}{chapter.255}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{Chapter7}{{7}{88}{What have we learnt and more importantly, what have our neural nets learnt?}{chapter.232}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Summary of important points}{88}{section.233}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Conclusion}{88}{section.234}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Future Work}{89}{chapter.235}}
+\newlabel{Chapter7}{{7}{98}{What have we learnt and more importantly, what have our neural nets learnt?}{chapter.255}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Summary of important points}{98}{section.256}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Conclusion}{98}{section.257}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Future Work}{99}{chapter.258}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{Chapter8}{{8}{89}{Future Work}{chapter.235}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Where do we go now?}{89}{section.236}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.1}More Sensors}{89}{subsection.237}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.2}Better Sensors}{89}{subsection.238}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.3}Swarm Robots and the Cloud}{89}{subsection.239}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix \emph  {A Primer on Artifical Neural Networks}}{90}{appendix.240}}
+\newlabel{Chapter8}{{8}{99}{Future Work}{chapter.258}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Where do we go now?}{99}{section.259}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.1}More Sensors}{99}{subsection.260}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.2}Better Sensors}{99}{subsection.261}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1.3}Swarm Robots and the Cloud}{99}{subsection.262}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix \emph  {A Primer on Artifical Neural Networks}}{100}{appendix.263}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{appendix:app3}{{A}{90}{Appendix \emph {A Primer on Artifical Neural Networks}}{appendix.240}{}}
-\newlabel{eqn:BP1}{{A.1}{90}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.241}{}}
-\newlabel{eqn:BP2}{{A.2}{90}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.242}{}}
-\newlabel{eqn:BP3}{{A.3}{90}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.243}{}}
-\newlabel{eqn:BP4}{{A.4}{91}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.244}{}}
-\newlabel{eqn:hada}{{A.5}{91}{}{equation.245}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix \emph  {Sensory Redundancy}}{92}{appendix.246}}
+\newlabel{appendix:app3}{{A}{100}{Appendix \emph {A Primer on Artifical Neural Networks}}{appendix.263}{}}
+\newlabel{eqn:BP1}{{A.1}{100}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.264}{}}
+\newlabel{eqn:BP2}{{A.2}{100}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.265}{}}
+\newlabel{eqn:BP3}{{A.3}{100}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.266}{}}
+\newlabel{eqn:BP4}{{A.4}{101}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.267}{}}
+\newlabel{eqn:hada}{{A.5}{101}{}{equation.268}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix \emph  {Sensory Redundancy}}{102}{appendix.269}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{appendix:app4}{{B}{92}{Appendix \emph {Sensory Redundancy}}{appendix.246}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B.1}{\ignorespaces Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}}{93}{table.247}}
-\newlabel{tab:mnist_ucu_master_res}{{B.1}{93}{Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}{table.247}{}}
+\newlabel{appendix:app4}{{B}{102}{Appendix \emph {Sensory Redundancy}}{appendix.269}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B.1}{\ignorespaces Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}}{103}{table.270}}
+\newlabel{tab:mnist_ucu_master_res}{{B.1}{103}{Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}{table.270}{}}
 \bibdata{bigone}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Appendix \emph  {Magical Vectors and Where to Find Them}}{94}{appendix.248}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Appendix \emph  {Magical Vectors and Where to Find Them}}{104}{appendix.271}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{appendix:app5}{{C}{94}{Appendix \emph {Magical Vectors and Where to Find Them}}{appendix.248}{}}
-\newlabel{eqn:updates}{{C.1}{94}{Appendix \emph {Magical Vectors and Where to Find Them}}{equation.250}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {C.1}{\ignorespaces Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments.}}{95}{table.249}}
-\newlabel{tab:Arts_MAE_description}{{C.1}{95}{Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments}{table.249}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {C.2}{\ignorespaces Number of weight updates per Epoch for each experiment.}}{95}{table.251}}
-\newlabel{tab:updatesperEpoch}{{C.2}{95}{Number of weight updates per Epoch for each experiment}{table.251}{}}
+\newlabel{appendix:app5}{{C}{104}{Appendix \emph {Magical Vectors and Where to Find Them}}{appendix.271}{}}
+\newlabel{eqn:updates}{{C.1}{104}{Appendix \emph {Magical Vectors and Where to Find Them}}{equation.273}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {C.1}{\ignorespaces Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments.}}{105}{table.272}}
+\newlabel{tab:Arts_MAE_description}{{C.1}{105}{Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments}{table.272}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {C.2}{\ignorespaces Number of weight updates per Epoch for each experiment.}}{105}{table.274}}
+\newlabel{tab:updatesperEpoch}{{C.2}{105}{Number of weight updates per Epoch for each experiment}{table.274}{}}
 \bibcite{smith2008infants}{{1}{}{{}}{{}}}
 \bibcite{yurovsky2013statistical}{{2}{}{{}}{{}}}
 \bibcite{rosenblatt1958perceptron}{{3}{}{{}}{{}}}
@@ -440,7 +480,7 @@
 \bibcite{kussul2017deep}{{7}{}{{}}{{}}}
 \bibcite{qi2017pointnet}{{8}{}{{}}{{}}}
 \bibcite{simonyan2014very}{{9}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{96}{appendix*.252}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{106}{appendix*.275}}
 \bibcite{springenberg2014striving}{{10}{}{{}}{{}}}
 \bibcite{srivastava2014dropout}{{11}{}{{}}{{}}}
 \bibcite{he2016deep}{{12}{}{{}}{{}}}
@@ -466,5 +506,7 @@
 \bibcite{mikolov2013efficient}{{32}{}{{}}{{}}}
 \bibcite{schillingmann2009towards}{{33}{}{{}}{{}}}
 \bibcite{schillingmann2009computational}{{34}{}{{}}{{}}}
+\bibcite{keller2016analysis}{{35}{}{{}}{{}}}
+\bibcite{keller}{{36}{}{{}}{{}}}
 \bibstyle{latexeu}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
