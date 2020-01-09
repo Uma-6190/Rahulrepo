@@ -17,6 +17,45 @@ F.~Rosenblatt,
   organization in the brain.,}
 Psychological review {\bf 65} (1958) 386.
 
+\bibitem{lecun1998mnist}
+Y.~LeCun,
+{\em The MNIST database of handwritten digits,}
+http://yann. lecun. com/exdb/mnist/(1998).
+
+\bibitem{kingma2014adam}
+D.~P.~Kingma and J.~Ba,
+{\em Adam: A method for stochastic optimization,}
+arXiv preprint arXiv:1412.6980(2014).
+
+\bibitem{zeiler2012adadelta}
+M.~D.~Zeiler,
+{\em ADADELTA: an adaptive learning rate method,}
+arXiv preprint arXiv:1212.5701(2012).
+
+\bibitem{senior2013empirical}
+A.~Senior, G.~Heigold, K.~Yang, and ~others.
+\newblock {\em An empirical study of learning rates in deep neural networks for
+  speech recognition,} .
+\newblock In {\em 2013 IEEE international conference on acoustics, speech and
+  signal processing} 6724. IEEE2013.
+
+\bibitem{dumoulin2016guide}
+V.~Dumoulin and F.~Visin,
+{\em A guide to convolution arithmetic for deep learning,}
+arXiv preprint arXiv:1603.07285(2016).
+
+\bibitem{radford2015unsupervised}
+A.~Radford, L.~Metz, and S.~Chintala,
+{\em Unsupervised representation learning with deep convolutional generative
+  adversarial networks,}
+arXiv preprint arXiv:1511.06434(2015).
+
+\bibitem{zeiler2010deconvolutional}
+M.~D.~Zeiler, D.~Krishnan, G.~W.~Taylor, and R.~Fergus.
+\newblock {\em Deconvolutional networks,} .
+\newblock In {\em 2010 IEEE Computer Society Conference on computer vision and
+  pattern recognition} 2528. IEEE2010.
+
 \bibitem{krizhevsky2012imagenet}
 A.~Krizhevsky, I.~Sutskever, and G.~E.~Hinton.
 \newblock {\em Imagenet classification with deep convolutional neural
@@ -78,6 +117,12 @@ S.~Hochreiter,
 International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
   {\bf 6} (1998) 107.
 
+\bibitem{huang2017densely}
+G.~Huang, Z.~Liu, L.~Van Der~Maaten, and K.~Q.~Weinberger.
+\newblock {\em Densely connected convolutional networks,} .
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition} 47002017.
+
 \bibitem{szegedy2015going}
 C.~Szegedy, W.~Liu, Y.~Jia, P.~Sermanet, S.~Reed, D.~Anguelov, D.~Erhan,
   V.~Vanhoucke, and A.~Rabinovich.
@@ -97,44 +142,120 @@ C.~Szegedy, S.~Ioffe, V.~Vanhoucke, and A.~A.~Alemi.
   connections on learning,} .
 \newblock In {\em Thirty-First AAAI Conference on Artificial Intelligence}2017.
 
+\bibitem{mirza2014conditional}
+M.~Mirza and S.~Osindero,
+{\em Conditional generative adversarial nets,}
+arXiv preprint arXiv:1411.1784(2014).
+
+\bibitem{odena2017conditional}
+A.~Odena, C.~Olah, and J.~Shlens.
+\newblock {\em Conditional image synthesis with auxiliary classifier gans,} .
+\newblock In {\em Proceedings of the 34th International Conference on Machine
+  Learning-Volume 70} 2642. JMLR. org2017.
+
+\bibitem{vinyals2015show}
+O.~Vinyals, A.~Toshev, S.~Bengio, and D.~Erhan.
+\newblock {\em Show and tell: A neural image caption generator,} .
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition} 31562015.
+
+\bibitem{lebret2015phrase}
+R.~Lebret, P.~O.~Pinheiro, and R.~Collobert,
+{\em Phrase-based image captioning,}
+arXiv preprint arXiv:1502.03671(2015).
+
+\bibitem{donahue2015long}
+J.~Donahue, L.~Anne~Hendricks, S.~Guadarrama, M.~Rohrbach, S.~Venugopalan,
+  K.~Saenko, and T.~Darrell.
+\newblock {\em Long-term recurrent convolutional networks for visual
+  recognition and description,} .
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition} 26252015.
+
+\bibitem{jia2015guiding}
+X.~Jia, E.~Gavves, B.~Fernando, and T.~Tuytelaars.
+\newblock {\em Guiding the long-short term memory model for image caption
+  generation,} .
+\newblock In {\em Proceedings of the IEEE International Conference on Computer
+  Vision} 24072015.
+
+\bibitem{rohrbach2014coherent}
+A.~Rohrbach, M.~Rohrbach, W.~Qiu, A.~Friedrich, M.~Pinkal, and B.~Schiele.
+\newblock {\em Coherent multi-sentence video description with variable level of
+  detail,} .
+\newblock In {\em German Conference on Pattern Recognition} 184. Springer2014.
+
+\bibitem{rohrbach2013translating}
+M.~Rohrbach, W.~Qiu, I.~Titov, S.~Thater, M.~Pinkal, and B.~Schiele.
+\newblock {\em Translating video content to natural language descriptions,} .
+\newblock In {\em Proceedings of the IEEE International Conference on Computer
+  Vision} 4332013.
+
+\bibitem{yao2015describing}
+L.~Yao, A.~Torabi, K.~Cho, N.~Ballas, C.~Pal, H.~Larochelle, and A.~Courville.
+\newblock {\em Describing videos by exploiting temporal structure,} .
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision} 45072015.
+
+\bibitem{yao2015video}
+L.~Yao, A.~Torabi, K.~Cho, N.~Ballas, C.~Pal, H.~Larochelle, and A.~Courville,
+{\em Video description generation incorporating spatio-temporal features and a
+  soft-attention mechanism,}
+arXiv preprint arXiv:1502.08029(2015).
+
+\bibitem{venugopalan2014translating}
+S.~Venugopalan, H.~Xu, J.~Donahue, M.~Rohrbach, R.~Mooney, and K.~Saenko,
+{\em Translating videos to natural language using deep recurrent neural
+  networks,}
+arXiv preprint arXiv:1412.4729(2014).
+
+\bibitem{johnson2016densecap}
+J.~Johnson, A.~Karpathy, and L.~Fei-Fei.
+\newblock {\em Densecap: Fully convolutional localization networks for dense
+  captioning,} .
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition} 45652016.
+
+\bibitem{ordonez2011im2text}
+V.~Ordonez, G.~Kulkarni, and T.~L.~Berg.
+\newblock {\em Im2text: Describing images using 1 million captioned
+  photographs,} .
+\newblock In {\em Advances in neural information processing systems} 11432011.
+
+\bibitem{zhu2017unpaired}
+J.-Y.~Zhu, T.~Park, P.~Isola, and A.~A.~Efros.
+\newblock {\em Unpaired image-to-image translation using cycle-consistent
+  adversarial networks,} .
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision} 22232017.
+
+\bibitem{lu2013speech}
+X.~Lu, Y.~Tsao, S.~Matsuda, and C.~Hori.
+\newblock {\em Speech enhancement based on deep denoising autoencoder.,} .
+\newblock In {\em Interspeech} 4362013.
+
+\bibitem{hochreiter1997long}
+S.~Hochreiter and J.~Schmidhuber,
+{\em Long short-term memory,}
+Neural computation {\bf 9} (1997) 1735.
+
+\bibitem{keller}
+I.~Keller and K.~S.~Lohan,
+{\em {On the Illumination Influence for Object Learning on Robot Companions},}
+Frontiers in Robotics and AI,(in press)(2019)~1.
+
 \bibitem{vinyals2019alphastar}
 O.~Vinyals, I.~Babuschkin, J.~Chung, M.~Mathieu, M.~Jaderberg, W.~M.~Czarnecki,
   A.~Dudzik, A.~Huang, P.~Georgiev, R.~Powell, and ~others,
 {\em AlphaStar: Mastering the real-time strategy game StarCraft II,}
 DeepMind Blog(2019).
 
-\bibitem{lecun1998mnist}
-Y.~LeCun,
-{\em The MNIST database of handwritten digits,}
-http://yann. lecun. com/exdb/mnist/(1998).
-
-\bibitem{kingma2014adam}
-D.~P.~Kingma and J.~Ba,
-{\em Adam: A method for stochastic optimization,}
-arXiv preprint arXiv:1412.6980(2014).
-
-\bibitem{zeiler2012adadelta}
-M.~D.~Zeiler,
-{\em ADADELTA: an adaptive learning rate method,}
-arXiv preprint arXiv:1212.5701(2012).
-
-\bibitem{senior2013empirical}
-A.~Senior, G.~Heigold, K.~Yang, and ~others.
-\newblock {\em An empirical study of learning rates in deep neural networks for
-  speech recognition,} .
-\newblock In {\em 2013 IEEE international conference on acoustics, speech and
-  signal processing} 6724. IEEE2013.
-
-\bibitem{dumoulin2016guide}
-V.~Dumoulin and F.~Visin,
-{\em A guide to convolution arithmetic for deep learning,}
-arXiv preprint arXiv:1603.07285(2016).
-
-\bibitem{radford2015unsupervised}
-A.~Radford, L.~Metz, and S.~Chintala,
-{\em Unsupervised representation learning with deep convolutional generative
-  adversarial networks,}
-arXiv preprint arXiv:1511.06434(2015).
+\bibitem{nguyen2015deep}
+A.~Nguyen, J.~Yosinski, and J.~Clune.
+\newblock {\em Deep neural networks are easily fooled: High confidence
+  predictions for unrecognizable images,} .
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition} 4272015.
 
 \bibitem{barsalou2008grounded}
 L.~W.~Barsalou,
@@ -187,6 +308,13 @@ T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean,
 {\em Efficient estimation of word representations in vector space,}
 arXiv preprint arXiv:1301.3781(2013).
 
+\bibitem{keller2016analysis}
+I.~Keller and K.~S.~Lohan.
+\newblock {\em Analysis of illumination robustness in long-term object
+  learning,} .
+\newblock In {\em 2016 25th IEEE International Symposium on Robot and Human
+  Interactive Communication (RO-MAN)} 240. IEEE2016.
+
 \bibitem{schillingmann2009towards}
 L.~Schillingmann, B.~Wrede, and K.~Rohlfing.
 \newblock {\em Towards a computational model of acoustic packaging,} .
@@ -197,17 +325,5 @@ L.~Schillingmann, B.~Wrede, and K.~Rohlfing.
 L.~Schillingmann, B.~Wrede, and K.~J.~Rohlfing,
 {\em A computational model of acoustic packaging,}
 IEEE Transactions on Autonomous Mental Development {\bf 1} (2009) 226.
-
-\bibitem{keller2016analysis}
-I.~Keller and K.~S.~Lohan.
-\newblock {\em Analysis of illumination robustness in long-term object
-  learning,} .
-\newblock In {\em 2016 25th IEEE International Symposium on Robot and Human
-  Interactive Communication (RO-MAN)} 240. IEEE2016.
-
-\bibitem{keller}
-I.~Keller and K.~S.~Lohan,
-{\em {On the Illumination Influence for Object Learning on Robot Companions},}
-Frontiers in Robotics and AI,(in press)(2019)~1.
 
 \end{thebibliography}

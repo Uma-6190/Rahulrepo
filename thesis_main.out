@@ -1,97 +1,97 @@
 \BOOKMARK [0][-]{chapter.2}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.3}{Multimodal Representation Learning}{chapter.2}% 2
 \BOOKMARK [1][-]{section.4}{Motivation}{chapter.2}% 3
-\BOOKMARK [0][-]{chapter.9}{Background}{}% 4
+\BOOKMARK [0][-]{chapter.9}{A Primer on Artificial Neural Networks}{}% 4
 \BOOKMARK [1][-]{section.10}{Introduction}{chapter.9}% 5
-\BOOKMARK [1][-]{section.11}{What are Artifical Neural Networks good at?}{chapter.9}% 6
-\BOOKMARK [2][-]{subsection.12}{Classification}{section.11}% 7
-\BOOKMARK [2][-]{subsection.13}{Generation}{section.11}% 8
-\BOOKMARK [2][-]{subsection.14}{Representation Learning}{section.11}% 9
-\BOOKMARK [2][-]{subsection.15}{Reinforcement Learning}{section.11}% 10
-\BOOKMARK [1][-]{section.16}{What are Artificial Neural Networks bad at?}{chapter.9}% 11
-\BOOKMARK [2][-]{subsection.17}{Data Ineffciency}{section.16}% 12
-\BOOKMARK [1][-]{section.18}{How to get off the Symbol Grounding Merry-Go-Round}{chapter.9}% 13
-\BOOKMARK [2][-]{subsection.19}{What is symbol grounding?}{section.18}% 14
-\BOOKMARK [2][-]{subsection.20}{How do humans do it?}{section.18}% 15
-\BOOKMARK [2][-]{subsection.21}{How do machines do it?}{section.18}% 16
-\BOOKMARK [1][-]{section.22}{Why brains are better}{chapter.9}% 17
-\BOOKMARK [2][-]{subsection.23}{Embodiment}{section.22}% 18
-\BOOKMARK [2][-]{subsection.26}{Development}{section.22}% 19
-\BOOKMARK [2][-]{subsection.28}{Pulling yourself up by the bootstraps}{section.22}% 20
-\BOOKMARK [2][-]{subsection.29}{Machine Equivelancy}{section.22}% 21
-\BOOKMARK [1][-]{section.32}{Where do we go from here?}{chapter.9}% 22
-\BOOKMARK [2][-]{subsection.33}{Robot bodies}{section.32}% 23
-\BOOKMARK [2][-]{subsection.34}{multimodality}{section.32}% 24
-\BOOKMARK [2][-]{subsection.35}{transfer learning}{section.32}% 25
-\BOOKMARK [0][-]{chapter.36}{A Primer on Artificial Neural Networks}{}% 26
-\BOOKMARK [1][-]{section.37}{Introduction}{chapter.36}% 27
-\BOOKMARK [1][-]{section.38}{Perceptrons}{chapter.36}% 28
-\BOOKMARK [2][-]{subsection.39}{What is a Perceptron}{section.38}% 29
-\BOOKMARK [2][-]{subsection.42}{Multi-Layer Perceptron}{section.38}% 30
-\BOOKMARK [1][-]{section.44}{Activation Functions}{chapter.36}% 31
-\BOOKMARK [2][-]{subsection.47}{Sigmoid Neurons}{section.44}% 32
-\BOOKMARK [1][-]{section.54}{Learning Algorithms}{chapter.36}% 33
-\BOOKMARK [2][-]{subsection.55}{Types of Training}{section.54}% 34
-\BOOKMARK [2][-]{subsection.56}{Cost functions: How wrong am I?}{section.54}% 35
-\BOOKMARK [2][-]{subsection.63}{Gradient Descent}{section.54}% 36
-\BOOKMARK [2][-]{subsection.70}{Backpropagation}{section.54}% 37
-\BOOKMARK [2][-]{subsection.71}{Extensions and Improvements}{section.54}% 38
-\BOOKMARK [1][-]{section.75}{Convolutional Neural Networks}{chapter.36}% 39
-\BOOKMARK [2][-]{subsection.77}{What is Convolution?}{section.75}% 40
-\BOOKMARK [2][-]{subsection.82}{Using Convolution Kernels in a Neural Network}{section.75}% 41
-\BOOKMARK [2][-]{subsection.84}{Transposed Convolutions}{section.75}% 42
-\BOOKMARK [1][-]{section.86}{Autoencoders}{chapter.36}% 43
-\BOOKMARK [2][-]{subsection.88}{Variational Autoencoders}{section.86}% 44
-\BOOKMARK [2][-]{subsection.89}{Multimodal Autoencoders}{section.86}% 45
-\BOOKMARK [0][-]{chapter.91}{Sensory Redundancy: Are two heads better than one?}{}% 46
-\BOOKMARK [1][-]{section.92}{Why have one sensor when two are better?}{chapter.91}% 47
-\BOOKMARK [1][-]{section.93}{Generating images from Natural Language}{chapter.91}% 48
-\BOOKMARK [2][-]{subsection.94}{Aims}{section.93}% 49
-\BOOKMARK [2][-]{subsection.95}{UCU Arabic Spoken Digits and MNIST}{section.93}% 50
-\BOOKMARK [2][-]{subsection.101}{Problem Description}{section.93}% 51
-\BOOKMARK [2][-]{subsection.104}{Experiment Details}{section.93}% 52
-\BOOKMARK [2][-]{subsection.122}{Results}{section.93}% 53
-\BOOKMARK [2][-]{subsection.130}{Discussion}{section.93}% 54
-\BOOKMARK [1][-]{section.137}{Conclusion}{chapter.91}% 55
-\BOOKMARK [0][-]{chapter.138}{Magical Vectors and Where to Find Them}{}% 56
-\BOOKMARK [1][-]{section.139}{ANN Latent space: the Final Frontier}{chapter.138}% 57
-\BOOKMARK [1][-]{section.141}{Vector Arithmetic}{chapter.138}% 58
-\BOOKMARK [1][-]{section.144}{Artificial Shapes Dataset}{chapter.138}% 59
-\BOOKMARK [2][-]{subsection.145}{Dataset Description}{section.144}% 60
-\BOOKMARK [2][-]{subsection.147}{Problem Description}{section.144}% 61
-\BOOKMARK [2][-]{subsection.148}{Network Description}{section.144}% 62
-\BOOKMARK [1][-]{section.149}{Experiments with the ArtS Dataset}{chapter.138}% 63
-\BOOKMARK [2][-]{subsection.150}{Experiment 1}{section.149}% 64
-\BOOKMARK [2][-]{subsection.160}{Experiment 2}{section.149}% 65
-\BOOKMARK [2][-]{subsection.173}{Experiment 3}{section.149}% 66
-\BOOKMARK [2][-]{subsection.186}{Experiment 4}{section.149}% 67
-\BOOKMARK [2][-]{subsection.199}{Experiment 5}{section.149}% 68
-\BOOKMARK [1][-]{section.208}{Conclusion}{chapter.138}% 69
-\BOOKMARK [0][-]{chapter.212}{Bidirectional Grounding of Real Data}{}% 70
-\BOOKMARK [1][-]{section.213}{The Difficulties of Real Data}{chapter.212}% 71
-\BOOKMARK [1][-]{section.214}{Acoustic Packaging}{chapter.212}% 72
-\BOOKMARK [1][-]{section.216}{Real Shapes Dataset}{chapter.212}% 73
-\BOOKMARK [2][-]{subsection.218}{Dataset Description}{section.216}% 74
-\BOOKMARK [2][-]{subsection.220}{Problem Description}{section.216}% 75
-\BOOKMARK [2][-]{subsection.221}{Network Description}{section.216}% 76
-\BOOKMARK [1][-]{section.222}{Experiments with the ReShape dataset}{chapter.212}% 77
-\BOOKMARK [2][-]{subsection.223}{Data Preprocessing}{section.222}% 78
-\BOOKMARK [2][-]{subsection.226}{Training Procedures}{section.222}% 79
-\BOOKMARK [1][-]{section.229}{Experiment 1}{chapter.212}% 80
-\BOOKMARK [2][-]{subsection.232}{Results}{section.229}% 81
-\BOOKMARK [1][-]{section.241}{Experiment 2}{chapter.212}% 82
-\BOOKMARK [2][-]{subsection.244}{Results}{section.241}% 83
-\BOOKMARK [2][-]{subsection.253}{Discussion}{section.241}% 84
-\BOOKMARK [1][-]{section.254}{Conclusion}{chapter.212}% 85
-\BOOKMARK [0][-]{chapter.255}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 86
-\BOOKMARK [1][-]{section.256}{Summary of important points}{chapter.255}% 87
-\BOOKMARK [1][-]{section.257}{Conclusion}{chapter.255}% 88
-\BOOKMARK [0][-]{chapter.258}{Future Work}{}% 89
-\BOOKMARK [1][-]{section.259}{Where do we go now?}{chapter.258}% 90
-\BOOKMARK [2][-]{subsection.260}{More Sensors}{section.259}% 91
-\BOOKMARK [2][-]{subsection.261}{Better Sensors}{section.259}% 92
-\BOOKMARK [2][-]{subsection.262}{Swarm Robots and the Cloud}{section.259}% 93
-\BOOKMARK [0][-]{appendix.263}{Appendix A Primer on Artifical Neural Networks}{}% 94
-\BOOKMARK [0][-]{appendix.269}{Appendix Sensory Redundancy}{}% 95
-\BOOKMARK [0][-]{appendix.271}{Appendix Magical Vectors and Where to Find Them}{}% 96
-\BOOKMARK [0][-]{appendix*.275}{Bibliography}{}% 97
+\BOOKMARK [1][-]{section.11}{Perceptrons}{chapter.9}% 6
+\BOOKMARK [2][-]{subsection.12}{What is a Perceptron}{section.11}% 7
+\BOOKMARK [2][-]{subsection.15}{Multi-Layer Perceptron}{section.11}% 8
+\BOOKMARK [1][-]{section.17}{Activation Functions}{chapter.9}% 9
+\BOOKMARK [2][-]{subsection.20}{Sigmoid Neurons}{section.17}% 10
+\BOOKMARK [1][-]{section.27}{Learning Algorithms}{chapter.9}% 11
+\BOOKMARK [2][-]{subsection.28}{Types of Training}{section.27}% 12
+\BOOKMARK [2][-]{subsection.29}{Cost functions: How wrong am I?}{section.27}% 13
+\BOOKMARK [2][-]{subsection.36}{Gradient Descent}{section.27}% 14
+\BOOKMARK [2][-]{subsection.43}{Backpropagation}{section.27}% 15
+\BOOKMARK [2][-]{subsection.44}{Extensions and Improvements}{section.27}% 16
+\BOOKMARK [1][-]{section.48}{Convolutional Neural Networks}{chapter.9}% 17
+\BOOKMARK [2][-]{subsection.50}{What is Convolution?}{section.48}% 18
+\BOOKMARK [2][-]{subsection.55}{Using Convolution Kernels in a Neural Network}{section.48}% 19
+\BOOKMARK [2][-]{subsection.57}{Transposed Convolutions}{section.48}% 20
+\BOOKMARK [1][-]{section.59}{Autoencoders}{chapter.9}% 21
+\BOOKMARK [2][-]{subsection.61}{Variational Autoencoders}{section.59}% 22
+\BOOKMARK [2][-]{subsection.62}{Multimodal Autoencoders}{section.59}% 23
+\BOOKMARK [0][-]{chapter.64}{Background}{}% 24
+\BOOKMARK [1][-]{section.65}{Introduction}{chapter.64}% 25
+\BOOKMARK [1][-]{section.66}{What are Artifical Neural Networks good at?}{chapter.64}% 26
+\BOOKMARK [2][-]{subsection.67}{Classification}{section.66}% 27
+\BOOKMARK [2][-]{subsection.68}{Generation}{section.66}% 28
+\BOOKMARK [2][-]{subsection.69}{Representation Learning}{section.66}% 29
+\BOOKMARK [1][-]{section.71}{What are Artificial Neural Networks Bad at?}{chapter.64}% 30
+\BOOKMARK [2][-]{subsection.72}{Artificial Neural Networks are Easily Fooled}{section.71}% 31
+\BOOKMARK [2][-]{subsection.73}{Data Ineffciency}{section.71}% 32
+\BOOKMARK [1][-]{section.74}{How to get off the Symbol Grounding Merry-Go-Round}{chapter.64}% 33
+\BOOKMARK [2][-]{subsection.75}{What is symbol grounding?}{section.74}% 34
+\BOOKMARK [2][-]{subsection.76}{How do humans do it?}{section.74}% 35
+\BOOKMARK [2][-]{subsection.77}{How do machines do it?}{section.74}% 36
+\BOOKMARK [1][-]{section.78}{Why brains are better}{chapter.64}% 37
+\BOOKMARK [2][-]{subsection.79}{Embodiment}{section.78}% 38
+\BOOKMARK [2][-]{subsection.82}{Development}{section.78}% 39
+\BOOKMARK [2][-]{subsection.84}{Pulling yourself up by the bootstraps}{section.78}% 40
+\BOOKMARK [2][-]{subsection.85}{Machine Equivelancy}{section.78}% 41
+\BOOKMARK [1][-]{section.88}{Where do we go from here?}{chapter.64}% 42
+\BOOKMARK [2][-]{subsection.89}{Robot bodies}{section.88}% 43
+\BOOKMARK [2][-]{subsection.90}{multimodality}{section.88}% 44
+\BOOKMARK [2][-]{subsection.91}{transfer learning}{section.88}% 45
+\BOOKMARK [0][-]{chapter.92}{Sensory Redundancy: Are two heads better than one?}{}% 46
+\BOOKMARK [1][-]{section.93}{Why have one sensor when two are better?}{chapter.92}% 47
+\BOOKMARK [1][-]{section.94}{Generating images from Natural Language}{chapter.92}% 48
+\BOOKMARK [2][-]{subsection.95}{Aims}{section.94}% 49
+\BOOKMARK [2][-]{subsection.96}{UCU Arabic Spoken Digits and MNIST}{section.94}% 50
+\BOOKMARK [2][-]{subsection.102}{Problem Description}{section.94}% 51
+\BOOKMARK [2][-]{subsection.105}{Experiment Details}{section.94}% 52
+\BOOKMARK [2][-]{subsection.123}{Results}{section.94}% 53
+\BOOKMARK [2][-]{subsection.131}{Discussion}{section.94}% 54
+\BOOKMARK [1][-]{section.138}{Conclusion}{chapter.92}% 55
+\BOOKMARK [0][-]{chapter.139}{Magical Vectors and Where to Find Them}{}% 56
+\BOOKMARK [1][-]{section.140}{ANN Latent space: the Final Frontier}{chapter.139}% 57
+\BOOKMARK [1][-]{section.142}{Vector Arithmetic}{chapter.139}% 58
+\BOOKMARK [1][-]{section.145}{Artificial Shapes Dataset}{chapter.139}% 59
+\BOOKMARK [2][-]{subsection.146}{Dataset Description}{section.145}% 60
+\BOOKMARK [2][-]{subsection.148}{Problem Description}{section.145}% 61
+\BOOKMARK [2][-]{subsection.149}{Network Description}{section.145}% 62
+\BOOKMARK [1][-]{section.150}{Experiments with the ArtS Dataset}{chapter.139}% 63
+\BOOKMARK [2][-]{subsection.151}{Experiment 1}{section.150}% 64
+\BOOKMARK [2][-]{subsection.161}{Experiment 2}{section.150}% 65
+\BOOKMARK [2][-]{subsection.174}{Experiment 3}{section.150}% 66
+\BOOKMARK [2][-]{subsection.187}{Experiment 4}{section.150}% 67
+\BOOKMARK [2][-]{subsection.200}{Experiment 5}{section.150}% 68
+\BOOKMARK [1][-]{section.209}{Conclusion}{chapter.139}% 69
+\BOOKMARK [0][-]{chapter.213}{Bidirectional Grounding of Real Data}{}% 70
+\BOOKMARK [1][-]{section.214}{The Difficulties of Real Data}{chapter.213}% 71
+\BOOKMARK [1][-]{section.215}{Acoustic Packaging}{chapter.213}% 72
+\BOOKMARK [1][-]{section.217}{Real Shapes Dataset}{chapter.213}% 73
+\BOOKMARK [2][-]{subsection.219}{Dataset Description}{section.217}% 74
+\BOOKMARK [2][-]{subsection.221}{Problem Description}{section.217}% 75
+\BOOKMARK [2][-]{subsection.222}{Network Description}{section.217}% 76
+\BOOKMARK [1][-]{section.223}{Experiments with the ReShape dataset}{chapter.213}% 77
+\BOOKMARK [2][-]{subsection.224}{Data Preprocessing}{section.223}% 78
+\BOOKMARK [2][-]{subsection.227}{Training Procedures}{section.223}% 79
+\BOOKMARK [1][-]{section.230}{Experiment 1}{chapter.213}% 80
+\BOOKMARK [2][-]{subsection.233}{Results}{section.230}% 81
+\BOOKMARK [1][-]{section.242}{Experiment 2}{chapter.213}% 82
+\BOOKMARK [2][-]{subsection.245}{Results}{section.242}% 83
+\BOOKMARK [2][-]{subsection.254}{Discussion}{section.242}% 84
+\BOOKMARK [1][-]{section.255}{Conclusion}{chapter.213}% 85
+\BOOKMARK [0][-]{chapter.256}{What have we learnt and more importantly, what have our neural nets learnt?}{}% 86
+\BOOKMARK [1][-]{section.257}{Summary of important points}{chapter.256}% 87
+\BOOKMARK [1][-]{section.258}{Conclusion}{chapter.256}% 88
+\BOOKMARK [0][-]{chapter.259}{Future Work}{}% 89
+\BOOKMARK [1][-]{section.260}{Where do we go now?}{chapter.259}% 90
+\BOOKMARK [2][-]{subsection.261}{More Sensors}{section.260}% 91
+\BOOKMARK [2][-]{subsection.262}{Better Sensors}{section.260}% 92
+\BOOKMARK [2][-]{subsection.263}{Swarm Robots and the Cloud}{section.260}% 93
+\BOOKMARK [0][-]{appendix.264}{Appendix A Primer on Artifical Neural Networks}{}% 94
+\BOOKMARK [0][-]{appendix.270}{Appendix Sensory Redundancy}{}% 95
+\BOOKMARK [0][-]{appendix.272}{Appendix Magical Vectors and Where to Find Them}{}% 96
+\BOOKMARK [0][-]{appendix*.276}{Bibliography}{}% 97

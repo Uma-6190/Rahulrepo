@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  13 DEC 2019 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  9 JAN 2020 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1433,37 +1433,28 @@ ed on input line 77.
 (./Chapters/Chapter2.tex [4 <./Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.
 png>]
 Chapter 2.
-[5
-
-]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
- [6]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
- [7]) (./Chapters/Chapter3.tex [8] [9]
-Chapter 3.
-<Figs/intro2dl/perceptron.png, id=677, 155.30823pt x 57.74373pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+<Figs/intro2dl/perceptron.png, id=618, 155.30823pt x 57.74373pt>
 File: Figs/intro2dl/perceptron.png Graphic file (type png)
 
 <use Figs/intro2dl/perceptron.png>
 Package pdftex.def Info: Figs/intro2dl/perceptron.png used on input line 25.
 (pdftex.def)             Requested size: 170.71393pt x 63.47598pt.
- [10
+ [5
 
  <./Figs/intro2dl/perceptron.png>]
-<Figs/intro2dl/mlp.png, id=690, 235.6002pt x 131.17004pt>
+<Figs/intro2dl/mlp.png, id=631, 235.6002pt x 131.17004pt>
 File: Figs/intro2dl/mlp.png Graphic file (type png)
 
 <use Figs/intro2dl/mlp.png>
 Package pdftex.def Info: Figs/intro2dl/mlp.png used on input line 60.
 (pdftex.def)             Requested size: 170.71393pt x 95.0468pt.
- [11] [12 <./Figs/intro2dl/mlp.png>] [13]
+ [6] [7 <./Figs/intro2dl/mlp.png>] [8]
 \openout4 = `thesis_main.ent'.
 
- [14]
-[15] [16] [17] [18] [19] [20]
+ [9] [10]
+[11] [12] [13] [14] [15]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 420.
 
 
@@ -1472,23 +1463,23 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 420.
- [21] [22]
-<Figs/intro2dl/cat.png, id=818, 60.67668pt x 61.30905pt>
+ [16] [17]
+<Figs/intro2dl/cat.png, id=759, 60.67668pt x 61.30905pt>
 File: Figs/intro2dl/cat.png Graphic file (type png)
 
 <use Figs/intro2dl/cat.png>
 Package pdftex.def Info: Figs/intro2dl/cat.png used on input line 490.
 (pdftex.def)             Requested size: 140.84192pt x 142.32031pt.
 
-<Figs/intro2dl/catScrambled.png, id=819, 2022.55624pt x 2043.635pt>
+<Figs/intro2dl/catScrambled.png, id=760, 2022.55624pt x 2043.635pt>
 File: Figs/intro2dl/catScrambled.png Graphic file (type png)
 
 <use Figs/intro2dl/catScrambled.png>
 Package pdftex.def Info: Figs/intro2dl/catScrambled.png used on input line 491.
 
 (pdftex.def)             Requested size: 140.84192pt x 142.28947pt.
- [23 <./Figs/intro2dl/cat.png> <./Figs/intro2dl/catScrambled.png (PNG copy)>]
-<Figs/intro2dl/convolutionSingleStep.png, id=828, 477.4638pt x 104.3097pt>
+ [18 <./Figs/intro2dl/cat.png> <./Figs/intro2dl/catScrambled.png (PNG copy)>]
+<Figs/intro2dl/convolutionSingleStep.png, id=769, 477.4638pt x 104.3097pt>
 File: Figs/intro2dl/convolutionSingleStep.png Graphic file (type png)
 
 <use Figs/intro2dl/convolutionSingleStep.png>
@@ -1496,23 +1487,23 @@ Package pdftex.def Info: Figs/intro2dl/convolutionSingleStep.png used on input
 line 511.
 (pdftex.def)             Requested size: 320.0935pt x 69.93169pt.
 
-<Figs/intro2dl/convolution.png, id=831, 328.1058pt x 561.5379pt>
+<Figs/intro2dl/convolution.png, id=772, 328.1058pt x 561.5379pt>
 File: Figs/intro2dl/convolution.png Graphic file (type png)
 
 <use Figs/intro2dl/convolution.png>
 Package pdftex.def Info: Figs/intro2dl/convolution.png used on input line 522.
 (pdftex.def)             Requested size: 320.0935pt x 547.83571pt.
 
-<Figs/intro2dl/convolutionImplementation.png, id=833, 310.5201pt x 445.4241pt>
+<Figs/intro2dl/convolutionImplementation.png, id=774, 310.5201pt x 445.4241pt>
 File: Figs/intro2dl/convolutionImplementation.png Graphic file (type png)
 
 <use Figs/intro2dl/convolutionImplementation.png>
 Package pdftex.def Info: Figs/intro2dl/convolutionImplementation.png used on in
 put line 533.
 (pdftex.def)             Requested size: 320.0935pt x 459.17937pt.
- [24 <./Figs/intro2dl/convolutionSingleStep.png>] [25 <./Figs/intro2dl/convolut
-ion.png>] [26 <./Figs/intro2dl/convolutionImplementation.png>] [27]
-<Figs/intro2dl/TransconvolutionImplementation.png, id=867, 310.5201pt x 443.737
+ [19 <./Figs/intro2dl/convolutionSingleStep.png>] [20 <./Figs/intro2dl/convolut
+ion.png>] [21 <./Figs/intro2dl/convolutionImplementation.png>] [22]
+<Figs/intro2dl/TransconvolutionImplementation.png, id=811, 310.5201pt x 443.737
 8pt>
 File: Figs/intro2dl/TransconvolutionImplementation.png Graphic file (type png)
  <use Figs/intro2dl/TransconvolutionImplementation.png>
@@ -1520,42 +1511,85 @@ Package pdftex.def Info: Figs/intro2dl/TransconvolutionImplementation.png used
 on input line 564.
 (pdftex.def)             Requested size: 320.0935pt x 457.44098pt.
 
-<Figs/intro2dl/AE.png, id=869, 116.44504pt x 190.49167pt>
+<Figs/intro2dl/AE.png, id=813, 116.44504pt x 190.49167pt>
 File: Figs/intro2dl/AE.png Graphic file (type png)
 
 <use Figs/intro2dl/AE.png>
 Package pdftex.def Info: Figs/intro2dl/AE.png used on input line 601.
 (pdftex.def)             Requested size: 106.69783pt x 174.55685pt.
- [28] [29 <./Figs/intro2dl/TransconvolutionImplementation.png>] <Figs/intro2dl/
-MAE.png, id=882, 317.7772pt x 214.94302pt>
+ [23] [24 <./Figs/intro2dl/TransconvolutionImplementation.png>] <Figs/intro2dl/
+MAE.png, id=826, 317.7772pt x 214.94302pt>
 File: Figs/intro2dl/MAE.png Graphic file (type png)
 
 <use Figs/intro2dl/MAE.png>
 Package pdftex.def Info: Figs/intro2dl/MAE.png used on input line 623.
 (pdftex.def)             Requested size: 213.39568pt x 144.34232pt.
- [30 <./Figs/intro2dl/AE.png>] (./thesis_main.ent))
-(./Chapters/Chapter4B.tex [31 <./Figs/intro2dl/MAE.png>]
+ [25 <./Figs/intro2dl/AE.png>] (./thesis_main.ent))
+(./Chapters/Chapter3.tex [26 <./Figs/intro2dl/MAE.png>]
+Chapter 3.
+[27
+
+] [28] [29] [30]
+
+Package natbib Warning: Citation `silberer2014learning' on page 31 undefined on
+ input line 105.
+
+
+Package natbib Warning: Citation `chorowski2019unsupervised' on page 31 undefin
+ed on input line 105.
+
+
+Package natbib Warning: Citation `vincent2010stacked' on page 31 undefined on i
+nput line 105.
+
+
+Package natbib Warning: Citation `mikolov2013linguistic' on page 31 undefined o
+n input line 105.
+
+
+Package natbib Warning: Citation `feng2010visual' on page 31 undefined on input
+ line 105.
+
+
+Package natbib Warning: Citation `eslami2018neural' on page 31 undefined on inp
+ut line 105.
+
+
+Package natbib Warning: Citation `donahue2019large' on page 31 undefined on inp
+ut line 105.
+
+
+Package natbib Warning: Citation `mikolov2013linguistic' on page 31 undefined o
+n input line 109.
+
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 114.
+[31]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ [32]) (./Chapters/Chapter4B.tex [33]
 Chapter 4.
-[32
+[34
 
 ]
 \openout4 = `thesis_main.ent'.
 
- [33] [34] [35] [36] [37] [38]
+ [35] [36] [37] [38] [39] [40]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39] [40] <Figs/mnistSpoken/lbAll.png, id=1006, 556.9608pt x 175.3752pt>
+[41] [42] <Figs/mnistSpoken/lbAll.png, id=1097, 556.9608pt x 175.3752pt>
 File: Figs/mnistSpoken/lbAll.png Graphic file (type png)
 
 <use Figs/mnistSpoken/lbAll.png>
 Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 353.
 (pdftex.def)             Requested size: 426.79135pt x 134.39172pt.
 
-<Figs/mnistSpoken/5s.png, id=1008, 192.72pt x 175.1343pt>
+<Figs/mnistSpoken/5s.png, id=1099, 192.72pt x 175.1343pt>
 File: Figs/mnistSpoken/5s.png Graphic file (type png)
 
 <use Figs/mnistSpoken/5s.png>
@@ -1565,29 +1599,29 @@ Package pdftex.def Info: Figs/mnistSpoken/5s.png used on input line 363.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41 <./Figs/mnistSpoken/lbAll.png>] [42 <./Figs/mnistSpoken/5s.png>] [43]
-[44] [45] (./thesis_main.ent)) (./Chapters/Chapter5.tex [46]
+[43 <./Figs/mnistSpoken/lbAll.png>] [44 <./Figs/mnistSpoken/5s.png>] [45]
+[46] [47] (./thesis_main.ent)) (./Chapters/Chapter5.tex [48]
 Chapter 5.
-[47
+[49
 
-] <Figs/shapes/vectorArthExmp.png, id=1069, 582.978pt x 739.563pt>
+] <Figs/shapes/vectorArthExmp.png, id=1166, 582.978pt x 739.563pt>
 File: Figs/shapes/vectorArthExmp.png Graphic file (type png)
 
 <use Figs/shapes/vectorArthExmp.png>
 Package pdftex.def Info: Figs/shapes/vectorArthExmp.png used on input line 31.
 (pdftex.def)             Requested size: 426.79135pt x 541.42253pt.
 
-<Figs/shapes/shapes.png, id=1070, 463.7325pt x 154.8987pt>
+<Figs/shapes/shapes.png, id=1167, 463.7325pt x 154.8987pt>
 File: Figs/shapes/shapes.png Graphic file (type png)
 
 <use Figs/shapes/shapes.png>
 Package pdftex.def Info: Figs/shapes/shapes.png used on input line 38.
 (pdftex.def)             Requested size: 320.0935pt x 106.92038pt.
- [48] [49 <./Figs/shapes/vectorArthExmp.png>]
+ [50] [51 <./Figs/shapes/vectorArthExmp.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[50 <./Figs/shapes/shapes.png>] [51] [52] [53]
+[52 <./Figs/shapes/shapes.png>] [53] [54] [55]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 PGFPlots: reading {csvs/331/total331.csv}
@@ -1607,14 +1641,14 @@ PGFPlots: reading {csvs/331/word331.csv}
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[54] [55] <Figs/shapes/331_8v200.png, id=1135, 534.3162pt x 351.9549pt>
+[56] [57] <Figs/shapes/331_8v200.png, id=1242, 534.3162pt x 351.9549pt>
 File: Figs/shapes/331_8v200.png Graphic file (type png)
 
 <use Figs/shapes/331_8v200.png>
 Package pdftex.def Info: Figs/shapes/331_8v200.png used on input line 297.
 (pdftex.def)             Requested size: 266.74458pt x 175.70313pt.
 
-<Figs/shapes/shapes331.png, id=1137, 725.8317pt x 570.2103pt>
+<Figs/shapes/shapes331.png, id=1244, 725.8317pt x 570.2103pt>
 File: Figs/shapes/shapes331.png Graphic file (type png)
 
 <use Figs/shapes/shapes331.png>
@@ -1624,7 +1658,7 @@ Package pdftex.def Info: Figs/shapes/shapes331.png used on input line 313.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56 <./Figs/shapes/331_8v200.png>] [57 <./Figs/shapes/shapes331.png>]
+[58 <./Figs/shapes/331_8v200.png>] [59 <./Figs/shapes/shapes331.png>]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 PGFPlots: reading {csvs/333/total333.csv}
@@ -1641,14 +1675,14 @@ PGFPlots: reading {csvs/333/word333.csv}
 PGFPlots: reading {csvs/333/word333.csv}
 PGFPlots: reading {csvs/333/word333.csv}
 
-<Figs/shapes/multiword333.png, id=1156, 507.0945pt x 506.1309pt>
+<Figs/shapes/multiword333.png, id=1265, 507.0945pt x 506.1309pt>
 File: Figs/shapes/multiword333.png Graphic file (type png)
 
 <use Figs/shapes/multiword333.png>
 Package pdftex.def Info: Figs/shapes/multiword333.png used on input line 498.
 (pdftex.def)             Requested size: 213.39568pt x 212.99055pt.
- [58] [59]
-<Figs/shapes/singlelabel333A.png, id=1172, 725.3499pt x 554.3109pt>
+ [60] [61]
+<Figs/shapes/singlelabel333A.png, id=1284, 725.3499pt x 554.3109pt>
 File: Figs/shapes/singlelabel333A.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel333A.png>
@@ -1659,7 +1693,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel333A.png used on input line 510
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/shapes333.png, id=1174, 729.6861pt x 569.0058pt>
+<Figs/shapes/shapes333.png, id=1286, 729.6861pt x 569.0058pt>
 File: Figs/shapes/shapes333.png Graphic file (type png)
 
 <use Figs/shapes/shapes333.png>
@@ -1669,8 +1703,8 @@ Package pdftex.def Info: Figs/shapes/shapes333.png used on input line 520.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[60 <./Figs/shapes/multiword333.png>]
-<Figs/shapes/2word333A.png, id=1185, 664.884pt x 642.2394pt>
+[62 <./Figs/shapes/multiword333.png>]
+<Figs/shapes/2word333A.png, id=1298, 664.884pt x 642.2394pt>
 File: Figs/shapes/2word333A.png Graphic file (type png)
 
 <use Figs/shapes/2word333A.png>
@@ -1680,8 +1714,8 @@ Package pdftex.def Info: Figs/shapes/2word333A.png used on input line 530.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[61 <./Figs/shapes/singlelabel333A.png>]
-<Figs/shapes/shapes331v333.png, id=1197, 410.7345pt x 569.2467pt>
+[63 <./Figs/shapes/singlelabel333A.png>]
+<Figs/shapes/shapes331v333.png, id=1310, 410.7345pt x 569.2467pt>
 File: Figs/shapes/shapes331v333.png Graphic file (type png)
 
 <use Figs/shapes/shapes331v333.png>
@@ -1691,14 +1725,14 @@ Package pdftex.def Info: Figs/shapes/shapes331v333.png used on input line 548.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[62 <./Figs/shapes/shapes333.png>] [63 <./Figs/shapes/2word333A.png>]
+[64 <./Figs/shapes/shapes333.png>] [65 <./Figs/shapes/2word333A.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figs/shapes/multiword339.png, id=1216, 571.4148pt x 503.7219pt>
+<Figs/shapes/multiword339.png, id=1332, 571.4148pt x 503.7219pt>
 File: Figs/shapes/multiword339.png Graphic file (type png)
 
 <use Figs/shapes/multiword339.png>
@@ -1708,8 +1742,8 @@ Package pdftex.def Info: Figs/shapes/multiword339.png used on input line 627.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[64 <./Figs/shapes/shapes331v333.png>] [65]
-<Figs/shapes/singlelabel339.png, id=1233, 543.9522pt x 173.2071pt>
+[66 <./Figs/shapes/shapes331v333.png>] [67]
+<Figs/shapes/singlelabel339.png, id=1351, 543.9522pt x 173.2071pt>
 File: Figs/shapes/singlelabel339.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel339.png>
@@ -1717,7 +1751,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel339.png used on input line 639.
 
 (pdftex.def)             Requested size: 320.0935pt x 101.927pt.
 
-<Figs/shapes/singlelabel339_pos.png, id=1235, 547.3248pt x 171.2799pt>
+<Figs/shapes/singlelabel339_pos.png, id=1353, 547.3248pt x 171.2799pt>
 File: Figs/shapes/singlelabel339_pos.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel339_pos.png>
@@ -1728,7 +1762,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel339_pos.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/2word339_pos.png, id=1237, 610.6815pt x 484.9317pt>
+<Figs/shapes/2word339_pos.png, id=1355, 610.6815pt x 484.9317pt>
 File: Figs/shapes/2word339_pos.png Graphic file (type png)
 
 <use Figs/shapes/2word339_pos.png>
@@ -1738,9 +1772,9 @@ Package pdftex.def Info: Figs/shapes/2word339_pos.png used on input line 657.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[66 <./Figs/shapes/multiword339.png> <./Figs/shapes/singlelabel339.png>]
-[67 <./Figs/shapes/singlelabel339_pos.png> <./Figs/shapes/2word339_pos.png>]
-[68] <Figs/shapes/singlelabel739_shape.png, id=1270, 387.1263pt x 225.4824pt>
+[68 <./Figs/shapes/multiword339.png> <./Figs/shapes/singlelabel339.png>]
+[69 <./Figs/shapes/singlelabel339_pos.png> <./Figs/shapes/2word339_pos.png>]
+[70] <Figs/shapes/singlelabel739_shape.png, id=1391, 387.1263pt x 225.4824pt>
 File: Figs/shapes/singlelabel739_shape.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_shape.png>
@@ -1751,7 +1785,7 @@ e 746.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/singlelabel739_col.png, id=1271, 438.438pt x 325.9377pt>
+<Figs/shapes/singlelabel739_col.png, id=1392, 438.438pt x 325.9377pt>
 File: Figs/shapes/singlelabel739_col.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_col.png>
@@ -1762,7 +1796,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel739_col.png used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figs/shapes/singlelabel739_pos.png, id=1272, 541.3023pt x 325.6968pt>
+<Figs/shapes/singlelabel739_pos.png, id=1393, 541.3023pt x 325.6968pt>
 File: Figs/shapes/singlelabel739_pos.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_pos.png>
@@ -1773,7 +1807,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel739_pos.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/2word739_pos.png, id=1275, 604.1772pt x 634.2897pt>
+<Figs/shapes/2word739_pos.png, id=1396, 604.1772pt x 634.2897pt>
 File: Figs/shapes/2word739_pos.png Graphic file (type png)
 
 <use Figs/shapes/2word739_pos.png>
@@ -1783,17 +1817,17 @@ Package pdftex.def Info: Figs/shapes/2word739_pos.png used on input line 774.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[69] [70 <./Figs/shapes/singlelabel739_shape.png> <./Figs/shapes/singlelabel739
-_col.png>] [71 <./Figs/shapes/singlelabel739_pos.png> <./Figs/shapes/2word739_p
-os.png>] [72] [73] [74]
-<Figs/shapes/739_minus1.png, id=1330, 544.1931pt x 485.6544pt>
+[71] [72 <./Figs/shapes/singlelabel739_shape.png> <./Figs/shapes/singlelabel739
+_col.png>] [73 <./Figs/shapes/singlelabel739_pos.png> <./Figs/shapes/2word739_p
+os.png>] [74] [75] [76]
+<Figs/shapes/739_minus1.png, id=1457, 544.1931pt x 485.6544pt>
 File: Figs/shapes/739_minus1.png Graphic file (type png)
 
 <use Figs/shapes/739_minus1.png>
 Package pdftex.def Info: Figs/shapes/739_minus1.png used on input line 884.
 (pdftex.def)             Requested size: 298.75264pt x 266.61424pt.
 
-<Figs/shapes/739_minus1_vectorArthGT.png, id=1333, 539.3751pt x 439.6425pt>
+<Figs/shapes/739_minus1_vectorArthGT.png, id=1460, 539.3751pt x 439.6425pt>
 File: Figs/shapes/739_minus1_vectorArthGT.png Graphic file (type png)
 
 <use Figs/shapes/739_minus1_vectorArthGT.png>
@@ -1804,19 +1838,15 @@ line 893.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[75 <./Figs/shapes/739_minus1.png>]
+[77 <./Figs/shapes/739_minus1.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[76 <./Figs/shapes/739_minus1_vectorArthGT.png>] [77] [78] [79] [80])
-(./Chapters/Chapter6.tex [81]
+[78 <./Figs/shapes/739_minus1_vectorArthGT.png>] [79] [80] [81] [82])
+(./Chapters/Chapter6.tex [83]
 Chapter 6.
 
-LaTeX Warning: Reference `keller2016analysis' on page 82 undefined on input lin
-e 15.
-
-
-<Figs/chapter6/bimodal_system_schematic.png, id=1386, 230.60153pt x 50.22765pt>
+<Figs/chapter6/bimodal_system_schematic.png, id=1517, 230.60153pt x 50.22765pt>
 File: Figs/chapter6/bimodal_system_schematic.png Graphic file (type png)
 <use Figs/chapter6/bimodal_system_schematic.png>
 Package pdftex.def Info: Figs/chapter6/bimodal_system_schematic.png used on inp
@@ -1826,16 +1856,16 @@ ut line 25.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/chapter6/ReShapeExs.png, id=1387, 1541.76pt x 385.44pt>
+<Figs/chapter6/ReShapeExs.png, id=1518, 1541.76pt x 385.44pt>
 File: Figs/chapter6/ReShapeExs.png Graphic file (type png)
 
 <use Figs/chapter6/ReShapeExs.png>
 Package pdftex.def Info: Figs/chapter6/ReShapeExs.png used on input line 36.
 (pdftex.def)             Requested size: 426.79135pt x 106.69325pt.
- [82
+ [84
 
 ]
-<Figs/chapter6/ExemplarAllClasses.png, id=1397, 1130.80869pt x 551.78145pt>
+<Figs/chapter6/ExemplarAllClasses.png, id=1530, 1130.80869pt x 551.78145pt>
 File: Figs/chapter6/ExemplarAllClasses.png Graphic file (type png)
 
 <use Figs/chapter6/ExemplarAllClasses.png>
@@ -1848,9 +1878,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \openout4 = `thesis_main.ent'.
 
-[83 <./Figs/chapter6/bimodal_system_schematic.png> <./Figs/chapter6/ReShapeExs.
-png>] [84 <./Figs/chapter6/ExemplarAllClasses.png>]
-<Figs/chapter6/ReShapeCrop.png, id=1417, 481.8pt x 481.8pt>
+[85 <./Figs/chapter6/bimodal_system_schematic.png> <./Figs/chapter6/ReShapeExs.
+png>] [86 <./Figs/chapter6/ExemplarAllClasses.png>]
+<Figs/chapter6/ReShapeCrop.png, id=1553, 481.8pt x 481.8pt>
 File: Figs/chapter6/ReShapeCrop.png Graphic file (type png)
 
 <use Figs/chapter6/ReShapeCrop.png>
@@ -1860,7 +1890,7 @@ Package pdftex.def Info: Figs/chapter6/ReShapeCrop.png used on input line 78.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/chapter6/cropHeuristics.png, id=1419, 642.4pt x 481.8pt>
+<Figs/chapter6/cropHeuristics.png, id=1555, 642.4pt x 481.8pt>
 File: Figs/chapter6/cropHeuristics.png Graphic file (type png)
 
 <use Figs/chapter6/cropHeuristics.png>
@@ -1868,42 +1898,42 @@ Package pdftex.def Info: Figs/chapter6/cropHeuristics.png used on input line 89
 .
 (pdftex.def)             Requested size: 298.75264pt x 224.07144pt.
 
-<Figs/chapter6/avgBrickDuckBGY.png, id=1420, 350.96118pt x 192.99101pt>
+<Figs/chapter6/avgBrickDuckBGY.png, id=1556, 350.96118pt x 192.99101pt>
 File: Figs/chapter6/avgBrickDuckBGY.png Graphic file (type png)
 
 <use Figs/chapter6/avgBrickDuckBGY.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGY.png used on input line 1
 04.
 (pdftex.def)             Requested size: 298.75264pt x 164.2905pt.
- [85]
-<Figs/chapter6/avgMost.png, id=1426, 819.61407pt x 293.63301pt>
+ [87]
+<Figs/chapter6/avgMost.png, id=1564, 819.61407pt x 293.63301pt>
 File: Figs/chapter6/avgMost.png Graphic file (type png)
 
 <use Figs/chapter6/avgMost.png>
 Package pdftex.def Info: Figs/chapter6/avgMost.png used on input line 111.
 (pdftex.def)             Requested size: 426.79135pt x 152.90062pt.
- [86 <./Figs/chapter6/ReShapeCrop.png>]
+ [88 <./Figs/chapter6/ReShapeCrop.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-<Figs/chapter6/avgBrickDuckBGYExemplars.png, id=1442, 351.29242pt x 192.99101pt
+<Figs/chapter6/avgBrickDuckBGYExemplars.png, id=1581, 351.29242pt x 192.99101pt
 >
 File: Figs/chapter6/avgBrickDuckBGYExemplars.png Graphic file (type png)
  <use Figs/chapter6/avgBrickDuckBGYExemplars.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGYExemplars.png used on inp
 ut line 149.
 (pdftex.def)             Requested size: 298.75264pt x 164.13147pt.
- [87 <./Figs/chapter6/cropHeuristics.png (PNG copy)> <./Figs/chapter6/avgBrickD
-uckBGY.png>] [88 <./Figs/chapter6/avgMost.png>]
-<Figs/chapter6/avgBrickDuckBGYGenerated.png, id=1460, 350.96118pt x 192.99101pt
+ [89 <./Figs/chapter6/cropHeuristics.png (PNG copy)> <./Figs/chapter6/avgBrickD
+uckBGY.png>] [90 <./Figs/chapter6/avgMost.png>]
+<Figs/chapter6/avgBrickDuckBGYGenerated.png, id=1603, 350.96118pt x 192.99101pt
 >
 File: Figs/chapter6/avgBrickDuckBGYGenerated.png Graphic file (type png)
  <use Figs/chapter6/avgBrickDuckBGYGenerated.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGYGenerated.png used on inp
 ut line 180.
 (pdftex.def)             Requested size: 298.75264pt x 164.2905pt.
- [89 <./Figs/chapter6/avgBrickDuckBGYExemplars.png> <./Figs/chapter6/avgBrickDu
+ [91 <./Figs/chapter6/avgBrickDuckBGYExemplars.png> <./Figs/chapter6/avgBrickDu
 ckBGYGenerated.png>]
 File: Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png Graphic file (type pn
 g)
@@ -1913,7 +1943,7 @@ Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png us
 ed on input line 189.
 (pdftex.def)             Requested size: 298.75264pt x 164.2905pt.
 
-<Figs/chapter6/2wordsSimpleBrickDuck.png, id=1472, 443.10544pt x 426.30266pt>
+<Figs/chapter6/2wordsSimpleBrickDuck.png, id=1617, 443.10544pt x 426.30266pt>
 File: Figs/chapter6/2wordsSimpleBrickDuck.png Graphic file (type png)
 
 <use Figs/chapter6/2wordsSimpleBrickDuck.png>
@@ -1921,17 +1951,17 @@ Package pdftex.def Info: Figs/chapter6/2wordsSimpleBrickDuck.png used on input
 line 200.
 (pdftex.def)             Requested size: 298.75264pt x 287.42964pt.
 
-<Figs/chapter6/2wordsExemplarBrickDuck.png, id=1473, 443.10544pt x 426.30266pt>
+<Figs/chapter6/2wordsExemplarBrickDuck.png, id=1618, 443.10544pt x 426.30266pt>
 File: Figs/chapter6/2wordsExemplarBrickDuck.png Graphic file (type png)
 <use Figs/chapter6/2wordsExemplarBrickDuck.png>
 Package pdftex.def Info: Figs/chapter6/2wordsExemplarBrickDuck.png used on inpu
 t line 207.
 (pdftex.def)             Requested size: 298.75264pt x 287.42964pt.
- [90] [91 <./Figs/chapter6/2wordsSimpleBrickDuck.png>]
+ [92] [93 <./Figs/chapter6/2wordsSimpleBrickDuck.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/chapter6/exemplarMost.png, id=1493, 821.27628pt x 295.07841pt>
+<Figs/chapter6/exemplarMost.png, id=1638, 821.27628pt x 295.07841pt>
 File: Figs/chapter6/exemplarMost.png Graphic file (type png)
 
 <use Figs/chapter6/exemplarMost.png>
@@ -1942,36 +1972,34 @@ Package pdftex.def Info: Figs/chapter6/exemplarMost.png used on input line 265.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 286.
-<Figs/chapter6/exemplarMostGenerated.png, id=1495, 821.34856pt x 295.94565pt>
+<Figs/chapter6/exemplarMostGenerated.png, id=1640, 821.34856pt x 295.94565pt>
 File: Figs/chapter6/exemplarMostGenerated.png Graphic file (type png)
 
 <use Figs/chapter6/exemplarMostGenerated.png>
 Package pdftex.def Info: Figs/chapter6/exemplarMostGenerated.png used on input 
-line 291.
+line 292.
 (pdftex.def)             Requested size: 298.75264pt x 107.64218pt.
- [92 <./Figs/chapter6/2wordsExemplarBrickDuck.png>] [93 <./Figs/chapter6/exempl
+ [94 <./Figs/chapter6/2wordsExemplarBrickDuck.png>] [95 <./Figs/chapter6/exempl
 arMost.png>]
-<Figs/chapter6/2wordsMostExemplar.png, id=1515, 717.27975pt x 687.86586pt>
+<Figs/chapter6/2wordsMostExemplar.png, id=1665, 717.27975pt x 687.86586pt>
 File: Figs/chapter6/2wordsMostExemplar.png Graphic file (type png)
 
 <use Figs/chapter6/2wordsMostExemplar.png>
 Package pdftex.def Info: Figs/chapter6/2wordsMostExemplar.png used on input lin
-e 306.
+e 307.
 (pdftex.def)             Requested size: 426.79135pt x 409.30101pt.
- [94 <./Figs/chapter6/exemplarMostGenerated.png>]
+ [96 <./Figs/chapter6/exemplarMostGenerated.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[95 <./Figs/chapter6/2wordsMostExemplar.png>] (./thesis_main.ent [96]))
-(./Chapters/Chapter7.tex [97]
+[97 <./Figs/chapter6/2wordsMostExemplar.png>] [98] (./thesis_main.ent))
+(./Chapters/Chapter7.tex [99]
 Chapter 7.
-) (./Chapters/Chapter8.tex [98
+) (./Chapters/Chapter8.tex [100
 
 ]
 Chapter 8.
-) (./Chapters/Appendix3.tex [99
+) (./Chapters/Appendix2.tex [101
 
 ]
 Appendix A.
@@ -1979,68 +2007,366 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1.
 \openout4 = `thesis_main.ent'.
 
-[100
-
-] (./thesis_main.ent)) (./Chapters/Appendix4.tex [101]
-Appendix B.
 [102
 
-] [103]) (./Chapters/Appendix5.tex
+] (./thesis_main.ent)) (./Chapters/Appendix4.tex [103]
+Appendix B.
+[104
+
+] [105]) (./Chapters/Appendix5.tex
 Appendix C.
-
-Overfull \hbox (6.32053pt too wide) in paragraph at lines 95--104
- [][] 
- []
-
-) (./thesis_main.bbl [104
+) (./thesis_main.bbl [106
 
 
 
-] [105] [106
+] [107] [108
 
-] [107] [108]) [109]
+] [109] [110] [111] [112]) [113]
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
- (./thesis_main.aux)
+(./thesis_main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
-Package rerunfilecheck Info: File `thesis_main.out' has not changed.
-(rerunfilecheck)             Checksum: 1CBB361D70C3264D7D1939A4B4F00D7C;6756.
 
 
-LaTeX Warning: There were undefined references.
+Package rerunfilecheck Warning: File `thesis_main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
+Package rerunfilecheck Info: Checksums for `thesis_main.out':
+(rerunfilecheck)             Before: C328A212FDAE20DB470888D16A3BDCD1;6778
+(rerunfilecheck)             After:  F6445C6045D9FD1E5A613461A8488C2B;6778.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 37261 strings out of 493029
- 850999 string characters out of 6136234
- 2173550 words of memory out of 5000000
- 39531 multiletter control sequences out of 15000+600000
+ 37451 strings out of 493029
+ 854243 string characters out of 6136234
+ 2174083 words of memory out of 5000000
+ 39598 multiletter control sequences out of 15000+600000
  42600 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,21n,108p,1148b,2663s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on thesis_main.pdf (118 pages, 517140265 bytes).
+pdfTeX warning (dest): name{table.274} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.273} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.264} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.224} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.252} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.248} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.245} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.240} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.235} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.243} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.231} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.227} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.219} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.217} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.211} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.210} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.203} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.201} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.190} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.188} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.185} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.183} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.178} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.176} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.174} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.172} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.166} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.164} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.163} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.161} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.156} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.154} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.153} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.151} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.272} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.146} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.142} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.140} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.128} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{table.124} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.118} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{table.270} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.107} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.99} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{figure.98} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix*.275} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.271} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.269} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.263} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.260} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.259} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.258} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.256} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.255} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.254} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.253} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.244} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.241} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.232} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.229} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.226} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.223} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.222} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.220} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.218} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.216} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.213} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.212} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.208} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.199} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.186} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.173} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.160} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.150} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.149} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.147} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.145} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.144} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.141} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.139} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.138} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.137} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.130} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.122} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.104} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.101} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.94} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.92} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.91} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.88} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.87} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.83} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.81} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.78} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.77} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.74} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.73} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.71} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.70} has been referenced but does not exist,
+ replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on thesis_main.pdf (122 pages, 517156098 bytes).
 PDF statistics:
- 1758 PDF objects out of 2073 (max. 8388607)
- 1496 compressed objects within 15 object streams
- 430 named destinations out of 1000 (max. 500000)
+ 1965 PDF objects out of 2073 (max. 8388607)
+ 1697 compressed objects within 17 object streams
+ 553 named destinations out of 1000 (max. 500000)
  1059 words of extra memory for PDF output out of 10000 (max. 10000000)
 

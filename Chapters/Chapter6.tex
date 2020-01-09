@@ -12,7 +12,7 @@
 \section{The Difficulties of Real Data}
 In the previous chapter I showed that it is possible to use a MAE to bidirectionally ground natural language (words) and the visual attributes of images of different objects through MRL. However, the data used in the previous chapter is artificial and therefore many of the challenges which real data presents are not present in it. 
 
-When working with real images, there are many factors to consider such as lighting changes, perspective changes and camera noise \ref{keller2016analysis}. These factors were not present in the ArtS dataset, so in this chapter I will show how these impact MRL for bidirectional grounding.
+When working with real images, there are many factors to consider such as lighting changes, perspective changes and camera noise \cite{keller2016analysis}. These factors were not present in the ArtS dataset, so in this chapter I will show how these impact MRL for bidirectional grounding.
 
 \section{Acoustic Packaging}
 In order to make use of MRL on a robot, it is necessary to have a method to gather and group data from multiple sensory modalities. To do this, I make use of Acoustic Packaging (AP) \cite{schillingmann2009towards, schillingmann2009computational}.
@@ -276,14 +276,14 @@ Rectangle & Black & \\ \hline
 	\hline
 \textbf{Training} & 	\textbf{Bimodal} & 	\textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 Simple &  2.14 $\mypm$	0.07 & 3.89 $\mypm$	0.62 & 6.08 $\mypm$ 0.01 \\ \hline
-Exemplar & && \\ \hline
+Exemplar & 2.30 $\mypm$ 0.07 & 3.67 $\mypm$ 0.23
+& 10.51	$\mypm$ 0.01 \\ \hline
 
 \end{tabular}
 \caption{Exp 2: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times10^{-3}$.)}
 \label{tab:6_res_exp2}
 \end{table}
 
-\todo[inline]{talk about \autoref{tab:6_res_exp2} once it is finished}
 
 \subsubsection{Image Generation}
 \begin{figure*}[ht]
@@ -332,7 +332,7 @@ In \autoref{tab:6_res_exp2} we can see the Total Mean Squared Error (MSE) for ge
 	\hline
 \textbf{Training}	 & 	\textbf{Bimodal} & \textbf{Image Only} 	& 	\textbf{Words Only} \\ \hline
 Simple &  100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 \\ \hline
-Exemplar  \\ \hline
+Exemplar & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 \\ \hline
 \end{tabular}
 \caption{Accuracy}
 \label{tab:6_res_exp2_acc}
@@ -352,4 +352,5 @@ There is also the issue of not having full coverage of every size, colour and sh
 
 
 \section{Conclusion}
+In this chapter I have demonstrated that MRL can be used to perform bidirectional grounding of images and text. Further to this i showed that MRL can generalise to unseen examples, correctly generating images of unseen objects.
 \theendnotes

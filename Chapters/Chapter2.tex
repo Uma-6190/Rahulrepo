@@ -1,122 +1,647 @@
 % Chapter Template
-
-\chapter{Background} % Main chapter title
+\chapter{A Primer on Artificial Neural Networks} % Main chapter title
 
 \label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{Chapter 2. \emph{Background}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{Chapter 2. \emph{A Primer on Artifical Neural Networks}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
+\section{Introduction}
+This chapter presents an overview of the mathematical theory behind artificial neural networks and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.
 
-\section{Introduction}\label{Lit:Intro}
-In this section I will layout the key ideas and technologies which have inspired and enabled the research presented later in this thesis.
+\section{Perceptrons}
+\label{sec:percep}
+The perceptron is the parent of modern artificial neurons \cite{rosenblatt1958perceptron}.
+Perceptrons arranged in layers, referred to as multi-layer perceptrons, are therfore the predecessor of modern artificial neural networks.
 
-Due to the broad scope of the research carried out, the background section is loosely presented so as to compare and contrast the state-of-the-art artificial neural network technologies with their biological analogues (where possible). As such, I survey a large body of machine learning, psychology and biology literature.
-
-In doing this, I aim to demonstrate how ANNs have exceeded human performance in specific areas, whilst lagging far behind in many others. By bringing these divergent fields together, perhaps it is possible to find ways to improve ANNs whilst also further developing our understanding of what makes humans tick. 
-
-
-\section{What are Artifical Neural Networks good at?}
-Artificial Neural Networks have been around for a long time but perhaps the best example of early neural networks is the MultiLayer Perceptron (MLP) \cite{rosenblatt1958perceptron}. Modern ANNs can trace their lineage back to the MLP; however the technology has advanced a lot since 1958. ANNs represent the state-of-the-art on many Artificial Intelligence benchmarks.
-
-ANNs are currently enjoying a new renaissance due to wide spread availablity of Graphics Processing Units (GPUs), big data and software libraries like Tensorflow and CUDA.
-
-In 2012, Krizhevsky et al. \cite{krizhevsky2012imagenet} kickstarted this new wave of interest in ANNs by getting the top performance on the ILSVRC-2012 ImageNet challenge. The unprecendented performance was achieved by utilising a very large amount of training data (1.2 million images), which was made possible by utilising the parallel computing power of GPUs. In creating AlexNet, Krizhevsky et al. demonstrated the potential of ANNs to solve real world problems, something which had been promised since ANN research began.
-
-The field of Deep Learning (DL) has advanced greatly in recent years, with ANNs being used to solve many different types of problems. DL is being used for many differnt tasks. These can be broken down into several categories: Classification, Natural Language Processing (NLP), Data Generation, Reinforcement Learning and Prediction Tasks.
+\subsection{What is a Perceptron}
 
 
-%\begin{outline}
-% \1 Classification:
-%   \2 Image Recognition \cite{krizhevsky2012imagenet, iandola2016squeezenet, he2016deep, zoph2018learning}
-%   \2 Speech Recognition \cite{amodei2016deep, graves2013speech}
-%   \2 Facial Recognition
-%   
-% \1 Natural Language Processing:
-%    \2 Language Representation Learning \cite{mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic}
-% 	\2 Intent Classification \cite{chen2016zero}
-% 	\2 Machine Translation \cite{cho2014learning}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{Figs/intro2dl/perceptron.png}
+	
+	\caption{A perceptron with three binary inputs, $x_0, x_1, x_2$.}
+	\label{fig:perceptron}
+\end{figure}
+
+Perceptrons are biologically inspired computation units and are a type of artificial neuron. They take a series of binary inputs, compute a weighted sum and produce a binary output based on the value of this sum as seen in \autoref{fig:perceptron}.
+
+
+Perceptrons use a binary activation function (\autoref{eqn:percep}).
+\begin{equation} \label{eqn:percep}
+output = \begin{cases}
+0 &\text{if $\sum_{j} w_j x_j + b < 0$}\\
+1 &\text{if $\sum_{j} w_j x_j + b \geq 0$}
+\end{cases} 
+\end{equation}
+
+Where $x_j$ is the jth input, $w_j$ is its associated weight and $b$ is a constant value called the bias, which affects how easy it is for the neuron to activate. The output of the perceptron is caluclated using the formulation shown in \autoref{eqn:percep}.
+
+By adjusting each of the weights we can change the output of the perceptron. For example, if we wanted to use a perceptron to decide whether to have a picnic today we can  select a set of relevant inputs, ``the weather is nice" and ``the pollen count is low".
+
+If it is a sunny day, and the pollen count is high, the input to the perceptron would be $[1,0]$.
+ 
+We will set our weights depending on how important each of the inputs is. No one likes a picnic in the rain, so the weather is important, whilst the pollen count is only important if you suffer from hayfever. We will select a bias of -5 for our perceptron.
+
+For person A, the weights might look like $[7, 0]$ (person A doesn't suffer from hayfever). Therefore the output of the perceptron would be 1 as $(1 \times 7) + (0 \times 0) - 5 = 2$ is greater than 0, so person A will go for a picnic.
+
+Person B owns a large umbrella (so the weather doesn't matter as much) but they do suffer from hayfever, their weights might look like $[4, 7]$. The output of the perceptron would be 0 as  $(1 \times 4) + (0 \times 7) - 5 = -1$ is less than 0. Therefore, person B would wait for a day with a lower pollen count for a picnic.
+
+
+\subsection{Multi-Layer Perceptron}
+In the previous section I demonstrated how a single perceptron can be used to make decisions based on a set of inputs. However, things get much more interesting when we start to link multiple perceptrons together into multi-layer perceptrons (MLP).
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{Figs/intro2dl/mlp.png}
+	
+	\caption{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with three binary inputs, $x_0, x_1, x_2$.}
+	\label{fig:mlp}
+\end{figure}
+
+If we take the example from the previous section about deciding to go for a picnic or not, we can use the MLP shown in \autoref{fig:mlp} to consider what happens if person A and B want to go for a picnic together.
+
+Given the previous conditions of a sunny day with a high pollen count, person A wants to go whilst person B does not, as demonstrated by the outputs of their individual perceptrons. Taking these outputs as inputs to the second layer of our MLP, we can see whether the picnic will go ahead.
+
+This time we will set the weights of the second layer based on who shouts the loudest. In this case, person A really wants to go and is very vocal about it. $1 \times 9 + 0 \times 5 - 5 = 4$ so the picnic will go ahead. This resulted in person B developing a headache and sneezing a lot. Clearly we need to find a way to adjust the weights of our MLP so that it makes better decisions in the future.
+
+\section{Activation Functions}
+
+Only being able to handle binary values is a major drawback of the perceptron. An artificial neuron that can handle continuous values is more useful.
+
+This limitation occurs due to the activation function of the perceptron shown in \autoref{eqn:percep}. Visualising the perceptron activation function highlights that changes in the output of the neuron are not proportional to changes in the weights of the neuron as seen in \autoref{fig:activation_percep}. With a few small changes we can make an artifical neuron that accepts continuous values and has a continuous output.
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+
+% Us
+
+
+\begin{axis}[
+axis lines=left,
+%grid=major,
+xtick={-10,0,10},
+xticklabels={$-\infty$, 0, $\infty$},
+xlabel={Z},
+ylabel={Output},
+xlabel near ticks,
+ylabel near ticks]
+\addplot +[blue, thick, mark=none] coordinates{(-10,0) (0,0) (0,1) (10,1)};
+
+\end{axis}
+
+\end{tikzpicture}
+\caption{Visualisation of the perceptron activation function. Where z is the activation $\sum_{j} w_j x_j + b$ and the output is activation function defined in \autoref{eqn:percep} }
+\label{fig:activation_percep}
+\end{center}
+\end{figure}
+
+A continuous output is very important as it means that a small change in the weights of a neuron will cause a small change in its output. This makes it much easier to understand how changing the weights affects the output of the network as the change in output becomes proportional to the change in weights as shown in \autoref{eqn:proport}.
+
+\begin{equation} \label{eqn:proport}
+	\delta Output \propto \delta W	
+\end{equation}  
+
+
+\subsection{Sigmoid Neurons}
+
+The sigmoid neuron uses the sigmoid function, shown in \autoref{eqn:sig} as its activation function. 
+
+\begin{equation} \label{eqn:sig}
+\sigma(z) = \frac{1}{1 + e^{-z}}
+\end{equation}
+
+$z$ is the sum of the weights multiplied by their respective inputs as seen in  \autoref{eqn:z_act}.
+
+\begin{equation} \label{eqn:z_act}
+z = \sum_{j} w_j x_j + b
+\end{equation}
+
+As we can see in \autoref{fig:activation_sigmoid}, as $z$ changes, there is a proportional change in the output $\sigma(z)$, unlike in \autoref{fig:activation_percep} where the output only changes when $z$ crosses the y-axis.
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+
+
+
+\begin{axis}[
+axis lines=left,
+xtick={-10,0,10},
+xticklabels={$-\infty$, 0, $\infty$},
+xlabel={z},
+ylabel={$\sigma$(z)},
+xlabel near ticks,
+ylabel near ticks,
+%grid=major
+]
+\addplot[blue, thick, smooth, samples=1000, domain=-10:10]{1 / (1 + e^-x)};
+
+\end{axis}
+    
+
+\end{tikzpicture}
+\caption{Visualisation of the Sigmoid activation function. Where z is the activation $\sum_{j} w_j x_j + b$ and $\sigma$(z) is activation function defined in \autoref{eqn:sig} }
+\label{fig:activation_sigmoid}
+\end{center}
+\end{figure}
+
+Now that we have an activation function that can produce continuous values, we can consider a much more diverse range of data to train our neural networks with. So instead of just making yes or no decisions we can look at, for example, the colours of pixels and decide if there is a cat in the image or given today's weather, predict if it will rain tomorrow.
+
+\subsubsection{Other activation functions}
+There are two other important and commonly used activation functions, though many others exist. These are, the hyperbolic tangent (Tanh) shown in \autoref{fig:activation_tanh} and rectified linear unit (Relu)  shown in \autoref{fig:activation_relu}.
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+axis lines=left,
+xtick={-10,0,10},
+xticklabels={$-\infty$, 0, $\infty$},
+xlabel={z},
+ylabel={$\sigma$(z)},
+xlabel near ticks,
+ylabel near ticks,
+]
+\addplot[blue, thick, smooth, samples=100, domain=-10:10]{tanh(x)};
+
+\end{axis}
+    
+
+\end{tikzpicture}
+\caption{Visualisation of the hyperbolic tangent activation function. Where z is the activation $\sum_{j} w_j x_j + b$ and $\sigma$(z) is the Hyperbolic Tangent Function applied to z.}
+\label{fig:activation_tanh}
+\end{center}
+\end{figure}
+
+The Tanh function looks similar to the sigmoid function, however it has an output between negative one and one, where the sigmoid goes from zero to one. This is useful when negative values are important to what the network is learning.
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+axis lines=left,
+xtick={-10,0,10},
+xticklabels={$-\infty$, 0, $\infty$},
+xlabel={z},
+ylabel={$\sigma$(z)},
+xlabel near ticks,
+ylabel near ticks,
+]
+\addplot[blue, thick, smooth, samples=1000, domain=0:10]{x};
+\addplot[blue, thick, smooth, samples=1000, domain=-10:0]{0};
+
+\end{axis}
+    
+
+\end{tikzpicture}
+\caption{Visualisation of the rectified linear unit activation function.Where z is the activation $\sum_{j} w_j x_j + b$ and $\sigma$(z) is the Relu activation function applied to z.}
+\label{fig:activation_relu}
+\end{center}
+\end{figure}
+
+The Relu was created to address an issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in \autoref{sec:percep}} can be trained as non-linear functions (like the Sigmoid or Tanh) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
+
+\section{Learning Algorithms}
+In \autoref{sec:percep} we saw how simple computation units can make simple decisions and how these can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
+
+In general, perceptrons (and their more modern successors) will have their initial weights set randomly, unlike in our example where I chose them. 
+
+Randomly setting weights is useful in practice as we will usually have large numbers of inputs, weights, layers and artifical neurons, so setting each by hand would be intractable. Also, if we knew what weights to set, we wouldn't need a neural network or a learning algorithm to solve our problem as we would likely have a more efficient mathematical description of the problem.
+
+With random weights our networks will make a lot of wrong decisions! However if we have a smart way of adjusting our weights we can make our neural networks get better at making decisions over time. This improvement is what I am referring to when I say ``machine learning''.
+
+\subsection{Types of Training}
+There are many ways to train neural networks: supervised, unsupervised, reinforcement or 
+adversarial learning (to name a few). The experiments in this thesis will focus on supervised and unsupervised learning. %However, here is a brief description of the more prominant methods.
+
+
+\textbf{Supervised learning} - an external system is used to provide ground truth values for the desired output of the network. An example would be classification using standardised datasets like MNIST handwritten digits \cite{lecun1998mnist}.
+
+
+\textbf{Unsupervised learning} - no external system provides ground truth values, instead these are inferred directly from the data. Autoencoders (discussed in great detail in later chapters) are a good example of this.  
+
+%\todo[inline]{finish this}
+%\textbf{Reinforcement learning} - an external system provides a score which estimates the value of an action (think about getting points in a video-game). Training a dog by giving it treats when it performs a trick is reinforcement learning. We reinforce the desired behaviour by rpoviding a reward.
+
+%\textbf{Adversarial learning} - two networks are trained in tandom, a generator and a descriminator. The
+
+
+\subsection{Cost functions: How wrong am I?}
+In order for our neural networks to learn, they need feedback as to how wrong they are. This is done using a cost function, a formula which gives a measure of how good or bad our network is at a particular task.
+
+Depending on the particular method we use to train our networks, the cost function may be given a different name. For example in reinforcement learning, the cost function is typically called a value function. However, they all serve the same purpose, which is to provide feedback as to how well our network is doing at the task it has been assigned. Therefore, to avoid jargon I will refer to this as a \textit{cost function} throughout this thesis and the measure it returns as the \textit{error}.
+
+The cost function can take on many forms, in supervised and unsupervised training alike. Here are a few of the more commonly used ones and an explanation of each.
+
+\subsubsection{Mean Squared Error}
+Mean squared error (MSE) measures the average difference between points as shown in \autoref{eqn:mse}.
+
+\begin{equation} \label{eqn:mse}
+C = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \hat{Y_i})^2
+\end{equation}
+
+When used as a loss function, MSE gives a measure of how bad our estimate $\hat{Y_i}$ is of our true value $Y_i$ on average for for all $n$ training samples in a given dataset. A perfect model would have an MSE of 0 as $\hat{Y_i}$ would be equal to $Y_i$ for all values of $i$.
+
+In general, $Y_i$ and $\hat{Y_i}$ can be of arbitrary size and shape (as long as they match each other). That is, they can be scalers, vectors or matricies.
+
+\subsubsection{Cross-Entropy}
+Cross-entropy measures the error between two probability distributions $P$ and $Q$ using the formula shown in \autoref{eqn:xntrpy}. $P$ is the true probability distribution which we are trying to model with our predicted probability distribution $Q$.
+
+\begin{equation} \label{eqn:xntrpy}
+C = -\sum_{i=0}^{n}P(i) log(Q(i))
+\end{equation}
+
+When using cross-entropy as a loss function, we can view the output of our neural network as a probability distribution. For example, in a multiclass classification problem with $k$ classes, each of the $k$ outputs of the network tells us the probability that the network believes an input to belong to class $k$.
+
+
+For example, given a dataset containing images of animals: cats, dogs, horses and snakes. A single image containing a cat would be labelled $[1, 0, 0, 0]$. This tells us the exact probability distribution of the image, $P$ i.e. the image certainly contains a cat and does not contain any other animals.
+
+Now as our network trains, it may give a prediction of $[0.5, 0.3, 0.15, 0.05]$, this is our predicted probability distribution $Q$.
+
+Calculating our cross-entropy we get:
+$C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})$
+
+
+If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the error is closer to zero and our prediction is better. The network believes with 80\% certainty that the images is of a cat. 
+
+
+\subsubsection{Kullback-Leibler Divergence}
+
+Another method for defining the difference between two distributions is the Kullback-Leibler Divergence (KLD).
+
+KLD is a non-symetric distance measure between two distributions, $P$ and $Q$. As it is non-symetric $D_{KL}(P||Q) \neq D_{KL}(Q||P)$ unless $P = Q$.
+
+\begin{equation} \label{eqn:kld}
+D_{KL} = -\int_{i=0}^{n}{P(i)Log(\frac{Q(i)}{P(i)}})
+\end{equation}
+
+KLD is useful in machine learning when we wish to calculate how different a predicted distribution is from a desired distribution. Most commonly, we will want $P$ to be a Gaussian distribution, though which distribution is chosen will depend on the specific problem. We will then use the KLD as a constraint to force our networks to make predictions which follow as closely as possible to this desired distribution, i.e. we will minimse $D_{KL}(P||Q)$.
+
+Typically KLD is not used as a cost function on its own, but is used to constrain the output of a single layer of a network (usually not the output) whilst also minimising another cost function.
+
+The best example of this is a Variational AutoEncoder (VAE), which will be discussed later.
+
+
+\subsection{Gradient Descent}
+Now that we have a method for determining how well our neural network performs at a task, we can observe how this changes as the weights of the network are changed.
+
+\pgfplotsset{%
+  colormap={whitered}{color(0cm)=(white);
+  color(1cm)=(orange!75!red)}
+}
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+ 
+  \begin{axis}[
+  xlabel = $w_0$,
+  ylabel = $w_1$
+  zlabel = $C$
+  ]
+   
+    \addplot3[
+	surf,
+	domain=-2:2,
+	domain y=-1.3:1.3,
+] 
+	{x^2+y^2};
+
+    
+  \end{axis}
+\end{tikzpicture}
+\caption{The cost landscape of a bivariate function. Where $w_0$ and $w_1$ are the weights of a neural network and $C$ is its error.}
+\label{fig:costscape}
+\end{center}
+\end{figure}
+
+To make things simple, lets assume our network only has two weights, though the following derivation generalises to any number of weights. This could give us a cost landscape like that shown in \autoref{fig:costscape}. Our aim is to minimise the cost as the cost is a measure of how wrong our network is.
+
+In more definite terms we wish to minimise \autoref{eqn:cost_bivar}, where $Y_i$ is the desired output value for input $i$ and $z$ is as defined in \autoref{eqn:z_act}.
+
+\begin{equation} \label{eqn:cost_bivar}
+C(w_0, w_1) = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \sigma(z_i))^2
+\end{equation}
+
+This is the mean squared error rewritten slightly to highlight the dependence on the weights of the network.
+
+If we make a small change to either of the weights $w_0$ and $w_1$ we will get a small change in the cost, $C$ as seen in \autoref{eqn:delta_C}.
+
+\begin{equation} \label{eqn:delta_C}
+\Delta C \approx \frac{\delta C}{\delta w_0} \Delta w_0 + \frac{\delta C}{\delta w_1} \Delta w_1
+\end{equation}
+
+We want to minimise C so we want $\Delta C$ to be negative. To make $\Delta C$ negative we will need to first denote that the gradient of $C$, $\nabla C$. 
+
+\begin{equation} \label{eqn:nabla_c}
+\nabla C \equiv (\frac{\delta C}{\delta w_0}, \frac{\delta C}{\delta w_1})^T
+\end{equation}
+
+In \autoref{eqn:nabla_c} we can see that the gradient of $C$ is equivalent to the partial derivatives of $C$ with repect to the weights of the network. For simplicity we will collect the changes in weights into a single vector $\Delta w \equiv (\Delta w_0, \Delta w_1)^T$.
+
+By substituing this into \autoref{eqn:delta_C} we get \autoref{eqn:delta_c_sub}.
+
+\begin{equation} \label{eqn:delta_c_sub}
+\Delta C \approx \nabla C \cdot \Delta w 
+\end{equation}
+
+Looking at \autoref{eqn:delta_c_sub}, we can see that to make $\Delta C$ negative we can set $\Delta w$ as in \autoref{eqn:delta_w_eta}, where $\eta$ is a small positive constant called the learning rate.
+
+\begin{equation} \label{eqn:delta_w_eta}
+\Delta w = -\eta \nabla C
+\end{equation}
+
+By substituting \autoref{eqn:delta_w_eta} into \autoref{eqn:delta_c_sub} we can see that $ \Delta C = - \eta \abs{\nabla C}^2$ and because $\abs{\nabla C}^2 \geq 0$ this guarantees that $C$ will always decrease if the weights are changed in accordance to \autoref{eqn:delta_w_eta}.
+
+By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta}, we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \endnote{Learning rate is discussed in more detail in \autoref{sec:lr_sch}}. 
+
+\subsection{Backpropagation}
+With a gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does. 
+
+A full explanation of the backpropogastion algorithm is available in \autoref{appendix:app3}. However, understanding this backpropogation is not necessary to understand the contribution of this thesis.
+
+
+\subsection{Extensions and Improvements}
+There are many extensions to simple gradient descent based learning, here are a few to be aware of.
+\subsubsection{Learning Rate Schedule}
+\label{sec:lr_sch}
+Depending on how far we are from the global error minima, we may wish to change the value of the learning rate $\eta$. Recall from \autoref{eqn:delta_w_eta} $\Delta w = -\eta \nabla C$, that the learning rate determines how big of a step we take, following the gradient of the error, each time we update the weights of our neural network.
+
+If we are far from the minimum point for the cost with respect to the weights, we may wish to take larger steps, so that we can more quickly reduce the total cost. However, as we get closer we want to ensure that we do not step over the minimum.
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+axis lines=left,
+xtick={-10,0,10},
+xticklabels={},
+xlabel={$\Delta w$},
+ylabel={$C$},
+yticklabels={},
+xlabel near ticks,
+ylabel near ticks]
+\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^2};
+%\draw [blue](0,100) ++(90 : 1 ) arc ( 90:81.87:50 );
+\node [blue] at (2,98)  (a) {\textbullet};
+\node [blue] at (20,64) (b) {\textbullet};
+\node [blue] at (40,36) (c) {\textbullet};
+\node [blue] at (60,16) (d) {\textbullet};
+\node [blue] at (80,4)  (e) {\textbullet};
+\node [blue] at (100,0) (f) {\textbullet};
+
+\draw[blue, ->](a) to [bend left] (b);
+\draw[blue, ->](b) to [bend left] (c);
+\draw[blue, ->](c) to [bend left] (d);
+\draw[blue, ->](d) to [bend left] (e);
+\draw[blue, ->](e) to [bend left] (f);
+
+
+\node [red] at (198,98)  (g) {\textbullet};
+\node [red] at (180,64) (h) {\textbullet};
+\node [red] at (153,28) (i) {\textbullet};
+\node [red] at (90,1) (j) {\textbullet};
+%\node [red] at (60,16)  (k) {\textbullet};
+%\node [red] at (80,4) (l) {x};
+
+
+\draw[red, ->](g) to [bend right] (h);
+\draw[red, ->](h) to [bend right] (i);
+\draw[red, ->](i) to [bend right] (j);
+%\draw[red, ->](j) to [bend right] (k);
+
+
+\end{axis}
+    
+
+\end{tikzpicture}
+\caption{Visualisation of error minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate. Where $\delta w$ is the change of weights of a neural network and and $C$ is its error.}
+\label{fig:lr_schedule}
+\end{center}
+\end{figure}
+
+\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. As more training occurs, reducing the learning rate allows us to reach the error minimum (blue arrows). Selecting a large learning rate not changing it might lead to never reaching the error minimum (red arrows). Whilst at first, we make rapid progress towards the minimum, at some point we cross over it and will be unable to approach any closer without taking smaller steps.
+
+This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
+Learning rate schedulers can speed up convergence by allowing large steps to be taken when we are far from the cost minimum with respect to the weights, covering a large distance in a few updates and then slowing down to take smaller steps as we get closer. 
+
+This begs the question of: how do we know when to change the learning rate? In  practice there are many ways we can achieve this, however these broadly fit into two categories: mathematical and heuristic.
+
+There are many algorithms for calculating how to set the learning rate for example, Adam \cite{kingma2014adam} and ADADelta \cite{zeiler2012adadelta}. They are both popular as they are both first order methods, meaning that expensive, slow calculations of second order derivatives do not need to be made.
+Senior et al.\cite{senior2013empirical} provide an extensive testing of different learning rate schedulers. 
+
+Second order methods are desirable in that the second derivative of the cost provides information about how the cost gradient is changing. \autoref{fig:2ndordr} shows how the cost and its first and second derivatives change with respect to the weights. In region (A), where the cost (black line) is far from the minima the first derivative (blue) changes rapidly, causing the second derivative (red) to have a large magnitude. In region (B), the cost is closer to the minima, and thus the change in cost is lower so the steepness of the first derivative (blue) is lower as is the magnitude of the second derivative (red). At the minima, the second derivative is exactly zero, so we know we have reached the minima if the second derivative equals zero.
+
+Second order methods have the major draw back of being very slow to calculate. Thus it is more efficient to make use of first order estimates than the exact information provided by second order methods. Many more weight updates can be carried out using first order methods than can be done using second order methods in a given time frame. So whilst second order methods should require less total weight updates to minimise the cost, the first order methods will reach the minimum faster as the weight updates will occur much more quickly in the first order case.
+
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+axis lines=left,
+xtick={-10,0,10},
+xticklabels={},
+xlabel={$\Delta w$},
+ylabel={$C$},
+yticklabels={},
+xlabel near ticks,
+ylabel near ticks,
+scaled y ticks = false]
+\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^4};
+\addplot[blue, thick, smooth, samples=1000, domain=-10:10]{4*x^3};
+\addplot[red, thick, smooth, samples=1000, domain=-10:10]{12*x^2};
+
+\addplot [black, thin, dashed] coordinates {(-5, -4000) (-5, 10000)};
+\addplot [black, thin, dashed] coordinates {(5, -4000) (5, 10000)};
+
+\node[] at (axis cs:7.5,7000) {(A)};
+\node[] at (axis cs:-7.5,7000) {(A)};
+\node[] at (axis cs:2.5,7000)  {(B)};
+\node[] at (axis cs:-2.5,7000) {(B)};
+\node[] at (axis cs:0,500) {(min)};
+
+
+
+\end{axis}
+    
+
+\end{tikzpicture}
+\caption{Visualisation of the cost (black), its first derivative (blue) and second derivative (red). Where $\delta w$ is the change of weights of a neural network and and $C$ is its error.}
+\label{fig:2ndordr}
+\end{center}
+\end{figure}
+
+Heuristic methods provide a very simple method for adjusting the learning rate. A commonly used one is to simply gradually reduce the learning rate by a small amount each epoch. This has the advantage of requiring almost no computational overhead and being easily understood. When training starts, we expect performance to be poor, so improvements can be made rapidly. As training progresses, we expect that improvements will be slower as we are approaching the minimum cost.
+
+\section{Convolutional Neural Networks}
+One draw back of dense neural networks, like MLPs is that they do not leverage spatial information in the input data. This means that whether two pieces of information occur next to each other, is irrelevant to the neural network. Obviously, this information is important and useful, so how can a neural network use it?
+
+Consider two very different problems: image classification and speech recognition. In image classification, not only are the values of pixels important but also, the values of pixels surrounding them. For example, we know that \autoref{fig:cat} is a picture of a cat, not just because there are grey pixels on a white background, but because the grey pixels are collected into a cat-like shape. We are unable to recognise the right hand image despite have the same pixels as the left image as spatial cues have been removed.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.33\textwidth]{Figs/intro2dl/cat.png}
+	\includegraphics[width=0.33\textwidth]{Figs/intro2dl/catScrambled.png}
+	
+	\caption{A british short-hair cat (left) and the same image, with its pixels scrambled (right).}
+	\label{fig:cat}
+\end{figure}
+
+Similarly, in speech recognition, the order in which sound samples are heard is very important. If we hear a word backwards, we won't recognise it as being that word and if we re arrange the order of the samples, it becomes even more difficult to recognise.
+
+Dense neural networks don't care about spatial information because each input is connected to every neuron in the input layer, effectively treating every pixel as if they are no closer, or further away from any other pixel or removing information about when each sample of sound occured.
+
+In order to levarge spatial information we can make use of convolutional neural networks (ConvNet).
+
+\subsection{What is Convolution?}
+In ConvNets, convolution is a mathematical operation which adds a data element to its neighbours, weighted by a kernel. For example, given a 3x3 kernel, and an image as the input data each pixel $P_{out}(i,j)$ in the output of the convolution will be the sum of the pixels $P_{in}(i-s, j-t)$ in the input  multiplied by its respective kernel weight $k(s,t)$ as seen in \autoref{eqn:convolution} \cite{dumoulin2016guide}.
+
+\begin{equation} \label{eqn:convolution}
+P_{in}*k = \sum_{s=-a}^{a}\sum_{t=-b}^{b} P_{in}(i-s, j-t) \circ k(s,t)
+\end{equation}
+
+\begin{figure}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/convolutionSingleStep.png}
+	\caption{A single step of computing a convolution }
+	\label{fig:oneStepConv}
+\end{figure}
+
+Consider the case where $P_{in}$ is a 3x3 array and $k$ is a 3x3 kernel. The convolution, $P_{in} * k$ would unfold as shown in \autoref{fig:oneStepConv}. $P_{out}$ will take values dependant on the sum of the elements of $P_{in}$ multiplied by the weights of $k$.
+
+Applying the convolution at every point in the input gives an output as seen in \autoref{fig:convolve}.
+
+
+\begin{figure}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/convolution.png}
+	\caption{An example of convolution of a (3x3) array with a (3x3) kernel.}
+	\label{fig:convolve}
+\end{figure}
+
+
+To implement convolution effciently, the kernel is flattened and then zero padded forming a 9x9 matrix, so that every convolution step can be performed in a single matrix multiplication. \autoref{fig:convImpl} demonstrates this. Note that the input array is also flattened. 
+
+This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped to be (3x3) again.
+
+\begin{figure}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/convolutionImplementation.png}
+	\caption{The implementation of the convolution of a (3x3) array with a (3x3) kernel.}
+	\label{fig:convImpl}
+\end{figure}
+
+\subsection{Using Convolution Kernels in a Neural Network}
+In a ConvNet, the weights of the network are kernels used to perform the convolution. Whereas, in a dense network, every input is connected to every neuron in the first layer and every neuron in the first layer is connected to every neuron in the second layer etc. each with their own individual weight, in a ConvNet, the weights are grouped into kernels and each neuron has it's own kernel which is applied across the entire input via the convolution opperation.
+
+Any given layer in a dense network will have $(Data Dimensions) \times (Number of Neurons)$ weights. The convolutional equivalent will have $(Kernel Size) \times (Number of Neurons)$ weights, usually this will be far fewer than the dense network. This gives a significant increase in computational performance.
+
+For each neuron in a ConvNet, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \endnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
+
+\subsubsection{Strided Convolution}
+In \autoref{fig:convolve}, convoltuion was performed with a stride of one. Strided Convolution refers to the case where the stride, the number of spaces between each application of the kernel, is greater than one. For example, convolution of an image and a kernel with a stride of two would be the convolution of the kernel with every other pixel of the image and would result in an output $\frac{1}{4}$ the size of the input (half the width by half the height).
+
+Altering the stride of a convolution is very useful for performing down sampling. Down sampling reduces the computational burden of a system by reducing the amount of calculations that need to be performed.
+
+Alternatively, strided convolutions can be used to up sample data by making use of a fractional stride. For example a stride of $\frac{1}{2}$ when convolving a kernel and an image would result in an output 4 times the size of the input ($2\times$ the width by $2\times$ the height).
+
+Fractionally strided convolutions can be used for many things including image enhancement \cite{radford2015unsupervised} and, as in this thesis, to rescale data back up to its original size.
+
+\subsection{Transposed Convolutions}
+Fractionally strided convolution is the inverse of a strided convolution whose strides are reciprocals (e.g. $\frac{1}{2}$ vs. 2), with respect to the scale of the data. However, having an inverse of the convolution with respect to the contents of the data is also necessary.
+
+This is where transposed convoltuion comes into play \cite{zeiler2010deconvolutional}. 
+
+Transposing a matrix, for example a convolution kernel, has the effect of rotating it by 90 degrees. Understanding why doing this before performing a convolution has the effect of reversing the convolution requires first understanding how convolution is performed on a computer.
+
+As shown in \autoref{fig:convImpl} the actual convolution operation involves flattening and reshaping the kernel. Transposing this flattened and reshaped kernel allows for the recovery of the original input as shown in \autoref{fig:transConvImpl}. 
+
+\begin{figure}
+	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/TransconvolutionImplementation.png}
+	\caption{The implementation of the transposed convolution of a (3x3) array with a (3x3) kernel.}
+	\label{fig:transConvImpl}
+\end{figure}
+
+This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped to be (3x3) again. However, this doesn't really highlight what has happened due to the symmetrical shape of the kernel and input. Consider the multiplcation of (4x16) kernel with a flattened 16x1 array. The convolution gives a (4x1) output. Transposing the kernel to be (16x4) and multiplying with the (4x1) output gives the (16x1) flattened array. 
+
+
+%\section{Recurrent Neural Networks}
+%\subsection{Vanilla RNN}
+%\subsection{Gated RNN}
 %
-% \1 Generation:
-%   \2 Image
-%   \2 Voice
-%   
-% \1 Multimodal Learning:
-% 	\2 Image Captioning \cite{vinyals2015show}
-% 	\2 Video Captioning
-% 	\2 Multimodal Representation Learning \cite{ngiam2011multimodal}
-%   
-% \1 Reinforcement Learning:
-%   \2 Robotic Control \cite{lillicrap2015continuous}
-%   \2 Video Games \cite{vinyals2019alphastar, mnih2013playing}
-%   \2 World Modelling \cite{azar2019world}
-%      
-% \1 Forecasting:
-%   \2 Weather \cite{mahesh2018probabilistic}
-%   \2 Electrical Loads \cite{bouktif2018optimal}
-%   \2 Financial Markets \cite{fischer2018deep}
-%\end{outline}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/LSTM.png}
+%	
+%	\caption{A Long Short-Term Memory Unit}
+%	\label{fig:lstm}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/GRU.png}
+%	
+%	\caption{A Gated Recurrent Unit}
+%	\label{fig:gru}
+%\end{figure}
 
-Of these categories of problems, MRL (as it is presented in this thesis) draws mostly from Classification, NLP and Data Generation.
+\section{Autoencoders}
+Autoencoders (AE) can be constructed from any type of neural network layers, ConvNet, LSTMs, or Dense to name a few. What makes an AE an AE is not the type of layers from which it is constructed but the way in which it is trained.
 
-\subsection{Classification}
-MRL can be considered to draw from different classification tasks, depending on which modalities it is used with. In this thesis I apply MRL to image, speech and textual data, as such I will focus on image, speech and text recognition techniques and will not focus on more nitch problems such as Facial Recognition \cite{ma2004facial}, Emotion Recognition \cite{levi2015emotion} or more general data classification problems \cite{kussul2017deep,qi2017pointnet}.
+An AE is trained to reproduce its input at its output (\autoref{fig:ae}. Typically, dimensional reduction is applied within the AE so that it must learn to select the most important features of the input data to accuartely represent the data in a more compressed form. 
 
+I make use of strided convolutions for dimensional reduction in the encoder and fractionally strided convolutions for dimensional enlargement in the decoder of the MAEs trained in this thesis.
 
-With \cite{krizhevsky2012imagenet} a style ofconvolutional neural network (ConvNet) architecture, consisting of convolution max-pooling and dropout layers followed by fully connected layers and a softmax output layer was created. This has become a standard type architecture for image classification tasks with many similar networks appearing such as VGG 16 and 19 \cite{simonyan2014very}.
-
-Convolution layers are used for feature extraction and fully connected layers are used for classification with downsampling happening gradually throughout the network to reduce the dimensionality of the data. In AlexNet and VGG downsampling is done using the max-pooling layers, however more recent architectures have made use of strided convolutions for this \cite{springenberg2014striving}.
-
-The use of dropout as a regulariser has also become common place as it has been shown to outperform the most common regularisers, L1 and L2 \cite{srivastava2014dropout}.
-
-An important advancement over the AlexNet style of architecture (beyond simply altering network hyper parameters as with VGG 16 and 19 \cite{simonyan2014very} was the addition of residual connections. Introduced in \cite{he2016deep}, residual connections allow data to flow through alternate branches of a network, skipping over some layers to rejoin the main flow at a later point in the network. This has two key effects, 1) it allows the training of much deeper networks by providing a shortcut through the network for error gradients to be backpropogated, helping to ellivate the vanishing gradient problem \cite{hochreiter1998vanishing} and 2) it allows the network to consider lower level features along side more abstracted ones for decision making.
-
-Another advancement over the AlexNet style architectures was the introduction of multiscale convolutions where data is passed through multiple, parallel convolutions layers each with a different kernel size before concatenating their activations \cite{szegedy2015going}. Making use of different kernel sizes creates filters which are sensitive to different scales of features. Thus, for example, if an eye in an image is not picked up at one scale as it is too large or too small, it may be picked up by a parallel convolution with a different sized kernel.
-
-Szegedy et.al have developed their Inception Architecture from \cite{szegedy2015going} iteratively in \cite{szegedy2016rethinking, szegedy2017inception} in each, small advancements in state-of-the-art object recognition are achieved.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.25\textwidth]{Figs/intro2dl/AE.png}
+	
+	\caption{An Autoencoder trained using the MSE of its input and reconstruction of the input (Input*). The red arrow shows how the error is backpropgated through the network.}
+	\label{fig:ae}
+\end{figure}
 
 
-\subsection{Generation}
-\subsection{Representation Learning}
-\subsection{Reinforcement Learning}
+
+\subsection{Variational Autoencoders}
+An important enhancement of AEs is the Variational Autoencoder (VAE). The VAE is trained using a multipart cost function. A normal cost such as MSE plus the KLD of the embedding from a target distribution (usually a Gaussian).
+
+This has the effect of forcing the embedding space to be smooth and helps to stop discontinuities in the embedding from occuring. For example, if a particular part of the embedding space is never explored in an AE, the output generated by the decoder can be unpredictable even for embeddings close to those seen from training data. In a VAE, due to the extra constraint placed on the embedding space, the generated output will change smoothly as the embedding is altered smoothly.
 
 
-\section{What are Artificial Neural Networks bad at?}
-Whilst ANNs have been applied to many tasks and acheived super-human ability at them \cite{vinyals2019alphastar}, they do not have general intelligence like humans.
+\subsection{Multimodal Autoencoders}
+Multimodal Autoencoders (MAE) operate similarly to AEs however, they take two or more modalities as input. In this thesis, only bimodal MAEs are used though in principle, MAEs are not limited to only two modalities.
 
-\begin{displayquote}
-``... people see how well [an algorithm] performs at one task and they think it can do all the things around that, and it can’t... When we see a person performing a task very well, we understand the competence [involved]. And I think they apply the same model to machine learning'' - Rodney Brooks.
-\end{displayquote}
-\subsection{Data Ineffciency}
-look at oth ML methods which require less data but are generally less capable/require more engineering.
+The MAE is trained to reproduce all modalities regardless of whether all modalities are present at the input. For example, if a bimodal MAE takes images and text as inputs, it is trained to reproduce images and text from it's inputs. However, if only an image is available as input, the MAE is still trained to produce an image and the aligned text or vice versa when only text is available.
 
 
-\section{How to get off the Symbol Grounding Merry-Go-Round} 
-\subsection{What is symbol grounding?}
-\subsection{How do humans do it?}
-Barsalou
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/MAE.png}
+	
+	\caption{A Multimodal Autoencoder}
+	\label{fig:mae}
+\end{figure}
 
-\subsection{How do machines do it?}
+Each modality is encoded separately through its own branch of the network and then the embeddings are concatenated forming a joint embedding. The joint embedding is the used to reconstruct each modality through their own decoder branches as seen in \autoref{fig:mae}.
 
-\section{Why brains are better}
-\subsection{Embodiment}
-\subsubsection{Sensory Redundancy}
-\subsubsection{Biological Filters}
-Retina, shape of ear etc.
-\subsection{Development}
-\subsubsection{Biological Filters, again}
-Superior Colliculous guides learning in the visual cortex by controlling attention.
-\subsection{Pulling yourself up by the bootstraps}
+%
+%\section{Summary}
+%
+%The most important points to take away from this section are:
+%
+%\begin{itemize}
+%	\item Neural Networks consist of neurons each with their own respective weights.
+%	\item The output of a neuron is proportional to its input multiplied by its weights.
+%	\item Weights are trained using Gradient Descent and Backpropogation.
+%	\item Gradient Decent requires a measure of error known as a cost function.
+%	\item Gradient Descent can get stuck in local minima. Where the optimisation finishes is dependant on the training data, cost function and where the optimisation started.
+%	\item ConvNets use Kernels of weights instead of being densely connected across their inputs.
+%	\item AEs are trained to reproduce their input from a compressed representation.
+%	\item MAEs are AEs which take multiple modalities as input creating a single embedding across the modalities.
+%\end{itemize}
 
-\subsection{Machine Equivelancy}
-\subsubsection{How do we simulate Embodiment for ANNs?}
-\subsubsection{How do we simulate Development for ANNs?}
-
-\section{Where do we go from here?}
-\subsection{Robot bodies}
-\subsection{multimodality}
-\subsection{transfer learning}
-
-
+\theendnotes
