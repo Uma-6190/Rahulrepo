@@ -9,12 +9,12 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{Introduction}
-This chapter presents an overview of the mathematical theory behind artificial neural networks and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.
+This chapter presents an overview of the mathematical theory of \ac{ANN} and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.
 
 \section{Perceptrons}
 \label{sec:percep}
 The perceptron is the parent of modern artificial neurons \cite{rosenblatt1958perceptron}.
-Perceptrons arranged in layers, referred to as multi-layer perceptrons, are therfore the predecessor of modern artificial neural networks.
+Perceptrons arranged in layers, referred to as multi-layer perceptrons, are therfore the predecessor of modern \ac{ANN}s.
 
 \subsection{What is a Perceptron}
 
@@ -53,7 +53,7 @@ Person B owns a large umbrella (so the weather doesn't matter as much) but they 
 
 
 \subsection{Multi-Layer Perceptron}
-In the previous section I demonstrated how a single perceptron can be used to make decisions based on a set of inputs. However, things get much more interesting when we start to link multiple perceptrons together into multi-layer perceptrons (MLP).
+In the previous section I demonstrated how a single perceptron can be used to make decisions based on a set of inputs. However, things get much more interesting when we start to link multiple perceptrons together into \ac{MLP}.
 
 \begin{figure}
 	\centering
@@ -63,11 +63,11 @@ In the previous section I demonstrated how a single perceptron can be used to ma
 	\label{fig:mlp}
 \end{figure}
 
-If we take the example from the previous section about deciding to go for a picnic or not, we can use the MLP shown in \autoref{fig:mlp} to consider what happens if person A and B want to go for a picnic together.
+If we take the example from the previous section about deciding to go for a picnic or not, we can use the \ac{MLP} shown in \autoref{fig:mlp} to consider what happens if person A and B want to go for a picnic together.
 
-Given the previous conditions of a sunny day with a high pollen count, person A wants to go whilst person B does not, as demonstrated by the outputs of their individual perceptrons. Taking these outputs as inputs to the second layer of our MLP, we can see whether the picnic will go ahead.
+Given the previous conditions of a sunny day with a high pollen count, person A wants to go whilst person B does not, as demonstrated by the outputs of their individual perceptrons. Taking these outputs as inputs to the second layer of our \ac{MLP}, we can see whether the picnic will go ahead.
 
-This time we will set the weights of the second layer based on who shouts the loudest. In this case, person A really wants to go and is very vocal about it. $1 \times 9 + 0 \times 5 - 5 = 4$ so the picnic will go ahead. This resulted in person B developing a headache and sneezing a lot. Clearly we need to find a way to adjust the weights of our MLP so that it makes better decisions in the future.
+This time we will set the weights of the second layer based on who shouts the loudest. In this case, person A really wants to go and is very vocal about it. $1 \times 9 + 0 \times 5 - 5 = 4$ so the picnic will go ahead. This resulted in person B developing a headache and sneezing a lot. Clearly we need to find a way to adjust the weights of our \ac{MLP} so that it makes better decisions in the future.
 
 \section{Activation Functions}
 
@@ -154,7 +154,7 @@ ylabel near ticks,
 Now that we have an activation function that can produce continuous values, we can consider a much more diverse range of data to train our neural networks with. So instead of just making yes or no decisions we can look at, for example, the colours of pixels and decide if there is a cat in the image or given today's weather, predict if it will rain tomorrow.
 
 \subsubsection{Other activation functions}
-There are two other important and commonly used activation functions, though many others exist. These are, the hyperbolic tangent (Tanh) shown in \autoref{fig:activation_tanh} and rectified linear unit (Relu)  shown in \autoref{fig:activation_relu}.
+There are two other important and commonly used activation functions, though many others exist. These are, the \ac{Tanh} shown in \autoref{fig:activation_tanh} and \ac{Relu} shown in \autoref{fig:activation_relu}.
 
 \begin{figure}
 \begin{center}
@@ -179,7 +179,7 @@ ylabel near ticks,
 \end{center}
 \end{figure}
 
-The Tanh function looks similar to the sigmoid function, however it has an output between negative one and one, where the sigmoid goes from zero to one. This is useful when negative values are important to what the network is learning.
+The \ac{Tanh} function looks similar to the sigmoid function, however it has an output between negative one and one, where the sigmoid goes from zero to one. This is useful when negative values are important to what the network is learning.
 
 \begin{figure}
 \begin{center}
@@ -205,7 +205,7 @@ ylabel near ticks,
 \end{center}
 \end{figure}
 
-The Relu was created to address an issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the MLP example in \autoref{sec:percep}} can be trained as non-linear functions (like the Sigmoid or Tanh) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
+The \ac{Relu} was created to address an issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the \ac{MLP} example in \autoref{sec:percep}} can be trained as non-linear functions (like the Sigmoid or \ac{Tanh}) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
 
 \section{Learning Algorithms}
 In \autoref{sec:percep} we saw how simple computation units can make simple decisions and how these can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
@@ -240,13 +240,13 @@ Depending on the particular method we use to train our networks, the cost functi
 The cost function can take on many forms, in supervised and unsupervised training alike. Here are a few of the more commonly used ones and an explanation of each.
 
 \subsubsection{Mean Squared Error}
-Mean squared error (MSE) measures the average difference between points as shown in \autoref{eqn:mse}.
+\ac{MSE} measures the average difference between points as shown in \autoref{eqn:mse}.
 
 \begin{equation} \label{eqn:mse}
 C = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \hat{Y_i})^2
 \end{equation}
 
-When used as a loss function, MSE gives a measure of how bad our estimate $\hat{Y_i}$ is of our true value $Y_i$ on average for for all $n$ training samples in a given dataset. A perfect model would have an MSE of 0 as $\hat{Y_i}$ would be equal to $Y_i$ for all values of $i$.
+When used as a loss function, \ac{MSE} gives a measure of how bad our estimate $\hat{Y_i}$ is of our true value $Y_i$ on average for for all $n$ training samples in a given dataset. A perfect model would have an \ac{MSE} of 0 as $\hat{Y_i}$ would be equal to $Y_i$ for all values of $i$.
 
 In general, $Y_i$ and $\hat{Y_i}$ can be of arbitrary size and shape (as long as they match each other). That is, they can be scalers, vectors or matricies.
 
@@ -273,17 +273,17 @@ If we then do some training using gradient descent our network might then predic
 
 \subsubsection{Kullback-Leibler Divergence}
 
-Another method for defining the difference between two distributions is the Kullback-Leibler Divergence (KLD).
+Another method for defining the difference between two distributions is the \ac{KLD}.
 
-KLD is a non-symetric distance measure between two distributions, $P$ and $Q$. As it is non-symetric $D_{KL}(P||Q) \neq D_{KL}(Q||P)$ unless $P = Q$.
+\ac{KLD} is a non-symetric distance measure between two distributions, $P$ and $Q$. As it is non-symetric $D_{KL}(P||Q) \neq D_{KL}(Q||P)$ unless $P = Q$.
 
 \begin{equation} \label{eqn:kld}
 D_{KL} = -\int_{i=0}^{n}{P(i)Log(\frac{Q(i)}{P(i)}})
 \end{equation}
 
-KLD is useful in machine learning when we wish to calculate how different a predicted distribution is from a desired distribution. Most commonly, we will want $P$ to be a Gaussian distribution, though which distribution is chosen will depend on the specific problem. We will then use the KLD as a constraint to force our networks to make predictions which follow as closely as possible to this desired distribution, i.e. we will minimse $D_{KL}(P||Q)$.
+\ac{KLD} is useful in machine learning when we wish to calculate how different a predicted distribution is from a desired distribution. Most commonly, we will want $P$ to be a Gaussian distribution, though which distribution is chosen will depend on the specific problem. We will then use the \ac{KLD} as a constraint to force our networks to make predictions which follow as closely as possible to this desired distribution, i.e. we will minimise $D_{KL}(P||Q)$.
 
-Typically KLD is not used as a cost function on its own, but is used to constrain the output of a single layer of a network (usually not the output) whilst also minimising another cost function.
+Typically \ac{KLD} is not used as a cost function on its own, but is used to constrain the output of a single layer of a network (usually not the output) whilst also minimising another cost function.
 
 The best example of this is a Variational AutoEncoder (VAE), which will be discussed later.
 
@@ -481,7 +481,7 @@ scaled y ticks = false]
 Heuristic methods provide a very simple method for adjusting the learning rate. A commonly used one is to simply gradually reduce the learning rate by a small amount each epoch. This has the advantage of requiring almost no computational overhead and being easily understood. When training starts, we expect performance to be poor, so improvements can be made rapidly. As training progresses, we expect that improvements will be slower as we are approaching the minimum cost.
 
 \section{Convolutional Neural Networks}
-One draw back of dense neural networks, like MLPs is that they do not leverage spatial information in the input data. This means that whether two pieces of information occur next to each other, is irrelevant to the neural network. Obviously, this information is important and useful, so how can a neural network use it?
+One draw back of dense neural networks, like \ac{MLP}s is that they do not leverage spatial information in the input data. This means that whether two pieces of information occur next to each other, is irrelevant to the neural network. Obviously, this information is important and useful, so how can a neural network use it?
 
 Consider two very different problems: image classification and speech recognition. In image classification, not only are the values of pixels important but also, the values of pixels surrounding them. For example, we know that \autoref{fig:cat} is a picture of a cat, not just because there are grey pixels on a white background, but because the grey pixels are collected into a cat-like shape. We are unable to recognise the right hand image despite have the same pixels as the left image as spatial cues have been removed.
 
@@ -498,10 +498,10 @@ Similarly, in speech recognition, the order in which sound samples are heard is 
 
 Dense neural networks don't care about spatial information because each input is connected to every neuron in the input layer, effectively treating every pixel as if they are no closer, or further away from any other pixel or removing information about when each sample of sound occured.
 
-In order to levarge spatial information we can make use of convolutional neural networks (ConvNet).
+In order to levarge spatial information we can make use of \ac{ConvNet}.
 
 \subsection{What is Convolution?}
-In ConvNets, convolution is a mathematical operation which adds a data element to its neighbours, weighted by a kernel. For example, given a 3x3 kernel, and an image as the input data each pixel $P_{out}(i,j)$ in the output of the convolution will be the sum of the pixels $P_{in}(i-s, j-t)$ in the input  multiplied by its respective kernel weight $k(s,t)$ as seen in \autoref{eqn:convolution} \cite{dumoulin2016guide}.
+In \ac{ConvNet}s, convolution is a mathematical operation which adds a data element to its neighbours, weighted by a kernel. For example, given a 3x3 kernel, and an image as the input data each pixel $P_{out}(i,j)$ in the output of the convolution will be the sum of the pixels $P_{in}(i-s, j-t)$ in the input  multiplied by its respective kernel weight $k(s,t)$ as seen in \autoref{eqn:convolution} \cite{dumoulin2016guide}.
 
 \begin{equation} \label{eqn:convolution}
 P_{in}*k = \sum_{s=-a}^{a}\sum_{t=-b}^{b} P_{in}(i-s, j-t) \circ k(s,t)
@@ -536,11 +536,11 @@ This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped
 \end{figure}
 
 \subsection{Using Convolution Kernels in a Neural Network}
-In a ConvNet, the weights of the network are kernels used to perform the convolution. Whereas, in a dense network, every input is connected to every neuron in the first layer and every neuron in the first layer is connected to every neuron in the second layer etc. each with their own individual weight, in a ConvNet, the weights are grouped into kernels and each neuron has it's own kernel which is applied across the entire input via the convolution opperation.
+In a \ac{ConvNet}, the weights of the network are kernels used to perform the convolution. Whereas, in a dense network, every input is connected to every neuron in the first layer and every neuron in the first layer is connected to every neuron in the second layer etc. each with their own individual weight, in a ConvNet, the weights are grouped into kernels and each neuron has it's own kernel which is applied across the entire input via the convolution opperation.
 
 Any given layer in a dense network will have $(Data Dimensions) \times (Number of Neurons)$ weights. The convolutional equivalent will have $(Kernel Size) \times (Number of Neurons)$ weights, usually this will be far fewer than the dense network. This gives a significant increase in computational performance.
 
-For each neuron in a ConvNet, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \endnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
+For each neuron in a \ac{ConvNet}, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \endnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
 
 \subsubsection{Strided Convolution}
 In \autoref{fig:convolve}, convoltuion was performed with a stride of one. Strided Convolution refers to the case where the stride, the number of spaces between each application of the kernel, is greater than one. For example, convolution of an image and a kernel with a stride of two would be the convolution of the kernel with every other pixel of the image and would result in an output $\frac{1}{4}$ the size of the input (half the width by half the height).
@@ -590,9 +590,9 @@ This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped
 %\end{figure}
 
 \section{Autoencoders}
-Autoencoders (AE) can be constructed from any type of neural network layers, ConvNet, LSTMs, or Dense to name a few. What makes an AE an AE is not the type of layers from which it is constructed but the way in which it is trained.
+\ac{AE} can be constructed from any type of neural network layers, \ac{ConvNet}, \ac{LSTM}, or Dense to name a few. What makes an \ac{AE} an \ac{AE} is not the type of layers from which it is constructed but the way in which it is trained.
 
-An AE is trained to reproduce its input at its output (\autoref{fig:ae}. Typically, dimensional reduction is applied within the AE so that it must learn to select the most important features of the input data to accuartely represent the data in a more compressed form. 
+An \ac{AE} is trained to reproduce its input at its output (\autoref{fig:ae}. Typically, dimensional reduction is applied within the AE so that it must learn to select the most important features of the input data to accuartely represent the data in a more compressed form. 
 
 I make use of strided convolutions for dimensional reduction in the encoder and fractionally strided convolutions for dimensional enlargement in the decoder of the MAEs trained in this thesis.
 
@@ -600,22 +600,22 @@ I make use of strided convolutions for dimensional reduction in the encoder and 
 	\centering
 	\includegraphics[width=0.25\textwidth]{Figs/intro2dl/AE.png}
 	
-	\caption{An Autoencoder trained using the MSE of its input and reconstruction of the input (Input*). The red arrow shows how the error is backpropgated through the network.}
+	\caption{An \ac{AE} trained using the \ac{MSE} of its input and reconstruction of the input (Input*). The red arrow shows how the error is backpropgated through the network.}
 	\label{fig:ae}
 \end{figure}
 
 
 
 \subsection{Variational Autoencoders}
-An important enhancement of AEs is the Variational Autoencoder (VAE). The VAE is trained using a multipart cost function. A normal cost such as MSE plus the KLD of the embedding from a target distribution (usually a Gaussian).
+An important enhancement of \ac{AE}s is the \ac{VAE}. The VAE is trained using a multipart cost function. A normal cost such as \ac{MSE} plus the \ac{KLD} of the embedding from a target distribution (usually a Gaussian).
 
-This has the effect of forcing the embedding space to be smooth and helps to stop discontinuities in the embedding from occuring. For example, if a particular part of the embedding space is never explored in an AE, the output generated by the decoder can be unpredictable even for embeddings close to those seen from training data. In a VAE, due to the extra constraint placed on the embedding space, the generated output will change smoothly as the embedding is altered smoothly.
+This has the effect of forcing the embedding space to be smooth and helps to stop discontinuities in the embedding from occuring. For example, if a particular part of the embedding space is never explored in an \ac{AE}, the output generated by the decoder can be unpredictable even for embeddings close to those seen from training data. In a \ac{VAE}, due to the extra constraint placed on the embedding space, the generated output will change smoothly as the embedding is altered smoothly.
 
 
 \subsection{Multimodal Autoencoders}
-Multimodal Autoencoders (MAE) operate similarly to AEs however, they take two or more modalities as input. In this thesis, only bimodal MAEs are used though in principle, MAEs are not limited to only two modalities.
+\ac{MAE} operate similarly to \ac{AE}s however, they take two or more modalities as input. In this thesis, only bimodal MAEs are used though in principle, \ac{MAE}s are not limited to only two modalities.
 
-The MAE is trained to reproduce all modalities regardless of whether all modalities are present at the input. For example, if a bimodal MAE takes images and text as inputs, it is trained to reproduce images and text from it's inputs. However, if only an image is available as input, the MAE is still trained to produce an image and the aligned text or vice versa when only text is available.
+The \ac{MAE} is trained to reproduce all modalities regardless of whether all modalities are present at the input. For example, if a bimodal \ac{MAE} takes images and text as inputs, it is trained to reproduce images and text from it's inputs. However, if only an image is available as input, the \ac{MAE} is still trained to produce an image and the aligned text or vice versa when only text is available.
 
 
 \begin{figure}

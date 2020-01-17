@@ -43,6 +43,8 @@
 \usepackage{pdflscape}
 \usepackage{pgfgantt}
 \usepackage{todonotes}
+
+
 \usepackage{tikz}
 \usetikzlibrary{matrix,cd,arrows} % packages commonly used with tikz
 \usetikzlibrary{arrows.meta}
@@ -68,7 +70,8 @@
 \usepackage{endnotes}
 \usepackage{outlines}
 
-\setcounter{secnumdepth}{4}
+\usepackage{acronym}
+
 
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -215,8 +218,9 @@ breaklinks=true
 
 \clearpage
 \setcounter{page}{1}
+%\setcounter{secnumdepth}{4}
 \pagenumbering{roman}
-
+\input{Chapters/acronyms}
 \tableofcontents
 %\listoftables % optional
 %\listoffigures % optional

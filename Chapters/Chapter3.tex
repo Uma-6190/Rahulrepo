@@ -13,7 +13,7 @@
 \section{Introduction}\label{Lit:Intro}
 In this section I will layout the key ideas and technologies which have inspired and enabled the research presented later in this thesis.
 
-Due to the broad scope of the research carried out, the background section is loosely presented so as to compare and contrast the state-of-the-art artificial neural network technologies with their biological analogues (where possible). As such, I survey a large body of machine learning, psychology and biology literature.
+Due to the broad scope of the research carried out, the background section is loosely presented so as to compare and contrast the state-of-the-art artificial neural network technologies with their biological analogues (where possible). As such, I survey machine learning, psychology and biology literature.
 
 In doing this, I aim to demonstrate how ANNs have very good performance in specific areas, whilst lagging far behind in many others. By bringing these divergent fields together, perhaps it is possible to find ways to improve ANNs whilst also further developing our understanding of what makes humans tick. 
 
@@ -21,11 +21,11 @@ In doing this, I aim to demonstrate how ANNs have very good performance in speci
 \section{What are Artifical Neural Networks good at?}
 Artificial Neural Networks have been around for a long time but perhaps the best example of early neural networks is the MultiLayer Perceptron (MLP) \cite{rosenblatt1958perceptron}. Modern ANNs can trace their lineage back to the MLP; however the technology has advanced a lot since 1958. ANNs represent the state-of-the-art on many Artificial Intelligence benchmarks.
 
-ANNs are currently enjoying a new renaissance due to wide spread availablity of Graphics Processing Units (GPUs), big data and software libraries like Tensorflow and CUDA.
+ANNs are currently enjoying a new renaissance due to wide spread availablity of \ac{GPU}, big data and software libraries like Tensorflow and CUDA.
 
-In 2012, Krizhevsky et al. \cite{krizhevsky2012imagenet} kickstarted this new wave of interest in ANNs by getting the top performance on the ILSVRC-2012 ImageNet challenge. The unprecendented performance was achieved by utilising a very large amount of training data (1.2 million images), which was made possible by utilising the parallel computing power of GPUs. In creating AlexNet, Krizhevsky et al. demonstrated the potential of ANNs to solve real world problems, something which had been promised since ANN research began.
+In 2012, Krizhevsky et al. \cite{krizhevsky2012imagenet} kickstarted this new wave of interest in \ac{ANN}s by getting the top performance on the ILSVRC-2012 ImageNet challenge. The unprecendented performance was achieved by utilising a very large amount of training data (1.2 million images), which was made possible by utilising the parallel computing power of \ac{GPU}s. In creating AlexNet, Krizhevsky et al. demonstrated the potential of \ac{ANN}s to solve real world problems, something which had been promised since \ac{ANN} research began.
 
-The field of Deep Learning (DL) has advanced greatly in recent years, with ANNs being used to solve many different types of problems. DL is being used for many differnt tasks which can be broken down into several categories: Classification, Natural Language Processing (NLP), Data Generation, Reinforcement Learning and Prediction Tasks.
+The field of \ac{DL} has advanced greatly in recent years, with \ac{ANN}s being used to solve many different types of problems. DL is being used for many differnt tasks which can be broken down into several categories: Classification, \ac{NLP}, Data Generation, Reinforcement Learning and Prediction Tasks.
 
 
 %\begin{outline}
@@ -59,60 +59,104 @@ The field of Deep Learning (DL) has advanced greatly in recent years, with ANNs 
 %   \2 Financial Markets \cite{fischer2018deep}
 %\end{outline}
 
-Of these categories of problems, MRL (as it is presented in this thesis) draws mostly from Classification, NLP and Data Generation.
+Of these categories of problems, \ac{MRL}(as it is presented in this thesis) draws mostly from Classification, \ac{NLP} and Data Generation, so these will be the focus of this survey.
 
 \subsection{Classification}
-MRL can be considered to draw from different classification tasks, depending on which modalities it is used with. In this thesis I apply MRL to image, speech and textual data, as such I will focus on image, speech and text recognition techniques and will not focus on more nitch problems such as Facial Recognition \cite{ma2004facial}, Emotion Recognition \cite{levi2015emotion} or more general data classification problems \cite{kussul2017deep,qi2017pointnet}.
+\ac{MRL} can be considered to draw from different classification tasks, depending on which modalities it is used with. In this thesis I apply \ac{MRL} to image, speech and textual data, as such I will focus on general recognition techniques from the image processing domain and will not focus on more nitch problems such as Facial Recognition \cite{ma2004facial}, Emotion Recognition \cite{levi2015emotion} or more general data classification problems \cite{kussul2017deep,qi2017pointnet}.
 
-
-With Krizhevsky's work in\cite{krizhevsky2012imagenet}, a style of convolutional neural network (ConvNet) architecture, consisting of convolution max-pooling and dropout layers followed by fully connected layers and a softmax output layer was created. This has become a standard type architecture for image classification tasks with many similar networks appearing such as VGG 16 and 19 \cite{simonyan2014very}.
+\subsubsection{AlexNet}
+With Krizhevsky's work in\cite{krizhevsky2012imagenet}, a style of \ac{ConvNet} architecture, consisting of convolution max-pooling and dropout layers followed by fully connected layers and a softmax output layer was created. This has become a standard type architecture for image classification tasks with many similar networks appearing such as VGG 16 and 19 \cite{simonyan2014very}.
 
 Convolution layers are used for feature extraction and fully connected layers are used for classification with downsampling happening gradually throughout the network to reduce the dimensionality of the data. In AlexNet and VGG downsampling is done using the max-pooling layers, however more recent architectures have made use of strided convolutions for this \cite{springenberg2014striving}.
 
 The use of dropout as a regulariser has also become common place as it has been shown to outperform the most common regularisers, L1 and L2 \cite{srivastava2014dropout}.
 
+\subsubsection{Residual Connections}
 An important advancement over the AlexNet style of architecture (beyond simply altering network hyper parameters as with VGG 16 and 19 \cite{simonyan2014very} was the addition of residual connections. Introduced in \cite{he2016deep}, residual connections allow data to flow through alternate branches of a network, skipping over some layers to rejoin the main flow at a later point in the network. This has two key effects, 1) it allows the training of much deeper networks by providing a shortcut through the network for error gradients to be backpropogated, helping to ellivate the vanishing gradient problem \cite{hochreiter1998vanishing} and 2) it allows the network to consider lower level features along side more abstracted ones for decision making.
 An example of taking residual connections to their limit is seen in \cite{huang2017densely} where every preceeding layer's output is an input to the layers which follow it. This makes the neural network very wide but allows for good performance even with a small number of layers, offering a reduction in computational complexity.
 
+\subsubsection{Inception: Multiscale Convolutions}
 Another advancement over the AlexNet style architectures was the introduction of multiscale convolutions where data is passed through multiple, parallel convolutions layers each with a different kernel size before concatenating their activations \cite{szegedy2015going}. Making use of different kernel sizes creates filters which are sensitive to different scales of features. Thus, for example, if an eye in an image is not picked up at one scale as it is too large or too small, it may be picked up by a parallel convolution with a different sized kernel.
 
 Szegedy et.al have developed their Inception Architecture from \cite{szegedy2015going} iteratively in \cite{szegedy2016rethinking, szegedy2017inception} in each, small advancements in state-of-the-art object recognition are achieved.
 
 
 \subsection{Generation}
-Whilst classification tasks are concerned with grouping input data into classes, generative tasks aim to create examples of particular classes, as with class conditioned Generative Adversarial Networks (GANs) \cite{mirza2014conditional, odena2017conditional} or to generate a translation from one modaility to another, for example image and video caption generation \cite{vinyals2015show, lebret2015phrase, donahue2015long, jia2015guiding, rohrbach2014coherent, rohrbach2013translating, yao2015describing, yao2015video, venugopalan2014translating, johnson2016densecap, ordonez2011im2text} and image style transfer \cite{zhu2017unpaired}.
+Whilst classification tasks are concerned with grouping input data into classes, generative tasks aim to create examples of particular classes, as with class conditioned \ac{GAN} \cite{mirza2014conditional, odena2017conditional} or to generate a translation from one modaility to another, for example image and video caption generation \cite{vinyals2015show, lebret2015phrase, donahue2015long, jia2015guiding, rohrbach2014coherent, rohrbach2013translating, yao2015describing, yao2015video, venugopalan2014translating, johnson2016densecap, ordonez2011im2text} and image style transfer \cite{zhu2017unpaired}.
 
-We can also consider autoencoders(AE) a type of generative network due to the way in which they are trained, however, it is more useful to consider them from the perspective of representation learning. For example in \cite{lu2013speech} AEs are used to generate denoised speech.
+We can also consider \ac{AE} a type of generative network due to the way in which they are trained, however, it is more useful to consider them from the perspective of representation learning. For example in \cite{lu2013speech} \ac{AE}s are used to generate denoised speech.
 
-I will spend much time on the GAN based methods as they are not utilised in the research presented in this thesis. However, GANs are a very active area of research so here is a brief overview. 
+\subsubsection{Generative Adversarial Networks}
+I will not spend much time on the \ac{GAN} based methods as they are not utilised in the research presented in this thesis. However, \ac{GAN}s are a very active area of research so here is a brief overview. 
 
 In \cite{mirza2014conditional} the Generator network is fed noise and a class label is used to generate images of examples of that class. The Discriminator is fed the desired class and either a real or generated image and tasked with distinguishing whether the image is real or not. By inverting and backpropogating the error gradients from the Discriminator through the Generator, the Generator learns to fool the Discriminator by generating realistic images for each class in the dataset.
 
 Odena et al. \cite{odena2017conditional} expand on the work in \cite{mirza2014conditional}. In stead of feeding the desired class to the Descriminator, they train an auxillory classifier network which classifies which class the generated and real images belong to.
 
-GANs can also be used for style transfer \cite{zhu2017unpaired}. Style transfer is similar to translating from one modality to another, thus \cite{zhu2017unpaired} demonstrates the flexibility and power of GANs which could be applied to a much wider variety of problems than those I have highlighted here. Zhu et al. use the Descriminator of a GAN to determine whether an image is from a given domain (e.g. Monet paintings) or was translated by the Generator from another domain (e.g. photos). In doing so the Generator learns to produce iamges in the chosen domain from images in a source domain (e.g. photo --> Monet painting).
+GANs can also be used for style transfer \cite{zhu2017unpaired}. Style transfer is similar to translating from one modality to another, thus \cite{zhu2017unpaired} demonstrates the flexibility and power of \ac{GAN}s which could be applied to a much wider variety of problems than those I have highlighted here. Zhu et al. use the Descriminator of a \ac{GAN} to determine whether an image is from a given domain (e.g. Monet paintings) or was translated by the Generator from another domain (e.g. photos). In doing so the Generator learns to produce iamges in the chosen domain from images in a source domain (e.g. photo --> Monet painting).
 
-Translating from one modality to another can also be done by other types of neural networks, not just those trained in an adversarial manner as with GANs.
-The field of image and video captioning highlights this. The typical method for image caption generation is to first train a ConvNet on an image classification task and a language model (e.g. an Long Short-Term Memory Reccurent Neural Network (LSTM) \cite{hochreiter1997long}) on a word prediction task \cite{vinyals2015show, venugopalan2014translating, johnson2016densecap}. This initalises the two subnetwroks to have useful weights for the task. In \cite{johnson2016densecap} Johnson et al. make use of the VGG net from\cite{simonyan2014very}. This off the shelf reuse of networks can be very useful and is explored in detail in \cite{keller}.
-The dense layers of the ConvNet are removed and the internal image representation learnt by the ConvNet is fed to the language model which is then trained to predict image captions from this representation.
+\subsubsection{Modality Translation: Image Caption Generation}
+Translating from one modality to another can also be done by other types of neural networks, not just those trained in an adversarial manner as with \ac{GAN}s.
+The field of image and video captioning highlights this. The typical method for image caption generation is to first train a ConvNet on an image classification task and a language model (e.g. an \ac{LSTM} \cite{hochreiter1997long}) on a word prediction task \cite{vinyals2015show, venugopalan2014translating, johnson2016densecap}. This initalises the two subnetwroks to have useful weights for the task. In \cite{johnson2016densecap} Johnson et al. make use of the VGG net from\cite{simonyan2014very}. This off the shelf reuse of networks can be very useful and is explored in detail in \cite{keller}.
+The dense layers of the \ac{ConvNet} are removed and the internal image representation learnt by the \ac{ConvNet} is fed to the language model which is then trained to predict image captions from this representation.
 
-Video captioning is a natural extension of the iamge captioning domain and follows a similar procedure for generating video captions. First a representation of the visual contents of the video is generated and then a language model translates this representation into a caption. In order to generate a representation of the visual information  present in the videos, one can either make use of LSTMs to combine the representations of each frame generated by a ConvNet \cite{donahue2015long}, make use of 3D ConvNets, convolving along the time axis as well as the two spatial axes of the image frames \cite{yao2015describing, yao2015video} or make use of precomputed features such as Motion Boundary Histograms or Optical Flow \cite{rohrbach2014coherent, rohrbach2013translating}.
+Video captioning is a natural extension of the iamge captioning domain and follows a similar procedure for generating video captions. First a representation of the visual contents of the video is generated and then a language model translates this representation into a caption. In order to generate a representation of the visual information  present in the videos, one can either make use of \ac{LSTM}s to combine the representations of each frame generated by a \ac{ConvNet} \cite{donahue2015long}, make use of 3D \ac{ConvNet}s, convolving along the time axis as well as the two spatial axes of the image frames \cite{yao2015describing, yao2015video} or make use of precomputed features such as Motion Boundary Histograms or Optical Flow \cite{rohrbach2014coherent, rohrbach2013translating}.
 
 In all of these methods we see an important commonality, Representation Generation. In order to generate one modality from another, first a representation of the salient information from the source modality must be produced.
 
 \subsection{Representation Learning}
 
-Whilst many tasks involving ANNs focus on an end result such as a \cite{krizhevsky2012imagenet}, others actively focus on learning data representations \cite{radford2015unsupervised, silberer2014learning, chorowski2019unsupervised, vincent2010stacked, mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic, feng2010visual, eslami2018neural, donahue2019large}.
+Whilst many tasks involving \ac{ANN}s focus on an end result such as a \cite{krizhevsky2012imagenet}, others actively focus on learning data representations \cite{radford2015unsupervised, silberer2014learning, wavenet, vincent2010stacked, mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic, feng2010visual, eslami2018neural, donahue2019large}.
+
+Designing the manner in which data is represented is a vital part of building any machine learning system. As Bengio et al. note in \cite{repRev}:
+
+\begin{displayquote}
+``...much of the actual effort in deploying machine learning algorithms goes into the design of... data transformations that result in representations... that support effective machine learning.''
+\end{displayquote}
 
 As I discussed previously, image and video captioning are relient on learning abstract representations of the input images. In fact, representation learning is present in all neural network tasks, whether they are directly viewed this way or not. In \cite{vinyals2015show, venugopalan2014translating, johnson2016densecap}, not only is pretraining to produce a useful representation of image content leveraged, but we also see that learning this representation is inherent in learning image classification, highlighted by Johnson et al. \cite{johnson2016densecap} reusing weights trained in \cite{simonyan2014very}. 
 
-In \cite{mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic} Mikolov et al. show how learning a continuous representation of natural language can be used to solve various natural language processing tasks. By converting from a one-hot representation to a continuous representation, learnt through a word prediction task, many other problems can be solved. 
-Whilst a one-hot encoding contains no information about the meaning of the word it represents, the continuous representation which arises from learning skip-gram or n-gram models which take this one-hot encoding as input do contain some of the meaning of the words they represent.
+\subsubsection{Natural Language Processing}
+In \cite{mikolov2013distributed, mikolov2013efficient, mikolov2013linguistic} Mikolov et al. show how learning a continuous representation of natural language can be used to solve various \ac{NLP} tasks. By converting from a one-hot representation to a continuous representation, learnt through a word prediction task, many other problems can be solved. 
+Whilst a one-hot encoding contains no information about the meaning of the word it represents, the continuous representation which arises from learning skip-gram or n-gram models which take this one-hot encoding as input do contain some of the meaning of the words they represent. This can be related to the Manifolds, Natural Clustering, and Temporal and Spatial Coherence properties which Bengio et al. \cite{repRev} put forward as being important parts of a good representation.
 
-Whilst the skip-gram and n-gram representations remain ungrounded and do not contain the true meaning of the words they encode, some properties of the words can be found from this representation. For example, pronouns all end up with similar representations as do the capital cities of countires. Further to this, the gradients between the representations of countries and their capitals are also similar, this highlights that some of the meaning of words can be found just from statistical regularities in bodies of text.
+Whilst the skip-gram and n-gram representations remain ungrounded and do not contain the true meaning of the words they encode, some properties of the words can be found from this representation. For example, pronouns all end up with similar representations, showing the representation has Manifolds which are formed through Natural Clustering. This is also true for capital cities of countires. 
 
-\todo[inline]{you are up to here} 
+Further to this, the gradients between the representations of countries and their capitals are also similar. This highlights that some of the meaning of words can be found just from statistical regularities in bodies of text and to demonstrate that the representation exihibtis Spatial Coherence.
 
+
+\subsubsection{Autoencoders}
+\ac{AE}s are a very powerful class of networks which can be used for learning dense representations of many forms of data in an unsupervised manner.
+
+\ac{AE}s learn a representation of the data they process by compressing the data into a smaller representation as explained in the \ref{Chapter2}.
+
+In \cite{pu2016variational} Pu et al. make use of \ac{VAE}s to learn a representation of images, the image is then classified using a multiclass \ac{SVM} conditioned on the image representations from the \ac{VAE}. They compare their classification performance on various benchmarks demonstrating similar performance to state-of-the-art techniques but with much lower computation time. The computational performance gain is achieved due to a combination of using \ac{GPU}s and the reduction in computational complexity from the compression ofthe image data via the \ac{VAE}.
+
+Pu et al. then replace the multiclass \ac{SVM} with a \ac{RNN} and training on an image captioning dataset (MS COCO\cite{lin2014microsoft}), learn to predict a series of one-hot encoded words, representing an image caption. On this task, the show better performance for caption generation using image representations generated by their \ac{VAE} than the representations generated by either VGG \cite{simonyan2014very} or the InceptionNet \cite{szegedy2015going}. They do not offer an explanation as to why the representation learned by their \ac{VAE} is better for this task than those learned by the classification task in \cite{simonyan2014very, szegedy2015going}; however, I will.
+In \cite{repRev} Bengio et al. introduced a series of properties which a good representation should have. From these, two are particularly relevant to explaining the improved performance of the \ac{VAE} representation over the classifier based representations.
+
+\begin{itemize}
+	\item Semi-supervised learning: Given an input X and target Y a subset of the concepts explaing X's distribution explain much of Y given X.
+	\item A hierarchical organisation of explanatory factors: The concepts that are useful for describing Y can be defined in a hierarchy of concepts with more abstract (high-level) concepts defined in terms of less abstract (low-level) ones.
+\end{itemize}
+
+Both the classification and \ac{VAE} based representations have both of these properties. However, when learning a representation for a classification task, the \ac{ANN} will focus on representing only the features useful for the classification. For example, if trying to learn to classify horses, it is the shape of the horse that matters not its colour (horses come in many colours, but whether a horse is brown, white or even blue does not change the fact that it is a horse). This means that whilst the classification representation contains low-level concepts for describing the shape of the horse, they do not contain low-level features for describing the high-level concepts of colour.
+When captioning images of horses, the colour is very important as one would expect the caption to contain information about the horse beyond just that there is a horse. If the classification \ac{ANN} has thrown away the information about the colour of the horse, this information cannot appear in the caption. As the classification reprepresentation does not contain the concepts of colour, it does not have the the full subset of factors which describe Y given X if Y is the horse colour and X the image of the horse.
+
+Consider now what the \ac{VAE} is trained to do, it learns to produce a compressed representation of the image from which the image can be reconstructed. This means that more of the information of the original image needs to be contained in the representation and is therefore available for generating accurate captions of that image. I.e. the full subset of concepts which describe Y given X are available, meaning the \ac{VAE} representation fullfils both the semi-supervised learning and hierarchical organisation of explanitory factors to a greater degree than the classification representation.
+
+In a second experiment, Pu et al. train their caption generation system in an end-to-end fashion, this lead to a significant improvement in performance (+0.11 BLEU \cite{bleu}). This demonstrates that the representation of the \ac{VAE} can be improved upon by adapting the feature extraction process specifically for the captioning task.
+
+
+As well as representations of images, \ac{AE} can be used to learn representations of other types of data. A good example of this is WaveNet \cite{wavenet}. Chorowski et al. demonstrate how strided convolutions \cite{radford2015unsupervised} can be used to capture the time dependant regularites of speech at different scales within an vector quantised autoencoding architecture \cite{van2017neural}. Chorowski et al. build off of a large body of research on speech representation using \ac{AE}s \cite{vincent2010stacked, lu2013speech}.
+
+The WaveNet architecture stacks layers of strided convolutions with each successive layer having a larger stride, this allows the network to consider features from more and more distant (in time) points of the input data. An intuitive way of understanding why this is useful for generating a representation of speech is to imagine two different speakers saything the same word. One speaker speaks very quickly and the other very slowly. This means that the same word, said by each speaker will have different characteristics with respect to time but as each speaker is saying the same word, the network must be able to ignore this variation with respect to time.
+
+Chorowski show that their unsupervised, speaker independant WaveNet is able to beat the state-of-the-art performance on a phonetic unit discovery task \cite{dunbar2017zero} on two out of three languages (English and French) demonstrating that the WaveNet representation can be used to correctly distinguish between phonemes. The languages it acheived the best results for had significantly more training data, though for the third language (Mandarin) it achieved comparable results to other entrants to the ZeroSpeech 2017 challenge. 
+
+What is of particular interest in \cite{wavenet} is that it achieves state-of-the-art performance on this challenge in an unsupervised manner. The authors note that it is better to have a model which requires and is capable of exploiting the large amount of unlabelled data through unsupervised training, than to have a simpler model which saturates on small datasets. The authors suggest that this is one reason why WaveNet did not achieve state-of-the-art performance on Mandarin due to overfitting the small amount of training data.
+
+They also note that Mandarin is a pitched language, unlike English and French, and that the WaveNet disgards pitch and prosody \cite{van2017neural} which may be important features for distinguishing Mandarin Phonemes. As the authors do not test whether the addition of more unsupervised training improves the representation of Mandarin phonemes, it is unclear whether the WaveNet architecture is the right choice for generating representations of Mandarin. In my opinion, the use of vector quantisation to make the latent space discrete, whilst helping to prevent a collapse in the latent space, discards too much useful information as shown by the superior performance of the \ac{VAE}, which uses a continuous latent representation, at representing pitch information \cite{wavenet}. 
 
 \section{What are Artificial Neural Networks Bad at?}
 Whilst ANNs have been applied to many tasks and acheived super-human ability at them \cite{vinyals2019alphastar}, they do not have general intelligence like humans.
@@ -122,31 +166,61 @@ Whilst ANNs have been applied to many tasks and acheived super-human ability at 
 \end{displayquote}
 
 \subsection{Artificial Neural Networks are Easily Fooled}
-Whilst \cite{krizhevsky2012imagenet, simonyan2014very, szegedy2015going, szegedy2016rethinking, szegedy2017inception, he2016deep, huang2017densely} all show amazing performance on a very difficult image classification problem. These same networks are easily by images, which to humans look like random noise \cite{nguyen2015deep}.
+Whilst \cite{krizhevsky2012imagenet, simonyan2014very, szegedy2015going, szegedy2016rethinking, szegedy2017inception, he2016deep, huang2017densely, russakovsky2015imagenet, chiu2018state, eslami2018neural} all show amazing performance on a very difficult image classification problem. These same networks are easily fooled by images, which to humans look like random noise \cite{nguyen2015deep}.
+
+\todo[inline]{Discuss more \cite{nguyen2015deep} plus other citations, papers are on desk at work}
 
 \subsection{Data Ineffciency}
-look at oth ML methods which require less data but are generally less capable/require more engineering.
+As demonstrated by WaveNet's poor performance at representing Mandarin speech \cite{wavenet} when \ac{ANN}s are not provided with enough data they often overfit and fail to distinguish between salient features and local noise in the training data. A large portion of the success of AlexNet \cite{krizhevsky2012imagenet} is due to the 1.2 million images that were used to train it. This was only possible due to the advancement of \ac{GPU} technology allowing for parallel computation of each convolution in the network. Attempting to train AlexNet on a \ac{CPU} would take a very long time.
+
+Similarly, Vinyals et al. \cite{vinyals2015show} report that their image captioning system required millions of training instances to achieve their then state-of-the-art performance, even after pretraining on the 1.2 million images from ImageNet \cite{ImNet}.
+
+Ha et al. \cite{ha2018world, ha2018recurrent} do show that pretraining pretraining an unsupervised world representation can allow for rapidly producing controllers capable of solving reinforcement learning tasks. However this is not generalisable to all problem spaces.
+
+Obviously, \ac{ANN}s are not comparable to adult humans when it comes to learning complex, high level tasks with little or no training. It is expected that an adult human could recognise a novel object and its name from a single training example, this is not to be expected from an \ac{ANN}.
+
+Ha's approach of producing a compressed and feature rich representation of the world \cite{ha2018world, ha2018recurrent} may offer insight into how we can approach human like performance at one-shot-learning \cite{vinyals2016matching}. As demonstrated in the representation learning literature, pre-learning a representation which fulfils the criteria layed out in \cite{repRev} can greatly simplify many machine learning tasks.
 
 
 \section{How to get off the Symbol Grounding Merry-Go-Round} 
 \subsection{What is symbol grounding?}
+\cite{searle1980minds, steels2008symbol}
 \subsection{How do humans do it?}
-Barsalou
+\cite{barsalou2008grounded}
 
 \subsection{How do machines do it?}
+\cite{coradeschi2000anchoring, coradeschi2003introduction, pezzulo2013computational, cangelosi2001adaptive, cangelosi2002symbol}
+
+\todo[inline]{this has just been shoved in here and will need to be rewritten}
+In \cite{ngiam2011multimodal}, a MAE was trained using video and pre-processed audio data to classify speech data. They demonstrate that the addition of the visual data improves recognition under noisy conditions, highlighting the technical advantages of MAEs. Further to this they demonstrate that the McGurk effect \cite{mcgurk1976hearing} occurs in the MAE, highlighting that it is a good analogy for the human audio and visual cortices and how they interact.
+
+In \cite{silberer2014learning}, Silberer et al. demonstrate the ability of MAEs to reconstruct missing data when only one modality is present. A similar effect is seen in the human brain where sensory redundancy is utilised to repair and reconstruct data from noisy or missing percepts \cite{samuel1997lexical}. We use this effect to reconstruct images from audio. 
 
 \section{Why brains are better}
 \subsection{Embodiment}
+\cite{pfeifer2006body, smith2005development}
 \subsubsection{Sensory Redundancy}
 \subsubsection{Biological Filters}
 Retina, shape of ear etc.
 \subsection{Development}
 \subsubsection{Biological Filters, again}
-Superior Colliculous guides learning in the visual cortex by controlling attention.
+In \cite{johnson2015two}, Johnson et al. comment on the well established `two process theory of face processing' in humans.  During the `Conspec' stage of the \ac{TPT} the superior colliculus interacts with both visual and motor systems driving visual attention towards conspecific stimuli. The `Conlern' stage of the \ac{TPT} is guided by the `Conspec' stage due to a larger proportion of conspecific visual data  (e.g. the human face) being provided to the visual cortex as more attention is given to these stimuli by the superior colliculus. 
+The Superior Colliculous guides learning in the visual cortex by controlling attention.
+
+Bambach \cite{bambach2017egocentric} highlights the importance of data quality when training visual recognition systems, thus the superior colliculus may help to improve the learning of the visual cortex by providing focused, high-quality training examples.
+
+As well as the structure of the human brain which has been optimised by evolution to facilitate rapid learning, the physical embodiment of humans guides and improves human learning. Possibly the best example of this is the human eye, specifically the retina.
+
+The highly organised nature of the retina predisposes the types of visual data presented to the visual cortex to have certain characteristics through signal conditioning, as well as shape and movement specific sensitivity \cite{masland2012neuronal}.
+
+Signal conditioning in the retina enhances object boundary detection by reducing the brightness of the brightest areas and their immediate surroundings, giving objects a rough outline. Other effects in the retina are sensitive to movement and help segment the background from moving objects in the foreground \cite{olveczky2003segregation}.
+
+Similarly, the shape of the human ear and the physical structure of the inner ear filters and shapes the sounds we hear which facilitates learning and detection of relevant sounds whilst reducing the perception of background noise \cite{oxenham2018we}.
 \subsection{Pulling yourself up by the bootstraps}
 
 \subsection{Machine Equivelancy}
 \subsubsection{How do we simulate Embodiment for ANNs?}
+\cite{lee2008sparse}
 \subsubsection{How do we simulate Development for ANNs?}
 
 \section{Where do we go from here?}

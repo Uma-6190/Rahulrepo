@@ -525,9 +525,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="240.50088"
-     inkscape:cy="319.53494"
+     inkscape:zoom="1.4"
+     inkscape:cx="325.95658"
+     inkscape:cy="218.8297"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -539,7 +539,7 @@
      fit-margin-bottom="1"
      inkscape:window-width="1920"
      inkscape:window-height="993"
-     inkscape:window-x="0"
+     inkscape:window-x="1920"
      inkscape:window-y="24"
      inkscape:window-maximized="1">
     <sodipodi:guide
@@ -857,14 +857,6 @@
          id="tspan6230"
          x="495.19934"
          y="533.2063">Orange Circle</tspan></text>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.09915912px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-0)"
-       d="m 573.37631,493.91596 0,-37.9318"
-       id="path6141-8"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="300"
-       inkscape:export-ydpi="300"
-       inkscape:export-filename="/home/eli/Documents/thesis/Figs/shapes/vectorArthExmp.png" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.4873867px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -913,7 +905,7 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.4873867px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="513.80774"
+       x="533.05457"
        y="623.23694"
        id="text6786-1"
        sodipodi:linespacing="125%"
@@ -923,12 +915,12 @@
        transform="scale(1.039136,0.96233795)"><tspan
          sodipodi:role="line"
          id="tspan6788-8"
-         x="513.80774"
+         x="533.05457"
          y="623.23694">Emb(       )</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.4873867px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="513.27808"
+       x="532.5249"
        y="652.83618"
        id="text6786-7-3"
        sodipodi:linespacing="125%"
@@ -938,12 +930,12 @@
        transform="scale(1.039136,0.96233795)"><tspan
          sodipodi:role="line"
          id="tspan6788-5-3"
-         x="513.27808"
+         x="532.5249"
          y="652.83618">Emb(Orange Circle)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.4873867px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="484.92676"
+       x="504.17358"
        y="656.05988"
        id="text7821"
        sodipodi:linespacing="125%"
@@ -953,7 +945,7 @@
        transform="scale(1.039136,0.96233795)"><tspan
          sodipodi:role="line"
          id="tspan7823"
-         x="484.92676"
+         x="504.17358"
          y="656.05988"
          style="font-size:32.97477341px">-</tspan></text>
     <g
@@ -1321,7 +1313,7 @@
     </g>
     <g
        id="g6221-5-7"
-       transform="translate(407.27683,203.69813)">
+       transform="translate(427.27683,203.69813)">
       <image
          transform="translate(-7.0710678,290.92393)"
          clip-path="url(#clipPath6212-7-5)"
@@ -1343,7 +1335,7 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.4873867px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="512.78186"
+       x="532.02869"
        y="698.7887"
        id="text6786-1-7"
        sodipodi:linespacing="125%"
@@ -1353,12 +1345,12 @@
        transform="scale(1.039136,0.96233795)"><tspan
          sodipodi:role="line"
          id="tspan6788-8-8"
-         x="512.78186"
+         x="532.02869"
          y="698.7887">Emb(       )</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.4873867px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="512.2522"
+       x="531.49902"
        y="728.38794"
        id="text6786-7-3-6"
        sodipodi:linespacing="125%"
@@ -1368,12 +1360,12 @@
        transform="scale(1.039136,0.96233795)"><tspan
          sodipodi:role="line"
          id="tspan6788-5-3-8"
-         x="512.2522"
+         x="531.49902"
          y="728.38794">Emb(Orange Circle)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:16.4873867px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="483.90085"
+       x="503.14767"
        y="731.61163"
        id="text7821-8"
        sodipodi:linespacing="125%"
@@ -1383,12 +1375,12 @@
        transform="scale(1.039136,0.96233795)"><tspan
          sodipodi:role="line"
          id="tspan7823-4"
-         x="483.90085"
+         x="503.14767"
          y="731.61163"
          style="font-size:32.97477341px">-</tspan></text>
     <g
        id="g6777"
-       transform="translate(718.49763,123.9899)">
+       transform="translate(738.49763,123.9899)">
       <image
          style="stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="translate(111.47972,23.93908)"
@@ -1435,51 +1427,51 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:90px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="478.41037"
+       x="474.41037"
        y="634.81281"
        id="text4839"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4841"
-         x="478.41037"
+         x="474.41037"
          y="634.81281"
-         style="font-size:75px">(</tspan></text>
+         style="font-size:75px">(|</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:90px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="480.13196"
-       y="712.03784"
+       x="473.98911"
+       y="712.75214"
        id="text4839-9"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4841-7"
-         x="480.13196"
-         y="712.03784"
-         style="font-size:75px">(</tspan></text>
+         x="473.98911"
+         y="712.75214"
+         style="font-size:75px">(|</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:90px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="695.13196"
+       x="719.13196"
        y="634.60925"
        id="text4839-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4841-6"
-         x="695.13196"
+         x="719.13196"
          y="634.60925"
-         style="font-size:75px">)</tspan></text>
+         style="font-size:75px">|)</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:90px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="694.85712"
+       x="718.85712"
        y="711.46637"
        id="text4839-3-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4841-6-2"
-         x="694.85712"
+         x="718.85712"
          y="711.46637"
-         style="font-size:75px">)</tspan></text>
+         style="font-size:75px">|)</tspan></text>
     <rect
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.64501679;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect6123-3"
@@ -1487,5 +1479,13 @@
        height="25.608782"
        x="175.03455"
        y="338.01709" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.09915912px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-0)"
+       d="m 573.37631,493.91596 0,-37.9318"
+       id="path6141-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"
+       inkscape:export-filename="/home/eli/Documents/thesis/Figs/shapes/vectorArthExmp.png" />
   </g>
 </svg>
