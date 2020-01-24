@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis_main.aux
 The style file: latexeu.bst
 Database file #1: bigone.bib
-Warning--I didn't find a database entry for "coradeschi2000anchorin"
-You've used 89 entries,
+You've used 110 entries,
             2011 wiz_defined-function locations,
-            978 strings with 20920 characters,
-and the built_in function-call counts, 24160 in all, are:
-= -- 1860
-> -- 1150
-< -- 96
-+ -- 417
-- -- 328
-* -- 1402
-:= -- 3037
-add.period$ -- 193
-call.type$ -- 89
+            1084 strings with 24938 characters,
+and the built_in function-call counts, 29331 in all, are:
+= -- 2226
+> -- 1423
+< -- 124
++ -- 516
+- -- 406
+* -- 1744
+:= -- 3660
+add.period$ -- 224
+call.type$ -- 110
 change.case$ -- 0
-chr.to.int$ -- 52
-cite$ -- 89
-duplicate$ -- 1165
-empty$ -- 1929
-format.name$ -- 328
-if$ -- 6028
+chr.to.int$ -- 74
+cite$ -- 110
+duplicate$ -- 1368
+empty$ -- 2251
+format.name$ -- 406
+if$ -- 7290
 int.to.chr$ -- 0
-int.to.str$ -- 89
-missing$ -- 346
-newline$ -- 445
-num.names$ -- 89
-pop$ -- 337
+int.to.str$ -- 110
+missing$ -- 461
+newline$ -- 548
+num.names$ -- 110
+pop$ -- 376
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1320
+skip$ -- 1627
 stack$ -- 0
-substring$ -- 1267
-swap$ -- 727
-text.length$ -- 70
+substring$ -- 1583
+swap$ -- 889
+text.length$ -- 87
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 225
-width$ -- 91
-write$ -- 990
-(There was 1 warning)
+while$ -- 278
+width$ -- 113
+write$ -- 1216

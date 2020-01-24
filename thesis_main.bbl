@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{smith2008infants}
 L.~Smith and C.~Yu,
@@ -387,6 +387,17 @@ J.~R.~Searle,
 {\em Minds, brains, and programs,}
 Behavioral and brain sciences {\bf 3} (1980) 417.
 
+\bibitem{turing2009computing}
+A.~M.~Turing.
+\newblock {\em Computing machinery and intelligence,} .
+\newblock In {\em Parsing the Turing Test}~23. Springer2009.
+
+\bibitem{cangelosi2000robotic}
+A.~Cangelosi, A.~Greco, and S.~Harnad,
+{\em From robotic toil to symbolic theft: Grounding transfer from entry-level
+  to higher-level categories1,}
+Connection Science {\bf 12} (2000) 143.
+
 \bibitem{steels2008symbol}
 L.~Steels,
 {\em The symbol grounding problem has been solved. so what’s next,}
@@ -397,17 +408,123 @@ L.~W.~Barsalou,
 {\em Grounded cognition,}
 Annu. Rev. Psychol. {\bf 59} (2008) 617.
 
+\bibitem{slater1999intermodal}
+A.~Slater, P.~C.~Quinn, E.~Brown, and R.~Hayes,
+{\em Intermodal perception at birth: Intersensory redundancy guides newborn
+  infants’ learning of arbitrary auditory- visual pairings,}
+Developmental Science {\bf 2} (1999) 333.
+
+\bibitem{masland2012neuronal}
+R.~H.~Masland,
+{\em The neuronal organization of the retina,}
+Neuron {\bf 76} (2012) 266.
+
+\bibitem{fantz1963pattern}
+R.~L.~Fantz and ~others,
+{\em Pattern vision in newborn infants,}
+Science {\bf 140} (1963) 296.
+
+\bibitem{johnson2015two}
+M.~H.~Johnson, A.~Senju, and P.~Tomalski,
+{\em The two-process theory of face processing: modifications based on two
+  decades of data from infants and adults,}
+Neuroscience \& Biobehavioral Reviews {\bf 50} (2015) 169.
+
+\bibitem{webb2015mother}
+A.~R.~Webb, H.~T.~Heller, C.~B.~Benson, and A.~Lahav,
+{\em Mother’s voice and heartbeat sounds elicit auditory plasticity in the
+  human brain before full gestation,}
+Proceedings of the National Academy of Sciences(2015) 201414924.
+
+\bibitem{reid2017human}
+V.~M.~Reid, K.~Dunn, R.~J.~Young, J.~Amu, T.~Donovan, and N.~Reissland,
+{\em The human fetus preferentially engages with face-like visual stimuli,}
+Current Biology {\bf 27} (2017) 1825.
+
+\bibitem{pfeifer2006body}
+R.~Pfeifer and J.~Bongard,
+{\em How the body shapes the way we think: a new view of intelligence,} MIT
+  press, 2006.
+
+\bibitem{smith2005development}
+L.~Smith and M.~Gasser,
+{\em The development of embodied cognition: Six lessons from babies,}
+Artificial life {\bf 11} (2005)~13.
+
+\bibitem{nicolelis1995sensorimotor}
+M.~A.~Nicolelis, L.~A.~Baccala, R.~Lin, and J.~K.~Chapin,
+{\em Sensorimotor encoding by synchronous neural ensemble activity at multiple
+  levels of the somatosensory system,}
+Science {\bf 268} (1995) 1353.
+
+\bibitem{mordvintsev2015inceptionism}
+A.~Mordvintsev, C.~Olah, and M.~Tyka,
+{\em Inceptionism: Going deeper into neural networks,} .
+
+\bibitem{bambach2017egocentric}
+S.~Bambach, D.~J.~Crandall, L.~B.~Smith, and C.~Yu.
+\newblock {\em An egocentric perspective on active vision and visual object
+  learning in toddlers,} .
+\newblock In {\em Development and Learning and Epigenetic Robotics
+  (ICDL-EpiRob), 2017 Joint IEEE International Conference on} 290. IEEE2017.
+
+\bibitem{olveczky2003segregation}
+B.~P.~{\"O}lveczky, S.~A.~Baccus, and M.~Meister,
+{\em Segregation of object and background motion in the retina,}
+Nature {\bf 423} (2003) 401.
+
+\bibitem{oxenham2018we}
+A.~J.~Oxenham,
+{\em How we hear: The perception and neural coding of sound,}
+Annual review of psychology {\bf 69} (2018).
+
+\bibitem{lemonlearning}
+O.~Lemon, A.~Eshghi, and Y.~Yu,
+{\em Learning how to learn: grounding word meanings through conversation with
+  humans,} .
+
+\bibitem{yu2017learning}
+Y.~Yu, A.~Eshghi, and O.~Lemon,
+{\em Learning how to learn: an adaptive dialogue agent for incrementally
+  learning visually grounded word meanings,}
+arXiv preprint arXiv:1709.10423(2017).
+
+\bibitem{coradeschi2000anchoring}
+S.~Coradeschi and A.~Saffiotti.
+\newblock {\em Anchoring symbols to sensor data: preliminary report,} .
+\newblock In {\em AAAI/IAAI} 1292000.
+
 \bibitem{coradeschi2003introduction}
 S.~Coradeschi and A.~Saffiotti,
 {\em An introduction to the anchoring problem,}
 Robotics and Autonomous Systems {\bf 43} (2003)~85.
 
-\bibitem{pezzulo2013computational}
-G.~Pezzulo, L.~W.~Barsalou, A.~Cangelosi, M.~H.~Fischer, K.~McRae, and
-  M.~Spivey,
-{\em Computational grounded cognition: a new alliance between grounded
-  cognition and computational modeling,}
-Frontiers in psychology {\bf 3} (2013) 612.
+\bibitem{coradeschi2013short}
+S.~Coradeschi, A.~Loutfi, and B.~Wrede,
+{\em A short review of symbol grounding in robotic and intelligent systems,}
+KI-K{\"u}nstliche Intelligenz {\bf 27} (2013) 129.
+
+\bibitem{vogt2002physical}
+P.~Vogt,
+{\em The physical symbol grounding problem,}
+Cognitive Systems Research {\bf 3} (2002) 429.
+
+\bibitem{cangelosi2006grounding}
+A.~Cangelosi,
+{\em The grounding and sharing of symbols,}
+Pragmatics \& Cognition {\bf 14} (2006) 275.
+
+\bibitem{nakamura2009grounding}
+T.~Nakamura, T.~Nagai, and N.~Iwahashi.
+\newblock {\em Grounding of word meanings in multimodal concepts using LDA,} .
+\newblock In {\em 2009 IEEE/RSJ International Conference on Intelligent Robots
+  and Systems} 3943. IEEE2009.
+
+\bibitem{nakamura2011grounding}
+T.~Nakamura, T.~Araki, T.~Nagai, and N.~Iwahashi,
+{\em Grounding of word meanings in latent dirichlet allocation-based multimodal
+  concepts,}
+Advanced Robotics {\bf 25} (2011) 2189.
 
 \bibitem{cangelosi2001adaptive}
 A.~Cangelosi and S.~Harnad,
@@ -419,6 +536,49 @@ Evolution of communication {\bf 4} (2001).
 A.~Cangelosi, A.~Greco, and S.~Harnad.
 \newblock {\em Symbol grounding and the symbolic theft hypothesis,} .
 \newblock In {\em Simulating the evolution of language} 191. Springer2002.
+
+\bibitem{cangelosi1998emergence}
+A.~Cangelosi and D.~Parisi,
+{\em The emergence of a'language'in an evolving population of neural networks,}
+Connection Science {\bf 10} (1998)~83.
+
+\bibitem{horst2019object}
+J.~S.~Horst, K.~E.~Twomey, A.~F.~Morse, R.~Nurse, and A.~Cangelosi,
+{\em When object color is a red herring: extraneous perceptual information
+  hinders word learning via referent selection,}
+IEEE Transactions on Cognitive and Developmental Systems(2019).
+
+\bibitem{cangelosi2018speech}
+A.~Cangelosi and T.~Ogata,
+{\em Speech and language in humanoid robots,}
+Humanoid Robotics: A Reference(2018).
+
+\bibitem{cangelosi2008italk}
+A.~Cangelosi, T.~Belpaeme, G.~Sandini, G.~Metta, L.~Fadiga, G.~Sagerer,
+  K.~Rohlfing, B.~Wrede, S.~Nolfi, D.~Parisi, and ~others.
+\newblock {\em The italk project: Integration and transfer of action and
+  language knowledge in robots,} .
+\newblock In {\em Proceedings of Third ACM/IEEE International Conference on
+  Human Robot Interaction (HRI 2008)}volume~12~152008.
+
+\bibitem{broz2014italk}
+F.~Broz, C.~L.~Nehaniv, T.~Belpaeme, A.~Bisio, K.~Dautenhahn, L.~Fadiga,
+  T.~Ferrauto, K.~Fischer, F.~F{\"o}rster, O.~Gigliotta, and ~others,
+{\em The ITALK project: A developmental robotics approach to the study of
+  individual, social, and linguistic learning,}
+Topics in cognitive science {\bf 6} (2014) 534.
+
+\bibitem{pezzulo2013computational}
+G.~Pezzulo, L.~W.~Barsalou, A.~Cangelosi, M.~H.~Fischer, K.~McRae, and
+  M.~Spivey,
+{\em Computational grounded cognition: a new alliance between grounded
+  cognition and computational modeling,}
+Frontiers in psychology {\bf 3} (2013) 612.
+
+\bibitem{lee2008sparse}
+H.~Lee, C.~Ekanadham, and A.~Y.~Ng.
+\newblock {\em Sparse deep belief net model for visual area V2,} .
+\newblock In {\em Advances in neural information processing systems} 8732008.
 
 \bibitem{ngiam2011multimodal}
 J.~Ngiam, A.~Khosla, M.~Kim, J.~Nam, H.~Lee, and A.~Y.~Ng.
@@ -435,49 +595,6 @@ Nature {\bf 264} (1976) 746.
 A.~G.~Samuel,
 {\em Lexical activation produces potent phonemic percepts,}
 Cognitive psychology {\bf 32} (1997)~97.
-
-\bibitem{pfeifer2006body}
-R.~Pfeifer and J.~Bongard,
-{\em How the body shapes the way we think: a new view of intelligence,} MIT
-  press, 2006.
-
-\bibitem{smith2005development}
-L.~Smith and M.~Gasser,
-{\em The development of embodied cognition: Six lessons from babies,}
-Artificial life {\bf 11} (2005)~13.
-
-\bibitem{johnson2015two}
-M.~H.~Johnson, A.~Senju, and P.~Tomalski,
-{\em The two-process theory of face processing: modifications based on two
-  decades of data from infants and adults,}
-Neuroscience \& Biobehavioral Reviews {\bf 50} (2015) 169.
-
-\bibitem{bambach2017egocentric}
-S.~Bambach, D.~J.~Crandall, L.~B.~Smith, and C.~Yu.
-\newblock {\em An egocentric perspective on active vision and visual object
-  learning in toddlers,} .
-\newblock In {\em Development and Learning and Epigenetic Robotics
-  (ICDL-EpiRob), 2017 Joint IEEE International Conference on} 290. IEEE2017.
-
-\bibitem{masland2012neuronal}
-R.~H.~Masland,
-{\em The neuronal organization of the retina,}
-Neuron {\bf 76} (2012) 266.
-
-\bibitem{olveczky2003segregation}
-B.~P.~{\"O}lveczky, S.~A.~Baccus, and M.~Meister,
-{\em Segregation of object and background motion in the retina,}
-Nature {\bf 423} (2003) 401.
-
-\bibitem{oxenham2018we}
-A.~J.~Oxenham,
-{\em How we hear: The perception and neural coding of sound,}
-Annual review of psychology {\bf 69} (2018).
-
-\bibitem{lee2008sparse}
-H.~Lee, C.~Ekanadham, and A.~Y.~Ng.
-\newblock {\em Sparse deep belief net model for visual area V2,} .
-\newblock In {\em Advances in neural information processing systems} 8732008.
 
 \bibitem{ma2009lip}
 W.~J.~Ma, X.~Zhou, L.~A.~Ross, J.~J.~Foxe, and L.~C.~Parra,
