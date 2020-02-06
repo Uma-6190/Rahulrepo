@@ -1,19 +1,27 @@
 % Chapter Template
 
-\chapter{What have we learnt and more importantly, what have our neural nets learnt?} % Main chapter title
+\chapter{Conclusion} % Main chapter title
 
 \label{Chapter7} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{Chapter 7. \emph{What have we learnt and more importantly, what have our neural nets learnt?}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{Chapter 7. \emph{Conclusion}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Summary of important points}
+\section{Summary of Important Points}
+Through the course of the experiments shown in \autoref{Chapter4}, \autoref{Chapter5} and \autoref{Chapter6}, I have demonstrated that  \ac{MRL} can be used to learn a grounded representation of different data modalities in an unsupervised manner.
+
+This representation has been demonstrated to fit the criteria layed out by Bengio et al. in \cite{repRev}. Particularly, the representation has been demonstrated to have Manifolds which can be manipulated through vector arithmetic to make predictable and meaningful changes in the output.
+
+In some datasets, such as MNIST and ArtS, it is possible to generate image prototypes for each class/word in the \ac{MAE}'s vocabulary. For MNIST, this came in the form of prototypical versions of each digit and for ArtS, images of each colour, shape and size can be generated individually.
+
+This is also possible for the ReShape dataset However, due to the larger variability of training examples, the prototypes are very blurry. By using a class exemplar for each object, the \ac{MAE} was able to learn to generate non-blurry prototypes for each of the visual attributes.
+
+I also demonstrated that \ac{MRL} can be used to generate accurate object descriptions of both real and artificial images. As well as that using \ac{MRL} can led to improvements in classification accuracy as seen in \autoref{Chapter4}.
+
 
 \section{Conclusion}
+\ac{MRL} has been shown to be a powerful technique and presents an area worthy of futher study. Whilst the findings of the experiments in this thesis are exciting, further work is needed to apply \ac{MRL} in a real world setting.
 
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------

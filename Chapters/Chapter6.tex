@@ -288,7 +288,7 @@ Exemplar & 2.30 $\mypm$ 0.07 & 3.67 $\mypm$ 0.23
 \subsubsection{Image Generation}
 \begin{figure*}[ht]
     \centering
-    \includegraphics[width=0.7\textwidth]{Figs/chapter6/exemplarMostGenerated.png}
+    \includegraphics[width=\textwidth]{Figs/chapter6/exemplarMostGenerated.png}
     \caption{Exp 2: Images generated from full descriptions using the MAE trained with the exemplar procedure. Red squares show objects with exemplar images.}
     \label{fig:mostExemplarGen}
 \end{figure*}
@@ -352,5 +352,9 @@ There is also the issue of not having full coverage of every size, colour and sh
 
 
 \section{Conclusion}
-In this chapter I have demonstrated that MRL can be used to perform bidirectional grounding of images and text. Further to this I showed that MRL can generalise to unseen examples, correctly generating images of unseen objects.
+In this chapter I have demonstrated that \ac{MRL} can be used to perform bidirectional grounding of images and text. Further to this I showed that MRL can generalise to unseen examples, correctly generating images of unseen objects.
+
+The ability of the \ac{MAE} to generate images of unseen objects like the \textsc{Big Red Donut} is very exciting. This result hints at the possibility to develop grounded models capable of understanding more diverse visual attributes and larger numbers of objects.
+
+These experiments present a starting point from which more powerful models can be built through the use of larger datasets as well as through the incorporation of advanced  \ac{ANN} techniques such as dilated and multiscale convolutions, and residual connections. The addition of these types of features to the \ac{MAE} architecture could allow for stronger models of image feature scale and shape and how these relate to the words which describe them.
 \theendnotes

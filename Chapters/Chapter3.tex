@@ -93,7 +93,7 @@ In \cite{mirza2014conditional} the Generator network is fed noise and a class la
 
 Odena et al. \cite{odena2017conditional} expand on the work in \cite{mirza2014conditional}. In stead of feeding the desired class to the Descriminator, they train an auxillory classifier network which classifies which class the generated and real images belong to.
 
-GANs can also be used for style transfer \cite{zhu2017unpaired}. Style transfer is similar to translating from one modality to another, thus \cite{zhu2017unpaired} demonstrates the flexibility and power of \ac{GAN}s which could be applied to a much wider variety of problems than those I have highlighted here. Zhu et al. use the Descriminator of a \ac{GAN} to determine whether an image is from a given domain (e.g. Monet paintings) or was translated by the Generator from another domain (e.g. photos). In doing so the Generator learns to produce iamges in the chosen domain from images in a source domain (e.g. photo --> Monet painting).
+GANs can also be used for style transfer \cite{zhu2017unpaired}. Style transfer is similar to translating from one modality to another, thus \cite{zhu2017unpaired} demonstrates the flexibility and power of \ac{GAN}s which could be applied to a much wider variety of problems than those I have highlighted here. Zhu et al. use the Descriminator of a \ac{GAN} to determine whether an image is from a given domain (e.g. Monet paintings) or was translated by the Generator from another domain (e.g. photos). In doing so the Generator learns to produce iamges in the chosen domain from images in a source domain (e.g. photo $\rightarrow$ Monet painting).
 
 \subsubsection{Modality Translation: Image Caption Generation}
 Translating from one modality to another can also be done by other types of neural networks, not just those trained in an adversarial manner as with \ac{GAN}s.
@@ -111,7 +111,7 @@ Whilst many tasks involving \ac{ANN}s focus on an end result such as a \cite{kri
 Designing the manner in which data is represented is a vital part of building any machine learning system. As Bengio et al. note in \cite{repRev}:
 
 \begin{displayquote}
-``...much of the actual effort in deploying machine learning algorithms goes into the design of... data transformations that result in representations... that support effective machine learning.''
+``...much of the actual effort in deploying machine learning algorithms goes into the design of... data transformations that result in representations... that support effective machine learning. - Bengio et al.''
 \end{displayquote}
 
 As I discussed previously, image and video captioning are relient on learning abstract representations of the input images. In fact, representation learning is present in all neural network tasks, whether they are directly viewed this way or not. In \cite{vinyals2015show, venugopalan2014translating, johnson2016densecap}, not only is pretraining to produce a useful representation of image content leveraged, but we also see that learning this representation is inherent in learning image classification, highlighted by Johnson et al. \cite{johnson2016densecap} reusing weights trained in \cite{simonyan2014very}. 
@@ -164,20 +164,37 @@ They also note that Mandarin is a pitched language, unlike English and French, a
 Whilst ANNs have been applied to many tasks and acheived super-human ability at them \cite{vinyals2019alphastar}, they do not have general intelligence like humans.
 
 \begin{displayquote}
-``...people see how well [an algorithm] performs at one task and they think it can do all the things around that, and it can’t... When we see a person performing a task very well, we understand the competence [involved]. And I think they apply the same model to machine learning'' - Rodney Brooks.
+``...people see how well [an algorithm] performs at one task and they think it can do all the things around that, and it can’t... When we see a person performing a task very well, we understand the competence [involved]. And I think they apply the same model to machine learning.'' - Rodney Brooks.
 \end{displayquote}
 
 \subsection{Artificial Neural Networks are Easily Fooled}
 Whilst \cite{krizhevsky2012imagenet, simonyan2014very, szegedy2015going, szegedy2016rethinking, szegedy2017inception, he2016deep, huang2017densely, russakovsky2015imagenet, chiu2018state, eslami2018neural} all show amazing performance on a very difficult image classification problem. These same networks are easily fooled by images, which to humans look like random noise \cite{nguyen2015deep}.
 
-\todo[inline]{Discuss more \cite{nguyen2015deep} plus other citations, papers are on desk at work}
+
+In \cite{szegedy2013intriguing} Szegedy et al. demonstrate that \acp{ANN} can be fooled into predicting the incorrect class for adversarial examples created by distorting images in a way which is inperceptable to the human eye. By using adversarial examples to further train classifiers, it is possible to improve their performance \cite{moosavi2016deepfool}. However, new adversarial examples can always be found \cite{nguyen2015deep}. These adversarial examples are presumed by Szegedy et al. to come from probabilistically unlikely parts of the input distribution, i.e. the low level features of the advarsarial images are not expected to be seen in these configurations.
+
+In my opinion, a large reason for \acp{ANN} of this kind being easily fooled, is their reliance on a solely bottom up approach. Whilst humans can be fooled by optical illusions, we are also good at realising we have been decieved and figuring out what we are actually looking at. Consider \autoref{fig:catcrow}, at first glance, the image appears to be a crow due to the structure of the image features. Cats' ears are usually seen with a veritcal orientation, whilst crows' beaks are seen with a horizontal orientation. Due to the symmetry of the cat's eye, its orientation does not give good clues as to the fact that the cat's head is being seen at an unusual angle, and thus the cat appears to be a crow (at least at first glance). Again, it is the probabilistically unlike configuration of image features which fool the human as with \acp{ANN}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{Figs/litReview/catcrow.jpeg}
+\caption{A cat that looks like a crow.}
+\label{fig:catcrow}
+
+\end{figure}
+
+On closer inspection, humans can easily tell that \autoref{fig:catcrow} is not a picture of a crow. This could be due to high level knowledge such as the nature of the environment: ``indoor'', or noticing other images features such as the cat's other eye which is not well lit. The use of high level knowledge to improve classification of this image comes down to what does a human expect to see in an ``indoor'' image. Noticing that the environment and the assumed class of the animal in the image do not match, then allows the human to search for other discrepancies to expalin this non-alignment.
+
+\ac{ANN} classifiers do not have the ability to apply this sort of high level knowledge and can only rely on the information held in the pixels . \acp{ANN} also do not look at high level features such as the ones I have described. In a \ac{ConvNet} the size of features the network is sensitive to are determined by the size of the kernels used in each layer (typically 3x3 - 7x7), in the first layer, these are very small image regions. The \ac{ConvNet} gains its expressive power by combining these features at greater and greater scale after each successive layer. However, this approach means that if a neuron in the early layers of the network is fooled into ``seeing'' a feature, this error is propogated upwards. This makes it easy to fool \acp{ANN} as they cannot take a top down approach to reason about the detected features. A top down approach relies on symbol grounding \cite{barsalou2008grounded}, which I will discuss later.
+
+
 
 \subsection{Data Ineffciency}
 As demonstrated by WaveNet's poor performance at representing Mandarin speech \cite{wavenet} when \ac{ANN}s are not provided with enough data they often overfit and fail to distinguish between salient features and local noise in the training data. A large portion of the success of AlexNet \cite{krizhevsky2012imagenet} is due to the 1.2 million images that were used to train it. This was only possible due to the advancement of \ac{GPU} technology allowing for parallel computation of each convolution in the network. Attempting to train AlexNet on a \ac{CPU} would take a very long time.
 
 Similarly, Vinyals et al. \cite{vinyals2015show} report that their image captioning system required millions of training instances to achieve their then state-of-the-art performance, even after pretraining on the 1.2 million images from ImageNet \cite{ImNet}.
 
-Ha et al. \cite{ha2018world, ha2018recurrent} do show that pretraining pretraining an unsupervised world representation can allow for rapidly producing controllers capable of solving reinforcement learning tasks. However this is not generalisable to all problem spaces.
+Ha et al. \cite{ha2018world, ha2018recurrent} do show that pretraining an unsupervised world representation can allow for rapidly producing controllers capable of solving reinforcement learning tasks. However this is not generalisable to all problem spaces.
 
 Obviously, \ac{ANN}s are not comparable to adult humans when it comes to learning complex, high level tasks with little or no training. It is expected that an adult human could recognise a novel object and its name from a single training example, this is not to be expected from an \ac{ANN}.
 
@@ -191,14 +208,14 @@ Searle posits that this shows that simply programming a computer to respond corr
 
 The question, therefore, is ``How to build a machine which can understand?''.
 
-In order for a machine to understand the world, it must ground the symbols it manipulates within its program. In Searle's Chinese Room, the English speaker cannot ground the meaning of any of the Chinese symbols as they have no way of discerning the meaning of the symbols from their list of instructions. Whilst the instructions give the correct method for responding to each symbol these instructions are cyclic. Consider how you would discern the meaning of a word in a foreign language if you were given a dictionary of that language defining each word. You could look up a word and read the definition, however as the definition is also written in a foreign language you would need to look up the definitions of each word of the original definition, until eventually you wind up back where you started looking up the meaning of the original word \cite{cangelosi2000robotic}. This is the Symbol Grounding  Merry-Go-Round: without being able to discern the meaning of at least one word in the dictionary, it is useless for enhancing your understanding of the language.
+In order for a machine to understand the world, it must ground the symbols it manipulates within its program. In Searle's Chinese Room, the English speaker cannot ground the meaning of any of the Chinese symbols as they have no way of discerning the meaning of the symbols from their list of instructions. Whilst the instructions give the correct method for responding to each symbol these instructions are cyclic. Consider how you would discern the meaning of a word in a foreign language if you were given a dictionary of that language defining each word. You could look up a word and read the definition, however as the definition is also written in a foreign language you would need to look up the definitions of each word of the original definition, until eventually you wind up back where you started looking up the meaning of the original word \cite{cangelosi2000robotic}. This is the symbol grounding  Merry-Go-Round: without being able to discern the meaning of at least one word in the dictionary, it is useless for enhancing your understanding of the language \cite{harnad1990symbol}.
 
 \subsection{What is Symbol Grounding?}
-Symbol Grounding is the process of assigning meaning to a symbol. It is something babies and even animals are very good at. Despite not having access to a dictionary explaining the meaning of each word interms of their internal symbolic representations, babies are able to learn to speak. Similarly, animals can learn the meaning of words, for example, sit, fetch, walkies...
+Symbol grounding is the process of assigning meaning to a symbol. It is something babies and even animals are very good at. Despite not having access to a dictionary explaining the meaning of each word interms of their internal symbolic representations, babies are able to learn to speak. Similarly, animals can learn the meaning of words, for example, sit, fetch, walkies...
 
 How babies and animals do this will be explored shortly and I will explain how this can be applied to a robot to have it learn a grounded representation of its world.
 
-Luc Steels explores the Symbol Grounding problem through the use of Semiotic Networks \cite{steels2008symbol}. \autoref{fig:semNet} shows a semiotic network, objects are connected to their symbols and concepts which represent them.
+Luc Steels explores the symbol grounding problem through the use of Semiotic Networks \cite{steels2008symbol}. \autoref{fig:semNet} shows a semiotic network, objects are connected to their symbols and concepts which represent them.
 
 \begin{figure}
 \centering
@@ -208,31 +225,56 @@ Luc Steels explores the Symbol Grounding problem through the use of Semiotic Net
 
 \end{figure} 
 
-Semiotic Networks are useful for visualising the Symbol Grounding problem. They demonstrate what we are trying to achieve through Symbol Grounding; namely to develop methods to relate sensory percepts of the world and objects in it, to symbols via internal representations (concepts). Whilst this explanation implies some directionality to the network, there should not be. A system capable of working Grounding Symbols should be able to move freely between symbols, concepts and objects. For example, given the words \textsc{Blue Ball} a person is capable or recognising the referrent object  \textit{Blue Ball} as well as the concepts ``Blue'' and ``Ball'' as well as preforming the reverse operation of nameing the object \textit{Blue Ball} with the words \textsc{blue ball}.
+Semiotic Networks are useful for visualising the symbol grounding problem. They demonstrate what we are trying to achieve through symbol grounding; namely to develop methods to relate sensory percepts of the world and objects in it, to symbols via internal representations (concepts). Whilst this explanation implies some directionality to the network, there should not be. A system capable of working Grounding Symbols should be able to move freely between symbols, concepts and objects. For example, given the words \textsc{Blue Ball} a person is capable or recognising the referrent object  \textit{Blue Ball} as well as the concepts ``Blue'' and ``Ball'' as well as preforming the reverse operation of nameing the object \textit{Blue Ball} with the words \textsc{blue ball}.
 
 
 \subsection{How do humans do it?}
-Brains have many advantages over ANNs when it comes to the Symbol Grounding Problem. The more prominent of these are, multimodality \cite{barsalou2008grounded}, sensory redundancy \cite{slater1999intermodal}, innate signal conditioning systems \cite{masland2012neuronal, fantz1963pattern, johnson2015two}, developmental learning (both pre \cite{webb2015mother, reid2017human} and post-natal \cite{johnson2015two}) and embodiment \cite{pfeifer2006body, smith2005development}.
+Brains have many advantages over ANNs when it comes to the symbol grounding Problem. The more prominent of these are, multimodality \cite{barsalou2008grounded}, sensory redundancy \cite{slater1999intermodal}, innate signal conditioning systems \cite{masland2012neuronal, fantz1963pattern, johnson2015two}, developmental learning (both pre \cite{webb2015mother, reid2017human} and post-natal \cite{johnson2015two}) and embodiment \cite{pfeifer2006body, smith2005development}.
 
 Lawrence Barsalou \cite{barsalou2008grounded} takes the view that amodal symbol processing, that is ungrounded symbol processing is not how brains work. Instead, he suggests that cognition is performed through multimodal simulation of sensory percepts. He gives the example of sitting down onto a chair: as this experience occurs the brain captures states across the different sensory modalities and encodes these into a representation which can be stored in memory. When the representation of the chair is needed, the multimodal representation captured during the earlier experience is replayed as a simulation. Thus a persons representation of a chair is the sum of the representations of all of the experiences a person has had with chairs. 
 
 Through this simulation process, the brain can compare whether a new experience belongs to a certain category by comparing its representation with the stored representation of the experiences of that categorey. The representation of expirences are likely stored, not like data in a computer but in the connections between neurons, I will refer to this as ensemble encoding \cite{nicolelis1995sensorimotor} and it is analogous to how the weights of neural networks encode features from the data they are trained on \cite{mordvintsev2015inceptionism}.
 
 
-From Barsalou's work, we can see that in biological systems, Symbol Grounding is the process of linking percepts from different modalities (visual, sensorimotor, auditory, etc. as well as emotions and other internal bodily states), into a single representation. 
+From Barsalou's work, we can see that in biological systems, symbol grounding is the process of linking percepts from different modalities (visual, sensorimotor, auditory, etc. as well as emotions and other internal bodily states), into a single representation. 
 
 \subsubsection{Embodiment}
+\begin{displayquote}
+We are embodied; nothing more. - Arthur M. Glenberg
+\end{displayquote}
+Embodiment - that is, having a body - is a vital part of human cognition. It is embodiment that allows humans to ground symbols by associating symbols in perception action and emotion, giving them meaning \cite{glenberg2015few}.
 
-\cite{pfeifer2006body, smith2005development}
+By learning to associate different sensory percepts with one and other as well as with world states, humans learn a grounded world model \cite{barsalou2008grounded}. The body mediates the learning of this representation as the sensors from which the representation arises are (part of) the body. 
 
-\subsubsection{Sensory Redundancy}
-\cite{slater1999intermodal}
+Glenberg \cite{glenberg2015few} views the comprehension of symbols as a simulation process, in line with Barsalou's views on this matter \cite{barsalou2008grounded}. By simulating the percepts associated with a symbol via the mirror neuron system, the brain is able to understand the meaning of the symbol.
 
-\subsubsection{Development}
-\cite{webb2015mother}
-\cite{reid2017human}
 
-\subsubsection{Biological Filters}
+Pfeifer et al. \cite{pfeifer2006body} go as far as to say that intelligence requires embodiment. Mathematical reasoning is often seen as an intelligent behaviour as as computers, which are not embodied, are capable of performing mathematical operations which would seem to go against this idea. However, in humans, mathematics is performed in an embodied and grounded manner. 
+
+There have been numerous studies of both children and robots, showing that use and observation of gestures significantly aids learning of abstract numerical concepts, so much so that prohibiting gesture detriments comprehension \cite{Goldin-MeadowSusan2015Fata, de2014making, rucinski2012robotic}. This highlight how the body can be used to enable grounded cognition.
+
+\paragraph{Multimodality}
+One key aspect of emboidment is that it makes all experiences multimodal. Even if only a single sensor is being actively used in a given activity, all of the bodies sensors and its internal state are involved in the experience. 
+In the case of learning to count, the use of gestures, such as counting on fingers, introduces the sensory-motor system as a source of information from which a grounded symbol for each number can arise. For example the abstract symbol ``1'' is associated with the auditory percept of the word ``one'' as well as the gesture of raising a single finger, creating a rich, multimodal encoding of the symbol in the brain. 
+
+Multimodality also improves learning by providing an attention mechanism \cite{bahrick2000intersensory}. The synchrony of signals from different sensors guide infant attention to salient information. This idea is supported by studies examining how infants learn to speak.  Smith et al. \cite{smith2008infants} demonstrate that infants preferentailly looked at target images over distractor images guided by an auditory cue (the name of the target image). Several other studies have demonstrated a similar result \cite{walker2010preverbal, fischer2011multi, scott20122, slater1999intermodal}.
+
+
+\paragraph{Development}
+Another advantage that humans have over \acp{ANN} is that their learning occurs in a developmental fashion. Whilst \acp{ANN} are typically expected to go from random initialisation to super-human performance without any incremental stages between, humans are allowed to gradually develop new skills over the course of a lifetime, bootstrapping new abilities on top of previous ones. We do not expect babies to be able to count, let alone do advanced mathematics - why then do we expect this of \acp{ANN}.
+
+Developmental learning occurs, not just after birth but also pre-natally. Webb et al. \cite{webb2015mother} explore how the mother's voice and heartbeat contribute to the development of the infant brain's auditory processing abilities. By playing recordings of the mothers' voices and heartbeats to preterm babies, an increase in the size of the auditory cortex was seen versus preterm infants who heard only unfiltered, background hosptial noise.
+
+
+Fantz \cite{fantz1963pattern} showed in 1963, that newborn infants have acute pattern sensitve vision. With the development of new technologies, Reid et al. \cite{reid2017human} were able to determine that human fetuses preferentially look at face-like stimuli inutero. Suggesting that development of the visual systems begin before birth.
+
+These studies demonstrate how human infants do not start off with a random configuration of the brain when they are born and thus even they have an advantage over \acp{ANN} due to developmental processes.
+
+Infants are then given years of training to learn to be the adaptable, general intelligences that they are. Parents aid this through the use of specific infant directed behaviours such as `Motherese' \cite{fernald1987acoustic} and looming actions \cite{lohan2012contingency, lohan2012tutor}. Followed by teachers, peers and the general structure of society shaping their learning.
+
+\paragraph{Biological Filters}
+As a consequence of embodiement, humans have inherent signal conditioning systems \cite{pezzulo2013computational}, these help guide the learning process.
+
 In \cite{johnson2015two}, Johnson et al. comment on the well established `two process theory of face processing' in humans.  During the `Conspec' stage of the \ac{TPT} the superior colliculus interacts with both visual and motor systems driving visual attention towards conspecific stimuli. The `Conlern' stage of the \ac{TPT} is guided by the `Conspec' stage due to a larger proportion of conspecific visual data  (e.g. the human face) being provided to the visual cortex as more attention is given to these stimuli by the superior colliculus. 
 The Superior Colliculous guides learning in the visual cortex by controlling attention.
 
@@ -247,7 +289,7 @@ Signal conditioning in the retina enhances object boundary detection by reducing
 Similarly, the shape of the human ear and the physical structure of the inner ear filters and shapes the sounds we hear which facilitates learning and detection of relevant sounds whilst reducing the perception of background noise \cite{oxenham2018we}.
 
 \subsection{How do machines do it?}
-Symbol Grounding has been tackled in many different ways by different communities within the scientific community. Notably this is because different groups hold differing ideas about what constitutes Symbol Grounding and how grounded symbols should be used by Artificial Intelligence. Both Barsalou \cite{barsalou2008grounded} and Cangelosi \cite{cangelosi2000robotic} take the stance that amodal symbolic manipulation systems are not good models of how brains operate. This is contrary to how the the views of some members of the \ac{NLP} community on cognition and Symbol Grounding \cite{lemonlearning, yu2017learning}.
+symbol grounding has been tackled in many different ways by different communities within the scientific community. Notably this is because different groups hold differing ideas about what constitutes symbol grounding and how grounded symbols should be used by Artificial Intelligence. Both Barsalou \cite{barsalou2008grounded} and Cangelosi \cite{cangelosi2000robotic} take the stance that amodal symbolic manipulation systems are not good models of how brains operate. This is contrary to how the the views of some members of the \ac{NLP} community on cognition and symbol grounding \cite{lemonlearning, yu2017learning}.
 
 Whilst Cangelosi et al. note that categorical representations are sensory rather than symbolic as they preserve some of the ``shape'' of the sensory projections, they are not used in this way within the \ac{NLP} systems of \cite{lemonlearning} and \cite{yu2017learning}. I would argue that by converting from a probability distribution across possible categories to amodal symbols, all grounding is lost in these \ac{NLP} systems.
 
@@ -262,45 +304,48 @@ Coradeschi et al. \cite{coradeschi2000anchoring, coradeschi2003introduction} wou
 \end{figure}
 
 
-Coradeschi et al. \cite{coradeschi2013short} present two forms of symbol grounding, Physical and Social. Physical symbol grounding is the grounding of symbols to real world objects by a physical agent in the real world \cite{vogt2002physical}; whereas social grounding is the collective negotiation of the meanings of shared symbols in groups of agents \cite{cangelosi2006grounding} (e.g. how natural language evolves over time).
+Coradeschi et al. \cite{coradeschi2013short} present two forms of symbol grounding, physical and social. physical symbol grounding is the grounding of symbols to real world objects by a physical agent in the real world \cite{vogt2002physical}; whereas social grounding is the collective negotiation of the meanings of shared symbols in groups of agents \cite{cangelosi2006grounding} (e.g. how natural language evolves over time).
 
-An important note from Coradeschi's review is that ``Symbol Grounding is a bidirectional process'', again, this is in direct conflict to the view shown in \cite{lemonlearning, yu2017learning}. Later in this work, I will explicitly use the term bidirectional grounding to highlight the capabilities of \ac{MRL} as applied to physical Symbol Grounding.
+An important note from Coradeschi's review is that ``symbol grounding is a bidirectional process'', again, this is in direct conflict to the view shown in \cite{lemonlearning, yu2017learning}. Later in this work, I will explicitly use the term bidirectional grounding to highlight the capabilities of \ac{MRL} as applied to physical symbol grounding.
 
-Further to this, Coradeschi et al. discuss methods which utilise both visual and auditory data which were demonstrated to have better performance at object categorisation than systems using only a single modality \cite{coradeschi2013short}. These multimodal systems perfom Physical Symbol Grounding as an inherent property of their oporation. By learning a joint representation of the two modalities an internal ``Symbolic Language'' is created. These systems are shown to have capabilties beyond simply categorising objects or words. They can be used to facilitate meaningful conversation between humans and the robots which use them \cite{nakamura2009grounding, nakamura2011grounding}. Cangelosi et al. also present a system capable of grounding symbols with the sensory percepts to which they relate \cite{cangelosi2000robotic}. Through the use of \acp{ANN}s, a joint representation of symbols and visual stimuli is learnt.
+Further to this, Coradeschi et al. discuss methods which utilise both visual and auditory data which were demonstrated to have better performance at object categorisation than systems using only a single modality \cite{coradeschi2013short}. These multimodal systems perform physical symbol grounding as an inherent property of their oporation. By learning a joint representation of the two modalities an internal ``Symbolic Language'' is created. These systems are shown to have capabilties beyond simply categorising objects or words. They can be used to facilitate meaningful conversation between humans and the robots which use them \cite{nakamura2009grounding, nakamura2011grounding}. Cangelosi et al. also present a system capable of grounding symbols with the sensory percepts to which they relate \cite{cangelosi2000robotic}. Through the use of \acp{ANN}s, a joint representation of symbols and visual stimuli is learnt.
 
-Multimodal approaches to Symbol Grounding, in my opinion, are both natural and more flexible than systems which attempt to use amodal symbols derived from a single modality.
+Multimodal approaches to symbol grounding, in my opinion, are both natural and more flexible than systems which attempt to use amodal symbols derived from a single modality.
 
 \begin{displayquote}
 ``Symbol systems alone are not viable models of the mind... connections between its symbols and what they stand for must be direct and intrinsic to the system.'' - Cangelosi et al.
 \end{displayquote}
 
-The above quote highlights why learning a multimodal representation of symbols and sensory percepts solves the Symbol Grounding Problem. In learning a joint representation, a symbol and sensory percept are grounded to a single concept within the network, i.e. their representation.
+The above quote highlights why learning a multimodal representation of symbols and sensory percepts solves the symbol grounding Problem. In learning a joint representation, a symbol and sensory percept are grounded to a single concept within the network, i.e. their representation.
 
-\autoref{fig:percNet} shows a modified semiotic network depicting Cangelosi's approach to Symbol Grounding by learning a joint representation \cite{cangelosi2000robotic}. By comparing \autoref{fig:semNet} and \autoref{fig:percNet} it can be seen that there is a missing link between the Sensory Percept and the Symbol. Cangelosi et. al recreate this link by regenerating both the symbol and the sensory percept at the \ac{ANN}'s output from the joint representation. This autoencoding approach is how I address the Symbol Grounding problem later in this thesis.
+\autoref{fig:percNet} shows a modified semiotic network depicting Cangelosi's approach to symbol grounding by learning a joint representation \cite{cangelosi2000robotic}. By comparing \autoref{fig:semNet} and \autoref{fig:percNet} it can be seen that there is a missing link between the Sensory Percept and the Symbol. Cangelosi et. al recreate this link by regenerating both the symbol and the sensory percept at the \ac{ANN}'s output from the joint representation. This autoencoding approach is how I address the symbol grounding problem later in this thesis.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{Figs/litReview/semioticNetPercept.png}
-\caption{A Semiotic Network modified to demonstrate Cangelosi's approach to Symbol Grounding.}
+\caption{A Semiotic Network modified to demonstrate Cangelosi's approach to symbol grounding.}
 \label{fig:percNet}
 
 \end{figure}
 
 
-As well as Physical Symbol Grounding, Cangelosi et al. have worked on social symbol grounding \cite{cangelosi2001adaptive, cangelosi2002symbol, cangelosi1998emergence, horst2019object, cangelosi2018speech, cangelosi2008italk, broz2014italk}. Of these works, I deem \cite{cangelosi1998emergence} the most relevant so i shall start there. In \cite{cangelosi1998emergence} Cangelosi et al. have a population of neural network based agents which learn to communicate about whether mushrooms are either safe to eat or poisonous, to reproduce, the neural networks must avoid eating poisonous mushrooms. Thus, neural networks which can comunicate which mushrooms are poisonous and which are safe to eat have an evolutionary advantage. 
+As well as physical symbol grounding, Cangelosi et al. have worked on social symbol grounding \cite{cangelosi2001adaptive, cangelosi2002symbol, cangelosi1998emergence, horst2019object, cangelosi2018speech, cangelosi2008italk, broz2014italk}. Of these works, I deem \cite{cangelosi1998emergence} the most relevant so i shall start there. In \cite{cangelosi1998emergence} Cangelosi et al. have a population of neural network based agents which learn to communicate about whether mushrooms are either safe to eat or poisonous, to reproduce, the neural networks must avoid eating poisonous mushrooms. Thus, neural networks which can comunicate which mushrooms are poisonous and which are safe to eat have an evolutionary advantage. 
 
-Through this evolutionary process, the neural networks learn to agree on a set of symbols which indicate which mushrooms are safe to eat. This is Social Symbol Grounding in practice. 
+Through this evolutionary process, the neural networks learn to agree on a set of symbols which indicate which mushrooms are safe to eat. This is social symbol grounding in practice. 
 
 This method for developing a symbolic language to maximise a reward function, is analogous to the process which occurs between the two networks in Vinyal's image captioning system \cite{vinyals2015show}.  The two networks, image encoder and language model respectively, must learn a shared symbolic language which will allow the combined network to generate accurate image captions.
 
 
-\cite{pezzulo2013computational}
+\subsubsection{My Approach to Symbol Grounding}
 
+In my opinion, multimodality is fundamental to symbol grounding and is a key aspect of embodiment. The work in this thesis focuses on the grounding of visual and linguistic percepts and does not explore how actions, emotions or other more complex phenomina should be modeled in a grounded manner. I use datasets of paired visual and linguistic percepts to train \acp{MAE}. The future work section details how my approach can be extended for operation in the real world with the use of a robot body. This approach builds off of the work of the work of Ngiam et al. \cite{ngiam2011multimodal} and Silberer et al.\cite{silberer2014learning} on \acp{MAE} in particular.
 
+\subsubsection{Why use MAEs?}
+In \cite{ngiam2011multimodal}, a \ac{MAE} was trained using video and pre-processed audio data to classify speech data. They demonstrate that the addition of the visual data improves recognition under noisy conditions, highlighting the technical advantages of \acp{MAE}. Further to this they demonstrate that the McGurk effect \cite{mcgurk1976hearing} occurs in the \ac{MAE}, highlighting that it is a good analogy for the human audio and visual cortices and how they interact.
 
-\subsubsection{How do we simulate Embodiment for ANNs?}
-\cite{lee2008sparse}
-\subsubsection{How do we Simulate Development for ANNs?}
+In \cite{silberer2014learning}, Silberer et al. demonstrate the ability of \acp{MAE} to reconstruct missing data when only one modality is present. A similar effect is seen in the human brain where sensory redundancy is utilised to repair and reconstruct data from noisy or missing percepts \cite{samuel1997lexical}. 
+
+\subsubsection{Transfer Learning and Pretraining}
 
 Barsalou \cite{barsalou2008grounded} does not believe that the brain is started from a competely random configuration:
 \begin{displayquote}
@@ -309,17 +354,9 @@ Barsalou \cite{barsalou2008grounded} does not believe that the brain is started 
 
 This is important as it sheds light on why \ac{ANN}s require much more data to perform tasks which would take a human baby very little time to master. 
 
-The cognitive development of infants can be simulated through transfer learning. In \cite{vinyals2015show} it was demonstrated that by pretraining the image feature extraction network on an image classification task and the language model on a word prediction task, the combined network was able to produce correct captions for images with only a small amount of training direct training. 
+The cognitive development of infants can be simulated through pretraining. In \cite{lee2008sparse} pretraining of \acp{ANN} is demonstrated to give rise to Gabor like filters similar to those seen in the human visual cortex. These pretrained filters make high level tasks easier. For example, Vinyals et al. \cite{vinyals2015show} demonstrated that by pretraining an image feature extraction network on an image classification task and a language model on a word prediction task, the combined network was able to produce correct captions for images with a  relatively small amount of direct training. 
 
 The effect of transfer learning from one task to another is that it moves the weights of the network away from their random starting values towards a configuration which is closer to the optimal values. This allows the \ac{ANN} to start in a configuration which is closer to the starting configuration of an infant brain which is shaped by genetics and evolutionary processes \cite{barsalou2008grounded}.
 
-\section{Where do we go from here?}
-\subsection{Robot bodies}
-\subsection{Multimodality}
-\todo[inline]{this has just been shoved in here and will need to be rewritten}
-In \cite{ngiam2011multimodal}, a MAE was trained using video and pre-processed audio data to classify speech data. They demonstrate that the addition of the visual data improves recognition under noisy conditions, highlighting the technical advantages of MAEs. Further to this they demonstrate that the McGurk effect \cite{mcgurk1976hearing} occurs in the MAE, highlighting that it is a good analogy for the human audio and visual cortices and how they interact.
-
-In \cite{silberer2014learning}, Silberer et al. demonstrate the ability of MAEs to reconstruct missing data when only one modality is present. A similar effect is seen in the human brain where sensory redundancy is utilised to repair and reconstruct data from noisy or missing percepts \cite{samuel1997lexical}. We use this effect to reconstruct images from audio. 
-\subsection{transfer learning}
 
 
