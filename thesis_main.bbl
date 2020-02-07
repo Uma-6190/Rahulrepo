@@ -56,11 +56,22 @@ M.~D.~Zeiler, D.~Krishnan, G.~W.~Taylor, and R.~Fergus.
 \newblock In {\em 2010 IEEE Computer Society Conference on computer vision and
   pattern recognition} 2528. IEEE2010.
 
+\bibitem{kingma2013auto}
+D.~P.~Kingma and M.~Welling,
+{\em Auto-encoding variational bayes,}
+arXiv preprint arXiv:1312.6114(2013).
+
 \bibitem{krizhevsky2012imagenet}
 A.~Krizhevsky, I.~Sutskever, and G.~E.~Hinton.
 \newblock {\em Imagenet classification with deep convolutional neural
   networks,} .
 \newblock In {\em Advances in neural information processing systems} 10972012.
+
+\bibitem{vinyals2019alphastar}
+O.~Vinyals, I.~Babuschkin, J.~Chung, M.~Mathieu, M.~Jaderberg, W.~M.~Czarnecki,
+  A.~Dudzik, A.~Huang, P.~Georgiev, R.~Powell, and ~others,
+{\em AlphaStar: Mastering the real-time strategy game StarCraft II,}
+DeepMind Blog(2019).
 
 \bibitem{ma2004facial}
 L.~Ma and K.~Khorasani,
@@ -335,12 +346,6 @@ E.~Dunbar, X.~N.~Cao, J.~Benjumea, J.~Karadayi, M.~Bernard, L.~Besacier,
 \newblock {\em The zero resource speech challenge 2017,} .
 \newblock In {\em 2017 IEEE Automatic Speech Recognition and Understanding
   Workshop (ASRU)} 323. IEEE2017.
-
-\bibitem{vinyals2019alphastar}
-O.~Vinyals, I.~Babuschkin, J.~Chung, M.~Mathieu, M.~Jaderberg, W.~M.~Czarnecki,
-  A.~Dudzik, A.~Huang, P.~Georgiev, R.~Powell, and ~others,
-{\em AlphaStar: Mastering the real-time strategy game StarCraft II,}
-DeepMind Blog(2019).
 
 \bibitem{russakovsky2015imagenet}
 O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang,

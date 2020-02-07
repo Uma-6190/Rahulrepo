@@ -125,7 +125,7 @@ Exemplars are selected by first calculating the average image for each object (\
 
 
 
-\section{Experiment 1}
+\subsection{Experiment 1}
 Experiment 1 makes use of two shapes in three colours and three sizes. The shapes and colours were selected as they are the only shapes-colour combinations that occur in all three sizes in the dataset.
 
 \begin{table}[h]
@@ -151,7 +151,7 @@ Duck   & Green   & Medium \\ \hline
     \label{fig:ExmBrickDuck}
 \end{figure*}
 
-\subsection{Results}
+\subsubsection{Results}
 
 \begin{table}[h!]
 \centering
@@ -171,7 +171,7 @@ The similarity between the training and test data is expected in this case as th
 
 The addition of more training data, with more diverse examples and more detailed descriptions should help. However, as the system is designed for operation on a robot, its absolute performance on a dataset isn't really that important. It is of more worth that the MAE generate a "big blue duck" when asked to than to generate the specific "big blue duck" the user had in mind.
 
-\subsubsection{Image Generation}
+\paragraph{Image Generation}
 
 Comparing \autoref{fig:simpleGen_1} and \autoref{fig:AvgBrickDuck} it can be seen that the generated images are almost identical to the average training images for each descriptions when the Simple training procedure is used. 
 
@@ -222,7 +222,7 @@ The top hat further highlights that the MAE learns to generate the mean image fo
 The simplest method to deal with this, would be to increase the complexity of the descriptions of the images. If the duck with a top hat were referred to as "big yellow duck with a top hat", which could be encoded to the network as \textsc{big yellow duck black top hat} by expanding its vocabulary, then destinguishing whether to generate and image of a duck with or without a top hat would be simple.
 
 
-\subsubsection{Multilabel Classification}
+\paragraph{Multilabel Classification}
 
 
 \begin{table}[h!]
@@ -239,7 +239,7 @@ Exemplar & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 \\ \h
 
 The MAE achieves 100\% accuracy on decription generation across all three test conditions. This suggests that the test data has a very similar distribution to the training data. As the test data is images of the same objects captured in the same environment, the only differences between the training data and test data will be small changes in object position (probably sub pixel after rescaling) and  changes in lighting as the test data was captured on a different day and at a different time of day. Thus, the mean image from the training data for each object is likely very close to the mean image for each object in the test data respectively. It is unlikely that such good performance would be achieved with even small changes to viewing angle or background, which are both constant across the training and test data. However, the addition of more diverse training examples would also alleviate this \cite{keller2016analysis, keller}.
 
-\section{Experiment 2}
+\subsection{Experiment 2}
 
 Experiment 2 makes use of five shapes in five colours and three sizes. The additional shapes and colours were selected as they are represented in most sizes in the dataset.
 
@@ -268,7 +268,7 @@ Rectangle & Black & \\ \hline
 \end{figure*}
 
 
-\subsection{Results}
+\subsubsection{Results}
 
 \begin{table}[h!]
 \centering
@@ -319,7 +319,7 @@ The different shapes have been learnt to different degrees. For example, the Don
 
 
 
-\subsubsection{Multilabel Classification}
+\paragraph{Multilabel Classification}
 
 
 

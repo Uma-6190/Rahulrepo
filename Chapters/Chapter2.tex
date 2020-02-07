@@ -96,7 +96,7 @@ ylabel near ticks]
 \end{axis}
 
 \end{tikzpicture}
-\caption{Visualisation of the perceptron activation function. Where z is the activation $\sum_{j} w_j x_j + b$ and the output is activation function defined in \autoref{eqn:percep} }
+\caption{Visualisation of the perceptron activation function. Where z is the activation $\sum_{j} w_j x_j + b$ and the output is the activation function defined in \autoref{eqn:percep} }
 \label{fig:activation_percep}
 \end{center}
 \end{figure}
@@ -146,7 +146,7 @@ ylabel near ticks,
     
 
 \end{tikzpicture}
-\caption{Visualisation of the Sigmoid activation function. Where z is the activation $\sum_{j} w_j x_j + b$ and $\sigma$(z) is activation function defined in \autoref{eqn:sig} }
+\caption{Visualisation of the Sigmoid activation function. Where z is the activation $\sum_{j} w_j x_j + b$ and $\sigma$(z) is the activation function defined in \autoref{eqn:sig} }
 \label{fig:activation_sigmoid}
 \end{center}
 \end{figure}
@@ -232,7 +232,7 @@ adversarial learning (to name a few). The experiments in this thesis will focus 
 %\textbf{Adversarial learning} - two networks are trained in tandom, a generator and a descriminator. The
 
 
-\subsection{Cost functions: How wrong am I?}
+\subsection{Cost functions}
 In order for our neural networks to learn, they need feedback as to how wrong they are. This is done using a cost function, a formula which gives a measure of how good or bad our network is at a particular task.
 
 Depending on the particular method we use to train our networks, the cost function may be given a different name. For example in reinforcement learning, the cost function is typically called a value function. However, they all serve the same purpose, which is to provide feedback as to how well our network is doing at the task it has been assigned. Therefore, to avoid jargon I will refer to this as a \textit{cost function} throughout this thesis and the measure it returns as the \textit{error}.
@@ -268,7 +268,7 @@ Calculating our cross-entropy we get:
 $C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})$
 
 
-If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the error is closer to zero and our prediction is better. The network believes with 80\% certainty that the images is of a cat. 
+If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the error is closer to zero and our prediction is better. The network believes with 80\% certainty that the image is of a cat. 
 
 
 \subsubsection{Kullback-Leibler Divergence}
@@ -362,9 +362,9 @@ By substituting \autoref{eqn:delta_w_eta} into \autoref{eqn:delta_c_sub} we can 
 By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta}, we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \endnote{Learning rate is discussed in more detail in \autoref{sec:lr_sch}}. 
 
 \subsection{Backpropagation}
-With a gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does. 
+With gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does. 
 
-A full explanation of the backpropogastion algorithm is available in \autoref{appendix:app3}. However, understanding this backpropogation is not necessary to understand the contribution of this thesis.
+A full explanation of the backpropogastion algorithm is available in \autoref{appendix:app3}. However, understanding the backpropogation algorithm is not necessary to understand the contribution of this thesis.
 
 
 \subsection{Extensions and Improvements}
@@ -421,12 +421,12 @@ ylabel near ticks]
     
 
 \end{tikzpicture}
-\caption{Visualisation of error minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate. Where $\delta w$ is the change of weights of a neural network and and $C$ is its error.}
+\caption{Visualisation of error minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate. Where $\Delta w$ is the change of weights of a neural network and and $C$ is its error.}
 \label{fig:lr_schedule}
 \end{center}
 \end{figure}
 
-\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. As more training occurs, reducing the learning rate allows us to reach the error minimum (blue arrows). Selecting a large learning rate not changing it might lead to never reaching the error minimum (red arrows). Whilst at first, we make rapid progress towards the minimum, at some point we cross over it and will be unable to approach any closer without taking smaller steps.
+\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. As more training occurs, reducing the learning rate allows us to reach the error minimum (blue arrows). Selecting a large learning rate and not changing it might lead to never reaching the error minimum (red arrows). Whilst at first, we make rapid progress towards the minimum, at some point we cross over it and will be unable to approach any closer without taking smaller steps.
 
 This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
 Learning rate schedulers can speed up convergence by allowing large steps to be taken when we are far from the cost minimum with respect to the weights, covering a large distance in a few updates and then slowing down to take smaller steps as we get closer. 
@@ -473,7 +473,7 @@ scaled y ticks = false]
     
 
 \end{tikzpicture}
-\caption{Visualisation of the cost (black), its first derivative (blue) and second derivative (red). Where $\delta w$ is the change of weights of a neural network and and $C$ is its error.}
+\caption{Visualisation of the cost (black), its first derivative (blue) and second derivative (red). Where $\Delta w$ is the change of weights of a neural network and and $C$ is its error.}
 \label{fig:2ndordr}
 \end{center}
 \end{figure}
@@ -483,7 +483,7 @@ Heuristic methods provide a very simple method for adjusting the learning rate. 
 \section{Convolutional Neural Networks}
 One draw back of dense neural networks, like \ac{MLP}s is that they do not leverage spatial information in the input data. This means that whether two pieces of information occur next to each other, is irrelevant to the neural network. Obviously, this information is important and useful, so how can a neural network use it?
 
-Consider two very different problems: image classification and speech recognition. In image classification, not only are the values of pixels important but also, the values of pixels surrounding them. For example, we know that \autoref{fig:cat} is a picture of a cat, not just because there are grey pixels on a white background, but because the grey pixels are collected into a cat-like shape. We are unable to recognise the right hand image despite have the same pixels as the left image as spatial cues have been removed.
+Consider two very different problems: image classification and speech recognition. In image classification, not only are the values of pixels important but also, the values of pixels surrounding them. For example, we know that \autoref{fig:cat} is a picture of a cat, not just because there are grey pixels on a white background, but because the grey pixels are collected into a cat-like shape. We are unable to recognise the right hand image despite having the same pixels as the left image as all spatial cues have been removed.
 
 \begin{figure}[h]
 	\centering
@@ -494,14 +494,14 @@ Consider two very different problems: image classification and speech recognitio
 	\label{fig:cat}
 \end{figure}
 
-Similarly, in speech recognition, the order in which sound samples are heard is very important. If we hear a word backwards, we won't recognise it as being that word and if we re arrange the order of the samples, it becomes even more difficult to recognise.
+Similarly, in speech recognition, the order in which sound samples are heard is very important. If we hear a word backwards, we won't recognise it as being that word and if we rearrange the order of the samples, it becomes even more difficult to recognise.
 
 Dense neural networks don't care about spatial information because each input is connected to every neuron in the input layer, effectively treating every pixel as if they are no closer, or further away from any other pixel or removing information about when each sample of sound occured.
 
-In order to levarge spatial information we can make use of \ac{ConvNet}.
+In order to levarge spatial information we can make use of \acp{ConvNet}.
 
 \subsection{What is Convolution?}
-In \ac{ConvNet}s, convolution is a mathematical operation which adds a data element to its neighbours, weighted by a kernel. For example, given a 3x3 kernel, and an image as the input data each pixel $P_{out}(i,j)$ in the output of the convolution will be the sum of the pixels $P_{in}(i-s, j-t)$ in the input  multiplied by its respective kernel weight $k(s,t)$ as seen in \autoref{eqn:convolution} \cite{dumoulin2016guide}.
+In \acp{ConvNet}, convolution is a mathematical operation which adds a data element to its neighbours, weighted by a kernel. For example, given a 3x3 kernel, and an image as the input data each pixel $P_{out}(i,j)$ in the output of the convolution will be the sum of the pixels $P_{in}(i-s, j-t)$ in the input  multiplied by its respective kernel weight $k(s,t)$ as seen in \autoref{eqn:convolution} \cite{dumoulin2016guide}.
 
 \begin{equation} \label{eqn:convolution}
 P_{in}*k = \sum_{s=-a}^{a}\sum_{t=-b}^{b} P_{in}(i-s, j-t) \circ k(s,t)
@@ -536,9 +536,9 @@ This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped
 \end{figure}
 
 \subsection{Using Convolution Kernels in a Neural Network}
-In a \ac{ConvNet}, the weights of the network are kernels used to perform the convolution. Whereas, in a dense network, every input is connected to every neuron in the first layer and every neuron in the first layer is connected to every neuron in the second layer etc. each with their own individual weight, in a ConvNet, the weights are grouped into kernels and each neuron has it's own kernel which is applied across the entire input via the convolution opperation.
+In a \ac{ConvNet}, the weights of the network are the kernels used to perform the convolution. Whereas, in a dense network, every input is connected to every neuron in the first layer and every neuron in the first layer is connected to every neuron in the second layer etc. each with their own individual weight, in a ConvNet, the weights are grouped into kernels and each neuron has its own kernel which is applied across the entire input via the convolution opperation.
 
-Any given layer in a dense network will have $(Data Dimensions) \times (Number of Neurons)$ weights. The convolutional equivalent will have $(Kernel Size) \times (Number of Neurons)$ weights, usually this will be far fewer than the dense network. This gives a significant increase in computational performance.
+Any given layer in a dense network will have $(Data Dimensions) \times (Number Of Neurons)$ weights. The convolutional equivalent will have $(Kernel Size) \times (Number Of Neurons)$ weights, usually this will be far fewer than the dense network. This gives a significant increase in computational performance.
 
 For each neuron in a \ac{ConvNet}, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \endnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
 
@@ -560,7 +560,7 @@ Transposing a matrix, for example a convolution kernel, has the effect of rotati
 
 As shown in \autoref{fig:convImpl} the actual convolution operation involves flattening and reshaping the kernel. Transposing this flattened and reshaped kernel allows for the recovery of the original input as shown in \autoref{fig:transConvImpl}. 
 
-\begin{figure}
+\begin{figure}[h]
 	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/TransconvolutionImplementation.png}
 	\caption{The implementation of the transposed convolution of a (3x3) array with a (3x3) kernel.}
 	\label{fig:transConvImpl}
@@ -594,7 +594,7 @@ This results in the multiplcation (9x9)x(9x1) = (9x1) which can then be reshaped
 
 An \ac{AE} is trained to reproduce its input at its output (\autoref{fig:ae}. Typically, dimensional reduction is applied within the AE so that it must learn to select the most important features of the input data to accuartely represent the data in a more compressed form. 
 
-I make use of strided convolutions for dimensional reduction in the encoder and fractionally strided convolutions for dimensional enlargement in the decoder of the MAEs trained in this thesis.
+I make use of strided convolutions for dimensional reduction in the encoder and fractionally strided convolutions for dimensional enlargement in the decoder of the \acp{MAE} trained in this thesis.
 
 \begin{figure}
 	\centering
@@ -607,15 +607,15 @@ I make use of strided convolutions for dimensional reduction in the encoder and 
 
 
 \subsection{Variational Autoencoders}
-An important enhancement of \ac{AE}s is the \ac{VAE}. The VAE is trained using a multipart cost function. A normal cost such as \ac{MSE} plus the \ac{KLD} of the embedding from a target distribution (usually a Gaussian).
+An important enhancement of \ac{AE}s is the \ac{VAE} \cite{kingma2013auto}. The VAE is trained using a multipart cost function. A normal cost such as \ac{MSE} plus the \ac{KLD} of the embedding from a target distribution (usually a Gaussian).
 
 This has the effect of forcing the embedding space to be smooth and helps to stop discontinuities in the embedding from occuring. For example, if a particular part of the embedding space is never explored in an \ac{AE}, the output generated by the decoder can be unpredictable even for embeddings close to those seen from training data. In a \ac{VAE}, due to the extra constraint placed on the embedding space, the generated output will change smoothly as the embedding is altered smoothly.
 
 
 \subsection{Multimodal Autoencoders}
-\ac{MAE} operate similarly to \ac{AE}s however, they take two or more modalities as input. In this thesis, only bimodal MAEs are used though in principle, \ac{MAE}s are not limited to only two modalities.
+\acp{MAE} operate similarly to \ac{AE}s however, they take two or more modalities as input. In this thesis, only bimodal MAEs are used, though in principle, \ac{MAE}s are not limited to only two modalities.
 
-The \ac{MAE} is trained to reproduce all modalities regardless of whether all modalities are present at the input. For example, if a bimodal \ac{MAE} takes images and text as inputs, it is trained to reproduce images and text from it's inputs. However, if only an image is available as input, the \ac{MAE} is still trained to produce an image and the aligned text or vice versa when only text is available.
+The \ac{MAE} is trained to reproduce all modalities regardless of whether all modalities are present at the input. For example, if a bimodal \ac{MAE} takes images and text as inputs, it is trained to reproduce images and text from its inputs. However, if only an image is available as input, the \ac{MAE} is still trained to produce an image and the aligned text or vice versa when only text is available.
 
 
 \begin{figure}
@@ -626,7 +626,7 @@ The \ac{MAE} is trained to reproduce all modalities regardless of whether all mo
 	\label{fig:mae}
 \end{figure}
 
-Each modality is encoded separately through its own branch of the network and then the embeddings are concatenated forming a joint embedding. The joint embedding is the used to reconstruct each modality through their own decoder branches as seen in \autoref{fig:mae}.
+Each modality is encoded separately through its own branch of the network and then the embeddings are concatenated forming a joint embedding. The joint embedding is then used to reconstruct each modality through their own decoder branches as seen in \autoref{fig:mae}.
 
 %
 %\section{Summary}

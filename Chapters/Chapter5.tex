@@ -6,7 +6,7 @@
 
 \lhead{Chapter 5. \emph{Magical Vectors and Where to Find Them}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
-\section{ANN Latent space: the Final Frontier}
+\section{ANN Latent Space: the Final Frontier}
 One of the most interesting properties of neural networks is the latent embeddings they learn which are abstract representations of the input data. The embedding of a given data sample is the activation of the neural network at a specific layer within the network. In the case of MAEs this is the layer after which the different modalities have been merged.
 
 Normally when working with neural networks we are interested in the output of the neural network, for example, does the network correctly classify an image and how confident it is; this is the whole reason for using cross-entropy losses for training. However, in my case, I am more interested in how the neural network represents what it has learnt.
@@ -920,7 +920,7 @@ MAE 3*	&	99.95	$\mypm$	0.32	&	92.27	$\mypm$	17.55	&	100.00	$\mypm$	0.00	\\ \hlin
 
 The MAEs are still able to accurately describe images of objects which appeared in the training data. However, they are also able to describe the images of the objects which were omitted from the training data. The MAEs have grounded the meanings of the all visual attributes, regardless of having some combinates excluded from the training data (e.g.\textit{Green Triangles}). There is an overall decrease in description accuracy for the omitted objects ($\approx 96 \% --> \approx 92 \%$). However for the non-omitted objects the performance is comparable to the accuracy of the random condition from experiment 4.
 
-\subsubsection{Discussion}
+\subsection{Discussion}
 Omitting one object from the training data has a minimal effect on the reconstruction of the other objects in the dataset, this can been by comparing the random initialisation condition from \autoref{tab:res739} and the results shown \autoref{tab:res_exp5}. This means that omitting one object, such as green triangles, does not affect the ability of the MAE to learn to ground the visual attributes \textit{Green} and \textit{Triangle} nor the words \textsc{Green} and \textsc{Triangle}. It can still generate green objects and triangles, approximately as well as the randomly initalised MAE from experiment 4.
 
 This is further demonstrated by the MAEs ability to generate images of the unseen objects as shown in \autoref{fig:739_minus1}. As the MAE has grounded the meanings of the visual attributes \textit{Green} and \textit{Triangle} and the words \textsc{green} and \textsc{triangle}, it is able to combine their meansings to generate images of green triangles in different positions and sizes. (This is also true for orange rectangles and violet circles)

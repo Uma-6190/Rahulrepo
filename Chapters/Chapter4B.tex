@@ -1,16 +1,16 @@
 % Chapter Template
 
-\chapter{Sensory Redundancy: Are two heads better than one?} % Main chapter title
+\chapter{Sensory Redundancy: Are Two Heads Better Than One?} % Main chapter title
 
 \label{Chapter4} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-\lhead{Chapter 4. \emph{Sensory Redundancy: Are two heads better than one?}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+\lhead{Chapter 4. \emph{Sensory Redundancy: Are Two Heads Better Than One?}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Why have one sensor when two are better?}
+\section{Why Have One Sensor When Two Are Better?}
 A key part of the human experience is that it is multisensory. In \cite{barsalou2008grounded}, Lawrence Barsalou speaks about how multisensory processing aids human cognition in a number of ways. Firstly, multisensory information aids in the classification of experiences by providing additional and complimentary information that is not accounted for in only a single modality. 
 
 Lip reading affects the classification of phonemes, this is known as the Mcgurk effect \cite{mcgurk1976hearing}. Whilst this effect can lead to incorrect classifications when misaligned data is provided e.g. utterances of the syllable [ba] dubbed on to lip movements for [ga], lead to normal adults hearing [da]; in normal circumstances, like when two people are speaking to one and other, lip reading aids in classifying heard sounds \cite{ma2009lip}. This is particularly important in noisy environments, which leads to another of Barsalou's ideas about multisensory processing: information redundancy.
@@ -26,7 +26,7 @@ In this chapter I will explore these two ideas, improved classification and reco
 
 
 
-\section{Generating images from Natural Language}
+\section{Generating Images From Natural Language}
 \subsection{Aims}
 The experiment in this section demonstrates that having access to a second modality improves classification accuracy over the baseline accuracy of classification of either of the two individual modalities as well as how missing data can be reconstructed from a secondary modality.
 
@@ -35,10 +35,10 @@ The experiment in this section demonstrates that having access to a second modal
 This experiment utilises two datasets, UCU Arabic Spoken Digits (UCU) and MNIST Handwritten Digits (MNIST).
 
 \subsubsection{UCU Arabic Spoken Digits}
-UCU is a dataset containing the 13 Mel Frequency Cepstrum Coefficients representing the audio of the digits 0 to 9 being said by 88 different speakers \cite{hammami2009tree,hammami2010improved}. It contains 8800 utterances (10 digits x 10 repetitions x 88 speakers). Audio was sampled at 11025Hz.
+UCU is a dataset containing the 13 \acp{MFCC} representing the audio of the digits 0 to 9 being said by 88 different speakers \cite{hammami2009tree,hammami2010improved}. It contains 8800 utterances (10 digits x 10 repetitions x 88 speakers). Audio was sampled at 11025Hz.
 
 \paragraph{Padding of Utterances}
-As utterances are not of a fixed length, it is necessary to pad the utterances to be equal length. The longest utterance in the dataset contains 93 samples. For ease of up and downsampling within the neural network, all uttereances are padded to be 100 samples long by appending zeros. Each sample is also padded to contain 16 features, the 13 Mel Frequency Cepstrum Coefficients (MFCCs) and 3 zeros to further facilitate up and down sampling\endnote{Up and down sampling is easier with even numbers of features and samples as we can half the size of the data using strided convolutions, s=(2,2), without worrying about integer division errors e.g. $5/2=2$ but $2\times2 \neq5$}.
+As utterances are not of a fixed length, it is necessary to pad the utterances to be equal length. The longest utterance in the dataset contains 93 samples. For ease of up and downsampling within the neural network, all uttereances are padded to be 100 samples long by appending zeros. Each sample is also padded to contain 16 features, the 13 \acp{MFCC} and 3 zeros to further facilitate up and down sampling\endnote{Up and down sampling is easier with even numbers of features and samples as we can half the size of the data using strided convolutions, s=(2,2), without worrying about integer division errors e.g. $5/2=2$ but $2\times2 \neq5$}.
 
 As I will be classifying the digits, it is necessary to check that padding the digits does not provide a cheat for this. As such, I analyse the mean number of samples for each digit and their standard deviations as depicted in \autoref{fig:ucu_dig_length}. I then perform a linear regression on the number of samples to demonstrate that it is not possible to accurately predict a digit's class given only the length of the utterance.
 
@@ -113,28 +113,28 @@ As I will be classifying the digits, it is necessary to check that padding the d
 Performing a linear regression on the number of samples for each digit versus its class, we get an accuracy of 6.18\% when classifying the test set.
 
 \subsubsection{MNIST Handwritten Digits}
-MNIST is a well known and oft used dataset in the machine learning community. It contains 60000 training samples and 10000 test samples, evenly split between the digits 0 to 9. 
+MNIST is a well known and oft used dataset in the machine learning community. It contains 60,000 training samples and 10,000 test samples, evenly split between the digits 0 to 9. 
 Each digit is presented as a grey-scale, 28x28 pixel image \cite{lecun1998mnist}. 
 
 \subsection{Problem Description}
 The experiments with these datasets will explore two problems: classification and bidirectional symbol grounding. 
 
 \subsubsection{Classification}
-Each of the utterances and images from the UCU and MNIST datasets are classified as being a numeric digit, 0 to 9. By combining both datasets, we can explore whether the addition of a second modality enhances overall classification accuracy.
+Each of the utterances and images from the UCU and MNIST datasets are classified as being a numeric digit, 0 to 9. By combining both datasets, I can explore whether the addition of a second modality enhances overall classification accuracy.
 
-I start off exploring the classification abilities of neural networks by performing a linear regression with a single, dense neural network layer with a softmax activation on the activation of the embedding layer of an autoencoder. To generate baseline classifications accuracies for each dataset, I use autoencoders for each modality separately.
+I start off exploring the classification abilities of neural networks by performing a linear regression with a single, dense neural network layer with a softmax activation on the activation of the embedding layer of an autoencoder, this is the neural networks representation of the digit. To generate baseline classification accuracies for each dataset, I use autoencoders for each modality separately.
 
-Once a classification baseline has been established for each dataset, I make use of a MAE, using paired examples from each dataset to train it.
+Once a classification baseline has been established for each dataset, I make use of a \ac{MAE}, using paired examples from each dataset to train it.
 
 \subsubsection{Bidirectional Symbol Grounding}
 
-I demonstrate that a neural network can perform bidirectional symbol grounding \cite{barsalou2008grounded} when presented with aligned images and utterances. To explore this, I show how a MAE can learn to reconstruct the correct image of a digit given the MFCCs of an utterance as well as MFCCs which have a small mean squared error from the correct utterance given an image of a digit. This shows that an internal symbolic language has been learnt in the form of the latent embedding created by the encoders of the MAE.
+I demonstrate that a neural network can perform bidirectional symbol grounding \cite{barsalou2008grounded} when presented with aligned images and utterances. To explore this, I show how a \ac{MAE} can learn to reconstruct the correct image of a digit given the \acp{MFCC} of an utterance as well as \acp{MFCC} which have a small mean squared error from the correct utterance given an image of a digit. This shows that an internal symbolic language has been learnt in the form of the latent embedding created by the encoders of the \ac{MAE}.
 
 
 \subsection{Experiment Details}
-Images from the MNIST dataset are kept at their original scale of 28x28 pixels and are normalised such that each pixel has a value from 0 to 1 based on it's intensity, with zero equating to black and 1 being white.
+Images from the MNIST dataset are kept at their original scale of 28x28 pixels and are normalised such that each pixel has a value from 0 to 1 based on its intensity, with zero equating to black and 1 being white.
 
-The UCU dataset is normalised so that all MFCCs take a value from 0 to 1 based on the value of the MFCC such that the highest value is 1 and the lowest 0. Utterances are padded to be 100x16 as previously described.
+The UCU dataset is normalised so that all \acp{MFCC} take a value from 0 to 1 based on the value of the \ac{MFCC} such that the highest value is 1 and the lowest 0. Utterances are padded to be 100x16 as previously described.
 
 \paragraph{Combining Datasets}
 \label{sec:UCU_mnist_comb}
@@ -156,33 +156,33 @@ In order to combine the two different modalities, I explore different merging te
  	%\label{eqn:xply}  
  %\end{equation}
 
-Where $Im_i^{emb}$ and $MFCC_i^{emb}$ represent the embeddings, output by the image and MFCC encoders respectively for image and MFCC inputs $Im_i$ and $MFCC_i$.
+Where $Im_i^{emb}$ and $MFCC_i^{emb}$ represent the embeddings, output by the image and \ac{MFCC} encoders respectively for image and \ac{MFCC} inputs $Im_i$ and $MFCC_i$.
 
 \subsubsection{Training Procedures}
 
-The MAEs are trained in two different ways for both types of merging, these are referred to as bimodal (Bi) and randomly degraded (RD).
+The \acp{MAE} are trained in two different ways for both types of merging, these are referred to as bimodal (Bi) and randomly degraded (RD).
 
 \paragraph{Bimodal}
-Under the Bi training procedure, the MAE is presented with bimodal input for all training instances. Both image and MFCC inputs are present for all training steps and the MAE is trained to reproduce this input as its output.
+Under the Bi training procedure, the \ac{MAE} is presented with bimodal input for all training instances. Both image and \ac{MFCC} inputs are present for all training steps and the \ac{MAE} is trained to reproduce this input as its output.
 
 \paragraph{Randomly Degraded}
-Under the RD training procedure, one third of image inputs are removed at random and a third of MFCC inputs are removed at random. It is ensured that each training instance always has at least one input modality present. That is, a training instance never has both its image and MFCC input removed. 
+Under the RD training procedure, one third of image inputs are removed at random and one third of \ac{MFCC} inputs are removed at random. It is ensured that each training instance always has at least one input modality present. That is, a training instance never has both its image and \ac{MFCC} input removed. 
 
-The removed modality is replaced with an array of zeros of the same shape as the original input (28x28 for the image and 100x16 for MFCCs).
+The removed modality is replaced with an array of zeros of the same shape as the original input (28x28 for the image and 100x16 for \acp{MFCC}).
 
-The MAE is then trained to reproduce both the image and MFCCs regardless of whether one of these has been ommited from the input.
+The \ac{MAE} is then trained to reproduce both the image and \acp{MFCC} regardless of whether one of these has been ommited from the input.
 
 \subsubsection{Testing Conditions}
-Each MAE (\textit{Concat} and \textit{Add}) was tested in three different ways, Bimodal, Image Only and MFCC Only.
+Each \ac{MAE} (\textit{Concat} and \textit{Add}) was tested in three different ways, Bimodal, Image Only and \ac{MFCC} Only.
 
 \paragraph{Bimodal}
-In the Bimodal testing condition both image and MFCC data are used as input for each testing instance and I am interested in observing the classification accuracy as well as the total regeneration error.
+In the Bimodal testing condition both image and \ac{MFCC} data are used as input for each testing instance and I am interested in observing the classification accuracy as well as the total regeneration error.
 
 \paragraph{Image Only}
-In the Image Only testing condition, only images are provided as input data. I am interested in the classification accuracy as well as the MFCC reconstruction error. I am not interested in the image reconstruction error, as it is expected that, as the image is provided as input this will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
+In the Image Only testing condition, only images are provided as input data. I am interested in the classification accuracy as well as the \ac{MFCC} reconstruction error. I am not interested in the image reconstruction error, as it is expected that, as the image is provided as input this will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
 
-\paragraph{MFCC Only}
-Similarly to the Image Only condition, the MFCC Only (MFCC) condition provides only MFCCs as input and I am interested in the classification accuracy as well as the image reconstruction error. I am not interested in the MFCC regeneration loss as MFCCs are given as input it will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
+\paragraph{\ac{MFCC} Only}
+Similarly to the Image Only condition, the \ac{MFCC} Only condition provides only \acp{MFCC} as input and I am interested in the classification accuracy as well as the image reconstruction error. I am not interested in the \ac{MFCC} regeneration loss as \acp{MFCC} are given as input it will be low (which it is for all models and training procedures as seen in \autoref{tab:mnist_ucu_master_res}).  
 
 \subsubsection{Network Description}
 \paragraph{Baseline Models}
@@ -229,12 +229,12 @@ To generate the baseline classification accuracies for both the UCU and MNIST da
 			& 13	&	2D Trans Conv & 32 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
 			& 14	&	2D Trans Conv & 1 & (3,3) & (1,1) & Sigmoid \\ \hline
 		\end{tabular}
-		\caption{MFCC autoencoder and classifier. Layer 7c performs classification, whilst the branch starting at layer 7 regenerates the MFCCs. The addition of reshape layers is to ensure the final shape of the regenerated MFCCs matches the target shape whilst the embedding shape matches that of the embedding of the image autoencoder.}
+		\caption{\ac{MFCC} autoencoder and classifier. Layer 7c performs classification, whilst the branch starting at layer 7 regenerates the \acp{MFCC}. The addition of reshape layers is to ensure the final shape of the regenerated \acp{MFCC} matches the target shape whilst the embedding shape matches that of the embedding of the image autoencoder.}
 		\label{tab:UCU_AE_description}
 	\end{table}
 
 \paragraph{Multimodal Autoencoder}
-By combining the two autoencoders described in \autoref{tab:MNIST_AE_description}, and \autoref{tab:UCU_AE_description}, a multimodal autoencoder is created. The embeddings from each of the unimodal autoencoders are merged by either, concatenation or addition.
+By combining the two autoencoders described in \autoref{tab:MNIST_AE_description}, and \autoref{tab:UCU_AE_description}, a \ac{MAE} is created. The embeddings from each of the unimodal autoencoders are merged by either, concatenation or addition.
  
 	\begin{table}
 		\centering
@@ -281,7 +281,7 @@ By combining the two autoencoders described in \autoref{tab:MNIST_AE_description
 \subsection{Results}
 
 \subsubsection{Classification Results}
-The complete set of results for this experiment are available in \autoref{tab:mnist_ucu_master_res} in \autoref{appendix:app4}. The most important results are shown in the following three tables: \autoref{tab:mnist_ucu_bi_res} for the Bimodal testing condition, \autoref{tab:mnist_ucu_im_res} for the Image Only condition and \autoref{tab:mnist_ucu_mfcc_res} for the MFCC Only testing condition. 
+The complete set of results for this experiment are available in \autoref{tab:mnist_ucu_master_res} in \autoref{appendix:app4}. The most important results are shown in the following three tables: \autoref{tab:mnist_ucu_bi_res} for the Bimodal testing condition, \autoref{tab:mnist_ucu_im_res} for the Image Only condition and \autoref{tab:mnist_ucu_mfcc_res} for the \ac{MFCC} Only testing condition. 
 
 All results reported here are the mean of a four-fold cross validation. Each training and testing condition was run four times and the average results are shown.
 
@@ -323,7 +323,7 @@ In \autoref{tab:mnist_ucu_bi_res} it can be seen that both concatenate and addit
 
 \end{table}
 
-In comparison to the results shown in \autoref{tab:mnist_ucu_bi_res}, the results in \autoref{tab:mnist_ucu_im_res} show that the MAEs trained using the Bi training procedure do not generalise well when only a single input modality is available. Whereas the MAEs trained using the RD training procedure perform almost as well as the baseline model. 
+In comparison to the results shown in \autoref{tab:mnist_ucu_bi_res}, the results in \autoref{tab:mnist_ucu_im_res} show that the \acp{MAE} trained using the Bi training procedure do not generalise well when only a single input modality is available. Whereas the \acp{MAE} trained using the RD training procedure perform almost as well as the baseline model. 
 \begin{table}[h]
 	\centering
 		\begin{tabular}{|c|c|c|c|}
@@ -342,11 +342,11 @@ In comparison to the results shown in \autoref{tab:mnist_ucu_bi_res}, the result
 
 \end{table}
 
-Similarly, the results in \autoref{tab:mnist_ucu_mfcc_res} show that the behaviour of the MAEs is very similar under the RD training procedure whether it is MFCCs or images provided as input. However, the classification accuracy remains reasonably good under the Bi training procedure when only MFCCs are present. 
+Similarly, the results in \autoref{tab:mnist_ucu_mfcc_res} show that the behaviour of the \ac{MAE} is very similar under the RD training procedure whether it is \acp{MFCC} or images provided as input. However, the classification accuracy remains reasonably good under the Bi training procedure when only \acp{MFCC} are present. 
 
 \subsubsection{Reconstruction Results}
 
-In \autoref{fig:mnistDigits} examples of reconstructed digits generated by both the \textit{Add} and \textit{Concat} MAEs are shown.
+In \autoref{fig:mnistDigits} examples of reconstructed digits generated by both the \textit{Add} and \textit{Concat} \acp{MAE} are shown.
 
 \begin{figure}[h]
 \begin{center}
@@ -356,7 +356,7 @@ In \autoref{fig:mnistDigits} examples of reconstructed digits generated by both 
 \end{center}
 \end{figure}
 
-\autoref{fig:5s} shows a comparison of two different examples of the digit ``5''. One is (subjectively) poorly written and the other is more prototypical and well formed. Under different testing conditions, the MAEs regenerate different ``fives''.
+\autoref{fig:5s} shows a comparison of two different examples of the digit ``5''. One is (subjectively) poorly written and the other is more prototypical and well formed. Under different testing conditions, the \acp{MAE} regenerate different ``fives''.
 
 \begin{figure}[h]
 \begin{center}
@@ -371,42 +371,42 @@ In \autoref{fig:mnistDigits} examples of reconstructed digits generated by both 
 \subsection{Discussion}
 
 \subsubsection{Discussion of Classification Results}
-\autoref{tab:mnist_ucu_bi_res} shows that both the \textit{Add} and \textit{Concat} MAEs have better classification accuracy than the baseline, unimodal models. However, it is not clear that there is a difference in between the two training procedures, Bi and RD.
+\autoref{tab:mnist_ucu_bi_res} shows that both the \textit{Add} and \textit{Concat} \acp{MAE} have better classification accuracy than the baseline, unimodal models. However, it is not clear that there is a difference between the two training procedures, Bi and RD.
 
-The difference between the two training procedures becomes clear in \autoref{tab:mnist_ucu_im_res} where it can be seen that the MAEs trained using the Bi training procedure have lower classification rates when presented with only images as input. Models perform less than half as well as the baseline model, 0.4501 (\textit{Add}) and 0.3496 (\textbf{Concat}) versus 0.9832 for the baseline image autoencoder.
+The difference between the two training procedures becomes clear in \autoref{tab:mnist_ucu_im_res} where it can be seen that the \acp{MAE} trained using the Bi training procedure have lower classification rates when presented with only images as input. Models perform less than half as well as the baseline model, 0.4501 (\textit{Add}) and 0.3496 (\textbf{Concat}) versus 0.9832 for the baseline image autoencoder.
 
-There is a trade off between unimodal accuracy and mulitmodal accuracy in the RD training procedure MAEs. Whilst both the \textit{Add} and \textit{Concat} MAEs outperform the baseline models in the Bimodal test condition, they have slightly worse performance when tested with either images or MFCCs only. For example, the best performance is given by the \textit{Add} MAE under the RD training procedure when both images and MFCCs are present as inputs, with an accuracy of 0.9993. However, if one of the modalities is removed, the accuracy drops to 0.9834 and 0.9789 for Image Only and MFCC Only testing respectively. Comparing this to the baseline unimodal models, we see classification accuracies of 0.9883 and 0.9832 for image and MFCC autoencoders respectively. 
+There is a trade off between unimodal accuracy and mulitmodal accuracy in the RD training procedure \acp{MAE}. Whilst both the \textit{Add} and \textit{Concat} \acp{MAE} outperform the baseline models in the Bimodal test condition, they have slightly worse performance when tested with either images or \acp{MFCC} only. For example, the best performance is given by the \textit{Add} \ac{MAE} under the RD training procedure when both images and \acp{MFCC} are present as inputs, with an accuracy of 0.9993. However, if one of the modalities is removed, the accuracy drops to 0.9834 and 0.9789 for Image Only and \ac{MFCC} Only testing respectively. Comparing this to the baseline unimodal models, we see classification accuracies of 0.9883 and 0.9832 for image and \ac{MFCC} autoencoders respectively. 
 
-There is a drop of 0.0049 and 0.0043 for Image Only and MFCC Only testing using the \textit{Add} MAE. However, this reduction in performance is conterbalanced by the improvement in performnace when both modalities are present, 0.9993 versus the 0.9883 and 0.9832 of the baseline models. This improvement of 0.0110 to 0.0161 over the baseline image and MFCC autoencoders is more than twice the decrease in performance when only one modality is available. 
+There is a drop of 0.0049 and 0.0043 for Image Only and \ac{MFCC} Only testing using the \textit{Add} \ac{MAE}. However, this reduction in performance is conterbalanced by the improvement in performnace when both modalities are present, 0.9993 versus the 0.9883 and 0.9832 of the baseline models. This improvement of 0.0110 to 0.0161 over the baseline image and \ac{MFCC} autoencoders is more than twice the decrease in performance when only one modality is available. 
 
-Specifically, the improvement of Bimodal classification is 2.24 times larger than the decrease in performance when only images are available ($0.011 / 0.0049 = 2.24$). Comparing to the MFCC baseline, the Bimodal performance improvement is 3.74 times larger than the decrease in performance when only MFCCs are available.
+Specifically, the improvement of Bimodal classification is 2.24 times larger than the decrease in performance when only images are available ($0.011 / 0.0049 = 2.24$). Comparing to the \ac{MFCC} baseline, the Bimodal performance improvement is 3.74 times larger than the decrease in performance when only \acp{MFCC} are available.
 
 \subsubsection{Discussion of Reconstruction Results}
-Observing \autoref{tab:mnist_ucu_bi_res}, \autoref{tab:mnist_ucu_im_res} and \autoref{tab:mnist_ucu_mfcc_res} it can be seen that different models have different reconstruction errors (Mean Squared Error). Whilst all MAE models had higher reconstruction errors than the baseline models, this is to be expected. The MAE models are trading off between representing each modality well, whilst the unimodal autoencoders that give the baseline numbers can use their full capacity to minimise the reconstruction error of their modaility, as they do not have to reconstruct the second modality. 
+Observing \autoref{tab:mnist_ucu_bi_res}, \autoref{tab:mnist_ucu_im_res} and \autoref{tab:mnist_ucu_mfcc_res} it can be seen that different models have different reconstruction errors (Mean Squared Error). Whilst all \ac{MAE} models had higher reconstruction errors than the baseline models, this is to be expected. The \ac{MAE} models are trading off between representing each modality well, whilst the unimodal autoencoders that give the baseline numbers can use their full capacity to minimise the reconstruction error of their modaility, as they do not have to reconstruct the second modality. 
 
-That being said, the image reconstruction error, is comparable across all MAE models, approximately 0.0031, (see table \autoref{tab:mnist_ucu_bi_res} and is very close to the baseline of 0.0027 under the Bimodal testing condition (i.e. when the images to be reconstructed are available as input). Further to this, the image reconstruction error for the MFCC Only testing condition is still small, though an order of magnitude worse, for the MAEs trained using the RD procedure.
+That being said, the image reconstruction error, is comparable across all \ac{MAE} models, approximately 0.0031, (see table \autoref{tab:mnist_ucu_bi_res} and is very close to the baseline of 0.0027 under the Bimodal testing condition (i.e. when the images to be reconstructed are available as input). Further to this, the image reconstruction error for the \ac{MFCC} Only testing condition is still small, though an order of magnitude worse, for the \acp{MAE} trained using the RD procedure.
 
 \paragraph{Image reconstruction from MFCCs}
-The increase in image reconstruction error when only MFCCs are provided as input is due to the construction of an internal symbolic language which represents the meaning of both the utterances but not necessarily their fine details. For example, looking at \autoref{fig:5s} we see that there are different ways to write the number 5, however both of these images have the same meaning, ``five''. It is more important to preserve this meaning than the minutia of the original images. The same can be said for reconstructing MFCCs, their meaning is more important than their exact enunciation.  
+The increase in image reconstruction error when only \acp{MFCC} are provided as input is due to the construction of an internal symbolic language which represents the meaning of both the utterances but not necessarily their fine details. For example, looking at \autoref{fig:5s} we see that there are different ways to write the number 5, however both of these images have the same meaning, ``five''. It is more important to preserve this meaning than the minutia of the original images. The same can also be said for reconstructing \acp{MFCC}, their meaning is more important than their exact enunciation.  
 
-The MFCC reconstruction error is best for the baseline model but is only 4.0265 times worse for the best performing model on this task. Considering how small the baseline error is, being four times worse, is still good performance, especially considering the difficulty of the task.
+The \ac{MFCC} reconstruction error is best for the baseline model but is only 4.0265 times worse for the best performing model on this task. Considering how small the baseline error is, being four times worse, is still good performance, especially considering the difficulty of the task.
 
 \paragraph{MFCC reconstruction from Images}
-The MFCC reconstruction error is an order of magnitude worse than the image reconstruction error. In part this is due to the nature of the data, as seen by the difference in baseline reconstruction errors. It appears to be more difficult to reconstruct MFCCs than images, even when MFCCs are given as input.
-Another contributing factor to the worse MFCC reconstruction error for the MAEs, is the inbalance between sample numbers for MNIST and UCU. Whilst both datasets are balanced within themselves (there are an equal number of training samples for each class) there is a big difference between the sizes of MNIST and UCU. 
+The \ac{MFCC} reconstruction error is an order of magnitude worse than the image reconstruction error. In part this is due to the nature of the data, as seen by the difference in baseline reconstruction errors. It appears to be more difficult to reconstruct \ac{MFCC} than images, even when \ac{MFCC} are given as input.
+Another contributing factor to the worse \ac{MFCC} reconstruction error for the \acp{MAE}, is the inbalance between sample numbers for MNIST and UCU. Whilst both datasets are balanced within themselves (there are an equal number of training samples for each class) there is a big difference between the sizes of MNIST and UCU. 
 
-The difference in sizes between the datasets means that reconstructing MFCCs from image inputs will map a large number of inputs to a smaller number of outputs and vice-versa for generating images from MFCC inputs. Therefore images in the test set which look similar to images in the training set, will be mapped to MFCCs similar to those which the training images map too. As there are a smaller number of MFCC examples to map to, our output is less likely to be normally distributed. Whilst idealy we would like to map similar looking digits to similar sounding utterances, there is no gaurantee that this is true, either in our dataset or in general. People with similar handwritting don't necessarily have similar voices. This is simulated by the random assignment of images to MFCCs but this results in discontinuities in the latent space of the network, particularly with respect to generating MFCCs, of which we have fewer examples to capture the true distribution of the data.
+The difference in sizes between the datasets means that reconstructing \acp{MFCC} from image inputs will map a large number of inputs to a smaller number of outputs and vice-versa for generating images from \ac{MFCC} inputs. Therefore images in the test set which look similar to images in the training set, will be mapped to \ac{MFCC} similar to those which the training images map too. As there are a smaller number of \ac{MFCC} examples to map to, our output is less likely to be normally distributed. Whilst idealy we would like to map similar looking digits to similar sounding utterances, there is no gaurantee that this is true, either in our dataset or in general. People with similar handwritting don't necessarily have similar voices. This is simulated by the random assignment of images to \acp{MFCC} but this results in discontinuities in the latent space of the network, particularly with respect to generating \acp{MFCC}, of which we have fewer examples to capture the true distribution of the data.
 
-Conversely, as there are more examples of images of digits, the distribution of the latent space with respect to the images can get closer to modelling the real distribution of the images. Therefore, given a test MFCC, regardless of whether it is similar to a training MFCC example, its target image, is more likely to be similar to images in the training data.
+Conversely, as there are more examples of images of digits, the distribution of the latent space with respect to the images can get closer to modelling the real distribution of the images. Therefore, given a test \ac{MFCC}, regardless of whether it is similar to a training \ac{MFCC} example, its target image, is more likely to be similar to images in the training data.
 
 \paragraph{Effects of randomly degrading inputs}
-\autoref{fig:mnistDigits} shows that randomly degrading the training data has a significant effect, beyond just the improvements to classification accuracy seen in \autoref{tab:mnist_ucu_bi_res}, \autoref{tab:mnist_ucu_im_res} and \autoref{tab:mnist_ucu_mfcc_res}. Both the \textit{Add} and \textit{Concat} MAEs fail to learn to generate images from MFCC data using the Bi training procedure.
+\autoref{fig:mnistDigits} shows that randomly degrading the training data has a significant effect, beyond just the improvements to classification accuracy seen in \autoref{tab:mnist_ucu_bi_res}, \autoref{tab:mnist_ucu_im_res} and \autoref{tab:mnist_ucu_mfcc_res}. Both the \textit{Add} and \textit{Concat} \acp{MAE} fail to learn to generate images from \ac{MFCC} data using the Bi training procedure.
 
-Comparing the images generated by the \textit{Add} and \textit{Concat} MAEs (\autoref{fig:mnistDigits}) for the MFCC test condition when the training data has been randomly degraded, it can be seen that the \textit{Concat} MAE outperforms the \textit{Add} MAE. This is particularly clear when you look at the ``five'' and ``six'' generated by the \textit{Add} MAE for RD X MFCC, where the MAE has failed to correctly generate a ``six'' and has instead generated a ``five'', which is similar to the prototypical five generated when MFCCs for a five are presented.
-Unlike the \textit{Add} MAE, the \textit{Concat} MAE, correctly generates all digits, including ``six''.
+Comparing the images generated by the \textit{Add} and \textit{Concat} \acp{MAE} (\autoref{fig:mnistDigits}) for the \ac{MFCC} test condition when the training data has been randomly degraded, it can be seen that the \textit{Concat} \ac{MAE} outperforms the \textit{Add} MAE. This is particularly clear when you look at the ``five'' and ``six'' generated by the \textit{Add} \ac{MAE} for RD X \ac{MFCC}, where the \ac{MAE} has failed to correctly generate a ``six'' and has instead generated a ``five'', which is similar to the prototypical five generated when \acp{MFCC} for a five are presented.
+Unlike the \textit{Add} \ac{MAE}, the \textit{Concat} \ac{MAE}, correctly generates all digits, including ``six''.
 
 \paragraph{Multiple generations of the same digit}
-In \autoref{fig:5s} we see that different examples of the same digit produce different generation results. Most interestingly however, are the generated ``fives'' shown in the RD X MFCC row. A more prototypical ``five'' is generated from MFCCs than if an image of a non-prototypical five is given. This shows that the meaning of the MFCCs have been grounded in the image modality and that an internal symbolic language has been learnt, i.e. the latent embedding of MFCCs are a symbolic representation which has meaning in both MFCC and image space, hence the ability to generate meaningful images and MFCCs from these embeddings.
+In \autoref{fig:5s} we see that different examples of the same digit produce different generation results. Most interestingly however, are the generated ``fives'' shown in the RD X MFCC row. A more prototypical ``five'' is generated from \acp{MFCC} than if an image of a non-prototypical five is given. This shows that the meaning of the \acp{MFCC} have been grounded in the image modality and that an internal symbolic language has been learnt, i.e. the latent embedding of \acp{MFCC} are a symbolic representation which has meaning in both \ac{MFCC} and image space, hence the ability to generate meaningful images and \acp{MFCC} from these embeddings.
 
 \section{Conclusion}
 Whilst multimodal systems can provide better classification accuracy, this comes at the cost of higher computational costs and lower classification accuracy when only one modality is available as demonstrated by the results presented in this chapter.
