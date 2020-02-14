@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  7 FEB 2020 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.25)  14 FEB 2020 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1417,7 +1417,7 @@ although it is yet undefined on input line 12.
 [1
 
 
-] <Figs/introduction/stirling.jpg, id=553, 111.42632pt x 173.30298pt>
+] <Figs/introduction/stirling.jpg, id=557, 111.42632pt x 173.30298pt>
 File: Figs/introduction/stirling.jpg Graphic file (type jpg)
 
 <use Figs/introduction/stirling.jpg>
@@ -1428,28 +1428,28 @@ LaTeX Font Info:    Try loading font information for OT1+phv on input line 40.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-<Figs/introduction/stirling.png, id=554, 1777.3602pt x 2763.6048pt>
+<Figs/introduction/stirling.png, id=558, 1777.3602pt x 2763.6048pt>
 File: Figs/introduction/stirling.png Graphic file (type png)
 
 <use Figs/introduction/stirling.png>
 Package pdftex.def Info: Figs/introduction/stirling.png used on input line 43.
 (pdftex.def)             Requested size: 27.31013pt x 42.67519pt.
  [2 <./Figs/introduction/stirling.jpg>]
-<Figs/introduction/shapes.png, id=564, 266.4354pt x 166.221pt>
+<Figs/introduction/shapes.png, id=568, 266.4354pt x 166.221pt>
 File: Figs/introduction/shapes.png Graphic file (type png)
 
 <use Figs/introduction/shapes.png>
 Package pdftex.def Info: Figs/introduction/shapes.png used on input line 64.
 (pdftex.def)             Requested size: 213.39568pt x 133.13673pt.
  [3 <./Figs/introduction/stirling.png> <./Figs/introduction/shapes.png>]
-<Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png, id=584, 354.27356pt x 192
+<Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png, id=588, 354.18323pt x 192
 .99101pt>
 File: Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png Graphic file (type pn
 g)
  <use Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png us
 ed on input line 77.
-(pdftex.def)             Requested size: 213.39568pt x 116.249pt.
+(pdftex.def)             Requested size: 213.39568pt x 116.27844pt.
 )
 (./Chapters/Chapter2.tex [4 <./Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.
 png>]
@@ -1458,7 +1458,7 @@ Package acronym Info: Label `acro:ANN' newly defined as it shall be overridden
 although it is yet undefined on input line 12.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
-<Figs/intro2dl/perceptron.png, id=598, 155.30823pt x 57.74373pt>
+<Figs/intro2dl/perceptron.png, id=602, 155.30823pt x 57.74373pt>
 File: Figs/intro2dl/perceptron.png Graphic file (type png)
 
 <use Figs/intro2dl/perceptron.png>
@@ -1470,7 +1470,7 @@ Package pdftex.def Info: Figs/intro2dl/perceptron.png used on input line 25.
 Package acronym Info: Label `acro:MLP' newly defined as it shall be overridden
 although it is yet undefined on input line 56.
 
-<Figs/intro2dl/mlp.png, id=613, 235.6002pt x 131.17004pt>
+<Figs/intro2dl/mlp.png, id=617, 235.6002pt x 131.17004pt>
 File: Figs/intro2dl/mlp.png Graphic file (type png)
 
 <use Figs/intro2dl/mlp.png>
@@ -1503,14 +1503,14 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 420.
  [16] [17]
-<Figs/intro2dl/cat.png, id=764, 60.67668pt x 61.30905pt>
+<Figs/intro2dl/cat.png, id=768, 60.67668pt x 61.30905pt>
 File: Figs/intro2dl/cat.png Graphic file (type png)
 
 <use Figs/intro2dl/cat.png>
 Package pdftex.def Info: Figs/intro2dl/cat.png used on input line 490.
 (pdftex.def)             Requested size: 140.84192pt x 142.32031pt.
 
-<Figs/intro2dl/catScrambled.png, id=765, 2022.55624pt x 2043.635pt>
+<Figs/intro2dl/catScrambled.png, id=769, 2022.55624pt x 2043.635pt>
 File: Figs/intro2dl/catScrambled.png Graphic file (type png)
 
 <use Figs/intro2dl/catScrambled.png>
@@ -1522,7 +1522,7 @@ Package acronym Info: Label `acro:ConvNet' newly defined as it shall be overrid
 den
 although it is yet undefined on input line 501.
 
-<Figs/intro2dl/convolutionSingleStep.png, id=776, 477.4638pt x 104.3097pt>
+<Figs/intro2dl/convolutionSingleStep.png, id=780, 477.4638pt x 104.3097pt>
 File: Figs/intro2dl/convolutionSingleStep.png Graphic file (type png)
 
 <use Figs/intro2dl/convolutionSingleStep.png>
@@ -1530,14 +1530,14 @@ Package pdftex.def Info: Figs/intro2dl/convolutionSingleStep.png used on input
 line 511.
 (pdftex.def)             Requested size: 320.0935pt x 69.93169pt.
 
-<Figs/intro2dl/convolution.png, id=779, 328.1058pt x 561.5379pt>
+<Figs/intro2dl/convolution.png, id=783, 328.1058pt x 561.5379pt>
 File: Figs/intro2dl/convolution.png Graphic file (type png)
 
 <use Figs/intro2dl/convolution.png>
 Package pdftex.def Info: Figs/intro2dl/convolution.png used on input line 522.
 (pdftex.def)             Requested size: 320.0935pt x 547.83571pt.
 
-<Figs/intro2dl/convolutionImplementation.png, id=781, 310.5201pt x 445.4241pt>
+<Figs/intro2dl/convolutionImplementation.png, id=785, 310.5201pt x 445.4241pt>
 File: Figs/intro2dl/convolutionImplementation.png Graphic file (type png)
 
 <use Figs/intro2dl/convolutionImplementation.png>
@@ -1546,7 +1546,7 @@ put line 533.
 (pdftex.def)             Requested size: 320.0935pt x 459.17937pt.
  [19 <./Figs/intro2dl/convolutionSingleStep.png>] [20 <./Figs/intro2dl/convolut
 ion.png>] [21 <./Figs/intro2dl/convolutionImplementation.png>] [22]
-<Figs/intro2dl/TransconvolutionImplementation.png, id=820, 310.5201pt x 443.737
+<Figs/intro2dl/TransconvolutionImplementation.png, id=824, 310.5201pt x 443.737
 8pt>
 File: Figs/intro2dl/TransconvolutionImplementation.png Graphic file (type png)
  <use Figs/intro2dl/TransconvolutionImplementation.png>
@@ -1564,7 +1564,7 @@ Package acronym Info: Label `acro:LSTM' newly defined as it shall be overridden
 although it is yet undefined on input line 593.
 Package acronym Info: Label `acro:MAE' newly defined as it shall be overridden
 although it is yet undefined on input line 597.
-<Figs/intro2dl/AE.png, id=829, 116.44504pt x 190.49167pt>
+<Figs/intro2dl/AE.png, id=833, 116.44504pt x 190.49167pt>
 File: Figs/intro2dl/AE.png Graphic file (type png)
 
 <use Figs/intro2dl/AE.png>
@@ -1573,7 +1573,7 @@ Package pdftex.def Info: Figs/intro2dl/AE.png used on input line 601.
 Package acronym Info: Label `acro:VAE' newly defined as it shall be overridden
 although it is yet undefined on input line 610.
  [23]
-<Figs/intro2dl/MAE.png, id=857, 317.7772pt x 214.94302pt>
+<Figs/intro2dl/MAE.png, id=861, 317.7772pt x 214.94302pt>
 File: Figs/intro2dl/MAE.png Graphic file (type png)
 
 <use Figs/intro2dl/MAE.png>
@@ -1605,7 +1605,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
  [35]
-<Figs/litReview/catcrow.jpeg, id=1135, 1051.93pt x 788.9475pt>
+<Figs/litReview/catcrow.jpeg, id=1139, 1051.93pt x 788.9475pt>
 File: Figs/litReview/catcrow.jpeg Graphic file (type jpg)
 
 <use Figs/litReview/catcrow.jpeg>
@@ -1615,7 +1615,7 @@ Package pdftex.def Info: Figs/litReview/catcrow.jpeg used on input line 149.
 Package acronym Info: Label `acro:CPU' newly defined as it shall be overridden
 although it is yet undefined on input line 162.
  [37]
-[38] <Figs/litReview/semioticNet.png, id=1187, 270.0489pt x 204.5241pt>
+[38] <Figs/litReview/semioticNet.png, id=1191, 270.0489pt x 204.5241pt>
 File: Figs/litReview/semioticNet.png Graphic file (type png)
 
 <use Figs/litReview/semioticNet.png>
@@ -1626,14 +1626,14 @@ Package pdftex.def Info: Figs/litReview/semioticNet.png used on input line 191.
 [40] [41]
 Package acronym Info: Label `acro:TPT' newly defined as it shall be overridden
 although it is yet undefined on input line 247.
- [42] <Figs/litReview/anchoring.png, id=1291, 270.0489pt x 57.0933pt>
+ [42] <Figs/litReview/anchoring.png, id=1295, 270.0489pt x 57.0933pt>
 File: Figs/litReview/anchoring.png Graphic file (type png)
 
 <use Figs/litReview/anchoring.png>
 Package pdftex.def Info: Figs/litReview/anchoring.png used on input line 269.
 (pdftex.def)             Requested size: 213.39568pt x 45.1154pt.
  [43] [44 <./Figs/litReview/anchoring.png>]
-<Figs/litReview/semioticNetPercept.png, id=1329, 270.5307pt x 349.305pt>
+<Figs/litReview/semioticNetPercept.png, id=1333, 270.5307pt x 349.305pt>
 File: Figs/litReview/semioticNetPercept.png Graphic file (type png)
 
 <use Figs/litReview/semioticNetPercept.png>
@@ -1658,14 +1658,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[55] [56] <Figs/mnistSpoken/lbAll.png, id=1531, 556.9608pt x 175.3752pt>
+[55] [56] <Figs/mnistSpoken/lbAll.png, id=1535, 556.9608pt x 175.3752pt>
 File: Figs/mnistSpoken/lbAll.png Graphic file (type png)
 
 <use Figs/mnistSpoken/lbAll.png>
 Package pdftex.def Info: Figs/mnistSpoken/lbAll.png used on input line 353.
 (pdftex.def)             Requested size: 426.79135pt x 134.39172pt.
 
-<Figs/mnistSpoken/5s.png, id=1534, 192.72pt x 175.1343pt>
+<Figs/mnistSpoken/5s.png, id=1538, 192.72pt x 175.1343pt>
 File: Figs/mnistSpoken/5s.png Graphic file (type png)
 
 <use Figs/mnistSpoken/5s.png>
@@ -1680,20 +1680,23 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Chapter 5.
 [63
 
-] <Figs/shapes/vectorArthExmp.png, id=1647, 582.978pt x 739.563pt>
+] <Figs/shapes/vectorArthExmp.png, id=1659, 582.978pt x 739.563pt>
 File: Figs/shapes/vectorArthExmp.png Graphic file (type png)
 
 <use Figs/shapes/vectorArthExmp.png>
 Package pdftex.def Info: Figs/shapes/vectorArthExmp.png used on input line 31.
 (pdftex.def)             Requested size: 426.79135pt x 541.42253pt.
 
-<Figs/shapes/shapes.png, id=1648, 463.7325pt x 154.8987pt>
+<Figs/shapes/shapes.png, id=1660, 463.7325pt x 154.8987pt>
 File: Figs/shapes/shapes.png Graphic file (type png)
 
 <use Figs/shapes/shapes.png>
 Package pdftex.def Info: Figs/shapes/shapes.png used on input line 38.
 (pdftex.def)             Requested size: 320.0935pt x 106.92038pt.
  [64] [65 <./Figs/shapes/vectorArthExmp.png>]
+Package acronym Info: Label `acro:RGB' newly defined as it shall be overridden
+although it is yet undefined on input line 46.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1717,14 +1720,14 @@ PGFPlots: reading {csvs/331/word331.csv}
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[70] [71] <Figs/shapes/331_8v200.png, id=1712, 534.3162pt x 351.9549pt>
+[70] [71] <Figs/shapes/331_8v200.png, id=1739, 534.3162pt x 351.9549pt>
 File: Figs/shapes/331_8v200.png Graphic file (type png)
 
 <use Figs/shapes/331_8v200.png>
 Package pdftex.def Info: Figs/shapes/331_8v200.png used on input line 297.
 (pdftex.def)             Requested size: 266.74458pt x 175.70313pt.
 
-<Figs/shapes/shapes331.png, id=1714, 725.8317pt x 570.2103pt>
+<Figs/shapes/shapes331.png, id=1742, 725.8317pt x 570.2103pt>
 File: Figs/shapes/shapes331.png Graphic file (type png)
 
 <use Figs/shapes/shapes331.png>
@@ -1751,14 +1754,14 @@ PGFPlots: reading {csvs/333/word333.csv}
 PGFPlots: reading {csvs/333/word333.csv}
 PGFPlots: reading {csvs/333/word333.csv}
 
-<Figs/shapes/multiword333.png, id=1734, 507.0945pt x 506.1309pt>
+<Figs/shapes/multiword333.png, id=1764, 507.0945pt x 506.1309pt>
 File: Figs/shapes/multiword333.png Graphic file (type png)
 
 <use Figs/shapes/multiword333.png>
 Package pdftex.def Info: Figs/shapes/multiword333.png used on input line 498.
 (pdftex.def)             Requested size: 213.39568pt x 212.99055pt.
  [74] [75]
-<Figs/shapes/singlelabel333A.png, id=1750, 725.3499pt x 554.3109pt>
+<Figs/shapes/singlelabel333A.png, id=1780, 725.3499pt x 554.3109pt>
 File: Figs/shapes/singlelabel333A.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel333A.png>
@@ -1769,7 +1772,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel333A.png used on input line 510
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/shapes333.png, id=1752, 729.6861pt x 569.0058pt>
+<Figs/shapes/shapes333.png, id=1782, 729.6861pt x 569.0058pt>
 File: Figs/shapes/shapes333.png Graphic file (type png)
 
 <use Figs/shapes/shapes333.png>
@@ -1780,7 +1783,7 @@ Package pdftex.def Info: Figs/shapes/shapes333.png used on input line 520.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [76 <./Figs/shapes/multiword333.png>]
-<Figs/shapes/2word333A.png, id=1763, 664.884pt x 642.2394pt>
+<Figs/shapes/2word333A.png, id=1794, 664.884pt x 642.2394pt>
 File: Figs/shapes/2word333A.png Graphic file (type png)
 
 <use Figs/shapes/2word333A.png>
@@ -1791,7 +1794,7 @@ Package pdftex.def Info: Figs/shapes/2word333A.png used on input line 530.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [77 <./Figs/shapes/singlelabel333A.png>]
-<Figs/shapes/shapes331v333.png, id=1775, 410.7345pt x 569.2467pt>
+<Figs/shapes/shapes331v333.png, id=1812, 410.7345pt x 569.2467pt>
 File: Figs/shapes/shapes331v333.png Graphic file (type png)
 
 <use Figs/shapes/shapes331v333.png>
@@ -1808,7 +1811,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figs/shapes/multiword339.png, id=1794, 571.4148pt x 503.7219pt>
+<Figs/shapes/multiword339.png, id=1837, 571.4148pt x 503.7219pt>
 File: Figs/shapes/multiword339.png Graphic file (type png)
 
 <use Figs/shapes/multiword339.png>
@@ -1819,7 +1822,7 @@ Package pdftex.def Info: Figs/shapes/multiword339.png used on input line 627.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [80 <./Figs/shapes/shapes331v333.png>] [81]
-<Figs/shapes/singlelabel339.png, id=1811, 543.9522pt x 173.2071pt>
+<Figs/shapes/singlelabel339.png, id=1856, 543.9522pt x 173.2071pt>
 File: Figs/shapes/singlelabel339.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel339.png>
@@ -1827,7 +1830,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel339.png used on input line 639.
 
 (pdftex.def)             Requested size: 320.0935pt x 101.927pt.
 
-<Figs/shapes/singlelabel339_pos.png, id=1813, 547.3248pt x 171.2799pt>
+<Figs/shapes/singlelabel339_pos.png, id=1858, 547.3248pt x 171.2799pt>
 File: Figs/shapes/singlelabel339_pos.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel339_pos.png>
@@ -1838,7 +1841,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel339_pos.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/2word339_pos.png, id=1815, 610.6815pt x 484.9317pt>
+<Figs/shapes/2word339_pos.png, id=1861, 610.6815pt x 484.9317pt>
 File: Figs/shapes/2word339_pos.png Graphic file (type png)
 
 <use Figs/shapes/2word339_pos.png>
@@ -1850,7 +1853,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [82 <./Figs/shapes/multiword339.png> <./Figs/shapes/singlelabel339.png>]
 [83 <./Figs/shapes/singlelabel339_pos.png> <./Figs/shapes/2word339_pos.png>]
-[84] <Figs/shapes/singlelabel739_shape.png, id=1847, 387.1263pt x 225.4824pt>
+[84] <Figs/shapes/singlelabel739_shape.png, id=1901, 387.1263pt x 225.4824pt>
 File: Figs/shapes/singlelabel739_shape.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_shape.png>
@@ -1861,7 +1864,7 @@ e 746.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/singlelabel739_col.png, id=1848, 438.438pt x 325.9377pt>
+<Figs/shapes/singlelabel739_col.png, id=1902, 438.438pt x 325.9377pt>
 File: Figs/shapes/singlelabel739_col.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_col.png>
@@ -1872,7 +1875,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel739_col.png used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figs/shapes/singlelabel739_pos.png, id=1849, 541.3023pt x 325.6968pt>
+<Figs/shapes/singlelabel739_pos.png, id=1903, 541.3023pt x 325.6968pt>
 File: Figs/shapes/singlelabel739_pos.png Graphic file (type png)
 
 <use Figs/shapes/singlelabel739_pos.png>
@@ -1883,7 +1886,7 @@ Package pdftex.def Info: Figs/shapes/singlelabel739_pos.png used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/shapes/2word739_pos.png, id=1852, 604.1772pt x 634.2897pt>
+<Figs/shapes/2word739_pos.png, id=1906, 604.1772pt x 634.2897pt>
 File: Figs/shapes/2word739_pos.png Graphic file (type png)
 
 <use Figs/shapes/2word739_pos.png>
@@ -1896,14 +1899,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [85] [86 <./Figs/shapes/singlelabel739_shape.png> <./Figs/shapes/singlelabel739
 _col.png>] [87 <./Figs/shapes/singlelabel739_pos.png> <./Figs/shapes/2word739_p
 os.png>] [88] [89] [90]
-<Figs/shapes/739_minus1.png, id=1908, 544.1931pt x 485.6544pt>
+<Figs/shapes/739_minus1.png, id=1987, 544.1931pt x 485.6544pt>
 File: Figs/shapes/739_minus1.png Graphic file (type png)
 
 <use Figs/shapes/739_minus1.png>
 Package pdftex.def Info: Figs/shapes/739_minus1.png used on input line 884.
 (pdftex.def)             Requested size: 298.75264pt x 266.61424pt.
 
-<Figs/shapes/739_minus1_vectorArthGT.png, id=1911, 539.3751pt x 439.6425pt>
+<Figs/shapes/739_minus1_vectorArthGT.png, id=1994, 539.3751pt x 439.6425pt>
 File: Figs/shapes/739_minus1_vectorArthGT.png Graphic file (type png)
 
 <use Figs/shapes/739_minus1_vectorArthGT.png>
@@ -1914,15 +1917,19 @@ line 893.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[91 <./Figs/shapes/739_minus1.png>]
+[91 <./Figs/shapes/739_minus1.png>] [92 <./Figs/shapes/739_minus1_vectorArthGT.
+png>] [93] [94]
+Package acronym Info: Label `acro:PRNG' newly defined as it shall be overridden
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[92 <./Figs/shapes/739_minus1_vectorArthGT.png>] [93] [94] [95] [96])
-(./Chapters/Chapter6.tex [97]
+although it is yet undefined on input line 967.
+ [95] [96]) (./Chapters/Chapter6.tex [97]
 Chapter 6.
+Package acronym Info: Label `acro:AP' newly defined as it shall be overridden
+although it is yet undefined on input line 18.
+Package acronym Info: Label `acro:ASR' newly defined as it shall be overridden
+although it is yet undefined on input line 20.
 
-<Figs/chapter6/bimodal_system_schematic.png, id=1963, 230.60153pt x 50.22765pt>
+<Figs/chapter6/bimodal_system_schematic.png, id=2075, 230.60153pt x 50.22765pt>
 File: Figs/chapter6/bimodal_system_schematic.png Graphic file (type png)
 <use Figs/chapter6/bimodal_system_schematic.png>
 Package pdftex.def Info: Figs/chapter6/bimodal_system_schematic.png used on inp
@@ -1932,152 +1939,138 @@ ut line 25.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/chapter6/ReShapeExs.png, id=1964, 1541.76pt x 385.44pt>
+[98
+
+] <Figs/chapter6/ReShapeExs.png, id=2086, 1541.76pt x 385.44pt>
 File: Figs/chapter6/ReShapeExs.png Graphic file (type png)
 
 <use Figs/chapter6/ReShapeExs.png>
 Package pdftex.def Info: Figs/chapter6/ReShapeExs.png used on input line 36.
 (pdftex.def)             Requested size: 426.79135pt x 106.69325pt.
- [98
-
-]
-<Figs/chapter6/ExemplarAllClasses.png, id=1974, 1130.80869pt x 551.78145pt>
+ [99 <./Figs/chapter6/bimodal_system_schematic.png> <./Figs/chapter6/ReShapeExs
+.png>]
+<Figs/chapter6/ExemplarAllClasses.png, id=2099, 1130.80869pt x 551.78145pt>
 File: Figs/chapter6/ExemplarAllClasses.png Graphic file (type png)
 
 <use Figs/chapter6/ExemplarAllClasses.png>
 Package pdftex.def Info: Figs/chapter6/ExemplarAllClasses.png used on input lin
-e 52.
-(pdftex.def)             Requested size: 426.79135pt x 208.25623pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+e 53.
+(pdftex.def)             Requested size: 612.28406pt x 298.75264pt.
 \openout4 = `thesis_main.ent'.
 
-[99 <./Figs/chapter6/bimodal_system_schematic.png> <./Figs/chapter6/ReShapeExs.
-png>] [100 <./Figs/chapter6/ExemplarAllClasses.png>]
-<Figs/chapter6/ReShapeCrop.png, id=1994, 481.8pt x 481.8pt>
+ [100 <./Figs/chapter6/ExemplarAllClasses.png>] <Figs/chapter6/ReShapeCrop.png,
+ id=2110, 481.8pt x 481.8pt>
 File: Figs/chapter6/ReShapeCrop.png Graphic file (type png)
 
 <use Figs/chapter6/ReShapeCrop.png>
-Package pdftex.def Info: Figs/chapter6/ReShapeCrop.png used on input line 78.
+Package pdftex.def Info: Figs/chapter6/ReShapeCrop.png used on input line 79.
 (pdftex.def)             Requested size: 298.75264pt x 298.75702pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Figs/chapter6/cropHeuristics.png, id=1996, 642.4pt x 481.8pt>
+ [101]
+<Figs/chapter6/cropHeuristics.png, id=2118, 642.4pt x 481.8pt>
 File: Figs/chapter6/cropHeuristics.png Graphic file (type png)
 
 <use Figs/chapter6/cropHeuristics.png>
-Package pdftex.def Info: Figs/chapter6/cropHeuristics.png used on input line 89
+Package pdftex.def Info: Figs/chapter6/cropHeuristics.png used on input line 90
 .
 (pdftex.def)             Requested size: 298.75264pt x 224.07144pt.
 
-<Figs/chapter6/avgBrickDuckBGY.png, id=1997, 350.96118pt x 192.99101pt>
+<Figs/chapter6/avgBrickDuckBGY.png, id=2119, 350.96118pt x 192.99101pt>
 File: Figs/chapter6/avgBrickDuckBGY.png Graphic file (type png)
 
 <use Figs/chapter6/avgBrickDuckBGY.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGY.png used on input line 1
-04.
+05.
 (pdftex.def)             Requested size: 298.75264pt x 164.2905pt.
- [101]
-<Figs/chapter6/avgMost.png, id=2003, 819.61407pt x 293.63301pt>
+ [102 <./Figs/chapter6/ReShapeCrop.png>] <Figs/chapter6/avgMost.png, id=2127, 8
+19.61407pt x 293.63301pt>
 File: Figs/chapter6/avgMost.png Graphic file (type png)
 
 <use Figs/chapter6/avgMost.png>
-Package pdftex.def Info: Figs/chapter6/avgMost.png used on input line 111.
+Package pdftex.def Info: Figs/chapter6/avgMost.png used on input line 112.
 (pdftex.def)             Requested size: 426.79135pt x 152.90062pt.
- [102 <./Figs/chapter6/ReShapeCrop.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-<Figs/chapter6/avgBrickDuckBGYExemplars.png, id=2019, 351.29242pt x 192.99101pt
+ [103 <./Figs/chapter6/cropHeuristics.png (PNG copy)> <./Figs/chapter6/avgBrick
+DuckBGY.png>]
+<Figs/chapter6/avgBrickDuckBGYExemplars.png, id=2144, 351.29242pt x 192.99101pt
 >
 File: Figs/chapter6/avgBrickDuckBGYExemplars.png Graphic file (type png)
  <use Figs/chapter6/avgBrickDuckBGYExemplars.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGYExemplars.png used on inp
-ut line 149.
+ut line 150.
 (pdftex.def)             Requested size: 298.75264pt x 164.13147pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[103 <./Figs/chapter6/cropHeuristics.png (PNG copy)> <./Figs/chapter6/avgBrickD
-uckBGY.png>] [104 <./Figs/chapter6/avgMost.png>]
-<Figs/chapter6/avgBrickDuckBGYGenerated.png, id=2037, 350.96118pt x 192.99101pt
+[104 <./Figs/chapter6/avgMost.png>] [105 <./Figs/chapter6/avgBrickDuckBGYExempl
+ars.png>]
+<Figs/chapter6/avgBrickDuckBGYGenerated.png, id=2172, 350.96118pt x 192.99101pt
 >
 File: Figs/chapter6/avgBrickDuckBGYGenerated.png Graphic file (type png)
  <use Figs/chapter6/avgBrickDuckBGYGenerated.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGYGenerated.png used on inp
-ut line 180.
+ut line 181.
 (pdftex.def)             Requested size: 298.75264pt x 164.2905pt.
 File: Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png Graphic file (type pn
 g)
 
 <use Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png>
 Package pdftex.def Info: Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png us
-ed on input line 189.
-(pdftex.def)             Requested size: 298.75264pt x 162.75626pt.
- [105 <./Figs/chapter6/avgBrickDuckBGYExemplars.png> <./Figs/chapter6/avgBrickD
-uckBGYGenerated.png>]
-<Figs/chapter6/2wordsSimpleBrickDuck.png, id=2050, 443.10544pt x 426.30266pt>
+ed on input line 190.
+(pdftex.def)             Requested size: 298.75264pt x 162.79747pt.
+
+<Figs/chapter6/2wordsSimpleBrickDuck.png, id=2181, 443.10544pt x 426.30266pt>
 File: Figs/chapter6/2wordsSimpleBrickDuck.png Graphic file (type png)
 
 <use Figs/chapter6/2wordsSimpleBrickDuck.png>
 Package pdftex.def Info: Figs/chapter6/2wordsSimpleBrickDuck.png used on input 
-line 200.
+line 201.
 (pdftex.def)             Requested size: 298.75264pt x 287.42964pt.
-
-<Figs/chapter6/2wordsExemplarBrickDuck.png, id=2051, 443.10544pt x 426.30266pt>
+ [106 <./Figs/chapter6/avgBrickDuckBGYGenerated.png>]
+<Figs/chapter6/2wordsExemplarBrickDuck.png, id=2190, 443.10544pt x 426.30266pt>
 File: Figs/chapter6/2wordsExemplarBrickDuck.png Graphic file (type png)
 <use Figs/chapter6/2wordsExemplarBrickDuck.png>
 Package pdftex.def Info: Figs/chapter6/2wordsExemplarBrickDuck.png used on inpu
-t line 207.
+t line 208.
 (pdftex.def)             Requested size: 298.75264pt x 287.42964pt.
- [106] [107 <./Figs/chapter6/2wordsSimpleBrickDuck.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<Figs/chapter6/exemplarMost.png, id=2071, 821.27628pt x 295.07841pt>
+ [107 <./Figs/chapter6/2wordsSimpleBrickDuck.png>] [108 <./Figs/chapter6/2words
+ExemplarBrickDuck.png>]
+<Figs/chapter6/exemplarMost.png, id=2214, 821.27628pt x 295.07841pt>
 File: Figs/chapter6/exemplarMost.png Graphic file (type png)
 
 <use Figs/chapter6/exemplarMost.png>
-Package pdftex.def Info: Figs/chapter6/exemplarMost.png used on input line 265.
+Package pdftex.def Info: Figs/chapter6/exemplarMost.png used on input line 266.
 
-(pdftex.def)             Requested size: 298.75264pt x 107.34026pt.
+(pdftex.def)             Requested size: 426.79135pt x 153.34709pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figs/chapter6/exemplarMostGenerated.png, id=2072, 821.34856pt x 295.94565pt>
-File: Figs/chapter6/exemplarMostGenerated.png Graphic file (type png)
-
-<use Figs/chapter6/exemplarMostGenerated.png>
-Package pdftex.def Info: Figs/chapter6/exemplarMostGenerated.png used on input 
-line 291.
-(pdftex.def)             Requested size: 426.79135pt x 153.77972pt.
- [108 <./Figs/chapter6/2wordsExemplarBrickDuck.png>] [109 <./Figs/chapter6/exem
-plarMost.png>]
-<Figs/chapter6/2wordsMostExemplar.png, id=2091, 717.27975pt x 687.86586pt>
+[109 <./Figs/chapter6/exemplarMost.png>]
+<Figs/chapter6/2wordsMostExemplar.png, id=2231, 717.27975pt x 687.86586pt>
 File: Figs/chapter6/2wordsMostExemplar.png Graphic file (type png)
 
 <use Figs/chapter6/2wordsMostExemplar.png>
 Package pdftex.def Info: Figs/chapter6/2wordsMostExemplar.png used on input lin
-e 306.
+e 300.
 (pdftex.def)             Requested size: 426.79135pt x 409.30101pt.
- [110 <./Figs/chapter6/exemplarMostGenerated.png>] [111 <./Figs/chapter6/2words
-MostExemplar.png>] [112]
-(./thesis_main.ent)) (./Chapters/Chapter7.tex [113]
-Chapter 7.
-[114
+ [110] [111 <./Figs/chapter6/2wordsMostExemplar.png>]
+<Figs/chapter6/exemplarMostGenerated.png, id=2252, 821.34856pt x 295.94565pt>
+File: Figs/chapter6/exemplarMostGenerated.png Graphic file (type png)
 
-]) (./Chapters/Chapter8.tex [115]
+<use Figs/chapter6/exemplarMostGenerated.png>
+Package pdftex.def Info: Figs/chapter6/exemplarMostGenerated.png used on input 
+line 320.
+(pdftex.def)             Requested size: 426.79135pt x 153.77972pt.
+ [112 <./Figs/chapter6/exemplarMostGenerated.png>] (./thesis_main.ent [113])) (
+./Chapters/Chapter7.tex [114]
+Chapter 7.
+[115
+
+]) (./Chapters/Chapter8.tex [116]
 Chapter 8.
 Package acronym Info: Label `acro:HRI' newly defined as it shall be overridden
 although it is yet undefined on input line 16.
-<Figs/futureWork/fsm.png, id=2151, 210.7875pt x 156.585pt>
+<Figs/futureWork/fsm.png, id=2311, 210.7875pt x 156.585pt>
 File: Figs/futureWork/fsm.png Graphic file (type png)
 
 <use Figs/futureWork/fsm.png>
@@ -2088,39 +2081,39 @@ although it is yet undefined on input line 26.
 Package acronym Info: Label `acro:NLU' newly defined as it shall be overridden
 although it is yet undefined on input line 26.
 
-<Figs/shapes/findingRefferant.png, id=2158, 624.4128pt x 375.0813pt>
+<Figs/shapes/findingRefferant.png, id=2318, 624.4128pt x 375.0813pt>
 File: Figs/shapes/findingRefferant.png Graphic file (type png)
 
 <use Figs/shapes/findingRefferant.png>
 Package pdftex.def Info: Figs/shapes/findingRefferant.png used on input line 30
 .
 (pdftex.def)             Requested size: 426.79135pt x 256.36826pt.
- [116
+ [117
 
-] [117 <./Figs/futureWork/fsm.png> <./Figs/shapes/findingRefferant.png>]
+] [118 <./Figs/futureWork/fsm.png> <./Figs/shapes/findingRefferant.png>]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 46.
-) (./Chapters/Appendix2.tex [118]
+) (./Chapters/Appendix2.tex [119]
 Appendix A.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1.
 \openout4 = `thesis_main.ent'.
 
-[119
+[120
 
-] (./thesis_main.ent)) (./Chapters/Appendix4.tex [120]
+] (./thesis_main.ent)) (./Chapters/Appendix4.tex [121]
 Appendix B.
-[121
+[122
 
-] [122]) (./Chapters/Appendix5.tex
+] [123]) (./Chapters/Appendix5.tex
 Appendix C.
-) (./thesis_main.bbl [123
+) (./thesis_main.bbl [124
 
 
 
-] [124] [125
+] [125] [126
 
-] [126] [127] [128] [129] [130] [131]
+] [127] [128] [129] [130] [131] [132]
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
@@ -2131,50 +2124,53 @@ Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
 
-[132]
+[133]
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
- [133] [134] [135] [136]) [137]
+ [134] [135] [136] [137]) [138]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
  (./thesis_main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
 Package rerunfilecheck Info: File `thesis_main.out' has not changed.
-(rerunfilecheck)             Checksum: BB4200FECA3DC50685B31E5E6E094879;5898.
+(rerunfilecheck)             Checksum: A14E524173DD46CC027A6AB8BCDDB29A;5898.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 38433 strings out of 493029
- 870661 string characters out of 6136234
- 2188969 words of memory out of 5000000
- 40508 multiletter control sequences out of 15000+600000
+ 38463 strings out of 493029
+ 870907 string characters out of 6136234
+ 2192906 words of memory out of 5000000
+ 40528 multiletter control sequences out of 15000+600000
  42600 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,21n,108p,1163b,2663s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on thesis_main.pdf (147 pages, 517668711 bytes).
+ 71i,21n,108p,1191b,2663s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.278} has been referenced but does not exis
+t, replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on thesis_main.pdf (148 pages, 518040059 bytes).
 PDF statistics:
- 2475 PDF objects out of 2487 (max. 8388607)
- 2161 compressed objects within 22 object streams
- 601 named destinations out of 1000 (max. 500000)
+ 2637 PDF objects out of 2984 (max. 8388607)
+ 2315 compressed objects within 24 object streams
+ 611 named destinations out of 1000 (max. 500000)
  993 words of extra memory for PDF output out of 10000 (max. 10000000)
 

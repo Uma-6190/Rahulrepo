@@ -50,36 +50,36 @@
 \BOOKMARK [1][-]{section.167}{Vector Arithmetic}{chapter.164}% 50
 \BOOKMARK [1][-]{section.170}{Artificial Shapes Dataset}{chapter.164}% 51
 \BOOKMARK [2][-]{subsection.171}{Dataset Description}{section.170}% 52
-\BOOKMARK [2][-]{subsection.173}{Problem Description}{section.170}% 53
-\BOOKMARK [2][-]{subsection.174}{Network Description}{section.170}% 54
-\BOOKMARK [1][-]{section.175}{Experiments with the ArtS Dataset}{chapter.164}% 55
-\BOOKMARK [2][-]{subsection.176}{Experiment 1}{section.175}% 56
-\BOOKMARK [2][-]{subsection.186}{Experiment 2}{section.175}% 57
-\BOOKMARK [2][-]{subsection.199}{Experiment 3}{section.175}% 58
-\BOOKMARK [2][-]{subsection.212}{Experiment 4}{section.175}% 59
-\BOOKMARK [2][-]{subsection.225}{Experiment 5}{section.175}% 60
-\BOOKMARK [2][-]{subsection.233}{Discussion}{section.175}% 61
-\BOOKMARK [1][-]{section.234}{Conclusion}{chapter.164}% 62
-\BOOKMARK [0][-]{chapter.238}{Bidirectional Grounding of Real Data}{}% 63
-\BOOKMARK [1][-]{section.239}{The Difficulties of Real Data}{chapter.238}% 64
-\BOOKMARK [1][-]{section.240}{Acoustic Packaging}{chapter.238}% 65
-\BOOKMARK [1][-]{section.242}{Real Shapes Dataset}{chapter.238}% 66
-\BOOKMARK [2][-]{subsection.244}{Dataset Description}{section.242}% 67
-\BOOKMARK [2][-]{subsection.246}{Problem Description}{section.242}% 68
-\BOOKMARK [2][-]{subsection.247}{Network Description}{section.242}% 69
-\BOOKMARK [1][-]{section.248}{Experiments with the ReShape dataset}{chapter.238}% 70
-\BOOKMARK [2][-]{subsection.249}{Data Preprocessing}{section.248}% 71
-\BOOKMARK [2][-]{subsection.252}{Training Procedures}{section.248}% 72
-\BOOKMARK [2][-]{subsection.255}{Experiment 1}{section.248}% 73
-\BOOKMARK [2][-]{subsection.267}{Experiment 2}{section.248}% 74
-\BOOKMARK [2][-]{subsection.278}{Discussion}{section.248}% 75
-\BOOKMARK [1][-]{section.279}{Conclusion}{chapter.238}% 76
-\BOOKMARK [0][-]{chapter.280}{Conclusion}{}% 77
-\BOOKMARK [1][-]{section.281}{Summary of Important Points}{chapter.280}% 78
-\BOOKMARK [1][-]{section.282}{Conclusion}{chapter.280}% 79
-\BOOKMARK [0][-]{chapter.283}{Future Work}{}% 80
-\BOOKMARK [1][-]{section.284}{What Comes Next?}{chapter.283}% 81
-\BOOKMARK [0][-]{appendix.291}{Appendix A Primer on Artifical Neural Networks}{}% 82
-\BOOKMARK [0][-]{appendix.297}{Appendix Sensory Redundancy}{}% 83
-\BOOKMARK [0][-]{appendix.299}{Appendix Magical Vectors and Where to Find Them}{}% 84
-\BOOKMARK [0][-]{appendix*.303}{Bibliography}{}% 85
+\BOOKMARK [2][-]{subsection.174}{Problem Description}{section.170}% 53
+\BOOKMARK [2][-]{subsection.175}{Network Description}{section.170}% 54
+\BOOKMARK [1][-]{section.176}{Experiments with the ArtS Dataset}{chapter.164}% 55
+\BOOKMARK [2][-]{subsection.177}{Experiment 1}{section.176}% 56
+\BOOKMARK [2][-]{subsection.187}{Experiment 2}{section.176}% 57
+\BOOKMARK [2][-]{subsection.200}{Experiment 3}{section.176}% 58
+\BOOKMARK [2][-]{subsection.213}{Experiment 4}{section.176}% 59
+\BOOKMARK [2][-]{subsection.226}{Experiment 5}{section.176}% 60
+\BOOKMARK [2][-]{subsection.234}{Discussion}{section.176}% 61
+\BOOKMARK [1][-]{section.235}{Conclusion}{chapter.164}% 62
+\BOOKMARK [0][-]{chapter.240}{Bidirectional Grounding of Real Data}{}% 63
+\BOOKMARK [1][-]{section.241}{The Difficulties of Real Data}{chapter.240}% 64
+\BOOKMARK [1][-]{section.242}{Acoustic Packaging}{chapter.240}% 65
+\BOOKMARK [1][-]{section.246}{Real Shapes Dataset}{chapter.240}% 66
+\BOOKMARK [2][-]{subsection.248}{Dataset Description}{section.246}% 67
+\BOOKMARK [2][-]{subsection.250}{Problem Description}{section.246}% 68
+\BOOKMARK [2][-]{subsection.251}{Network Description}{section.246}% 69
+\BOOKMARK [1][-]{section.252}{Experiments with the ReShape dataset}{chapter.240}% 70
+\BOOKMARK [2][-]{subsection.253}{Data Preprocessing}{section.252}% 71
+\BOOKMARK [2][-]{subsection.256}{Training Procedures}{section.252}% 72
+\BOOKMARK [2][-]{subsection.259}{Experiment 1}{section.252}% 73
+\BOOKMARK [2][-]{subsection.271}{Experiment 2}{section.252}% 74
+\BOOKMARK [2][-]{subsection.282}{Discussion}{section.252}% 75
+\BOOKMARK [1][-]{section.283}{Conclusion}{chapter.240}% 76
+\BOOKMARK [0][-]{chapter.284}{Conclusion}{}% 77
+\BOOKMARK [1][-]{section.285}{Summary of Important Points}{chapter.284}% 78
+\BOOKMARK [1][-]{section.286}{Conclusion}{chapter.284}% 79
+\BOOKMARK [0][-]{chapter.287}{Future Work}{}% 80
+\BOOKMARK [1][-]{section.288}{What Comes Next?}{chapter.287}% 81
+\BOOKMARK [0][-]{appendix.295}{Appendix A Primer on Artifical Neural Networks}{}% 82
+\BOOKMARK [0][-]{appendix.301}{Appendix Sensory Redundancy}{}% 83
+\BOOKMARK [0][-]{appendix.303}{Appendix Magical Vectors and Where to Find Them}{}% 84
+\BOOKMARK [0][-]{appendix*.307}{Bibliography}{}% 85
