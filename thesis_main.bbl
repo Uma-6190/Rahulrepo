@@ -721,6 +721,11 @@ L.~Schillingmann, B.~Wrede, and K.~J.~Rohlfing,
 {\em A computational model of acoustic packaging,}
 IEEE Transactions on Autonomous Mental Development {\bf 1} (2009) 226.
 
+\bibitem{redmon2018yolov3}
+J.~Redmon and A.~Farhadi,
+{\em Yolov3: An incremental improvement,}
+arXiv preprint arXiv:1804.02767(2018).
+
 \bibitem{rasa}
 ~Rasa.
 \newblock {\em Open source conversational AI,} .

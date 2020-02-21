@@ -151,7 +151,7 @@
 \contentsline {section}{\numberline {7.2}Conclusion}{116}{section.286}
 \contentsline {chapter}{\numberline {8}Future Work}{117}{chapter.287}
 \contentsline {section}{\numberline {8.1}What Comes Next?}{117}{section.288}
-\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{120}{appendix.295}
-\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{122}{appendix.301}
-\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{124}{appendix.303}
-\contentsline {chapter}{Bibliography}{126}{appendix*.307}
+\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{120}{appendix.294}
+\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{122}{appendix.300}
+\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{124}{appendix.302}
+\contentsline {chapter}{Bibliography}{126}{appendix*.306}

@@ -15,13 +15,17 @@ Through the course of the experiments shown in \autoref{Chapter4}, \autoref{Chap
 
 This representation has been demonstrated to fit the criteria layed out by Bengio et al. in \cite{repRev}. Particularly, the representation has been demonstrated to have Manifolds which can be manipulated through vector arithmetic to make predictable and meaningful changes in the output.
 
-In some datasets, such as MNIST and ArtS, it is possible to generate image prototypes for each class/word in the \ac{MAE}'s vocabulary. For MNIST, this came in the form of prototypical versions of each digit and for ArtS, images of each colour, shape and size can be generated individually.
+In some datasets, such as MNIST and ArtS, it is possible to generate image prototypes for each class/word in the \ac{MAE}'s ``vocabulary''. For MNIST, this came in the form of prototypical versions of each digit and for ArtS, images of each colour, shape and size can be generated individually.
 
 This is also possible for the ReShape dataset However, due to the larger variability of training examples, the prototypes are very blurry. By using a class exemplar for each object, the \ac{MAE} was able to learn to generate non-blurry prototypes for each of the visual attributes.
 
 I also demonstrated that \ac{MRL} can be used to generate accurate object descriptions of both real and artificial images. As well as that using \ac{MRL} can led to improvements in classification accuracy as seen in \autoref{Chapter4}.
 
+In \autoref{Chapter5} and \autoref{Chapter6} I showed that \ac{MRL} allows \acp{ANN} to generalise to unseen objects. The \ac{MAE} is able to correctly generate images of objects which do not appear in the training data by combining the representations of different words. This entire process relies on the \ac{MAE} having grounded the meaning of each word individually to its image-space equivalent.
+
 
 \section{Conclusion}
 \ac{MRL} has been shown to be a powerful technique and presents an area worthy of futher study. Whilst the findings of the experiments in this thesis are exciting, further work is needed to apply \ac{MRL} in a real world setting.
+
+Unsupervised approaches to symbol grounding are vital to the development of robots for opperation in the real world. \ac{MRL} could form the foundation of a robotic cognitive system which can continue to learn throught its lifetime. Furthermore, the ability of the trained \acp{MAE} to generalise to unseen objects will make teaching robots about new objects quicker as it is not necessary to train the \ac{MAE} with every possible combination of visual attributes. Only a subset of atrribute combinations needs to be learnt, from which other attribute combinations can be inferred as demonstrated in \autoref{Chapter5} when generating images of \textsc{Red Donuts}.
 
