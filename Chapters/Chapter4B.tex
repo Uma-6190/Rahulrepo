@@ -17,7 +17,7 @@ Lip reading affects the classification of phonemes, this is known as the Mcgurk 
 
 The reason that lip reading can aid hearing in noisy evironments is that it provides an additional vector along which the human brain can reconstruct missing information. When something is mis-heard due to background noise, the visual information gained from looking at the lips of the speaker can be used to reconstruct their utterance.
 
-The ability to reconstruct missing data from a secondary modality has not only been seen in humans \cite{ma2009lip, samuel1997lexical} but has been demonstrated in computational modals for example, Ngiam et al.\cite{ngiam2011multimodal}.
+The ability to reconstruct missing data from a secondary modality has not only been seen in humans \cite{ma2009lip, samuel1997lexical} but has been demonstrated in computational modals for example,\cite{ngiam2011multimodal, silberer2014learning}.
 
 In order to be able to reconstruct missing data from a secondary modality, symbol grounding needs to have occured, and the meaning of a percept in modality A must be known in modality B.
 If both the forward and inverse relationship between modalities is known, then bidirectional symbol grounding has occured and we are able to reconstruct modality A from modality B and modality B from modality A.
@@ -408,13 +408,17 @@ Unlike the \textit{Add} \ac{MAE}, the \textit{Concat} \ac{MAE}, correctly genera
 \paragraph{Multiple generations of the same digit}
 In \autoref{fig:5s} we see that different examples of the same digit produce different generation results. Most interestingly however, are the generated ``fives'' shown in the RD X MFCC row. A more prototypical ``five'' is generated from \acp{MFCC} than if an image of a non-prototypical five is given. This shows that the meaning of the \acp{MFCC} have been grounded in the image modality and that an internal symbolic language has been learnt, i.e. the latent embedding of \acp{MFCC} are a symbolic representation which has meaning in both \ac{MFCC} and image space, hence the ability to generate meaningful images and \acp{MFCC} from these embeddings.
 
-\section{Conclusion}
+\section{Summary}
+In this chapter I set out to demonstrate the advantages of multimodality as applied to classification and regeneration of missing data.
+
 Whilst multimodal systems can provide better classification accuracy, this comes at the cost of higher computational costs and lower classification accuracy when only one modality is available as demonstrated by the results presented in this chapter.
 
 The ability to reconstruct missing data from a secondary modality demonstrates how an internal symbolic language can be learnt in an unsupervised fashion by processing aligned percepts in multiple modalities.
 
 In future it would be worth while to observe how the reconstructed data can be exploited to improve classification accuracy, for example by first generating a missing data point from modality A and then performing a classification on the embedding of data from modality B and the generated modality A.
 
-This experiment lays the ground work for the next chapter where I will look at how a more complex internal symbolic language can be developed and exploited. 
+This experiment lays the ground work for the next chapter where I will look at how a more complex internal symbolic language can be developed and exploited.
+
+Further discussion of the results from this chapter has been published in \cite{sheppard2020multimodal}. 
 %I will also discuss how this can be applied to creating robots capable of life long learning. 
 \theendnotes

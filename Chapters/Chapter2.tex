@@ -13,8 +13,8 @@ This chapter presents an overview of the mathematical theory of \ac{ANN} and how
 
 \section{Perceptrons}
 \label{sec:percep}
-The perceptron is the parent of modern artificial neurons \cite{rosenblatt1958perceptron}.
-Perceptrons arranged in layers, referred to as multi-layer perceptrons, are therfore the predecessor of modern \ac{ANN}s.
+The perceptron is the predessor of modern artificial neurons \cite{rosenblatt1958perceptron}.
+Perceptrons arranged in layers, referred to as multi-layer perceptrons, are therfore the predecessor of modern \acp{ANN}.
 
 \subsection{What is a Perceptron}
 
@@ -41,20 +41,22 @@ output = \begin{cases}
 
 Where $x_j$ is the jth input, $w_j$ is its associated weight and $b$ is a constant value called the bias, which affects how easy it is for the neuron to activate. The output of the perceptron is caluclated using the formulation shown in \autoref{eqn:percep}.
 
-By adjusting each of the weights we can change the output of the perceptron. For example, if we wanted to use a perceptron to decide whether to have a picnic today we can  select a set of relevant inputs, ``the weather is nice" and ``the pollen count is low".
+By adjusting each of the weights we can change the output of the perceptron. 
 
-If it is a sunny day, and the pollen count is high, the input to the perceptron would be $[1,0]$.
- 
-We will set our weights depending on how important each of the inputs is. No one likes a picnic in the rain, so the weather is important, whilst the pollen count is only important if you suffer from hayfever. We will select a bias of -5 for our perceptron.
-
-For person A, the weights might look like $[7, 0]$ (person A doesn't suffer from hayfever). Therefore the output of the perceptron would be 1 as $(1 \times 7) + (0 \times 0) - 5 = 2$ is greater than 0, so person A will go for a picnic.
-
-Person B owns a large umbrella (so the weather doesn't matter as much) but they do suffer from hayfever, their weights might look like $[4, 7]$. The output of the perceptron would be 0 as  $(1 \times 4) + (0 \times 7) - 5 = -1$ is less than 0. Therefore, person B would wait for a day with a lower pollen count for a picnic.
+%For example, if we wanted to use a perceptron to decide whether to have a picnic today we can  select a set of relevant inputs, ``the weather is nice" and ``the pollen count is low".
+%
+%If it is a sunny day, and the pollen count is high, the input to the perceptron would be $[1,0]$.
+% 
+%We will set our weights depending on how important each of the inputs is. No one likes a picnic in the rain, so the weather is important, whilst the pollen count is only important if you suffer from hayfever. We will select a bias of -5 for our perceptron.
+%
+%For person A, the weights might look like $[7, 0]$ (person A doesn't suffer from hayfever). Therefore the output of the perceptron would be 1 as $(1 \times 7) + (0 \times 0) - 5 = 2$ is greater than 0, so person A will go for a picnic.
+%
+%Person B owns a large umbrella (so the weather doesn't matter as much) but they do suffer from hayfever, their weights might look like $[4, 7]$. The output of the perceptron would be 0 as  $(1 \times 4) + (0 \times 7) - 5 = -1$ is less than 0. Therefore, person B would wait for a day with a lower pollen count for a picnic.
 
 
 \subsection{Multi-Layer Perceptron}
-In the previous section I demonstrated how a single perceptron can be used to make decisions based on a set of inputs. However, things get much more interesting when we start to link multiple perceptrons together into \ac{MLP}.
-
+%In the previous section I demonstrated how a single perceptron can be used to make decisions based on a set of inputs. However, things get much more interesting when we start to link multiple perceptrons together into \ac{MLP}.
+\acp{MLP} are constructed by stacking muliple layers of perceptrons, as seen in \autoref{fig:mlp}. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.4\textwidth]{Figs/intro2dl/mlp.png}
@@ -63,11 +65,11 @@ In the previous section I demonstrated how a single perceptron can be used to ma
 	\label{fig:mlp}
 \end{figure}
 
-If we take the example from the previous section about deciding to go for a picnic or not, we can use the \ac{MLP} shown in \autoref{fig:mlp} to consider what happens if person A and B want to go for a picnic together.
-
-Given the previous conditions of a sunny day with a high pollen count, person A wants to go whilst person B does not, as demonstrated by the outputs of their individual perceptrons. Taking these outputs as inputs to the second layer of our \ac{MLP}, we can see whether the picnic will go ahead.
-
-This time we will set the weights of the second layer based on who shouts the loudest. In this case, person A really wants to go and is very vocal about it. $1 \times 9 + 0 \times 5 - 5 = 4$ so the picnic will go ahead. This resulted in person B developing a headache and sneezing a lot. Clearly we need to find a way to adjust the weights of our \ac{MLP} so that it makes better decisions in the future.
+%If we take the example from the previous section about deciding to go for a picnic or not, we can use the \ac{MLP} shown in \autoref{fig:mlp} to consider what happens if person A and B want to go for a picnic together.
+%
+%Given the previous conditions of a sunny day with a high pollen count, person A wants to go whilst person B does not, as demonstrated by the outputs of their individual perceptrons. Taking these outputs as inputs to the second layer of our \ac{MLP}, we can see whether the picnic will go ahead.
+%
+%This time we will set the weights of the second layer based on who shouts the loudest. In this case, person A really wants to go and is very vocal about it. $1 \times 9 + 0 \times 5 - 5 = 4$ so the picnic will go ahead. This resulted in person B developing a headache and sneezing a lot. Clearly we need to find a way to adjust the weights of our \ac{MLP} so that it makes better decisions in the future.
 
 \section{Activation Functions}
 
@@ -205,12 +207,12 @@ ylabel near ticks,
 \end{center}
 \end{figure}
 
-The \ac{Relu} was created to address an issue known as vanishing gradients. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering more and more simple decsions as shown in the \ac{MLP} example in \autoref{sec:percep}} can be trained as non-linear functions (like the Sigmoid or \ac{Tanh}) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
+The \ac{Relu} was created to address an issue known as vanishing gradients \cite{hochreiter1998vanishing}. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering the outcomes of multiple simple decsions.} can be trained as non-linear functions (like the Sigmoid or \ac{Tanh}) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
 
 \section{Learning Algorithms}
-In \autoref{sec:percep} we saw how simple computation units can make simple decisions and how these can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
+Simple computation units like the perceptron or Sigmoid neurons can make simple decisions and can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
 
-In general, perceptrons (and their more modern successors) will have their initial weights set randomly, unlike in our example where I chose them. 
+In general, perceptrons (and their more modern successors) will have their initial weights set randomly. 
 
 Randomly setting weights is useful in practice as we will usually have large numbers of inputs, weights, layers and artifical neurons, so setting each by hand would be intractable. Also, if we knew what weights to set, we wouldn't need a neural network or a learning algorithm to solve our problem as we would likely have a more efficient mathematical description of the problem.
 
@@ -224,7 +226,7 @@ adversarial learning (to name a few). The experiments in this thesis will focus 
 \textbf{Supervised learning} - an external system is used to provide ground truth values for the desired output of the network. An example would be classification using standardised datasets like MNIST handwritten digits \cite{lecun1998mnist}.
 
 
-\textbf{Unsupervised learning} - no external system provides ground truth values, instead these are inferred directly from the data. Autoencoders (discussed in great detail in later chapters) are a good example of this.  
+\textbf{Unsupervised learning} - no external system provides ground truth values, instead these are inferred directly from the data. Autoencoders are a good example of this.  
 
 %\todo[inline]{finish this}
 %\textbf{Reinforcement learning} - an external system provides a score which estimates the value of an action (think about getting points in a video-game). Training a dog by giving it treats when it performs a trick is reinforcement learning. We reinforce the desired behaviour by rpoviding a reward.
@@ -260,15 +262,15 @@ C = -\sum_{i=0}^{n}P(i) log(Q(i))
 When using cross-entropy as a loss function, we can view the output of our neural network as a probability distribution. For example, in a multiclass classification problem with $k$ classes, each of the $k$ outputs of the network tells us the probability that the network believes an input to belong to class $k$.
 
 
-For example, given a dataset containing images of animals: cats, dogs, horses and snakes. A single image containing a cat would be labelled $[1, 0, 0, 0]$. This tells us the exact probability distribution of the image, $P$ i.e. the image certainly contains a cat and does not contain any other animals.
-
-Now as our network trains, it may give a prediction of $[0.5, 0.3, 0.15, 0.05]$, this is our predicted probability distribution $Q$.
-
-Calculating our cross-entropy we get:
-$C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})$
-
-
-If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the error is closer to zero and our prediction is better. The network believes with 80\% certainty that the image is of a cat. 
+%For example, given a dataset containing images of animals: cats, dogs, horses and snakes. A single image containing a cat would be labelled $[1, 0, 0, 0]$. This tells us the exact probability distribution of the image, $P$ i.e. the image certainly contains a cat and does not contain any other animals.
+%
+%Now as our network trains, it may give a prediction of $[0.5, 0.3, 0.15, 0.05]$, this is our predicted probability distribution $Q$.
+%
+%Calculating our cross-entropy we get:
+%$C = -(1 log(0.5) + 0 log(0.3) + 0 log(0.15) + 0 log(0.05) = 0.301_{3s.f.})$
+%
+%
+%If we then do some training using gradient descent our network might then predict $[0.8, 0.2, 0, 0]$ giving a cross-entropy of $0.0969_{3s.f.}$. Clearly this represents an improvement, as the error is closer to zero and our prediction is better. The network believes with 80\% certainty that the image is of a cat. 
 
 
 \subsubsection{Kullback-Leibler Divergence}
@@ -285,7 +287,7 @@ D_{KL} = -\int_{i=0}^{n}{P(i)Log(\frac{Q(i)}{P(i)}})
 
 Typically \ac{KLD} is not used as a cost function on its own, but is used to constrain the output of a single layer of a network (usually not the output) whilst also minimising another cost function.
 
-The best example of this is a Variational AutoEncoder (VAE), which will be discussed later.
+The best example of this is a\ac{VAE}, which will be discussed later.
 
 
 \subsection{Gradient Descent}
@@ -321,7 +323,7 @@ Now that we have a method for determining how well our neural network performs a
 \end{center}
 \end{figure}
 
-To make things simple, lets assume our network only has two weights, though the following derivation generalises to any number of weights. This could give us a cost landscape like that shown in \autoref{fig:costscape}. Our aim is to minimise the cost as the cost is a measure of how wrong our network is.
+To make things simple, lets assume our network only has two weights (though the following derivation generalises to any number of weights). This could give us a cost landscape like that shown in \autoref{fig:costscape}. Our aim is to minimise the cost as the cost is a measure of how wrong our network is.
 
 In more definite terms we wish to minimise \autoref{eqn:cost_bivar}, where $Y_i$ is the desired output value for input $i$ and $z$ is as defined in \autoref{eqn:z_act}.
 
@@ -359,7 +361,7 @@ Looking at \autoref{eqn:delta_c_sub}, we can see that to make $\Delta C$ negativ
 
 By substituting \autoref{eqn:delta_w_eta} into \autoref{eqn:delta_c_sub} we can see that $ \Delta C = - \eta \abs{\nabla C}^2$ and because $\abs{\nabla C}^2 \geq 0$ this guarantees that $C$ will always decrease if the weights are changed in accordance to \autoref{eqn:delta_w_eta}.
 
-By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta}, we will eventually reach the minima of $C$ so long as we select an appropriate learning rate \endnote{Learning rate is discussed in more detail in \autoref{sec:lr_sch}}. 
+By iteratively making changes to the weights according to \autoref{eqn:delta_w_eta}, we will eventually reach the minima of $C$ so long as we select an appropriate learning rate.
 
 \subsection{Backpropagation}
 With gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does. 
@@ -367,118 +369,118 @@ With gradient descent providing a method for adjusting  weights, we now only nee
 A full explanation of the backpropogastion algorithm is available in \autoref{appendix:app3}. However, understanding the backpropogation algorithm is not necessary to understand the contribution of this thesis.
 
 
-\subsection{Extensions and Improvements}
-There are many extensions to simple gradient descent based learning, here are a few to be aware of.
-\subsubsection{Learning Rate Schedule}
-\label{sec:lr_sch}
-Depending on how far we are from the global error minima, we may wish to change the value of the learning rate $\eta$. Recall from \autoref{eqn:delta_w_eta} $\Delta w = -\eta \nabla C$, that the learning rate determines how big of a step we take, following the gradient of the error, each time we update the weights of our neural network.
-
-If we are far from the minimum point for the cost with respect to the weights, we may wish to take larger steps, so that we can more quickly reduce the total cost. However, as we get closer we want to ensure that we do not step over the minimum.
-
-\begin{figure}
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-axis lines=left,
-xtick={-10,0,10},
-xticklabels={},
-xlabel={$\Delta w$},
-ylabel={$C$},
-yticklabels={},
-xlabel near ticks,
-ylabel near ticks]
-\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^2};
-%\draw [blue](0,100) ++(90 : 1 ) arc ( 90:81.87:50 );
-\node [blue] at (2,98)  (a) {\textbullet};
-\node [blue] at (20,64) (b) {\textbullet};
-\node [blue] at (40,36) (c) {\textbullet};
-\node [blue] at (60,16) (d) {\textbullet};
-\node [blue] at (80,4)  (e) {\textbullet};
-\node [blue] at (100,0) (f) {\textbullet};
-
-\draw[blue, ->](a) to [bend left] (b);
-\draw[blue, ->](b) to [bend left] (c);
-\draw[blue, ->](c) to [bend left] (d);
-\draw[blue, ->](d) to [bend left] (e);
-\draw[blue, ->](e) to [bend left] (f);
-
-
-\node [red] at (198,98)  (g) {\textbullet};
-\node [red] at (180,64) (h) {\textbullet};
-\node [red] at (153,28) (i) {\textbullet};
-\node [red] at (90,1) (j) {\textbullet};
-%\node [red] at (60,16)  (k) {\textbullet};
-%\node [red] at (80,4) (l) {x};
-
-
-\draw[red, ->](g) to [bend right] (h);
-\draw[red, ->](h) to [bend right] (i);
-\draw[red, ->](i) to [bend right] (j);
-%\draw[red, ->](j) to [bend right] (k);
-
-
-\end{axis}
-    
-
-\end{tikzpicture}
-\caption{Visualisation of error minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate. Where $\Delta w$ is the change of weights of a neural network and and $C$ is its error.}
-\label{fig:lr_schedule}
-\end{center}
-\end{figure}
-
-\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. As more training occurs, reducing the learning rate allows us to reach the error minimum (blue arrows). Selecting a large learning rate and not changing it might lead to never reaching the error minimum (red arrows). Whilst at first, we make rapid progress towards the minimum, at some point we cross over it and will be unable to approach any closer without taking smaller steps.
-
-This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
-Learning rate schedulers can speed up convergence by allowing large steps to be taken when we are far from the cost minimum with respect to the weights, covering a large distance in a few updates and then slowing down to take smaller steps as we get closer. 
-
-This begs the question of: how do we know when to change the learning rate? In  practice there are many ways we can achieve this, however these broadly fit into two categories: mathematical and heuristic.
-
-There are many algorithms for calculating how to set the learning rate for example, Adam \cite{kingma2014adam} and ADADelta \cite{zeiler2012adadelta}. They are both popular as they are both first order methods, meaning that expensive, slow calculations of second order derivatives do not need to be made.
-Senior et al.\cite{senior2013empirical} provide an extensive testing of different learning rate schedulers. 
-
-Second order methods are desirable in that the second derivative of the cost provides information about how the cost gradient is changing. \autoref{fig:2ndordr} shows how the cost and its first and second derivatives change with respect to the weights. In region (A), where the cost (black line) is far from the minima the first derivative (blue) changes rapidly, causing the second derivative (red) to have a large magnitude. In region (B), the cost is closer to the minima, and thus the change in cost is lower so the steepness of the first derivative (blue) is lower as is the magnitude of the second derivative (red). At the minima, the second derivative is exactly zero, so we know we have reached the minima if the second derivative equals zero.
-
-Second order methods have the major draw back of being very slow to calculate. Thus it is more efficient to make use of first order estimates than the exact information provided by second order methods. Many more weight updates can be carried out using first order methods than can be done using second order methods in a given time frame. So whilst second order methods should require less total weight updates to minimise the cost, the first order methods will reach the minimum faster as the weight updates will occur much more quickly in the first order case.
-
-
-\begin{figure}
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-axis lines=left,
-xtick={-10,0,10},
-xticklabels={},
-xlabel={$\Delta w$},
-ylabel={$C$},
-yticklabels={},
-xlabel near ticks,
-ylabel near ticks,
-scaled y ticks = false]
-\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^4};
-\addplot[blue, thick, smooth, samples=1000, domain=-10:10]{4*x^3};
-\addplot[red, thick, smooth, samples=1000, domain=-10:10]{12*x^2};
-
-\addplot [black, thin, dashed] coordinates {(-5, -4000) (-5, 10000)};
-\addplot [black, thin, dashed] coordinates {(5, -4000) (5, 10000)};
-
-\node[] at (axis cs:7.5,7000) {(A)};
-\node[] at (axis cs:-7.5,7000) {(A)};
-\node[] at (axis cs:2.5,7000)  {(B)};
-\node[] at (axis cs:-2.5,7000) {(B)};
-\node[] at (axis cs:0,500) {(min)};
-
-
-
-\end{axis}
-    
-
-\end{tikzpicture}
-\caption{Visualisation of the cost (black), its first derivative (blue) and second derivative (red). Where $\Delta w$ is the change of weights of a neural network and and $C$ is its error.}
-\label{fig:2ndordr}
-\end{center}
-\end{figure}
-
-Heuristic methods provide a very simple method for adjusting the learning rate. A commonly used one is to simply gradually reduce the learning rate by a small amount each epoch. This has the advantage of requiring almost no computational overhead and being easily understood. When training starts, we expect performance to be poor, so improvements can be made rapidly. As training progresses, we expect that improvements will be slower as we are approaching the minimum cost.
+%\subsection{Extensions and Improvements}
+%There are many extensions to simple gradient descent based learning, here are a few to be aware of.
+%\subsubsection{Learning Rate Schedule}
+%\label{sec:lr_sch}
+%Depending on how far we are from the global error minima, we may wish to change the value of the learning rate $\eta$. Recall from \autoref{eqn:delta_w_eta} $\Delta w = -\eta \nabla C$, that the learning rate determines how big of a step we take, following the gradient of the error, each time we update the weights of our neural network.
+%
+%If we are far from the minimum point for the cost with respect to the weights, we may wish to take larger steps, so that we can more quickly reduce the total cost. However, as we get closer we want to ensure that we do not step over the minimum.
+%
+%\begin{figure}
+%\begin{center}
+%\begin{tikzpicture}
+%\begin{axis}[
+%axis lines=left,
+%xtick={-10,0,10},
+%xticklabels={},
+%xlabel={$\Delta w$},
+%ylabel={$C$},
+%yticklabels={},
+%xlabel near ticks,
+%ylabel near ticks]
+%\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^2};
+%%\draw [blue](0,100) ++(90 : 1 ) arc ( 90:81.87:50 );
+%\node [blue] at (2,98)  (a) {\textbullet};
+%\node [blue] at (20,64) (b) {\textbullet};
+%\node [blue] at (40,36) (c) {\textbullet};
+%\node [blue] at (60,16) (d) {\textbullet};
+%\node [blue] at (80,4)  (e) {\textbullet};
+%\node [blue] at (100,0) (f) {\textbullet};
+%
+%\draw[blue, ->](a) to [bend left] (b);
+%\draw[blue, ->](b) to [bend left] (c);
+%\draw[blue, ->](c) to [bend left] (d);
+%\draw[blue, ->](d) to [bend left] (e);
+%\draw[blue, ->](e) to [bend left] (f);
+%
+%
+%\node [red] at (198,98)  (g) {\textbullet};
+%\node [red] at (180,64) (h) {\textbullet};
+%\node [red] at (153,28) (i) {\textbullet};
+%\node [red] at (90,1) (j) {\textbullet};
+%%\node [red] at (60,16)  (k) {\textbullet};
+%%\node [red] at (80,4) (l) {x};
+%
+%
+%\draw[red, ->](g) to [bend right] (h);
+%\draw[red, ->](h) to [bend right] (i);
+%\draw[red, ->](i) to [bend right] (j);
+%%\draw[red, ->](j) to [bend right] (k);
+%
+%
+%\end{axis}
+%    
+%
+%\end{tikzpicture}
+%\caption{Visualisation of error minimisation in two dimensions for different learning rate schedules. Blue: decreaseing learning rate, Red: large fixed learning rate. Where $\Delta w$ is the change of weights of a neural network and and $C$ is its error.}
+%\label{fig:lr_schedule}
+%\end{center}
+%\end{figure}
+%
+%\autoref{fig:lr_schedule} shows how changing the learning rate schedule can affect how the gradient descent optimiser navigates the cost landscape. As more training occurs, reducing the learning rate allows us to reach the error minimum (blue arrows). Selecting a large learning rate and not changing it might lead to never reaching the error minimum (red arrows). Whilst at first, we make rapid progress towards the minimum, at some point we cross over it and will be unable to approach any closer without taking smaller steps.
+%
+%This demonstrates nicely why we either select a small learning rate or make use of a learning rate scheduler.
+%Learning rate schedulers can speed up convergence by allowing large steps to be taken when we are far from the cost minimum with respect to the weights, covering a large distance in a few updates and then slowing down to take smaller steps as we get closer. 
+%
+%This begs the question of: how do we know when to change the learning rate? In  practice there are many ways we can achieve this, however these broadly fit into two categories: mathematical and heuristic.
+%
+%There are many algorithms for calculating how to set the learning rate for example, Adam \cite{kingma2014adam} and ADADelta \cite{zeiler2012adadelta}. They are both popular as they are both first order methods, meaning that expensive, slow calculations of second order derivatives do not need to be made.
+%Senior et al.\cite{senior2013empirical} provide an extensive testing of different learning rate schedulers. 
+%
+%Second order methods are desirable in that the second derivative of the cost provides information about how the cost gradient is changing. \autoref{fig:2ndordr} shows how the cost and its first and second derivatives change with respect to the weights. In region (A), where the cost (black line) is far from the minima the first derivative (blue) changes rapidly, causing the second derivative (red) to have a large magnitude. In region (B), the cost is closer to the minima, and thus the change in cost is lower so the steepness of the first derivative (blue) is lower as is the magnitude of the second derivative (red). At the minima, the second derivative is exactly zero, so we know we have reached the minima if the second derivative equals zero.
+%
+%Second order methods have the major draw back of being very slow to calculate. Thus it is more efficient to make use of first order estimates than the exact information provided by second order methods. Many more weight updates can be carried out using first order methods than can be done using second order methods in a given time frame. So whilst second order methods should require less total weight updates to minimise the cost, the first order methods will reach the minimum faster as the weight updates will occur much more quickly in the first order case.
+%
+%
+%\begin{figure}
+%\begin{center}
+%\begin{tikzpicture}
+%\begin{axis}[
+%axis lines=left,
+%xtick={-10,0,10},
+%xticklabels={},
+%xlabel={$\Delta w$},
+%ylabel={$C$},
+%yticklabels={},
+%xlabel near ticks,
+%ylabel near ticks,
+%scaled y ticks = false]
+%\addplot[black, thick, smooth, samples=1000, domain=-10:10]{x^4};
+%\addplot[blue, thick, smooth, samples=1000, domain=-10:10]{4*x^3};
+%\addplot[red, thick, smooth, samples=1000, domain=-10:10]{12*x^2};
+%
+%\addplot [black, thin, dashed] coordinates {(-5, -4000) (-5, 10000)};
+%\addplot [black, thin, dashed] coordinates {(5, -4000) (5, 10000)};
+%
+%\node[] at (axis cs:7.5,7000) {(A)};
+%\node[] at (axis cs:-7.5,7000) {(A)};
+%\node[] at (axis cs:2.5,7000)  {(B)};
+%\node[] at (axis cs:-2.5,7000) {(B)};
+%\node[] at (axis cs:0,500) {(min)};
+%
+%
+%
+%\end{axis}
+%    
+%
+%\end{tikzpicture}
+%\caption{Visualisation of the cost (black), its first derivative (blue) and second derivative (red). Where $\Delta w$ is the change of weights of a neural network and and $C$ is its error.}
+%\label{fig:2ndordr}
+%\end{center}
+%\end{figure}
+%
+%Heuristic methods provide a very simple method for adjusting the learning rate. A commonly used one is to simply gradually reduce the learning rate by a small amount each epoch. This has the advantage of requiring almost no computational overhead and being easily understood. When training starts, we expect performance to be poor, so improvements can be made rapidly. As training progresses, we expect that improvements will be slower as we are approaching the minimum cost.
 
 \section{Convolutional Neural Networks}
 One draw back of dense neural networks, like \ac{MLP}s is that they do not leverage spatial information in the input data. This means that whether two pieces of information occur next to each other, is irrelevant to the neural network. Obviously, this information is important and useful, so how can a neural network use it?
@@ -547,7 +549,7 @@ In \autoref{fig:convolve}, convoltuion was performed with a stride of one. Strid
 
 Altering the stride of a convolution is very useful for performing down sampling. Down sampling reduces the computational burden of a system by reducing the amount of calculations that need to be performed.
 
-Alternatively, strided convolutions can be used to up sample data by making use of a fractional stride. For example a stride of $\frac{1}{2}$ when convolving a kernel and an image would result in an output 4 times the size of the input ($2\times$ the width by $2\times$ the height).
+Alternatively, strided convolutions can be used to up-sample data by making use of a fractional stride. For example a stride of $\frac{1}{2}$ when convolving a kernel and an image would result in an output 4 times the size of the input ($2\times$ the width by $2\times$ the height).
 
 Fractionally strided convolutions can be used for many things including image enhancement \cite{radford2015unsupervised} and, as in this thesis, to rescale data back up to its original size.
 
@@ -559,6 +561,8 @@ This is where transposed convoltuion comes into play \cite{zeiler2010deconvoluti
 Transposing a matrix, for example a convolution kernel, has the effect of rotating it by 90 degrees. Understanding why doing this before performing a convolution has the effect of reversing the convolution requires first understanding how convolution is performed on a computer.
 
 As shown in \autoref{fig:convImpl} the actual convolution operation involves flattening and reshaping the kernel. Transposing this flattened and reshaped kernel allows for the recovery of the original input as shown in \autoref{fig:transConvImpl}. 
+
+\newpage 
 
 \begin{figure}[h]
 	\centering	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/TransconvolutionImplementation.png}
@@ -607,13 +611,13 @@ I make use of strided convolutions for dimensional reduction in the encoder and 
 
 
 \subsection{Variational Autoencoders}
-An important enhancement of \ac{AE}s is the \ac{VAE} \cite{kingma2013auto}. The VAE is trained using a multipart cost function. A normal cost such as \ac{MSE} plus the \ac{KLD} of the embedding from a target distribution (usually a Gaussian).
+An important enhancement of \ac{AE}s is the \ac{VAE} \cite{kingma2013auto}. The \ac{VAE} is trained using a multipart cost function. A normal cost such as \ac{MSE} plus the \ac{KLD} of the embedding from a target distribution (usually a Gaussian).
 
 This has the effect of forcing the embedding space to be smooth and helps to stop discontinuities in the embedding from occuring. For example, if a particular part of the embedding space is never explored in an \ac{AE}, the output generated by the decoder can be unpredictable even for embeddings close to those seen from training data. In a \ac{VAE}, due to the extra constraint placed on the embedding space, the generated output will change smoothly as the embedding is altered smoothly.
 
 
 \subsection{Multimodal Autoencoders}
-\acp{MAE} operate similarly to \ac{AE}s however, they take two or more modalities as input. In this thesis, only bimodal MAEs are used, though in principle, \ac{MAE}s are not limited to only two modalities.
+\acp{MAE} operate similarly to \ac{AE}s however, they take two or more modalities as input. In this thesis, only bimodal \acp{MAE} are used, though in principle, \acp{MAE} are not limited to only two modalities.
 
 The \ac{MAE} is trained to reproduce all modalities regardless of whether all modalities are present at the input. For example, if a bimodal \ac{MAE} takes images and text as inputs, it is trained to reproduce images and text from its inputs. However, if only an image is available as input, the \ac{MAE} is still trained to produce an image and the aligned text or vice versa when only text is available.
 

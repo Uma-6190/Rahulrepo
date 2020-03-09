@@ -17,27 +17,17 @@ F.~Rosenblatt,
   organization in the brain.,}
 Psychological review {\bf 65} (1958) 386.
 
+\bibitem{hochreiter1998vanishing}
+S.~Hochreiter,
+{\em The vanishing gradient problem during learning recurrent neural nets and
+  problem solutions,}
+International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
+  {\bf 6} (1998) 107.
+
 \bibitem{lecun1998mnist}
 Y.~LeCun,
 {\em The MNIST database of handwritten digits,}
 http://yann. lecun. com/exdb/mnist/(1998).
-
-\bibitem{kingma2014adam}
-D.~P.~Kingma and J.~Ba,
-{\em Adam: A method for stochastic optimization,}
-arXiv preprint arXiv:1412.6980(2014).
-
-\bibitem{zeiler2012adadelta}
-M.~D.~Zeiler,
-{\em ADADELTA: an adaptive learning rate method,}
-arXiv preprint arXiv:1212.5701(2012).
-
-\bibitem{senior2013empirical}
-A.~Senior, G.~Heigold, K.~Yang, and ~others.
-\newblock {\em An empirical study of learning rates in deep neural networks for
-  speech recognition,} .
-\newblock In {\em 2013 IEEE international conference on acoustics, speech and
-  signal processing} 6724. IEEE2013.
 
 \bibitem{dumoulin2016guide}
 V.~Dumoulin and F.~Visin,
@@ -100,6 +90,23 @@ C.~R.~Qi, H.~Su, K.~Mo, and L.~J.~Guibas.
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition} 6522017.
 
+\bibitem{lohan2016distinguishing}
+K.~S.~Lohan, E.~Sheppard, G.~Little, and G.~Rajendran.
+\newblock {\em Distinguishing children with ASD using pupil diameter metrics,}
+  .
+\newblock In {\em 6th Joint IEEE International Conferenceon on Development and
+  Learning and on Epigenetic Robotics 2016}2016.
+
+\bibitem{sheppard2017understanding}
+E.~Sheppard, K.~S.~Lohan, G.~Little, L.~Bonnar, S.~Kelly, and G.~Rajendran,
+{\em Understanding the difference in pupil dilation between children with and
+  without ASD during a joint attention memory task,} .
+
+\bibitem{lohan2018toward}
+K.~S.~Lohan, E.~Sheppard, G.~Little, and G.~Rajendran,
+{\em Toward Improved Child--Robot Interaction by Understanding Eye Movements,}
+IEEE Transactions on Cognitive and Developmental Systems {\bf 10} (2018) 983.
+
 \bibitem{simonyan2014very}
 K.~Simonyan and A.~Zisserman,
 {\em Very deep convolutional networks for large-scale image recognition,}
@@ -120,13 +127,6 @@ K.~He, X.~Zhang, S.~Ren, and J.~Sun.
 \newblock {\em Deep residual learning for image recognition,} .
 \newblock In {\em Proceedings of the IEEE conference on computer vision and
   pattern recognition} 7702016.
-
-\bibitem{hochreiter1998vanishing}
-S.~Hochreiter,
-{\em The vanishing gradient problem during learning recurrent neural nets and
-  problem solutions,}
-International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
-  {\bf 6} (1998) 107.
 
 \bibitem{huang2017densely}
 G.~Huang, Z.~Liu, L.~Van Der~Maaten, and K.~Q.~Weinberger.
@@ -232,6 +232,12 @@ V.~Ordonez, G.~Kulkarni, and T.~L.~Berg.
 \newblock {\em Im2text: Describing images using 1 million captioned
   photographs,} .
 \newblock In {\em Advances in neural information processing systems} 11432011.
+
+\bibitem{sheppard2016video}
+E.~Sheppard and K.~S.~Lohan.
+\newblock {\em Video Re-Captioning with Sequence to Sequence Recurrent Neural
+  Models,} .
+\newblock In {\em IEEE ICDL-EPIROB 2016 Workshop on Language Learning}2016.
 
 \bibitem{zhu2017unpaired}
 J.-Y.~Zhu, T.~Park, P.~Isola, and A.~A.~Efros.
@@ -702,6 +708,13 @@ N.~Hammami and M.~Bedda.
 \newblock {\em Improved tree model for arabic speech recognition,} .
 \newblock In {\em 2010 3rd International Conference on Computer Science and
   Information Technology}volume~5 521. IEEE2010.
+
+\bibitem{sheppard2020multimodal}
+E.~Sheppard and K.~S.~Lohan.
+\newblock {\em Multimodal Representation Learning for Human Robot Interaction,}
+  .
+\newblock In {\em 2020 15th ACM/IEEE International Conference on Human-Robot
+  Interaction (HRI)}. IEEE2020.
 
 \bibitem{keller2016analysis}
 I.~Keller and K.~S.~Lohan.

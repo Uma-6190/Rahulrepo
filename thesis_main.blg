@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis_main.aux
 The style file: latexeu.bst
 Database file #1: bigone.bib
-You've used 126 entries,
+You've used 128 entries,
             2011 wiz_defined-function locations,
-            1168 strings with 28048 characters,
-and the built_in function-call counts, 32855 in all, are:
-= -- 2457
-> -- 1620
-< -- 145
-+ -- 588
-- -- 462
-* -- 1985
-:= -- 4098
-add.period$ -- 248
-call.type$ -- 126
+            1175 strings with 28608 characters,
+and the built_in function-call counts, 33267 in all, are:
+= -- 2478
+> -- 1658
+< -- 146
++ -- 601
+- -- 473
+* -- 2014
+:= -- 4170
+add.period$ -- 254
+call.type$ -- 128
 change.case$ -- 0
-chr.to.int$ -- 92
-cite$ -- 126
-duplicate$ -- 1496
-empty$ -- 2472
-format.name$ -- 462
-if$ -- 8137
+chr.to.int$ -- 94
+cite$ -- 128
+duplicate$ -- 1518
+empty$ -- 2519
+format.name$ -- 473
+if$ -- 8226
 int.to.chr$ -- 0
-int.to.str$ -- 126
-missing$ -- 551
-newline$ -- 627
-num.names$ -- 126
-pop$ -- 406
+int.to.str$ -- 128
+missing$ -- 549
+newline$ -- 636
+num.names$ -- 128
+pop$ -- 421
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1813
+skip$ -- 1816
 stack$ -- 0
-substring$ -- 1768
-swap$ -- 987
+substring$ -- 1764
+swap$ -- 989
 text.length$ -- 99
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 318
-width$ -- 129
-write$ -- 1390
+while$ -- 320
+width$ -- 131
+write$ -- 1405
