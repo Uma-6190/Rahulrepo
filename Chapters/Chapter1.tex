@@ -20,7 +20,7 @@ Beyond the highly complex and abstract task of learning a language, \ac{MRL} can
 \section{Motivation}
 One of the major challenges in robotics and machine learning is that of knowing how to develop systems capable of life long learning. If robots are to become common place in society, they must be capable of continuing to learn throughout their lives. They will not be very useful if they cannot learn new things that they weren't programmed with at the factory.
 
-Multimodal representation learning addresses this by providing an unsupervised method for extracting useful and actionable information about the world. Let us return to the language learning scenario, except this time, instead of a baby, lets imagine a robot, fresh out of the box. Whilst we might expect that a robot would have some proficiency with language built into it, we cannot expect it to know the meaning of every single word, especially given the flexible and evolving way that humans use language. Our robot therefore needs a way to learn the meaning of new words. 
+\ac{MRL} addresses this by providing an unsupervised method for extracting useful and actionable information about the world. Let us return to the language learning scenario, except this time, instead of a baby, lets imagine a robot, fresh out of the box. Whilst we might expect that a robot would have some proficiency with language built into it, we cannot expect it to know the meaning of every single word, especially given the flexible and evolving way that humans use language. Our robot therefore needs a way to learn the meaning of new words - otherwise known as symbol grounding. 
 
 Similarly, we cannot expect the robot to be able to recognise every single object in its environment. On my desk I have a Stirling engine, I would wager that most people who read this don't know what a Stirling engine is. However, if I showed you a picture of a Stirling engine (like the one in \autoref{fig:stirling}) you would be able to recognise what a Stirling engine is in future. Ideally, robots need to be able to do this.
 
@@ -53,9 +53,9 @@ Similarly, we cannot expect the robot to be able to recognise every single objec
 \label{fig:bi_ll}
 \end{figure}
 
-The Stirling engine example shows how language learning is a bi-directional process. Not only do you need to learn the name of the object \textit{Stirling Engine} but also that the words ``Stirling Engine'' mean the object \textit{Stirling Engine} as shown in \autoref{fig:bi_ll}. 
+The Stirling engine example shows how language learning is a bi-directional process. Not only do you need to learn the name of the object \textit{Stirling Engine} but also that the words \textsc{Stirling Engine} mean the object \textit{Stirling Engine} as shown in \autoref{fig:bi_ll}. 
 
-Multimodal representation learning allows us to jointly model both the object \textit{Stirling Engine} and the words ``Stirling Engine'', relying on only one assumption: \textbf{Sensory percepts which occur together are related}.
+Multimodal representation learning allows us to jointly model both the object \textit{Stirling Engine} and the words \textsc{Stirling Engine}, relying on only one assumption: \textbf{Sensory percepts which occur together are related}.
 
 Whilst this may not be true for all sensory percepts it is true enough that co-occurrence of percepts allows us to infer useful information about the relationship between different modalities. For example, smith et al. \cite{smith2008infants} show how infants learn object names based on ``cross-situational statistics'' i.e. how often a word and an object occur together. \autoref{fig:cross_sitch} illustrates this idea.
 
@@ -67,7 +67,7 @@ Whilst this may not be true for all sensory percepts it is true enough that co-o
 \label{fig:cross_sitch}
 \end{figure}
 
-Looking at \autoref{fig:cross_sitch} we can see that from a single example, it is not possible to disambiguate which word refers to which part of the image. However, given two examples, it is very easy for an adult human to disambiguate what each word means. As we are given more examples, we can be more and more certain about what we believe the meanings of the words are. 
+Looking at \autoref{fig:cross_sitch} we can see that from a single example, it is not possible to disambiguate which word refers to which part of the image, i.e. we cannot ground the words \text{Green Circle} to the visual percepts \textit{Green} and \textit{Circle}. However, given two examples, it is very easy for an adult human to disambiguate what each word means. As we are given more examples, we can be more and more certain about what we believe the meanings of the words are. 
 
 In the real world, visual perception is much noiser than the images presented in \autoref{fig:cross_sitch} as are the utterances of words. However, by providing more examples, we can overcome the challenges presented by this as shown in \cite{yurovsky2013statistical}. In this thesis I will show how \ac{MRL} can be applied to this problem and solve it, learning the meanings of different word types, such as object names, colours, sizes and positions as well as the inverse problem, generating these labellings for images of objects. \autoref{fig:mrl_teaser} shows a few examples of \ac{MRL} solving this problem.
 
@@ -75,7 +75,7 @@ In the real world, visual perception is much noiser than the images presented in
 \centering
 
 \includegraphics[width=0.5\textwidth]{Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png}
-\caption{Images generated from textual descriptions.}
+\caption{Images generated from textual descriptions (B, M and S are Big, Medium and Small, respectively).}
 \label{fig:mrl_teaser}
 \end{figure}
 

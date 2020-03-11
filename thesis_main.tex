@@ -12,7 +12,7 @@
 \def\submissiontype{final}%
 \fi%
 \ifx\submissiontype\firstsub%
-\PassOptionsToPackage{twoside}{geometry}
+\PassOptionsToPackage{geometry}
 \fi%
 \documentclass[titlepage,shield]{hwthesis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,7 +65,7 @@
 \usepackage{pgfplots}
 \usepackage{filecontents}
 \usepackage{filecontents}
-\usepackage{titlesec}
+%\usepackage{titlesec}
 \usepackage{adjustbox}
 \usepackage{endnotes}
 \usepackage{outlines}
@@ -73,10 +73,10 @@
 \usepackage{acronym}
 
 
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titleformat{\paragraph}
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \makeatletter
