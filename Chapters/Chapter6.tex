@@ -14,10 +14,6 @@ In the previous chapter I showed that it is possible to use a \ac{MAE} to bidire
 
 When working with real images, there are many factors to consider such as lighting changes, perspective changes and camera noise \cite{keller2016analysis}. These factors were not present in the ArtS dataset, so in this chapter I will show how these impact \ac{MRL} for bidirectional grounding.
 
-\section{Acoustic Packaging}
-In order to make use of \ac{MRL} on a robot, it is necessary to have a method to gather and group data from multiple sensory modalities. To do this, I make use of \ac{AP} \cite{schillingmann2009towards, schillingmann2009computational}.
-
-The acoustic packager I implemented for this, is triggered to capture data when sound above a certain threshold is heard by a microphone. Images and audio are recorded with the audio being passed to an \ac{ASR} system to transcribe any speech. The audio, transcription and image together are refered to as an acoustic-package.
 
 
 \begin{figure}[h]
@@ -26,6 +22,11 @@ The acoustic packager I implemented for this, is triggered to capture data when 
     \caption{System schematic. Data is captured from sensors by an acoustic packager and fed to the multimodal autoencoder.}
     \label{fig:schematic}
 \end{figure}
+
+\section{Acoustic Packaging}
+In order to make use of \ac{MRL} on a robot, it is necessary to have a method to gather and group data from multiple sensory modalities. To do this, I make use of \ac{AP} \cite{schillingmann2009towards, schillingmann2009computational}.
+
+The acoustic packager I implemented for this, is triggered to capture data when sound above a certain threshold is heard by a microphone. Images and audio are recorded with the audio being passed to an \ac{ASR} system to transcribe any speech. The audio, transcription and image together are refered to as an acoustic-package.
 
 I do not make use of the audio, I use only the transcribed text and images such that the data used in this chapter is analigous to the data used in the previous chapter.
 
@@ -55,8 +56,7 @@ There are 7 objects, in 10 colours and 3 sizes. Not all objects appear in all 10
     \label{fig:ReShapeAll}
 \end{figure}
 
-The dataset was captured in several sessions across multiple days. This is the main source of vairability in the dataset, as different lighting conditions due to whether and time of day has a significant affect on the appearance of images captured by digital cameras \cite{keller2016analysis, keller}\endnote{In \autoref{fig:ReShapeCrop} differences in the lighting conditions are clearly visible with the top left and top centre image having a blue tint.}.
-
+The dataset was captured in several sessions across multiple days. This is the main source of vairability in the dataset, as different lighting conditions due to weather and time of day has a significant affect on the appearance of images captured by digital cameras \cite{keller2016analysis, keller}\endnote{In \autoref{fig:ReShapeCrop} differences in the lighting conditions are clearly visible with the top left and top centre image having a blue tint.}.
 
 
 \subsection{Problem Description}
@@ -124,6 +124,12 @@ Exemplars are selected by first calculating the average image for each object (\
 
 \autoref{fig:ExmBrickDuck} shows the exemplars used in experiment 1 and \autoref{fig:ExmMost} shows the exemplars for experiment 2.
 
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figs/chapter6/avgBrickDuckBGYExemplars.png}
+    \caption{Exp 1: Exemplar images of bricks and ducks in different sizes and colours.}
+    \label{fig:ExmBrickDuck}
+\end{figure*}
 
 
 \subsection{Experiment 1}
@@ -145,14 +151,10 @@ Duck   & Green   & Medium \\ \hline
 \label{tab:6_exp1_data} 
 \end{table}
 
-\begin{figure*}[ht]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Figs/chapter6/avgBrickDuckBGYExemplars.png}
-    \caption{Exp 1: Exemplar images of bricks and ducks in different sizes and colours.}
-    \label{fig:ExmBrickDuck}
-\end{figure*}
 
 \subsubsection{Results}
+
+Overall, the \ac{MAE} has similar performance in terms of \ac{MSE} using both the simple and exemplar training procedures. Whilst the exemplar method lead to slightly better performance in the Bimodal and Image Only test conditions, this is traded off for worse performance in the Words Only condition. The fact that the \ac{MSE} in the Words only condition is small, shows that the mean image for the training and testing data is very similar.
 
 \begin{table}[h!]
 \centering
@@ -166,11 +168,9 @@ Exemplar & 2.06 $\mypm$ 0.07 & 3.44 $\mypm$ 0.51 & 7.92	$\mypm$ 0.02 \\ \hline
 \label{tab:6_res_exp1}
 \end{table}
 
-Overall, the \ac{MAE} has similar performance in terms of \ac{MSE} using both the simple and exemplar training procedures. Whilst the exemplar method lead to slightly better performance in the Bimodal and Image Only test conditions, this is traded off for worse performance in the Words Only condition. The fact that the \ac{MSE} in the Words only condition is small, shows that the mean image for the training and testing data is very similar.
-
 The similarity between the training and test data is expected in this case as the dataset was created using the same set of objects, in the same location on the same background. As previously mentioned, the main source of variability in the dataset is caused by changes in lighting conditions across the different data-capture sessions. However, this demonstrates an issue with using \ac{MSE} as the cost function to train the \ac{MAE}. If a different example of an object, captured on a different background, from a different angle is used to test the \ac{MAE}, the \ac{MSE} will be very high in the Words Only condition as this image will be very far from the mean image of the training data.
 
-The addition of more training data, with more diverse examples and more detailed descriptions should help. However, as the system is designed for operation on a robot, its absolute performance on a dataset isn't really that important. It is of more worth that the \ac{MAE} generate a "big blue duck" when asked to than to generate the specific "big blue duck" the user had in mind.
+The addition of more training data, with more diverse examples and more detailed descriptions should help. However, as the system is designed for operation on a robot, its absolute performance on a dataset isn't really that important. It is of more worth that the \ac{MAE} generate a "big blue duck" when asked to, than to generate the specific "big blue duck" the user had in mind.
 
 \paragraph{Image Generation}
 
@@ -225,6 +225,8 @@ The simplest method to deal with this, would be to increase the complexity of th
 
 \paragraph{Multilabel Classification}
 
+The \ac{MAE} achieves 100\% accuracy on description generation across all three test conditions. This suggests that the test data has a very similar distribution to the training data. As the test data is images of the same objects captured in the same environment, the only differences between the training data and test data will be small changes in object position and  changes in lighting as the test data was captured on a different day and at a different time of day. Thus, the mean image from the training data for each object is likely very close to the mean image for each object in the test data respectively. It is unlikely that such good performance would be achieved with even small changes to viewing angle or background, which are both constant across the training and test data. However, the addition of more diverse training examples would also alleviate this \cite{keller2016analysis, keller}.
+
 
 \begin{table}[h!]
 \centering
@@ -238,7 +240,6 @@ Exemplar & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 \\ \h
 \label{tab:6_res_exp1_acc}
 \end{table}
 
-The \ac{MAE} achieves 100\% accuracy on description generation across all three test conditions. This suggests that the test data has a very similar distribution to the training data. As the test data is images of the same objects captured in the same environment, the only differences between the training data and test data will be small changes in object position and  changes in lighting as the test data was captured on a different day and at a different time of day. Thus, the mean image from the training data for each object is likely very close to the mean image for each object in the test data respectively. It is unlikely that such good performance would be achieved with even small changes to viewing angle or background, which are both constant across the training and test data. However, the addition of more diverse training examples would also alleviate this \cite{keller2016analysis, keller}.
 
 \subsection{Experiment 2}
 
@@ -287,13 +288,21 @@ Exemplar & 2.30 $\mypm$ 0.07 & 3.67 $\mypm$ 0.23
 
 
 \subsubsection{Image Generation}
+
 The \ac{MAE} is able to generalise to unseen combinations of attributes, confirming the result found in the final experiment of the previous chapter (Experiment 5 \autoref{Chapter5}). However, in this case, we have many more missing examples. \autoref{fig:mostExemplarGen} shows the images generated from full descriptions by the \ac{MAE} trained using exemplars. The red borders show images which have exemplars; those without red borders are not seen in the training data, yet the \ac{MAE} is still able to produce good approximations of these objects.
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{Figs/chapter6/exemplarMostGenerated.png}
+    \caption{Exp 2: Images generated from full descriptions using the \ac{MAE} trained with the exemplar procedure. Red borders show objects with exemplar images.}
+    \label{fig:mostExemplarGen}
+\end{figure*}
 
 The clearest example of generalisation to unseen objects is the generation of donuts in \autoref{fig:mostExemplarGen}. Despite only having 3 examples of donuts, the \ac{MAE} is able to generate images of donuts in different colours and sizes.  
 
 The quality of the generated images for unseen objects is strongly linked to whether there is a similar example to the requested image. For example, the \textsc{big green donut} and \textsc{small green donut} are of a higher quality than the \textsc{big red donut} and \textsc{small red donut}. This is due to the existence of a \textsc{medium green donut} in the training data. As there are no red donuts in the training data, the \ac{MAE} must rely on its knowledge of the meanings of the individual words \textsc{big}, \textsc{red} and \textsc{donut} to generate an image of a \textsc{big red donut}. For the \textsc{big green donut}, the \ac{MAE} has an example of a \textsc{medium green donut} so it must only alter the size of the object in the image, it does not need to generate the image from the individual words \textsc{big}, \textsc{green} and \textsc{donut}.
 
-In general the \ac{MAE} shows its worst performance on \textsc{black} objects, this is likely due to the reletively few examples of black objects in the training data (5 for black versus 8 for red, 11 for green and yellow and 12 for blue).
+In general the \ac{MAE} shows its worst performance on \textsc{black} objects, this is likely due to the reletively few examples of black objects in the training data (5 for black versus 8 for red, 11 for green, 11 for yellow and 12 for blue).
 
 \begin{figure*}[ht]
     \centering
@@ -314,13 +323,6 @@ The different shapes have been learnt to different degrees. For example, the Don
 
 
 \paragraph{Multilabel Classification}
-
-\begin{figure*}[ht]
-    \centering
-    \includegraphics[width=\textwidth]{Figs/chapter6/exemplarMostGenerated.png}
-    \caption{Exp 2: Images generated from full descriptions using the \ac{MAE} trained with the exemplar procedure. Red borders show objects with exemplar images.}
-    \label{fig:mostExemplarGen}
-\end{figure*}
 
 In \autoref{tab:6_res_exp2} we can see the total \ac{MSE} for generation of images and text in the three different test conditions. In all three condition the \ac{MSE} is very low and has low variance across the four cross validation trials.
 
@@ -352,7 +354,7 @@ There is also the issue of not having full coverage of every size, colour and sh
 
 \section{Summary}
 This chapter focused on how \ac{MRL} could be applied to real data, demonstrating how it can be used to solve the symbol grounding problem in an unsupervised manner.
-To that end, I have demonstrated that \ac{MRL} can be used to perform bidirectional grounding of images and text. Further to this I shown that \ac{MRL} can generalise to unseen examples, correctly generating images of unseen objects.
+To that end, I have demonstrated that \ac{MRL} can be used to perform bidirectional grounding of images and text. Further to this, I have shown that \ac{MRL} can generalise to unseen examples, correctly generating images of unseen objects.
 
 The ability of the \ac{MAE} to generate images of unseen objects like the \textsc{Big Red Donut} is very exciting. This result hints at the possibility to develop grounded models capable of understanding more diverse visual attributes and larger numbers of objects.
 

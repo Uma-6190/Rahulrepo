@@ -9,7 +9,7 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{Introduction}
-This chapter presents an overview of the mathematical theory of \ac{ANN} and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.
+This chapter presents an overview of the mathematical theory of \acp{ANN} and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.
 
 \section{Perceptrons}
 \label{sec:percep}
@@ -56,12 +56,13 @@ By adjusting each of the weights we can change the output of the perceptron.
 
 \subsection{Multi-Layer Perceptron}
 %In the previous section I demonstrated how a single perceptron can be used to make decisions based on a set of inputs. However, things get much more interesting when we start to link multiple perceptrons together into \ac{MLP}.
-\acp{MLP} are constructed by stacking muliple layers of perceptrons, as seen in \autoref{fig:mlp}. 
-\begin{figure}
+\acp{MLP} are constructed by stacking muliple layers of perceptrons, as seen in \autoref{fig:mlp}.
+ 
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\textwidth]{Figs/intro2dl/mlp.png}
 	
-	\caption{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with three binary inputs, $x_0, x_1, x_2$.}
+	\caption{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with two binary inputs, $x_0, x_1$.}
 	\label{fig:mlp}
 \end{figure}
 
@@ -155,7 +156,7 @@ ylabel near ticks,
 
 Now that we have an activation function that can produce continuous values, we can consider a much more diverse range of data to train our neural networks with. So instead of just making yes or no decisions we can look at, for example, the colours of pixels and decide if there is a cat in the image or given today's weather, predict if it will rain tomorrow.
 
-\subsubsection{Other activation functions}
+\subsection{Other activation functions}
 There are two other important and commonly used activation functions, though many others exist. These are, the \ac{Tanh} shown in \autoref{fig:activation_tanh} and \ac{Relu} shown in \autoref{fig:activation_relu}.
 
 \begin{figure}
@@ -210,7 +211,7 @@ ylabel near ticks,
 The \ac{Relu} was created to address an issue known as vanishing gradients \cite{hochreiter1998vanishing}. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering the outcomes of multiple simple decsions.} can be trained as non-linear functions (like the Sigmoid or \ac{Tanh}) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
 
 \section{Learning Algorithms}
-Simple computation units like the perceptron or Sigmoid neurons can make simple decisions and can be chained together to make more complex decisions. However, sometimes the decisions we make are wrong and we need to learn from our mistakes.
+Simple computation units like the perceptron or Sigmoid neurons can make simple decisions and can be chained together to make more complex decisions. However, sometimes the decisions they make are wrong and they need to learn from their mistakes.
 
 In general, perceptrons (and their more modern successors) will have their initial weights set randomly. 
 

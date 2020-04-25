@@ -92,13 +92,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}What is a Perceptron}{5}{subsection.15}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A perceptron with three binary inputs, $x_0, x_1, x_2$.}}{5}{figure.16}}
 \newlabel{fig:perceptron}{{2.1}{5}{A perceptron with three binary inputs, $x_0, x_1, x_2$}{figure.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces A multi-layer perceptron consisting of three perceptrons arranged in two layers, with three binary inputs, $x_0, x_1, x_2$.}}{6}{figure.20}}
-\newlabel{fig:mlp}{{2.2}{6}{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with three binary inputs, $x_0, x_1, x_2$}{figure.20}{}}
 \newlabel{eqn:percep}{{2.1}{6}{What is a Perceptron}{equation.17}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Multi-Layer Perceptron}{6}{subsection.18}}
 \AC@undonewlabel{acro:MLP}
 \newlabel{acro:MLP}{{2.2.2}{6}{Multi-Layer Perceptron}{section*.19}{}}
 \acronymused{MLP}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces A multi-layer perceptron consisting of three perceptrons arranged in two layers, with two binary inputs, $x_0, x_1$.}}{6}{figure.20}}
+\newlabel{fig:mlp}{{2.2}{6}{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with two binary inputs, $x_0, x_1$}{figure.20}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Activation Functions}{6}{section.21}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Visualisation of the perceptron activation function. Where z is the activation $\DOTSB \sum@ \slimits@ _{j} w_j x_j + b$ and the output is the activation function defined in \autoref  {eqn:percep} }}{7}{figure.22}}
 \newlabel{fig:activation_percep}{{2.3}{7}{Visualisation of the perceptron activation function. Where z is the activation $\sum _{j} w_j x_j + b$ and the output is the activation function defined in \autoref {eqn:percep}}{figure.22}{}}
@@ -109,12 +109,12 @@
 \citation{hochreiter1998vanishing}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Visualisation of the Sigmoid activation function. Where z is the activation $\DOTSB \sum@ \slimits@ _{j} w_j x_j + b$ and $\sigma $(z) is the activation function defined in \autoref  {eqn:sig} }}{8}{figure.27}}
 \newlabel{fig:activation_sigmoid}{{2.4}{8}{Visualisation of the Sigmoid activation function. Where z is the activation $\sum _{j} w_j x_j + b$ and $\sigma $(z) is the activation function defined in \autoref {eqn:sig}}{figure.27}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Other activation functions}{8}{section*.28}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Other activation functions}{8}{subsection.28}}
 \AC@undonewlabel{acro:Tanh}
-\newlabel{acro:Tanh}{{2.3.1}{8}{Other activation functions}{section*.29}{}}
+\newlabel{acro:Tanh}{{2.3.2}{8}{Other activation functions}{section*.29}{}}
 \acronymused{Tanh}
 \AC@undonewlabel{acro:Relu}
-\newlabel{acro:Relu}{{2.3.1}{8}{Other activation functions}{section*.30}{}}
+\newlabel{acro:Relu}{{2.3.2}{8}{Other activation functions}{section*.30}{}}
 \acronymused{Relu}
 \acronymused{Tanh}
 \acronymused{Relu}
@@ -591,38 +591,38 @@
 \@writefile{toc}{\contentsline {paragraph}{Baseline Models}{49}{section*.140}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Image autoencoder and classifier. Layer 6c performs classification, whilst the branch starting at layer 6 regenerates the image.}}{50}{table.141}}
 \newlabel{tab:MNIST_AE_description}{{4.2}{50}{Image autoencoder and classifier. Layer 6c performs classification, whilst the branch starting at layer 6 regenerates the image}{table.141}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces \ac {MFCC} autoencoder and classifier. Layer 7c performs classification, whilst the branch starting at layer 7 regenerates the \acp {MFCC}. The addition of reshape layers is to ensure the final shape of the regenerated \acp {MFCC} matches the target shape whilst the embedding shape matches that of the embedding of the image autoencoder.}}{50}{table.142}}
+\acronymused{MFCC}
+\acronymused{MFCC}
+\acronymused{MFCC}
+\newlabel{tab:UCU_AE_description}{{4.3}{50}{\ac {MFCC} autoencoder and classifier. Layer 7c performs classification, whilst the branch starting at layer 7 regenerates the \acp {MFCC}. The addition of reshape layers is to ensure the final shape of the regenerated \acp {MFCC} matches the target shape whilst the embedding shape matches that of the embedding of the image autoencoder}{table.142}{}}
 \@writefile{toc}{\contentsline {paragraph}{Multimodal Autoencoder}{50}{section*.143}}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Results}{50}{subsection.145}}
-\@writefile{toc}{\contentsline {subsubsection}{Classification Results}{50}{section*.146}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Image and MFCC multimodal autoencoder. Layers marked i, m, im and c are image, MFCC, image and MFCC and classification respectively.}}{51}{table.144}}
+\newlabel{tab:UCU_MNIST_MAE_description}{{4.4}{51}{Image and MFCC multimodal autoencoder. Layers marked i, m, im and c are image, MFCC, image and MFCC and classification respectively}{table.144}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Results}{51}{subsection.145}}
+\@writefile{toc}{\contentsline {subsubsection}{Classification Results}{51}{section*.146}}
 \acronymused{MFCC}
 \acronymused{MAE}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Mean Squared Errors for the Bimodal testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures.}}{52}{table.147}}
+\newlabel{tab:mnist_ucu_bi_res}{{4.5}{52}{Mean Squared Errors for the Bimodal testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures}{table.147}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Mean Squared Errors for the Image Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures.}}{52}{table.148}}
+\newlabel{tab:mnist_ucu_im_res}{{4.6}{52}{Mean Squared Errors for the Image Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures}{table.148}{}}
 \acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces \ac {MFCC} autoencoder and classifier. Layer 7c performs classification, whilst the branch starting at layer 7 regenerates the \acp {MFCC}. The addition of reshape layers is to ensure the final shape of the regenerated \acp {MFCC} matches the target shape whilst the embedding shape matches that of the embedding of the image autoencoder.}}{51}{table.142}}
-\acronymused{MFCC}
-\acronymused{MFCC}
-\acronymused{MFCC}
-\newlabel{tab:UCU_AE_description}{{4.3}{51}{\ac {MFCC} autoencoder and classifier. Layer 7c performs classification, whilst the branch starting at layer 7 regenerates the \acp {MFCC}. The addition of reshape layers is to ensure the final shape of the regenerated \acp {MFCC} matches the target shape whilst the embedding shape matches that of the embedding of the image autoencoder}{table.142}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces Mean Squared Errors for the MFCC Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures. }}{52}{table.149}}
+\newlabel{tab:mnist_ucu_mfcc_res}{{4.7}{52}{Mean Squared Errors for the MFCC Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures}{table.149}{}}
 \acronymused{MAE}
 \acronymused{MFCC}
 \acronymused{MFCC}
-\@writefile{toc}{\contentsline {subsubsection}{Reconstruction Results}{51}{section*.150}}
+\@writefile{toc}{\contentsline {subsubsection}{Reconstruction Results}{52}{section*.150}}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces A selection of randomly sampled digits generated in different training and testing conditions for both \textit  {Add} and \textit  {Concat} merging methods.}}{51}{figure.151}}
-\newlabel{fig:mnistDigits}{{4.2}{51}{A selection of randomly sampled digits generated in different training and testing conditions for both \textit {Add} and \textit {Concat} merging methods}{figure.151}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Image and MFCC multimodal autoencoder. Layers marked i, m, im and c are image, MFCC, image and MFCC and classification respectively.}}{52}{table.144}}
-\newlabel{tab:UCU_MNIST_MAE_description}{{4.4}{52}{Image and MFCC multimodal autoencoder. Layers marked i, m, im and c are image, MFCC, image and MFCC and classification respectively}{table.144}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces Mean Squared Errors for the Bimodal testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures.}}{53}{table.147}}
-\newlabel{tab:mnist_ucu_bi_res}{{4.5}{53}{Mean Squared Errors for the Bimodal testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures}{table.147}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces Mean Squared Errors for the Image Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures.}}{53}{table.148}}
-\newlabel{tab:mnist_ucu_im_res}{{4.6}{53}{Mean Squared Errors for the Image Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures}{table.148}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces A selection of randomly sampled digits generated in different training and testing conditions for both \textit  {Add} and \textit  {Concat} merging methods.}}{53}{figure.151}}
+\newlabel{fig:mnistDigits}{{4.2}{53}{A selection of randomly sampled digits generated in different training and testing conditions for both \textit {Add} and \textit {Concat} merging methods}{figure.151}{}}
 \acronymused{MAE}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Two examples of the digit ``5'' being generated in different training and testing conditions for both \textit  {Add} and \textit  {Concat} merging methods.}}{53}{figure.152}}
 \newlabel{fig:5s}{{4.3}{53}{Two examples of the digit ``5'' being generated in different training and testing conditions for both \textit {Add} and \textit {Concat} merging methods}{figure.152}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces Mean Squared Errors for the MFCC Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures. }}{54}{table.149}}
-\newlabel{tab:mnist_ucu_mfcc_res}{{4.7}{54}{Mean Squared Errors for the MFCC Only testing condition, comparing the Bimodal (Bi) and Randomly Degraded (RD) training procedures}{table.149}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Discussion}{54}{subsection.153}}
-\@writefile{toc}{\contentsline {subsubsection}{Discussion of Classification Results}{54}{section*.154}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Discussion}{53}{subsection.153}}
+\@writefile{toc}{\contentsline {subsubsection}{Discussion of Classification Results}{53}{section*.154}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
@@ -637,7 +637,7 @@
 \acronymused{MFCC}
 \acronymused{MFCC}
 \acronymused{MFCC}
-\@writefile{toc}{\contentsline {subsubsection}{Discussion of Reconstruction Results}{55}{section*.155}}
+\@writefile{toc}{\contentsline {subsubsection}{Discussion of Reconstruction Results}{54}{section*.155}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
@@ -647,7 +647,8 @@
 \acronymused{MFCC}
 \acronymused{MFCC}
 \acronymused{MFCC}
-\@writefile{toc}{\contentsline {paragraph}{MFCC reconstruction from Images}{56}{section*.157}}
+\acronymused{MFCC}
+\@writefile{toc}{\contentsline {paragraph}{MFCC reconstruction from Images}{55}{section*.157}}
 \acronymused{MFCC}
 \acronymused{MFCC}
 \acronymused{MFCC}
@@ -666,359 +667,359 @@
 \acronymused{MFCC}
 \acronymused{MAE}
 \acronymused{MFCC}
+\acronymused{MAE}
+\acronymused{MAE}
+\acronymused{MFCC}
+\acronymused{MAE}
+\acronymused{MFCC}
+\acronymused{MAE}
+\acronymused{MAE}
+\@writefile{toc}{\contentsline {paragraph}{Multiple generations of the same digit}{56}{section*.159}}
+\acronymused{MFCC}
+\acronymused{MFCC}
+\acronymused{MFCC}
+\acronymused{MFCC}
+\acronymused{MFCC}
 \citation{sheppard2020multimodal}
-\acronymused{MAE}
-\acronymused{MAE}
-\acronymused{MFCC}
-\acronymused{MAE}
-\acronymused{MFCC}
-\acronymused{MAE}
-\acronymused{MAE}
-\@writefile{toc}{\contentsline {paragraph}{Multiple generations of the same digit}{57}{section*.159}}
-\acronymused{MFCC}
-\acronymused{MFCC}
-\acronymused{MFCC}
-\acronymused{MFCC}
-\acronymused{MFCC}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}Summary}{57}{section.160}}
 \citation{mikolov2013distributed}
 \citation{mikolov2013efficient}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Magical Vectors and Where to Find Them}{59}{chapter.162}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Magical Vectors and Where to Find Them}{58}{chapter.162}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{Chapter5}{{5}{59}{Magical Vectors and Where to Find Them}{chapter.162}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}ANN Latent Space: the Final Frontier}{59}{section.163}}
+\newlabel{Chapter5}{{5}{58}{Magical Vectors and Where to Find Them}{chapter.162}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}ANN Latent Space}{58}{section.163}}
 \acronymused{ANN}
 \acronymused{MAE}
 \acronymused{ANN}
 \acronymused{ANN}
-\newlabel{eqn:mikolov}{{5.1}{59}{ANN Latent Space: the Final Frontier}{equation.164}{}}
+\newlabel{eqn:mikolov}{{5.1}{58}{ANN Latent Space}{equation.164}{}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Vector Arithmetic}{60}{section.165}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Vector Arithmetic}{59}{section.165}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of how novel images can be generated using Vector Arithmetic on image and word embeddings.}}{61}{figure.166}}
-\newlabel{fig:vectorArthexmp}{{5.1}{61}{An example of how novel images can be generated using Vector Arithmetic on image and word embeddings}{figure.166}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Examples of the different, shapes, colours, sizes and positions of objects in the ArtS dataset. The top left object would be described as ``\textsc  {big indigo circle, top left}''.}}{62}{figure.167}}
-\newlabel{fig:shapes}{{5.2}{62}{Examples of the different, shapes, colours, sizes and positions of objects in the ArtS dataset. The top left object would be described as ``\textsc {big indigo circle, top left}''}{figure.167}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Artificial Shapes Dataset}{62}{section.168}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Dataset Description}{62}{subsection.169}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces An example of how novel images can be generated using Vector Arithmetic on image and word embeddings.}}{60}{figure.166}}
+\newlabel{fig:vectorArthexmp}{{5.1}{60}{An example of how novel images can be generated using Vector Arithmetic on image and word embeddings}{figure.166}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Examples of the different, shapes, colours, sizes and positions of objects in the ArtS dataset. The top left object would be described as ``\textsc  {big indigo circle, top left}''.}}{61}{figure.167}}
+\newlabel{fig:shapes}{{5.2}{61}{Examples of the different, shapes, colours, sizes and positions of objects in the ArtS dataset. The top left object would be described as ``\textsc {big indigo circle, top left}''}{figure.167}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Artificial Shapes Dataset}{61}{section.168}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Dataset Description}{61}{subsection.169}}
 \AC@undonewlabel{acro:RGB}
-\newlabel{acro:RGB}{{5.3.1}{62}{Dataset Description}{section*.170}{}}
+\newlabel{acro:RGB}{{5.3.1}{61}{Dataset Description}{section*.170}{}}
 \acronymused{RGB}
 \acronymused{RGB}
 \acronymused{RGB}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Artificial Shapes dataset description.}}{63}{table.171}}
-\newlabel{tab:Arts_desc}{{5.1}{63}{Artificial Shapes dataset description}{table.171}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Problem Description}{63}{subsection.172}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Artificial Shapes dataset description.}}{62}{table.171}}
+\newlabel{tab:Arts_desc}{{5.1}{62}{Artificial Shapes dataset description}{table.171}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Problem Description}{62}{subsection.172}}
 \acronymused{ANN}
 \acronymused{ANN}
 \acronymused{ANN}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Network Description}{64}{subsection.173}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Network Description}{63}{subsection.173}}
 \acronymused{ANN}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experiments with the ArtS Dataset}{64}{section.174}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Experiments with the ArtS Dataset}{63}{section.174}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Experiment 1}{65}{subsection.175}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Experiment 1}{64}{subsection.175}}
 \acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Experiment 1 data subset.}}{65}{table.176}}
-\newlabel{tab:exp1_data}{{5.2}{65}{Experiment 1 data subset}{table.176}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{65}{section*.177}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Experiment 1: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output.}}{66}{figure.178}}
-\newlabel{fig:graph331}{{5.3}{66}{Experiment 1: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output}{figure.178}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Experiment 1: Total MSE for different embedding sizes for the three testing conditions. An Embedding Size of 200 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}}{67}{table.179}}
-\newlabel{tab:res331}{{5.3}{67}{Experiment 1: Total MSE for different embedding sizes for the three testing conditions. An Embedding Size of 200 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}{table.179}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Experiment 1 data-subset.}}{64}{table.176}}
+\newlabel{tab:exp1_data}{{5.2}{64}{Experiment 1 data-subset}{table.176}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{64}{section*.177}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Experiment 1: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output.}}{65}{figure.178}}
+\newlabel{fig:graph331}{{5.3}{65}{Experiment 1: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output}{figure.178}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Experiment 1: Total MSE for different embedding sizes for the three testing conditions. An Embedding Size of 200 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}}{66}{table.179}}
+\newlabel{tab:res331}{{5.3}{66}{Experiment 1: Total MSE for different embedding sizes for the three testing conditions. An Embedding Size of 200 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}{table.179}{}}
 \acronymused{RGB}
 \acronymused{RGB}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {paragraph}{Image Generation}{67}{section*.180}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Images generated from descriptions with an embedding size of 8 or 200 neurons.}}{68}{figure.181}}
-\newlabel{fig:331multi}{{5.4}{68}{Images generated from descriptions with an embedding size of 8 or 200 neurons}{figure.181}{}}
+\@writefile{toc}{\contentsline {paragraph}{Image Generation}{66}{section*.180}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Images generated from descriptions with an embedding size of 8 or 200 neurons.}}{67}{figure.181}}
+\newlabel{fig:331multi}{{5.4}{67}{Images generated from descriptions with an embedding size of 8 or 200 neurons}{figure.181}{}}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{68}{section*.183}}
+\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{67}{section*.183}}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Experiment 1, runs A-D: Images generated from shape names (\textsc  {Circle, Rectangle, Triangle}) for different sizes of embedding.}}{69}{figure.182}}
-\newlabel{fig:331shapes}{{5.5}{69}{Experiment 1, runs A-D: Images generated from shape names (\textsc {Circle, Rectangle, Triangle}) for different sizes of embedding}{figure.182}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Discussion}{69}{section*.184}}
-\acronymused{MAE}
-\acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Experiment 2}{70}{subsection.185}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Experiment 2 data subset.}}{70}{table.186}}
-\newlabel{tab:exp2_data}{{5.4}{70}{Experiment 2 data subset}{table.186}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{70}{section*.187}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Experiment 2: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output.}}{71}{figure.188}}
-\newlabel{fig:graph333}{{5.6}{71}{Experiment 2: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output}{figure.188}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Experiment 2: Total MSE for different embedding sizes. An Embedding Size of 296 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}}{71}{table.189}}
-\newlabel{tab:res333}{{5.5}{71}{Experiment 2: Total MSE for different embedding sizes. An Embedding Size of 296 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}{table.189}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Experiment 2: Images generated from descriptions with an embedding size of 296 neurons.}}{72}{figure.191}}
-\newlabel{fig:333multi}{{5.7}{72}{Experiment 2: Images generated from descriptions with an embedding size of 296 neurons}{figure.191}{}}
-\@writefile{toc}{\contentsline {paragraph}{Image Generation}{72}{figure.191}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Experiment 2 run A: Images generated of each word (\textsc  {Circle, Rectangle, Triangle, Big, Medium, Small, Red, Green, Blue, Centre-Left, Centre-Centre, Centre-Right}) for different embedding sizes.}}{73}{figure.192}}
-\newlabel{fig:333single}{{5.8}{73}{Experiment 2 run A: Images generated of each word (\textsc {Circle, Rectangle, Triangle, Big, Medium, Small, Red, Green, Blue, Centre-Left, Centre-Centre, Centre-Right}) for different embedding sizes}{figure.192}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Experiment 1, runs A-D: Images generated from shape names (\textsc  {Circle, Rectangle, Triangle}) for different sizes of embedding.}}{68}{figure.182}}
+\newlabel{fig:331shapes}{{5.5}{68}{Experiment 1, runs A-D: Images generated from shape names (\textsc {Circle, Rectangle, Triangle}) for different sizes of embedding}{figure.182}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Discussion}{68}{section*.184}}
 \acronymused{MAE}
 \acronymused{MAE}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Experiment 2}{69}{subsection.185}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Experiment 2 data-subset.}}{69}{table.186}}
+\newlabel{tab:exp2_data}{{5.4}{69}{Experiment 2 data-subset}{table.186}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{69}{section*.187}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Experiment 2: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output.}}{70}{figure.188}}
+\newlabel{fig:graph333}{{5.6}{70}{Experiment 2: MSE for reconstruction of images and descriptions under different testing conditions. (A) shows the total MSE, (B) shows the MSE of the image output and (C) shows the MSE of the description output}{figure.188}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Experiment 2: Total MSE for different embedding sizes. An Embedding Size of 296 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}}{70}{table.189}}
+\newlabel{tab:res333}{{5.5}{70}{Experiment 2: Total MSE for different embedding sizes. An Embedding Size of 296 neurons provides the minimum reconstruction error. (All values are $\times 10^{-3}$.)}{table.189}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Experiment 2: Images generated from descriptions with an embedding size of 296 neurons.}}{71}{figure.191}}
+\newlabel{fig:333multi}{{5.7}{71}{Experiment 2: Images generated from descriptions with an embedding size of 296 neurons}{figure.191}{}}
+\@writefile{toc}{\contentsline {paragraph}{Image Generation}{71}{figure.191}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Experiment 2 run A: Images generated of each word (\textsc  {Circle, Rectangle, Triangle, Big, Medium, Small, Red, Green, Blue, Centre-Left, Centre-Centre, Centre-Right}) for different embedding sizes.}}{72}{figure.192}}
+\newlabel{fig:333single}{{5.8}{72}{Experiment 2 run A: Images generated of each word (\textsc {Circle, Rectangle, Triangle, Big, Medium, Small, Red, Green, Blue, Centre-Left, Centre-Centre, Centre-Right}) for different embedding sizes}{figure.192}{}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{73}{section*.195}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Experiment 2, runs A-D: Images generated of each shape for different emedding sizes.}}{74}{figure.193}}
-\newlabel{fig:shapes333}{{5.9}{74}{Experiment 2, runs A-D: Images generated of each shape for different emedding sizes}{figure.193}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Discussion}{74}{section*.196}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Experiment 2, run A: Images generated using word pairs using an embedding size of 296 neurons.}}{75}{figure.194}}
-\newlabel{fig:2word333}{{5.10}{75}{Experiment 2, run A: Images generated using word pairs using an embedding size of 296 neurons}{figure.194}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Experiment 3}{75}{subsection.198}}
+\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{72}{section*.195}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Experiment 2, runs A-D: Images generated of each shape for different emedding sizes.}}{73}{figure.193}}
+\newlabel{fig:shapes333}{{5.9}{73}{Experiment 2, runs A-D: Images generated of each shape for different emedding sizes}{figure.193}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Discussion}{73}{section*.196}}
+\acronymused{MAE}
+\acronymused{MAE}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Experiment 2, run A: Images generated using word pairs using an embedding size of 296 neurons.}}{74}{figure.194}}
+\newlabel{fig:2word333}{{5.10}{74}{Experiment 2, run A: Images generated using word pairs using an embedding size of 296 neurons}{figure.194}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Experiment 3}{74}{subsection.198}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Images generated of each shape for different sizes of embedding using the \acp {MAE} trained in experiments 1 and 2 run A.}}{76}{figure.197}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Images generated of each shape for different sizes of embedding using the \acp {MAE} trained in experiments 1 and 2 run A.}}{75}{figure.197}}
 \acronymused{MAE}
-\newlabel{fig:shapes333v331}{{5.11}{76}{Images generated of each shape for different sizes of embedding using the \acp {MAE} trained in experiments 1 and 2 run A}{figure.197}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{76}{section*.200}}
-\@writefile{toc}{\contentsline {paragraph}{Image Generation}{76}{section*.202}}
+\newlabel{fig:shapes333v331}{{5.11}{75}{Images generated of each shape for different sizes of embedding using the \acp {MAE} trained in experiments 1 and 2 run A}{figure.197}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{75}{section*.200}}
+\@writefile{toc}{\contentsline {paragraph}{Image Generation}{75}{section*.202}}
 \acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Experiment 3 data subset.}}{77}{table.199}}
-\newlabel{tab:exp3_data}{{5.6}{77}{Experiment 3 data subset}{table.199}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces Experiment 3: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}}{77}{table.201}}
-\newlabel{tab:res339}{{5.7}{77}{Experiment 3: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}{table.201}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Experiment 3, run A: Images generated from descriptions, starting training from randomly initialised weights.}}{78}{figure.203}}
-\newlabel{fig:339multi}{{5.12}{78}{Experiment 3, run A: Images generated from descriptions, starting training from randomly initialised weights}{figure.203}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Experiment 3, run A: Images generated from shape, colour and size words for different weight initialisation conditions.}}{78}{figure.204}}
-\newlabel{fig:339single}{{5.13}{78}{Experiment 3, run A: Images generated from shape, colour and size words for different weight initialisation conditions}{figure.204}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Experiment 3 data-subset.}}{76}{table.199}}
+\newlabel{tab:exp3_data}{{5.6}{76}{Experiment 3 data-subset}{table.199}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces Experiment 3: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}}{76}{table.201}}
+\newlabel{tab:res339}{{5.7}{76}{Experiment 3: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}{table.201}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Experiment 3, run A: Images generated from descriptions, starting training from randomly initialised weights.}}{77}{figure.203}}
+\newlabel{fig:339multi}{{5.12}{77}{Experiment 3, run A: Images generated from descriptions, starting training from randomly initialised weights}{figure.203}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Experiment 3, run A: Images generated from shape, colour and size words for different weight initialisation conditions.}}{77}{figure.204}}
+\newlabel{fig:339single}{{5.13}{77}{Experiment 3, run A: Images generated from shape, colour and size words for different weight initialisation conditions}{figure.204}{}}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Experiment 3, run A: Images generated from each position word for different weight initialisation conditions.}}{79}{figure.205}}
-\newlabel{fig:339single_pos}{{5.14}{79}{Experiment 3, run A: Images generated from each position word for different weight initialisation conditions}{figure.205}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Experiment 3, run A: Images generated using word pairs.}}{79}{figure.206}}
-\newlabel{fig:2word339}{{5.15}{79}{Experiment 3, run A: Images generated using word pairs}{figure.206}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces Experiment 3: Percentage Description Accuracy for different weight initialisations. }}{79}{table.208}}
-\newlabel{tab:res339_acc}{{5.8}{79}{Experiment 3: Percentage Description Accuracy for different weight initialisations}{table.208}{}}
-\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{79}{table.208}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Experiment 3, run A: Images generated from each position word for different weight initialisation conditions.}}{78}{figure.205}}
+\newlabel{fig:339single_pos}{{5.14}{78}{Experiment 3, run A: Images generated from each position word for different weight initialisation conditions}{figure.205}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Experiment 3, run A: Images generated using word pairs.}}{78}{figure.206}}
+\newlabel{fig:2word339}{{5.15}{78}{Experiment 3, run A: Images generated using word pairs}{figure.206}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces Experiment 3: Percentage Description Accuracy for different weight initialisations. }}{78}{table.208}}
+\newlabel{tab:res339_acc}{{5.8}{78}{Experiment 3: Percentage Description Accuracy for different weight initialisations}{table.208}{}}
+\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{78}{table.208}}
 \acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces Experiment 3: Total number of weight updates.}}{80}{table.210}}
-\newlabel{tab:updatesTotal}{{5.9}{80}{Experiment 3: Total number of weight updates}{table.210}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Discussion}{80}{section*.209}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces Experiment 3: Total number of weight updates.}}{79}{table.210}}
+\newlabel{tab:updatesTotal}{{5.9}{79}{Experiment 3: Total number of weight updates}{table.210}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Discussion}{79}{section*.209}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MSE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Experiment 4}{81}{subsection.211}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{81}{section*.212}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Experiment 4: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}}{81}{table.213}}
-\newlabel{tab:res739}{{5.10}{81}{Experiment 4: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}{table.213}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Experiment 4}{80}{subsection.211}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{80}{section*.212}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Experiment 4: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}}{80}{table.213}}
+\newlabel{tab:res739}{{5.10}{80}{Experiment 4: Total MSE for different weight initialisations. (All values are $\times 10^{-3}$.)}{table.213}{}}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {paragraph}{Image Generation}{81}{section*.214}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Experiment 4, run A: Images generated from shape, and size word for different weight initialisation conditions.}}{82}{figure.215}}
-\newlabel{fig:739single_shape}{{5.16}{82}{Experiment 4, run A: Images generated from shape, and size word for different weight initialisation conditions}{figure.215}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Experiment 4, run A: Images generated from each colour word for different weight initialisation conditions.}}{82}{figure.216}}
-\newlabel{fig:739single_col}{{5.17}{82}{Experiment 4, run A: Images generated from each colour word for different weight initialisation conditions}{figure.216}{}}
+\@writefile{toc}{\contentsline {paragraph}{Image Generation}{80}{section*.214}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Experiment 4, run A: Images generated from shape, and size word for different weight initialisation conditions.}}{81}{figure.215}}
+\newlabel{fig:739single_shape}{{5.16}{81}{Experiment 4, run A: Images generated from shape, and size word for different weight initialisation conditions}{figure.215}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Experiment 4, run A: Images generated from each colour word for different weight initialisation conditions.}}{81}{figure.216}}
+\newlabel{fig:739single_col}{{5.17}{81}{Experiment 4, run A: Images generated from each colour word for different weight initialisation conditions}{figure.216}{}}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Experiment 4, run A: Images generated from each position word for different weight initialisation conditions.}}{83}{figure.217}}
-\newlabel{fig:739single_pos}{{5.18}{83}{Experiment 4, run A: Images generated from each position word for different weight initialisation conditions}{figure.217}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Experiment 4, run A: Images generated using word pairs.}}{83}{figure.218}}
-\newlabel{fig:2word739}{{5.19}{83}{Experiment 4, run A: Images generated using word pairs}{figure.218}{}}
-\acronymused{MAE}
-\acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {5.11}{\ignorespaces Experiment 4: Percentage Description Accuracy for different weight initialisations.}}{84}{table.220}}
-\newlabel{tab:res739acc}{{5.11}{84}{Experiment 4: Percentage Description Accuracy for different weight initialisations}{table.220}{}}
-\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{84}{table.220}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Experiment 4, run A: Images generated from each position word for different weight initialisation conditions.}}{82}{figure.217}}
+\newlabel{fig:739single_pos}{{5.18}{82}{Experiment 4, run A: Images generated from each position word for different weight initialisation conditions}{figure.217}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Experiment 4, run A: Images generated using word pairs.}}{82}{figure.218}}
+\newlabel{fig:2word739}{{5.19}{82}{Experiment 4, run A: Images generated using word pairs}{figure.218}{}}
 \acronymused{MAE}
 \acronymused{MAE}
+\@writefile{lot}{\contentsline {table}{\numberline {5.11}{\ignorespaces Experiment 4: Percentage Description Accuracy for different weight initialisations.}}{83}{table.220}}
+\newlabel{tab:res739acc}{{5.11}{83}{Experiment 4: Percentage Description Accuracy for different weight initialisations}{table.220}{}}
+\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{83}{table.220}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {subsubsection}{Discussion}{84}{section*.221}}
+\acronymused{MAE}
+\acronymused{MAE}
+\@writefile{toc}{\contentsline {subsubsection}{Discussion}{83}{section*.221}}
 \acronymused{MAE}
 \acronymused{MSE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {5.12}{\ignorespaces Experiment 4: Total number of weight updates.}}{85}{table.222}}
-\newlabel{tab:updatesTotal4}{{5.12}{85}{Experiment 4: Total number of weight updates}{table.222}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.13}{\ignorespaces Experiment 4: Mean Squared Error ($\times 10^{-3}$) and Percentage Description Accuracy for the randomly initialised MAE after 50 epochs of training.}}{85}{table.223}}
-\newlabel{tab:res739_50}{{5.13}{85}{Experiment 4: Mean Squared Error ($\times 10^{-3}$) and Percentage Description Accuracy for the randomly initialised MAE after 50 epochs of training}{table.223}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.12}{\ignorespaces Experiment 4: Total number of weight updates.}}{84}{table.222}}
+\newlabel{tab:updatesTotal4}{{5.12}{84}{Experiment 4: Total number of weight updates}{table.222}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.13}{\ignorespaces Experiment 4: Mean Squared Error ($\times 10^{-3}$) and Percentage Description Accuracy for the randomly initialised MAE after 50 epochs of training.}}{84}{table.223}}
+\newlabel{tab:res739_50}{{5.13}{84}{Experiment 4: Mean Squared Error ($\times 10^{-3}$) and Percentage Description Accuracy for the randomly initialised MAE after 50 epochs of training}{table.223}{}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Experiment 5}{86}{subsection.224}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{86}{section*.225}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}Experiment 5}{85}{subsection.224}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{85}{section*.225}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {5.14}{\ignorespaces Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times 10^{-3}$.)}}{86}{table.226}}
-\newlabel{tab:res_exp5}{{5.14}{86}{Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times 10^{-3}$.)}{table.226}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.14}{\ignorespaces Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times 10^{-3}$.)}}{85}{table.226}}
+\newlabel{tab:res_exp5}{{5.14}{85}{Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times 10^{-3}$.)}{table.226}{}}
 \acronymused{MSE}
-\@writefile{toc}{\contentsline {paragraph}{Image Generation}{87}{section*.227}}
+\@writefile{toc}{\contentsline {paragraph}{Image Generation}{86}{section*.227}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Experiment 5, run A: Images generated from descriptions of shapes never seen by the \ac {MAE}.}}{87}{figure.228}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Experiment 5, run A: Images generated from descriptions of shapes never seen by the \ac {MAE}.}}{86}{figure.228}}
 \acronymused{MAE}
-\newlabel{fig:739_minus1}{{5.20}{87}{Experiment 5, run A: Images generated from descriptions of shapes never seen by the \ac {MAE}}{figure.228}{}}
-\acronymused{MAE}
-\acronymused{MAE}
-\acronymused{MAE}
-\acronymused{MAE}
-\acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Experiment 5, run A: Images generated via Vector Arithmetic by MAE 1.}}{88}{figure.229}}
-\newlabel{fig:739_vectorArth}{{5.21}{88}{Experiment 5, run A: Images generated via Vector Arithmetic by MAE 1}{figure.229}{}}
-\acronymused{MAE}
-\acronymused{MAE}
-\acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {5.15}{\ignorespaces Experiment 5: Percentage Description Accuracy. Alternating rows show accuracy for the datasubset without the omitted data and MSE for only the omitted data (marked with *).}}{88}{table.231}}
-\newlabel{tab:res_exp5_acc}{{5.15}{88}{Experiment 5: Percentage Description Accuracy. Alternating rows show accuracy for the datasubset without the omitted data and MSE for only the omitted data (marked with *)}{table.231}{}}
-\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{88}{table.231}}
-\acronymused{MAE}
-\acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.6}Discussion}{89}{subsection.232}}
+\newlabel{fig:739_minus1}{{5.20}{86}{Experiment 5, run A: Images generated from descriptions of shapes never seen by the \ac {MAE}}{figure.228}{}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Experiment 5, run A: Images generated via Vector Arithmetic by MAE 1.}}{87}{figure.229}}
+\newlabel{fig:739_vectorArth}{{5.21}{87}{Experiment 5, run A: Images generated via Vector Arithmetic by MAE 1}{figure.229}{}}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {subsubsection}{How an incremental approach helps}{90}{section*.233}}
+\acronymused{MAE}
+\acronymused{MAE}
+\@writefile{lot}{\contentsline {table}{\numberline {5.15}{\ignorespaces Experiment 5: Percentage Description Accuracy. Alternating rows show accuracy for the datasubset without the omitted data and MSE for only the omitted data (marked with *).}}{87}{table.231}}
+\newlabel{tab:res_exp5_acc}{{5.15}{87}{Experiment 5: Percentage Description Accuracy. Alternating rows show accuracy for the datasubset without the omitted data and MSE for only the omitted data (marked with *)}{table.231}{}}
+\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{87}{table.231}}
+\acronymused{MAE}
+\acronymused{MAE}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.6}Discussion}{88}{subsection.232}}
+\acronymused{MAE}
+\acronymused{MAE}
+\acronymused{MAE}
+\acronymused{MAE}
+\acronymused{MAE}
+\acronymused{MAE}
+\@writefile{toc}{\contentsline {subsubsection}{How an incremental approach helps}{89}{section*.233}}
 \acronymused{ANN}
-\@writefile{lot}{\contentsline {table}{\numberline {5.16}{\ignorespaces Probability distributions generated from rolling a 6 sided die.}}{90}{table.234}}
-\newlabel{tab:dieProb}{{5.16}{90}{Probability distributions generated from rolling a 6 sided die}{table.234}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.16}{\ignorespaces Probability distributions generated from rolling a 6 sided die.}}{89}{table.234}}
+\newlabel{tab:dieProb}{{5.16}{89}{Probability distributions generated from rolling a 6 sided die}{table.234}{}}
 \AC@undonewlabel{acro:PRNG}
-\newlabel{acro:PRNG}{{5.4.6}{90}{How an incremental approach helps}{section*.235}{}}
+\newlabel{acro:PRNG}{{5.4.6}{89}{How an incremental approach helps}{section*.235}{}}
 \acronymused{PRNG}
 \acronymused{ANN}
 \acronymused{ANN}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Visualisation of an imaginary Cost landscape.}}{91}{figure.236}}
-\newlabel{fig:localminima}{{5.22}{91}{Visualisation of an imaginary Cost landscape}{figure.236}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces Visualisation of an imaginary Cost landscape.}}{90}{figure.236}}
+\newlabel{fig:localminima}{{5.22}{90}{Visualisation of an imaginary Cost landscape}{figure.236}{}}
 \acronymused{ANN}
 \acronymused{ANN}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Summary}{92}{section.237}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Summary}{91}{section.237}}
 \acronymused{MAE}
 \acronymused{MAE}
 \citation{keller2016analysis}
 \citation{schillingmann2009towards,schillingmann2009computational}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Bidirectional Grounding of Real Data}{94}{chapter.238}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Bidirectional Grounding of Real Data}{93}{chapter.238}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{Chapter6}{{6}{94}{Bidirectional Grounding of Real Data}{chapter.238}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}The Difficulties of Real Data}{94}{section.239}}
+\newlabel{Chapter6}{{6}{93}{Bidirectional Grounding of Real Data}{chapter.238}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}The Difficulties of Real Data}{93}{section.239}}
 \acronymused{MAE}
 \acronymused{MRL}
 \acronymused{MRL}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Acoustic Packaging}{94}{section.240}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces System schematic. Data is captured from sensors by an acoustic packager and fed to the multimodal autoencoder.}}{93}{figure.240}}
+\newlabel{fig:schematic}{{6.1}{93}{System schematic. Data is captured from sensors by an acoustic packager and fed to the multimodal autoencoder}{figure.240}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Acoustic Packaging}{93}{section.241}}
 \acronymused{MRL}
 \AC@undonewlabel{acro:AP}
-\newlabel{acro:AP}{{6.2}{94}{Acoustic Packaging}{section*.241}{}}
+\newlabel{acro:AP}{{6.2}{93}{Acoustic Packaging}{section*.242}{}}
 \acronymused{AP}
 \AC@undonewlabel{acro:ASR}
-\newlabel{acro:ASR}{{6.2}{94}{Acoustic Packaging}{section*.242}{}}
+\newlabel{acro:ASR}{{6.2}{94}{Acoustic Packaging}{section*.243}{}}
 \acronymused{ASR}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces System schematic. Data is captured from sensors by an acoustic packager and fed to the multimodal autoencoder.}}{95}{figure.243}}
-\newlabel{fig:schematic}{{6.1}{95}{System schematic. Data is captured from sensors by an acoustic packager and fed to the multimodal autoencoder}{figure.243}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Real Shapes Dataset}{95}{section.244}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Example images from ReShape.}}{95}{figure.245}}
-\newlabel{fig:ReShape}{{6.2}{95}{Example images from ReShape}{figure.245}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Dataset Description}{95}{subsection.246}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Real Shapes Dataset}{94}{section.244}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Example images from ReShape.}}{94}{figure.245}}
+\newlabel{fig:ReShape}{{6.2}{94}{Example images from ReShape}{figure.245}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Dataset Description}{94}{subsection.246}}
 \citation{keller2016analysis,keller}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Exemplar images for all objects in the ReShape dataset.}}{96}{figure.247}}
-\newlabel{fig:ReShapeAll}{{6.3}{96}{Exemplar images for all objects in the ReShape dataset}{figure.247}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Problem Description}{97}{subsection.248}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Exemplar images for all objects in the ReShape dataset.}}{95}{figure.247}}
+\newlabel{fig:ReShapeAll}{{6.3}{95}{Exemplar images for all objects in the ReShape dataset}{figure.247}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Problem Description}{96}{subsection.248}}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Network Description}{97}{subsection.249}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{97}{section.250}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{97}{subsection.251}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Network Description}{96}{subsection.249}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{96}{section.250}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{96}{subsection.251}}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Example cropped images from ReShape.}}{98}{figure.252}}
-\newlabel{fig:ReShapeCrop}{{6.4}{98}{Example cropped images from ReShape}{figure.252}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Example cropped images from ReShape.}}{97}{figure.252}}
+\newlabel{fig:ReShapeCrop}{{6.4}{97}{Example cropped images from ReShape}{figure.252}{}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Regions to crop to given different postion words.}}{99}{figure.253}}
-\newlabel{fig:CropHeur}{{6.5}{99}{Regions to crop to given different postion words}{figure.253}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{99}{subsection.254}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Exp 1: Average of the training images of bricks and ducks in different sizes and colours.}}{99}{figure.255}}
-\newlabel{fig:AvgBrickDuck}{{6.6}{99}{Exp 1: Average of the training images of bricks and ducks in different sizes and colours}{figure.255}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Regions to crop to given different postion words.}}{98}{figure.253}}
+\newlabel{fig:CropHeur}{{6.5}{98}{Regions to crop to given different postion words}{figure.253}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{98}{subsection.254}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Exp 1: Average of the training images of bricks and ducks in different sizes and colours.}}{98}{figure.255}}
+\newlabel{fig:AvgBrickDuck}{{6.6}{98}{Exp 1: Average of the training images of bricks and ducks in different sizes and colours}{figure.255}{}}
 \acronymused{MSE}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Exp 2: Average of the training images for bricks, cups, donuts, ducks, and rectangles, in different sizes and colours.}}{100}{figure.256}}
-\newlabel{fig:avgMost}{{6.7}{100}{Exp 2: Average of the training images for bricks, cups, donuts, ducks, and rectangles, in different sizes and colours}{figure.256}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Exp 2: Average of the training images for bricks, cups, donuts, ducks, and rectangles, in different sizes and colours.}}{99}{figure.256}}
+\newlabel{fig:avgMost}{{6.7}{99}{Exp 2: Average of the training images for bricks, cups, donuts, ducks, and rectangles, in different sizes and colours}{figure.256}{}}
 \acronymused{MAE}
 \acronymused{MSE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Experiment 1}{100}{subsection.257}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Experiment 1 data subset.}}{100}{table.258}}
-\newlabel{tab:6_exp1_data}{{6.1}{100}{Experiment 1 data subset}{table.258}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Exp 1: Exemplar images of bricks and ducks in different sizes and colours.}}{101}{figure.259}}
-\newlabel{fig:ExmBrickDuck}{{6.8}{101}{Exp 1: Exemplar images of bricks and ducks in different sizes and colours}{figure.259}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Exp 1: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}}{101}{table.261}}
-\newlabel{tab:6_res_exp1}{{6.2}{101}{Exp 1: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}{table.261}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{101}{section*.260}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Exp 1: Exemplar images of bricks and ducks in different sizes and colours.}}{99}{figure.257}}
+\newlabel{fig:ExmBrickDuck}{{6.8}{99}{Exp 1: Exemplar images of bricks and ducks in different sizes and colours}{figure.257}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Experiment 1}{100}{subsection.258}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces Experiment 1 data subset.}}{100}{table.259}}
+\newlabel{tab:6_exp1_data}{{6.1}{100}{Experiment 1 data subset}{table.259}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{100}{section*.260}}
 \acronymused{MAE}
 \acronymused{MSE}
 \acronymused{MSE}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Exp 1: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}}{100}{table.261}}
+\newlabel{tab:6_res_exp1}{{6.2}{100}{Exp 1: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}{table.261}{}}
 \acronymused{MSE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MSE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {paragraph}{Image Generation}{102}{section*.262}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Exp 1: Images generated from full descriptions using the \ac {MAE} trained with the simple procedure.}}{102}{figure.263}}
+\@writefile{toc}{\contentsline {paragraph}{Image Generation}{101}{section*.262}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Exp 1: Images generated from full descriptions using the \ac {MAE} trained with the simple procedure.}}{101}{figure.263}}
 \acronymused{MAE}
-\newlabel{fig:simpleGen_1}{{6.9}{102}{Exp 1: Images generated from full descriptions using the \ac {MAE} trained with the simple procedure}{figure.263}{}}
+\newlabel{fig:simpleGen_1}{{6.9}{101}{Exp 1: Images generated from full descriptions using the \ac {MAE} trained with the simple procedure}{figure.263}{}}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Exp 1: Images generated from (only) full descriptions using the MAE trained with the exemplar procedure.}}{102}{figure.264}}
-\newlabel{fig:exemplarGen_1}{{6.10}{102}{Exp 1: Images generated from (only) full descriptions using the MAE trained with the exemplar procedure}{figure.264}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Exp 1: Images generated from (only) full descriptions using the MAE trained with the exemplar procedure.}}{101}{figure.264}}
+\newlabel{fig:exemplarGen_1}{{6.10}{101}{Exp 1: Images generated from (only) full descriptions using the MAE trained with the exemplar procedure}{figure.264}{}}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Exp 1: Images generated using word pairs using the MAE trained with the simple procedure.}}{103}{figure.265}}
-\newlabel{fig:2wordsSimpleBrickDuck}{{6.11}{103}{Exp 1: Images generated using word pairs using the MAE trained with the simple procedure}{figure.265}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Exp 1: Images generated using word pairs using the MAE trained with the simple procedure.}}{102}{figure.265}}
+\newlabel{fig:2wordsSimpleBrickDuck}{{6.11}{102}{Exp 1: Images generated using word pairs using the MAE trained with the simple procedure}{figure.265}{}}
 \acronymused{MAE}
 \acronymused{MAE}
 \citation{keller2016analysis,keller}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Images generated using word pairs using the MAE trained using image exemplars. (Only words are provided as input.)}}{104}{figure.266}}
-\newlabel{fig:2wordsExemplarBrickDuck}{{6.12}{104}{Images generated using word pairs using the MAE trained using image exemplars. (Only words are provided as input.)}{figure.266}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Images generated using word pairs using the MAE trained using image exemplars. (Only words are provided as input.)}}{103}{figure.266}}
+\newlabel{fig:2wordsExemplarBrickDuck}{{6.12}{103}{Images generated using word pairs using the MAE trained using image exemplars. (Only words are provided as input.)}{figure.266}{}}
+\@writefile{toc}{\contentsline {paragraph}{Multilabel Classification}{103}{section*.267}}
+\acronymused{MAE}
 \@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Exp 1: Percentage Description Accuracy for different test conditions and training procedures.}}{104}{table.268}}
 \newlabel{tab:6_res_exp1_acc}{{6.3}{104}{Exp 1: Percentage Description Accuracy for different test conditions and training procedures}{table.268}{}}
-\@writefile{toc}{\contentsline {paragraph}{Multilabel Classification}{104}{table.268}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}Experiment 2}{104}{subsection.269}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Experiment 2 data subset.}}{104}{table.270}}
+\newlabel{tab:6_exp2_data}{{6.4}{104}{Experiment 2 data subset}{table.270}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Exp 2: Exemplar images of bricks, cups, donuts, ducks, and rectangles, in different sizes and colours.}}{104}{figure.271}}
+\newlabel{fig:ExmMost}{{6.13}{104}{Exp 2: Exemplar images of bricks, cups, donuts, ducks, and rectangles, in different sizes and colours}{figure.271}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{104}{section*.272}}
+\@writefile{toc}{\contentsline {subsubsection}{Image Generation}{104}{section*.274}}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.4}Experiment 2}{105}{subsection.269}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces Experiment 2 data subset.}}{105}{table.270}}
-\newlabel{tab:6_exp2_data}{{6.4}{105}{Experiment 2 data subset}{table.270}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Exp 2: Exemplar images of bricks, cups, donuts, ducks, and rectangles, in different sizes and colours.}}{105}{figure.271}}
-\newlabel{fig:ExmMost}{{6.13}{105}{Exp 2: Exemplar images of bricks, cups, donuts, ducks, and rectangles, in different sizes and colours}{figure.271}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{105}{section*.272}}
-\@writefile{toc}{\contentsline {subsubsection}{Image Generation}{105}{section*.274}}
-\acronymused{MAE}
-\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Exp 2: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}}{106}{table.273}}
-\newlabel{tab:6_res_exp2}{{6.5}{106}{Exp 2: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}{table.273}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Exp 2: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}}{105}{table.273}}
+\newlabel{tab:6_res_exp2}{{6.5}{105}{Exp 2: Total Mean Squared Error for different test conditions and training procedures. (All values are $\times 10^{-3}$.)}{table.273}{}}
 \acronymused{MAE}
 \acronymused{MAE}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Exp 2: Images generated from full descriptions using the \ac {MAE} trained with the exemplar procedure. Red borders show objects with exemplar images.}}{105}{figure.275}}
+\acronymused{MAE}
+\newlabel{fig:mostExemplarGen}{{6.14}{105}{Exp 2: Images generated from full descriptions using the \ac {MAE} trained with the exemplar procedure. Red borders show objects with exemplar images}{figure.275}{}}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
 \acronymused{MAE}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Exp 2: Images generated using word pairs using the \ac {MAE} trained using image exemplars when only words are provided as input.}}{106}{figure.276}}
 \acronymused{MAE}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Exp 2: Images generated using word pairs using the \ac {MAE} trained using image exemplars when only words are provided as input.}}{107}{figure.275}}
+\newlabel{fig:2wordsMostExemplar}{{6.15}{106}{Exp 2: Images generated using word pairs using the \ac {MAE} trained using image exemplars when only words are provided as input}{figure.276}{}}
 \acronymused{MAE}
-\newlabel{fig:2wordsMostExemplar}{{6.14}{107}{Exp 2: Images generated using word pairs using the \ac {MAE} trained using image exemplars when only words are provided as input}{figure.275}{}}
-\@writefile{toc}{\contentsline {paragraph}{Multilabel Classification}{107}{figure.277}}
+\@writefile{toc}{\contentsline {paragraph}{Multilabel Classification}{107}{section*.277}}
 \acronymused{MSE}
 \acronymused{MSE}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Exp 2: Images generated from full descriptions using the \ac {MAE} trained with the exemplar procedure. Red borders show objects with exemplar images.}}{108}{figure.277}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Accuracy}}{107}{table.279}}
+\newlabel{tab:6_res_exp2_acc}{{6.6}{107}{Accuracy}{table.279}{}}
+\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{107}{table.279}}
 \acronymused{MAE}
-\newlabel{fig:mostExemplarGen}{{6.15}{108}{Exp 2: Images generated from full descriptions using the \ac {MAE} trained with the exemplar procedure. Red borders show objects with exemplar images}{figure.277}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Accuracy}}{108}{table.279}}
-\newlabel{tab:6_res_exp2_acc}{{6.6}{108}{Accuracy}{table.279}{}}
-\@writefile{toc}{\contentsline {paragraph}{Description Accuracy}{108}{table.279}}
-\acronymused{MAE}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.5}Discussion}{108}{subsection.280}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.5}Discussion}{107}{subsection.280}}
 \acronymused{MRL}
 \citation{sheppard2020multimodal}
 \acronymused{MRL}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Summary}{109}{section.281}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Summary}{108}{section.281}}
 \acronymused{MRL}
 \acronymused{MRL}
 \acronymused{MRL}
@@ -1026,12 +1027,12 @@
 \acronymused{ANN}
 \acronymused{MAE}
 \citation{repRev}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{110}{chapter.283}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{109}{chapter.283}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{Chapter7}{{7}{110}{Conclusion}{chapter.283}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Summary of Important Points}{110}{section.284}}
+\newlabel{Chapter7}{{7}{109}{Conclusion}{chapter.283}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Summary of Important Points}{109}{section.284}}
 \acronymused{MRL}
 \acronymused{MAE}
 \acronymused{MAE}
@@ -1041,35 +1042,35 @@
 \acronymused{ANN}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Conclusion}{111}{section.285}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Conclusion}{110}{section.285}}
 \acronymused{MRL}
 \acronymused{MRL}
 \acronymused{MRL}
 \acronymused{MAE}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Future Work}{111}{section.286}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Future Work}{110}{section.286}}
 \acronymused{MRL}
 \acronymused{MAE}
 \citation{redmon2018yolov3}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces An example of how the \ac {MAE} can be used as part of a robotic system.}}{112}{figure.288}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces An example of how the \ac {MAE} can be used as part of a robotic system.}}{111}{figure.288}}
 \acronymused{MAE}
-\newlabel{fig:fsm}{{7.1}{112}{An example of how the \ac {MAE} can be used as part of a robotic system}{figure.288}{}}
+\newlabel{fig:fsm}{{7.1}{111}{An example of how the \ac {MAE} can be used as part of a robotic system}{figure.288}{}}
 \acronymused{MRL}
 \AC@undonewlabel{acro:HRI}
-\newlabel{acro:HRI}{{7.3}{112}{Future Work}{section*.287}{}}
+\newlabel{acro:HRI}{{7.3}{111}{Future Work}{section*.287}{}}
 \acronymused{HRI}
 \acronymused{MAE}
 \AC@undonewlabel{acro:FSM}
-\newlabel{acro:FSM}{{7.3}{112}{Future Work}{section*.289}{}}
+\newlabel{acro:FSM}{{7.3}{111}{Future Work}{section*.289}{}}
 \acronymused{FSM}
 \AC@undonewlabel{acro:NLU}
-\newlabel{acro:NLU}{{7.3}{112}{Future Work}{section*.290}{}}
+\newlabel{acro:NLU}{{7.3}{111}{Future Work}{section*.290}{}}
 \acronymused{NLU}
 \acronymused{MAE}
 \acronymused{MRL}
 \citation{rasa}
-\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces An example of using an MAE trained with MRL to disambiguate which object is being referred to in a scene.}}{113}{figure.291}}
-\newlabel{fig:disamb}{{7.2}{113}{An example of using an MAE trained with MRL to disambiguate which object is being referred to in a scene}{figure.291}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces An example of using an MAE trained with MRL to disambiguate which object is being referred to in a scene.}}{112}{figure.291}}
+\newlabel{fig:disamb}{{7.2}{112}{An example of using an MAE trained with MRL to disambiguate which object is being referred to in a scene}{figure.291}{}}
 \acronymused{MSE}
 \acronymused{NLU}
 \acronymused{NLU}
@@ -1078,34 +1079,34 @@
 \acronymused{MRL}
 \acronymused{HRI}
 \acronymused{MAE}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix \emph  {A Primer on Artifical Neural Networks}}{114}{appendix.292}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix \emph  {A Primer on Artifical Neural Networks}}{113}{appendix.292}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{appendix:app3}{{A}{114}{Appendix \emph {A Primer on Artifical Neural Networks}}{appendix.292}{}}
-\newlabel{eqn:BP1}{{A.1}{114}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.293}{}}
-\newlabel{eqn:BP2}{{A.2}{114}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.294}{}}
-\newlabel{eqn:BP3}{{A.3}{114}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.295}{}}
-\newlabel{eqn:BP4}{{A.4}{115}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.296}{}}
-\newlabel{eqn:hada}{{A.5}{115}{\notesname \@mkboth {\MakeUppercase {\notesname }}{\MakeUppercase {\notesname }}}{equation.298}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix \emph  {Sensory Redundancy}}{116}{appendix.299}}
+\newlabel{appendix:app3}{{A}{113}{Appendix \emph {A Primer on Artifical Neural Networks}}{appendix.292}{}}
+\newlabel{eqn:BP1}{{A.1}{113}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.293}{}}
+\newlabel{eqn:BP2}{{A.2}{113}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.294}{}}
+\newlabel{eqn:BP3}{{A.3}{113}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.295}{}}
+\newlabel{eqn:BP4}{{A.4}{114}{Appendix \emph {A Primer on Artifical Neural Networks}}{equation.296}{}}
+\newlabel{eqn:hada}{{A.5}{114}{\notesname \@mkboth {\MakeUppercase {\notesname }}{\MakeUppercase {\notesname }}}{equation.298}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix \emph  {Sensory Redundancy}}{115}{appendix.299}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{appendix:app4}{{B}{116}{Appendix \emph {Sensory Redundancy}}{appendix.299}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B.1}{\ignorespaces Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}}{117}{table.300}}
-\newlabel{tab:mnist_ucu_master_res}{{B.1}{117}{Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}{table.300}{}}
+\newlabel{appendix:app4}{{B}{115}{Appendix \emph {Sensory Redundancy}}{appendix.299}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B.1}{\ignorespaces Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}}{116}{table.300}}
+\newlabel{tab:mnist_ucu_master_res}{{B.1}{116}{Results from the combined MNIST Handwritten Digits and UCU Arabic Spoken Digits}{table.300}{}}
 \bibdata{bigone}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Appendix \emph  {Magical Vectors and Where to Find Them}}{118}{appendix.301}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Appendix \emph  {Magical Vectors and Where to Find Them}}{117}{appendix.301}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{appendix:app5}{{C}{118}{Appendix \emph {Magical Vectors and Where to Find Them}}{appendix.301}{}}
-\newlabel{eqn:updates}{{C.1}{118}{Appendix \emph {Magical Vectors and Where to Find Them}}{equation.303}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {C.1}{\ignorespaces Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments.}}{119}{table.302}}
-\newlabel{tab:Arts_MAE_description}{{C.1}{119}{Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments}{table.302}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {C.2}{\ignorespaces Number of weight updates per Epoch for each experiment.}}{119}{table.304}}
-\newlabel{tab:updatesperEpoch}{{C.2}{119}{Number of weight updates per Epoch for each experiment}{table.304}{}}
+\newlabel{appendix:app5}{{C}{117}{Appendix \emph {Magical Vectors and Where to Find Them}}{appendix.301}{}}
+\newlabel{eqn:updates}{{C.1}{117}{Appendix \emph {Magical Vectors and Where to Find Them}}{equation.303}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {C.1}{\ignorespaces Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments.}}{118}{table.302}}
+\newlabel{tab:Arts_MAE_description}{{C.1}{118}{Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments}{table.302}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {C.2}{\ignorespaces Number of weight updates per Epoch for each experiment.}}{118}{table.304}}
+\newlabel{tab:updatesperEpoch}{{C.2}{118}{Number of weight updates per Epoch for each experiment}{table.304}{}}
 \bibcite{smith2008infants}{{1}{}{{}}{{}}}
 \bibcite{yurovsky2013statistical}{{2}{}{{}}{{}}}
 \bibcite{rosenblatt1958perceptron}{{3}{}{{}}{{}}}
@@ -1116,7 +1117,7 @@
 \bibcite{zeiler2010deconvolutional}{{8}{}{{}}{{}}}
 \bibcite{kingma2013auto}{{9}{}{{}}{{}}}
 \bibcite{krizhevsky2012imagenet}{{10}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{120}{appendix*.305}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{119}{appendix*.305}}
 \bibcite{vinyals2019alphastar}{{11}{}{{}}{{}}}
 \bibcite{ma2004facial}{{12}{}{{}}{{}}}
 \bibcite{levi2015emotion}{{13}{}{{}}{{}}}

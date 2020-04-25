@@ -13,9 +13,9 @@
 \section{Summary of Important Points}
 The aim of this thesis was to demonstrate how \ac{MRL} can be used to solve the symbol grounding problem in an unsupervised manner.
 
-Through the course of the experiments shown in \autoref{Chapter4}, \autoref{Chapter5} and \autoref{Chapter6}, I have demonstrated that the joint representation of different data modalities solves the symbol grounding problem. This was shown to be the case as the correct image was generated for each utterance provided in \autoref{Chapter4}. Similarly in \autoref{Chapter5} and \autoref{Chapter6} I showed that images of objects could be generated from their decriptions and vice-versa even for unseen combinations of attribute.
+Through the course of the experiments shown in \autoref{Chapter4},5 and 6, I have demonstrated that the joint representation of different data modalities solves the symbol grounding problem. This was shown to be the case as the correct image was generated for each utterance provided in \autoref{Chapter4}. Similarly in \autoref{Chapter5} and \autoref{Chapter6} I showed that images of objects could be generated from their decriptions and vice-versa even for unseen combinations of attributes.
 
-The learned representation has been demonstrated to fit the criteria layed out by Bengio et al. in \cite{repRev}. Particularly, the representation has been demonstrated to have Manifolds which can be manipulated through vector arithmetic to make predictable and meaningful changes in the output. For example, subtracting the representation fo the word \textsc{red} from the representation of an image of a \textit{Red Triangle} and adding the representation of the word \textsc{Green} resulted in the generation of an image of a \textit{Green Triangle} in \autoref{Chapter5}. 
+The learned representation has been demonstrated to fit the criteria layed out by Bengio et al. in \cite{repRev}. Particularly, the representation has been demonstrated to have Manifolds which can be manipulated through vector arithmetic to make predictable and meaningful changes in the output. For example, subtracting the representation of the word \textsc{red} from the representation of an image of a \textit{Red Triangle} and adding the representation of the word \textsc{Green} resulted in the generation of an image of a \textit{Green Triangle} in \autoref{Chapter5}. 
 
 In some datasets, such as MNIST and ArtS, it is possible to generate image prototypes for each class/word in the \ac{MAE}'s ``vocabulary''. For MNIST, this came in the form of prototypical versions of each digit and for ArtS, images of each colour, shape and size can be generated individually.
 
@@ -29,7 +29,7 @@ In \autoref{Chapter5} and \autoref{Chapter6} I showed that \ac{MRL} allows \acp{
 \section{Conclusion}
 \ac{MRL} has been shown to be a powerful technique and presents an area worthy of futher study. Whilst the findings of the experiments in this thesis are exciting, further work is needed to apply \ac{MRL} in a real world setting.
 
-Unsupervised approaches to symbol grounding are vital to the development of robots for opperation in the real world. \ac{MRL} could form the foundation of a robotic cognitive system which can continue to learn throught its lifetime. Furthermore, the ability of the trained \acp{MAE} to generalise to unseen objects will make teaching robots about new objects quicker as it is not necessary to train the \ac{MAE} with every possible combination of visual attributes. Only a subset of atrribute combinations needs to be learnt, from which other attribute combinations can be inferred as demonstrated in \autoref{Chapter5} when generating images of \textsc{Red Donuts}.
+Unsupervised approaches to symbol grounding are vital to the development of robots for opperation in the real world. \ac{MRL} could form the foundation of a robotic cognitive system which can continue to learn throught its lifetime. Furthermore, the ability of the trained \acp{MAE} to generalise to unseen objects will make teaching robots about new objects quicker as it is not necessary to train the \ac{MAE} with every possible combination of visual attributes. Only a subset of attribute combinations needs to be learnt, from which other attribute combinations can be inferred as demonstrated in \autoref{Chapter5} when generating images of \textsc{Red Donuts}.
 
 
 
@@ -59,7 +59,7 @@ First, the image is split into patches, this can be done naively by sliding a wi
 
 Comparing the embedding of each image patch to the embedding of the query, the image patch of interest should have the smallest \ac{MSE} between it and the query.
 
-In order for the scenario depicted in \ref{fig:disamb}, an \ac{NLU} module must be trained to extract the Intent of the human's utterance as well as any Entities which the human refers to. Fortunately, these types of \acp{NLU} are easily built using open source libraries like Rasa \cite{rasa}.
+In order for the scenario depicted in \autoref{fig:disamb}, an \ac{NLU} module must be trained to extract the Intent of the human's utterance as well as any Entities which the human refers to. Fortunately, these types of \acp{NLU} are easily built using open source libraries like Rasa \cite{rasa}.
 
 
 
