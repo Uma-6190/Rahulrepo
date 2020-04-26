@@ -709,12 +709,12 @@ N.~Hammami and M.~Bedda.
 \newblock In {\em 2010 3rd International Conference on Computer Science and
   Information Technology}volume~5 521. IEEE2010.
 
-\bibitem{sheppard2020multimodal}
-E.~Sheppard and K.~S.~Lohan.
-\newblock {\em Multimodal Representation Learning for Human Robot Interaction,}
-  .
-\newblock In {\em 2020 15th ACM/IEEE International Conference on Human-Robot
-  Interaction (HRI)}. IEEE2020.
+\bibitem{sheppardtowards}
+E.~Sheppard, H.~Lehmann, G.~Rajendran, P.~E.~McKenna, O.~Lemon, and
+  K.~S.~Lohan,
+{\em Towards Life Long Learning: Multimodal Learning of MNIST Handwritten
+  Digits,}
+IEEE ICDL EPIROB 2018 Workshop on Life Long Learning(2018).
 
 \bibitem{keller2016analysis}
 I.~Keller and K.~S.~Lohan.
@@ -733,6 +733,13 @@ L.~Schillingmann, B.~Wrede, and K.~Rohlfing.
 L.~Schillingmann, B.~Wrede, and K.~J.~Rohlfing,
 {\em A computational model of acoustic packaging,}
 IEEE Transactions on Autonomous Mental Development {\bf 1} (2009) 226.
+
+\bibitem{sheppard2020multimodal}
+E.~Sheppard and K.~S.~Lohan.
+\newblock {\em Multimodal Representation Learning for Human Robot Interaction,}
+  .
+\newblock In {\em Companion of the 2020 ACM/IEEE International Conference on
+  Human-Robot Interaction} 4452020.
 
 \bibitem{redmon2018yolov3}
 J.~Redmon and A.~Farhadi,
