@@ -3,56 +3,7 @@
 \lhead{Appendix \emph{Magical Vectors and Where to Find Them}}
 
 
-\begin{table}
-		\centering
-		\begin{tabular}{|c|c|c|c|c|c|c|}
-			\hline
-			\textbf{Block} & \textbf{Layer} & \textbf{Type} & \textbf{Neurons} & \textbf{Kernel} & \textbf{Strides} & \textbf{Activation} \\ \hline
-			\multirow{3}{*}{Image} & 1i	&	2D Conv & 64 & (3,3) & (1,1) & Relu \\ \cline{2-7}
-			& 2i	&	2D Conv & 64 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-			& 3i	&	2D Conv & 32 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-\multirow{3}{*}{Encoder} & 4i	&	2D Conv & 32 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-			& 5i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-			& 6i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-			& 7i	&	Dropout p=0.25 &	 & 	     &       &  \\ \hline
 
-			\multirow{3}{*}{Word} & 1w	& Dense & 128 & & &TanH \\ \cline{2-7}
-			& 2w	& Dense & 256 & & &TanH \\ \cline{2-7}
-			& 3w 	&	Dropout p=0.5 &	 & 	     &       & \\ \cline{2-7}
-\multirow{4}{*}{Encoder}& 4w  &	Reshape (16,16,1) & & & & \\ \cline{2-7}
-			& 5w	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-			& 6w	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-			& 7w	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \hline
-
-			Merge & 8iw	& Merge & & & & \\ \hline
-Embedding & 9iw	&	2D Conv  & emb size & (3,3) & (1,1) & Relu \\ \hline
-			
-			
-			\multirow{4}{*}{Image} & 10i 	&	Dropout p=0.25 &	 & 	     &       & \\ \cline{2-7}
-			& 11i	&	2D Trans Conv & 16 & (3,3) & (2,2)  & TanH \\ \cline{2-7}
-			& 12i	&	2D Trans Conv & 16 & (3,3) & (2,2)  & TanH \\ \cline{2-7}
-			& 13i	&	2D Trans Conv & 16 & (3,3) & (2,2)  & TanH \\ \cline{2-7}
-\multirow{4}{*}{Decoder}& 14i	&	2D Trans Conv & 32 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
-			& 15i	&	2D Trans Conv & 64 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
-			& 16i	&	2D Trans Conv & 64 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
-			& 17i	&	2D Trans Conv & 3 & (3,3) & (1,1) & Sigmoid\\ \hline 
-
-			\multirow{4}{*}{Word} & 10w 	&	Dropout p=0.25 &	 & 	     &       & \\ \cline{2-7}
-			& 12w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
-			& 13w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
-			& 14w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
-\multirow{5}{*}{Decoder}& 15w	& Reshape (256) & & & & \\ \cline{2-7}
-			& 16w	& Dropout p=0.5 &	 & 	     &       & \\ \cline{2-7}
-			& 17w	& Dense & 256 & & &TanH \\ \cline{2-7}
-			& 18w	& Dense & 128 & & &TanH \\ \cline{2-7}
-			& 19w	& Dense & 22 & & & Sigmoid \\ \hline
-			
-			
-		\end{tabular}
-		\caption{Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments.}
-		\label{tab:Arts_MAE_description}
-
-	\end{table}
 %This appendix contains extra figures from \autoref{Chapter5}
 %\begin{figure}
 %\centering

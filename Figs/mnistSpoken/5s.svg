@@ -30,7 +30,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="208.36786"
+     inkscape:cx="57.653574"
      inkscape:cy="153.47512"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -39,7 +39,7 @@
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
      inkscape:window-height="993"
-     inkscape:window-x="1920"
+     inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      fit-margin-top="1"
@@ -63,7 +63,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -173,7 +173,7 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="59.512558"
+       x="57.512558"
        y="330.08829"
        id="text4669-7-7-3-7-3-8-3"
        sodipodi:linespacing="125%"
@@ -181,7 +181,7 @@
        inkscape:export-ydpi="300"><tspan
          sodipodi:role="line"
          id="tspan4671-5-5-6-5-5-6-6"
-         x="59.512558"
+         x="57.512558"
          y="330.08829">RD X MFCC </tspan></text>
     <image
        y="138.28589"

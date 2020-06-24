@@ -11,14 +11,16 @@
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}\label{Lit:Intro}
-In this section I will layout the key ideas and technologies which have inspired and enabled the research presented later in this thesis.
+In this section, I will layout the key ideas and technologies which have inspired and enabled the research presented later in this thesis.
 
-Due to the broad scope of the research carried out, the background section is loosely presented so as to compare and contrast the state-of-the-art artificial neural network technologies with their biological analogues (where possible). As such, I survey machine learning, robotics, psychology and biology literature.
+Due to the broad scope of the research carried out, the background section is loosely presented so as to compare and contrast the state-of-the-art artificial neural network technologies with their biological analogues (where possible). As such, I survey machine learning, robotics, psychology and biology literature. \textcolor{red}{This is done to illuminate the thought process behind the choices I made in designing the experiments and \acp{ANN} in this thesis.}
 
-In doing this, I aim to demonstrate how \acp{ANN} have very good performance in specific areas, whilst lagging far behind in many others. By bringing these divergent fields together, perhaps it is possible to find ways to improve \acp{ANN} whilst also further developing our understanding of what makes humans tick. 
+%This chapter aims to demonstrate how \acp{ANN} have very good performance in specific areas, whilst lagging far behind in many others. By bringing these divergent fields together, perhaps it is possible to find ways to improve \acp{ANN} whilst also further developing our understanding of what makes humans tick. 
 
+\textcolo{red}{As \acp{ANN} are my method of choice for implementing \ac{MRL} it is important to understand where they excel as well as their limitations.}
 
 \section{What are Artifical Neural Networks Good at?}
+
 Artificial Neural Networks have been around for a long time but perhaps the best example of early neural networks is the \acl{MLP}(\ac{MLP} \cite{rosenblatt1958perceptron}. Modern \acp{ANN} can trace their lineage back to the \ac{MLP}; however the technology has advanced a lot since 1958. \acp{ANN} represent the state-of-the-art on many Artificial Intelligence benchmarks.
 
 \acp{ANN} are currently enjoying a new renaissance due to wide spread availablity of \acp{GPU}, big data, and software libraries like Tensorflow and CUDA.
@@ -31,7 +33,7 @@ The field of \ac{DL} has advanced greatly in recent years, with \acp{ANN} being 
 Of these categories of problems, \ac{MRL}(as it is presented in this thesis) draws mostly from Classification, \ac{NLP} and Data Generation, so these will be the focus of this survey.
 
 \subsection{Classification}
-\ac{MRL} can be considered to draw from different classification tasks, depending on which modalities it is used with. In this thesis I apply \ac{MRL} to image, speech, and textual data, as such I will focus on general recognition techniques from the image processing domain and will not focus on more nitch problems such as Facial Recognition \cite{ma2004facial}, Emotion Recognition \cite{levi2015emotion} or more general data classification problems \cite{kussul2017deep,qi2017pointnet}, including my own work on classification of individuals with Autism Spectrum Conditions: \cite{lohan2016distinguishing, sheppard2017understanding, lohan2018toward}.
+\ac{MRL} can be considered to draw from different classification tasks, depending on which modalities it is used with. In this thesis I apply \ac{MRL} to image, speech, and textual data, as such I will focus on general recognition techniques from the image processing domain and will not focus on more niche problems such as Facial Recognition \cite{ma2004facial}, Emotion Recognition \cite{levi2015emotion} or more general data classification problems \cite{kussul2017deep,qi2017pointnet}, including my own work on classification of individuals with Autism Spectrum Conditions: \cite{lohan2016distinguishing, sheppard2017understanding, lohan2018toward}.
 
 \subsubsection{AlexNet}
 With Krizhevsky's work in\cite{krizhevsky2012imagenet}, a style of \ac{ConvNet} architecture, consisting of convolution, max-pooling, and dropout layers followed by fully connected layers and a softmax output layer was created. This has become a standard type of architecture for image classification tasks with many similar networks appearing such as VGG 16 and 19 \cite{simonyan2014very}.
@@ -56,13 +58,17 @@ Whilst classification tasks are concerned with grouping input data into classes,
 We can also consider \ac{AE} a type of generative network due to the way in which they are trained, however, it is more useful to consider them from the perspective of representation learning. For example in \cite{lu2013speech} \acp{AE} are used to generate denoised speech.
 
 \subsubsection{Generative Adversarial Networks}
-I will not spend much time on the \ac{GAN} based methods as they are not utilised in the research presented in this thesis. However, \acp{GAN} are a very active area of research so here is a brief overview. 
+I will not spend much time on the \ac{GAN} based methods as they are not utilised in the research presented in this thesis. \textcolor{red}{I chose not to use \acp{GAN} as they do not allow for a bidirectional symbol grounding to be achieved. As I aim to both generate images from verbal or textual descriptions as well as verbal or textual descriptions from images, the \ac{GAN} would not be a suitable architecture. Using a \ac{GAN} would require training two separate networks, where the \ac{MAE} only requires one joint network to achieve both goals.} However, \acp{GAN} are a very active area of research so here is a brief overview. 
 
 In \cite{mirza2014conditional} the Generator network is fed noise and a class label from which images of that class are generated. The Discriminator is fed the desired class and either a real or generated image and tasked with distinguishing whether the image is real or not. By inverting and backpropogating the error gradients from the Discriminator through the Generator, the Generator learns to fool the Discriminator by generating realistic images for each class in the dataset.
 
 Odena et al. \cite{odena2017conditional} expand on the work in \cite{mirza2014conditional}. Instead of feeding the desired class to the Descriminator, they train an auxillory classifier network which classifies which class the generated and real images belong to.
 
 \acp{GAN} can also be used for style transfer \cite{zhu2017unpaired}. Style transfer is similar to translating from one modality to another, thus \cite{zhu2017unpaired} demonstrates the flexibility and power of \acp{GAN} which could be applied to a much wider variety of problems than those I have highlighted here. Zhu et al. use the Descriminator of a \ac{GAN} to determine whether an image is from a given domain (e.g. Monet paintings) or was translated by the Generator from another domain (e.g. photos). In doing so the Generator learns to produce images in the chosen domain from images in a source domain (e.g. photo $\rightarrow$ Monet painting).
+
+\textcolor{red}{Reed et al. \cite{reed2016generative} extend the class condtioned \ac{GAN} to generate images from textual descriptions. To do this, they alter the \ac{GAN} training paradigm from having the descriminator label real and generated images as either real or fake, to label real images with matching textual information as real, generated images with arbitrary text as fake and real images with with mismatched descritions as fake. In doing this, the descriminator learns to align visual attributes of the images with words in the descriptions, whilst the generator learns to gnerate images which match the descriptions on which it is conditioned.}
+
+\textcolor{red]{This method of learning to translate text to images has a strong connection to the work carried out in this thesis. However, the key destinction between the methods I employ and \ac{GAN} based methods is that the \ac{MAE} learns a joint representation of images and text (or sound) from which both images and text (or sound) can be regenerated. The \ac{GAN} method only learns a representation of text which can be used to generate images - the inverse problem is not addressed. I.e. the \ac{MAE} can do images to text and text to images jointly, whils the \ac{GAN} can only do text to images.}
 
 \subsubsection{Modality Translation: Image Caption Generation}
 Translating from one modality to another can also be done by other types of neural networks, not just those trained in an adversarial manner as with \acp{GAN}.
@@ -119,9 +125,9 @@ Consider now what the \ac{VAE} is trained to do, it learns to produce a compress
 In a second experiment, Pu et al. train their caption generation system in an end-to-end fashion, this lead to a significant improvement in performance (+0.11 BLEU \cite{bleu}). This demonstrates that the representation of the \ac{VAE} can be improved upon by adapting the feature extraction process specifically for the captioning task.
 
 
-As well as representations of images, \ac{AE} can be used to learn representations of other types of data. A good example of this is WaveNet \cite{wavenet}. Chorowski et al. demonstrate how strided convolutions \cite{radford2015unsupervised} can be used to capture the time dependant regularites of speech at different scales within an vector quantised autoencoding architecture \cite{van2017neural}. Chorowski et al. build off of a large body of research on speech representation using \acp{AE} \cite{vincent2010stacked, lu2013speech}.
+As well as representations of images, \ac{AE} can be used to learn representations of other types of data. A good example of this is WaveNet \cite{wavenet}. Chorowski et al. demonstrate how strided convolutions \cite{radford2015unsupervised} can be used to capture the time dependant regularites of speech at different scales within an vector quantised autoencoding architecture \cite{van2017neural}. Chorowski et al. build off of research on speech representation using \acp{AE}, for example \cite{vincent2010stacked, lu2013speech}.
 
-The WaveNet architecture stacks layers of strided convolutions with each successive layer having a larger stride, this allows the network to consider features from more and more distant (in time) points of the input data. An intuitive way of understanding why this is useful for generating a representation of speech is to imagine two different speakers saything the same word. One speaker speaks very quickly and the other very slowly. This means that the same word, said by each speaker, will have different characteristics with respect to time but as each speaker is saying the same word, the network must be able to ignore this variation.
+The WaveNet architecture stacks layers of strided convolutions with each successive layer having a larger stride, this allows the network to consider features from more and more distant (in time) points of the input data. An intuitive way of understanding why this is useful for generating a representation of speech is to imagine two different speakers say the same word. One speaker speaks very quickly and the other very slowly. This means that the same word, said by each speaker, will have different characteristics with respect to time but as each speaker is saying the same word, the network must be able to ignore this variation.
 
 In \cite{wavenet}, Chorowski et al. show that their unsupervised, speaker independant, WaveNet is able to beat the state-of-the-art performance on a phonetic unit discovery task \cite{dunbar2017zero} on two out of three languages (English and French) demonstrating that the WaveNet representation can be used to correctly distinguish between phonemes. The languages it acheived the best results for had significantly more training data, though for the third language (Mandarin) it achieved comparable results to other entrants to the ZeroSpeech 2017 challenge. 
 
@@ -245,7 +251,7 @@ Infants are then given years of training to learn to be the adaptable, general i
 As a consequence of embodiement, humans have inherent signal conditioning systems \cite{pezzulo2013computational}, these help guide the learning process.
 
 In \cite{johnson2015two}, Johnson et al. comment on the well established `\ac{TPT} of face processing' in humans.  During the `Conspec' stage of the \ac{TPT} the superior colliculus interacts with both visual and motor systems driving visual attention towards conspecific stimuli. The `Conlern' stage of the \ac{TPT} is guided by the `Conspec' stage due to a larger proportion of conspecific visual data  (e.g. the human face) being provided to the visual cortex as more attention is given to these stimuli by the superior colliculus. 
-The Superior Colliculous guides learning in the visual cortex by controlling attention.
+The superior colliculus guides learning in the visual cortex by controlling attention.
 
 In \cite{bambach2017egocentric}, Bambach highlights the importance of data quality when training visual recognition systems, thus the superior colliculus may help to improve the learning of the visual cortex by providing focused, high-quality training examples.
 
@@ -312,7 +318,7 @@ This method for developing a symbolic language to maximise a reward function, is
 In my opinion, multimodality is fundamental to symbol grounding and is a key aspect of embodiment. The work in this thesis focuses on the grounding of visual and linguistic percepts and does not explore how actions, emotions or other more complex phenomina should be modeled in a grounded manner. I use datasets of paired visual and linguistic percepts to train \acp{MAE}. The future work section details how my approach can be extended for operation in the real world with the use of a robot body. This approach builds off of the work of Ngiam et al. \cite{ngiam2011multimodal} and Silberer et al.\cite{silberer2014learning} on \acp{MAE}, in particular.
 
 \subsubsection{Why use MAEs?}
-In \cite{ngiam2011multimodal},Ngiam et al. train a \ac{MAE} using video and pre-processed audio data to classify speech data. They demonstrate that the addition of the visual data improves recognition under noisy conditions, highlighting the technical advantages of \acp{MAE}. Further to this they demonstrate that the McGurk effect \cite{mcgurk1976hearing} occurs in the \ac{MAE}, highlighting that it is a good analogy for the human audio and visual cortices and how they interact.
+In \cite{ngiam2011multimodal}, Ngiam et al. train a \ac{MAE} using video and pre-processed audio data to classify speech data. They demonstrate that the addition of the visual data improves recognition under noisy conditions, highlighting the technical advantages of \acp{MAE}. Further to this they demonstrate that the McGurk effect \cite{mcgurk1976hearing} occurs in the \ac{MAE}, highlighting that it is a good analogy for the human audio and visual cortices and how they interact.
 
 In \cite{silberer2014learning}, Silberer et al. demonstrate the ability of \acp{MAE} to reconstruct missing data when only one modality is present. A similar effect is seen in the human brain where sensory redundancy is utilised to repair and reconstruct data from noisy or missing percepts \cite{samuel1997lexical}. 
 

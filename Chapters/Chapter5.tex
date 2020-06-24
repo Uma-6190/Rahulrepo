@@ -102,8 +102,59 @@ Further to this, I will demonstrate that once trained, the \ac{ANN} can infer th
 
 
 \subsection{Network Description}
-The overall structure of the \ac{ANN} used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description} in \autoref{appendix:app5} gives the specific details on each of the layers of the network. Additionally, batch normalisation is used between each convolution layer.
+The overall structure of the \ac{ANN} used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description}  gives the specific details on each of the layers of the network. Additionally, batch normalisation is used between each convolution layer.
 
+\begin{table}
+		\centering
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			\textbf{Block} & \textbf{Layer} & \textbf{Type} & \textbf{Neurons} & \textbf{Kernel} & \textbf{Strides} & \textbf{Activation} \\ \hline
+			\multirow{3}{*}{Image} & 1i	&	2D Conv & 64 & (3,3) & (1,1) & Relu \\ \cline{2-7}
+			& 2i	&	2D Conv & 64 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+			& 3i	&	2D Conv & 32 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+\multirow{3}{*}{Encoder} & 4i	&	2D Conv & 32 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+			& 5i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+			& 6i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+			& 7i	&	Dropout p=0.25 &	 & 	     &       &  \\ \hline
+
+			\multirow{3}{*}{Word} & 1w	& Dense & 128 & & &TanH \\ \cline{2-7}
+			& 2w	& Dense & 256 & & &TanH \\ \cline{2-7}
+			& 3w 	&	Dropout p=0.5 &	 & 	     &       & \\ \cline{2-7}
+\multirow{4}{*}{Encoder}& 4w  &	Reshape (16,16,1) & & & & \\ \cline{2-7}
+			& 5w	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+			& 6w	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+			& 7w	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \hline
+
+			Merge & 8iw	& Merge & & & & \\ \hline
+Embedding & 9iw	&	2D Conv  & emb size & (3,3) & (1,1) & Relu \\ \hline
+			
+			
+			\multirow{4}{*}{Image} & 10i 	&	Dropout p=0.25 &	 & 	     &       & \\ \cline{2-7}
+			& 11i	&	2D Trans Conv & 16 & (3,3) & (2,2)  & TanH \\ \cline{2-7}
+			& 12i	&	2D Trans Conv & 16 & (3,3) & (2,2)  & TanH \\ \cline{2-7}
+			& 13i	&	2D Trans Conv & 16 & (3,3) & (2,2)  & TanH \\ \cline{2-7}
+\multirow{4}{*}{Decoder}& 14i	&	2D Trans Conv & 32 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
+			& 15i	&	2D Trans Conv & 64 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
+			& 16i	&	2D Trans Conv & 64 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
+			& 17i	&	2D Trans Conv & 3 & (3,3) & (1,1) & Sigmoid\\ \hline 
+
+			\multirow{4}{*}{Word} & 10w 	&	Dropout p=0.25 &	 & 	     &       & \\ \cline{2-7}
+			& 12w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
+			& 13w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
+			& 14w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
+\multirow{5}{*}{Decoder}& 15w	& Reshape (256) & & & & \\ \cline{2-7}
+			& 16w	& Dropout p=0.5 &	 & 	     &       & \\ \cline{2-7}
+			& 17w	& Dense & 256 & & &TanH \\ \cline{2-7}
+			& 18w	& Dense & 128 & & &TanH \\ \cline{2-7}
+			& 19w	& Dense & 22 & & & Sigmoid \\ \hline
+			
+			
+		\end{tabular}
+		\caption{Image and Word multimodal autoencoder. Layers marked i, w, and iw are image, word, and image and word respectively. The number of neurons, ``emb size'', in the Embedding block is varied in some experiments.}
+		\label{tab:Arts_MAE_description}
+
+	\end{table}
+	
 
 
 \section{Experiments with the ArtS Dataset}
@@ -871,8 +922,8 @@ MAE 1	&	3.87	$\mypm$	0.23	&	43.22	$\mypm$	44.88	&	4.05	$\mypm$	0.24	\\ \hline
 MAE 1*	&	5.21	$\mypm$	0.78	&	86.71	$\mypm$	75.11	&	5.28	$\mypm$	0.55	\\ \hline
 MAE 2	&	3.72	$\mypm$	0.21	&	15.60	$\mypm$	23.65	&	3.97	$\mypm$	0.29	\\ \hline
 MAE 2*	&	4.95	$\mypm$	1.02	&	41.54	$\mypm$	23.46	&	7.18	$\mypm$	2.74	\\ \hline
-MAE 3	&	4.01	$\mypm$	0.32	&	43.95	$\mypm$	79.53	&	4.12	$\mypm$	0.09	\\ \hline
-MAE 3*	&	3.07	$\mypm$	0.77	&	86.16	$\mypm$	123.74	&	2.67	$\mypm$	0.24	\\ \hline
+MAE 3	3.07	$\mypm$	0.77 &		&	43.95	$\mypm$	79.53	&	4.12	$\mypm$	0.09	\\ \hline
+MAE 3*	&	4.01	$\mypm$	0.32	&	86.16	$\mypm$	123.74	&	2.67	$\mypm$	0.24	\\ \hline
 \end{tabular}
 \caption{Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times10^{-3}$.)}
 \label{tab:res_exp5}

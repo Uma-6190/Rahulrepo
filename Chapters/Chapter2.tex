@@ -9,7 +9,7 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{Introduction}
-This chapter presents an overview of the mathematical theory of \acp{ANN} and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.
+This chapter presents an overview of the mathematical theory of \acp{ANN} and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.\textcolor{red}{As the architecture of the \acp{ANN} used in this thesis are novel, this chapter introduces the different building blocks used to construct them and why these design choices were made}
 
 \section{Perceptrons}
 \label{sec:percep}
@@ -62,7 +62,7 @@ By adjusting each of the weights we can change the output of the perceptron.
 	\centering
 	\includegraphics[width=0.4\textwidth]{Figs/intro2dl/mlp.png}
 	
-	\caption{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with two binary inputs, $x_0, x_1$.}
+	\caption{\textcolor{red}{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with two binary inputs, $x_0, x_1$.}}
 	\label{fig:mlp}
 \end{figure}
 
@@ -156,6 +156,8 @@ ylabel near ticks,
 
 Now that we have an activation function that can produce continuous values, we can consider a much more diverse range of data to train our neural networks with. So instead of just making yes or no decisions we can look at, for example, the colours of pixels and decide if there is a cat in the image or given today's weather, predict if it will rain tomorrow.
 
+\textcolor{red}{I make use of Sigmoid neurons at the output of the \acp{ANN} in this thesis as having an output value between zero and one makes scaling the generated data back to the scale of the original data a simple task.}
+
 \subsection{Other activation functions}
 There are two other important and commonly used activation functions, though many others exist. These are, the \ac{Tanh} shown in \autoref{fig:activation_tanh} and \ac{Relu} shown in \autoref{fig:activation_relu}.
 
@@ -184,6 +186,7 @@ ylabel near ticks,
 
 The \ac{Tanh} function looks similar to the sigmoid function, however it has an output between negative one and one, where the sigmoid goes from zero to one. This is useful when negative values are important to what the network is learning.
 
+
 \begin{figure}
 \begin{center}
 \begin{tikzpicture}
@@ -203,12 +206,16 @@ ylabel near ticks,
     
 
 \end{tikzpicture}
-\caption{Visualisation of the rectified linear unit activation function.Where z is the activation $\sum_{j} w_j x_j + b$ and $\sigma$(z) is the Relu activation function applied to z.}
+\caption{Visualisation of the rectified linear unit activation function.Where z is the activation $\sum_{j} w_j x_j + b$ and $\sigma$(z) is the \ac{Relu} activation function applied to z.}
 \label{fig:activation_relu}
 \end{center}
 \end{figure}
 
-The \ac{Relu} was created to address an issue known as vanishing gradients \cite{hochreiter1998vanishing}. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks \endnote{Deeper networks are beneficial as they can make more complex decisions by layering the outcomes of multiple simple decsions.} can be trained as non-linear functions (like the Sigmoid or \ac{Tanh}) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. If that doesn't make sense yet, don't worry, it will become clear shortly.
+The \ac{Relu} was created to address an issue known as vanishing gradients \cite{hochreiter1998vanishing}. This is to do with how neural networks are trained, as expalined in the next section. Briefly, as training depends on error gradients, having a linear activation function means that deeper networks can be trained as non-linear functions (like the Sigmoid or \ac{Tanh}) will have reduced gradient magnitude when they are differentiated to backpropogate the error through the network. Deeper networks are beneficial as they can make more complex decisions by layering the outcomes of multiple simple decsions.
+
+\textcolor{red}{I primarily make use of \ac{Tanh} neurons in the hidden layers of the decoders of \acp{MAE}.
+%\ac{Relu} units were not used here as in preliminary experiments, they prevented the \acp{MAE} from converging due to exploding gradients (the opposite of vanishing gradients. 
+\ac{Relu} neurons were used in the encoders of the \acp{MAE} as they are deep networks and  vanishing gradients would prevent the early layers of the network from learning. This removes the need to do layerwise pretraining \cite{bengio2007greedy}.}
 
 \section{Learning Algorithms}
 Simple computation units like the perceptron or Sigmoid neurons can make simple decisions and can be chained together to make more complex decisions. However, sometimes the decisions they make are wrong and they need to learn from their mistakes.
@@ -224,10 +231,10 @@ There are many ways to train neural networks: supervised, unsupervised, reinforc
 adversarial learning (to name a few). The experiments in this thesis will focus on supervised and unsupervised learning. %However, here is a brief description of the more prominant methods.
 
 
-\textbf{Supervised learning} - an external system is used to provide ground truth values for the desired output of the network. An example would be classification using standardised datasets like MNIST handwritten digits \cite{lecun1998mnist}.
+\textbf{Supervised learning} - an external system is used to provide ground truth values for the desired output of the network. An example would be classification using standardised datasets like MNIST handwritten digits \cite{lecun1998mnist}. \textcolor{red}{This is seen in \autoref{Chapter4}.}
 
 
-\textbf{Unsupervised learning} - no external system provides ground truth values, instead these are inferred directly from the data. Autoencoders are a good example of this.  
+\textbf{Unsupervised learning} - no external system provides ground truth values, instead these are inferred directly from the data. Autoencoders are a good example of this.  \textcolor{red}{This is seen in chapters 4,5 and 6.}
 
 %\todo[inline]{finish this}
 %\textbf{Reinforcement learning} - an external system provides a score which estimates the value of an action (think about getting points in a video-game). Training a dog by giving it treats when it performs a trick is reinforcement learning. We reinforce the desired behaviour by rpoviding a reward.
@@ -251,7 +258,7 @@ C = \frac{1}{n}\sum_{i=0}^{n} (Y_i - \hat{Y_i})^2
 
 When used as a loss function, \ac{MSE} gives a measure of how bad our estimate $\hat{Y_i}$ is of our true value $Y_i$ on average for for all $n$ training samples in a given dataset. A perfect model would have an \ac{MSE} of 0 as $\hat{Y_i}$ would be equal to $Y_i$ for all values of $i$.
 
-In general, $Y_i$ and $\hat{Y_i}$ can be of arbitrary size and shape (as long as they match each other). That is, they can be scalers, vectors or matricies.
+In general, $Y_i$ and $\hat{Y_i}$ can be of arbitrary size and shape (as long as they match each other). That is, they can be scalars, vectors or matricies.
 
 \subsubsection{Cross-Entropy}
 Cross-entropy measures the error between two probability distributions $P$ and $Q$ using the formula shown in \autoref{eqn:xntrpy}. $P$ is the true probability distribution which we are trying to model with our predicted probability distribution $Q$.
@@ -340,7 +347,7 @@ If we make a small change to either of the weights $w_0$ and $w_1$ we will get a
 \Delta C \approx \frac{\delta C}{\delta w_0} \Delta w_0 + \frac{\delta C}{\delta w_1} \Delta w_1
 \end{equation}
 
-We want to minimise C so we want $\Delta C$ to be negative. To make $\Delta C$ negative we will need to first denote that the gradient of $C$, $\nabla C$. 
+We want to minimise C so we want $\Delta C$ to be negative. To make $\Delta C$ negative we will need to first denote the gradient of $C$, $\nabla C$. 
 
 \begin{equation} \label{eqn:nabla_c}
 \nabla C \equiv (\frac{\delta C}{\delta w_0}, \frac{\delta C}{\delta w_1})^T
@@ -367,7 +374,7 @@ By iteratively making changes to the weights according to \autoref{eqn:delta_w_e
 \subsection{Backpropagation}
 With gradient descent providing a method for adjusting  weights, we now only need one more ingredient to be able to train our neural networks. Whilst our cost function tells us about the error of our network at its output, we need a method to calculate the error for any neuron in any layer - this is exactly what backpropagation does. 
 
-A full explanation of the backpropogastion algorithm is available in \autoref{appendix:app3}. However, understanding the backpropogation algorithm is not necessary to understand the contribution of this thesis.
+A full explanation of the backpropogation algorithm is available in \autoref{appendix:app3}. However, understanding the backpropogation algorithm is not necessary to understand the contribution of this thesis.
 
 
 %\subsection{Extensions and Improvements}
@@ -501,7 +508,7 @@ Similarly, in speech recognition, the order in which sound samples are heard is 
 
 Dense neural networks don't care about spatial information because each input is connected to every neuron in the input layer, effectively treating every pixel as if they are no closer, or further away from any other pixel or removing information about when each sample of sound occured.
 
-In order to levarge spatial information we can make use of \acp{ConvNet}.
+In order to levarge spatial information we can make use of \acp{ConvNet}. \textcolor{red}{This is why I make use of convolution layers in the \acp{MAE}.}
 
 \subsection{What is Convolution?}
 In \acp{ConvNet}, convolution is a mathematical operation which adds a data element to its neighbours, weighted by a kernel. For example, given a 3x3 kernel, and an image as the input data each pixel $P_{out}(i,j)$ in the output of the convolution will be the sum of the pixels $P_{in}(i-s, j-t)$ in the input  multiplied by its respective kernel weight $k(s,t)$ as seen in \autoref{eqn:convolution} \cite{dumoulin2016guide}.
@@ -616,6 +623,9 @@ An important enhancement of \ac{AE}s is the \ac{VAE} \cite{kingma2013auto}. The 
 
 This has the effect of forcing the embedding space to be smooth and helps to stop discontinuities in the embedding from occuring. For example, if a particular part of the embedding space is never explored in an \ac{AE}, the output generated by the decoder can be unpredictable even for embeddings close to those seen from training data. In a \ac{VAE}, due to the extra constraint placed on the embedding space, the generated output will change smoothly as the embedding is altered smoothly.
 
+\textcolor{red}{One down side of the addition of a variational cost is that it imposes an assumption on the network it is being used to train. The assumption that the latent space of the network should follow a particular distribution (usually Gaussian). 
+Whilst the latent space of a unimodal autoencoder will most likely follow a Gaussian distribution as training samples within a single modality are likely to be normally distributed, the same cannot be said for two distinct modalities as their releationship is unknown. As such, I do not make use of a variational cost when training the \acp{MAE} in this thesis.}
+
 
 \subsection{Multimodal Autoencoders}
 \acp{MAE} operate similarly to \ac{AE}s however, they take two or more modalities as input. In this thesis, only bimodal \acp{MAE} are used, though in principle, \acp{MAE} are not limited to only two modalities.
@@ -625,13 +635,25 @@ The \ac{MAE} is trained to reproduce all modalities regardless of whether all mo
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\textwidth]{Figs/intro2dl/MAE.png}
+	\includegraphics[width=0.75\textwidth]{Figs/intro2dl/MAE.png}
 	
 	\caption{A Multimodal Autoencoder}
 	\label{fig:mae}
 \end{figure}
 
 Each modality is encoded separately through its own branch of the network and then the embeddings are concatenated forming a joint embedding. The joint embedding is then used to reconstruct each modality through their own decoder branches as seen in \autoref{fig:mae}.
+
+\textcolor{red}{Each branch of the \ac{MAE} should be designed to optimally process the modality it is tasked with encoding or decoding. For branches processing images, this means using convolutional layers to leverage the spatial information held in the structure of the image, similarly for aural data, convolution can be used to process the time-dependent structure of the utterance.} 
+
+\textcolor{red}{In order to merge the two (or more) modalities within the network, their representations must have a matching shape. To achieve this Dense layers can be added to alter the dimensionality of the representation. Similarly Strided convolutions can be used to down sample representations to a smaller size.}
+
+\textcolor{red}{I chose to use \acp{MAE} to implement \ac{MRL} as they are end-to-end trainable and able to operate on raw data requiring little to no feature engineering. Further to this, they are an unsupervised architecture which allows them to be trained directly with unlabelled data.}
+
+\textcolor{red}{The importance of developing unsupervised learning systems cannot be understated. Although large supervised datasets do exist, they cannot cover every possible scenario, thus artificial intelligence systems which we aim to deploy in the real world, must be capable of learning without human intervention. This is exactly what the \ac{MAE} has been designed with in mind.}
+
+\textcolor{red}{For example, if I had implemented \ac{MRL} through the use of a multimodal classification system, the system would be limited to only learning symbols of (for example) objects and utterances which appear in supervised datasets. the \ac{MAE} does not have this constraint as will be demonstrated in the experiments of chapters 4, 5 and 6 as well as in the future work section, where I explain how we can use the \ac{MAE} as part of a continuously learning robotic system.}
+
+\textcolor{red}{One other advantage of using the \ac{MAE} over other machine learning techniques is that it has been demonstrated to exhibit behaviour similar to that of the human brain. In \cite{ngiam2011multimodal} the \ac{MAE} demonstrated the McGurk Effect \cite{mcgurk1976hearing}. Whilst biological plausability is only tangential to the goals of this thesis, I believe it is worth noting that \acp{MAE} are a good facsimily of the human brain as much of the work carried out in this thesis was inspired by the developmental learning processes of humans.}
 
 %
 %\section{Summary}
@@ -649,4 +671,4 @@ Each modality is encoded separately through its own branch of the network and th
 %	\item MAEs are AEs which take multiple modalities as input creating a single embedding across the modalities.
 %\end{itemize}
 
-\theendnotes
+%\theendnotes

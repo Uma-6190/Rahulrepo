@@ -24,6 +24,11 @@ S.~Hochreiter,
 International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems
   {\bf 6} (1998) 107.
 
+\bibitem{bengio2007greedy}
+Y.~Bengio, P.~Lamblin, D.~Popovici, and H.~Larochelle.
+\newblock {\em Greedy layer-wise training of deep networks,} .
+\newblock In {\em Advances in neural information processing systems} 1532007.
+
 \bibitem{lecun1998mnist}
 Y.~LeCun,
 {\em The MNIST database of handwritten digits,}
