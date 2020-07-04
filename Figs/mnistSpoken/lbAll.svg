@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="lbAll.svg"
-   inkscape:export-filename="/home/eli/Documents/thesis/Figs/mnistSpoken/lbAll.png"
+   inkscape:export-filename="/home/eli/Documents/thesis_overarching/thesis/Figs/mnistSpoken/lbAll.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -30,7 +30,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9899495"
-     inkscape:cx="151.30688"
+     inkscape:cx="-61.835306"
      inkscape:cy="-38.534413"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -54,7 +54,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -141,7 +141,7 @@
          sodipodi:role="line"
          id="tspan4671-5-5-6-4-8-0"
          x="137.56453"
-         y="512.70142">RD X Bi</tspan></text>
+         y="512.70142">RR X Bi</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -152,7 +152,7 @@
          sodipodi:role="line"
          id="tspan4671-5-5-6-5-7-7-75"
          x="137.56636"
-         y="539.98755">RD X Im </tspan></text>
+         y="539.98755">RR X Im </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -165,7 +165,7 @@
          sodipodi:role="line"
          id="tspan4671-5-5-6-5-5-6-6-2"
          x="137.30238"
-         y="569.30225">RD X MFCC </tspan></text>
+         y="569.30225">RR X MFCC </tspan></text>
     <image
        y="407.34"
        x="520.49261"

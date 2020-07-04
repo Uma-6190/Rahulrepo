@@ -112,7 +112,7 @@ The overall structure of the \ac{ANN} used for the experiements in this chapter 
 			\multirow{3}{*}{Image} & 1i	&	2D Conv & 64 & (3,3) & (1,1) & Relu \\ \cline{2-7}
 			& 2i	&	2D Conv & 64 & (3,3) & (2,2) & Relu \\ \cline{2-7}
 			& 3i	&	2D Conv & 32 & (3,3) & (2,2) & Relu \\ \cline{2-7}
-\multirow{3}{*}{Encoder} & 4i	&	2D Conv & 32 & (3,3) & (2,2) & Relu \\ \cline{2-7}
+\multirow{3}{*}{Encoder} & 4i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
 			& 5i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
 			& 6i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
 			& 7i	&	Dropout p=0.25 &	 & 	     &       &  \\ \hline
@@ -154,6 +154,15 @@ Embedding & 9iw	&	2D Conv  & emb size & (3,3) & (1,1) & Relu \\ \hline
 		\label{tab:Arts_MAE_description}
 
 	\end{table}
+	
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{Figs/shapes/maeArch.png}
+\caption{\textcolor{red}{The \ac{MAE} architecture used in this chapters. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
+\label{fig:netArts}
+\end{figure}
+
+\textcolor{red}{\autoref{fig:netArts} depicts the \ac{MAE} described in \autoref{tab:Arts_MAE_description}. The blue box shows the portion of the \ac{MAE} which encodes and decodes images, whilst the green portion encodes and decodes the descriptions. The orange box is where the joint representation is formed. Inputs are labelled, Image and Description with their respective outputs being marked with an asterisk.}
 	
 
 

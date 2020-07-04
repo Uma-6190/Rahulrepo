@@ -84,14 +84,16 @@ In the real world, visual perception is much noiser than the images presented in
 
 \begin{enumerate}
 
-	\item \textcolor{red}{\ac{MRL} can be used to learn the association between sounds and the visual symbols they represent.}
-	\item \textcolor{red}{\ac{MRL} enhances classification accuracy of sounds and visual symbols}
-	\item \textcolor{red}{\ac{MRL} can be used to learn language as it relates to the visual properties of objects.}
+	\item \textcolor{red}{\ac{MRL} can be used to learn the association between sounds and the visual symbols they represent. I.e. to solve the symbol grounding problem.}
+	\item \textcolor{red}{\ac{MRL} enhances classification accuracy of sounds and visual symbols.}
+	\item \textcolor{red}{\ac{MRL} can be used to learn language as it relates to the visual properties of objects. I.e. to solve the symbol grounding problem.}
 	\item \textcolor{red}{\ac{MRL} can be improved through transfer learning.}
-	\item \textcolor{red}{it is possible to use \ac{MRL} with real data.}
+	\item \textcolor{red}{The multimodal representation learnt by the \acp{MAE} exhibits the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}.}		
+	\item \textcolor{red}{It is possible to use \ac{MRL} with real data.}
+	
 \end{enumerate}
 
-\textcolor{red}{Hypotheses 1 and 2 are addressed in \autoref{Chapter4}, hypotheses 3 and 4 are addressed in \autoref{Chapter5} and hypothesis 5 is addressed in \autoref{Chapter6}.} 
+\textcolor{red}{Hypotheses 1 and 2 are addressed in \autoref{Chapter4}, hypotheses 3, 4 and 5 are addressed in \autoref{Chapter5} and hypothesis 6 is addressed in \autoref{Chapter6}.} 
 
 
 \section{Methodology}
@@ -101,13 +103,15 @@ The \ac{MAE} was used without a variational cost (as in a \acp{VAE}) as we canno
 Finally, the use of \acp{ANN} over other machine learning techniques is due to their flexible nature, requiring little to no feature engineering of the data used by the system. Further to this, \acp{ANN} have been shown to acheieve state-of-the-art results on many robotics, computer vision and natural language tasks.}
 
 \begin{figure}
-\includegraphics[height=5cm]{example-image-a}
+\centering
+\includegraphics[width=0.75\textwidth]{Figs/shapes/maeArch.png}
 \label{fig:final_arch}
-\caption{\textcolor{red}{The architecture of the MAE used in chapters 5 and 6}.}
+\caption{\textcolor{red}{The architecture of the MAE used in \autoref{Chapter6} to generate the images seen in \autoref{fig:mrl_teaser}. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
 \end{figure}
 
-\textcolor{red}{\autoref{fig:final_arch} shows an overview of the \ac{MAE} architecture used in chapters 5 and 6. The \ac{MAE} used in \autoref{Chapter4} follows a very similar structure and is pictured later in \autoref{fig:MAE_chptr4}.
-} 
+\textcolor{red}{\autoref{fig:final_arch} shows an overview of the \ac{MAE} architecture used in \autoref{Chapter6}. The \ac{MAE} used in \autoref{Chapter4} and \autoref{Chapter5} follow a very similar structure and is pictured later in \autoref{fig:netMnist} and \autoref{fig:netArts}.} 
+
+
 
 
 

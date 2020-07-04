@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="5s.svg"
-   inkscape:export-filename="/home/eli/Documents/thesis/Figs/mnistSpoken/5s.png"
+   inkscape:export-filename="/home/eli/Documents/thesis_overarching/thesis/Figs/mnistSpoken/5s.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
   <defs
@@ -30,7 +30,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="57.653574"
+     inkscape:cx="-93.060712"
      inkscape:cy="153.47512"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -156,7 +156,7 @@
          sodipodi:role="line"
          id="tspan4671-5-5-6-4-8"
          x="57.774643"
-         y="273.48746">RD X Bi</tspan></text>
+         y="273.48746">RR X Bi</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -169,7 +169,7 @@
          sodipodi:role="line"
          id="tspan4671-5-5-6-5-7-7"
          x="57.776474"
-         y="302.77359">RD X Im </tspan></text>
+         y="302.77359">RR X Im </tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5px;line-height:125%;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -182,7 +182,7 @@
          sodipodi:role="line"
          id="tspan4671-5-5-6-5-5-6-6"
          x="57.512558"
-         y="330.08829">RD X MFCC </tspan></text>
+         y="330.08829">RR X MFCC </tspan></text>
     <image
        y="138.28589"
        x="242.20076"

@@ -17,7 +17,7 @@ Due to the broad scope of the research carried out, the background section is lo
 
 %This chapter aims to demonstrate how \acp{ANN} have very good performance in specific areas, whilst lagging far behind in many others. By bringing these divergent fields together, perhaps it is possible to find ways to improve \acp{ANN} whilst also further developing our understanding of what makes humans tick. 
 
-\textcolo{red}{As \acp{ANN} are my method of choice for implementing \ac{MRL} it is important to understand where they excel as well as their limitations.}
+\textcolor{red}{As \acp{ANN} are my method of choice for implementing \ac{MRL} it is important to understand where they excel as well as their limitations.}
 
 \section{What are Artifical Neural Networks Good at?}
 
@@ -35,6 +35,8 @@ Of these categories of problems, \ac{MRL}(as it is presented in this thesis) dra
 \subsection{Classification}
 \ac{MRL} can be considered to draw from different classification tasks, depending on which modalities it is used with. In this thesis I apply \ac{MRL} to image, speech, and textual data, as such I will focus on general recognition techniques from the image processing domain and will not focus on more niche problems such as Facial Recognition \cite{ma2004facial}, Emotion Recognition \cite{levi2015emotion} or more general data classification problems \cite{kussul2017deep,qi2017pointnet}, including my own work on classification of individuals with Autism Spectrum Conditions: \cite{lohan2016distinguishing, sheppard2017understanding, lohan2018toward}.
 
+\textcolor{red}{As hypothesis 2 - \ac{MRL} enhances classification accuracy of sounds and visual symbols - is directly consercerned with improving classification accuracy, understanding how \acp{ANN} can be applied to classification problems will be key to understanding the experiments I have undertaken.}
+
 \subsubsection{AlexNet}
 With Krizhevsky's work in\cite{krizhevsky2012imagenet}, a style of \ac{ConvNet} architecture, consisting of convolution, max-pooling, and dropout layers followed by fully connected layers and a softmax output layer was created. This has become a standard type of architecture for image classification tasks with many similar networks appearing such as VGG 16 and 19 \cite{simonyan2014very}.
 
@@ -50,6 +52,17 @@ An example of taking residual connections to their limit is seen in \cite{huang2
 Another advancement over the AlexNet style architectures was the introduction of multiscale convolutions where data is passed through multiple, parallel convolutions layers each with a different kernel size before concatenating their activations \cite{szegedy2015going}. Making use of different kernel sizes creates filters which are sensitive to different scales of features. Thus, for example, if an eye in an image is not picked up at one scale as it is too large or too small, it may be picked up by a parallel convolution with a different sized kernel.
 
 Szegedy et.al have developed their Inception Architecture from \cite{szegedy2015going} iteratively in \cite{szegedy2016rethinking, szegedy2017inception} in each, small advancements in state-of-the-art object recognition are achieved.
+
+\subsection{Recurrent Neural Networks}
+\textcolor{red}{In \cite{gregor2015draw} Gregor et al. demonstrate a recurrent autoencoding architecture which is trained to iteratively generate images from the MNIST \cite{lecun1998mnist} and House Numbers \cite{netzer2011reading} datasets. By sequentially producing images and allowing the network to refine the generated image step-by-step a rich representation of the input image is learnt. This leads to two key findings, 1) the generated images are indistinguishable from natural images to the human eye and 2) this representation can be used to achieve state of the art classification of MNIST digits in cluttered images.}
+
+\textcolor{red}{ Whilst in this thesis I have not made use of recurrent neural networks, this is an obvious extension to my work which could be used to enhance the system I have developed. As such, I refer back to this work in the Future Work section of \autoref{Chapter7}.}
+
+\textcolor{red}{The success Gregor et al. at both image generation and classification in noisy conditions can be attributed to their use of bio-inspired techniques.}
+
+\textcolor{red}{By making use of a differentiable attention mechanism inspired by the human fovea, the network is able to dedicate almost its full capacity to representing small image patches at each step, allowing for all (most) of the detail of that patch to be regenerated. This also allows the network to find important regions of the image when it is trained as a classifier, as only image patches which lead to the correct classification of the digit in the image need to be looked at. Thus the network quickly learns to focus in on these key patches, removing noise from the image representation at each step, making classification easier.}
+
+\textcolor{red}{In my opinion, the use of bio-inspired techniques is an intelligent choice that will lead to the design of better \acp{ANN}. As such, later in this chapter I look at some of the key findings from biology literature which helped inform the choices made in designing the \acp{MAE} and training paradigms used in this thesis.} 
 
 
 \subsection{Generation}
@@ -68,7 +81,7 @@ Odena et al. \cite{odena2017conditional} expand on the work in \cite{mirza2014co
 
 \textcolor{red}{Reed et al. \cite{reed2016generative} extend the class condtioned \ac{GAN} to generate images from textual descriptions. To do this, they alter the \ac{GAN} training paradigm from having the descriminator label real and generated images as either real or fake, to label real images with matching textual information as real, generated images with arbitrary text as fake and real images with with mismatched descritions as fake. In doing this, the descriminator learns to align visual attributes of the images with words in the descriptions, whilst the generator learns to gnerate images which match the descriptions on which it is conditioned.}
 
-\textcolor{red]{This method of learning to translate text to images has a strong connection to the work carried out in this thesis. However, the key destinction between the methods I employ and \ac{GAN} based methods is that the \ac{MAE} learns a joint representation of images and text (or sound) from which both images and text (or sound) can be regenerated. The \ac{GAN} method only learns a representation of text which can be used to generate images - the inverse problem is not addressed. I.e. the \ac{MAE} can do images to text and text to images jointly, whils the \ac{GAN} can only do text to images.}
+\textcolor{red}{This method of learning to translate text to images has a strong connection to the work carried out in this thesis. However, the key destinction between the methods I employ and \ac{GAN} based methods is that the \ac{MAE} learns a joint representation of images and text (or sound) from which both images and text (or sound) can be regenerated. The \ac{GAN} method only learns a representation of text which can be used to generate images - the inverse problem is not addressed. I.e. the \ac{MAE} can do images to text and text to images jointly, whils the \ac{GAN} can only do text to images.}
 
 \subsubsection{Modality Translation: Image Caption Generation}
 Translating from one modality to another can also be done by other types of neural networks, not just those trained in an adversarial manner as with \acp{GAN}.
@@ -76,8 +89,16 @@ The field of image and video captioning highlights this. The typical method for 
 The dense layers of the \ac{ConvNet} are removed and the internal image representation learnt by the \ac{ConvNet} is fed to the language model which is then trained to predict image captions from this representation.
 
 Video captioning is a natural extension of the image captioning domain and follows a similar procedure for generating video captions. First a representation of the visual contents of the video is generated and then a language model translates this representation into a caption. In order to generate a representation of the visual information  present in the videos, one can either make use of \acp{LSTM} to combine the representations of each frame generated by a \ac{ConvNet} \cite{donahue2015long}, make use of 3D \acp{ConvNet}, convolving along the time axis as well as the two spatial axes of the image frames \cite{yao2015describing, yao2015video} or make use of precomputed features such as Motion Boundary Histograms or Optical Flow \cite{rohrbach2014coherent, rohrbach2013translating}.
+\textcolor{red}{Whilst Optical Flow and Motion Boundary Histograms have been successfully applied to the task of video caption generation, the use of \acp{ANN} to generate a representation of the video frames from which to derive the video captions, is, in my opinion a better approach for two reasons. Optical Flow and Moution Boundary Histograms are expensive to compute, limiting their realtime usability to situations where large amounts of computation are available. Compared to \acp{ANN} methods which can be deployed using cheap hardware such as the Intel Movidius Neural Compute Stick. \acp{ANN} methods are superior also because they are able to adapt to the specific domain on which they are trained, Optical Flow and Motion Boundary Histograms are handcrafted and therefore require intervention from an engineer if changes to the generated features are necessary.}
 
-In all of these methods we see an important commonality, Representation Generation. In order to generate one modality from another, first a representation of the salient information from the source modality must be produced.
+\textcolor{red}{The use of handcrafted features like optical flow can be combined with \acp{ANN} methods, training the \ac{ANN} using them in place of raw images as input. This could be a highly desirable approach as it is analogous to processes which occur in the human retina, where features other than just colour are precomputed before being passed to the visual cortex (disscussed further in \autoref{sec:embodi}).}
+
+Most importantly, in all of these methods we see an important commonality, Representation Generation. In order to generate one modality from another, first a representation of the salient information from the source modality must be produced.
+
+\subsection{Generating Images from Captions}
+\textcolor{red}{In \cite{mansimov2015generating} Mansimov et al. images are generated from captions by encoding training images and their captions through two separate encoding branches and then decoding their joint representation into an image. In this way, the network learns to align words in the caption to the image elements they represent.}
+
+\textcolor{red}{The images generated in \cite{mansimov2015generating} are impressive considering the difficulty of the task which they have undertaken. However, one key limitation of their work is the lack of a quantative method for analyising the quality of the generated images. This is a limitation which is also found in this thesis. However, in the case of Mansimov et al. they could make use of the inception score derived in \cite{zhang2017stackgan}, unfortunately this score is not suitable for use in this thesis as is discussed in \autoref{Chapter4}.}
 
 \subsection{Representation Learning}
 
@@ -98,6 +119,8 @@ Whilst a one-hot encoding contains no information about the meaning of the word 
 Whilst the skip-gram and n-gram representations remain ungrounded and do not contain the true meaning of the words they encode, some properties of the words can be found from this representation. For example, pronouns all end up with similar representations, showing the representation has Manifolds which are formed through Natural Clustering. This is also true for capital cities of countires. 
 
 Further to this, the gradients between the representations of countries and their capitals are also similar. This highlights that some of the meaning of words can be found just from statistical regularities in bodies of text and to demonstrates that the representation exihibtis Spatial Coherence.
+
+\textcolor{red}{In \autoref{Chapter5} I will demonstrate how the multimodal representation of language and images exhibits similar characteristics to those demonstrated by Mikilov through the use of vector arthmetic. This relates directly to hypothesis 5 - The multimodal representation learnt by the \acp{MAE} exhibits the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}.}
 
 
 \subsubsection{Autoencoders}
@@ -125,7 +148,7 @@ Consider now what the \ac{VAE} is trained to do, it learns to produce a compress
 In a second experiment, Pu et al. train their caption generation system in an end-to-end fashion, this lead to a significant improvement in performance (+0.11 BLEU \cite{bleu}). This demonstrates that the representation of the \ac{VAE} can be improved upon by adapting the feature extraction process specifically for the captioning task.
 
 
-As well as representations of images, \ac{AE} can be used to learn representations of other types of data. A good example of this is WaveNet \cite{wavenet}. Chorowski et al. demonstrate how strided convolutions \cite{radford2015unsupervised} can be used to capture the time dependant regularites of speech at different scales within an vector quantised autoencoding architecture \cite{van2017neural}. Chorowski et al. build off of research on speech representation using \acp{AE}, for example \cite{vincent2010stacked, lu2013speech}.
+As well as representations of images, \ac{AE} can be used to learn representations of other types of data. A good example of this is WaveNet \cite{wavenet}. Chorowski et al. demonstrate how strided convolutions \cite{radford2015unsupervised} can be used to capture the time dependant regularites of speech at different scales within a vector quantised autoencoding architecture \cite{van2017neural}. Chorowski et al. build off of research on speech representation using \acp{AE}, for example \cite{vincent2010stacked, lu2013speech}.
 
 The WaveNet architecture stacks layers of strided convolutions with each successive layer having a larger stride, this allows the network to consider features from more and more distant (in time) points of the input data. An intuitive way of understanding why this is useful for generating a representation of speech is to imagine two different speakers say the same word. One speaker speaks very quickly and the other very slowly. This means that the same word, said by each speaker, will have different characteristics with respect to time but as each speaker is saying the same word, the network must be able to ignore this variation.
 
@@ -134,6 +157,8 @@ In \cite{wavenet}, Chorowski et al. show that their unsupervised, speaker indepe
 What is of particular interest in \cite{wavenet} is that the WaveNet achieves state-of-the-art performance on this challenge in an unsupervised manner. The authors note that it is better to have a model which requires and is capable of exploiting the large amount of unlabelled data through unsupervised training, than to have a simpler model which saturates on small datasets. The authors suggest that this is one reason why WaveNet did not achieve state-of-the-art performance on Mandarin due to overfitting the small amount of training data.
 
 They also note that Mandarin is a pitched language, unlike English and French, and that the WaveNet disgards pitch and prosody \cite{van2017neural} which may be important features for distinguishing Mandarin phonemes. As the authors do not test whether the addition of more unsupervised training improves the representation of Mandarin phonemes, it is unclear whether the WaveNet architecture is the right choice for generating representations of Mandarin. In my opinion, the use of vector quantisation to make the latent space discrete, whilst helping to prevent a collapse in the latent space, discards too much useful information as shown by the superior performance of the \ac{VAE} at representing pitch information, using a continuous latent representation \cite{wavenet}. 
+
+\textcolor{red}{From the variation in performance of the \ac{VAE} and the vector quantised \ac{VAE} demonstrates how small changes in the contraints placed on \acp{ANN} can affect their performance. To me, this is a key reason to avoid making assumptions about how the latent space of the \acp{MAE} should be organised and is why I chose not to make use of a Variational cost when training them. As It is not clear that the latent space of the \acp{MAE} should follow any particular distribution (e.g. gaussian) it is better to take a fully data driven approach. Avoiding the removal of potentially useful information from the representation by trying to force a, potentailly incorrectly, chosen latent distribution on the representation.}
 
 \section{What are Artificial Neural Networks Bad at?}
 Whilst \acp{ANN} have been applied to many tasks and acheived super-human ability at them \cite{vinyals2019alphastar}, they do not have general intelligence like humans.
@@ -185,6 +210,8 @@ The question, therefore, is ``How do we build a machine which can understand?''.
 
 In order for a machine to understand the world, it must ground the symbols it manipulates within its program. In Searle's Chinese Room, the English speaker cannot ground the meaning of any of the Chinese symbols as they have no way of discerning the meaning of the symbols from their list of instructions. Whilst the instructions give the correct method for responding to each symbol these instructions are cyclic. Consider how you would discern the meaning of a word in a foreign language if you were given a dictionary of that language defining each word. You could look up a word and read the definition, however as the definition is also written in the foreign language you would need to look up the definitions of each word of the original definition, until eventually you wind up back where you started looking up the meaning of the original word \cite{cangelosi2000robotic}. This is the symbol grounding Merry-Go-Round: without being able to discern the meaning of at least one word in the dictionary, it is useless for enhancing your understanding of the language \cite{harnad1990symbol}.
 
+\textcolor{red}{In Serle's view, a purely computational system can never be truly intelligent without solving the symbol grounding problem. Whilst I agree with this, I believe it is not sufficient to just build a grounded system for it to be considered intelligent (as Searle would likely agree). As I will demonstrate in the experiments of this thesis, the \ac{MAE} is capable of learning a grounded representation of images and language, producing sensible output in one modaility when translating from the other. I would still not argue that this system is intelligent, though it has escaped the symbol grounding merry-go-round, it is still at its heart, a set of matrix multiplications (as detailed in \autoref{Chapter2}). To be considered intelligent I would require the system to not only be grounded but to also exhiit directed action towards solving the task it has been set. That is, the system would need to demonstrate that it is aware of the problem it is solving, clearly this cannot be achieved through gradient descent and backpropagation, as it is the optimiser which adjusts the weights of the system, not the system itself.}
+
 \subsection{What is Symbol Grounding?}
 Symbol grounding is the process of assigning meaning to a symbol. It is something babies and even animals are very good at. Despite not having access to a dictionary explaining the meaning of each word in terms of their internal symbolic representations, babies are able to learn to speak. Similarly, animals can learn the meaning of words, for example, sit, fetch, walkies...
 
@@ -202,6 +229,8 @@ In \cite{steels2008symbol}, Luc Steels explores the symbol grounding problem thr
 
 Semiotic Networks are useful for visualising the symbol grounding problem. They demonstrate what we are trying to achieve through symbol grounding; namely to develop methods to relate sensory percepts of the world and objects in it, to symbols via internal representations (concepts). Whilst this explanation implies some directionality to the network, there should not be. A system capable of grounding symbols should be able to move freely between symbols, concepts and objects. For example, given the words \textsc{Blue Ball} a person is capable or recognising the referrent object  \textit{Blue Ball} as well as the concepts ``Blue'' and ``Ball'' as well as preforming the reverse operation of nameing the object \textit{Blue Ball} with the words \textsc{blue ball}.
 
+\textcolor{red}{Now that I have explained what symbol grounding is, we can see how the following literature informs the experimental design process I undertook in order to test hypotheses 1 and 3 - \ac{MRL} can be used to learn the association between sounds and the visual symbols they represent. I.e. to solve the symbol grounding problem and \ac{MRL} can be used to learn language as it relates to the visual properties of objects. I.e. to solve the symbol grounding problem.}
+
 
 \subsection{How do Humans do it?}
 Brains have many advantages over \acp{ANN} when it comes to the symbol grounding problem. The more prominent of these are, multimodality \cite{barsalou2008grounded}, sensory redundancy \cite{slater1999intermodal}, innate signal conditioning systems \cite{masland2012neuronal, fantz1963pattern, johnson2015two}, developmental learning (both pre \cite{webb2015mother, reid2017human} and post-natal \cite{johnson2015two}) and embodiment \cite{pfeifer2006body, smith2005development}.
@@ -211,9 +240,10 @@ Lawrence Barsalou \cite{barsalou2008grounded} takes the view that amodal symbol 
 Through this simulation process, the brain can compare whether a new experience belongs to a certain category by comparing its representation with the stored representation of the experiences of that categorey. The representation of expirences are likely stored, not like data in a computer but in the connections between neurons, I will refer to this as ensemble encoding \cite{nicolelis1995sensorimotor} and it is analogous to how the weights of neural networks encode features from the data they are trained on \cite{mordvintsev2015inceptionism}.
 
 
-From Barsalou's work, we can see that in biological systems, symbol grounding is the process of linking percepts from different modalities (visual, sensorimotor, auditory, etc. as well as emotions and other internal bodily states), into a single representation. 
+From Barsalou's work, we can see that in biological systems, symbol grounding is the process of linking percepts from different modalities (visual, sensorimotor, auditory, etc. as well as emotions and other internal bodily states), into a single representation. \textcolor{red}{Therefore to test hypthesis 1 and 3, I will need to demonstrate that the \acp{MAE} are able to correctly translate from one modaility to the other and vice-versa.}
 
 \subsubsection{Embodiment}
+\label{sec:embodi}
 \begin{displayquote}
 We are embodied; nothing more. - Arthur M. Glenberg
 \end{displayquote}
@@ -224,15 +254,21 @@ By learning to associate different sensory percepts with one and other as well a
 Glenberg \cite{glenberg2015few} views the comprehension of symbols as a simulation process, in line with Barsalou's views on this matter \cite{barsalou2008grounded}. By simulating the percepts associated with a symbol via the mirror neuron system, the brain is able to understand the meaning of the symbol.
 
 
-In \cite{pfeifer2006body}, Pfeifer et al. go as far as to say that intelligence requires embodiment. Mathematical reasoning is often seen as an intelligent behaviour and as computers, which are not embodied, are capable of performing mathematical operations, this idea is contradicted. However, in humans, mathematics is performed in an embodied and grounded manner. 
+In \cite{pfeifer2006body}, Pfeifer et al. go as far as to say that intelligence requires embodiment. Mathematical reasoning is often seen as an intelligent behaviour and as computers, which are not embodied, are capable of performing mathematical operations, this idea is contradicted. However, in humans, mathematics is performed in an embodied and grounded manner.  
 
 There have been numerous studies of both children and robots, showing that use and observation of gestures significantly aids learning of abstract numerical concepts, so much so that prohibiting gesture detriments comprehension \cite{Goldin-MeadowSusan2015Fata, de2014making, rucinski2012robotic}. This highlights how the body can be used to enable grounded cognition.
 
+\textcolor{red}{Whilst I agree that embodiment can facilitate symbol grounding and therefore intelligence I do not agree that it is required for intelligence. It is easy to image an artificial system which is capable of intelligent action without a physical body. For example, a program designed to trade on the stock market could be considered intelligent so long as it is aware of what it is doing and why it is doing it. Whilst this is not how such systems are designed, as it is much simpler to design a program to mathematically optimise a cost function than one which is aware of the task it has been set, it is possible that in future a different design paradigm could be followed.}
+
 \paragraph{Multimodality}
 One key aspect of emboidment is that it makes all experiences multimodal. Even if only a single sensor is being actively used in a given activity, all of the bodies sensors and its internal state are involved in the experience. 
-In the case of learning to count, the use of gestures, such as counting on fingers, introduces the sensory-motor system as a source of information from which a grounded symbol for each number can arise. For example the abstract symbol ``1'' is associated with the auditory percept of the word ``one'' as well as the gesture of raising a single finger, creating a rich, multimodal encoding of the symbol in the brain. 
+In the case of learning to count, the use of gestures, such as counting on fingers, introduces the sensory-motor system as a source of information from which a grounded symbol for each number can arise. For example the abstract symbol ``1'' is associated with the auditory percept of the word ``one'' as well as the gesture of raising a single finger, creating a rich, multimodal encoding of the symbol in the brain.
+
+\textcolor{red}{The use of multimodal information for distinguishing between symbols (e.g. numbers) clearly enhances learning by providing a richer representation of the symbol. This relates directly to hypothesis 2 - \ac{MRL} enhances classification accuracy of sounds and visual symbols, where I will test whether multimodality improves calssification accuracy. As demonstrated in both the human and robotics related literature, multimodality can improve classification accuracy.} 
 
 Multimodality also improves learning by providing an attention mechanism \cite{bahrick2000intersensory}. The synchrony of signals from different sensors guide infant attention to salient information. This idea is supported by studies examining how infants learn to speak.  Smith et al. \cite{smith2008infants} demonstrate that infants preferentailly looked at target images over distractor images guided by an auditory cue (the name of the target image). Several other studies have demonstrated a similar result \cite{walker2010preverbal, fischer2011multi, scott20122, slater1999intermodal}.
+
+\textcolor{red}{The work of Smith et al. clearly demonstrates that multimodality plays a key role in how humans learn language, therefore it should play a key role in how robots learn language too.}
 
 
 \paragraph{Development}
@@ -247,13 +283,17 @@ These studies demonstrate how human infants do not start off with a random confi
 
 Infants are then given years of training to learn to be the adaptable, general intelligences that they are. Parents aid this through the use of specific infant directed behaviours such as `Motherese' \cite{fernald1987acoustic} and looming actions \cite{lohan2012contingency, lohan2012tutor}. Followed by teachers, peers and the general structure of society shaping their learning.
 
+\textcolor{red}{In order to demonstrate that a developmental approach to learning can aid in machine learning I take an incremental approach to the solving the symbol grounding problem in \autoref{Chapter5}, testing Hypothesis 4 - \ac{MRL} can be improved through transfer learning.} 
+
 \paragraph{Biological Filters}
 As a consequence of embodiement, humans have inherent signal conditioning systems \cite{pezzulo2013computational}, these help guide the learning process.
 
 In \cite{johnson2015two}, Johnson et al. comment on the well established `\ac{TPT} of face processing' in humans.  During the `Conspec' stage of the \ac{TPT} the superior colliculus interacts with both visual and motor systems driving visual attention towards conspecific stimuli. The `Conlern' stage of the \ac{TPT} is guided by the `Conspec' stage due to a larger proportion of conspecific visual data  (e.g. the human face) being provided to the visual cortex as more attention is given to these stimuli by the superior colliculus. 
 The superior colliculus guides learning in the visual cortex by controlling attention.
 
-In \cite{bambach2017egocentric}, Bambach highlights the importance of data quality when training visual recognition systems, thus the superior colliculus may help to improve the learning of the visual cortex by providing focused, high-quality training examples.
+In \cite{bambach2017egocentric}, Bambach highlights the importance of data quality when training visual recognition systems, thus the superior colliculus may help to improve the learning of the visual cortex by providing focused, high-quality training examples. 
+
+\textcolor{red}{Testing the \ac{TPT} is much simpler in artificial models thus, approaches like that of \cite{bambach2017egocentric} should be adapted to enhance our understanding of human development and learning.}
 
 As well as the structure of the human brain which has been optimised by evolution to facilitate rapid learning, the physical embodiment of humans guides and improves human learning. Possibly the best example of this is the human eye, specifically the retina.
 
@@ -262,6 +302,10 @@ The highly organised nature of the retina predisposes the types of visual data p
 Signal conditioning in the retina enhances object boundary detection by reducing the brightness of the brightest areas and their immediate surroundings, giving objects an outline. Other effects in the retina are sensitive to movement and help segment the background from moving objects in the foreground \cite{olveczky2003segregation}.
 
 Similarly, the shape of the human ear and the physical structure of the inner ear filters and shapes the sounds we hear which facilitates learning and detection of relevant sounds whilst reducing the perception of background noise \cite{oxenham2018we}.
+
+\textcolor{red}{Differentiating between the effects of developmental processes and the innate signal conditioning provided by the human body is difficult, though it can be seen that these are two separate effects. This is demonstrated, for example, by the increase in auditory cortex volume in preterm babies in \cite{webb2015mother}. Demonstrating the difference between these effects in \acp{ANN} is more difficult. As \acp{ANN} lack an embodiment, they do not have innate signal conditioning systems, either feature engineering needs to be done to simulate this, or pretraining can be performed to create a set of \ac{ANN} weights which extract the relevant features. The issue here is that pretraining can also be seen as part of the developmental process.}
+
+\textcolor{red}{Whilst the human body has had millenia of evolution to shape the signal processing systems and the initial neural connections of the brain, neural networks do not have this luxury. Thus, to keep things simple I will refer to pretraining of \acp{ANN} as if it were wholely an anology of developmental processes. However I think it is worth noting that the pretraining step can be viewed as analogous to the evolutionary processes which have shaped the innate signal conditioning which occurs in human sense organs.}
 
 \subsection{How do Machines do it?}
 Symbol grounding has been tackled in many different ways by different groups within the scientific community. Notably this is because different groups holding differing ideas about what constitutes symbol grounding and how grounded symbols should be used by Artificial Intelligence. Both Barsalou \cite{barsalou2008grounded} and Cangelosi \cite{cangelosi2000robotic} take the stance that amodal symbolic manipulation systems are not good models of how brains operate. This is contrary to the views of the \ac{NLP} community on cognition and symbol grounding \cite{lemonlearning, yu2017learning}.
@@ -336,4 +380,23 @@ The cognitive development of infants can be simulated through pretraining. In \c
 The effect of transfer learning from one task to another is that it moves the weights of the network away from their random starting values towards a configuration which is closer to the optimal values. This allows the \ac{ANN} to start in a configuration which is closer to the starting configuration of an infant brain which is shaped by genetics and evolutionary processes \cite{barsalou2008grounded}.
 
 
+\section{Research Plan}
+\textcolor{red}{The rest of this thesis is organised into 3 experimental chapters followed by a conclusion and future work chapter.
+Each of the experimental chapters address one or more of the hypothesis of this thesis.}
 
+\textcolor{red}{To reiterate, the hypothesis are:}
+
+\begin{enumerate}
+
+	\item \textcolor{red}{\ac{MRL} can be used to learn the association between sounds and the visual symbols they represent. I.e. to solve the symbol grounding problem.}
+	\item \textcolor{red}{\ac{MRL} enhances classification accuracy of sounds and visual symbols.}
+	\item \textcolor{red}{\ac{MRL} can be used to learn language as it relates to the visual properties of objects. I.e. to solve the symbol grounding problem.}
+	\item \textcolor{red}{\ac{MRL} can be improved through transfer learning.}
+	\item \textcolor{red}{The multimodal representation learnt by the \acp{MAE} exhibits the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}.}		
+	\item \textcolor{red}{It is possible to use \ac{MRL} with real data.}
+	
+\end{enumerate}
+
+\textcolor{red}{\autoref{Chapter4} focuses on hypotheses 1 and 2, making use of MNIST Handwritten Digits and UCU Arabic Spoken Digits datasets to do this. \autoref{Chapter4} is concerned with demonstrating the feasability of the technical approach taken as well as validating design choices made based on the findings of the literature review.}  
+
+\textcolor{red}{ \autoref{Chapter5} and \autoref{Chapter6} primarily focus on exploring how linguistic and visual symbolgrounding can be achieved. \autoref{Chapter5} explores the effects of transfer learning (hypothesis 4), relating the results to the findings of the developmental literature and evaluates the quality of the learnt representation, comparing to the criteria layed out by \cite{repRev}. In \autoref{Chapter6} I demonstrate how \ac{MRL} can be used to perform bidirectional grounding of real data (hypothesis 6). } 

@@ -63,7 +63,16 @@ The dataset was captured in several sessions across multiple days. This is the m
 As in the previsous chapter I will be training \acp{MAE} to learn a joint embedding of images and their descriptions. The descriptions only contain a size, shape and colour and not a position as the images are cropped, centring the object in the image, the notion of position is removed from both modalities.
 
 \subsection{Network Description}
-I make use of the same network as used in chapter 4 with an embedding size of 296 neurons. 
+I make use of the same network as used in chapter 4 with an embedding size of 296 neurons and a description output size of 13. \textcolor{red}{\autoref{fig:netReShape} depicts the \ac{MAE} described in \autoref{tab:Arts_MAE_description}. The blue box shows the portion of the \ac{MAE} which encodes and decodes images, whilst the green portion encodes and decodes the descriptions. The orange box is where the joint representation is formed. Inputs are labelled, Image and Description with their respective outputs being marked with an asterisk. Whislt the overall structure of the \ac{MAE} used in this chapter is the same as that used in \autoref{Chapter5}, as the vocabulary size for the descriptions is smaller, the Description output layer only has 13 neurons unlike in \autoref{Chapter5} where the description output had 22 neurons.}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{Figs/shapes/maeArch.png}
+\caption{\textcolor{red}{The \ac{MAE} architecture used in this chapters. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
+\label{fig:netReShape}
+\end{figure}
+
+
 
 \section{Experiments with the ReShape dataset}
 I will perform two experiments, one with a small subset of the ReShape dataset with complete coverage of every trained and tested combination of colour, object and size is available. The second will make use of a larger variety of objects and colours, however not every combination of object, colour and size is available for training, thus there is not complete coverage, this is similar to experiment 5 in \autoref{Chapter5} where one object-colour combination was excluded from the training data. 
