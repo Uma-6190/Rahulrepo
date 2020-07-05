@@ -74,7 +74,7 @@ In the real world, visual perception is much noiser than the images presented in
 \begin{figure}
 \centering
 
-\includegraphics[width=0.5\textwidth]{Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png}
+\includegraphics[width=0.75\textwidth]{Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png}
 \caption{Images generated from textual descriptions (B, M and S are Big, Medium and Small, respectively).}
 \label{fig:mrl_teaser}
 \end{figure}
@@ -97,10 +97,11 @@ In the real world, visual perception is much noiser than the images presented in
 
 
 \section{Methodology}
-{Throughout this thesis, the experiments are performed using a deep neural network architecture known as a \ac{MAE}. This architecture was chosen for several reasons. Its autoencoding nature means that it is possible to train the system without human intervention, i.e. through unsupervised learning. 
-The \ac{MAE} was used without a variational cost (as in a \acp{VAE}) as we cannot gaurantee that the latent space of the network should follow a particular distribution, which a variational cost would enforce.
+\textcolor{red}{Throughout this thesis, the experiments are performed using a deep neural network architecture known as a \acl{MAE}. This architecture was chosen for its autoencoding nature, meaning that it is possible to train the system without human intervention, i.e. through unsupervised learning.} 
 
-Finally, the use of \acp{ANN} over other machine learning techniques is due to their flexible nature, requiring little to no feature engineering of the data used by the system. Further to this, \acp{ANN} have been shown to acheieve state-of-the-art results on many robotics, computer vision and natural language tasks.}
+\textcolor{red}{The \ac{MAE} was used without a variational cost (as in a \acp{VAE}) as we cannot gaurantee that the latent space of the network should follow a particular distribution, which a variational cost would enforce.}
+
+\textcolor{red}{Finally, the use of \acp{ANN} over other machine learning techniques is due to their flexible nature, requiring little to no feature engineering of the data used by the system. Further to this, \acp{ANN} have been shown to acheieve state-of-the-art results on many robotics, computer vision and natural language tasks.}
 
 \begin{figure}
 \centering

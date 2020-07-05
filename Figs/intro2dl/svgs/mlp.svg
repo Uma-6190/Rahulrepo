@@ -16,7 +16,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="mlp.svg"
-   inkscape:export-filename="/home/eli/Documents/thesis/Figs/mlp.png"
+   inkscape:export-filename="/home/eli/Documents/thesis_overarching/thesis/Figs/mlp.png"
    inkscape:export-xdpi="1000"
    inkscape:export-ydpi="1000">
   <defs
@@ -408,8 +408,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="111.62636"
-     inkscape:cy="109.33194"
+     inkscape:cx="85.775326"
+     inkscape:cy="109.12858"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -489,7 +489,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -499,7 +499,7 @@
      id="layer1"
      transform="translate(-143.23269,-320.72796)">
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.84389162;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4136"
        cx="225.00255"
        cy="358.17441"
@@ -564,7 +564,7 @@
          x="480.53662"
          y="454.95166">output</tspan></text>
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.84389162;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4136-3"
        cx="418.62231"
        cy="451.09305"
@@ -599,7 +599,7 @@
            x="-13.889598"
            y="87.259056" /></flowRegion><flowPara
          id="flowPara8539" /></flowRoot>    <circle
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.84389162;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4136-5"
        cx="224.41885"
        cy="449.40009"
@@ -656,7 +656,7 @@
        id="path7947-2-6"
        inkscape:connector-curvature="0" />
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.84389162;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4136-5-2"
        cx="226.29927"
        cy="539.15973"
@@ -708,7 +708,7 @@
    style="font-size:64.99999762%;baseline-shift:sub"
    id="tspan9005-6">1</tspan></tspan></text>
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.84389162;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4136-6"
        cx="321.2796"
        cy="403.64731"
@@ -716,7 +716,7 @@
        inkscape:export-xdpi="1000"
        inkscape:export-ydpi="1000" />
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.84389162;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path4136-9"
        cx="322.73392"
        cy="496.358"

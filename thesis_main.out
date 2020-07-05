@@ -45,47 +45,47 @@
 \BOOKMARK [1][-]{section.132}{Generating Images From Natural Language}{chapter.130}% 45
 \BOOKMARK [2][-]{subsection.133}{Aims}{section.132}% 46
 \BOOKMARK [2][-]{subsection.134}{A note on Qualatitive Anaylsis of Image Generation}{section.132}% 47
-\BOOKMARK [2][-]{subsection.136}{UCU Arabic Spoken Digits and MNIST}{section.132}% 48
-\BOOKMARK [2][-]{subsection.143}{Problem Description}{section.132}% 49
-\BOOKMARK [2][-]{subsection.146}{Experiment Details}{section.132}% 50
-\BOOKMARK [2][-]{subsection.165}{Results}{section.132}% 51
-\BOOKMARK [2][-]{subsection.173}{Discussion}{section.132}% 52
-\BOOKMARK [1][-]{section.180}{Summary}{chapter.130}% 53
-\BOOKMARK [0][-]{chapter.182}{Magical Vectors and Where to Find Them}{}% 54
-\BOOKMARK [1][-]{section.183}{ANN Latent Space}{chapter.182}% 55
-\BOOKMARK [1][-]{section.185}{Vector Arithmetic}{chapter.182}% 56
-\BOOKMARK [1][-]{section.188}{Artificial Shapes Dataset}{chapter.182}% 57
-\BOOKMARK [2][-]{subsection.189}{Dataset Description}{section.188}% 58
-\BOOKMARK [2][-]{subsection.192}{Problem Description}{section.188}% 59
-\BOOKMARK [2][-]{subsection.193}{Network Description}{section.188}% 60
-\BOOKMARK [1][-]{section.196}{Experiments with the ArtS Dataset}{chapter.182}% 61
-\BOOKMARK [2][-]{subsection.197}{Experiment 1}{section.196}% 62
-\BOOKMARK [2][-]{subsection.207}{Experiment 2}{section.196}% 63
-\BOOKMARK [2][-]{subsection.220}{Experiment 3}{section.196}% 64
-\BOOKMARK [2][-]{subsection.233}{Experiment 4}{section.196}% 65
-\BOOKMARK [2][-]{subsection.246}{Experiment 5}{section.196}% 66
-\BOOKMARK [2][-]{subsection.254}{Discussion}{section.196}% 67
-\BOOKMARK [1][-]{section.259}{Summary}{chapter.182}% 68
-\BOOKMARK [0][-]{chapter.260}{Bidirectional Grounding of Real Data}{}% 69
-\BOOKMARK [1][-]{section.261}{The Difficulties of Real Data}{chapter.260}% 70
-\BOOKMARK [1][-]{section.263}{Acoustic Packaging}{chapter.260}% 71
-\BOOKMARK [1][-]{section.266}{Real Shapes Dataset}{chapter.260}% 72
-\BOOKMARK [2][-]{subsection.268}{Dataset Description}{section.266}% 73
-\BOOKMARK [2][-]{subsection.270}{Problem Description}{section.266}% 74
-\BOOKMARK [2][-]{subsection.271}{Network Description}{section.266}% 75
-\BOOKMARK [1][-]{section.273}{Experiments with the ReShape dataset}{chapter.260}% 76
-\BOOKMARK [2][-]{subsection.274}{Data Preprocessing}{section.273}% 77
-\BOOKMARK [2][-]{subsection.277}{Training Procedures}{section.273}% 78
-\BOOKMARK [2][-]{subsection.281}{Experiment 1}{section.273}% 79
-\BOOKMARK [2][-]{subsection.292}{Experiment 2}{section.273}% 80
-\BOOKMARK [2][-]{subsection.303}{Discussion}{section.273}% 81
-\BOOKMARK [1][-]{section.304}{Summary}{chapter.260}% 82
-\BOOKMARK [0][-]{chapter.306}{Conclusion}{}% 83
-\BOOKMARK [1][-]{section.307}{Summary of Important Points}{chapter.306}% 84
-\BOOKMARK [1][-]{section.308}{Conclusion}{chapter.306}% 85
-\BOOKMARK [1][-]{section.309}{Future Work}{chapter.306}% 86
-\BOOKMARK [2][-]{subsection.315}{Accounting for time}{section.309}% 87
-\BOOKMARK [0][-]{appendix.316}{Appendix A Primer on Artifical Neural Networks}{}% 88
-\BOOKMARK [0][-]{appendix.323}{Appendix Sensory Redundancy}{}% 89
-\BOOKMARK [0][-]{appendix.325}{Appendix Magical Vectors and Where to Find Them}{}% 90
-\BOOKMARK [0][-]{appendix*.328}{Bibliography}{}% 91
+\BOOKMARK [2][-]{subsection.135}{UCU Arabic Spoken Digits and MNIST}{section.132}% 48
+\BOOKMARK [2][-]{subsection.142}{Problem Description}{section.132}% 49
+\BOOKMARK [2][-]{subsection.145}{Experiment Details}{section.132}% 50
+\BOOKMARK [2][-]{subsection.164}{Results}{section.132}% 51
+\BOOKMARK [2][-]{subsection.172}{Discussion}{section.132}% 52
+\BOOKMARK [1][-]{section.179}{Summary}{chapter.130}% 53
+\BOOKMARK [0][-]{chapter.181}{Magical Vectors and Where to Find Them}{}% 54
+\BOOKMARK [1][-]{section.182}{ANN Latent Space}{chapter.181}% 55
+\BOOKMARK [1][-]{section.184}{Vector Arithmetic}{chapter.181}% 56
+\BOOKMARK [1][-]{section.187}{Artificial Shapes Dataset}{chapter.181}% 57
+\BOOKMARK [2][-]{subsection.188}{Dataset Description}{section.187}% 58
+\BOOKMARK [2][-]{subsection.191}{Problem Description}{section.187}% 59
+\BOOKMARK [2][-]{subsection.192}{Network Description}{section.187}% 60
+\BOOKMARK [1][-]{section.195}{Experiments with the ArtS Dataset}{chapter.181}% 61
+\BOOKMARK [2][-]{subsection.196}{Experiment 1}{section.195}% 62
+\BOOKMARK [2][-]{subsection.206}{Experiment 2}{section.195}% 63
+\BOOKMARK [2][-]{subsection.219}{Experiment 3}{section.195}% 64
+\BOOKMARK [2][-]{subsection.232}{Experiment 4}{section.195}% 65
+\BOOKMARK [2][-]{subsection.245}{Experiment 5}{section.195}% 66
+\BOOKMARK [2][-]{subsection.253}{Discussion}{section.195}% 67
+\BOOKMARK [1][-]{section.258}{Summary}{chapter.181}% 68
+\BOOKMARK [0][-]{chapter.259}{Bidirectional Grounding of Real Data}{}% 69
+\BOOKMARK [1][-]{section.260}{The Difficulties of Real Data}{chapter.259}% 70
+\BOOKMARK [1][-]{section.262}{Acoustic Packaging}{chapter.259}% 71
+\BOOKMARK [1][-]{section.265}{Real Shapes Dataset}{chapter.259}% 72
+\BOOKMARK [2][-]{subsection.267}{Dataset Description}{section.265}% 73
+\BOOKMARK [2][-]{subsection.269}{Problem Description}{section.265}% 74
+\BOOKMARK [2][-]{subsection.270}{Network Description}{section.265}% 75
+\BOOKMARK [1][-]{section.272}{Experiments with the ReShape dataset}{chapter.259}% 76
+\BOOKMARK [2][-]{subsection.273}{Data Preprocessing}{section.272}% 77
+\BOOKMARK [2][-]{subsection.276}{Training Procedures}{section.272}% 78
+\BOOKMARK [2][-]{subsection.280}{Experiment 1}{section.272}% 79
+\BOOKMARK [2][-]{subsection.291}{Experiment 2}{section.272}% 80
+\BOOKMARK [2][-]{subsection.302}{Discussion}{section.272}% 81
+\BOOKMARK [1][-]{section.303}{Summary}{chapter.259}% 82
+\BOOKMARK [0][-]{chapter.305}{Conclusion}{}% 83
+\BOOKMARK [1][-]{section.306}{Summary of Important Points}{chapter.305}% 84
+\BOOKMARK [1][-]{section.307}{Conclusion}{chapter.305}% 85
+\BOOKMARK [1][-]{section.308}{Future Work}{chapter.305}% 86
+\BOOKMARK [2][-]{subsection.314}{Accounting for time}{section.308}% 87
+\BOOKMARK [0][-]{appendix.315}{Appendix A Primer on Artifical Neural Networks}{}% 88
+\BOOKMARK [0][-]{appendix.322}{Appendix Sensory Redundancy}{}% 89
+\BOOKMARK [0][-]{appendix.324}{Appendix Magical Vectors and Where to Find Them}{}% 90
+\BOOKMARK [0][-]{appendix*.327}{Bibliography}{}% 91
