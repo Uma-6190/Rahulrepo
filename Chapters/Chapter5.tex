@@ -104,6 +104,10 @@ Further to this, I will demonstrate that once trained, the \ac{ANN} can infer th
 \subsection{Network Description}
 The overall structure of the \ac{ANN} used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description}  gives the specific details on each of the layers of the network. Additionally, batch normalisation is used between each convolution layer.
 
+\textcolor{red}{The design of the \ac{MAE} used in this chapter is deeper and wider (has more layers and more neurons in each layer) than the network used in the previous chapter. The reason for this is that the data used in this chapter is more complex, and the small network from \autoref{Chapter4} was not sufficient to achieve the quality of results demonstrated by the larger network I used in its place.}
+
+\textcolor{red}{The description encoding an decoding branches of the \ac{MAE} described in \autoref{tab:Arts_MAE_description} is designed mainly to reshape the representation of the descriptions to match the shape of the image representation. The description representation is already highly abstract (it is the sum of one-hot encodings of the words of the description). As such, very little effort from the \ac{MAE} is needed to extract a meaningful representation of the description, compared to the work needed to extract the same amount of meaning from the representation of the images.}
+
 \begin{table}
 		\centering
 		\begin{tabular}{|c|c|c|c|c|c|c|}
@@ -117,7 +121,7 @@ The overall structure of the \ac{ANN} used for the experiements in this chapter 
 			& 6i	&	2D Conv & 16 & (3,3) & (2,2) & Relu \\ \cline{2-7}
 			& 7i	&	Dropout p=0.25 &	 & 	     &       &  \\ \hline
 
-			\multirow{3}{*}{Word} & 1w	& Dense & 128 & & &TanH \\ \cline{2-7}
+			\multirow{3}{*}{Description} & 1w	& Dense & 128 & & &TanH \\ \cline{2-7}
 			& 2w	& Dense & 256 & & &TanH \\ \cline{2-7}
 			& 3w 	&	Dropout p=0.5 &	 & 	     &       & \\ \cline{2-7}
 \multirow{4}{*}{Encoder}& 4w  &	Reshape (16,16,1) & & & & \\ \cline{2-7}
@@ -138,7 +142,7 @@ Embedding & 9iw	&	2D Conv  & emb size & (3,3) & (1,1) & Relu \\ \hline
 			& 16i	&	2D Trans Conv & 64 & (3,3) & (1,1)  & TanH \\ \cline{2-7}
 			& 17i	&	2D Trans Conv & 3 & (3,3) & (1,1) & Sigmoid\\ \hline 
 
-			\multirow{4}{*}{Word} & 10w 	&	Dropout p=0.25 &	 & 	     &       & \\ \cline{2-7}
+			\multirow{4}{*}{Description} & 10w 	&	Dropout p=0.25 &	 & 	     &       & \\ \cline{2-7}
 			& 12w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
 			& 13w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
 			& 14w	&	2D Trans Conv & 16 & (3,3) & (2,2)  & Relu \\ \cline{2-7}
@@ -350,7 +354,7 @@ The standard deviation across the fours runs of the experiment is very low for a
 
 \paragraph{Image Generation}
 
-Generating images from full descriptions gives very good quality results as seen in \autoref{fig:331multi}. Here we see images generated with an embedding size of 8 neurons and 200 neurons. From \autoref{tab:res331} we can see that 200 gave the best reconstruction error in the Bimodal, Image Only and Words Only testing conditions. However, \textcolor{red}{whilst leading to visible imagge artificats,} the small changes in reconstruction error in the Words Only testing condition are negligble when considering that the semantic information contained in the images is always correct regardless of embedding size. Each description leads to the generation of an image which clearly matches its descriptions, regardless of the embedding size. 
+Generating images from full descriptions gives very good quality results as seen in \autoref{fig:331multi}. Here we see images generated with an embedding size of 8 neurons and 200 neurons. From \autoref{tab:res331} we can see that 200 gave the best reconstruction error in the Bimodal, Image Only and Words Only testing conditions. However, \textcolor{red}{whilst leading to visible image artificats,} the small changes in reconstruction error in the Words Only testing condition are negligble when considering that the semantic information contained in the images is always correct regardless of embedding size. Each description leads to the generation of an image which clearly matches its descriptions, regardless of the embedding size. 
 
 \begin{figure}
 \centering
