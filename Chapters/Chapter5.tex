@@ -100,13 +100,28 @@ In the previous chapter, we saw a similar problem which was broken into two subp
 
 Further to this, I will demonstrate that once trained, the \ac{ANN} can infer the meaning of unseen descriptions to correctly generate images and vice-versa. If we omit a subcategory of object from the training data, for example blue circles, the \acp{ANN} is still able to generate images of blue circles as it has grounded the meaning of both \textsc{Blue} and \textsc{Circle} as well as the visual properties \textit{Blue} and \textit{Circle}. It is also able to correctly label images of blue circles for the same reason, despite never having never seen what a blue circle is.
 
+\subsection{A note on Qualatitive Anaylsis of Image Generation}
+\textcolor{red}{As in the previous chapter, a quantitive metric for the quality of image generation is not avaiable. However, as the data used in this chapter is more complex, I will define several terms which I use to describe the quality of image generation. These same criteria are also used in \autoref{Chapter6}.}
+
+\begin{itemize}
+\item \textcolor{red}{Solid - a generated image is described as being more (or less) solid depending on whether the colored pixels are more (or less) connected to one and other. E.g. if a generated image has many uncoloured pixels amongst the coloured pixels, it would not be described as solid.}
+
+\item \textcolor{red}{Blur - blur is used to describe whether the edges of a generated image of a shape are clearly defined or not. I.e. there is a clear boundary between the interior and exterior of a shape, with coloured pixels all occuring inside and white pixels occuring outside. This can be understood in the mathematical sense e.g. gaussian blur, where blur can be applied to an image through convolution with a guassian kernel. This operation has an averaging affect on each pixel with its neighbours leading to a smooth gradient between (in this case) coloured and white pixels and a lack of a defined edge between the shape and white background.}
+
+\item \textcolor{red}{Size - the size of a generated object in an image is determined by the number of coloured pixels which are generated. Thus, big shapes should have more coloured pixels than medium shapes which in turn have more coloured pixels than small shapes.}
+
+\item \textcolor{red}{Shape - if a generated shape has the (approximately) correct number of edges and corners, it is considered to be correctly generated. I.e. 4 edges and 4 corners at 90 degrees to one and other is a rectangle, 3 edges and corners at 60 degrees to one and other is a triangle and 1 edge 0 corners is a circle. Due to interactions between other image quality properties such as solidity and blur, holes might occur in the generated shapes. As such, thiese criteria are not strictly inforced and the evaluation is made subjectively. However, as the images are available for you (the reader) to look at, you can make up your own mind as to whether these properties have been fairly assigned.}
+
+\item \textcolor{red}{Position - position is considered to be correctly learnt if the centre of the generated object appears at approximately the coordinates of that position as defined in\autoref{tab:Arts_desc}.}
+\end{itemize}  
+
 
 \subsection{Network Description}
 The overall structure of the \ac{ANN} used for the experiements in this chapter is very similar to the one used in \autoref{Chapter4}, with two inputs for each of the different modalities, this time, images and words. However, it only has two outputs, one for images and one for words, unlike in the previous chapter where we also had a third output which acted as a classification layer. \autoref{tab:Arts_MAE_description}  gives the specific details on each of the layers of the network. Additionally, batch normalisation is used between each convolution layer.
 
 \textcolor{red}{The design of the \ac{MAE} used in this chapter is deeper and wider (has more layers and more neurons in each layer) than the network used in the previous chapter. The reason for this is that the data used in this chapter is more complex, and the small network from \autoref{Chapter4} was not sufficient to achieve the quality of results demonstrated by the larger network I used in its place.}
 
-\textcolor{red}{The description encoding an decoding branches of the \ac{MAE} described in \autoref{tab:Arts_MAE_description} is designed mainly to reshape the representation of the descriptions to match the shape of the image representation. The description representation is already highly abstract (it is the sum of one-hot encodings of the words of the description). As such, very little effort from the \ac{MAE} is needed to extract a meaningful representation of the description, compared to the work needed to extract the same amount of meaning from the representation of the images.}
+\textcolor{red}{The description encoding branch of the \ac{MAE} described in \autoref{tab:Arts_MAE_description} is designed mainly to reshape the representation of the descriptions to match the shape of the image representation. The description representation is already highly abstract at the input (it is the sum of one-hot encodings of the words of the description). As such, very little effort from the \ac{MAE} is needed to extract a meaningful representation of the description, compared to the work needed to extract the same amount of meaning from the representation of the images.}
 
 \begin{table}
 		\centering
@@ -172,7 +187,6 @@ Embedding & 9iw	&	2D Conv  & emb size & (3,3) & (1,1) & Relu \\ \hline
 
 \section{Experiments with the ArtS Dataset}
 For each of the following experiments I test the \ac{MAE} in three ways, similarly to the experimental method of \autoref{Chapter4}. Following the protocol of testing in a Bimodal, Image Only and Words Only manner allows me to explore how each of the modalities and their combination, affects the quality of the embedding learnt by the \ac{MAE}. All experiments in this section will utilise the RD training procedure developed in \autoref{Chapter4}.
-
 
 Due to the complexity of ArtS and the variety of factors which can be explored with it, I perform 5 sets of experiments, each using different subsets of the dataset. All experiments make use of all 3 shapes, but different numbers of colours, sizes and positions will be used.
 
@@ -390,7 +404,7 @@ The \ac{MAE} gets 100\% accuracy on all descriptions for all testing conditions 
 \subsubsection{Discussion}
 The results of experiment 1 show that the \ac{MAE} is capable of preforming symbol grounding on this subset of the ArtS dataset. However, it is difficult to make any conclusions about which embedding size gave the best results. Whilst 200 neurons gave the lowest reconstruction error in all testing conditions (see \autoref{tab:res331}), it did not do the best job of grounding the meanings of each word in the descritptions (see \autoref{fig:331shapes}). 
 
-In the next experiment, we will observe how embedding size affects the reconstruction error and symbol grounding of the \ac{MAE} when a larger variety of sizes for the objects in the images are available.
+\textcolor{red}{This experiment has already proven hypothesis 3: \ac{MRL} can be used to learn language as it relates to the visual properties of objects. However, I wish to test this hypothesis on more complex data. As such,} in the next experiment, we will observe how embedding size affects the reconstruction error and symbol grounding of the \ac{MAE} when a larger variety of sizes for the objects in the images are available.
 
 
 \newpage
@@ -577,7 +591,7 @@ With the addition of the extra sizes, generation of images from a single word ha
 There is also a clear releationship between the three sizes, shown by the generation of the most coloured pixels for the word \textsc{Big}, fewer for \textsc{Medium} and the least for \textsc{Small}.
 
 
-The quality of the shapes being generated from the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle} has suffered the most. However, there is a clear difference between the three shapes and they do show properties of the shapes they are supposed to be. The \textsc{Circle} is more round than either of the other shapes. The \textsc{Rectangle} has approxiamtely 4 sides at right angles to one and other, though it is significantly more ``fuzzy'' than in experiment 1. The \textsc{Triangle} appears triangular, however, for most embedding sizes there appear to be multiple triangles being drawn, this could signify a confusion about where to draw the triangle. I reason that this is the case as in \autoref{fig:2word333} the triangle is significantly more solid when a position is specified. 
+The quality of the shapes being generated from the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle} has suffered the most. However, there is a clear difference between the three shapes and they do show properties of the shapes they are supposed to be. The \textsc{Circle} is more round than either of the other shapes. The \textsc{Rectangle} has approxiamtely 4 sides at right angles to one and other, though it \textcolor{red}{shows significantly more blur} than in experiment 1. The \textsc{Triangle} appears triangular, however, for most embedding sizes there appear to be multiple triangles being drawn, this could signify a confusion about where to draw the triangle. I reason that this is the case as in \autoref{fig:2word333} the triangle is significantly more solid when a position is specified. 
 
 
 \begin{figure}[h]
@@ -597,7 +611,7 @@ Whilst an embedding size of 136 neurons disentangled the meanings of \textsc{Cir
 \label{fig:2word333}
 \end{figure}
 
-Another way to inspect the quality of the learnt embedding is to provide pairs of words to the \ac{MAE} and observe what it generates as output. \autoref{fig:2word333} shows the output of the \ac{MAE} trained in run A of experiment 2 (runs B-D can be found in \autoref{appendix:app5} with an embedding size of 296 neurons. Here we see clearly that the \ac{MAE} is correctly generating images from the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle} as well as the other words in its ``vocabulary''. The diagonal of \autoref{fig:2word333} is the equivalent of the bottom row (296) of \autoref{fig:333single}. The addition of a second word allows for the correct generation of the three shapes in different positions and sizes, suggesting that when only the shape is provided as input, the \ac{MAE} does not know where to draw the object or how big to draw it. By adding a second word and removing some uncertainty, the output of the \ac{MAE} is much more well defined. This is a particularly strong result in the case of when a position is provided in conjuction with either a shape, size or colour. 
+Another way to inspect the quality of the learnt embedding is to provide pairs of words to the \ac{MAE} and observe what it generates as output. \autoref{fig:2word333} shows the output of the \ac{MAE} trained in run A of experiment 2 (runs B-D can be found in the supplimental material) with an embedding size of 296 neurons. Here we see clearly that the \ac{MAE} is correctly generating images from the words \textsc{Circle}, \textsc{Rectangle} and \textsc{Triangle} as well as the other words in its ``vocabulary''. The diagonal of \autoref{fig:2word333} is the equivalent of the bottom row (296) of \autoref{fig:333single}. The addition of a second word allows for the correct generation of the three shapes in different positions and sizes, suggesting that when only the shape is provided as input, the \ac{MAE} does not know where to draw the object or how big to draw it. By adding a second word and removing some uncertainty, the output of the \ac{MAE} is much more well defined. This is a particularly strong result in the case of when a position is provided in conjuction with either a shape, size or colour. 
 
 
 \paragraph{Description Accuracy}
@@ -606,7 +620,7 @@ Even with the added complexity of the additional sizes, the MAE gets 100\% accur
 
 \subsubsection{Discussion}
 
-Increasing the number of variable attributes in the dataset, i.e. adding the extra sizes, has had a negative affect on the ability of the \ac{MAE} to ground the meanings of each of the words in the descriptions. This is highlighted when the results of experiments 1 and 2 are seen side by side as in \autoref{fig:shapes333v331}.
+Increasing the number of variable attributes in the dataset, i.e. adding the extra sizes, has had a negative affect on the ability of the \ac{MAE} to ground the meanings of each of the words in the descriptions. This is highlighted when the results of experiments 1 and 2 are seen side by side as in \autoref{fig:shapes333v331}. 
 
 \begin{figure}[h]
 \centering
@@ -616,6 +630,8 @@ Increasing the number of variable attributes in the dataset, i.e. adding the ext
 \end{figure} %This issue could likely be solved by the addition of more examples per object.
 However, the \ac{MAE} remains able to accurately generate images from full descriptions (see \autoref{fig:333multi}). 
 An embedding size of 296 neurons gave the all around best performance in experiment 2 and performed the best at symbol grounding in experiment 1, therefore it will be used for the later experiments.
+
+\textcolor{red}{This experiment demonstrates that Hypothesis 3: can be used to learn language as it relates to the visual properties of objects, continues to hold true even for more complex data.}
 
 \newpage
 \subsection{Experiment 3}
@@ -658,7 +674,9 @@ Bottom Right & (42,22)\\ \hline
 
 This experiment adds further vairety to the data, adding an additional 6 positions as seen in \autoref{tab:exp3_data}. In this experiment, I also observe how incrementally learning these new properties affects the quality of the generated outputs as well as the bidirectional grounding of the different words from the descriptions and visual attributes of the images. 
 
-Incremental learning is performed by transfering the weights learned in the previous experiments and then performing further training on the data-subset of experiment 3. By comparing the quality of the output from a \ac{MAE} trained starting from random weights, with the \ac{MAE} pretrained in experiments 1 and 2 (after they train on the data for experiment 3), I will answer the fundamental question of whether, having knowledge of the meaning of a subset of words and visual attributes, aids the learning of new words and image attributes.
+\textcolor{red}{As was explained in \autoref{Chapter3}, humans do not learn everything from scratch, instead we bootstrap new skills on top of previosuly learnt ones. In fact, even new born babies do not start learning from scratch as was seen in \cite{webb2015mother, fantz1963pattern, reid2017human}, developmental learning starts prenatally and continues throughout our lives. As such, this experiment aims to test hypothesis 4: \ac{MRL} can be improved through transfer learning, and demonstrate how a develpmental approach to training neural networks can improve their learning.}
+
+Incremental learning is performed by transfering the weights learned in the previous experiments and then performing further training on the data-subset of experiment 3. \textcolor{red}{This is similar to the approach taken in \cite{vinyals2015show, venugopalan2014translating, johnson2016densecap} where pretraining on image classification and language prediction tasks was used to initialise image captioning systems.} By comparing the quality of the output from a \ac{MAE} trained starting from random weights, with the \ac{MAE} pretrained in experiments 1 and 2 (after they train on the data for experiment 3), I will answer the fundamental question of whether, having knowledge of the meaning of a subset of words and visual attributes, aids the learning of new words and image attributes.
 
 To make this a fair comparison, the MAE which is initialised with random weights will be trained for 100 epochs so that the total number of epochs of training that each \ac{MAE} receives is equal. I.e. either 50 epochs pretraining and 50 epochs training or 100 epochs of training.
 
@@ -726,7 +744,7 @@ As in experiment 2, the addition of a second word as input, leads to better reco
 \label{fig:2word339}
 \end{figure}
 
-Initialising with weights from experiment 2 offers a marginal benifit, with each of the shapes being generally more solid in appearance. Full results from all four runs can be found in the supplimental materials.
+Initialising with weights from experiment 2 offers a marginal benifit, with each of the shapes being more solid in appearance. Full results from all four runs can be found in the supplimental materials.
 
 \paragraph{Description Accuracy}
 
@@ -843,7 +861,7 @@ All seven colours are correctly learnt as seen in \autoref{fig:739single_col} fo
 \label{fig:2word739}
 \end{figure}
 
-The addition of pretraining has a positive effect on the grounding of the meaning of all words, however this is particularly clear in the case of the shape words, \textsc{Circle}, \textsc{Rectangle} and\textsc{Triangle}. \autoref{fig:2word739} shows that without pretraining, the shapes generated by the \ac{MAE} when two words are given as input (a shape and position), are somewhat fuzzy and incorrect. For example, generating an image from the words \textsc{Circle, Centre Right} leads to a \textit{Circle} with protrusions in the random initialisation condition.
+The addition of pretraining has a positive effect on the grounding of the meaning of all words, however this is particularly clear in the case of the shape words, \textsc{Circle}, \textsc{Rectangle} and\textsc{Triangle}. \autoref{fig:2word739} shows that without pretraining, the shapes generated by the \ac{MAE} when two words are given as input (a shape and position) \textcolor{red}{are blurry}. For example, generating an image from the words \textsc{Circle, Centre Right} leads to a \textit{Circle} with protrusions in the random initialisation condition, \textcolor{red}{with no clear boundary between the shape and the background}.
 
 Pretraining on experiment 2 gave the best results, with all shapes apearing solid and correctly positioned without extraneous edges or protrusions. 
 
@@ -869,13 +887,13 @@ Exp 3	&	100.00	$\mypm$	0.00	&	99.06	$\mypm$	2.42	&	100.00	$\mypm$	0.00\\ \hline
 \label{tab:res739acc}
 \end{table}
 
-The addition of more variety of colours to the dataset has had a negative effect on description accuracy in the Image Only testing condition, with a small number of images being mislabelled. The \ac{MAE} initialised with weights from expeirment 2 performed the best with a description generation accuracy of 99.53\% (compared to 99.99\% for the top performing model in experiment 3).
+The addition of more variety of colours to the dataset has had a negative effect on description accuracy in the Image Only testing condition, with a small number of images being mislabelled. The \ac{MAE} initialised with weights from expeirment 2 performed the best with a description generation accuracy of 99.53\% (compared to 99.99\% for the top performing model in experiment 3, \textcolor{red}{133 incorrectly described images versus only 2 incorrectly described in experiment 3, note that experiment 3 uses less data than experiment 4 hence the large difference between the number of incorrectly descirbed images)}
 
 Unsurprisingly, the \ac{MAE} initialised with weights from experiment 2 has the best description accuracy in the image only testing condition. Given that this \ac{MAE} also produces the best images from individual and pairs of words, it is clear that bidirectional grounding has occured in this condition. The \ac{MAE} is able to generate the correct visual attributes from the input words and is also able to correctly describe the visual attributes of images.
 
 \subsubsection{Discussion}
 As in experiment 3 there is a clear positive effect of utilising an incremental approach to grounding the meanings of the words and the visual attributes they equate to. 
-When training from random weights, the \ac{MAE} struggles to generate images and descriptions in the Image Only test condition, with a four-fold cross-validated \ac{MSE} that is an order of magnitude worse than the best performing pretrained models.
+When training from random weights, the \ac{MAE} struggles to generate images and descriptions in the Image Only test condition, with a four-fold cross-validated \ac{MSE} that is an order of magnitude worse than the best performing pretrained models. \textcolor{red}{This not only proves hypothesis 4: \ac{MRL} can be improved through transfer learning to be correct, but also demonstrates the importance of taking this approach to achieve the best possible results.}
 
 \begin{table}
 \centering
@@ -935,7 +953,7 @@ MAE 1	&	3.87	$\mypm$	0.23	&	43.22	$\mypm$	44.88	&	4.05	$\mypm$	0.24	\\ \hline
 MAE 1*	&	5.21	$\mypm$	0.78	&	86.71	$\mypm$	75.11	&	5.28	$\mypm$	0.55	\\ \hline
 MAE 2	&	3.72	$\mypm$	0.21	&	15.60	$\mypm$	23.65	&	3.97	$\mypm$	0.29	\\ \hline
 MAE 2*	&	4.95	$\mypm$	1.02	&	41.54	$\mypm$	23.46	&	7.18	$\mypm$	2.74	\\ \hline
-MAE 3	3.07	$\mypm$	0.77 &		&	43.95	$\mypm$	79.53	&	4.12	$\mypm$	0.09	\\ \hline
+MAE 3	&	3.07	$\mypm$	0.77 	&	43.95	$\mypm$	79.53	&	4.12	$\mypm$	0.09	\\ \hline
 MAE 3*	&	4.01	$\mypm$	0.32	&	86.16	$\mypm$	123.74	&	2.67	$\mypm$	0.24	\\ \hline
 \end{tabular}
 \caption{Experiment 5: Total MSE. Alternating rows show MSE for the datasubset without the omitted data and MSE for only the omitted data (marked with *). (All values are $\times10^{-3}$.)}
@@ -943,6 +961,7 @@ MAE 3*	&	4.01	$\mypm$	0.32	&	86.16	$\mypm$	123.74	&	2.67	$\mypm$	0.24	\\ \hline
 \end{table}
 
 Testing with only the omitted object, we see an increase in \ac{MSE}, particularly for the Image Only testing condition. This is to be expected as the MAE has never seen these objects before, and will therefore be biased towards generating outputs which are more simlar to its training data than those required to perform well at generating the correct output for the omitted objects (\autoref{tab:res_exp5}).
+
 
 \paragraph{Image Generation}
 To further demonstrate the abilities of multimodal representation learning through the use of \acp{MAE}, I used three subsets of data to train three \acp{MAE}. Each of the MAEs was trained 4 times for validation purposes as with all other experiments, the mean result for the four runs is presented.
@@ -969,7 +988,7 @@ As explained earlier in this chapter, it is also possible to generate novel imag
 
 Whilst some manipulations are successful for \ac{MAE} 1, not all are. This is likely due to discontinuities in the latent embedding space. As the \ac{MAE} has not been trained on every possible combination of colours, sizes, shapes and positions, there are parts of the embedding space it has never trained. This means that when vector arithmatic creates an embedding which lies in one of these unexplored areas, the \ac{MAE} will not generate a sensible output. 
 
-%Comparing the \acp{MAE} from this experiment to images generated via Vector Arithmetic by the Exp 2 \acp{MAE} from experiment 4, highlights this effect. The Exp 2 \ac{MAE} had the best overall performance of any of the \acp{MAE} trained in this chapter and therefore it is unsurprising that it had the least discontinuities in its embedding space. The Exp 2 \ac{MAE} did the best job of embedding the different words and visual attributes into the latent representation space, creating a smoother, more continuous representation space such that Vector Arithmetic was unlikely to lead to the generation of an embedding in an unexplored part of the representation space. 
+\textcolor{red}{This demonstrates that the representation learnt by the \ac{MAE} does fulfil some of the criteria laid out by Bengio et al. \cite{repRev} as the representation of each individual visual attribute maintains its meaning even in unseen combinations of visual attributes. However, the learnt representation does not fulfil all of these criteria due to the discontinuities in the latent space. In order to accept hypothesis 5: the multimodal representation learnt by the \acp{MAE} exhibits all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}, it will be necessary to find methods to remove these discontinuites. Possible approaches to this would be the addition of either a variational cost \cite{kingma2013auto} or vector quantisation \cite{wavenet} on the lantent space.}
 
 \paragraph{Description Accuracy}
 \begin{table}[h!]
@@ -992,12 +1011,13 @@ MAE 3*	&	99.95	$\mypm$	0.32	&	92.27	$\mypm$	17.55	&	100.00	$\mypm$	0.00	\\ \hlin
 
 The \acp{MAE} are still able to accurately describe images of objects which appeared in the training data. However, they are also able to describe the images of the objects which were omitted from the training data. The \acp{MAE} have grounded the meanings of the all visual attributes, regardless of having some combinates excluded from the training data (e.g. green triangles). There is an overall decrease in description accuracy for the omitted objects ($\approx 96 \% --> \approx 92 \%$). However for the non-omitted objects the performance is comparable to the accuracy of the random condition from experiment 4.
 
+
 \subsection{Discussion}
 Omitting one object from the training data has a minimal effect on the reconstruction of the other objects in the dataset, this can be seen by comparing the random initialisation condition from \autoref{tab:res739} and the results shown \autoref{tab:res_exp5}. This means that omitting one object, such as green triangles, does not affect the ability of the \ac{MAE} to learn to ground the visual attributes \textit{Green} and \textit{Triangle} nor the words \textsc{Green} and \textsc{Triangle}. It can still generate green objects and triangles, approximately as well as the randomly initalised MAE from experiment 4.
 
 This is further demonstrated by the \acp{MAE} ability to generate images of the unseen objects as shown in \autoref{fig:739_minus1}. As the \ac{MAE} has grounded the meanings of the visual attributes \textit{Green} and \textit{Triangle} and the words \textsc{green} and \textsc{triangle}, it is able to combine their meanings to generate images of green triangles in different positions and sizes. (This is also true for orange rectangles and violet circles).
 
-There is a negative effect on the reconstruction error for the ommited object and the labelling of the omitted object also suffers. Whilst labelling accuracy for objects types included in the training data generally remained very good (over 96\% in the image only testing condition), labelling of the omitted object was noticably worse, with an average of a 3.61\% reduction in accuracy across the three omitted objects.
+There is a negative effect on the reconstruction error for the ommited object and the labelling of the omitted object also suffers. Whilst labelling accuracy for objects types included in the training data generally remained very good (over 96\% in the image only testing condition), labelling of the omitted object was noticably worse, with an average of a 3.61\% reduction in accuracy across the three omitted objects. \textcolor{red}{This means that only approximately 378 out of 9450 images of each objects which has been seen are incorrectly described compared to approxiamtely 103 out of 1350 unseen objects incorrectly classified. (9450 = 9 positions x 7 colours x 3 sizes x 50 samples and 1350 = 9 positions x 1 colour x 3 sizes x 50 samples) }
 
 Seeing that both accurate descriptions and reconstructed images can be generated by the \ac{MAE} for unseen objects, we can conclude that the \ac{MAE} is capable of bidirectional symbol grounding. This also highlights the effectivness and utility of this method. There is not a decrease in performance compared to the random condition of experiment 4, it is therefore possible that the \ac{MAE} can be used to accuartely label unseen objects without a decrease in performance on seen objects.
 
@@ -1094,9 +1114,11 @@ This lines up well with how humans learn. We master simple tasks and build upon 
 \section{Summary}
 This chapter focused on demonstrating how a more complex internal representation could be created and exploited.
 
-I have demonstrated that by utilising a \ac{MAE}, it is possible to learn a multimodal representation of images and their descriptions. The embedding of images or descriptions into this representation can be used to generate novel descriptions or images.
+I have demonstrated that by utilising a \ac{MAE}, it is possible to learn a multimodal representation of images and their descriptions \textcolor{red}{proving hypothesis 3}. The embedding of images or descriptions into this representation can be used to generate novel descriptions or images.
 
-Further to this, it is possible to directly manipulate the latent representation using vector arithmetic on embeddings from either modality making meaningful changes, generating images with altered visual attributes.
+\textcolor{red}{The use of an incremental approach to learning the visual attributes and vocabulary of the Arts dataset through transfer learning lead to improved bidirectional symbol grounding proving hypothesis 4.}
+
+It is possible to directly manipulate the latent representation using vector arithmetic on embeddings from either modality making meaningful changes, generating images with altered visual attributes. \textcolor{red}{Whilst this demonstrates that the learnt representation does fulfil some of the criteria laid out in \cite{repRev} for what makes a good representation, I was unable to accept hypothesis 5 as there are areas of the latent space which do not meet these criteria, hence the generation of incorrect images through vector arithmetic seen in \ref{fig:739_vectorArth}.}
 
 The learnt representation is very robust, even allowing for the generation of unseen combinations of words as images, or the descriptions of images of unseen objects. However, the quality of the representation is highly dependent on the data used for training and the training method used. The best results were achieved by first training on a subset of the data and then incrementally learning additional words and visual attributes.
 
