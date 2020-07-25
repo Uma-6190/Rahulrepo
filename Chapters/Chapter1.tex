@@ -12,17 +12,17 @@
 What is \ac{MRL} and why is it useful? These are the questions that I will address in this thesis.
 Briefly, \ac{MRL} is the act of learning an abstract representation of sensory data from multiple sensors. As sensors respond directly to the world in which they are situated, \ac{MRL} is closely related to learning a world representation. Therefore, an accurate representation of sensory data contains in it, a representation of the world.
 
-\ac{MRL} is therefore useful any time we have more than one sensor and if we can abstract sensory data to learn more about the world, or how the different modalities relate to one and other. Perhaps the best example of this is Language Learning - when a baby learns its first words, it is doing \ac{MRL}, learning the association of sounds to objects and actions and vice-versa.
+\ac{MRL} is therefore useful any time we have more than one sensor and if we can abstract sensory data to learn more about the world, or how the different modalities relate to one another. Perhaps the best example of this is Language Learning - when a baby learns its first words, it is doing \ac{MRL}, learning the association of sounds to objects and actions and vice-versa.
 
 Beyond the highly complex and abstract task of learning a language, \ac{MRL} can also be used for sensor fusion. Providing auxilory information using extra sensors can help to improve classification accuracy (which I will demonstrate in \autoref{Chapter4}) and can also be used to regenerate missing data when only one modality is available.  A good example of this is when humans read lips in noisy environments, using the shape of the mouth to help recognise which words are being uttered even if they are not heard.
 
 
 \section{Motivation}
-One of the major challenges in robotics and machine learning is that of knowing how to develop systems capable of life long learning. If robots are to become common place in society, they must be capable of continuing to learn throughout their lives. They will not be very useful if they cannot learn new things that they weren't programmed with at the factory.
+One of the major challenges in robotics and machine learning is that of knowing how to develop systems capable of life long learning. If robots are to become common place in society, they must be capable of continuing to learn throughout their lives. They will not be very useful if they cannot learn new things that they were not programmed with at the factory.
 
 \ac{MRL} addresses this by providing an unsupervised method for extracting useful and actionable information about the world. Let us return to the language learning scenario, except this time, instead of a baby, lets imagine a robot, fresh out of the box. Whilst we might expect that a robot would have some proficiency with language built into it, we cannot expect it to know the meaning of every single word, especially given the flexible and evolving way that humans use language. Our robot therefore needs a way to learn the meaning of new words - otherwise known as symbol grounding. 
 
-Similarly, we cannot expect the robot to be able to recognise every single object in its environment. On my desk I have a Stirling engine, I would wager that most people who read this don't know what a Stirling engine is. However, if I showed you a picture of a Stirling engine (like the one in \autoref{fig:stirling}) you would be able to recognise what a Stirling engine is in future. Ideally, robots need to be able to do this.
+Similarly, we cannot expect the robot to be able to recognise every single object in its environment. On my desk I have a Stirling engine, I would wager that most people who read this do not know what a Stirling engine is. However, if I showed you a picture of a Stirling engine (like the one in \autoref{fig:stirling}) you would be able to recognise what a Stirling engine is in future. Ideally, robots need to be able to do this.
 
 \begin{figure}
 \centering
@@ -75,7 +75,7 @@ In the real world, visual perception is much noiser than the images presented in
 \centering
 
 \includegraphics[width=0.75\textwidth]{Figs/chapter6/avgBrickDuckBGYGeneratedExemplars.png}
-\caption{Images generated from textual descriptions (B, M and S are Big, Medium and Small, respectively).}
+\caption{Images generated from textual descriptions (B, M and S are Big, Medium and Small, respectively) by the system developed in this thesis.}
 \label{fig:mrl_teaser}
 \end{figure}
 
@@ -110,7 +110,7 @@ In the real world, visual perception is much noiser than the images presented in
 \caption{\textcolor{red}{The architecture of the MAE used in \autoref{Chapter6} to generate the images seen in \autoref{fig:mrl_teaser}. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
 \end{figure}
 
-\textcolor{red}{\autoref{fig:final_arch} shows an overview of the \ac{MAE} architecture used in \autoref{Chapter6}. The \ac{MAE} used in \autoref{Chapter4} and \autoref{Chapter5} follow a very similar structure and is pictured later in \autoref{fig:netMnist} and \autoref{fig:netArts}.} 
+\textcolor{red}{\autoref{fig:final_arch} shows an overview of the \ac{MAE} architecture used in \autoref{Chapter6}. The \ac{MAE} used in \autoref{Chapter4} and \autoref{Chapter5} follow a very similar structure and are pictured later in \autoref{fig:netMnist} and \autoref{fig:netArts}.} 
 
 
 

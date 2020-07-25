@@ -550,7 +550,7 @@ In a \ac{ConvNet}, the weights of the network are the kernels used to perform th
 
 Any given layer in a dense network will have $(Data Dimensions) \times (Number Of Neurons)$ weights. The convolutional equivalent will have $(Kernel Size) \times (Number Of Neurons)$ weights, usually this will be far fewer than the dense network. This gives a significant increase in computational performance.
 
-For each neuron in a \ac{ConvNet}, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed \endnote{In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. $R\times k + G\times k + B\times k$}.
+For each neuron in a \ac{ConvNet}, a single matrix multiplcation like that shown in \autoref{fig:convImpl} is performed. In the case of image data where pixels have 3 channels (RGB) 3 multiplcations are performed, one between the kernel (k) and each channel which are then summed to give a single output. I.e. $R\times k + G\times k + B\times k$.
 
 \subsubsection{Strided Convolution}
 In \autoref{fig:convolve}, convoltuion was performed with a stride of one. Strided Convolution refers to the case where the stride, the number of spaces between each application of the kernel, is greater than one. For example, convolution of an image and a kernel with a stride of two would be the convolution of the kernel with every other pixel of the image and would result in an output $\frac{1}{4}$ the size of the input (half the width by half the height).

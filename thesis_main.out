@@ -38,55 +38,57 @@
 \BOOKMARK [1][-]{section.108}{How to get off the Symbol Grounding Merry-Go-Round}{chapter.82}% 38
 \BOOKMARK [2][-]{subsection.109}{What is Symbol Grounding?}{section.108}% 39
 \BOOKMARK [2][-]{subsection.111}{How do Humans do it?}{section.108}% 40
-\BOOKMARK [2][-]{subsection.117}{How do Machines do it?}{section.108}% 41
-\BOOKMARK [1][-]{section.123}{Research Plan}{chapter.82}% 42
-\BOOKMARK [0][-]{chapter.130}{Sensory Redundancy: Are Two Heads Better Than One?}{}% 43
-\BOOKMARK [1][-]{section.131}{Why Have One Sensor When Two Are Better?}{chapter.130}% 44
-\BOOKMARK [1][-]{section.132}{Generating Images From Natural Language}{chapter.130}% 45
-\BOOKMARK [2][-]{subsection.133}{Aims}{section.132}% 46
-\BOOKMARK [2][-]{subsection.134}{A note on Qualatitive Anaylsis of Image Generation}{section.132}% 47
-\BOOKMARK [2][-]{subsection.135}{UCU Arabic Spoken Digits and MNIST}{section.132}% 48
-\BOOKMARK [2][-]{subsection.142}{Problem Description}{section.132}% 49
-\BOOKMARK [2][-]{subsection.145}{Experiment Details}{section.132}% 50
-\BOOKMARK [2][-]{subsection.164}{Results}{section.132}% 51
-\BOOKMARK [2][-]{subsection.172}{Discussion}{section.132}% 52
-\BOOKMARK [1][-]{section.179}{Summary}{chapter.130}% 53
-\BOOKMARK [0][-]{chapter.181}{Magical Vectors and Where to Find Them}{}% 54
-\BOOKMARK [1][-]{section.182}{ANN Latent Space}{chapter.181}% 55
-\BOOKMARK [1][-]{section.184}{Vector Arithmetic}{chapter.181}% 56
-\BOOKMARK [1][-]{section.187}{Artificial Shapes Dataset}{chapter.181}% 57
-\BOOKMARK [2][-]{subsection.188}{Dataset Description}{section.187}% 58
-\BOOKMARK [2][-]{subsection.191}{Problem Description}{section.187}% 59
-\BOOKMARK [2][-]{subsection.192}{A note on Qualatitive Anaylsis of Image Generation}{section.187}% 60
-\BOOKMARK [2][-]{subsection.193}{Network Description}{section.187}% 61
-\BOOKMARK [1][-]{section.196}{Experiments with the ArtS Dataset}{chapter.181}% 62
-\BOOKMARK [2][-]{subsection.197}{Experiment 1}{section.196}% 63
-\BOOKMARK [2][-]{subsection.207}{Experiment 2}{section.196}% 64
-\BOOKMARK [2][-]{subsection.220}{Experiment 3}{section.196}% 65
-\BOOKMARK [2][-]{subsection.233}{Experiment 4}{section.196}% 66
-\BOOKMARK [2][-]{subsection.246}{Experiment 5}{section.196}% 67
-\BOOKMARK [2][-]{subsection.254}{Discussion}{section.196}% 68
-\BOOKMARK [1][-]{section.259}{Summary}{chapter.181}% 69
-\BOOKMARK [0][-]{chapter.260}{Bidirectional Grounding of Real Data}{}% 70
-\BOOKMARK [1][-]{section.261}{The Difficulties of Real Data}{chapter.260}% 71
-\BOOKMARK [1][-]{section.263}{Acoustic Packaging}{chapter.260}% 72
-\BOOKMARK [1][-]{section.266}{Real Shapes Dataset}{chapter.260}% 73
-\BOOKMARK [2][-]{subsection.268}{Dataset Description}{section.266}% 74
-\BOOKMARK [2][-]{subsection.270}{Problem Description}{section.266}% 75
-\BOOKMARK [2][-]{subsection.271}{Network Description}{section.266}% 76
-\BOOKMARK [1][-]{section.273}{Experiments with the ReShape dataset}{chapter.260}% 77
-\BOOKMARK [2][-]{subsection.274}{Data Preprocessing}{section.273}% 78
-\BOOKMARK [2][-]{subsection.277}{Training Procedures}{section.273}% 79
-\BOOKMARK [2][-]{subsection.281}{Experiment 1}{section.273}% 80
-\BOOKMARK [2][-]{subsection.292}{Experiment 2}{section.273}% 81
-\BOOKMARK [2][-]{subsection.303}{Discussion}{section.273}% 82
-\BOOKMARK [1][-]{section.304}{Summary}{chapter.260}% 83
-\BOOKMARK [0][-]{chapter.306}{Conclusion}{}% 84
-\BOOKMARK [1][-]{section.307}{Summary of Important Points}{chapter.306}% 85
-\BOOKMARK [1][-]{section.308}{Conclusion}{chapter.306}% 86
-\BOOKMARK [1][-]{section.309}{Future Work}{chapter.306}% 87
-\BOOKMARK [2][-]{subsection.315}{Accounting for time}{section.309}% 88
-\BOOKMARK [0][-]{appendix.316}{Appendix A Primer on Artifical Neural Networks}{}% 89
-\BOOKMARK [0][-]{appendix.323}{Appendix Sensory Redundancy}{}% 90
-\BOOKMARK [0][-]{appendix.325}{Appendix Magical Vectors and Where to Find Them}{}% 91
-\BOOKMARK [0][-]{appendix*.328}{Bibliography}{}% 92
+\BOOKMARK [2][-]{subsection.113}{Multimodality}{section.108}% 41
+\BOOKMARK [2][-]{subsection.114}{Development}{section.108}% 42
+\BOOKMARK [2][-]{subsection.117}{How do Machines do it?}{section.108}% 43
+\BOOKMARK [1][-]{section.123}{Research Plan}{chapter.82}% 44
+\BOOKMARK [0][-]{chapter.130}{Sensory Redundancy: Are Two Heads Better Than One?}{}% 45
+\BOOKMARK [1][-]{section.131}{Why Have One Sensor When Two Are Better?}{chapter.130}% 46
+\BOOKMARK [1][-]{section.132}{Generating Images From Natural Language}{chapter.130}% 47
+\BOOKMARK [2][-]{subsection.133}{Aims}{section.132}% 48
+\BOOKMARK [2][-]{subsection.134}{A note on Qualatitive Anaylsis of Image Generation}{section.132}% 49
+\BOOKMARK [2][-]{subsection.135}{UCU Arabic Spoken Digits and MNIST}{section.132}% 50
+\BOOKMARK [2][-]{subsection.142}{Problem Description}{section.132}% 51
+\BOOKMARK [2][-]{subsection.145}{Experiment Details}{section.132}% 52
+\BOOKMARK [2][-]{subsection.164}{Results}{section.132}% 53
+\BOOKMARK [2][-]{subsection.172}{Discussion}{section.132}% 54
+\BOOKMARK [1][-]{section.179}{Summary}{chapter.130}% 55
+\BOOKMARK [0][-]{chapter.180}{Magical Vectors and Where to Find Them}{}% 56
+\BOOKMARK [1][-]{section.181}{ANN Latent Space}{chapter.180}% 57
+\BOOKMARK [1][-]{section.183}{Vector Arithmetic}{chapter.180}% 58
+\BOOKMARK [1][-]{section.186}{Artificial Shapes Dataset}{chapter.180}% 59
+\BOOKMARK [2][-]{subsection.187}{Dataset Description}{section.186}% 60
+\BOOKMARK [2][-]{subsection.190}{Problem Description}{section.186}% 61
+\BOOKMARK [2][-]{subsection.191}{A note on Qualatitive Anaylsis of Image Generation}{section.186}% 62
+\BOOKMARK [2][-]{subsection.192}{Network Description}{section.186}% 63
+\BOOKMARK [1][-]{section.195}{Experiments with the ArtS Dataset}{chapter.180}% 64
+\BOOKMARK [2][-]{subsection.196}{Experiment 1}{section.195}% 65
+\BOOKMARK [2][-]{subsection.206}{Experiment 2}{section.195}% 66
+\BOOKMARK [2][-]{subsection.219}{Experiment 3}{section.195}% 67
+\BOOKMARK [2][-]{subsection.232}{Experiment 4}{section.195}% 68
+\BOOKMARK [2][-]{subsection.245}{Experiment 5}{section.195}% 69
+\BOOKMARK [2][-]{subsection.253}{Discussion}{section.195}% 70
+\BOOKMARK [1][-]{section.258}{Summary}{chapter.180}% 71
+\BOOKMARK [0][-]{chapter.259}{Bidirectional Grounding of Real Data}{}% 72
+\BOOKMARK [1][-]{section.260}{The Difficulties of Real Data}{chapter.259}% 73
+\BOOKMARK [1][-]{section.262}{Acoustic Packaging}{chapter.259}% 74
+\BOOKMARK [1][-]{section.265}{Real Shapes Dataset}{chapter.259}% 75
+\BOOKMARK [2][-]{subsection.267}{Dataset Description}{section.265}% 76
+\BOOKMARK [2][-]{subsection.269}{Problem Description}{section.265}% 77
+\BOOKMARK [2][-]{subsection.270}{Network Description}{section.265}% 78
+\BOOKMARK [1][-]{section.272}{Experiments with the ReShape dataset}{chapter.259}% 79
+\BOOKMARK [2][-]{subsection.273}{Data Preprocessing}{section.272}% 80
+\BOOKMARK [2][-]{subsection.276}{Training Procedures}{section.272}% 81
+\BOOKMARK [2][-]{subsection.280}{Experiment 1}{section.272}% 82
+\BOOKMARK [2][-]{subsection.291}{Experiment 2}{section.272}% 83
+\BOOKMARK [2][-]{subsection.302}{Discussion}{section.272}% 84
+\BOOKMARK [1][-]{section.303}{Summary}{chapter.259}% 85
+\BOOKMARK [0][-]{chapter.305}{Conclusion}{}% 86
+\BOOKMARK [1][-]{section.306}{Summary of Important Points}{chapter.305}% 87
+\BOOKMARK [1][-]{section.307}{Conclusion}{chapter.305}% 88
+\BOOKMARK [1][-]{section.308}{Future Work}{chapter.305}% 89
+\BOOKMARK [2][-]{subsection.314}{Accounting for time}{section.308}% 90
+\BOOKMARK [0][-]{appendix.315}{Appendix A Primer on Artifical Neural Networks}{}% 91
+\BOOKMARK [0][-]{appendix.322}{Appendix Sensory Redundancy}{}% 92
+\BOOKMARK [0][-]{appendix.324}{Appendix Magical Vectors and Where to Find Them}{}% 93
+\BOOKMARK [0][-]{appendix*.327}{Bibliography}{}% 94

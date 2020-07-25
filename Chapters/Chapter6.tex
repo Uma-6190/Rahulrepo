@@ -75,9 +75,11 @@ I make use of the same network as used in chapter 5 with an embedding size of 29
 
 
 \section{Experiments with the ReShape dataset}
-I will perform two experiments, one with a small subset of the ReShape dataset with complete coverage of every trained and tested combination of colour, object and size is available. The second will make use of a larger variety of objects and colours, however not every combination of object, colour and size is available for training, thus there is not complete coverage, this is similar to experiment 5 in \autoref{Chapter5} where one object-colour combination was excluded from the training data. 
+I perform two experiments, one with a small subset of the ReShape dataset where complete coverage of every trained and tested combination of colour, object and size is available. The second makes use of a larger variety of objects and colours, however not every combination of object, colour and size is available for training, thus there is not complete coverage, this is similar to experiment 5 in \autoref{Chapter5} where one object-colour combination was excluded from the training data. 
 
 I will also look at the effect of pretraining on the data from experiment 1 and then training for experiment 2. Further to this, two training procedures will be introduced and compared, simple and exemplar.
+
+\textcolor{red}{Both experiments test hypothesis 6: It is possible to use \ac{MRL} with real data. Beyond this, experiment 2 further explores hypothesis 5: The multimodal representation learnt by the \acp{MAE} exhibits all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}, by deomnstrating that the \ac{MAE} is able to cope with missing objects in the training data as the learnt representation exhibits manifolds and a degree of smoothness such that the individual symbols from which objects are constructed can be combined to generate images of unseen objects.}
 
 \subsection{Data Preprocessing}
 
@@ -220,14 +222,14 @@ These two results show that the \ac{MAE} has overfitted the training data, howev
 \end{figure*}
 
 
-It is hard to tell how well the \ac{MAE} has learnt the grounded meanings of each individual word when the simple training procedure is used as the generated images are very blurry (\autoref{fig:2wordsSimpleBrickDuck}). The meanings of colours and sizes has been correctly learnt with \textsc{Yellow}, \textsc{Green} and  \textsc{Blue} generating the correct coloured pixels. \textsc{Big} \textsc{Medium} and \textsc{Small} also lead to the correct alteration in number of coloured pixels generated.
+It is hard to tell how well the \ac{MAE} has learnt the grounded meanings of each individual word when the simple training procedure is used as the generated images are very blurry (\autoref{fig:2wordsSimpleBrickDuck}). The meanings of colours and sizes have been correctly learnt with \textsc{Yellow}, \textsc{Green} and  \textsc{Blue} generating the correct coloured pixels. \textsc{Big} \textsc{Medium} and \textsc{Small} also lead to the correct alteration in number of coloured pixels generated.
 
 In \autoref{fig:2wordsExemplarBrickDuck} as well as the correct grounding of the colours and sizes, we also see that the names of the objects have been correctly grounded, with \textsc{brick} generating a square shape and \textsc{Duck} generating a rubber-duck shape. We also see that detials such as the duck's beak are generated as well as the black top hat on the small yellow duck.
 
 Whilst the generation of the beak is desirable, as all ducks have beaks, the top hat is specific to only two instances of ducks in the training data, a \textsc{big yellow duck} and a \textsc{small yellow duck}. The influence of the top hat can be seen in \autoref{fig:simpleGen_1} with the 
 \textsc{big yellow duck} having a black area on its head.
 
-The top hat further highlights that the \ac{MAE} learns to generate the mean image for a given object. So, as with the blurring of the images cuased by the simple training procedure and remedied by the exemplar procedure, is there a method to reduce the introduction of training data specific artifacts like the top hat?
+The top hat further highlights that the \ac{MAE} learns to generate the mean image for a given object. So, as with the blurring of the images caused by the simple training procedure and remedied by the exemplar procedure, is there a method to reduce the introduction of training data specific artifacts like the top hat?
 
 The simplest method to deal with this, would be to increase the complexity of the descriptions of the images. If the duck with a top hat were referred to as "big yellow duck with a top hat", which could be encoded to the network as \textsc{big yellow duck black top hat} by expanding its vocabulary, then distinguishing whether to generate an image of a duck with or without a top hat would be simple.
 
@@ -313,6 +315,8 @@ The quality of the generated images for unseen objects is strongly linked to whe
 
 In general the \ac{MAE} shows its worst performance on \textsc{black} objects, this is likely due to the reletively few examples of black objects in the training data (5 for black versus 8 for red, 11 for green, 11 for yellow and 12 for blue).
 
+\textcolor{red}{The correct generation of images of unseen objects demonstrates that the learnt representation has fulfilled at least some of the criteria set out by Bengio et al. \cite{repRev} (hypothesis 5). The fact that the representation of unseen descriptions leads to the generation of correct images shows that the representation has manifolds, in which different symbols reside (e.g. shapes and colors are represented separately, otherwise we would not be able to generate a \textsc{red donut} as the representation of \textsc{red} would be entangled with other words.)}
+
 \begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{Figs/chapter6/2wordsMostExemplar.png}
@@ -328,8 +332,6 @@ Yellow dominating over blue and green is likely due to less variance in the shad
 The sizes have been correctly learnt with big (B) images having more coloured pixels than medium (M) images which in turn have more coloured pixels than small (S) images.
 
 The different shapes have been learnt to different degrees. For example, the Donut is clearly a ring in all valid cases (i.e. when only one object name is provided as input).
-
-
 
 \paragraph{Multilabel Classification}
 
@@ -363,7 +365,7 @@ There is also the issue of not having full coverage of every size, colour and sh
 
 \section{Summary}
 This chapter focused on how \ac{MRL} could be applied to real data, demonstrating how it can be used to solve the symbol grounding problem in an unsupervised manner.
-To that end, I have demonstrated that \ac{MRL} can be used to perform bidirectional grounding of images and text. Further to this, I have shown that \ac{MRL} can generalise to unseen examples, correctly generating images of unseen objects.
+To that end, I have demonstrated that \ac{MRL} can be used to perform bidirectional grounding of images and text, \textcolor{red}{thus proving hypothesis 6: It is possible to use \ac{MRL} with real data}. Further to this, I have shown that \ac{MRL} can generalise to unseen examples, correctly generating images of unseen objects \textcolor{red}{, and have demonstrated that \ac{MRL} can be useful in a real life scenario}.
 
 The ability of the \ac{MAE} to generate images of unseen objects like the \textsc{Big Red Donut} is very exciting. This result hints at the possibility to develop grounded models capable of understanding more diverse visual attributes and larger numbers of objects.
 

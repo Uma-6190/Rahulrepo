@@ -29,9 +29,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.9899495"
-     inkscape:cx="-61.835306"
-     inkscape:cy="-38.534413"
+     inkscape:zoom="1.979899"
+     inkscape:cx="272.8241"
+     inkscape:cy="107.09107"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1286,5 +1286,18 @@
        preserveAspectRatio="none"
        height="28"
        width="28" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff0000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4291"
+       width="56"
+       height="28"
+       x="408.49258"
+       y="547.33997"
+       ry="0" />
+    <path
+       style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 436.4926,547.33995 0,28"
+       id="path4293"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
