@@ -10,9 +10,11 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{The Difficulties of Real Data}
-In the previous chapter I showed that it is possible to use a \ac{MAE} to bidirectionally ground natural language (words) and the visual attributes of images of different objects through \ac{MRL}. However, the data used in the previous chapter is artificial and therefore many of the challenges which real data presents are not present in it. 
+In the previous chapter, I showed that it is possible to use a \ac{MAE} to bidirectionally ground natural language (words) and the visual attributes of images of different objects through \ac{MRL}. However, the data used in the previous chapter is artificial and therefore many of the challenges which real data presents are not present in it. 
 
 When working with real images, there are many factors to consider such as lighting changes, perspective changes and camera noise \cite{keller2016analysis}. These factors were not present in the ArtS dataset, so in this chapter I will show how these impact \ac{MRL} for bidirectional grounding.
+
+\textcolor{red}{Another factor to consider when working with real data is that it is unlikely that an exhaustive dataset will exist for training the \ac{MAE}. When working with synthetic data, as in the previous chapter, it is possible to create training examples for every possible combination of object, colour and size. This is not true for real data. Datasets can only be produced using readily available objects which may not come in every combination of colour and size. As such, a desirable feature of a system the performs \ac{MRL} is that it be able to cope with missing examples. As shown in \autoref{Chapter5} experiemnt 5, the \ac{MAE} is able to handle gaps in the training data. I will demonstrate in this chapter that this generalises to real data with many more gaps in the training data.}
 
 
 
@@ -39,12 +41,12 @@ I do not make use of the audio, I use only the transcribed text and images such 
     \label{fig:ReShape}
 \end{figure}
 
-The Real Shapes dataset (ReShape) was created by presenting various objects to a webcam in 9 different positions and giving a short description of the object. \autoref{fig:ReShape} shows example images from ReShape.
+\textcolor{red}{I created} the Real Shapes dataset (ReShape) by presenting various objects to a webcam in 9 different positions and giving a short description of the object. \autoref{fig:ReShape} shows example images from ReShape.
 
 \subsection{Dataset Description}
 The ReShape dataset contains images and short descriptions of the images.
 
-There are 7 objects, in 10 colours and 3 sizes. Not all objects appear in all 10 colours or all 3 sizes.
+There are 7 objects, in 10 colours and 3 sizes. Not all objects appear in all 10 colours or all 3 sizes \textcolor{red}{as each object in each colour and size was not available to me}.
 
 \autoref{fig:ReShapeAll} shows cropped, exemplar images for all objects in the ReShape dataset. Not all shape-colour-size combinations are covered in the dataset, hence the large number of blank spaces.
 
@@ -56,14 +58,14 @@ There are 7 objects, in 10 colours and 3 sizes. Not all objects appear in all 10
     \label{fig:ReShapeAll}
 \end{figure}
 
-The dataset was captured in several sessions across multiple days. This is the main source of vairability in the dataset, as different lighting conditions due to weather and time of day has a significant affect on the appearance of images captured by digital cameras \cite{keller2016analysis, keller}\endnote{In \autoref{fig:ReShapeCrop} differences in the lighting conditions are clearly visible with the top left and top centre image having a blue tint.}.
+The dataset was captured in several sessions across multiple days. This is the main source of vairability in the dataset, as different lighting conditions due to weather and time of day has a significant affect on the appearance of images captured by digital cameras \cite{keller2016analysis, keller}. In \autoref{fig:ReShapeCrop} differences in the lighting conditions are clearly visible with the top left and top centre image having a blue tint.
 
 
 \subsection{Problem Description}
 As in the previsous chapter I will be training \acp{MAE} to learn a joint embedding of images and their descriptions. The descriptions only contain a size, shape and colour and not a position as the images are cropped, centring the object in the image, the notion of position is removed from both modalities.
 
 \subsection{Network Description}
-I make use of the same network as used in chapter 5 with an embedding size of 296 neurons and a description output size of 13. \textcolor{red}{The network was not redesigned for this chapter as the task is very similar and the performance of this design was good in \autoref{chapter5}. \autoref{fig:netReShape} depicts the \ac{MAE} described in \autoref{tab:Arts_MAE_description}. The blue box shows the portion of the \ac{MAE} which encodes and decodes images, whilst the green portion encodes and decodes the descriptions. The orange box is where the joint representation is formed. Inputs are labelled, Image and Description with their respective outputs being marked with an asterisk. Whislt the overall structure of the \ac{MAE} used in this chapter is the same as that used in \autoref{Chapter5}, as the vocabulary size for the descriptions is smaller, the Description output layer only has 13 neurons unlike in \autoref{Chapter5} where the description output had 22 neurons.}
+I make use of the same network as used in chapter 5 with an embedding size of 296 neurons and a description output size of 13. \textcolor{red}{The network was not redesigned for this chapter as the task is very similar and the performance of this design was good in \autoref{Chapter5}. \autoref{fig:netReShape} depicts the \ac{MAE} described in \autoref{tab:Arts_MAE_description}. The blue box shows the portion of the \ac{MAE} which encodes and decodes images, whilst the green portion encodes and decodes the descriptions. The orange box is where the joint representation is formed. Inputs are labelled, Image and Description with their respective outputs being marked with an asterisk. Whislt the overall structure of the \ac{MAE} used in this chapter is the same as that used in \autoref{Chapter5}, as the vocabulary size for the descriptions is smaller, the Description output layer only has 13 neurons unlike in \autoref{Chapter5} where the description output had 22 neurons.}
 
 \begin{figure}
 \centering
@@ -179,9 +181,9 @@ Exemplar & 2.06 $\mypm$ 0.07 & 3.44 $\mypm$ 0.51 & 7.92	$\mypm$ 0.02 \\ \hline
 \label{tab:6_res_exp1}
 \end{table}
 
-The similarity between the training and test data is expected in this case as the dataset was created using the same set of objects, in the same location on the same background. As previously mentioned, the main source of variability in the dataset is caused by changes in lighting conditions across the different data-capture sessions. However, this demonstrates an issue with using \ac{MSE} as the cost function to train the \ac{MAE}. If a different example of an object, captured on a different background, from a different angle is used to test the \ac{MAE}, the \ac{MSE} will be very high in the Words Only condition as this image will be very far from the mean image of the training data.
+The similarity between the training and test data is expected in this case as the dataset was created using the same set of objects, in the same location on the same background. As previously mentioned, the main source of variability in the dataset is caused by changes in lighting conditions across the different data-capture sessions. However, this demonstrates an issue with using \ac{MSE} as the cost function to train the \ac{MAE}. If a different example of an object, captured on a different background, from a different angle is used to test the \ac{MAE}, the \ac{MSE} will be very high in the Words Only condition as this image will be very far from the mean image of the training data. \textcolor{red}{Use of an adversarial training scheme which makes use of an auxilory classification network to determine if the correct colours, shapes and sizes are present in the generated image could alleviate this issue. A setup similar to that of Odena et al. \cite{odena2017conditional} could potentailly be adapted for this purpose.}
 
-The addition of more training data, with more diverse examples and more detailed descriptions should help. However, as the system is designed for operation on a robot, its absolute performance on a dataset isn't really that important. It is of more worth that the \ac{MAE} generate a "big blue duck" when asked to, than to generate the specific "big blue duck" the user had in mind.
+The addition of more training data, with more diverse examples and more detailed descriptions should help. However, as the system is designed for operation on a robot, its absolute performance on a dataset isn't really that important. It is of more worth that the \ac{MAE} generate a ``big blue duck'' when asked to, than to generate the specific ``big blue duck'' the user had in mind.
 
 \paragraph{Image Generation}
 
@@ -298,14 +300,14 @@ Exemplar & 2.30 $\mypm$ 0.07 & 3.67 $\mypm$ 0.23
 \end{table}
 
 
-\subsubsection{Image Generation}
+\paragraph{Image Generation}
 
 The \ac{MAE} is able to generalise to unseen combinations of attributes, confirming the result found in the final experiment of the previous chapter (Experiment 5 \autoref{Chapter5}). However, in this case, we have many more missing examples. \autoref{fig:mostExemplarGen} shows the images generated from full descriptions by the \ac{MAE} trained using exemplars. The red borders show images which have exemplars; those without red borders are not seen in the training data, yet the \ac{MAE} is still able to produce good approximations of these objects.
 
 \begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{Figs/chapter6/exemplarMostGenerated.png}
-    \caption{Exp 2: Images generated from full descriptions using the \ac{MAE} trained with the exemplar procedure. Red borders show objects with exemplar images.}
+    \caption{Exp 2: Images generated from full descriptions using the \ac{MAE} trained with the exemplar procedure. Red borders show objects with exemplar images. \textcolor{red}{In general the \ac{MAE} shows its worst performance on \textsc{black} objects, there are only a few examples of black objects in the training data (5 for black versus 8 for red, 11 for green, 11 for yellow and 12 for blue).}}
     \label{fig:mostExemplarGen}
 \end{figure*}
 
@@ -351,7 +353,7 @@ Exemplar & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 \\ \h
 \end{table}
 
 
-In all three test conditions the \ac{MAE} correctly generates descriptions with 100\% accuracy (\autoref{tab:6_res_exp2_acc}. This is due to the similarity of the training and test data, as previously discussed.
+In all three test conditions the \ac{MAE} correctly generates descriptions with 100\% accuracy (\autoref{tab:6_res_exp2_acc}). This is due to the similarity of the training and test data, as previously discussed.
 
 \subsection{Discussion}
 
@@ -371,5 +373,7 @@ The ability of the \ac{MAE} to generate images of unseen objects like the \texts
 
 These experiments present a starting point from which more powerful models can be built through the use of larger datasets as well as through the incorporation of advanced  \ac{ANN} techniques such as dilated and multiscale convolutions, and residual connections. The addition of these types of features to the \ac{MAE} architecture could allow for stronger models of image feature scale and shape and how these relate to the words which describe them.
 
-Further discussion of the results from this chapter has been published in \cite{sheppard2020multimodal}.
-\theendnotes
+\textcolor{red}{As well as making use of more complex neural structures, as mentioned in the previous paragraph, the addition of auxilory networks, such as classification and discriminator networks \cite{odena2017conditional}, would be worth while avenues of research for improving upon this first, prototype system.}
+
+The results from this chapter have been published in \cite{sheppard2020multimodal}.
+%\theendnotes

@@ -132,31 +132,31 @@
 \contentsline {section}{\numberline {5.5}Summary}{109}{section.258}
 \contentsline {chapter}{\numberline {6}Bidirectional Grounding of Real Data}{111}{chapter.259}
 \contentsline {section}{\numberline {6.1}The Difficulties of Real Data}{111}{section.260}
-\contentsline {section}{\numberline {6.2}Acoustic Packaging}{111}{section.262}
+\contentsline {section}{\numberline {6.2}Acoustic Packaging}{112}{section.262}
 \contentsline {section}{\numberline {6.3}Real Shapes Dataset}{112}{section.265}
-\contentsline {subsection}{\numberline {6.3.1}Dataset Description}{112}{subsection.267}
-\contentsline {subsection}{\numberline {6.3.2}Problem Description}{114}{subsection.269}
-\contentsline {subsection}{\numberline {6.3.3}Network Description}{114}{subsection.270}
-\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{114}{section.272}
-\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{116}{subsection.273}
-\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{117}{subsection.276}
-\contentsline {subsection}{\numberline {6.4.3}Experiment 1}{118}{subsection.280}
-\contentsline {subsubsection}{Results}{119}{section*.282}
-\contentsline {paragraph}{Image Generation}{120}{section*.284}
-\contentsline {paragraph}{Multilabel Classification}{122}{section*.289}
-\contentsline {subsection}{\numberline {6.4.4}Experiment 2}{123}{subsection.291}
-\contentsline {subsubsection}{Results}{123}{section*.294}
-\contentsline {subsubsection}{Image Generation}{123}{section*.296}
-\contentsline {paragraph}{Multilabel Classification}{126}{section*.299}
-\contentsline {paragraph}{Description Accuracy}{127}{table.301}
-\contentsline {subsection}{\numberline {6.4.5}Discussion}{127}{subsection.302}
-\contentsline {section}{\numberline {6.5}Summary}{128}{section.303}
-\contentsline {chapter}{\numberline {7}Conclusion}{129}{chapter.305}
-\contentsline {section}{\numberline {7.1}Summary of Important Points}{129}{section.306}
-\contentsline {section}{\numberline {7.2}Conclusion}{130}{section.307}
-\contentsline {section}{\numberline {7.3}Future Work}{130}{section.308}
-\contentsline {subsection}{\numberline {7.3.1}Accounting for time}{133}{subsection.314}
-\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{134}{appendix.315}
-\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{136}{appendix.322}
-\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{138}{appendix.324}
-\contentsline {chapter}{Bibliography}{139}{appendix*.327}
+\contentsline {subsection}{\numberline {6.3.1}Dataset Description}{113}{subsection.267}
+\contentsline {subsection}{\numberline {6.3.2}Problem Description}{115}{subsection.269}
+\contentsline {subsection}{\numberline {6.3.3}Network Description}{115}{subsection.270}
+\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{115}{section.272}
+\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{117}{subsection.273}
+\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{118}{subsection.276}
+\contentsline {subsection}{\numberline {6.4.3}Experiment 1}{119}{subsection.280}
+\contentsline {subsubsection}{Results}{120}{section*.282}
+\contentsline {paragraph}{Image Generation}{121}{section*.284}
+\contentsline {paragraph}{Multilabel Classification}{123}{section*.289}
+\contentsline {subsection}{\numberline {6.4.4}Experiment 2}{124}{subsection.291}
+\contentsline {subsubsection}{Results}{124}{section*.294}
+\contentsline {paragraph}{Image Generation}{124}{section*.296}
+\contentsline {paragraph}{Multilabel Classification}{128}{section*.299}
+\contentsline {paragraph}{Description Accuracy}{128}{table.301}
+\contentsline {subsection}{\numberline {6.4.5}Discussion}{128}{subsection.302}
+\contentsline {section}{\numberline {6.5}Summary}{129}{section.303}
+\contentsline {chapter}{\numberline {7}Conclusion}{130}{chapter.304}
+\contentsline {section}{\numberline {7.1}Summary of Important Points}{130}{section.305}
+\contentsline {section}{\numberline {7.2}Conclusion}{131}{section.306}
+\contentsline {section}{\numberline {7.3}Future Work}{131}{section.307}
+\contentsline {subsection}{\numberline {7.3.1}Accounting for time}{134}{subsection.313}
+\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{135}{appendix.314}
+\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{137}{appendix.321}
+\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{139}{appendix.323}
+\contentsline {chapter}{Bibliography}{140}{appendix*.326}
