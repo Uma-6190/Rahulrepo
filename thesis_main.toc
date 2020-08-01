@@ -153,10 +153,15 @@
 \contentsline {section}{\numberline {6.5}Summary}{129}{section.303}
 \contentsline {chapter}{\numberline {7}Conclusion}{130}{chapter.304}
 \contentsline {section}{\numberline {7.1}Summary of Important Points}{130}{section.305}
-\contentsline {section}{\numberline {7.2}Conclusion}{131}{section.306}
-\contentsline {section}{\numberline {7.3}Future Work}{131}{section.307}
-\contentsline {subsection}{\numberline {7.3.1}Accounting for time}{134}{subsection.313}
-\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{135}{appendix.314}
-\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{137}{appendix.321}
-\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{139}{appendix.323}
-\contentsline {chapter}{Bibliography}{140}{appendix*.326}
+\contentsline {section}{\numberline {7.2}Summary of contributions}{131}{section.306}
+\contentsline {section}{\numberline {7.3}Conclusion}{132}{section.307}
+\contentsline {section}{\numberline {7.4}Limitations}{133}{section.308}
+\contentsline {section}{\numberline {7.5}Future Work}{134}{section.309}
+\contentsline {subsection}{\numberline {7.5.1}General System Improvements}{136}{subsection.315}
+\contentsline {subsubsection}{Architectural Improvements}{136}{section*.316}
+\contentsline {subsubsection}{Training Scheme Improvements}{137}{section*.317}
+\contentsline {subsubsection}{Accounting for time}{137}{section*.318}
+\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{138}{appendix.319}
+\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{140}{appendix.326}
+\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{142}{appendix.328}
+\contentsline {chapter}{Bibliography}{143}{appendix*.331}
