@@ -88,7 +88,7 @@ In the real world, visual perception is much noiser than the images presented in
 	\item \textcolor{red}{\ac{MRL} enhances classification accuracy of sounds and visual symbols.}
 	\item \textcolor{red}{\ac{MRL} can be used to learn language as it relates to the visual properties of objects. I.e. to solve the symbol grounding problem.}
 	\item \textcolor{red}{\ac{MRL} can be improved through transfer learning.}
-	\item \textcolor{red}{The multimodal representation learnt by the \acp{MAE} exhibits all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}.}		
+	\item \textcolor{red}{The multimodal representation learnt by the \acp{MAE} exhibit all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}.}		
 	\item \textcolor{red}{It is possible to use \ac{MRL} with real data.}
 	
 \end{enumerate}
@@ -97,7 +97,7 @@ In the real world, visual perception is much noiser than the images presented in
 
 
 \section{Methodology}
-\textcolor{red}{Throughout this thesis, the experiments are performed using a deep neural network architecture known as a \acl{MAE}. This architecture was chosen for its autoencoding nature, meaning that it is possible to train the system without human intervention, i.e. through unsupervised learning.} 
+\textcolor{red}{Throughout this thesis, the experiments are performed using a deep neural network architecture known as a \acl{MAE} (\ac{MAE}). This architecture was chosen for its autoencoding nature, meaning that it is possible to train the system without human intervention, i.e. through unsupervised learning.} 
 
 \textcolor{red}{The \ac{MAE} was used without a variational cost (as in a \acp{VAE}) as we cannot gaurantee that the latent space of the network should follow a particular distribution, which a variational cost would enforce.}
 
@@ -105,9 +105,10 @@ In the real world, visual perception is much noiser than the images presented in
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{Figs/shapes/maeArch.png}
+\includegraphics[width=0.75\textwidth]{Figs/chapter6/maeArch.png}
+
+\caption{\textcolor{red}{The architecture of the \ac{MAE} used in \autoref{Chapter6} to generate the images seen in \autoref{fig:mrl_teaser}. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
 \label{fig:final_arch}
-\caption{\textcolor{red}{The architecture of the MAE used in \autoref{Chapter6} to generate the images seen in \autoref{fig:mrl_teaser}. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
 \end{figure}
 
 \textcolor{red}{\autoref{fig:final_arch} shows an overview of the \ac{MAE} architecture used in \autoref{Chapter6}. The \ac{MAE} used in \autoref{Chapter4} and \autoref{Chapter5} follow a very similar structure and are pictured later in \autoref{fig:netMnist} and \autoref{fig:netArts}.} 

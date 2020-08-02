@@ -14,7 +14,7 @@ In the previous chapter, I showed that it is possible to use a \ac{MAE} to bidir
 
 When working with real images, there are many factors to consider such as lighting changes, perspective changes and camera noise \cite{keller2016analysis}. These factors were not present in the ArtS dataset, so in this chapter I will show how these impact \ac{MRL} for bidirectional grounding.
 
-\textcolor{red}{Another factor to consider when working with real data is that it is unlikely that an exhaustive dataset will exist for training the \ac{MAE}. When working with synthetic data, as in the previous chapter, it is possible to create training examples for every possible combination of object, colour and size. This is not true for real data. Datasets can only be produced using readily available objects which may not come in every combination of colour and size. As such, a desirable feature of a system the performs \ac{MRL} is that it be able to cope with missing examples. As shown in \autoref{Chapter5} experiemnt 5, the \ac{MAE} is able to handle gaps in the training data. I will demonstrate in this chapter that this generalises to real data with many more gaps in the training data.}
+\textcolor{red}{Another factor to consider when working with real data is that it is unlikely that an exhaustive dataset will exist for training the \ac{MAE}. When working with synthetic data, as in the previous chapter, it is possible to create training examples for every possible combination of object, colour and size. This is not true for real data. Datasets can only be produced using readily available objects which may not come in every combination of colour and size. As such, a desirable feature of a system the performs \ac{MRL} is that it be able to cope with missing examples. As shown in \autoref{Chapter5} experiment 5, the \ac{MAE} is able to handle gaps in the training data. I will demonstrate in this chapter that this generalises to real data with many more gaps in the training data.}
 
 
 
@@ -69,7 +69,7 @@ I make use of the same network as used in chapter 5 with an embedding size of 29
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{Figs/shapes/maeArch.png}
+\includegraphics[width=0.75\textwidth]{Figs/chapter6/maeArch.png}
 \caption{\textcolor{red}{The \ac{MAE} architecture used in this chapters. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
 \label{fig:netReShape}
 \end{figure}
@@ -81,7 +81,7 @@ I perform two experiments, one with a small subset of the ReShape dataset where 
 
 I will also look at the effect of pretraining on the data from experiment 1 and then training for experiment 2. Further to this, two training procedures will be introduced and compared, simple and exemplar.
 
-\textcolor{red}{Both experiments test hypothesis 6: It is possible to use \ac{MRL} with real data. Beyond this, experiment 2 further explores hypothesis 5: The multimodal representation learnt by the \acp{MAE} exhibits all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}, by deomnstrating that the \ac{MAE} is able to cope with missing objects in the training data as the learnt representation exhibits manifolds and a degree of smoothness such that the individual symbols from which objects are constructed can be combined to generate images of unseen objects.}
+\textcolor{red}{Both experiments test hypothesis 6: It is possible to use \ac{MRL} with real data. Beyond this, experiment 2 further explores hypothesis 5: The multimodal representation learnt by the \acp{MAE} exhibits all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}, by demonstrating that the \ac{MAE} is able to cope with missing objects in the training data as the learnt representation exhibits manifolds and a degree of smoothness such that the individual symbols from which objects are constructed can be combined to generate images of unseen objects.}
 
 \subsection{Data Preprocessing}
 
@@ -181,7 +181,7 @@ Exemplar & 2.06 $\mypm$ 0.07 & 3.44 $\mypm$ 0.51 & 7.92	$\mypm$ 0.02 \\ \hline
 \label{tab:6_res_exp1}
 \end{table}
 
-The similarity between the training and test data is expected in this case as the dataset was created using the same set of objects, in the same location on the same background. As previously mentioned, the main source of variability in the dataset is caused by changes in lighting conditions across the different data-capture sessions. However, this demonstrates an issue with using \ac{MSE} as the cost function to train the \ac{MAE}. If a different example of an object, captured on a different background, from a different angle is used to test the \ac{MAE}, the \ac{MSE} will be very high in the Words Only condition as this image will be very far from the mean image of the training data. \textcolor{red}{Use of an adversarial training scheme which makes use of an auxilory classification network to determine if the correct colours, shapes and sizes are present in the generated image could alleviate this issue. A setup similar to that of Odena et al. \cite{odena2017conditional} could potentailly be adapted for this purpose.}
+The similarity between the training and test data is expected in this case as the dataset was created using the same set of objects, in the same location on the same background. As previously mentioned, the main source of variability in the dataset is caused by changes in lighting conditions across the different data-capture sessions. However, this demonstrates an issue with using \ac{MSE} as the cost function to train the \ac{MAE}. If a different example of an object, captured on a different background, from a different angle is used to test the \ac{MAE}, the \ac{MSE} will be very high in the Words Only condition as this image will be very far from the mean image of the training data. 
 
 The addition of more training data, with more diverse examples and more detailed descriptions should help. However, as the system is designed for operation on a robot, its absolute performance on a dataset isn't really that important. It is of more worth that the \ac{MAE} generate a ``big blue duck'' when asked to, than to generate the specific ``big blue duck'' the user had in mind.
 
@@ -373,7 +373,7 @@ The ability of the \ac{MAE} to generate images of unseen objects like the \texts
 
 These experiments present a starting point from which more powerful models can be built through the use of larger datasets as well as through the incorporation of advanced  \ac{ANN} techniques such as dilated and multiscale convolutions, and residual connections. The addition of these types of features to the \ac{MAE} architecture could allow for stronger models of image feature scale and shape and how these relate to the words which describe them.
 
-\textcolor{red}{As well as making use of more complex neural structures, as mentioned in the previous paragraph, the addition of auxilory networks, such as classification and discriminator networks \cite{odena2017conditional}, would be worth while avenues of research for improving upon this first, prototype system.}
+\textcolor{red}{As well as making use of more complex neural structures, as mentioned in the previous paragraph, the addition of auxilory networks, such as classification and discriminator networks would be worth while avenues of research for improving upon this first, prototype system. The use of an adversarial training scheme which makes use of an auxilory classification network to determine if the correct colours, shapes and sizes are present in the generated image could alleviate issues relating to image quality analysis as well as the excessive blur which arose when not using the exemplar training procedure. A setup similar to that of Odena et al. \cite{odena2017conditional} could potentailly be adapted for this purpose.}
 
 The results from this chapter have been published in \cite{sheppard2020multimodal}.
 %\theendnotes

@@ -9,7 +9,7 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{Introduction}
-This chapter presents an overview of the mathematical theory of \acp{ANN} and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis.\textcolor{red}{As the architecture of the \acp{ANN} used in this thesis are novel, this chapter introduces the different building blocks used to construct them and why these design choices were made}
+This chapter presents an overview of the mathematical theory of \acp{ANN} and how they learn. It should serve as a quick guide to the techniques used in the experiments in this thesis. \textcolor{red}{As the architecture of the \acp{ANN} used in this thesis are novel, this chapter introduces the different building blocks used to construct them and why these design choices were made}
 
 \section{Perceptrons}
 \label{sec:percep}
@@ -62,7 +62,7 @@ By adjusting each of the weights we can change the output of the perceptron.
 	\centering
 	\includegraphics[width=0.4\textwidth]{Figs/intro2dl/mlp.png}
 	
-	\caption{\textcolor{red}{A multi-layer perceptron consisting of three perceptrons arranged in two layers, with two binary inputs, $x_0, x_1$.}}
+	\caption{\textcolor{red}{A multi-layer perceptron consisting of six perceptrons arranged in three layers, with two binary inputs, $x_0, x_1$.}}
 	\label{fig:mlp}
 \end{figure}
 
@@ -234,7 +234,7 @@ adversarial learning (to name a few). The experiments in this thesis will focus 
 \textbf{Supervised learning} - an external system is used to provide ground truth values for the desired output of the network. An example would be classification using standardised datasets like MNIST handwritten digits \cite{lecun1998mnist}. \textcolor{red}{This is seen in \autoref{Chapter4}.}
 
 
-\textbf{Unsupervised learning} - no external system provides ground truth values, instead these are inferred directly from the data. Autoencoders are a good example of this.  \textcolor{red}{This is seen in chapters 4,5 and 6.}
+\textbf{Unsupervised learning} - no external system provides ground truth values, instead these are inferred directly from the data. Autoencoders are a good example of this.  \textcolor{red}{This is seen in chapters 4, 5 and 6.}
 
 %\todo[inline]{finish this}
 %\textbf{Reinforcement learning} - an external system provides a score which estimates the value of an action (think about getting points in a video-game). Training a dog by giving it treats when it performs a trick is reinforcement learning. We reinforce the desired behaviour by rpoviding a reward.
@@ -649,9 +649,9 @@ Each modality is encoded separately through its own branch of the network and th
 
 \textcolor{red}{I chose to use \acp{MAE} to implement \ac{MRL} as they are end-to-end trainable and able to operate on raw data requiring little to no feature engineering. Further to this, they are an unsupervised architecture which allows them to be trained directly with unlabelled data.}
 
-\textcolor{red}{The importance of developing unsupervised learning systems cannot be understated. Although large supervised datasets do exist, they cannot cover every possible scenario, thus artificial intelligence systems which we aim to deploy in the real world, must be capable of learning without human intervention. This is exactly what the \ac{MAE} has been designed with in mind.}
+\textcolor{red}{The importance of developing unsupervised learning systems cannot be understated. Although large supervised datasets do exist, they cannot cover every possible scenario, thus artificial intelligence systems which are to be deployed in the real world, must be capable of learning without human intervention. This is exactly what the \ac{MAE} has been designed with in mind.}
 
-\textcolor{red}{For example, if I had implemented \ac{MRL} through the use of a multimodal classification system, the system would be limited to only learning symbols of (for example) objects and utterances which appear in supervised datasets. the \ac{MAE} does not have this constraint as will be demonstrated in the experiments of chapters 4, 5 and 6 as well as in the future work section, where I explain how we can use the \ac{MAE} as part of a continuously learning robotic system.}
+\textcolor{red}{For example, if I had implemented \ac{MRL} through the use of a multimodal classification system, the system would be limited to only learning symbols of (for example) objects and utterances which appear in supervised datasets. The \ac{MAE} does not have this constraint, as will be demonstrated in the experiments of chapters 4, 5 and 6, as well as in the future work section, where I explain how a \ac{MAE} can be used as part of a continuously learning robotic system.}
 
 \textcolor{red}{One other advantage of using the \ac{MAE} over other machine learning techniques is that it has been demonstrated to exhibit behaviour similar to that of the human brain. In \cite{ngiam2011multimodal} the \ac{MAE} demonstrated the McGurk Effect \cite{mcgurk1976hearing}. Whilst biological plausability is only tangential to the goals of this thesis, I believe it is worth noting that \acp{MAE} are a good facsimily of the human brain as much of the work carried out in this thesis was inspired by the developmental learning processes of humans.}
 
