@@ -69,7 +69,7 @@ Whilst this may not be true for all sensory percepts it is true enough that co-o
 
 Looking at \autoref{fig:cross_sitch}, we can see that from a single example, it is not possible to disambiguate which word refers to which part of the image, i.e. we cannot ground the words \text{Green Circle} to the visual percepts \textit{Green} and \textit{Circle}. However, given two examples, it is very easy for an adult human to disambiguate what each word means. As we are given more examples, we can be more and more certain about what we believe the meanings of the words are. 
 
-In the real world, visual perception is much noiser than the images presented in \autoref{fig:cross_sitch} as are the utterances of words. However, by providing more examples, we can overcome the challenges presented by this as shown in \cite{yurovsky2013statistical}. In this thesis I will show how \ac{MRL} can be applied to this problem and solve it, learning the meanings of different word types, such as object names, colours, sizes and positions as well as the inverse problem, generating these labellings for images of objects. \autoref{fig:mrl_teaser} shows a few examples of \ac{MRL} solving this problem.
+In the real world, visual perception is much noiser than the images presented in \autoref{fig:cross_sitch} as are the utterances of words. However, by providing more examples, we can overcome the challenges presented by this as shown in \cite{yurovsky2013statistical}. In this thesis, I will show how \ac{MRL} can be applied to this problem and solve it, learning the meanings of different word types, such as object names, colours, sizes and positions as well as the inverse problem, generating these labellings for images of objects. \autoref{fig:mrl_teaser} shows a few examples of \ac{MRL} solving the symbol grounding problem for language and vision.
 
 \begin{figure}
 \centering
@@ -84,34 +84,34 @@ In the real world, visual perception is much noiser than the images presented in
 
 \begin{enumerate}
 
-	\item \textcolor{red}{\ac{MRL} can be used to learn the association between sounds and the visual symbols they represent. I.e. to solve the symbol grounding problem.}
-	\item \textcolor{red}{\ac{MRL} enhances classification accuracy of sounds and visual symbols.}
-	\item \textcolor{red}{\ac{MRL} can be used to learn language as it relates to the visual properties of objects. I.e. to solve the symbol grounding problem.}
-	\item \textcolor{red}{\ac{MRL} can be improved through transfer learning.}
-	\item \textcolor{red}{The multimodal representation learnt by the \acp{MAE} exhibit all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}.}		
-	\item \textcolor{red}{It is possible to use \ac{MRL} with real data.}
+	\item \ac{MRL} can be used to learn the association between \textbf{sounds} and the visual symbols they represent. I.e. to solve the symbol grounding problem.
+	\item \ac{MRL} enhances classification accuracy of sounds and visual symbols.
+	\item \ac{MRL} can be used to learn \textbf{language} as it relates to the visual properties of objects. I.e. to solve the symbol grounding problem.
+	\item \ac{MRL} can be improved through transfer learning.
+	\item The multimodal representation learnt by the \acp{MAE} exhibit all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}.		
+	\item It is possible to use \ac{MRL} with real data.
 	
 \end{enumerate}
 
-\textcolor{red}{Hypotheses 1 and 2 are addressed in \autoref{Chapter4}, hypotheses 3, 4 and 5 are addressed in \autoref{Chapter5} and hypothesis 6 is addressed in \autoref{Chapter6}.} 
+Hypotheses 1 and 2 are addressed in \autoref{Chapter4}, hypotheses 3, 4 and 5 are addressed in \autoref{Chapter5} and hypothesis 6 is addressed in \autoref{Chapter6}.
 
 
 \section{Methodology}
-\textcolor{red}{Throughout this thesis, the experiments are performed using a deep neural network architecture known as a \acl{MAE} (\ac{MAE}). This architecture was chosen for its autoencoding nature, meaning that it is possible to train the system without human intervention, i.e. through unsupervised learning.} 
+Throughout this thesis, the experiments are performed using a deep neural network architecture known as a \acl{MAE} (\ac{MAE}). This architecture was chosen for its autoencoding nature, meaning that it is possible to train the system without human intervention, i.e. through unsupervised learning. 
 
-\textcolor{red}{The \ac{MAE} was used without a variational cost (as in a \acp{VAE}) as we cannot gaurantee that the latent space of the network should follow a particular distribution, which a variational cost would enforce.}
+The \ac{MAE} was used without a variational cost (as in a \acp{VAE}) as we cannot gaurantee that the latent space of the network should follow a particular distribution, which a variational cost would enforce.
 
-\textcolor{red}{Finally, the use of \acp{ANN} over other machine learning techniques is due to their flexible nature, requiring little to no feature engineering of the data used by the system. Further to this, \acp{ANN} have been shown to acheieve state-of-the-art results on many robotics, computer vision and natural language tasks.}
+Finally, the use of \acp{ANN} over other machine learning techniques is due to their flexible nature, requiring little to no feature engineering of the data used by the system. Further to this, \acp{ANN} have been shown to acheieve state-of-the-art results on many robotics, computer vision and natural language tasks.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{Figs/chapter6/maeArch.png}
 
-\caption{\textcolor{red}{The architecture of the \ac{MAE} used in \autoref{Chapter6} to generate the images seen in \autoref{fig:mrl_teaser}. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
+\caption{The architecture of the \ac{MAE} used in \autoref{Chapter6} to generate the images seen in \autoref{fig:mrl_teaser}. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}
 \label{fig:final_arch}
 \end{figure}
 
-\textcolor{red}{\autoref{fig:final_arch} shows an overview of the \ac{MAE} architecture used in \autoref{Chapter6}. The \ac{MAE} used in \autoref{Chapter4} and \autoref{Chapter5} follow a very similar structure and are pictured later in \autoref{fig:netMnist} and \autoref{fig:netArts}.} 
+\autoref{fig:final_arch} shows an overview of the \ac{MAE} architecture used in \autoref{Chapter6}. The \ac{MAE} used in \autoref{Chapter4} and \autoref{Chapter5} follow a very similar structure and are pictured later in \autoref{fig:netMnist} and \autoref{fig:netArts}. 
 
 
 

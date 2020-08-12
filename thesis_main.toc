@@ -28,140 +28,140 @@
 \contentsline {section}{\numberline {2.6}Autoencoders}{23}{section.75}
 \contentsline {subsection}{\numberline {2.6.1}Variational Autoencoders}{23}{subsection.79}
 \contentsline {subsection}{\numberline {2.6.2}Multimodal Autoencoders}{24}{subsection.80}
-\contentsline {chapter}{\numberline {3}Background}{26}{chapter.82}
-\contentsline {section}{\numberline {3.1}Introduction}{26}{section.83}
-\contentsline {section}{\numberline {3.2}What are Artifical Neural Networks Good at?}{26}{section.84}
-\contentsline {subsection}{\numberline {3.2.1}Classification}{27}{subsection.88}
-\contentsline {subsubsection}{AlexNet}{27}{section*.89}
-\contentsline {subsubsection}{Residual Connections}{28}{section*.90}
-\contentsline {subsubsection}{Inception: Multiscale Convolutions}{28}{section*.91}
-\contentsline {subsection}{\numberline {3.2.2}Recurrent Neural Networks}{29}{subsection.92}
-\contentsline {subsection}{\numberline {3.2.3}Generation}{29}{subsection.93}
-\contentsline {subsubsection}{Generative Adversarial Networks}{30}{section*.95}
-\contentsline {subsubsection}{Modality Translation: Image Caption Generation}{31}{section*.96}
-\contentsline {subsection}{\numberline {3.2.4}Generating Images from Captions}{32}{subsection.97}
-\contentsline {subsection}{\numberline {3.2.5}Representation Learning}{33}{subsection.98}
-\contentsline {subsubsection}{Natural Language Processing}{33}{section*.99}
-\contentsline {subsubsection}{Autoencoders}{34}{section*.100}
-\contentsline {section}{\numberline {3.3}What are Artificial Neural Networks Bad at?}{37}{section.103}
-\contentsline {subsection}{\numberline {3.3.1}Artificial Neural Networks are Easily Fooled}{37}{subsection.104}
-\contentsline {subsection}{\numberline {3.3.2}Data Ineffciency}{39}{subsection.106}
-\contentsline {section}{\numberline {3.4}How to get off the Symbol Grounding Merry-Go-Round}{40}{section.108}
-\contentsline {subsection}{\numberline {3.4.1}What is Symbol Grounding?}{41}{subsection.109}
-\contentsline {subsection}{\numberline {3.4.2}How do Humans do it?}{42}{subsection.111}
-\contentsline {subsubsection}{Embodiment}{43}{section*.112}
-\contentsline {subsection}{\numberline {3.4.3}Multimodality}{44}{subsection.113}
-\contentsline {subsection}{\numberline {3.4.4}Development}{45}{subsection.114}
-\contentsline {paragraph}{Biological Filters}{46}{section*.115}
-\contentsline {subsection}{\numberline {3.4.5}How do Machines do it?}{48}{subsection.117}
-\contentsline {subsubsection}{My Approach to Symbol Grounding}{50}{section*.120}
-\contentsline {subsubsection}{Why use MAEs?}{51}{section*.121}
-\contentsline {subsubsection}{Transfer Learning and Pretraining}{52}{section*.122}
-\contentsline {section}{\numberline {3.5}Research Plan}{52}{section.123}
-\contentsline {chapter}{\numberline {4}Sensory Redundancy: Are Two Heads Better Than One?}{54}{chapter.130}
-\contentsline {section}{\numberline {4.1}Why Have One Sensor When Two Are Better?}{54}{section.131}
-\contentsline {section}{\numberline {4.2}Generating Images From Natural Language}{55}{section.132}
-\contentsline {subsection}{\numberline {4.2.1}Aims}{55}{subsection.133}
-\contentsline {subsection}{\numberline {4.2.2}A note on Qualatitive Anaylsis of Image Generation}{55}{subsection.134}
-\contentsline {subsection}{\numberline {4.2.3}UCU Arabic Spoken Digits and MNIST}{56}{subsection.135}
-\contentsline {subsubsection}{UCU Arabic Spoken Digits}{56}{section*.136}
-\contentsline {paragraph}{Padding of Utterances}{56}{section*.138}
-\contentsline {subsubsection}{MNIST Handwritten Digits}{57}{section*.141}
-\contentsline {subsection}{\numberline {4.2.4}Problem Description}{58}{subsection.142}
-\contentsline {subsubsection}{Classification}{58}{section*.143}
-\contentsline {subsubsection}{Bidirectional Symbol Grounding}{58}{section*.144}
-\contentsline {subsection}{\numberline {4.2.5}Experiment Details}{59}{subsection.145}
-\contentsline {paragraph}{Combining Datasets}{59}{section*.146}
-\contentsline {paragraph}{Merging Modalities}{59}{section*.147}
-\contentsline {subsubsection}{Training Procedures}{59}{section*.150}
-\contentsline {paragraph}{Bimodal}{60}{section*.151}
-\contentsline {paragraph}{Randomly Removed}{60}{section*.152}
-\contentsline {subsubsection}{Testing Conditions}{60}{section*.153}
-\contentsline {paragraph}{Bimodal}{60}{section*.154}
-\contentsline {paragraph}{Image Only}{60}{section*.155}
-\contentsline {paragraph}{\ac {MFCC} Only}{60}{section*.156}
-\contentsline {subsubsection}{Network Description}{61}{section*.157}
-\contentsline {paragraph}{Baseline Models}{61}{section*.158}
-\contentsline {paragraph}{Multimodal Autoencoder}{61}{section*.161}
-\contentsline {subsection}{\numberline {4.2.6}Results}{62}{subsection.164}
-\contentsline {subsubsection}{Classification Results}{62}{section*.165}
-\contentsline {subsubsection}{Reconstruction Results}{63}{section*.169}
-\contentsline {subsection}{\numberline {4.2.7}Discussion}{64}{subsection.172}
-\contentsline {subsubsection}{Discussion of Classification Results}{64}{section*.173}
-\contentsline {subsubsection}{Discussion of Reconstruction Results}{67}{section*.174}
-\contentsline {paragraph}{Image reconstruction from MFCCs}{67}{section*.175}
-\contentsline {paragraph}{MFCC reconstruction from Images}{68}{section*.176}
-\contentsline {paragraph}{Effects of randomly removing inputs}{68}{section*.177}
-\contentsline {paragraph}{Multiple generations of the same digit}{69}{section*.178}
-\contentsline {section}{\numberline {4.3}Summary}{69}{section.179}
-\contentsline {chapter}{\numberline {5}Magical Vectors and Where to Find Them}{71}{chapter.180}
-\contentsline {section}{\numberline {5.1}ANN Latent Space}{71}{section.181}
-\contentsline {section}{\numberline {5.2}Vector Arithmetic}{72}{section.183}
-\contentsline {section}{\numberline {5.3}Artificial Shapes Dataset}{74}{section.186}
-\contentsline {subsection}{\numberline {5.3.1}Dataset Description}{74}{subsection.187}
-\contentsline {subsection}{\numberline {5.3.2}Problem Description}{75}{subsection.190}
-\contentsline {subsection}{\numberline {5.3.3}A note on Qualatitive Anaylsis of Image Generation}{76}{subsection.191}
-\contentsline {subsection}{\numberline {5.3.4}Network Description}{77}{subsection.192}
-\contentsline {section}{\numberline {5.4}Experiments with the ArtS Dataset}{78}{section.195}
-\contentsline {subsection}{\numberline {5.4.1}Experiment 1}{81}{subsection.196}
-\contentsline {subsubsection}{Results}{81}{section*.198}
-\contentsline {paragraph}{Image Generation}{83}{section*.201}
-\contentsline {paragraph}{Description Accuracy}{85}{section*.204}
-\contentsline {subsubsection}{Discussion}{85}{section*.205}
-\contentsline {subsection}{\numberline {5.4.2}Experiment 2}{86}{subsection.206}
-\contentsline {subsubsection}{Results}{86}{section*.208}
-\contentsline {paragraph}{Image Generation}{88}{figure.212}
-\contentsline {paragraph}{Description Accuracy}{90}{section*.216}
-\contentsline {subsubsection}{Discussion}{91}{section*.217}
-\contentsline {subsection}{\numberline {5.4.3}Experiment 3}{92}{subsection.219}
-\contentsline {subsubsection}{Results}{94}{section*.221}
-\contentsline {paragraph}{Image Generation}{94}{section*.223}
-\contentsline {paragraph}{Description Accuracy}{96}{table.229}
-\contentsline {subsubsection}{Discussion}{96}{section*.230}
-\contentsline {subsection}{\numberline {5.4.4}Experiment 4}{98}{subsection.232}
-\contentsline {subsubsection}{Results}{98}{section*.233}
-\contentsline {paragraph}{Image Generation}{98}{section*.235}
-\contentsline {paragraph}{Description Accuracy}{101}{table.241}
-\contentsline {subsubsection}{Discussion}{102}{section*.242}
-\contentsline {subsection}{\numberline {5.4.5}Experiment 5}{103}{subsection.245}
-\contentsline {subsubsection}{Results}{103}{section*.246}
-\contentsline {paragraph}{Image Generation}{104}{section*.248}
-\contentsline {paragraph}{Description Accuracy}{106}{table.252}
-\contentsline {subsection}{\numberline {5.4.6}Discussion}{107}{subsection.253}
-\contentsline {subsubsection}{How an incremental approach helps}{107}{section*.254}
-\contentsline {section}{\numberline {5.5}Summary}{110}{section.258}
-\contentsline {chapter}{\numberline {6}Bidirectional Grounding of Real Data}{112}{chapter.259}
-\contentsline {section}{\numberline {6.1}The Difficulties of Real Data}{112}{section.260}
-\contentsline {section}{\numberline {6.2}Acoustic Packaging}{113}{section.262}
-\contentsline {section}{\numberline {6.3}Real Shapes Dataset}{113}{section.265}
-\contentsline {subsection}{\numberline {6.3.1}Dataset Description}{114}{subsection.267}
+\contentsline {chapter}{\numberline {3}Background}{27}{chapter.82}
+\contentsline {section}{\numberline {3.1}Introduction}{27}{section.83}
+\contentsline {section}{\numberline {3.2}What are Artifical Neural Networks Good at?}{27}{section.84}
+\contentsline {subsection}{\numberline {3.2.1}Classification}{28}{subsection.88}
+\contentsline {subsubsection}{AlexNet}{28}{section*.89}
+\contentsline {subsubsection}{Residual Connections}{29}{section*.90}
+\contentsline {subsubsection}{Inception: Multiscale Convolutions}{29}{section*.91}
+\contentsline {subsection}{\numberline {3.2.2}Recurrent Neural Networks}{30}{subsection.92}
+\contentsline {subsection}{\numberline {3.2.3}Generation}{30}{subsection.93}
+\contentsline {subsubsection}{Generative Adversarial Networks}{31}{section*.95}
+\contentsline {subsubsection}{Modality Translation: Image Caption Generation}{32}{section*.96}
+\contentsline {subsection}{\numberline {3.2.4}Generating Images from Captions}{33}{subsection.97}
+\contentsline {subsection}{\numberline {3.2.5}Representation Learning}{34}{subsection.98}
+\contentsline {subsubsection}{Natural Language Processing}{34}{section*.99}
+\contentsline {subsubsection}{Autoencoders}{35}{section*.100}
+\contentsline {section}{\numberline {3.3}What are Artificial Neural Networks Bad at?}{38}{section.103}
+\contentsline {subsection}{\numberline {3.3.1}Artificial Neural Networks are Easily Fooled}{38}{subsection.104}
+\contentsline {subsection}{\numberline {3.3.2}Data Ineffciency}{40}{subsection.106}
+\contentsline {section}{\numberline {3.4}Getting off the Symbol Grounding Merry-Go-Round}{41}{section.108}
+\contentsline {subsection}{\numberline {3.4.1}What is Symbol Grounding?}{42}{subsection.109}
+\contentsline {subsection}{\numberline {3.4.2}How do Humans do it?}{43}{subsection.111}
+\contentsline {subsubsection}{Embodiment}{44}{section*.112}
+\contentsline {subsection}{\numberline {3.4.3}Multimodality}{45}{subsection.113}
+\contentsline {subsection}{\numberline {3.4.4}Development}{46}{subsection.114}
+\contentsline {paragraph}{Biological Filters}{47}{section*.115}
+\contentsline {subsection}{\numberline {3.4.5}How do Machines do it?}{49}{subsection.117}
+\contentsline {subsubsection}{My Approach to Symbol Grounding}{51}{section*.120}
+\contentsline {subsubsection}{Why use MAEs?}{52}{section*.121}
+\contentsline {subsubsection}{Transfer Learning and Pretraining}{53}{section*.122}
+\contentsline {section}{\numberline {3.5}Research Plan}{53}{section.123}
+\contentsline {chapter}{\numberline {4}Sensory Redundancy: Are Two Heads Better Than One?}{55}{chapter.130}
+\contentsline {section}{\numberline {4.1}Why Have One Sensor When Two Are Better?}{55}{section.131}
+\contentsline {section}{\numberline {4.2}Generating Images From Natural Language}{56}{section.132}
+\contentsline {subsection}{\numberline {4.2.1}Aims}{56}{subsection.133}
+\contentsline {subsection}{\numberline {4.2.2}A note on Qualatitive Anaylsis of Image Generation}{56}{subsection.134}
+\contentsline {subsection}{\numberline {4.2.3}UCU Arabic Spoken Digits and MNIST}{57}{subsection.135}
+\contentsline {subsubsection}{UCU Arabic Spoken Digits}{57}{section*.136}
+\contentsline {paragraph}{Padding of Utterances}{57}{section*.138}
+\contentsline {subsubsection}{MNIST Handwritten Digits}{58}{section*.141}
+\contentsline {subsection}{\numberline {4.2.4}Problem Description}{59}{subsection.142}
+\contentsline {subsubsection}{Classification}{59}{section*.143}
+\contentsline {subsubsection}{Bidirectional Symbol Grounding}{59}{section*.144}
+\contentsline {subsection}{\numberline {4.2.5}Experiment Details}{60}{subsection.145}
+\contentsline {paragraph}{Combining Datasets}{60}{section*.146}
+\contentsline {paragraph}{Merging Modalities}{60}{section*.147}
+\contentsline {subsubsection}{Training Procedures}{60}{section*.150}
+\contentsline {paragraph}{Bimodal}{61}{section*.151}
+\contentsline {paragraph}{Randomly Removed}{61}{section*.152}
+\contentsline {subsubsection}{Testing Conditions}{61}{section*.153}
+\contentsline {paragraph}{Bimodal}{61}{section*.154}
+\contentsline {paragraph}{Image Only}{61}{section*.155}
+\contentsline {paragraph}{\ac {MFCC} Only}{61}{section*.156}
+\contentsline {subsubsection}{Network Description}{62}{section*.157}
+\contentsline {paragraph}{Baseline Models}{62}{section*.158}
+\contentsline {paragraph}{Multimodal Autoencoder}{62}{section*.161}
+\contentsline {subsection}{\numberline {4.2.6}Results}{64}{subsection.164}
+\contentsline {subsubsection}{Classification Results}{64}{section*.165}
+\contentsline {subsubsection}{Reconstruction Results}{65}{section*.169}
+\contentsline {subsection}{\numberline {4.2.7}Discussion}{66}{subsection.172}
+\contentsline {subsubsection}{Discussion of Classification Results}{66}{section*.173}
+\contentsline {subsubsection}{Discussion of Reconstruction Results}{68}{section*.174}
+\contentsline {paragraph}{Image reconstruction from MFCCs}{68}{section*.175}
+\contentsline {paragraph}{MFCC reconstruction from Images}{69}{section*.176}
+\contentsline {paragraph}{Effects of randomly removing inputs}{69}{section*.177}
+\contentsline {paragraph}{Multiple generations of the same digit}{70}{section*.178}
+\contentsline {section}{\numberline {4.3}Summary}{70}{section.179}
+\contentsline {chapter}{\numberline {5}Magical Vectors and Where to Find Them}{72}{chapter.180}
+\contentsline {section}{\numberline {5.1}ANN Latent Space}{72}{section.181}
+\contentsline {section}{\numberline {5.2}Vector Arithmetic}{73}{section.183}
+\contentsline {section}{\numberline {5.3}Artificial Shapes Dataset}{75}{section.186}
+\contentsline {subsection}{\numberline {5.3.1}Dataset Description}{75}{subsection.187}
+\contentsline {subsection}{\numberline {5.3.2}Problem Description}{76}{subsection.190}
+\contentsline {subsection}{\numberline {5.3.3}A note on Qualatitive Anaylsis of Image Generation}{77}{subsection.191}
+\contentsline {subsection}{\numberline {5.3.4}Network Description}{78}{subsection.192}
+\contentsline {section}{\numberline {5.4}Experiments with the ArtS Dataset}{79}{section.195}
+\contentsline {subsection}{\numberline {5.4.1}Experiment 1}{82}{subsection.196}
+\contentsline {subsubsection}{Results}{82}{section*.198}
+\contentsline {paragraph}{Image Generation}{84}{section*.201}
+\contentsline {paragraph}{Description Accuracy}{86}{section*.204}
+\contentsline {subsubsection}{Discussion}{86}{section*.205}
+\contentsline {subsection}{\numberline {5.4.2}Experiment 2}{87}{subsection.206}
+\contentsline {subsubsection}{Results}{87}{section*.208}
+\contentsline {paragraph}{Image Generation}{89}{figure.212}
+\contentsline {paragraph}{Description Accuracy}{91}{section*.216}
+\contentsline {subsubsection}{Discussion}{92}{section*.217}
+\contentsline {subsection}{\numberline {5.4.3}Experiment 3}{93}{subsection.219}
+\contentsline {subsubsection}{Results}{95}{section*.221}
+\contentsline {paragraph}{Image Generation}{95}{section*.223}
+\contentsline {paragraph}{Description Accuracy}{97}{table.229}
+\contentsline {subsubsection}{Discussion}{97}{section*.230}
+\contentsline {subsection}{\numberline {5.4.4}Experiment 4}{99}{subsection.232}
+\contentsline {subsubsection}{Results}{99}{section*.233}
+\contentsline {paragraph}{Image Generation}{99}{section*.235}
+\contentsline {paragraph}{Description Accuracy}{102}{table.241}
+\contentsline {subsubsection}{Discussion}{103}{section*.242}
+\contentsline {subsection}{\numberline {5.4.5}Experiment 5}{105}{subsection.245}
+\contentsline {subsubsection}{Results}{105}{section*.246}
+\contentsline {paragraph}{Image Generation}{105}{section*.248}
+\contentsline {paragraph}{Description Accuracy}{108}{table.252}
+\contentsline {subsection}{\numberline {5.4.6}Discussion}{108}{subsection.253}
+\contentsline {subsubsection}{How an incremental approach helps}{109}{section*.254}
+\contentsline {section}{\numberline {5.5}Summary}{112}{section.258}
+\contentsline {chapter}{\numberline {6}Bidirectional Grounding of Real Data}{114}{chapter.259}
+\contentsline {section}{\numberline {6.1}The Difficulties of Real Data}{114}{section.260}
+\contentsline {section}{\numberline {6.2}Acoustic Packaging}{115}{section.262}
+\contentsline {section}{\numberline {6.3}Real Shapes Dataset}{115}{section.265}
+\contentsline {subsection}{\numberline {6.3.1}Dataset Description}{116}{subsection.267}
 \contentsline {subsection}{\numberline {6.3.2}Problem Description}{116}{subsection.269}
 \contentsline {subsection}{\numberline {6.3.3}Network Description}{116}{subsection.270}
-\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{116}{section.272}
-\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{118}{subsection.273}
-\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{119}{subsection.276}
-\contentsline {subsection}{\numberline {6.4.3}Experiment 1}{120}{subsection.280}
-\contentsline {subsubsection}{Results}{121}{section*.282}
-\contentsline {paragraph}{Image Generation}{122}{section*.284}
-\contentsline {paragraph}{Multilabel Classification}{124}{section*.289}
-\contentsline {subsection}{\numberline {6.4.4}Experiment 2}{125}{subsection.291}
-\contentsline {subsubsection}{Results}{125}{section*.294}
-\contentsline {paragraph}{Image Generation}{125}{section*.296}
-\contentsline {paragraph}{Multilabel Classification}{128}{section*.299}
-\contentsline {paragraph}{Description Accuracy}{129}{table.301}
-\contentsline {subsection}{\numberline {6.4.5}Discussion}{129}{subsection.302}
-\contentsline {section}{\numberline {6.5}Summary}{130}{section.303}
-\contentsline {chapter}{\numberline {7}Conclusion}{131}{chapter.304}
-\contentsline {section}{\numberline {7.1}Summary of Important Points}{131}{section.305}
-\contentsline {section}{\numberline {7.2}Summary of contributions}{132}{section.306}
-\contentsline {section}{\numberline {7.3}Conclusion}{133}{section.307}
-\contentsline {section}{\numberline {7.4}Limitations}{134}{section.308}
-\contentsline {section}{\numberline {7.5}Future Work}{135}{section.309}
-\contentsline {subsection}{\numberline {7.5.1}General System Improvements}{137}{subsection.315}
-\contentsline {subsubsection}{Architectural Improvements}{137}{section*.316}
-\contentsline {subsubsection}{Training Scheme Improvements}{138}{section*.317}
-\contentsline {subsubsection}{Accounting for time}{138}{section*.318}
-\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{139}{appendix.319}
-\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{141}{appendix.326}
-\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{143}{appendix.328}
-\contentsline {chapter}{Bibliography}{144}{appendix*.331}
+\contentsline {section}{\numberline {6.4}Experiments with the ReShape dataset}{119}{section.272}
+\contentsline {subsection}{\numberline {6.4.1}Data Preprocessing}{119}{subsection.273}
+\contentsline {subsection}{\numberline {6.4.2}Training Procedures}{120}{subsection.276}
+\contentsline {subsection}{\numberline {6.4.3}Experiment 1}{122}{subsection.280}
+\contentsline {subsubsection}{Results}{122}{section*.282}
+\contentsline {paragraph}{Image Generation}{123}{section*.284}
+\contentsline {paragraph}{Multilabel Classification}{125}{section*.289}
+\contentsline {subsection}{\numberline {6.4.4}Experiment 2}{127}{subsection.291}
+\contentsline {subsubsection}{Results}{127}{section*.294}
+\contentsline {paragraph}{Image Generation}{127}{section*.296}
+\contentsline {paragraph}{Multilabel Classification}{130}{section*.299}
+\contentsline {paragraph}{Description Accuracy}{130}{table.301}
+\contentsline {subsection}{\numberline {6.4.5}Discussion}{130}{subsection.302}
+\contentsline {section}{\numberline {6.5}Summary}{131}{section.303}
+\contentsline {chapter}{\numberline {7}Conclusion}{133}{chapter.304}
+\contentsline {section}{\numberline {7.1}Summary of Important Points}{133}{section.305}
+\contentsline {section}{\numberline {7.2}Summary of contributions}{134}{section.306}
+\contentsline {section}{\numberline {7.3}Conclusion}{135}{section.307}
+\contentsline {section}{\numberline {7.4}Limitations}{136}{section.308}
+\contentsline {section}{\numberline {7.5}Future Work}{137}{section.309}
+\contentsline {subsection}{\numberline {7.5.1}General System Improvements}{139}{subsection.315}
+\contentsline {subsubsection}{Architectural Improvements}{139}{section*.316}
+\contentsline {subsubsection}{Training Scheme Improvements}{140}{section*.317}
+\contentsline {subsubsection}{Accounting for time}{140}{section*.318}
+\contentsline {chapter}{\numberline {A}Appendix \emph {A Primer on Artifical Neural Networks}}{141}{appendix.319}
+\contentsline {chapter}{\numberline {B}Appendix \emph {Sensory Redundancy}}{143}{appendix.326}
+\contentsline {chapter}{\numberline {C}Appendix \emph {Magical Vectors and Where to Find Them}}{145}{appendix.328}
+\contentsline {chapter}{Bibliography}{146}{appendix*.331}

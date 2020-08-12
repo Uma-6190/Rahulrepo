@@ -16,7 +16,7 @@ Database file #1: bigone.bib
 Done.
 You've used 138 entries,
             4087 wiz_defined-function locations,
-            1540 strings with 34243 characters,
+            1543 strings with 34488 characters,
 and the built_in function-call counts, 111279 in all, are:
 = -- 8789
 > -- 2959
@@ -24,7 +24,7 @@ and the built_in function-call counts, 111279 in all, are:
 + -- 1624
 - -- 530
 * -- 5252
-:= -- 15964
+:= -- 15967
 add.period$ -- 295
 call.type$ -- 138
 change.case$ -- 137
@@ -33,7 +33,7 @@ cite$ -- 138
 duplicate$ -- 7946
 empty$ -- 9057
 format.name$ -- 644
-if$ -- 26229
+if$ -- 26226
 int.to.chr$ -- 0
 int.to.str$ -- 138
 missing$ -- 1389

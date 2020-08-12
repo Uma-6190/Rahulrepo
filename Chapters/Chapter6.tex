@@ -14,7 +14,7 @@ In the previous chapter, I showed that it is possible to use a \ac{MAE} to bidir
 
 When working with real images, there are many factors to consider such as lighting changes, perspective changes and camera noise \cite{keller2016analysis}. These factors were not present in the ArtS dataset, so in this chapter I will show how these impact \ac{MRL} for bidirectional grounding.
 
-\textcolor{red}{Another factor to consider when working with real data is that it is unlikely that an exhaustive dataset will exist for training the \ac{MAE}. When working with synthetic data, as in the previous chapter, it is possible to create training examples for every possible combination of object, colour and size. This is not true for real data. Datasets can only be produced using readily available objects which may not come in every combination of colour and size. As such, a desirable feature of a system the performs \ac{MRL} is that it be able to cope with missing examples. As shown in \autoref{Chapter5} experiment 5, the \ac{MAE} is able to handle gaps in the training data. I will demonstrate in this chapter that this generalises to real data with many more gaps in the training data.}
+Another factor to consider when working with real data is that it is unlikely that an exhaustive dataset will exist for training the \ac{MAE}. When working with synthetic data, as in the previous chapter, it is possible to create training examples for every possible combination of object, colour and size. This is not true for real data. Datasets can only be produced using readily available objects which may not come in every combination of colour and size. As such, a desirable feature of a system the performs \ac{MRL} is that it be able to cope with missing examples. As shown in \autoref{Chapter5} experiment 5, the \ac{MAE} is able to handle gaps in the training data. I will demonstrate in this chapter that this generalises to real data with many more gaps in the training data.
 
 
 
@@ -41,16 +41,15 @@ I do not make use of the audio, I use only the transcribed text and images such 
     \label{fig:ReShape}
 \end{figure}
 
-\textcolor{red}{I created} the Real Shapes dataset (ReShape) by presenting various objects to a webcam in 9 different positions and giving a short description of the object. \autoref{fig:ReShape} shows example images from ReShape.
+I created the Real Shapes dataset (ReShape) by presenting various objects to a webcam in 9 different positions and giving a short description of the object. \autoref{fig:ReShape} shows example images from ReShape.
 
 \subsection{Dataset Description}
 The ReShape dataset contains images and short descriptions of the images.
 
-There are 7 objects, in 10 colours and 3 sizes. Not all objects appear in all 10 colours or all 3 sizes \textcolor{red}{as each object in each colour and size was not available to me}.
+There are 7 objects, in 10 colours and 3 sizes. Not all objects appear in all 10 colours or all 3 sizes as each object in each colour and size was not available to me.
 
 \autoref{fig:ReShapeAll} shows cropped, exemplar images for all objects in the ReShape dataset. Not all shape-colour-size combinations are covered in the dataset, hence the large number of blank spaces.
 
-\newpage
 \begin{figure}[h!]
     \centering
     \includegraphics[height=0.7\textwidth, angle=90]{Figs/chapter6/ExemplarAllClasses.png}
@@ -65,12 +64,12 @@ The dataset was captured in several sessions across multiple days. This is the m
 As in the previsous chapter I will be training \acp{MAE} to learn a joint embedding of images and their descriptions. The descriptions only contain a size, shape and colour and not a position as the images are cropped, centring the object in the image, the notion of position is removed from both modalities.
 
 \subsection{Network Description}
-I make use of the same network as used in chapter 5 with an embedding size of 296 neurons and a description output size of 13. \textcolor{red}{The network was not redesigned for this chapter as the task is very similar and the performance of this design was good in \autoref{Chapter5}. \autoref{fig:netReShape} depicts the \ac{MAE} described in \autoref{tab:Arts_MAE_description}. The blue box shows the portion of the \ac{MAE} which encodes and decodes images, whilst the green portion encodes and decodes the descriptions. The orange box is where the joint representation is formed. Inputs are labelled, Image and Description with their respective outputs being marked with an asterisk. Whislt the overall structure of the \ac{MAE} used in this chapter is the same as that used in \autoref{Chapter5}, as the vocabulary size for the descriptions is smaller, the Description output layer only has 13 neurons unlike in \autoref{Chapter5} where the description output had 22 neurons.}
+I make use of the same network as used in chapter 5 with an embedding size of 296 neurons and a description output size of 13. The network was not redesigned for this chapter as the task is very similar and the performance of this design was good in \autoref{Chapter5}. \autoref{fig:netReShape} depicts the \ac{MAE} described in \autoref{tab:Arts_MAE_description}. The blue box shows the portion of the \ac{MAE} which encodes and decodes images, whilst the green portion encodes and decodes the descriptions. The orange box is where the joint representation is formed. Inputs are labelled, Image and Description with their respective outputs being marked with an asterisk. Whilst the overall structure of the \ac{MAE} used in this chapter is the same as that used in \autoref{Chapter5}, as the vocabulary size for the descriptions is smaller, the Description output layer only has 13 neurons unlike in \autoref{Chapter5} where the description output had 22 neurons.
 
 \begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{Figs/chapter6/maeArch.png}
-\caption{\textcolor{red}{The \ac{MAE} architecture used in this chapters. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}}
+\caption{The \ac{MAE} architecture used in this chapters. Layers marked with C are convolution TC, Transposed Convolution, RS, Reshape and N, Dense.}
 \label{fig:netReShape}
 \end{figure}
 
@@ -81,7 +80,7 @@ I perform two experiments, one with a small subset of the ReShape dataset where 
 
 I will also look at the effect of pretraining on the data from experiment 1 and then training for experiment 2. Further to this, two training procedures will be introduced and compared, simple and exemplar.
 
-\textcolor{red}{Both experiments test hypothesis 6: It is possible to use \ac{MRL} with real data. Beyond this, experiment 2 further explores hypothesis 5: The multimodal representation learnt by the \acp{MAE} exhibits all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}, by demonstrating that the \ac{MAE} is able to cope with missing objects in the training data as the learnt representation exhibits manifolds and a degree of smoothness such that the individual symbols from which objects are constructed can be combined to generate images of unseen objects.}
+Both experiments test hypothesis 6: It is possible to use \ac{MRL} with real data. Beyond this, experiment 2 further explores hypothesis 5: The multimodal representation learnt by the \acp{MAE} exhibits all of the desirable properties of a representation as layed out by Bengio et al. in \cite{repRev}, by demonstrating that the \ac{MAE} is able to cope with missing objects in the training data as the learnt representation exhibits manifolds and a degree of smoothness such that the individual symbols from which objects are constructed can be combined to generate images of unseen objects.
 
 \subsection{Data Preprocessing}
 
@@ -253,7 +252,7 @@ Exemplar & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 & 100.00 $\mypm$ 0.00 \\ \h
 \label{tab:6_res_exp1_acc}
 \end{table}
 
-
+\newpage
 \subsection{Experiment 2}
 
 Experiment 2 makes use of five shapes in five colours and three sizes. The additional shapes and colours were selected as they are represented in most sizes in the dataset.
@@ -307,7 +306,7 @@ The \ac{MAE} is able to generalise to unseen combinations of attributes, confirm
 \begin{figure*}[ht]
     \centering
     \includegraphics[width=\textwidth]{Figs/chapter6/exemplarMostGenerated.png}
-    \caption{Exp 2: Images generated from full descriptions using the \ac{MAE} trained with the exemplar procedure. Red borders show objects with exemplar images. \textcolor{red}{In general the \ac{MAE} shows its worst performance on \textsc{black} objects, there are only a few examples of black objects in the training data (5 for black versus 8 for red, 11 for green, 11 for yellow and 12 for blue).}}
+    \caption{Exp 2: Images generated from full descriptions using the \ac{MAE} trained with the exemplar procedure. Red borders show objects with exemplar images. In general the \ac{MAE} shows its worst performance on \textsc{black} objects, there are only a few examples of black objects in the training data (5 for black versus 8 for red, 11 for green, 11 for yellow and 12 for blue).}
     \label{fig:mostExemplarGen}
 \end{figure*}
 
@@ -317,7 +316,7 @@ The quality of the generated images for unseen objects is strongly linked to whe
 
 In general the \ac{MAE} shows its worst performance on \textsc{black} objects, this is likely due to the reletively few examples of black objects in the training data (5 for black versus 8 for red, 11 for green, 11 for yellow and 12 for blue).
 
-\textcolor{red}{The correct generation of images of unseen objects demonstrates that the learnt representation has fulfilled at least some of the criteria set out by Bengio et al. \cite{repRev} (hypothesis 5). The fact that the representation of unseen descriptions leads to the generation of correct images shows that the representation has manifolds, in which different symbols reside (e.g. shapes and colors are represented separately, otherwise we would not be able to generate a \textsc{red donut} as the representation of \textsc{red} would be entangled with other words.)}
+The correct generation of images of unseen objects demonstrates that the learnt representation has fulfilled at least some of the criteria set out by Bengio et al. \cite{repRev} (hypothesis 5). The fact that the representation of unseen descriptions leads to the generation of correct images shows that the representation has manifolds, in which different symbols reside (e.g. shapes and colors are represented separately, otherwise we would not be able to generate a \textsc{red donut} as the representation of \textsc{red} would be entangled with other words.)
 
 \begin{figure*}[ht]
     \centering
@@ -367,13 +366,13 @@ There is also the issue of not having full coverage of every size, colour and sh
 
 \section{Summary}
 This chapter focused on how \ac{MRL} could be applied to real data, demonstrating how it can be used to solve the symbol grounding problem in an unsupervised manner.
-To that end, I have demonstrated that \ac{MRL} can be used to perform bidirectional grounding of images and text, \textcolor{red}{thus proving hypothesis 6: It is possible to use \ac{MRL} with real data}. Further to this, I have shown that \ac{MRL} can generalise to unseen examples, correctly generating images of unseen objects \textcolor{red}{, and have demonstrated that \ac{MRL} can be useful in a real life scenario}.
+To that end, I have demonstrated that \ac{MRL} can be used to perform bidirectional grounding of images and text, thus proving hypothesis 6: It is possible to use \ac{MRL} with real data. Further to this, I have shown that \ac{MRL} can generalise to unseen examples, correctly generating images of unseen objects, and have demonstrated that \ac{MRL} can be useful in a real-life scenario.
 
 The ability of the \ac{MAE} to generate images of unseen objects like the \textsc{Big Red Donut} is very exciting. This result hints at the possibility to develop grounded models capable of understanding more diverse visual attributes and larger numbers of objects.
 
 These experiments present a starting point from which more powerful models can be built through the use of larger datasets as well as through the incorporation of advanced  \ac{ANN} techniques such as dilated and multiscale convolutions, and residual connections. The addition of these types of features to the \ac{MAE} architecture could allow for stronger models of image feature scale and shape and how these relate to the words which describe them.
 
-\textcolor{red}{As well as making use of more complex neural structures, as mentioned in the previous paragraph, the addition of auxilory networks, such as classification and discriminator networks would be worth while avenues of research for improving upon this first, prototype system. The use of an adversarial training scheme which makes use of an auxilory classification network to determine if the correct colours, shapes and sizes are present in the generated image could alleviate issues relating to image quality analysis as well as the excessive blur which arose when not using the exemplar training procedure. A setup similar to that of Odena et al. \cite{odena2017conditional} could potentailly be adapted for this purpose.}
+As well as making use of more complex neural structures, as mentioned in the previous paragraph, the addition of auxilory networks, such as classification and discriminator networks would be worth while avenues of research for improving upon this first, prototype system. The use of an adversarial training scheme which makes use of an auxilory classification network to determine if the correct colours, shapes and sizes are present in the generated image could alleviate issues relating to image quality analysis as well as the excessive blur which arose when not using the exemplar training procedure. A setup similar to that of Odena et al. \cite{odena2017conditional} could potentailly be adapted for this purpose.
 
 The results from this chapter have been published in \cite{sheppard2020multimodal}.
 %\theendnotes
