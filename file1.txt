@@ -1,0 +1,16 @@
+Git Ignore
+When sharing your code with others, there are often files or parts of your project, you do not want to share.
+
+Examples
+
+log files
+temporary files
+hidden files
+personal files
+etc.
+Git can specify which files or parts of your project should be ignored by Git using a .gitignore file.
+
+Git will not track files and folders specified in .gitignore. However, the .gitignore file itself IS tracked by Git.
+
+Create .gitignore
+To create a .gitignore file, go to the root of your local Git, and create it:
